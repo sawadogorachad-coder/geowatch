@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GéoWatch — Observatoire des conflits</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Stuk/jszip@v3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:14.5px}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#050810;color:#cbd5e1;display:flex;height:100vh;overflow:hidden}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit;border:none}
+input,select,textarea{font-family:inherit}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:#0a0f1c}
+::-webkit-scrollbar-thumb{background:#1e293b;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:#334155}
+
+/* ===== SIDEBAR ===== */
+#sidebar{width:238px;min-width:238px;background:linear-gradient(180deg,#080d1a 0%,#050810 100%);border-right:1px solid #1a2340;display:flex;flex-direction:column;transition:all .25s;overflow:hidden;z-index:100}
+#sidebar.collapsed{width:62px;min-width:62px}
+.sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:18px 14px;border-bottom:1px solid #1a2340}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:700;background:linear-gradient(135deg,#60a5fa 0%,#a78bfa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap}
+.logo i{font-size:1.3rem;color:#60a5fa;-webkit-text-fill-color:#60a5fa;flex-shrink:0}
+#sidebar.collapsed .logo-txt{opacity:0;width:0}
+.logo-txt{transition:opacity .2s}
+#sb-toggle{background:transparent;color:#64748b;font-size:.95rem;padding:6px 8px;border-radius:4px}
+#sb-toggle:hover{color:#60a5fa;background:#1a2340}
+.nav{list-style:none;flex:1;padding:10px 0;overflow-y:auto}
+.nav li a{display:flex;align-items:center;gap:13px;padding:10px 16px;color:#94a3b8;transition:all .15s;white-space:nowrap;font-size:.87rem}
+.nav li a i{font-size:.95rem;width:20px;text-align:center;flex-shrink:0}
+#sidebar.collapsed .nav li a span{opacity:0}
+.nav li a span{transition:opacity .2s}
+.nav li a:hover{color:#e2e8f0;background:#0f172a}
+.nav li a.active{color:#60a5fa;background:linear-gradient(90deg,rgba(29,78,216,.18) 0%,transparent 100%);border-left:3px solid #60a5fa;padding-left:13px}
+.nav-sep{height:1px;background:#1a2340;margin:8px 14px}
+.nav-title{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:#475569;padding:10px 18px 6px;font-weight:600}
+#sidebar.collapsed .nav-title{opacity:0;height:0;padding:0;overflow:hidden}
+.badge{background:#ef4444;color:#fff;font-size:.65rem;font-weight:700;padding:2px 6px;border-radius:10px;margin-left:auto;animation:glow 2s infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 4px rgba(239,68,68,.5)}50%{box-shadow:0 0 12px rgba(239,68,68,.9)}}
+.sb-footer{padding:12px 14px;border-top:1px solid #1a2340;display:flex;align-items:center;gap:8px;font-size:.72rem;color:#475569;white-space:nowrap;overflow:hidden}
+.pulse{color:#22c55e;font-size:.5rem;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ===== MAIN ===== */
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#topbar{background:rgba(11,17,32,.75);backdrop-filter:blur(8px);border-bottom:1px solid #1a2340;padding:0 26px;height:58px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;z-index:50}
+#page-title{font-size:1.1rem;font-weight:600;color:#e2e8f0}
+#page-sub{font-size:.78rem;color:#64748b;margin-top:2px}
+.tb-right{display:flex;align-items:center;gap:14px;font-size:.78rem;color:#64748b}
+#tb-alerts{display:none;align-items:center;gap:6px;background:linear-gradient(135deg,#450a0a 0%,#3b1515 100%);color:#fca5a5;padding:5px 12px;border-radius:20px;font-size:.76rem;border:1px solid #7f1d1d;cursor:pointer}
+#tb-alerts i{color:#ef4444;animation:glow 2s infinite}
+
+#content{flex:1;overflow-y:auto;padding:22px 26px}
+.page{display:none;animation:fadeIn .25s}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== CARDS ===== */
+.card{background:linear-gradient(180deg,#0c1426 0%,#0a0f1c 100%);border:1px solid #1a2340;border-radius:12px;padding:18px;margin-bottom:16px;transition:border-color .2s}
+.card:hover{border-color:#2a3a60}
+.card-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px;flex-wrap:wrap}
+.card-hd h2{font-size:.96rem;font-weight:600;color:#e2e8f0;display:flex;align-items:center;gap:9px}
+.card-hd h2 i{color:#60a5fa}
+.card-hd .help{font-size:.72rem;color:#64748b;font-weight:400;margin-top:3px}
+.link-btn{font-size:.78rem;color:#60a5fa;transition:color .15s;background:transparent}
+.link-btn:hover{color:#93c5fd}
+
+/* ===== STATS ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.stat{border-radius:12px;padding:18px;display:flex;align-items:center;gap:14px;border:1px solid;position:relative;overflow:hidden;transition:transform .2s;cursor:default}
+.stat:hover{transform:translateY(-2px)}
+.stat::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,currentColor 0%,transparent 70%);opacity:.1;pointer-events:none}
+.stat.red{background:linear-gradient(135deg,#1a0609 0%,#0e0304 100%);border-color:#7f1d1d;color:#ef4444}
+.stat.orange{background:linear-gradient(135deg,#1a0d05 0%,#0e0703 100%);border-color:#7c2d12;color:#f97316}
+.stat.blue{background:linear-gradient(135deg,#081020 0%,#030711 100%);border-color:#1e3a5f;color:#3b82f6}
+.stat.green{background:linear-gradient(135deg,#061a0d 0%,#030e07 100%);border-color:#14532d;color:#22c55e}
+.stat.purple{background:linear-gradient(135deg,#140820 0%,#0a0411 100%);border-color:#4c1d95;color:#a78bfa}
+.stat.cyan{background:linear-gradient(135deg,#061820 0%,#030e11 100%);border-color:#155e75;color:#06b6d4}
+.stat-icon{font-size:1.6rem}
+.stat-val{font-size:1.95rem;font-weight:700;color:#f1f5f9;line-height:1;letter-spacing:-.5px}
+.stat-lbl{font-size:.75rem;color:#94a3b8;margin-top:4px;font-weight:500}
+.stat-trend{font-size:.7rem;margin-top:3px;font-weight:600}
+.stat-trend.up{color:#ef4444}
+.stat-trend.down{color:#22c55e}
+.stat-trend.flat{color:#94a3b8}
+
+/* ===== GRIDS ===== */
+.grid-2{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.grid-2e{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.chart-box{position:relative;height:280px}
+.chart-box.sm{height:220px}
+.chart-box.lg{height:340px}
+
+/* ===== TABLES ===== */
+.tbl{width:100%;border-collapse:collapse;font-size:.82rem}
+.tbl th{text-align:left;padding:10px 12px;background:#0a0f1c;color:#94a3b8;font-weight:600;border-bottom:1px solid #1a2340;font-size:.72rem;text-transform:uppercase;letter-spacing:.5px;position:sticky;top:0;z-index:2}
+.tbl th.sortable{cursor:pointer;user-select:none}
+.tbl th.sortable:hover{color:#60a5fa}
+.tbl th.sortable::after{content:' ⇅';opacity:.35;font-size:.7rem}
+.tbl td{padding:11px 12px;border-bottom:1px solid #141c30;color:#cbd5e1;vertical-align:middle}
+.tbl tr:hover td{background:#0b1322}
+.tbl tr.clickable{cursor:pointer}
+.tbl-wrap{max-height:540px;overflow-y:auto;border:1px solid #1a2340;border-radius:8px}
+
+/* ===== BADGES / CHIPS ===== */
+.chip{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.7rem;font-weight:600;letter-spacing:.2px}
+.chip.red{background:rgba(239,68,68,.15);color:#fca5a5;border:1px solid rgba(239,68,68,.3)}
+.chip.orange{background:rgba(249,115,22,.15);color:#fdba74;border:1px solid rgba(249,115,22,.3)}
+.chip.yellow{background:rgba(234,179,8,.15);color:#fde047;border:1px solid rgba(234,179,8,.3)}
+.chip.blue{background:rgba(59,130,246,.15);color:#93c5fd;border:1px solid rgba(59,130,246,.3)}
+.chip.green{background:rgba(34,197,94,.15);color:#86efac;border:1px solid rgba(34,197,94,.3)}
+.chip.gray{background:rgba(100,116,139,.15);color:#cbd5e1;border:1px solid rgba(100,116,139,.3)}
+.chip.purple{background:rgba(167,139,250,.15);color:#c4b5fd;border:1px solid rgba(167,139,250,.3)}
+.chip-group{display:flex;flex-wrap:wrap;gap:5px}
+
+/* ===== SEVERITY BAR ===== */
+.sev-bar{display:inline-flex;gap:2px;align-items:center;margin-left:6px}
+.sev-bar span{width:4px;height:12px;border-radius:1px;background:#1a2340}
+.sev-bar.s1 span:nth-child(-n+1),.sev-bar.s2 span:nth-child(-n+2),.sev-bar.s3 span:nth-child(-n+3),.sev-bar.s4 span:nth-child(-n+4),.sev-bar.s5 span:nth-child(-n+5),.sev-bar.s6 span:nth-child(-n+6),.sev-bar.s7 span:nth-child(-n+7),.sev-bar.s8 span:nth-child(-n+8),.sev-bar.s9 span:nth-child(-n+9),.sev-bar.s10 span{background:var(--sv,#f59e0b)}
+.sev-bar.s1,.sev-bar.s2,.sev-bar.s3{--sv:#22c55e}
+.sev-bar.s4,.sev-bar.s5,.sev-bar.s6{--sv:#f59e0b}
+.sev-bar.s7,.sev-bar.s8{--sv:#f97316}
+.sev-bar.s9,.sev-bar.s10{--sv:#ef4444}
+
+/* ===== BUTTONS ===== */
+.btn{padding:8px 14px;border-radius:6px;font-size:.82rem;font-weight:500;transition:all .15s;display:inline-flex;align-items:center;gap:7px}
+.btn.primary{background:linear-gradient(135deg,#2563eb 0%,#7c3aed 100%);color:#fff}
+.btn.primary:hover{filter:brightness(1.15);box-shadow:0 4px 14px rgba(37,99,235,.35)}
+.btn.secondary{background:#1e293b;color:#cbd5e1;border:1px solid #334155}
+.btn.secondary:hover{background:#283547}
+.btn.ghost{background:transparent;color:#94a3b8;border:1px solid #1a2340}
+.btn.ghost:hover{color:#e2e8f0;border-color:#334155}
+.btn.danger{background:#7f1d1d;color:#fca5a5}
+.btn.danger:hover{background:#991b1b;color:#fff}
+.btn.sm{padding:5px 10px;font-size:.75rem}
+
+/* ===== FORMS ===== */
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.75rem;color:#94a3b8;font-weight:500}
+.field input,.field select,.field textarea{background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:8px 11px;border-radius:6px;font-size:.85rem;transition:border-color .15s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#3b82f6}
+.field textarea{resize:vertical;min-height:70px}
+
+/* ===== FILTERS ===== */
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.filters input,.filters select{background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem}
+.filters input{min-width:200px}
+
+/* ===== PERIOD TABS ===== */
+.tabs{display:inline-flex;background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:3px;gap:2px}
+.tab{padding:6px 14px;border-radius:5px;font-size:.78rem;color:#94a3b8;background:transparent;transition:all .15s;font-weight:500}
+.tab.active{background:linear-gradient(135deg,#2563eb 0%,#7c3aed 100%);color:#fff}
+.tab:not(.active):hover{color:#e2e8f0;background:#0f172a}
+
+/* ===== CONFLICT CARDS ===== */
+.conflict-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.conflict-card{background:linear-gradient(180deg,#0c1426 0%,#0a0f1c 100%);border:1px solid #1a2340;border-radius:12px;padding:16px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.conflict-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cc,#f59e0b)}
+.conflict-card:hover{border-color:#3b82f6;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.cc-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;gap:10px}
+.cc-name{font-size:.98rem;font-weight:700;color:#e2e8f0;line-height:1.25}
+.cc-region{font-size:.72rem;color:#64748b;margin-top:2px}
+.cc-intensity{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.cc-int-val{font-size:1.6rem;font-weight:700;line-height:1;color:var(--cc,#f59e0b)}
+.cc-int-lbl{font-size:.65rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px}
+.cc-desc{font-size:.8rem;color:#94a3b8;line-height:1.4;margin:8px 0 12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cc-meta{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:#64748b;border-top:1px solid #141c30;padding-top:9px}
+.cc-sparkline{height:28px;margin-top:8px}
+
+/* ===== MAP ===== */
+#map,#map-dash,#map-conflict{width:100%;height:100%;border-radius:10px;background:#050810}
+.map-wrap{height:520px;border:1px solid #1a2340;border-radius:10px;overflow:hidden;position:relative}
+.map-wrap.sm{height:280px}
+.map-legend{position:absolute;bottom:14px;left:14px;background:rgba(10,15,28,.94);backdrop-filter:blur(6px);border:1px solid #1a2340;border-radius:8px;padding:10px 12px;font-size:.72rem;color:#cbd5e1;z-index:500;min-width:170px;max-width:240px;max-height:60vh;overflow-y:auto;transition:all .25s}
+.map-legend.collapsed{max-height:36px;overflow:hidden;cursor:pointer}
+.map-legend.collapsed .legend-content{display:none}
+.legend-toggle{position:absolute;top:6px;right:8px;background:transparent;color:#94a3b8;border:none;cursor:pointer;font-size:.85rem;padding:2px 6px;border-radius:3px;line-height:1}
+.legend-toggle:hover{color:#e2e8f0;background:rgba(30,41,59,.6)}
+.map-legend h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;margin-bottom:7px;font-weight:600}
+.legend-row{display:flex;align-items:center;gap:7px;margin-bottom:4px}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;box-shadow:0 0 6px currentColor}
+.map-ctrls{position:absolute;top:12px;left:52px;display:flex;gap:6px;z-index:500;flex-wrap:wrap}
+.map-ctrls button{background:rgba(10,15,28,.92);border:1px solid #1a2340;color:#cbd5e1;padding:5px 10px;border-radius:6px;font-size:.73rem;transition:all .15s}
+.map-ctrls button:hover,.map-ctrls button.active{background:#2563eb;color:#fff;border-color:#2563eb}
+
+/* Leaflet custom popup */
+.leaflet-popup-content-wrapper{background:#0c1426;color:#e2e8f0;border:1px solid #2a3a60;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.leaflet-popup-tip{background:#0c1426;border:1px solid #2a3a60}
+.leaflet-popup-content{margin:10px 13px;font-size:.82rem;line-height:1.45}
+.leaflet-popup-content b{color:#60a5fa}
+.leaflet-container a.leaflet-popup-close-button{color:#64748b}
+/* Popups en mode carte claire (Diploweb / ISW) */
+body.map-light .leaflet-popup-content-wrapper{background:#ffffff;color:#1e293b;border:1px solid #cbd5e1;box-shadow:0 8px 24px rgba(15,23,42,.18)}
+body.map-light .leaflet-popup-tip{background:#ffffff;border:1px solid #cbd5e1}
+body.map-light .leaflet-popup-content b{color:#1e40af}
+body.map-light .leaflet-container a.leaflet-popup-close-button{color:#64748b}
+body.map-light .map-legend{background:rgba(255,255,255,.95);color:#1e293b;border:1px solid #cbd5e1}
+body.map-light .map-legend h4{color:#475569}
+
+/* Pulsing marker */
+.pulse-marker{width:14px;height:14px;border-radius:50%;position:relative}
+.pulse-marker::after{content:'';position:absolute;inset:-6px;border-radius:50%;background:inherit;opacity:.45;animation:pulseM 2s infinite}
+@keyframes pulseM{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+
+/* ===== NEWS ===== */
+.news-list{display:flex;flex-direction:column;gap:10px}
+.news-item{background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:13px 15px;transition:all .15s}
+.news-item:hover{border-color:#3b82f6;transform:translateX(3px)}
+.news-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
+.news-title{font-size:.88rem;font-weight:600;color:#e2e8f0;line-height:1.35;flex:1}
+.news-title a:hover{color:#60a5fa}
+.news-meta{font-size:.7rem;color:#64748b;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.news-desc{font-size:.78rem;color:#94a3b8;line-height:1.45;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-tags{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
+.source-status{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.src-chip{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 9px;border-radius:12px;border:1px solid #1a2340;background:#0a0f1c}
+.src-chip i{font-size:.55rem}
+.src-chip.ok i{color:#22c55e}
+.src-chip.err i{color:#ef4444}
+.src-chip.loading i{color:#f59e0b;animation:pulse 1s infinite}
+
+/* ===== MODAL ===== */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);z-index:2000;align-items:flex-start;justify-content:center;overflow-y:auto;padding:40px 20px}
+.modal-bg.open{display:flex}
+.modal{background:linear-gradient(180deg,#0c1426 0%,#0a0f1c 100%);border:1px solid #2a3a60;border-radius:14px;max-width:1100px;width:100%;padding:26px;position:relative}
+.modal-close{position:absolute;top:14px;right:16px;background:transparent;color:#64748b;font-size:1.3rem;padding:4px 8px;border-radius:4px;transition:all .15s}
+.modal-close:hover{color:#fff;background:#1a2340}
+.modal-hd{border-bottom:1px solid #1a2340;padding-bottom:16px;margin-bottom:18px}
+.modal-hd h1{font-size:1.5rem;font-weight:700;color:#e2e8f0;margin-bottom:4px}
+.modal-hd .sub{font-size:.82rem;color:#94a3b8}
+.modal-kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.mk{background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:11px 13px}
+.mk-lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:4px}
+.mk-val{font-size:1.25rem;font-weight:700;color:#e2e8f0}
+.mk-val.red{color:#ef4444}
+.mk-val.orange{color:#f97316}
+.mk-val.green{color:#22c55e}
+.timeline{position:relative;padding-left:22px;margin-top:10px}
+.timeline::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:#1a2340}
+.tl-item{position:relative;padding-bottom:16px}
+.tl-item::before{content:'';position:absolute;left:-22px;top:3px;width:14px;height:14px;border-radius:50%;border:2px solid #050810;background:var(--cc,#f59e0b)}
+.tl-date{font-size:.72rem;color:#64748b;margin-bottom:2px}
+.tl-title{font-size:.85rem;color:#e2e8f0;font-weight:600;margin-bottom:3px}
+.tl-desc{font-size:.78rem;color:#94a3b8;line-height:1.4}
+
+/* ===== EMPTY ===== */
+.empty{text-align:center;padding:40px 20px;color:#64748b}
+.empty i{font-size:2.5rem;margin-bottom:12px;opacity:.4;display:block}
+.empty p{font-size:.85rem}
+
+/* ===== LOADING ===== */
+.loading{text-align:center;padding:30px;color:#94a3b8;font-size:.85rem}
+.loading i{color:#60a5fa;margin-right:8px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== TOAST ===== */
+#toast{position:fixed;bottom:24px;right:24px;background:#0c1426;border:1px solid #2a3a60;color:#e2e8f0;padding:12px 18px;border-radius:8px;font-size:.85rem;z-index:3000;opacity:0;transform:translateY(20px);transition:all .25s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+#toast.show{opacity:1;transform:translateY(0)}
+#toast.success{border-color:#22c55e}
+#toast.error{border-color:#ef4444}
+#toast i{margin-right:8px}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1100px){.stats,.grid-3{grid-template-columns:repeat(2,1fr)}.grid-2,.grid-2e{grid-template-columns:1fr}}
+@media(max-width:700px){#sidebar{position:absolute;height:100vh}.stats,.grid-4{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.modal-kpi{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo"><i class="fa-solid fa-earth-africa"></i><span class="logo-txt">GéoWatch</span></div>
+    <button id="sb-toggle" title="Réduire"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <ul class="nav">
+    <li class="nav-title">Vue d'ensemble</li>
+    <li><a href="#" data-page="dash" class="active"><i class="fa-solid fa-gauge-high"></i><span>Tableau de bord</span></a></li>
+    <li><a href="#" data-page="conflicts"><i class="fa-solid fa-fire"></i><span>Fiches conflits</span></a></li>
+    <li><a href="#" data-page="briefs"><i class="fa-solid fa-file-circle-exclamation"></i><span>Briefs 2 couches</span></a></li>
+    <li><a href="#" data-page="scenarios"><i class="fa-solid fa-chess"></i><span>Scénarios</span></a></li>
+    <li><a href="#" data-page="indicators"><i class="fa-solid fa-binoculars"></i><span>Indicateurs</span></a></li>
+    <li><a href="#" data-page="reconfig"><i class="fa-solid fa-arrows-spin"></i><span>Reconfigurations</span></a></li>
+    <li><a href="#" data-page="impact_bf" style="color:#fde047"><i class="fa-solid fa-flag-checkered"></i><span>Impacts Burkina Faso</span></a></li>
+    <li><a href="#" data-page="analyses"><i class="fa-solid fa-chart-line"></i><span>Analyses</span></a></li>
+    <li class="nav-title">Cartographie</li>
+    <li><a href="#" data-page="map"><i class="fa-solid fa-map-location-dot"></i><span>Carte stratégique</span></a></li>
+    <li><a href="#" data-page="countries"><i class="fa-solid fa-flag"></i><span>Pays (FSI)</span></a></li>
+    <li class="nav-title">Veille &amp; sources</li>
+    <li><a href="#" data-page="sources"><i class="fa-solid fa-book-bookmark"></i><span>Sources think tanks</span></a></li>
+    <li><a href="#" data-page="news"><i class="fa-solid fa-newspaper"></i><span>Flux RSS</span></a></li>
+    <li><a href="#" data-page="alerts"><i class="fa-solid fa-bell"></i><span>Alertes</span><span class="badge" id="nav-alerts-badge" style="display:none"></span></a></li>
+    <li><a href="#" data-page="events"><i class="fa-solid fa-list-check"></i><span>Chronologie</span></a></li>
+    <li class="nav-sep"></li>
+    <li><a href="#" data-page="admin"><i class="fa-solid fa-gear"></i><span>Admin</span></a></li>
+  </ul>
+  <div class="sb-footer"><i class="fa-solid fa-circle pulse"></i><span id="sb-status">Système actif</span></div>
+</aside>
+
+<!-- MAIN -->
+<main id="main">
+  <header id="topbar">
+    <div>
+      <div id="page-title">Tableau de bord</div>
+      <div id="page-sub">Synthèse opérationnelle en temps réel</div>
+    </div>
+    <div class="tb-right">
+      <span id="tb-date"></span>
+      <button id="tb-notif" title="Notifications" style="position:relative;background:#1e293b;color:#cbd5e1;border:1px solid #334155;padding:6px 12px;border-radius:18px;font-size:.78rem;display:inline-flex;align-items:center;gap:6px"><i class="fa-solid fa-bell"></i><span id="tb-notif-count">0</span><span id="tb-notif-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.6rem;font-weight:700;padding:2px 6px;border-radius:10px;min-width:18px;text-align:center"></span></button>
+      <button id="tb-alerts"><i class="fa-solid fa-triangle-exclamation"></i><span id="tb-alerts-txt">0 alerte</span></button>
+    </div>
+  </header>
+
+  <div id="content">
+
+    <!-- ============= DASHBOARD ============= -->
+    <section class="page active" data-page="dash">
+      <div class="stats">
+        <div class="stat red"><i class="stat-icon fa-solid fa-fire"></i><div><div class="stat-val" id="kpi-active">0</div><div class="stat-lbl">Conflits actifs</div><div class="stat-trend flat" id="kpi-active-tr"></div></div></div>
+        <div class="stat orange"><i class="stat-icon fa-solid fa-bolt"></i><div><div class="stat-val" id="kpi-events">0</div><div class="stat-lbl">Événements (30 j)</div><div class="stat-trend flat" id="kpi-events-tr"></div></div></div>
+        <div class="stat purple"><i class="stat-icon fa-solid fa-arrow-trend-up"></i><div><div class="stat-val" id="kpi-intensity">0</div><div class="stat-lbl">Intensité moyenne</div><div class="stat-trend flat" id="kpi-intensity-tr"></div></div></div>
+        <div class="stat blue"><i class="stat-icon fa-solid fa-bell"></i><div><div class="stat-val" id="kpi-alerts">0</div><div class="stat-lbl">Alertes critiques</div><div class="stat-trend flat" id="kpi-alerts-tr"></div></div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-hd">
+            <h2><i class="fa-solid fa-chart-area"></i>Courbe d'escalade globale (30 jours)</h2>
+            <div class="help">Somme pondérée de l'intensité des événements par jour</div>
+          </div>
+          <div class="chart-box"><canvas id="ch-dash-escalation"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-chart-pie"></i>Répartition par région</h2></div>
+          <div class="chart-box"><canvas id="ch-dash-region"></canvas></div>
+        </div>
+      </div>
+
+      <div class="grid-2e mt">
+        <div class="card">
+          <div class="card-hd">
+            <h2><i class="fa-solid fa-ranking-star"></i>Top conflits (dernière semaine)</h2>
+            <a class="link-btn" data-page="conflicts">Voir tous →</a>
+          </div>
+          <div class="tbl-wrap" style="max-height:340px"><table class="tbl"><thead><tr><th>Conflit</th><th>Région</th><th>Intensité</th><th>Événements 7 j</th><th>Tendance</th></tr></thead><tbody id="tbl-top-conflicts"></tbody></table></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-map-location-dot"></i>Carte opérationnelle</h2><a class="link-btn" data-page="map">Plein écran →</a></div>
+          <div class="map-wrap sm" style="height:340px"><div id="map-dash"></div></div>
+        </div>
+      </div>
+
+      <div class="card mt">
+        <div class="card-hd"><h2><i class="fa-solid fa-clock-rotate-left"></i>Événements récents</h2><a class="link-btn" data-page="events">Tous →</a></div>
+        <div class="tbl-wrap" style="max-height:320px"><table class="tbl"><thead><tr><th>Date</th><th>Conflit</th><th>Événement</th><th>Type</th><th>Sévérité</th></tr></thead><tbody id="tbl-recent-events"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- ============= CONFLITS ============= -->
+    <section class="page" data-page="conflicts">
+      <div class="filters">
+        <input type="text" id="cf-search" placeholder="Rechercher un conflit..."/>
+        <select id="cf-region"><option value="">Toutes régions</option></select>
+        <select id="cf-status"><option value="">Tous statuts</option><option value="active">Actif</option><option value="escalating">Escalade</option><option value="deescalating">Désescalade</option><option value="frozen">Gelé</option></select>
+        <select id="cf-sort"><option value="intensity">Trier : Intensité</option><option value="events">Trier : Événements récents</option><option value="name">Trier : Nom</option><option value="recent">Trier : Dernier événement</option></select>
+        <div style="flex:1"></div>
+        <span id="cf-count" style="font-size:.78rem;color:#64748b"></span>
+      </div>
+      <div id="cf-list" class="conflict-grid"></div>
+    </section>
+
+    <!-- ============= ANALYSES ============= -->
+    <section class="page" data-page="analyses">
+      <div class="filters">
+        <select id="an-conflict"><option value="">🌐 Global (tous conflits)</option></select>
+        <div class="tabs" id="an-period">
+          <button class="tab" data-p="day">Jour</button>
+          <button class="tab active" data-p="week">Semaine</button>
+          <button class="tab" data-p="month">Mois</button>
+        </div>
+        <div style="flex:1"></div>
+        <button class="btn ghost sm" id="an-export"><i class="fa-solid fa-download"></i>Exporter rapport</button>
+      </div>
+
+      <div class="stats" id="an-kpi"></div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-chart-line"></i>Évolution de l'intensité</h2><div class="help">Score d'escalade cumulé par période</div></div>
+          <div class="chart-box lg"><canvas id="ch-evo"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-chart-column"></i>Sévérité des événements</h2></div>
+          <div class="chart-box lg"><canvas id="ch-sev"></canvas></div>
+        </div>
+      </div>
+
+      <div class="grid-2e mt">
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-layer-group"></i>Types d'événements</h2></div>
+          <div class="chart-box"><canvas id="ch-type"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-users-between-lines"></i>Acteurs impliqués</h2></div>
+          <div class="chart-box"><canvas id="ch-actors"></canvas></div>
+        </div>
+      </div>
+
+      <div class="card mt">
+        <div class="card-hd"><h2><i class="fa-solid fa-table-cells"></i>Matrice conflits × semaines (heatmap)</h2><div class="help">Nombre d'événements par conflit et par semaine (12 dernières)</div></div>
+        <div class="chart-box lg"><canvas id="ch-heat"></canvas></div>
+      </div>
+
+      <div class="card mt">
+        <div class="card-hd"><h2><i class="fa-solid fa-scale-balanced"></i>Comparaison multidimensionnelle</h2><div class="help">Top 5 conflits par intensité — radar des indicateurs clés</div></div>
+        <div class="chart-box lg"><canvas id="ch-radar"></canvas></div>
+      </div>
+    </section>
+
+    <!-- ============= MAP ============= -->
+    <section class="page" data-page="map">
+      <div class="filters" style="margin-bottom:10px">
+        <div class="tabs" id="map-mode">
+          <button class="tab active" data-mode="conflict">Conflits</button>
+          <button class="tab" data-mode="fsi">Pays — FSI</button>
+          <button class="tab" data-mode="combined">Combiné</button>
+          <button class="tab" data-mode="bf">🇧🇫 Centré Burkina</button>
+          <button class="tab" data-mode="world" style="font-weight:700">🌍 Carte stratégique mondiale</button>
+        </div>
+        <div class="tabs" id="map-tile">
+          <button class="tab active" data-tile="diplo" title="Style Diploweb — fond clair éditorial">Diploweb</button>
+          <button class="tab" data-tile="isw" title="Style ISW — relief topographique">ISW topo</button>
+          <button class="tab" data-tile="dark" title="Fond sombre">Dark</button>
+        </div>
+        <select id="map-region" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"><option value="">Toutes régions</option></select>
+        <select id="map-status" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"><option value="">Tous statuts</option><option value="escalating">Escalade</option><option value="active">Actif</option><option value="deescalating">Désescalade</option><option value="frozen">Gelé</option></select>
+        <div style="flex:1"></div>
+        <span id="map-count" style="font-size:.78rem;color:#64748b"></span>
+      </div>
+      <div class="card" style="padding:0;overflow:hidden">
+        <div class="map-wrap" style="height:calc(100vh - 200px);position:relative">
+          <div id="map"></div>
+          <div class="map-legend" id="map-legend">
+            <h4>Statut conflit</h4>
+            <div class="legend-row"><span class="legend-dot" style="background:#ef4444"></span>Escalade</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#f97316"></span>Actif intense</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#f59e0b"></span>Actif modéré</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#22c55e"></span>Désescalade</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#64748b"></span>Gelé / résolu</div>
+            <h4 style="margin-top:9px">Intensité (1-10)</h4>
+            <div style="font-size:.7rem;color:#94a3b8">Cercle : intensité × statut. Marqueur central : note chiffrée.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= BRIEFS 2 COUCHES ============= -->
+    <section class="page" data-page="briefs">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-file-circle-exclamation"></i>Briefs 2 couches — décideur &amp; analyste</h2>
+          <div style="display:flex;gap:8px;align-items:center">
+            <select id="brief-conflict" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"></select>
+            <button class="btn ghost sm" id="brief-export-txt"><i class="fa-solid fa-file-lines"></i>.txt</button>
+            <button class="btn ghost sm" id="brief-export-docx" style="color:#2b579a"><i class="fa-solid fa-file-word"></i>Word</button>
+            <button class="btn primary sm" id="brief-export-pdf"><i class="fa-solid fa-file-pdf"></i>PDF</button>
+            <button class="btn secondary sm" id="brief-export-pptx" style="background:#b7472a;color:#fff"><i class="fa-solid fa-file-powerpoint"></i>PPTX</button>
+          </div>
+        </div>
+        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:12px">Méthodologie : automation Veille Moyen-Orient (Codex). <b>Couche 1 — décideur</b> : 5 points max, axes de risque, faits robustes, implications immédiates. <b>Couche 2 — analyste</b> : faits, incertitudes, hypothèses pondérées, indicateurs 24-72 h et 7-30 j.</div>
+        <div id="brief-content"></div>
+      </div>
+    </section>
+
+    <!-- ============= SCÉNARIOS ============= -->
+    <section class="page" data-page="scenarios">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-chess"></i>Scénarios prospectifs (méthode Godet)</h2>
+          <select id="scen-conflict" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"></select>
+        </div>
+        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:12px">Pour chaque conflit : <b>tendanciel</b> (poursuite des dynamiques), <b>rupture</b> (crise systémique), <b>recomposition</b> (sortie négociée), <b>wild cards</b> (signaux faibles à fort impact). Probabilité × Impact en matrice.</div>
+        <div id="scen-content"></div>
+        <div class="card" style="margin-top:14px"><div class="card-hd"><h2><i class="fa-solid fa-table-cells"></i>Matrice probabilité × impact</h2></div><div class="chart-box lg"><canvas id="ch-scen-matrix"></canvas></div></div>
+      </div>
+    </section>
+
+    <!-- ============= RECONFIGURATIONS STRATÉGIQUES ============= -->
+    <section class="page" data-page="reconfig">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-arrows-spin"></i>Reconfigurations stratégiques en cours</h2></div>
+        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:14px">Les grandes recompositions d'équilibres internationaux qui structurent l'environnement décisionnel du Burkina Faso. Approche géopolitique-géostratégique-prospective.</div>
+        <div id="reconfig-content"></div>
+      </div>
+    </section>
+
+    <!-- ============= IMPACTS BURKINA FASO (vue agrégée) ============= -->
+    <section class="page" data-page="impact_bf">
+      <div class="card" style="background:linear-gradient(135deg,#1a0d05 0%,#0e0703 100%);border-color:#7c2d12">
+        <div class="card-hd"><h2 style="color:#fde047"><i class="fa-solid fa-flag-checkered"></i>Centre d'analyse — Impacts sur le Burkina Faso</h2></div>
+        <div style="font-size:.85rem;color:#cbd5e1;line-height:1.55">Cet espace contextualise chaque conflit mondial sous l'angle de ses conséquences directes et indirectes pour le Burkina Faso, structurées en 4 dimensions : <b style="color:#ef4444">sécuritaire</b>, <b style="color:#f59e0b">économique</b>, <b style="color:#60a5fa">diplomatique</b>, <b style="color:#a78bfa">sociopolitique</b>. Approche pensée pour un livrable think tank CNES.</div>
+      </div>
+      <div class="filters">
+        <select id="bf-conflict" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"></select>
+        <div style="flex:1"></div>
+        <button class="btn ghost sm" id="bf-export-pdf"><i class="fa-solid fa-file-pdf"></i>Exporter analyse PDF</button>
+      </div>
+      <div id="bf-content"></div>
+    </section>
+
+    <!-- ============= INDICATEURS À SURVEILLER ============= -->
+    <section class="page" data-page="indicators">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-binoculars"></i>Indicateurs à surveiller</h2></div>
+        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:12px">Trois horizons (24-72 h / 7-30 j / 30-90 j). Permet de définir les <em>signaux d'alerte</em> à monitorer dans la veille quotidienne.</div>
+        <div id="indic-content"></div>
+      </div>
+    </section>
+
+    <!-- ============= SOURCES THINK TANKS ============= -->
+    <section class="page" data-page="sources">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-book-bookmark"></i>Bibliothèque sources think tanks</h2></div>
+        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:12px">14 sources sélectionnées : think tanks français (IRIS, FRS, IFRI), américains (ISW, RAND, CSIS), britanniques (IISS, Chatham), revues (Le Grand Continent, Diploweb, LMD), données (ACLED), ONG (ICG).</div>
+        <div id="sources-grid" class="grid-3"></div>
+      </div>
+    </section>
+
+    <!-- ============= EVENTS ============= -->
+    <section class="page" data-page="events">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-list-check"></i>Événements</h2><button class="btn primary sm" id="ev-add"><i class="fa-solid fa-plus"></i>Ajouter</button></div>
+        <div class="filters">
+          <input type="text" id="ev-search" placeholder="Rechercher dans événements..."/>
+          <select id="ev-filter-conflict"><option value="">Tous conflits</option></select>
+          <select id="ev-filter-type"><option value="">Tous types</option></select>
+          <select id="ev-filter-sev"><option value="">Toutes sévérités</option><option value="high">≥ 7 (élevée+)</option><option value="mid">4-6 (moyenne)</option><option value="low">1-3 (faible)</option></select>
+        </div>
+        <div class="tbl-wrap"><table class="tbl"><thead><tr><th class="sortable" data-k="date">Date</th><th class="sortable" data-k="conflict">Conflit</th><th class="sortable" data-k="title">Titre</th><th class="sortable" data-k="country">Pays</th><th class="sortable" data-k="type">Type</th><th class="sortable" data-k="severity">Sévérité</th><th></th></tr></thead><tbody id="tbl-events"></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- ============= COUNTRIES ============= -->
+    <section class="page" data-page="countries">
+      <div class="grid-3" id="countries-grid"></div>
+    </section>
+
+    <!-- ============= NEWS ============= -->
+    <section class="page" data-page="news">
+      <div class="card">
+        <div class="card-hd">
+          <h2><i class="fa-solid fa-newspaper"></i>Veille RSS automatisée</h2>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span id="news-last-update" style="font-size:.72rem;color:#64748b">Pas encore actualisé</span>
+            <label style="display:flex;align-items:center;gap:5px;font-size:.78rem;color:#94a3b8;cursor:pointer">
+              <input type="checkbox" id="news-auto" checked style="cursor:pointer"/>Auto (15 min)
+            </label>
+            <button class="btn ghost sm" id="news-demo" title="Charge des actualités de démonstration"><i class="fa-solid fa-database"></i>Démo</button>
+            <button class="btn ghost sm" id="news-diag" title="Diagnostic proxies CORS"><i class="fa-solid fa-stethoscope"></i>Diagnostic</button>
+            <button class="btn primary sm" id="news-refresh"><i class="fa-solid fa-rotate"></i>Actualiser</button>
+          </div>
+        </div>
+        <div class="help" style="font-size:.75rem;color:#94a3b8;margin-bottom:10px">
+          <b>11 sources vérifiées en direct (✓ vert)</b> : BBC World, BBC Afrique (FR), BBC Africa, BBC Business, Al Jazeera, NPR World, ONU Info FR/EN, Le Grand Continent, IRIS France, Diploweb. <span style="color:#f59e0b">⚠ Sources « à tester »</span> : flux bloqués en local (anti-bot, CORS) qui marcheront une fois le site déployé. <b>5 proxies en cascade</b> (rss2json, allorigins×2, corsproxy.io, thingproxy) pour résilience maximale.
+        </div>
+
+        <div class="tabs" id="news-cat" style="margin-bottom:10px">
+          <button class="tab active" data-cat="all">Tous</button>
+          <button class="tab" data-cat="thinktank">Think tanks</button>
+          <button class="tab" data-cat="geopol">Géopolitique</button>
+          <button class="tab" data-cat="economic">Économie</button>
+          <button class="tab" data-cat="diplomatic">Diplomatie</button>
+          <button class="tab" data-cat="humanitarian">Humanitaire</button>
+          <button class="tab" data-cat="africa">🌍 Afrique</button>
+          <button class="tab" data-cat="asia">Asie</button>
+          <button class="tab" data-cat="bf-impact" style="color:#fde047">🇧🇫 Pertinent BF</button>
+        </div>
+
+        <div class="source-status" id="src-status"></div>
+
+        <div class="filters">
+          <input type="text" id="news-search" placeholder="Filtrer dans les articles..."/>
+          <select id="news-conflict"><option value="">Tous conflits</option></select>
+          <select id="news-tag"><option value="">Tous tags</option><option value="economic">💰 Économique</option><option value="diplomatic">🤝 Diplomatique</option><option value="military">⚔️ Militaire</option><option value="humanitarian">🆘 Humanitaire</option><option value="political">🏛️ Politique</option></select>
+          <button class="btn ghost sm" id="news-manage"><i class="fa-solid fa-gear"></i>Sources</button>
+        </div>
+
+        <div id="news-list" class="news-list"><div class="loading"><i class="fa-solid fa-spinner"></i>Cliquez sur « Actualiser » pour charger les flux</div></div>
+      </div>
+    </section>
+
+    <!-- ============= ALERTS ============= -->
+    <section class="page" data-page="alerts">
+      <div class="card">
+        <div class="card-hd"><h2><i class="fa-solid fa-bell"></i>Alertes</h2><button class="btn primary sm" id="al-add"><i class="fa-solid fa-plus"></i>Nouvelle alerte</button></div>
+        <div id="alerts-list"></div>
+      </div>
+    </section>
+
+    <!-- ============= ADMIN ============= -->
+    <section class="page" data-page="admin">
+      <div class="grid-2e">
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-fire"></i>Gérer les conflits</h2><button class="btn primary sm" id="cf-add"><i class="fa-solid fa-plus"></i>Nouveau</button></div>
+          <div id="admin-conflicts"></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-flag"></i>Gérer les pays</h2><button class="btn primary sm" id="ct-add"><i class="fa-solid fa-plus"></i>Nouveau</button></div>
+          <div id="admin-countries"></div>
+        </div>
+      </div>
+
+      <div class="card mt">
+        <div class="card-hd"><h2><i class="fa-solid fa-rss"></i>Sources RSS</h2><button class="btn primary sm" id="src-add"><i class="fa-solid fa-plus"></i>Ajouter</button></div>
+        <div id="admin-sources"></div>
+      </div>
+
+      <div class="card mt">
+        <div class="card-hd"><h2><i class="fa-solid fa-database"></i>Données</h2></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn secondary" id="db-export"><i class="fa-solid fa-download"></i>Exporter JSON</button>
+          <button class="btn secondary" id="db-import"><i class="fa-solid fa-upload"></i>Importer JSON</button>
+          <button class="btn secondary" id="db-seed"><i class="fa-solid fa-seedling"></i>Réinitialiser (démo)</button>
+          <button class="btn danger" id="db-clear"><i class="fa-solid fa-trash"></i>Tout supprimer</button>
+          <input type="file" id="db-import-file" accept=".json" hidden/>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ============= MODAL ============= -->
+<div class="modal-bg" id="modal-bg"><div class="modal" id="modal"></div></div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script src="data3.js"></script>
+<script src="data4.js"></script>
+<script src="data5.js"></script>
+<script src="sources.js"></script>
+<script src="geo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
