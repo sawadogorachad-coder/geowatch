@@ -9,54 +9,52 @@
 */
 const RSS_SOURCES_FULL = [
   /* ============================================================
-     ★ SOURCES VÉRIFIÉES EN DIRECT (2026-04-29) — 100% fonctionnelles ★
+     ★ SOURCES FRANÇAISES — PRIORITÉ (langue: FR) ★
      ============================================================ */
 
-  // 🌍 INTERNATIONAL — vérifiés
-  {id:'rss_bbc',       name:'BBC World',           cat:'geopol',  region:'UK',  url:'https://feeds.bbci.co.uk/news/world/rss.xml',           verified:true},
-  {id:'rss_bbc_afr',   name:'BBC Afrique (FR)',    cat:'africa',  region:'UK',  url:'https://feeds.bbci.co.uk/afrique/rss.xml',              verified:true},
-  {id:'rss_bbc_africa',name:'BBC Africa (EN)',     cat:'africa',  region:'UK',  url:'https://feeds.bbci.co.uk/news/world/africa/rss.xml',    verified:true},
-  {id:'rss_bbc_biz',   name:'BBC Business',        cat:'economic',region:'UK',  url:'https://feeds.bbci.co.uk/news/business/rss.xml',        verified:true},
-  {id:'rss_aje',       name:'Al Jazeera English',  cat:'geopol',  region:'QA',  url:'https://www.aljazeera.com/xml/rss/all.xml',             verified:true},
-  {id:'rss_npr',       name:'NPR World',           cat:'geopol',  region:'US',  url:'https://feeds.npr.org/1004/rss.xml',                    verified:true},
+  // 🌍 PRESSE INTERNATIONALE EN FRANÇAIS — vérifiées
+  {id:'rss_bbc_afr',   name:'BBC Afrique',         cat:'africa',   region:'FR', lang:'fr', url:'https://feeds.bbci.co.uk/afrique/rss.xml',              verified:true},
+  {id:'rss_unnewsfr',  name:'ONU Info (FR)',        cat:'diplomatic',region:'FR',lang:'fr', url:'https://news.un.org/feed/subscribe/fr/news/all/rss.xml',verified:true},
 
-  // 🏛️ DIPLOMATIE — vérifiés
-  {id:'rss_unnewsfr',  name:'ONU Info (FR)',       cat:'diplomatic',region:'INT',url:'https://news.un.org/feed/subscribe/fr/news/all/rss.xml',verified:true},
-  {id:'rss_unnews',    name:'UN News (EN)',        cat:'diplomatic',region:'INT',url:'https://news.un.org/feed/subscribe/en/news/all/rss.xml',verified:true},
+  // 🧠 THINK TANKS FRANCOPHONES — vérifiés
+  {id:'rss_lgc',       name:'Le Grand Continent',  cat:'thinktank',region:'FR', lang:'fr', url:'https://legrandcontinent.eu/fr/feed/',                  verified:true},
+  {id:'rss_iris',      name:'IRIS France',          cat:'thinktank',region:'FR', lang:'fr', url:'https://www.iris-france.org/feed/',                     verified:true},
+  {id:'rss_diplo',     name:'Diploweb',             cat:'thinktank',region:'FR', lang:'fr', url:'https://www.diploweb.com/spip.php?page=backend',        verified:true},
 
-  // 🧠 THINK TANKS FR — vérifiés
-  {id:'rss_lgc',       name:'Le Grand Continent',  cat:'thinktank',region:'EU', url:'https://legrandcontinent.eu/fr/feed/',                  verified:true},
-  {id:'rss_iris',      name:'IRIS France',         cat:'thinktank',region:'FR', url:'https://www.iris-france.org/feed/',                     verified:true},
-  {id:'rss_diplo',     name:'Diploweb',            cat:'thinktank',region:'FR', url:'https://www.diploweb.com/spip.php?page=backend',        verified:true},
+  // 🌍 SOURCES FRANCOPHONES — à tester (fonctionnent sur HTTPS déployé)
+  {id:'rss_lemonde',   name:'Le Monde International', cat:'geopol',region:'FR', lang:'fr', url:'https://www.lemonde.fr/international/rss_full.xml',     verified:false},
+  {id:'rss_lemondeeco',name:'Le Monde Économie',      cat:'economic',region:'FR',lang:'fr', url:'https://www.lemonde.fr/economie/rss_full.xml',          verified:false},
+  {id:'rss_f24fr',     name:'France 24',              cat:'geopol',region:'FR', lang:'fr', url:'https://www.france24.com/fr/rss',                       verified:false},
+  {id:'rss_jeuneafr',  name:'Jeune Afrique',          cat:'africa',region:'FR', lang:'fr', url:'https://www.jeuneafrique.com/feed/',                    verified:false},
+  {id:'rss_rfiafr',    name:'RFI Afrique',            cat:'africa',region:'FR', lang:'fr', url:'https://www.rfi.fr/fr/afrique/rss',                     verified:false},
+  {id:'rss_tv5afr',    name:'TV5 Monde Afrique',      cat:'africa',region:'FR', lang:'fr', url:'https://information.tv5monde.com/afrique/rss.xml',      verified:false},
+  {id:'rss_lmd',       name:'Le Monde Diplomatique',  cat:'diplomatic',region:'FR',lang:'fr',url:'https://www.monde-diplomatique.fr/recents.xml',       verified:false},
+  {id:'rss_apa',       name:'APA News Afrique',        cat:'africa',region:'AF', lang:'fr', url:'https://apanews.net/feed/',                            verified:false},
 
   /* ============================================================
-     SOURCES NON VÉRIFIÉES (à tester via les proxies CORS).
-     Peuvent fonctionner sur le site déployé (HTTPS) mais bloquées
-     en accès direct depuis Claude Code. À conserver pour activation
-     manuelle par l'utilisateur quand le site est en ligne.
+     SOURCES EN ANGLAIS — optionnelles (activables manuellement)
+     Utiles pour la couverture mondiale mais contenu en anglais
      ============================================================ */
-  {id:'rss_lemonde',   name:'Le Monde International (à tester)',cat:'geopol',region:'FR',url:'https://www.lemonde.fr/international/rss_full.xml',verified:false},
-  {id:'rss_lemondeeco',name:'Le Monde Économie (à tester)',     cat:'economic',region:'FR',url:'https://www.lemonde.fr/economie/rss_full.xml',verified:false},
-  {id:'rss_f24fr',     name:'France 24 FR (à tester)',          cat:'geopol',region:'FR',url:'https://www.france24.com/fr/rss',              verified:false},
-  {id:'rss_dw',        name:'Deutsche Welle (à tester)',        cat:'geopol',region:'DE',url:'https://rss.dw.com/rdf/rss-en-world',          verified:false},
-  {id:'rss_guardian',  name:'The Guardian (à tester)',          cat:'geopol',region:'UK',url:'https://www.theguardian.com/world/rss',        verified:false},
-  {id:'rss_jeuneafr',  name:'Jeune Afrique (à tester)',         cat:'africa',region:'FR',url:'https://www.jeuneafrique.com/feed/',           verified:false},
-  {id:'rss_rfiafr',    name:'RFI Afrique (à tester)',           cat:'africa',region:'FR',url:'https://www.rfi.fr/fr/afrique/rss',            verified:false},
-  {id:'rss_tv5afr',    name:'TV5 Monde Afrique (à tester)',     cat:'africa',region:'FR',url:'https://information.tv5monde.com/afrique/rss.xml',verified:false},
-  {id:'rss_apa',       name:'APA News Afrique (à tester)',      cat:'africa',region:'AF',url:'https://apanews.net/feed/',                    verified:false},
-  {id:'rss_reliefweb', name:'ReliefWeb (à tester)',             cat:'humanitarian',region:'INT',url:'https://reliefweb.int/updates/rss.xml', verified:false},
-  {id:'rss_hrw',       name:'Human Rights Watch (à tester)',    cat:'humanitarian',region:'US',url:'https://www.hrw.org/rss/news',           verified:false},
-  {id:'rss_lmd',       name:'Le Monde Diplomatique (à tester)', cat:'diplomatic',region:'FR',url:'https://www.monde-diplomatique.fr/recents.xml',verified:false}
+  {id:'rss_bbc',       name:'BBC World (EN)',       cat:'geopol',  region:'UK',  lang:'en', url:'https://feeds.bbci.co.uk/news/world/rss.xml',           verified:true},
+  {id:'rss_bbc_africa',name:'BBC Africa (EN)',      cat:'africa',  region:'UK',  lang:'en', url:'https://feeds.bbci.co.uk/news/world/africa/rss.xml',    verified:true},
+  {id:'rss_bbc_biz',   name:'BBC Business (EN)',    cat:'economic',region:'UK',  lang:'en', url:'https://feeds.bbci.co.uk/news/business/rss.xml',        verified:true},
+  {id:'rss_aje',       name:'Al Jazeera (EN)',      cat:'geopol',  region:'QA',  lang:'en', url:'https://www.aljazeera.com/xml/rss/all.xml',             verified:true},
+  {id:'rss_npr',       name:'NPR World (EN)',       cat:'geopol',  region:'US',  lang:'en', url:'https://feeds.npr.org/1004/rss.xml',                    verified:true},
+  {id:'rss_unnews',    name:'ONU News (EN)',        cat:'diplomatic',region:'INT',lang:'en', url:'https://news.un.org/feed/subscribe/en/news/all/rss.xml',verified:true},
+  {id:'rss_reliefweb', name:'ReliefWeb (EN)',       cat:'humanitarian',region:'INT',lang:'en',url:'https://reliefweb.int/updates/rss.xml',               verified:false},
+  {id:'rss_hrw',       name:'Human Rights Watch (EN)',cat:'humanitarian',region:'US',lang:'en',url:'https://www.hrw.org/rss/news',                      verified:false},
+  {id:'rss_dw',        name:'Deutsche Welle (EN)',  cat:'geopol',region:'DE',   lang:'en', url:'https://rss.dw.com/rdf/rss-en-world',                   verified:false},
+  {id:'rss_guardian',  name:'The Guardian (EN)',    cat:'geopol',region:'UK',   lang:'en', url:'https://www.theguardian.com/world/rss',                 verified:false}
 ];
 
-/* PAR DÉFAUT, on n'active QUE les 11 sources VÉRIFIÉES EN DIRECT.
-   Couverture : géopol mondiale (BBC + AJE + NPR), Afrique (BBC Afrique FR + BBC Africa),
-                économie (BBC Business), diplomatie (ONU FR + EN),
-                think tanks FR (Le Grand Continent + IRIS + Diploweb) */
+/* PAR DÉFAUT : SOURCES FRANÇAISES UNIQUEMENT
+   - BBC Afrique (FR), ONU Info (FR), Le Grand Continent, IRIS France, Diploweb
+   → 5 sources 100% francophones et vérifiées
+   Les sources anglophones sont disponibles mais inactives par défaut.
+   Activez-les manuellement dans la page Flux RSS si besoin. */
 const RSS_DEFAULT_ACTIVE = [
-  'rss_bbc','rss_bbc_afr','rss_bbc_africa','rss_bbc_biz',
-  'rss_aje','rss_npr',
-  'rss_unnewsfr','rss_unnews',
+  'rss_bbc_afr',
+  'rss_unnewsfr',
   'rss_lgc','rss_iris','rss_diplo'
 ];
 

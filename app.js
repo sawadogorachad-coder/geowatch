@@ -917,8 +917,9 @@ async function loadNews(){
 
   const catEmoji = { thinktank:'🧠', geopol:'🌐', economic:'💰', diplomatic:'🤝', humanitarian:'🆘', africa:'🌍', asia:'🏯' };
   statusEl.innerHTML = sources.map(s=>{
-    const verifiedBadge = s.verified===true ? '<span style="color:#22c55e;margin-right:3px;font-weight:700" title="Vérifié en direct">✓</span>' : s.verified===false ? '<span style="color:#f59e0b;margin-right:3px" title="À tester">⚠</span>' : '';
-    return `<span class="src-chip loading" id="src-${s.id}" title="${s.url}"><i class="fa-solid fa-circle"></i>${verifiedBadge}${catEmoji[s.cat]||''} ${s.name}</span>`;
+    const verifiedBadge = s.verified===true ? '<span style="color:#22c55e;margin-right:3px;font-weight:700" title="Vérifié">✓</span>' : '<span style="color:#f59e0b;margin-right:3px" title="À tester">⚠</span>';
+    const langBadge = s.lang==='fr' ? '<span style="font-size:.65rem;background:rgba(59,130,246,.2);color:#60a5fa;padding:1px 4px;border-radius:3px;margin-right:3px">🇫🇷</span>' : '<span style="font-size:.65rem;background:rgba(100,116,139,.2);color:#94a3b8;padding:1px 4px;border-radius:3px;margin-right:3px">🇬🇧</span>';
+    return `<span class="src-chip loading" id="src-${s.id}" title="${s.url}"><i class="fa-solid fa-circle"></i>${langBadge}${verifiedBadge}${catEmoji[s.cat]||''} ${s.name}</span>`;
   }).join('');
 
   const all = [];
@@ -1006,6 +1007,8 @@ function renderNewsList(){
     const conflictTags = (it._conflicts||[]).slice(0,3).map(c=>`<span class="chip orange" style="cursor:pointer" onclick="showConflictDetail('${c.id}')">${c.short||c.name}</span>`).join('');
     const themeTags = (it._tags||[]).map(t=>`<span class="chip ${tagColor[t]||'gray'}">${tagEmoji[t]||''} ${t}</span>`).join('');
     const bfBadge = it._bf ? `<span class="chip" style="background:rgba(253,224,71,.18);color:#fde047;border:1px solid rgba(253,224,71,.5)">🇧🇫 Pertinent BF</span>` : '';
+    const srcObj = (window.GW_DATA?.RSS_SOURCES_FULL||[]).find(s=>s.id===it._sourceId);
+    const langBadge = srcObj?.lang==='en' ? `<span class="chip gray" style="font-size:.65rem">🇬🇧 EN</span>` : `<span class="chip" style="background:rgba(59,130,246,.15);color:#93c5fd;font-size:.65rem;border:1px solid rgba(59,130,246,.3)">🇫🇷 FR</span>`;
     const fullDesc = (it.description||'').replace(/<[^>]+>/g,'').trim();
     const preview = fullDesc.length > 320 ? fullDesc.slice(0,320)+'…' : fullDesc;
     const hasMore = fullDesc.length > 320;
@@ -1017,7 +1020,7 @@ function renderNewsList(){
       </div>
       ${preview?`<div class="news-desc" id="ndesc-${globalIdx}">${preview}</div>`:''}
       ${hasMore?`<button class="btn ghost sm" style="margin:4px 0 2px;font-size:.74rem" onclick="expandNews(${globalIdx})"><i class="fa-solid fa-chevron-down"></i> Lire intégralement</button>`:''}
-      <div class="news-tags" style="margin-top:6px">${bfBadge}${conflictTags}${themeTags}
+      <div class="news-tags" style="margin-top:6px">${langBadge}${bfBadge}${conflictTags}${themeTags}
         <a href="${it.link}" target="_blank" rel="noopener" class="chip gray" style="text-decoration:none;margin-left:auto"><i class="fa-solid fa-arrow-up-right-from-square"></i> Article source</a>
       </div>
     </div>`;
@@ -1436,32 +1439,32 @@ function _adminSaveConflict(){
     return { nom, proba:+document.getElementById(`ac-sc${n}-p`).value||20, impact:+document.getElementById(`ac-sc${n}-i`).value||5, h:document.getElementById(`ac-sc${n}-h`).value||'12-24 mois', d:document.getElementById(`ac-sc${n}-d`).value||'' };
   }).filter(Boolean);
   const bd = [1,2,3,4,5].map(n=>document.getElementById(`ac-bd${n}`).value.trim()).filter(Boolean);
-  const banal = document.getElementById;
+  const g = id => document.getElementById(id);
   const newC = {
     id: 'c_user_'+Date.now(),
-    name, short: banal('ac-short').value.trim()||name.slice(0,20),
-    region: banal('ac-region').value||'Global',
-    status: banal('ac-status').value||'active',
-    intensity: +banal('ac-intensity').value||5,
-    start_year: +banal('ac-year').value||new Date().getFullYear(),
-    pays_clefs: banal('ac-pays').value.trim(),
-    actors_etat: (banal('ac-actors-e').value||'').split('\n').map(x=>x.trim()).filter(Boolean),
-    actors_non_etat: (banal('ac-actors-ne').value||'').split('\n').map(x=>x.trim()).filter(Boolean),
+    name, short: g('ac-short').value.trim()||name.slice(0,20),
+    region: g('ac-region').value||'Global',
+    status: g('ac-status').value||'active',
+    intensity: +g('ac-intensity').value||5,
+    start_year: +g('ac-year').value||new Date().getFullYear(),
+    pays_clefs: g('ac-pays').value.trim(),
+    actors_etat: (g('ac-actors-e').value||'').split('\n').map(x=>x.trim()).filter(Boolean),
+    actors_non_etat: (g('ac-actors-ne').value||'').split('\n').map(x=>x.trim()).filter(Boolean),
     brief_decideur: bd,
     brief_analyste: {
-      faits: banal('ac-faits').value.trim(), incertitudes: banal('ac-incert').value.trim(),
-      hypotheses: banal('ac-hyp').value.trim(), indicateurs_24_72h: banal('ac-ind24').value.trim(),
-      indicateurs_7_30j: banal('ac-ind7').value.trim(), implications_7_30j: banal('ac-impl').value.trim()
+      faits: g('ac-faits').value.trim(), incertitudes: g('ac-incert').value.trim(),
+      hypotheses: g('ac-hyp').value.trim(), indicateurs_24_72h: g('ac-ind24').value.trim(),
+      indicateurs_7_30j: g('ac-ind7').value.trim(), implications_7_30j: g('ac-impl').value.trim()
     },
     scenarios: scens,
     analyse_simple: phrase ? {
       en_une_phrase: phrase,
-      pourquoi_important: banal('ac-pourquoi').value.trim(),
-      enjeu_central: banal('ac-enjeu').value.trim(),
-      surveiller: [banal('ac-s1').value.trim(), banal('ac-s2').value.trim(), banal('ac-s3').value.trim()].filter(Boolean),
-      horizon_proche: banal('ac-h-proche').value.trim(),
-      horizon_long: banal('ac-h-long').value.trim(),
-      analogie: banal('ac-analogie').value.trim(),
+      pourquoi_important: g('ac-pourquoi').value.trim(),
+      enjeu_central: g('ac-enjeu').value.trim(),
+      surveiller: [g('ac-s1').value.trim(), g('ac-s2').value.trim(), g('ac-s3').value.trim()].filter(Boolean),
+      horizon_proche: g('ac-h-proche').value.trim(),
+      horizon_long: g('ac-h-long').value.trim(),
+      analogie: g('ac-analogie').value.trim(),
       date_analyse: new Date().toISOString().slice(0,10),
       source_reference: 'Saisie manuelle'
     } : null,
