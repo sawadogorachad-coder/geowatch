@@ -334,7 +334,14 @@ function renderAnalyseSimplePanel(c){
   const a = c.analyse_simple; if(!a) return '';
   const col = conflictColor(c.intensity);
   return `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1428 0%,#060d1a 100%);border:2px solid ${col};border-radius:12px">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><i class="fa-solid fa-lightbulb" style="color:${col};font-size:1.3rem"></i><h2 style="font-size:1rem;color:#e2e8f0;font-weight:700">Analyse géopolitique simplifiée</h2><span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.65rem">Pédagogique</span></div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap">
+    <i class="fa-solid fa-lightbulb" style="color:${col};font-size:1.3rem"></i>
+    <h2 style="font-size:1rem;color:#e2e8f0;font-weight:700">Analyse géopolitique simplifiée</h2>
+    <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.65rem">Pédagogique</span>
+    ${a.date_analyse?`<span class="chip gray" style="font-size:.65rem"><i class="fa-solid fa-calendar"></i> Màj : ${a.date_analyse}</span>`:'<span class="chip orange" style="font-size:.65rem">⚠ Non daté — à vérifier</span>'}
+    ${a.source_reference?`<span style="font-size:.65rem;color:#64748b"><i class="fa-solid fa-book"></i> ${a.source_reference}</span>`:''}
+  </div>
+  ${a.source_reference && a.source_reference.includes('prospectifs') ? `<div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:.75rem;color:#fca5a5"><i class="fa-solid fa-triangle-exclamation"></i> <b>Cette analyse contient des éléments prospectifs.</b> Vérifiez avec les dernières sources officielles avant toute utilisation.</div>`:''}
 
     <div style="background:rgba(96,165,250,.08);border-left:4px solid #60a5fa;padding:14px 16px;border-radius:6px;margin-bottom:12px">
       <div style="font-size:.7rem;color:#60a5fa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;font-weight:700">📌 En une phrase</div>
@@ -749,12 +756,21 @@ function fetchTimeout(url, ms=8000){
 function parseXMLItems(xmlText){
   const xml = new DOMParser().parseFromString(xmlText,'text/xml');
   if(xml.querySelector('parsererror')) return [];
-  return [...xml.querySelectorAll('item, entry')].slice(0,15).map(it=>({
-    title: (it.querySelector('title')?.textContent||'').trim(),
-    link: it.querySelector('link')?.getAttribute('href') || it.querySelector('link')?.textContent || it.querySelector('guid')?.textContent || '',
-    pubDate: it.querySelector('pubDate, published, updated, dc\\:date')?.textContent || new Date().toISOString(),
-    description: (it.querySelector('description, summary, content')?.textContent || '').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,500)
-  })).filter(i=>i.title && i.link);
+  return [...xml.querySelectorAll('item, entry')].slice(0,20).map(it=>{
+    // Cherche le contenu le plus riche disponible : content:encoded > content > description > summary
+    const fullHTML = it.querySelector('encoded')?.textContent
+      || it.querySelector('content')?.textContent
+      || it.querySelector('description')?.textContent
+      || it.querySelector('summary')?.textContent
+      || '';
+    const clean = fullHTML.replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/\s+/g,' ').trim();
+    return {
+      title: (it.querySelector('title')?.textContent||'').trim(),
+      link: it.querySelector('link')?.getAttribute('href') || it.querySelector('link')?.textContent || it.querySelector('guid')?.textContent || '',
+      pubDate: it.querySelector('pubDate, published, updated, dc\\:date')?.textContent || new Date().toISOString(),
+      description: clean
+    };
+  }).filter(i=>i.title && i.link);
 }
 
 /* 4 proxies en cascade — résilience max */
@@ -986,20 +1002,35 @@ function renderNewsList(){
   const tagEmoji = { economic:'💰', diplomatic:'🤝', military:'⚔️', humanitarian:'🆘', political:'🏛️' };
   const tagColor = { economic:'orange', diplomatic:'blue', military:'red', humanitarian:'purple', political:'green' };
 
-  el.innerHTML = items.slice(0,80).map(it=>{
+  el.innerHTML = items.slice(0,100).map((it,idx)=>{
     const conflictTags = (it._conflicts||[]).slice(0,3).map(c=>`<span class="chip orange" style="cursor:pointer" onclick="showConflictDetail('${c.id}')">${c.short||c.name}</span>`).join('');
     const themeTags = (it._tags||[]).map(t=>`<span class="chip ${tagColor[t]||'gray'}">${tagEmoji[t]||''} ${t}</span>`).join('');
     const bfBadge = it._bf ? `<span class="chip" style="background:rgba(253,224,71,.18);color:#fde047;border:1px solid rgba(253,224,71,.5)">🇧🇫 Pertinent BF</span>` : '';
-    const desc = (it.description||'').replace(/<[^>]+>/g,'').slice(0,260);
+    const fullDesc = (it.description||'').replace(/<[^>]+>/g,'').trim();
+    const preview = fullDesc.length > 320 ? fullDesc.slice(0,320)+'…' : fullDesc;
+    const hasMore = fullDesc.length > 320;
+    const globalIdx = NEWS_STATE.items.indexOf(it);
     return `<div class="news-item">
       <div class="news-hd">
         <div class="news-title"><a href="${it.link}" target="_blank" rel="noopener">${it.title}</a></div>
-        <div class="news-meta"><i class="fa-solid fa-newspaper"></i>${it._source||''} • ${fmt.dateTime(it.pubDate)}</div>
+        <div class="news-meta"><i class="fa-solid fa-newspaper"></i><b>${it._source||''}</b> • ${fmt.dateTime(it.pubDate)}</div>
       </div>
-      ${desc?`<div class="news-desc">${desc}</div>`:''}
-      <div class="news-tags">${bfBadge}${conflictTags}${themeTags}</div>
+      ${preview?`<div class="news-desc" id="ndesc-${globalIdx}">${preview}</div>`:''}
+      ${hasMore?`<button class="btn ghost sm" style="margin:4px 0 2px;font-size:.74rem" onclick="expandNews(${globalIdx})"><i class="fa-solid fa-chevron-down"></i> Lire intégralement</button>`:''}
+      <div class="news-tags" style="margin-top:6px">${bfBadge}${conflictTags}${themeTags}
+        <a href="${it.link}" target="_blank" rel="noopener" class="chip gray" style="text-decoration:none;margin-left:auto"><i class="fa-solid fa-arrow-up-right-from-square"></i> Article source</a>
+      </div>
     </div>`;
   }).join('');
+}
+
+/* Expand article en place */
+function expandNews(idx){
+  const it = NEWS_STATE.items[idx]; if(!it) return;
+  const el = document.getElementById('ndesc-'+idx); if(!el) return;
+  const btn = el.nextElementSibling;
+  el.textContent = (it.description||'').replace(/<[^>]+>/g,'').trim();
+  if(btn && btn.tagName==='BUTTON') btn.remove();
 }
 
 function renderNews(){
@@ -1218,12 +1249,448 @@ function clearNotifs(){
   toast('Notifications effacées','info');
 }
 
-/* ============= ADMIN ============= */
+/* ============= ADMIN AVANCÉ ============= */
 function renderAdmin(){
+  document.getElementById('admin-panel').innerHTML = `
+    <div class="tabs" style="flex-wrap:wrap;margin-bottom:16px">
+      <button class="tab active" data-atab="overview"   onclick="adminTab('overview')">  <i class="fa-solid fa-table-columns"></i> Vue d'ensemble</button>
+      <button class="tab"        data-atab="add"        onclick="adminTab('add')">        <i class="fa-solid fa-plus-circle"></i>   Ajouter un conflit</button>
+      <button class="tab"        data-atab="analyses"   onclick="adminTab('analyses')">   <i class="fa-solid fa-pen-to-square"></i>  Modifier les analyses</button>
+      <button class="tab"        data-atab="impact-bf"  onclick="adminTab('impact-bf')">  <i class="fa-solid fa-flag"></i>           Impacts Burkina Faso</button>
+      <button class="tab"        data-atab="export"     onclick="adminTab('export')">     <i class="fa-solid fa-download"></i>       Exporter pour GitHub</button>
+    </div>
+    <div id="admin-tab-content"></div>`;
+  adminTab('overview');
+}
+
+function adminTab(tab){
+  document.querySelectorAll('[data-atab]').forEach(b=>b.classList.toggle('active', b.dataset.atab===tab));
+  const el = document.getElementById('admin-tab-content'); if(!el) return;
+  if(tab==='overview')   el.innerHTML = _adminOverview();
+  else if(tab==='add')   el.innerHTML = _adminAddForm();
+  else if(tab==='analyses') { el.innerHTML = _adminAnalysesForm(); _adminAnalysesWire(); }
+  else if(tab==='impact-bf') { el.innerHTML = _adminImpactBFForm(); _adminImpactBFWire(); }
+  else if(tab==='export') el.innerHTML = _adminExport();
+  if(tab==='overview') _adminOverviewWire();
+  if(tab==='add') _adminAddWire();
+}
+
+/* ── TAB 1 : Vue d'ensemble ── */
+function _adminOverview(){
   const d = DB.get();
-  document.getElementById('admin-conflicts').innerHTML = `<div class="tbl-wrap" style="max-height:360px"><table class="tbl"><thead><tr><th>Nom</th><th>Région</th><th>Int.</th></tr></thead><tbody>${d.conflicts.map(c=>`<tr><td><b>${c.short||c.name}</b></td><td>${c.region}</td><td><span style="color:${conflictColor(c.intensity)};font-weight:700">${c.intensity}</span></td></tr>`).join('')}</tbody></table></div>`;
-  document.getElementById('admin-countries').innerHTML = `<div class="tbl-wrap" style="max-height:360px"><table class="tbl"><thead><tr><th>Code</th><th>Nom</th><th>FSI</th></tr></thead><tbody>${d.countries.map(c=>`<tr><td><b>${c.code}</b></td><td>${c.name}</td><td>${c.fsi||'—'}</td></tr>`).join('')}</tbody></table></div>`;
-  document.getElementById('admin-sources').innerHTML = `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Nom</th><th>Catégorie</th><th>Spécialité</th></tr></thead><tbody>${d.sources.map(s=>`<tr><td><b>${s.name}</b></td><td>${s.categorie}</td><td style="font-size:.74rem;color:#94a3b8">${s.specialite}</td></tr>`).join('')}</tbody></table></div>`;
+  const conflictsCustom = JSON.parse(localStorage.getItem('gw_user_conflicts')||'[]');
+  return `
+  <div class="grid-2e">
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-fire"></i>Conflits (${d.conflicts.length})</h2></div>
+      <div class="tbl-wrap" style="max-height:300px"><table class="tbl"><thead><tr><th>Nom</th><th>Région</th><th>Int.</th><th>Statut</th></tr></thead>
+        <tbody>${d.conflicts.map(c=>`<tr><td><b>${c.short||c.name}</b></td><td style="font-size:.78rem">${c.region}</td><td><span style="color:${conflictColor(c.intensity)};font-weight:700">${c.intensity}/10</span></td><td>${statusChip(c.status)}</td></tr>`).join('')}</tbody>
+      </table></div>
+      ${conflictsCustom.length?`<div style="margin-top:8px;font-size:.78rem;color:#a78bfa"><i class="fa-solid fa-user"></i> ${conflictsCustom.length} conflit(s) ajouté(s) par vous (localStorage)</div>`:''}
+    </div>
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-flag"></i>Pays (${d.countries.length})</h2></div>
+      <div class="tbl-wrap" style="max-height:300px"><table class="tbl"><thead><tr><th>Code</th><th>Nom</th><th>FSI</th></tr></thead>
+        <tbody>${d.countries.map(c=>`<tr><td><b>${c.code}</b></td><td>${c.name}</td><td>${c.fsi||'—'}</td></tr>`).join('')}</tbody>
+      </table></div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="card-hd"><h2><i class="fa-solid fa-rss"></i>Sources RSS (${(window.GW_DATA?.RSS_SOURCES_FULL||[]).length})</h2></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Nom</th><th>Catégorie</th><th>Région</th><th>Vérifié</th></tr></thead>
+      <tbody>${(window.GW_DATA?.RSS_SOURCES_FULL||[]).map(s=>`<tr>
+        <td><b>${s.name}</b></td><td>${s.cat}</td><td>${s.region}</td>
+        <td>${s.verified===true?'<span style="color:#22c55e">✓ OK</span>':'<span style="color:#f59e0b">⚠ À tester</span>'}</td>
+      </tr>`).join('')}</tbody>
+    </table></div>
+  </div>
+  <div class="card mt">
+    <div class="card-hd"><h2><i class="fa-solid fa-database"></i>Données localStorage</h2></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn secondary" id="db-export"><i class="fa-solid fa-download"></i>Exporter JSON</button>
+      <button class="btn secondary" id="db-import"><i class="fa-solid fa-upload"></i>Importer JSON</button>
+      <button class="btn secondary" id="db-seed"><i class="fa-solid fa-seedling"></i>Réinitialiser (démo)</button>
+      <button class="btn danger"    id="db-clear"><i class="fa-solid fa-trash"></i>Tout supprimer</button>
+      <input type="file" id="db-import-file" accept=".json" hidden/>
+    </div>
+  </div>`;
+}
+function _adminOverviewWire(){
+  document.getElementById('db-export').onclick = ()=>{const b=new Blob([JSON.stringify(DB.get(),null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=`geowatch_${new Date().toISOString().slice(0,10)}.json`; a.click(); toast('Export OK','success');};
+  document.getElementById('db-import').onclick = ()=>document.getElementById('db-import-file').click();
+  document.getElementById('db-import-file').onchange = e=>{const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=ev=>{try{DB.save(JSON.parse(ev.target.result)); toast('Import OK','success'); adminTab('overview');}catch(err){toast('Erreur : '+err.message,'error');}}; r.readAsText(f);};
+  document.getElementById('db-seed').onclick = ()=>{if(confirm('Recharger les données du gabarit ?')){DB.reset(); toast('Réinitialisé','success'); location.reload();}};
+  document.getElementById('db-clear').onclick = ()=>{if(confirm('Supprimer toutes les données ?')){localStorage.removeItem(DB.k); toast('Vidé','success'); location.reload();}};
+}
+
+/* ── TAB 2 : Ajouter un conflit ── */
+function _adminAddForm(){
+  const regions = ['Afrique de l\'Ouest','Afrique subsaharienne','Afrique du Nord','Moyen-Orient','Europe de l\'Est','Asie de l\'Est','Asie du Sud-Est','Amériques','Caucase','Global'];
+  const regionOpts = regions.map(r=>`<option>${r}</option>`).join('');
+  return `
+  <div style="background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.3);border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:.82rem;color:#c4b5fd">
+    <i class="fa-solid fa-info-circle"></i> <b>Comment ça marche :</b> Remplis ce formulaire → <b>Enregistrer</b> ajoute le conflit localement (visible immédiatement). Ensuite, utilise l'onglet <b>Exporter pour GitHub</b> pour le rendre visible à tous les visiteurs du site.
+  </div>
+  <div class="grid-2e">
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-circle-info"></i>Informations générales</h2></div>
+      <div style="display:grid;gap:10px">
+        <div><label class="lbl">Nom complet du conflit *</label><input class="inp" id="ac-name" placeholder="Ex : Conflit Sénégal-Mauritanie" required></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div><label class="lbl">Nom court / abréviation</label><input class="inp" id="ac-short" placeholder="Ex : Sénégal-Maur."></div>
+          <div><label class="lbl">Année de début *</label><input class="inp" id="ac-year" type="number" min="1900" max="2030" placeholder="Ex : 2024"></div>
+        </div>
+        <div><label class="lbl">Région *</label><select class="inp" id="ac-region"><option value="">Choisir…</option>${regionOpts}</select></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div><label class="lbl">Statut</label>
+            <select class="inp" id="ac-status">
+              <option value="active">Actif</option>
+              <option value="escalating">Escalade</option>
+              <option value="deescalating">Désescalade</option>
+              <option value="frozen">Gelé</option>
+              <option value="resolved">Résolu</option>
+            </select>
+          </div>
+          <div><label class="lbl">Intensité (1-10)</label>
+            <div style="display:flex;align-items:center;gap:8px">
+              <input class="inp" id="ac-intensity" type="range" min="1" max="10" value="5" style="flex:1;padding:6px 0">
+              <span id="ac-intensity-val" style="color:#f59e0b;font-weight:700;min-width:24px">5</span>
+            </div>
+          </div>
+        </div>
+        <div><label class="lbl">Pays clés (ex : Syrie, Irak, Liban)</label><input class="inp" id="ac-pays" placeholder="Séparer par des virgules"></div>
+        <div><label class="lbl">Acteurs étatiques (un par ligne)</label><textarea class="inp" id="ac-actors-e" rows="3" placeholder="Gouvernement syrien\nRussie\nTurquie"></textarea></div>
+        <div><label class="lbl">Acteurs non-étatiques (un par ligne)</label><textarea class="inp" id="ac-actors-ne" rows="3" placeholder="Jabhat al-Nosra\nForces démocratiques syriennes"></textarea></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-bullseye"></i>Brief Décideur (5 points max)</h2></div>
+      <div style="display:grid;gap:8px">
+        ${[1,2,3,4,5].map(n=>`<div><label class="lbl">Point ${n}${n<=2?' *':''}</label><textarea class="inp" id="ac-bd${n}" rows="2" placeholder="${n===1?'Fait majeur structurant…':n===2?'Risque immédiat…':'Optionnel…'}"></textarea></div>`).join('')}
+      </div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="card-hd"><h2><i class="fa-solid fa-microscope"></i>Brief Analyste</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+      <div><label class="lbl">Faits robustes</label><textarea class="inp" id="ac-faits" rows="3" placeholder="Faits vérifiés, datés, sourcés…"></textarea></div>
+      <div><label class="lbl">Incertitudes</label><textarea class="inp" id="ac-incert" rows="3" placeholder="Ce qu'on ne sait pas encore…"></textarea></div>
+      <div><label class="lbl">Hypothèses pondérées</label><textarea class="inp" id="ac-hyp" rows="3" placeholder="Hypothèse A (60%) : … / Hypothèse B (30%) : …"></textarea></div>
+      <div><label class="lbl">Indicateurs 24-72 h</label><textarea class="inp" id="ac-ind24" rows="3" placeholder="Signaux à surveiller dans les 3 prochains jours…"></textarea></div>
+      <div><label class="lbl">Indicateurs 7-30 j</label><textarea class="inp" id="ac-ind7" rows="3" placeholder="Signaux à surveiller dans le mois à venir…"></textarea></div>
+      <div><label class="lbl">Implications 7-30 j</label><textarea class="inp" id="ac-impl" rows="3" placeholder="Conséquences probables si les signaux se confirment…"></textarea></div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="card-hd"><h2><i class="fa-solid fa-lightbulb"></i>Analyse simplifiée (pour le grand public)</h2></div>
+    <div style="display:grid;gap:10px">
+      <div><label class="lbl">En une phrase *</label><textarea class="inp" id="ac-phrase" rows="2" placeholder="Résumé du conflit en une phrase claire et factuelle…"></textarea></div>
+      <div><label class="lbl">Pourquoi c'est important ?</label><textarea class="inp" id="ac-pourquoi" rows="3" placeholder="Enjeux géopolitiques, économiques, humanitaires…"></textarea></div>
+      <div><label class="lbl">Enjeu central</label><input class="inp" id="ac-enjeu" placeholder="La question fondamentale que ce conflit pose…"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <div><label class="lbl">Signal 1 à surveiller</label><input class="inp" id="ac-s1" placeholder="Signal clé…"></div>
+        <div><label class="lbl">Signal 2 à surveiller</label><input class="inp" id="ac-s2" placeholder="Signal clé…"></div>
+        <div><label class="lbl">Signal 3 à surveiller</label><input class="inp" id="ac-s3" placeholder="Signal clé…"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div><label class="lbl">Horizon proche (6-24 mois)</label><textarea class="inp" id="ac-h-proche" rows="2" placeholder="Évolution probable à court terme…"></textarea></div>
+        <div><label class="lbl">Horizon long (5-10 ans)</label><textarea class="inp" id="ac-h-long" rows="2" placeholder="Évolution probable à long terme…"></textarea></div>
+      </div>
+      <div><label class="lbl">Analogie pédagogique (optionnel)</label><textarea class="inp" id="ac-analogie" rows="2" placeholder="Pour expliquer simplement à un non-spécialiste…"></textarea></div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="card-hd"><h2><i class="fa-solid fa-chess"></i>Scénarios prospectifs (méthode Godet)</h2></div>
+    <div style="display:grid;gap:12px">
+      ${[1,2,3,4].map(n=>`
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:12px">
+        <div style="font-size:.78rem;color:#94a3b8;margin-bottom:8px;font-weight:600">Scénario ${n}</div>
+        <div style="display:grid;grid-template-columns:2fr 80px 80px 120px;gap:8px;align-items:end">
+          <div><label class="lbl">Nom du scénario</label><input class="inp" id="ac-sc${n}-nom" placeholder="${n===1?'Tendanciel':n===2?'Rupture':n===3?'Recomposition':'Wild card'}"></div>
+          <div><label class="lbl">Proba (%)</label><input class="inp" id="ac-sc${n}-p" type="number" min="0" max="100" placeholder="30"></div>
+          <div><label class="lbl">Impact (1-10)</label><input class="inp" id="ac-sc${n}-i" type="number" min="1" max="10" placeholder="7"></div>
+          <div><label class="lbl">Horizon</label><input class="inp" id="ac-sc${n}-h" placeholder="12-24 mois"></div>
+        </div>
+        <div style="margin-top:8px"><label class="lbl">Description</label><textarea class="inp" id="ac-sc${n}-d" rows="2" placeholder="Description du scénario…"></textarea></div>
+      </div>`).join('')}
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;margin-top:16px;justify-content:flex-end">
+    <button class="btn secondary" onclick="adminTab('overview')"><i class="fa-solid fa-xmark"></i> Annuler</button>
+    <button class="btn primary" id="ac-save"><i class="fa-solid fa-floppy-disk"></i> Enregistrer le conflit</button>
+  </div>`;
+}
+function _adminAddWire(){
+  const slider = document.getElementById('ac-intensity');
+  const val = document.getElementById('ac-intensity-val');
+  if(slider) slider.oninput = ()=>{ val.textContent=slider.value; val.style.color=conflictColor(+slider.value); };
+  document.getElementById('ac-save').onclick = _adminSaveConflict;
+}
+function _adminSaveConflict(){
+  const name = document.getElementById('ac-name').value.trim();
+  const phrase = document.getElementById('ac-phrase').value.trim();
+  if(!name){ toast('Le nom du conflit est obligatoire','error'); return; }
+  const scens = [1,2,3,4].map(n=>{
+    const nom = document.getElementById(`ac-sc${n}-nom`).value.trim();
+    if(!nom) return null;
+    return { nom, proba:+document.getElementById(`ac-sc${n}-p`).value||20, impact:+document.getElementById(`ac-sc${n}-i`).value||5, h:document.getElementById(`ac-sc${n}-h`).value||'12-24 mois', d:document.getElementById(`ac-sc${n}-d`).value||'' };
+  }).filter(Boolean);
+  const bd = [1,2,3,4,5].map(n=>document.getElementById(`ac-bd${n}`).value.trim()).filter(Boolean);
+  const banal = document.getElementById;
+  const newC = {
+    id: 'c_user_'+Date.now(),
+    name, short: banal('ac-short').value.trim()||name.slice(0,20),
+    region: banal('ac-region').value||'Global',
+    status: banal('ac-status').value||'active',
+    intensity: +banal('ac-intensity').value||5,
+    start_year: +banal('ac-year').value||new Date().getFullYear(),
+    pays_clefs: banal('ac-pays').value.trim(),
+    actors_etat: (banal('ac-actors-e').value||'').split('\n').map(x=>x.trim()).filter(Boolean),
+    actors_non_etat: (banal('ac-actors-ne').value||'').split('\n').map(x=>x.trim()).filter(Boolean),
+    brief_decideur: bd,
+    brief_analyste: {
+      faits: banal('ac-faits').value.trim(), incertitudes: banal('ac-incert').value.trim(),
+      hypotheses: banal('ac-hyp').value.trim(), indicateurs_24_72h: banal('ac-ind24').value.trim(),
+      indicateurs_7_30j: banal('ac-ind7').value.trim(), implications_7_30j: banal('ac-impl').value.trim()
+    },
+    scenarios: scens,
+    analyse_simple: phrase ? {
+      en_une_phrase: phrase,
+      pourquoi_important: banal('ac-pourquoi').value.trim(),
+      enjeu_central: banal('ac-enjeu').value.trim(),
+      surveiller: [banal('ac-s1').value.trim(), banal('ac-s2').value.trim(), banal('ac-s3').value.trim()].filter(Boolean),
+      horizon_proche: banal('ac-h-proche').value.trim(),
+      horizon_long: banal('ac-h-long').value.trim(),
+      analogie: banal('ac-analogie').value.trim(),
+      date_analyse: new Date().toISOString().slice(0,10),
+      source_reference: 'Saisie manuelle'
+    } : null,
+    _user_added: true,
+    _added_date: new Date().toISOString().slice(0,10)
+  };
+  // Sauvegarde dans DB + liste séparée pour export
+  const d = DB.get();
+  d.conflicts.push(newC);
+  DB.save(d);
+  const custom = JSON.parse(localStorage.getItem('gw_user_conflicts')||'[]');
+  custom.push(newC);
+  localStorage.setItem('gw_user_conflicts', JSON.stringify(custom));
+  toast(`Conflit "${name}" enregistré ! Allez dans Exporter pour GitHub pour le partager.`, 'success');
+  adminTab('overview');
+}
+
+/* ── TAB 3 : Modifier les analyses ── */
+function _adminAnalysesForm(){
+  const d = DB.get();
+  const opts = d.conflicts.map(c=>`<option value="${c.id}">${c.short||c.name}</option>`).join('');
+  return `
+  <div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:.82rem;color:#fca5a5">
+    <i class="fa-solid fa-triangle-exclamation"></i> <b>Important :</b> Les analyses existantes ont été rédigées le <b>29 avril 2026</b> et peuvent contenir des éléments <b>prospectifs ou hypothétiques</b> présentés comme des faits. Vérifiez systématiquement avec des sources officielles (IRIS, ICG, ACLED, OCHA, etc.) avant utilisation.
+  </div>
+  <div class="card">
+    <div class="card-hd"><h2><i class="fa-solid fa-pen-to-square"></i>Sélectionner le conflit à modifier</h2></div>
+    <select class="inp" id="ea-conflict" style="max-width:400px"><option value="">Choisir un conflit…</option>${opts}</select>
+  </div>
+  <div id="ea-form" style="margin-top:12px"></div>`;
+}
+function _adminAnalysesWire(){
+  document.getElementById('ea-conflict').onchange = function(){
+    const cid = this.value; if(!cid){ document.getElementById('ea-form').innerHTML=''; return; }
+    const c = DB.get().conflicts.find(x=>x.id===cid); if(!c) return;
+    const a = c.analyse_simple||{};
+    const surveiller = a.surveiller||['','',''];
+    document.getElementById('ea-form').innerHTML = `
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-edit"></i>Analyse simplifiée — <span style="color:#60a5fa">${c.name}</span></h2>
+        ${a.date_analyse?`<span class="chip gray">Dernière màj : ${a.date_analyse}</span>`:'<span class="chip orange">Jamais modifié</span>'}
+      </div>
+      <div style="display:grid;gap:10px">
+        <div><label class="lbl">En une phrase (factuel, daté, sourcé)</label><textarea class="inp" id="ea-phrase" rows="2">${a.en_une_phrase||''}</textarea></div>
+        <div><label class="lbl">Pourquoi c'est important ?</label><textarea class="inp" id="ea-pourquoi" rows="3">${a.pourquoi_important||''}</textarea></div>
+        <div><label class="lbl">Enjeu central</label><input class="inp" id="ea-enjeu" value="${(a.enjeu_central||'').replace(/"/g,'&quot;')}"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+          <div><label class="lbl">Signal 1 à surveiller</label><input class="inp" id="ea-s1" value="${(surveiller[0]||'').replace(/"/g,'&quot;')}"></div>
+          <div><label class="lbl">Signal 2 à surveiller</label><input class="inp" id="ea-s2" value="${(surveiller[1]||'').replace(/"/g,'&quot;')}"></div>
+          <div><label class="lbl">Signal 3 à surveiller</label><input class="inp" id="ea-s3" value="${(surveiller[2]||'').replace(/"/g,'&quot;')}"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div><label class="lbl">Horizon proche (6-24 mois)</label><textarea class="inp" id="ea-hproche" rows="2">${a.horizon_proche||''}</textarea></div>
+          <div><label class="lbl">Horizon long (5-10 ans)</label><textarea class="inp" id="ea-hlong" rows="2">${a.horizon_long||''}</textarea></div>
+        </div>
+        <div><label class="lbl">Analogie pédagogique</label><textarea class="inp" id="ea-analogie" rows="2">${a.analogie||''}</textarea></div>
+        <div><label class="lbl">Source(s) de référence utilisée(s)</label><input class="inp" id="ea-source" value="${(a.source_reference||'').replace(/"/g,'&quot;')}" placeholder="Ex : IRIS France, rapport ICG n°xxx, ACLED avril 2026…"></div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:14px;justify-content:flex-end">
+        <button class="btn primary" onclick="_adminSaveAnalyse('${cid}')"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+      </div>
+    </div>`;
+  };
+}
+function _adminSaveAnalyse(cid){
+  const d = DB.get();
+  const c = d.conflicts.find(x=>x.id===cid); if(!c) return;
+  c.analyse_simple = {
+    en_une_phrase: document.getElementById('ea-phrase').value.trim(),
+    pourquoi_important: document.getElementById('ea-pourquoi').value.trim(),
+    enjeu_central: document.getElementById('ea-enjeu').value.trim(),
+    surveiller: [document.getElementById('ea-s1').value.trim(), document.getElementById('ea-s2').value.trim(), document.getElementById('ea-s3').value.trim()].filter(Boolean),
+    horizon_proche: document.getElementById('ea-hproche').value.trim(),
+    horizon_long: document.getElementById('ea-hlong').value.trim(),
+    analogie: document.getElementById('ea-analogie').value.trim(),
+    source_reference: document.getElementById('ea-source').value.trim(),
+    date_analyse: new Date().toISOString().slice(0,10)
+  };
+  DB.save(d);
+  toast(`Analyse de "${c.name}" mise à jour. Pensez à Exporter pour GitHub.`, 'success');
+  document.getElementById('ea-conflict').dispatchEvent(new Event('change'));
+}
+
+/* ── TAB 4 : Impacts Burkina Faso ── */
+function _adminImpactBFForm(){
+  const d = DB.get();
+  const opts = d.conflicts.map(c=>`<option value="${c.id}">${c.short||c.name}</option>`).join('');
+  const dims = ['securitaire','economique','diplomatique','sociopolitique'];
+  const dimLabels = {securitaire:'Sécuritaire',economique:'Économique',diplomatique:'Diplomatique',sociopolitique:'Sociopolitique'};
+  return `
+  <div class="card">
+    <div class="card-hd"><h2><i class="fa-solid fa-flag"></i>Sélectionner le conflit</h2></div>
+    <select class="inp" id="ibf-conflict" style="max-width:400px"><option value="">Choisir un conflit…</option>${opts}</select>
+  </div>
+  <div id="ibf-form" style="margin-top:12px"></div>`;
+}
+function _adminImpactBFWire(){
+  document.getElementById('ibf-conflict').onchange = function(){
+    const cid = this.value; if(!cid){ document.getElementById('ibf-form').innerHTML=''; return; }
+    const c = DB.get().conflicts.find(x=>x.id===cid); if(!c) return;
+    const bf = c.impact_bf||{};
+    const dims = ['securitaire','economique','diplomatique','sociopolitique'];
+    const dimLabels = {securitaire:'🔴 Sécuritaire',economique:'💰 Économique',diplomatique:'🤝 Diplomatique',sociopolitique:'🏛️ Sociopolitique'};
+    const niveaux = ['critique','élevé','moyen','faible','positif','neutre'];
+    document.getElementById('ibf-form').innerHTML = `
+    <div class="card">
+      <div class="card-hd"><h2>Impacts sur le Burkina Faso — <span style="color:#fde047">${c.name}</span></h2></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        ${dims.map(dim=>{
+          const d2 = bf[dim]||{};
+          return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:12px">
+            <div style="font-size:.82rem;color:#fde047;font-weight:700;margin-bottom:8px">${dimLabels[dim]}</div>
+            <label class="lbl">Titre</label><input class="inp" id="ibf-${dim}-t" value="${(d2.titre||'').replace(/"/g,'&quot;')}" placeholder="Ex : Choc d'approvisionnement alimentaire">
+            <label class="lbl" style="margin-top:6px">Description</label><textarea class="inp" id="ibf-${dim}-d" rows="3">${d2.description||''}</textarea>
+            <label class="lbl" style="margin-top:6px">Niveau d'impact</label>
+            <select class="inp" id="ibf-${dim}-n">
+              ${niveaux.map(n=>`<option${n===d2.niveau?' selected':''}>${n}</option>`).join('')}
+            </select>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="margin-top:12px">
+        <label class="lbl">Indicateurs à surveiller — horizon proche</label>
+        <textarea class="inp" id="ibf-ind-proche" rows="3" placeholder="Signaux à surveiller à 3-6 mois…">${(bf.indicateurs_bf?.horizon_proche||[]).join('\n')}</textarea>
+        <label class="lbl" style="margin-top:8px">Indicateurs à surveiller — horizon long</label>
+        <textarea class="inp" id="ibf-ind-long" rows="3" placeholder="Signaux à surveiller à 12-36 mois…">${(bf.indicateurs_bf?.horizon_long||[]).join('\n')}</textarea>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:14px;justify-content:flex-end">
+        <button class="btn primary" onclick="_adminSaveImpactBF('${cid}')"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+      </div>
+    </div>`;
+  };
+}
+function _adminSaveImpactBF(cid){
+  const d = DB.get();
+  const c = d.conflicts.find(x=>x.id===cid); if(!c) return;
+  const dims = ['securitaire','economique','diplomatique','sociopolitique'];
+  c.impact_bf = {};
+  dims.forEach(dim=>{
+    c.impact_bf[dim] = {
+      titre: document.getElementById(`ibf-${dim}-t`).value.trim(),
+      description: document.getElementById(`ibf-${dim}-d`).value.trim(),
+      niveau: document.getElementById(`ibf-${dim}-n`).value
+    };
+  });
+  c.impact_bf.indicateurs_bf = {
+    horizon_proche: document.getElementById('ibf-ind-proche').value.split('\n').map(x=>x.trim()).filter(Boolean),
+    horizon_long: document.getElementById('ibf-ind-long').value.split('\n').map(x=>x.trim()).filter(Boolean)
+  };
+  DB.save(d);
+  toast(`Impacts BF de "${c.name}" mis à jour !`, 'success');
+}
+
+/* ── TAB 5 : Exporter pour GitHub ── */
+function _adminExport(){
+  const custom = JSON.parse(localStorage.getItem('gw_user_conflicts')||'[]');
+  return `
+  <div style="display:grid;gap:14px">
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-fire"></i>Conflits personnalisés (${custom.length})</h2></div>
+      <p style="font-size:.83rem;color:#94a3b8;line-height:1.6">Ce fichier contient tous les conflits que tu as ajoutés via le formulaire. Il suffit de l'uploader sur GitHub et d'ajouter une ligne dans <code>index.html</code>.</p>
+      ${custom.length===0 ? `<div style="color:#64748b;font-style:italic">Aucun conflit personnalisé à exporter.</div>` : `
+        <button class="btn primary" onclick="_exportUserConflicts()"><i class="fa-solid fa-download"></i> Télécharger data_user.js</button>
+        <div style="margin-top:10px;background:#0a0f1c;border:1px solid #1a2340;border-radius:6px;padding:10px;font-size:.78rem;color:#94a3b8;line-height:1.8">
+          <b style="color:#cbd5e1">Instruction GitHub :</b><br>
+          1. Upload <code>data_user.js</code> dans le repo GitHub<br>
+          2. Dans <code>index.html</code>, ajoute <code>&lt;script src="data_user.js"&gt;&lt;/script&gt;</code> avant <code>&lt;script src="app.js"&gt;</code><br>
+          3. Commit → le site affiche tes conflits pour tous les visiteurs
+        </div>`}
+    </div>
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-pen-to-square"></i>Analyses mises à jour</h2></div>
+      <p style="font-size:.83rem;color:#94a3b8;line-height:1.6">Ce fichier contient les analyses simplifiées que tu as modifiées dans l'onglet <b>Modifier les analyses</b>. Il remplace <code>data5.js</code> sur GitHub.</p>
+      <button class="btn primary" onclick="_exportData5()"><i class="fa-solid fa-download"></i> Télécharger data5_updated.js</button>
+      <div style="margin-top:10px;background:#0a0f1c;border:1px solid #1a2340;border-radius:6px;padding:10px;font-size:.78rem;color:#94a3b8;line-height:1.8">
+        <b style="color:#cbd5e1">Instruction GitHub :</b><br>
+        1. Télécharge le fichier<br>
+        2. Sur GitHub, clique sur <code>data5.js</code> → ✏️ Edit → colle tout le contenu → Commit<br>
+        3. Le site affiche tes analyses mises à jour pour tous
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><h2><i class="fa-solid fa-database"></i>Sauvegarde complète JSON</h2></div>
+      <p style="font-size:.83rem;color:#94a3b8">Export de toutes les données (conflits + pays + alertes + événements) au format JSON. Permet de restaurer une sauvegarde complète.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn secondary" onclick="document.getElementById('db-export-btn').click()"><i class="fa-solid fa-download"></i>Exporter JSON</button>
+        <button class="btn secondary" onclick="document.getElementById('db-import-btn').click()"><i class="fa-solid fa-upload"></i>Importer JSON</button>
+        <input type="file" id="db-import-btn" accept=".json" hidden onchange="_adminImportJSON(this)">
+        <span id="db-export-btn" hidden></span>
+      </div>
+    </div>
+  </div>`;
+}
+function _exportUserConflicts(){
+  const custom = JSON.parse(localStorage.getItem('gw_user_conflicts')||'[]');
+  if(!custom.length){ toast('Aucun conflit à exporter','info'); return; }
+  const js = `/* GéoWatch — Conflits ajoutés par l'utilisateur — généré le ${new Date().toISOString().slice(0,10)} */
+window.GW_DATA = window.GW_DATA || {};
+(function(){
+  const userConflicts = ${JSON.stringify(custom, null, 2)};
+  if(window.GW_DATA.CONFLITS) {
+    userConflicts.forEach(c=>{ if(!window.GW_DATA.CONFLITS.find(x=>x.id===c.id)) window.GW_DATA.CONFLITS.push(c); });
+  }
+})();
+`;
+  const b = new Blob([js],{type:'text/javascript'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='data_user.js'; a.click();
+  toast('data_user.js téléchargé !','success');
+}
+function _exportData5(){
+  const d = DB.get();
+  const analyses = {};
+  d.conflicts.forEach(c=>{ if(c.analyse_simple) analyses[c.id] = c.analyse_simple; });
+  const js = `/* GéoWatch — Analyses simplifiées mises à jour — généré le ${new Date().toISOString().slice(0,10)} */
+const ANALYSES_SIMPLES = ${JSON.stringify(analyses, null, 2)};
+
+window.GW_DATA = window.GW_DATA || {};
+window.GW_DATA.CONFLITS = (window.GW_DATA.CONFLITS||[]).map(c=>{
+  if(ANALYSES_SIMPLES[c.id]) c.analyse_simple = ANALYSES_SIMPLES[c.id];
+  return c;
+});
+`;
+  const b = new Blob([js],{type:'text/javascript'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='data5_updated.js'; a.click();
+  toast('data5_updated.js téléchargé !','success');
+}
+function _adminImportJSON(input){
+  const f=input.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=ev=>{try{DB.save(JSON.parse(ev.target.result)); toast('Import OK','success'); adminTab('overview');}catch(err){toast('Erreur : '+err.message,'error');}};
+  r.readAsText(f);
 }
 
 /* ============= EXPORT NOTE DE SITUATION (style CNES) ============= */
@@ -2017,15 +2484,7 @@ function setupEvents(){
   // Alerts
   document.getElementById('al-add').onclick = ()=>toast('Édition désactivée — voir Admin','info');
 
-  // Admin DB
-  document.getElementById('db-export').onclick = ()=>{const blob=new Blob([JSON.stringify(DB.get(),null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`geowatch_${new Date().toISOString().slice(0,10)}.json`; a.click(); toast('Export OK','success');};
-  document.getElementById('db-import').onclick = ()=>document.getElementById('db-import-file').click();
-  document.getElementById('db-import-file').onchange = e=>{const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=ev=>{try{DB.save(JSON.parse(ev.target.result)); toast('Import OK','success'); Router.go(Router.current);}catch(err){toast('Erreur : '+err.message,'error');}}; r.readAsText(f);};
-  document.getElementById('db-seed').onclick = ()=>{if(confirm('Recharger les données du gabarit ?')){DB.reset(); toast('Réinitialisé','success'); location.reload();}};
-  document.getElementById('db-clear').onclick = ()=>{if(confirm('Supprimer toutes les données ?')){localStorage.removeItem(DB.k); toast('Vidé','success'); location.reload();}};
-
-  // Boutons admin "Add" → infos
-  ['cf-add','ct-add','src-add'].forEach(id=>document.getElementById(id)?.addEventListener('click',()=>toast('Pour ajouter un conflit/pays/source, modifier directement data.js','info')));
+  // Les boutons DB sont maintenant gérés dynamiquement dans l'onglet Admin (renderAdmin / _adminOverviewWire)
 
   document.getElementById('tb-date').textContent = new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 }

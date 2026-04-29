@@ -157,6 +157,13 @@ input,select,textarea{font-family:inherit}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#3b82f6}
 .field textarea{resize:vertical;min-height:70px}
 
+/* ===== FORM HELPERS (Admin) ===== */
+.lbl{display:block;font-size:.74rem;color:#94a3b8;font-weight:500;margin-bottom:3px;text-transform:uppercase;letter-spacing:.3px}
+.inp{display:block;width:100%;background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:8px 11px;border-radius:6px;font-size:.84rem;box-sizing:border-box;transition:border-color .15s;font-family:inherit}
+.inp:focus{outline:none;border-color:#3b82f6;background:#050911}
+.inp[type=range]{padding:6px 0;background:transparent;border:none;cursor:pointer}
+textarea.inp{resize:vertical;min-height:60px}
+
 /* ===== FILTERS ===== */
 .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
 .filters input,.filters select{background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem}
@@ -613,32 +620,7 @@ body.map-light .map-legend h4{color:#475569}
 
     <!-- ============= ADMIN ============= -->
     <section class="page" data-page="admin">
-      <div class="grid-2e">
-        <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-fire"></i>Gérer les conflits</h2><button class="btn primary sm" id="cf-add"><i class="fa-solid fa-plus"></i>Nouveau</button></div>
-          <div id="admin-conflicts"></div>
-        </div>
-        <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-flag"></i>Gérer les pays</h2><button class="btn primary sm" id="ct-add"><i class="fa-solid fa-plus"></i>Nouveau</button></div>
-          <div id="admin-countries"></div>
-        </div>
-      </div>
-
-      <div class="card mt">
-        <div class="card-hd"><h2><i class="fa-solid fa-rss"></i>Sources RSS</h2><button class="btn primary sm" id="src-add"><i class="fa-solid fa-plus"></i>Ajouter</button></div>
-        <div id="admin-sources"></div>
-      </div>
-
-      <div class="card mt">
-        <div class="card-hd"><h2><i class="fa-solid fa-database"></i>Données</h2></div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn secondary" id="db-export"><i class="fa-solid fa-download"></i>Exporter JSON</button>
-          <button class="btn secondary" id="db-import"><i class="fa-solid fa-upload"></i>Importer JSON</button>
-          <button class="btn secondary" id="db-seed"><i class="fa-solid fa-seedling"></i>Réinitialiser (démo)</button>
-          <button class="btn danger" id="db-clear"><i class="fa-solid fa-trash"></i>Tout supprimer</button>
-          <input type="file" id="db-import-file" accept=".json" hidden/>
-        </div>
-      </div>
+      <div id="admin-panel"></div>
     </section>
 
   </div>

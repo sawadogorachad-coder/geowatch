@@ -1,6 +1,14 @@
 /* ==========================================================================
    GéoWatch — Analyses géopolitiques SIMPLIFIÉES
-   Pour chaque conflit : un brief pédagogique court accessible aux non-spécialistes
+   Pour chaque conflit : brief pédagogique court accessible aux non-spécialistes
+
+   ⚠️  AVERTISSEMENT IMPORTANT :
+   Ces analyses ont été rédigées le 29 avril 2026 à partir de sources publiques
+   (IRIS, ICG, ACLED, ONU, BBC, Al Jazeera, Le Grand Continent, Diploweb).
+   Certains passages MÉLANGENT des faits avérés et des scénarios PROSPECTIFS
+   (ce qui pourrait arriver) présentés comme possibles mais non certains.
+   → Toujours vérifier avec les derniers rapports IRIS/ICG/ACLED avant usage officiel.
+   → Utilisez l'onglet Admin → Modifier les analyses pour mettre à jour le contenu.
    ========================================================================== */
 
 const ANALYSES_SIMPLES = {
@@ -22,28 +30,32 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez l\'Afrique de l\'Ouest comme un quartier où trois maisons (Mali, Burkina, Niger) ont licencié leur ancien gardien (France) pour en embaucher un nouveau (Russie), tout en se barricadant ensemble — pendant qu\'un groupe d\'intrus (jihadistes) profite de la confusion pour occuper les arrière-cours.',
     horizon_proche:'12-24 mois : statu quo dégradé probable, perte de territoires ruraux, popularité urbaine maintenue.',
-    horizon_long:'5-10 ans : soit consolidation d\'un nouveau modèle, soit effondrement d\'au moins un État.'
+    horizon_long:'5-10 ans : soit consolidation d\'un nouveau modèle, soit effondrement d\'au moins un État.',
+    date_analyse:'2026-04-29',
+    source_reference:'ACLED, ICG, IRIS France, RFI Afrique, BBC Afrique — avril 2026'
   },
 
   c_iran_il:{
-    en_une_phrase:'Israël a démantelé en 18 mois le réseau de proxies de l\'Iran (Hezbollah, Hamas, Assad), puis a frappé l\'Iran lui-même avec les États-Unis, tuant Khamenei et fermant le détroit d\'Ormuz — une bascule régionale historique.',
-    pourquoi_important:'Le Moyen-Orient connaît sa plus profonde recomposition depuis 1979. La fin de l\'arc chiite ouvre une fenêtre rare : soit un nouvel ordre stable autour des Saoudiens, soit le chaos d\'une transition iranienne incontrôlée. La fermeture d\'Ormuz a déjà déclenché un choc pétrolier mondial qui frappe directement les économies importatrices comme le Burkina Faso.',
+    en_une_phrase:'[SCÉNARIO PROSPECTIF — à mettre à jour] Israël a démantelé le réseau de proxies iraniens (Hezbollah affaibli, Hamas décapité, Assad renversé) et frappe directement le programme nucléaire iranien depuis 2024 — une escalade inédite qui recompose le Moyen-Orient.',
+    pourquoi_important:'Le Moyen-Orient connaît sa plus profonde recomposition depuis 1979. L\'affaiblissement de l\'arc chiite ouvre une fenêtre incertaine : soit un nouvel ordre stable autour des puissances du Golfe, soit une escalade directe Iran-Israël-USA. Les chocs pétroliers potentiels via le détroit d\'Ormuz frappent directement les économies importatrices comme le Burkina Faso. ⚠️ Certains éléments de cette analyse sont prospectifs — vérifiez avec les dernières sources IRIS/ICG.',
     qui_contre_qui:[
-      {a:'Israël + États-Unis',position:'frappes préventives, démantèlement programme nucléaire iranien'},
-      {a:'Iran (Pasdaran/CGRI)',position:'régime ébranlé, Khamenei mort, succession ouverte'},
-      {a:'Hezbollah / Hamas / Houthis',position:'décapités mais pas anéantis, Houthis seul gagnant relatif'},
-      {a:'Arabie saoudite + Émirats',position:'arbitres ascendants, normalisation Israël en suspens'},
-      {a:'Russie + Chine',position:'soutiens diplomatiques de Téhéran, mais peu d\'engagement militaire'}
+      {a:'Israël + États-Unis',position:'frappes sur proxies et sites nucléaires, containment de l\'Iran'},
+      {a:'Iran (Pasdaran/CGRI)',position:'régime sous pression, programme nucléaire en partie démantelé'},
+      {a:'Hezbollah / Hamas / Houthis',position:'très affaiblis depuis 2024, Houthis seul acteur encore actif en mer Rouge'},
+      {a:'Arabie saoudite + Émirats',position:'arbitres, normalisation avec Israël possible mais conditionnée'},
+      {a:'Russie + Chine',position:'soutiens diplomatiques de Téhéran, mais peu d\'engagement militaire direct'}
     ],
-    enjeu_central:'La transition iranienne (continuité affaiblie, junte des Pasdaran, effondrement, ou ouverture) déterminera la stabilité de tout le Moyen-Orient pour 20 ans.',
+    enjeu_central:'La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.',
     surveiller:[
-      'L\'identité du successeur de Khamenei (fils Mojtaba ? Conseil Pasdaran ?).',
-      'Le maintien ou la levée du blocus d\'Ormuz (impact pétrole mondial).',
+      'L\'état réel du programme nucléaire iranien (enrichissement résiduel ?).',
+      'Le détroit d\'Ormuz : toute fermeture déclencherait un choc pétrolier mondial.',
       'Le sort des sites nucléaires Fordo/Natanz : capacité résiduelle d\'enrichir ?'
     ],
     analogie:'Pensez à Iran-Israël comme à deux duellistes qui se sont battus pendant 45 ans à coups de boxeurs interposés. En 2024-2026, ils ont retiré leurs gants et se sont frappés directement. L\'un des deux est tombé. La question est : se relèvera-t-il ? Et avec qui ?',
     horizon_proche:'6-12 mois : crise économique aiguë en Iran, possible accélération nucléaire clandestine.',
-    horizon_long:'5-10 ans : soit Iran réformé/ouvert, soit Iran junte nucléaire, soit Iran défaillant — chaque scénario reconfigure tout.'
+    horizon_long:'5-10 ans : soit Iran réformé/ouvert, soit Iran junte nucléaire, soit Iran défaillant — chaque scénario reconfigure tout.',
+    date_analyse:'2026-04-29',
+    source_reference:'ICG, IRIS France, BBC World, Al Jazeera — avril 2026 — ⚠️ Contient des éléments prospectifs à vérifier'
   },
 
   c_ukr:{
@@ -63,7 +75,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez un voisin (la Russie) qui prétend que la maison d\'à côté (l\'Ukraine) lui appartient « historiquement », et qui essaye de la prendre par la force. Quatre ans plus tard, il a détruit la moitié de la maison sans pouvoir y entrer. Le propriétaire (Ukraine) tient grâce à l\'aide des amis (UE, USA), mais l\'un des amis (Trump) hésite à continuer.',
     horizon_proche:'12-24 mois : forte probabilité de gel imposé par Trump sur la ligne actuelle, sans paix.',
-    horizon_long:'5-10 ans : soit nouvel équilibre européen avec Russie contenue, soit nouveau cycle d\'agression.'
+    horizon_long:'5-10 ans : soit nouvel équilibre européen avec Russie contenue, soit nouveau cycle d\'agression.',
+    date_analyse:'2026-04-29', source_reference:'ICG, IRIS France, ISW, Le Grand Continent — avril 2026'
   },
 
   c_gaza:{
@@ -84,7 +97,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Pensez à Gaza comme à une cocotte-minute fermée depuis 2007. Le 7 octobre, le couvercle a sauté avec une force inégalée. Israël essaye depuis de la rendre inoffensive en la cassant, mais chaque fragment génère une nouvelle pression. Sans changer la chimie de fond (la question palestinienne), aucune réparation ne tient.',
     horizon_proche:'12-24 mois : probable statu quo dégradé, occupation militaire permanente Gaza, raids Cisjordanie.',
-    horizon_long:'5-10 ans : soit règlement régional saoudien, soit effondrement progressif de la légitimité d\'Israël à long terme.'
+    horizon_long:'5-10 ans : soit règlement régional saoudien, soit effondrement progressif de la légitimité d\'Israël à long terme.',
+    date_analyse:'2026-04-29', source_reference:'OCHA, ICG, Al Jazeera, BBC World, IRIS France — avril 2026'
   },
 
   c_sdn:{
@@ -104,7 +118,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez deux gardes du corps (SAF et RSF) qui ont assassiné le président qu\'ils protégeaient (Béchir, 2019), pris ensemble le pouvoir, puis se sont retournés l\'un contre l\'autre. Ils détruisent leur propre maison, et chaque visiteur étranger soutient l\'un ou l\'autre selon ses intérêts.',
     horizon_proche:'12-24 mois : partition de fait probable. SAF contrôle Khartoum/Nord/Est, RSF contrôle Darfour/Kordofan-Sud.',
-    horizon_long:'5-10 ans : risque d\'effondrement total et de fragmentation type Libye 2011-aujourd\'hui.'
+    horizon_long:'5-10 ans : risque d\'effondrement total et de fragmentation type Libye 2011-aujourd\'hui.',
+    date_analyse:'2026-04-29', source_reference:'OCHA, ReliefWeb, ICG, BBC Afrique — avril 2026'
   },
 
   c_tai:{
@@ -125,7 +140,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Pensez à Taïwan comme à une chambre forte mondiale dans une maison contestée. Le voisin (Chine) prétend qu\'elle lui appartient. Mais à l\'intérieur se trouve la moitié de l\'or numérique mondial (TSMC). Tout le monde a peur que les voisins ne se battent pour cette chambre forte, mais aussi peur que la chambre disparaisse si la maison change de propriétaire.',
     horizon_proche:'12-36 mois : pression militaire constante mais pas d\'invasion immédiate. Risque crise non-cinétique (blocus, quarantaine).',
-    horizon_long:'5-10 ans : horizon 2027 (centenaire PLA) cité comme date possible. Mais accident escalatoire plus probable que guerre planifiée.'
+    horizon_long:'5-10 ans : horizon 2027 (centenaire PLA) cité comme date possible. Mais accident escalatoire plus probable que guerre planifiée.',
+    date_analyse:'2026-04-29', source_reference:'RAND, ICG, IRIS France, Al Jazeera — avril 2026'
   },
 
   c_cod:{
@@ -145,7 +161,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez un voisin (Rwanda) qui envoie ses hommes (M23) chez l\'autre voisin (RDC) pour piller régulièrement les ressources. La police internationale (UA, ONU) ferme les yeux car le Rwanda invoque toujours sa victimisation passée (génocide 1994). Le voisin pillé n\'a ni police ni armée capable de répondre.',
     horizon_proche:'12-36 mois : partition de fait du Kivu. Kinshasa contrôle le reste mais perd autorité dans l\'Est.',
-    horizon_long:'5-10 ans : soit recomposition régionale (sanctions Rwanda, médiation Trump, plan africain), soit effondrement plus large.'
+    horizon_long:'5-10 ans : soit recomposition régionale (sanctions Rwanda, médiation Trump, plan africain), soit effondrement plus large.',
+    date_analyse:'2026-04-29', source_reference:'ICG, ACLED, HRW, ReliefWeb — avril 2026'
   },
 
   c_yem:{
@@ -165,7 +182,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez une autoroute mondiale (mer Rouge) où une bande de pirates locaux (Houthis), équipés de jouets téléguidés (drones), oblige tous les camionneurs à faire un détour de plusieurs jours. La police internationale (US, UK) bombarde leur planque, mais ils continuent.',
     horizon_proche:'6-18 mois : maintien du harcèlement maritime probable, sauf accord régional global.',
-    horizon_long:'5-10 ans : Houthis comme acteur structurel du Yémen et de la péninsule arabique, modèle pour autres groupes.'
+    horizon_long:'5-10 ans : Houthis comme acteur structurel du Yémen et de la péninsule arabique, modèle pour autres groupes.',
+    date_analyse:'2026-04-29', source_reference:'ICG, ONU Info, Al Jazeera, IRIS France — avril 2026'
   },
 
   c_kor:{
@@ -186,7 +204,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez un fauteur de troubles (Corée du Nord) qui s\'allie à un grand voyou en perte de vitesse (Russie). Ils s\'échangent des services : le petit fournit des soldats, le grand donne du matériel sophistiqué. Tout le quartier (Asie NE) doit s\'armer en réponse.',
     horizon_proche:'12-24 mois : poursuite du rapprochement RU-PRK, renforcement programmes, peut-être test nucléaire.',
-    horizon_long:'5-10 ans : Corée du Nord pleinement nucléarisée et reconnue de fait, échec définitif de la non-prolifération.'
+    horizon_long:'5-10 ans : Corée du Nord pleinement nucléarisée et reconnue de fait, échec définitif de la non-prolifération.',
+    date_analyse:'2026-04-29', source_reference:'ICG, RAND, ISW, BBC World — avril 2026'
   },
 
   c_syr:{
@@ -207,7 +226,8 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Imaginez une maison (Syrie) occupée 24 ans par un dictateur. Quand il s\'enfuit, ce sont d\'anciens cambrioleurs reconvertis en gardiens (HTS) qui prennent la relève. Les voisins surveillent, certains les soutiennent, d\'autres frappent les serrures préventivement (Israël).',
     horizon_proche:'6-12 mois : stabilisation fragile ou fragmentation. Décision cruciale sur Kurdes.',
-    horizon_long:'5-10 ans : soit reconstruction d\'un État laïque modéré, soit libanisation et zones d\'influence multiples.'
+    horizon_long:'5-10 ans : soit reconstruction d\'un État laïque modéré, soit libanisation et zones d\'influence multiples.',
+    date_analyse:'2026-04-29', source_reference:'ICG, Le Grand Continent, IRIS France, BBC World — avril 2026'
   }
 };
 
