@@ -909,6 +909,38 @@ function getActiveSources(){
   return full.filter(s=>d.rss_active.includes(s.id));
 }
 
+/* ============= TRADUCTION AUTO (Google Translate gtx) ============= */
+async function translateToFr(text){
+  if(!text || !text.trim()) return text;
+  try{
+    const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=fr&dt=t&q='+encodeURIComponent(text);
+    const r=await fetch(url);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    return (d[0]||[]).map(s=>s[0]||'').join('');
+  }catch(e){ return text; } // fallback texte original
+}
+
+async function translateEnglishItems(items){
+  const engItems=items.filter(it=>{
+    const src=(window.GW_DATA?.RSS_SOURCES_FULL||[]).find(s=>s.id===it._sourceId);
+    return src?.lang==='en' && !it._translated;
+  });
+  if(!engItems.length) return;
+  for(const it of engItems){
+    try{
+      const [tTitle,tDesc]=await Promise.all([
+        translateToFr(it.title||''),
+        translateToFr((it.description||'').slice(0,500))
+      ]);
+      if(tTitle) it.title=tTitle;
+      if(tDesc) it.description=tDesc+(it.description&&it.description.length>500?' […]':'');
+      it._translated=true;
+    }catch(e){ /* garde le texte original si traduction échoue */ }
+    await new Promise(r=>setTimeout(r,60)); // petite pause anti-throttle
+  }
+}
+
 async function loadNews(){
   const sources = getActiveSources();
   const statusEl = document.getElementById('src-status');
@@ -968,14 +1000,24 @@ async function loadNews(){
   if(okCount===0 && sources.length>0){
     toast('Tous les proxies CORS bloqués (mode local file://). Chargement actualités de démonstration.','error');
     loadDemoNews();
-    // Affiche un bandeau d'aide
     const listEl = document.getElementById('news-list');
     listEl.insertAdjacentHTML('afterbegin', `<div style="background:rgba(239,68,68,.08);border:1px solid #7f1d1d;border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:.82rem;color:#fca5a5"><b><i class="fa-solid fa-triangle-exclamation"></i> Flux RSS bloqués</b><br><span style="color:#fecaca">Les proxies CORS publics ne sont pas joignables depuis votre environnement local. Ceci est <b>normal en mode <code>file://</code></b>. Une fois le site déployé sur GitHub Pages / Vercel / Netlify, les flux fonctionneront correctement. <br>En attendant, voici 12 actualités de démonstration crédibles pour tester l'interface.</span></div>`);
     return;
   }
+
+  // Traduction automatique des articles en anglais → français
+  const engCount = NEWS_STATE.items.filter(it=>{
+    const src=(window.GW_DATA?.RSS_SOURCES_FULL||[]).find(s=>s.id===it._sourceId);
+    return src?.lang==='en';
+  }).length;
+  if(engCount>0){
+    document.getElementById('news-list').innerHTML=`<div class="loading"><i class="fa-solid fa-language"></i> Traduction de ${engCount} article(s) anglais en français…</div>`;
+    await translateEnglishItems(NEWS_STATE.items);
+  }
+
   renderNewsList();
   detectAndPushNewItems();
-  toast(`${NEWS_STATE.items.length} articles • ${okCount}/${sources.length} flux OK`, okCount>0?'success':'error');
+  toast(`${NEWS_STATE.items.length} articles • ${okCount}/${sources.length} flux OK${engCount>0?' • '+engCount+' traduits 🇫🇷':''}`, okCount>0?'success':'error');
 }
 
 function updateLastUpdateLabel(){
@@ -1008,7 +1050,12 @@ function renderNewsList(){
     const themeTags = (it._tags||[]).map(t=>`<span class="chip ${tagColor[t]||'gray'}">${tagEmoji[t]||''} ${t}</span>`).join('');
     const bfBadge = it._bf ? `<span class="chip" style="background:rgba(253,224,71,.18);color:#fde047;border:1px solid rgba(253,224,71,.5)">🇧🇫 Pertinent BF</span>` : '';
     const srcObj = (window.GW_DATA?.RSS_SOURCES_FULL||[]).find(s=>s.id===it._sourceId);
-    const langBadge = srcObj?.lang==='en' ? `<span class="chip gray" style="font-size:.65rem">🇬🇧 EN</span>` : `<span class="chip" style="background:rgba(59,130,246,.15);color:#93c5fd;font-size:.65rem;border:1px solid rgba(59,130,246,.3)">🇫🇷 FR</span>`;
+    const isEn = srcObj?.lang==='en';
+    const langBadge = !isEn
+      ? `<span class="chip" style="background:rgba(59,130,246,.15);color:#93c5fd;font-size:.65rem;border:1px solid rgba(59,130,246,.3)">🇫🇷 FR</span>`
+      : it._translated
+        ? `<span class="chip" style="background:rgba(34,197,94,.12);color:#86efac;font-size:.65rem;border:1px solid rgba(34,197,94,.3)" title="Traduit automatiquement depuis l'anglais">🔄 Traduit EN→FR</span>`
+        : `<span class="chip gray" style="font-size:.65rem">🇬🇧 EN</span>`;
     const fullDesc = (it.description||'').replace(/<[^>]+>/g,'').trim();
     const preview = fullDesc.length > 320 ? fullDesc.slice(0,320)+'…' : fullDesc;
     const hasMore = fullDesc.length > 320;
@@ -1650,10 +1697,9 @@ function _adminExport(){
       <div class="card-hd"><h2><i class="fa-solid fa-database"></i>Sauvegarde complète JSON</h2></div>
       <p style="font-size:.83rem;color:#94a3b8">Export de toutes les données (conflits + pays + alertes + événements) au format JSON. Permet de restaurer une sauvegarde complète.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button class="btn secondary" onclick="document.getElementById('db-export-btn').click()"><i class="fa-solid fa-download"></i>Exporter JSON</button>
-        <button class="btn secondary" onclick="document.getElementById('db-import-btn').click()"><i class="fa-solid fa-upload"></i>Importer JSON</button>
-        <input type="file" id="db-import-btn" accept=".json" hidden onchange="_adminImportJSON(this)">
-        <span id="db-export-btn" hidden></span>
+        <button class="btn secondary" onclick="_adminExportJSON()"><i class="fa-solid fa-download"></i>Exporter JSON</button>
+        <button class="btn secondary" onclick="document.getElementById('db-import-btn-exp').click()"><i class="fa-solid fa-upload"></i>Importer JSON</button>
+        <input type="file" id="db-import-btn-exp" accept=".json" hidden onchange="_adminImportJSON(this)">
       </div>
     </div>
   </div>`;
@@ -1688,6 +1734,12 @@ window.GW_DATA.CONFLITS = (window.GW_DATA.CONFLITS||[]).map(c=>{
 `;
   const b = new Blob([js],{type:'text/javascript'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='data5_updated.js'; a.click();
   toast('data5_updated.js téléchargé !','success');
+}
+function _adminExportJSON(){
+  const b=new Blob([JSON.stringify(DB.get(),null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(b);
+  a.download=`geowatch_backup_${new Date().toISOString().slice(0,10)}.json`; a.click();
+  toast('Sauvegarde JSON téléchargée','success');
 }
 function _adminImportJSON(input){
   const f=input.files[0]; if(!f) return;
@@ -2391,7 +2443,7 @@ function closeMapPopup(){ if(GeoMap.map) GeoMap.map.closePopup(); }
 /* ============= EVENTS WIRING ============= */
 function setupEvents(){
   document.getElementById('sb-toggle').onclick = ()=>document.getElementById('sidebar').classList.toggle('collapsed');
-  document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',ev=>{if(el.dataset.page){ev.preventDefault(); Router.go(el.dataset.page);}}));
+  document.querySelectorAll('a[data-page], button[data-page]').forEach(el=>el.addEventListener('click',ev=>{if(el.dataset.page){ev.preventDefault(); Router.go(el.dataset.page);}}));
   document.getElementById('tb-alerts').onclick = ()=>Router.go('alerts');
   document.getElementById('tb-notif')?.addEventListener('click', toggleNotifPanel);
 
