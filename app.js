@@ -138,7 +138,7 @@ const Router = {
     else if(page==='events') renderEvents();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
-    if(['news','alerts','dash','sources','conflicts','worldwatch'].includes(page)){
+    if(['news','alerts','dash','sources','conflicts','worldwatch','events'].includes(page)){
       const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
       if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
     }
@@ -173,11 +173,13 @@ function renderDashboard(){
   const evTr = document.getElementById('kpi-events-tr'); if(evTr) evTr.innerHTML = `${ruptures} seuils de rupture historiques recensés`;
   const intEl = document.getElementById('kpi-intensity'); if(intEl) intEl.textContent = active.length ? (active.reduce((s,c)=>s+c.intensity,0)/active.length).toFixed(1) : 0;
 
-  // alerts in topbar
+  // alerts in topbar (intègre alertes live + manuelles)
   const tbA = document.getElementById('tb-alerts');
-  if(alertsCrit>0){ tbA.style.display='inline-flex'; document.getElementById('tb-alerts-txt').textContent=`${alertsCrit} alerte${alertsCrit>1?'s':''} critique${alertsCrit>1?'s':''}`; }
+  if(critAlerts>0){ tbA.style.display='inline-flex'; document.getElementById('tb-alerts-txt').textContent=`${critAlerts} alerte${critAlerts>1?'s':''} critique${critAlerts>1?'s':''}`; }
+  else { tbA.style.display='none'; }
   const nb = document.getElementById('nav-alerts-badge');
-  if(d.alerts.length>0){nb.style.display='inline-block'; nb.textContent=d.alerts.length;}
+  if(totalAlerts>0){ nb.style.display='inline-block'; nb.textContent=totalAlerts; }
+  else { nb.style.display='none'; }
 
   // Escalade globale (1 an)
   const months = []; for(let i=11;i>=0;i--){ const x=new Date(now.getFullYear(), now.getMonth()-i, 1); months.push(x); }
@@ -210,28 +212,103 @@ function renderDashboard(){
     topReg?`Région la plus exposée : <b style="color:#ef4444">${topReg[0]}</b> avec ${topReg[1]} pts cumulés (<b>${Math.round(topReg[1]/regionTotal*100)}%</b> du total mondial actif).`:'Aucun conflit actif.',
     '#f97316');
 
-  // Top conflits par intensité
+  // Top conflits par intensité — colonne "RSS 30j" alimentée par les articles RSS
   const top = active.slice().sort((a,b)=>b.intensity-a.intensity).slice(0,7);
+  const rssAll = NEWS_STATE?.items||[];
+  const rss30dCountFor = cid => rssAll.filter(it=>{
+    if(!it.pubDate) return false;
+    if(!(it._conflicts||[]).some(c=>c.id===cid)) return false;
+    return (Date.now()-new Date(it.pubDate))/86400000 < 30;
+  }).length;
   document.getElementById('tbl-top-conflicts').innerHTML = top.map(c=>{
+    const rssC = rss30dCountFor(c.id);
+    const evC = d.events.filter(e=>e.conflict_id===c.id&&(now-new Date(e.date))/86400000<30).length;
     return `<tr class="clickable" data-cid="${c.id}">
       <td><b style="color:#e2e8f0">${c.short||c.name}</b></td>
       <td style="color:#94a3b8">${c.region}</td>
       <td><span style="color:${conflictColor(c.intensity)};font-weight:700">${c.intensity}/10</span>${sevBar(c.intensity)}</td>
-      <td>${(d.events.filter(e=>e.conflict_id===c.id&&(now-new Date(e.date))/86400000<30)).length}</td>
+      <td><span style="color:#86efac;font-weight:700">${rssC}</span><span style="color:#64748b;font-size:.7rem"> RSS</span> + ${evC} <span style="color:#64748b;font-size:.7rem">jalons</span></td>
       <td>${statusChip(c.status)}</td>
     </tr>`;
   }).join('');
   document.querySelectorAll('#tbl-top-conflicts tr').forEach(tr=>tr.onclick=()=>showConflictDetail(tr.dataset.cid));
 
-  // Événements ⚠ rupture récents
-  const rupturesList = d.events.filter(e=>e.rupture).sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,8);
-  document.getElementById('tbl-recent-events').innerHTML = rupturesList.map(e=>{
+  // Événements ⚠ rupture récents — fusionne ruptures historiques + événements RSS majeurs récents
+  const rssEvents = (typeof getRSSEvents==='function' ? getRSSEvents() : []).filter(e=>e.rupture);
+  const histRup = d.events.filter(e=>e.rupture).map(e=>({...e, _live:false}));
+  const allRup = [...rssEvents, ...histRup].sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,10);
+  document.getElementById('tbl-recent-events').innerHTML = allRup.map(e=>{
     const c = d.conflicts.find(x=>x.id===e.conflict_id);
-    return `<tr><td style="color:#94a3b8">${fmt.date(e.date)}</td><td><b>${c?.short||c?.name||'—'}</b></td><td>⚠ ${e.title}</td><td><span class="chip red">Rupture</span></td><td>${sevBar(e.severity)}</td></tr>`;
-  }).join('');
+    const liveBadge = e._live ? '<span class="chip" style="background:rgba(34,197,94,.18);color:#86efac;font-size:.6rem;border:1px solid rgba(34,197,94,.35);font-weight:700"><i class="fa-solid fa-broadcast-tower" style="font-size:.55rem"></i> RSS</span>' : '<span class="chip red" style="font-size:.6rem">Rupture historique</span>';
+    const titleHTML = e._live && e._link ? `<a href="${e._link}" target="_blank" rel="noopener" style="color:#e2e8f0;text-decoration:none">⚠ ${e.title}<i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.6rem;margin-left:5px;color:#60a5fa"></i></a>` : `⚠ ${e.title}`;
+    return `<tr><td style="color:#94a3b8;font-size:.74rem">${fmt.date(e.date)}</td><td><b>${c?.short||c?.name||'—'}</b></td><td>${titleHTML}</td><td>${liveBadge}</td><td>${sevBar(e.severity)}</td></tr>`;
+  }).join('') || '<tr><td colspan="5"><div class="empty" style="padding:20px"><i class="fa-solid fa-inbox"></i><p>Aucune rupture détectée. Les ruptures RSS apparaîtront ici dès détection.</p></div></td></tr>';
+
+  // === SECTION : ACTIVITÉ RSS RÉCENTE ===
+  const rssRecent = rssAll.slice(0,8);
+  const rssRecentEl = document.getElementById('dash-rss-recent');
+  if(rssRecentEl){
+    if(!rssRecent.length){
+      rssRecentEl.innerHTML = '<div class="loading" style="padding:30px"><i class="fa-solid fa-spinner fa-spin"></i> Collecte RSS en cours…</div>';
+    } else {
+      rssRecentEl.innerHTML = rssRecent.map(it=>{
+        const isMajor = it._majors?.length>0;
+        const col = isMajor?'#ef4444':it._bf?'#fde047':'#60a5fa';
+        return `<a href="${it.link}" target="_blank" rel="noopener" style="display:block;text-decoration:none;padding:9px 12px;background:rgba(0,0,0,.25);border-left:3px solid ${col};border-radius:4px;margin-bottom:7px;transition:background .15s" onmouseover="this.style.background='rgba(96,165,250,.08)'" onmouseout="this.style.background='rgba(0,0,0,.25)'">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:3px">
+            ${isMajor?'<span class="chip" style="background:rgba(239,68,68,.18);color:#fca5a5;font-size:.58rem;border:1px solid rgba(239,68,68,.4);font-weight:700">⚠ MAJEUR</span>':''}
+            ${it._bf?'<span class="chip" style="background:rgba(253,224,71,.15);color:#fde047;font-size:.58rem;border:1px solid rgba(253,224,71,.35)">🇧🇫 BF</span>':''}
+            ${(it._tags||[]).slice(0,2).map(t=>`<span class="chip gray" style="font-size:.58rem">${t}</span>`).join('')}
+          </div>
+          <div style="font-size:.82rem;color:#e2e8f0;font-weight:600;line-height:1.35">${(it.title||'').slice(0,140)}${(it.title||'').length>140?'…':''}</div>
+          <div style="font-size:.66rem;color:#64748b;margin-top:3px">${fmt.dateTime(it.pubDate)} · ${it._source||'—'}</div>
+        </a>`;
+      }).join('');
+    }
+  }
+
+  // === SECTION : TENSIONS AUTO-DÉTECTÉES (preview Veille mondiale) ===
+  const wwEl = document.getElementById('dash-ww-preview');
+  if(wwEl && rssAll.length>0){
+    let bilat = [], zones = [];
+    try { bilat = wwDetectBilateral(rssAll).slice(0,3); zones = wwDetectHotZones(rssAll).slice(0,5); } catch(e){}
+    if(!bilat.length && !zones.length){
+      wwEl.innerHTML = '<div style="padding:20px;text-align:center;color:#64748b;font-size:.78rem"><i class="fa-solid fa-shield-halved"></i> Aucune tension détectée pour le moment.</div>';
+    } else {
+      const bilatHTML = bilat.length ? `<div style="margin-bottom:10px"><div style="font-size:.7rem;color:#ef4444;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">⚡ Tensions bilatérales</div>${bilat.map(p=>`<div style="background:rgba(239,68,68,.06);border-left:3px solid #ef4444;border-radius:4px;padding:7px 10px;margin-bottom:5px;font-size:.78rem;color:#cbd5e1"><b style="color:#e2e8f0">${p.pair[0]} ↔ ${p.pair[1]}</b> <span style="color:#94a3b8">· ${p.articles.length} articles · ${p.types.slice(0,3).join(', ')}</span></div>`).join('')}</div>` : '';
+      const zonesHTML = zones.length ? `<div><div style="font-size:.7rem;color:#f97316;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">🔥 Zones chaudes</div><div style="display:flex;gap:6px;flex-wrap:wrap">${zones.map(z=>{const sev=z.severity>=15?'#ef4444':z.severity>=8?'#f97316':'#f59e0b'; return `<span class="chip" style="background:${sev}22;color:${sev};border:1px solid ${sev}55;font-size:.7rem;font-weight:600">📍 ${z.country} (${z.articles.length} art.)</span>`;}).join('')}</div></div>` : '';
+      wwEl.innerHTML = bilatHTML + zonesHTML + '<div style="text-align:center;margin-top:10px"><a href="#" data-page="worldwatch" class="btn ghost sm" style="font-size:.72rem"><i class="fa-solid fa-arrow-right"></i> Voir veille mondiale complète</a></div>';
+    }
+  }
 
   // Mini-map
   setTimeout(()=>{ GeoMap.init('map-dash'); GeoMap.renderAll({layer:'both'}); }, 80);
+}
+
+/* Convertit les articles RSS en événements (pour fusion dans Chronologie & Dashboard) */
+function getRSSEvents(){
+  if(!NEWS_STATE?.items?.length) return [];
+  return NEWS_STATE.items.filter(it=>it.pubDate).map(it=>{
+    const conflictId = (it._conflicts||[])[0]?.id;
+    const types = (it._majors||[]).map(m=>m.type);
+    let severity = 4;
+    if(types.includes('rupture')||types.includes('crise')) severity = 9;
+    else if(types.includes('diplo_majeur')) severity = 7;
+    else if((it._tags||[]).includes('military')) severity = 6;
+    else if(it._bf) severity = 5;
+    let evType = 'info';
+    if(types.length) evType = types[0];
+    else if((it._tags||[]).length) evType = it._tags[0];
+    return {
+      id: 'rss_ev_'+(it.link||'').slice(-30),
+      date: it.pubDate,
+      title: it.title,
+      description: (it.description||'').slice(0,300),
+      conflict_id: conflictId, country: '',
+      type: evType, severity, rupture: types.length>0,
+      _live: true, _link: it.link, _source: it._source, _bf: !!it._bf
+    };
+  });
 }
 
 /* ============= FICHES CONFLITS (8 dimensions) ============= */
@@ -1238,24 +1315,60 @@ function renderAlerts(){
 function delAlert(id){ if(confirm('Supprimer ?')){DB.del('alerts',id); toast('Supprimée','success'); renderAlerts();} }
 
 /* ============= EVENTS (chronologie globale) ============= */
-let EV_STATE = { search:'', conflict:'', sev:'', ruptureOnly:false, sortKey:'date', sortDir:-1 };
+let EV_STATE = { search:'', conflict:'', sev:'', ruptureOnly:false, sortKey:'date', sortDir:-1, source:'all' };
 function renderEvents(){
   const d = DB.get();
   const sel = document.getElementById('ev-filter-conflict');
   if(sel.options.length<=1){ d.conflicts.forEach(c=>{const o=document.createElement('option'); o.value=c.id; o.textContent=c.short||c.name; sel.appendChild(o);}); }
-  let list = d.events.slice();
-  if(EV_STATE.search){const q=EV_STATE.search.toLowerCase(); list=list.filter(e=>(e.title+' '+e.description).toLowerCase().includes(q));}
+
+  // FUSION : événements historiques (statiques, jalons clés) + événements RSS live
+  const histEvents = d.events.map(e=>({...e, _live:false}));
+  const rssEvents = (typeof getRSSEvents==='function' ? getRSSEvents() : []);
+  let list = [...rssEvents, ...histEvents];
+
+  // Filtre source (manuel/RSS/all) via EV_STATE.source
+  const srcFilter = EV_STATE.source || 'all';
+  if(srcFilter==='rss') list = list.filter(e=>e._live);
+  else if(srcFilter==='manual') list = list.filter(e=>!e._live);
+
+  if(EV_STATE.search){const q=EV_STATE.search.toLowerCase(); list=list.filter(e=>((e.title||'')+' '+(e.description||'')).toLowerCase().includes(q));}
   if(EV_STATE.conflict) list=list.filter(e=>e.conflict_id===EV_STATE.conflict);
   if(EV_STATE.sev==='high') list=list.filter(e=>e.severity>=7);
   else if(EV_STATE.sev==='mid') list=list.filter(e=>e.severity>=4&&e.severity<=6);
   else if(EV_STATE.sev==='low') list=list.filter(e=>e.severity<=3);
   if(EV_STATE.ruptureOnly) list=list.filter(e=>e.rupture);
-  list.sort((a,b)=>EV_STATE.sortKey==='date' ? (new Date(b.date)-new Date(a.date)) : 0);
+  list.sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
 
-  document.getElementById('tbl-events').innerHTML = list.map(e=>{
+  // Bandeau d'en-tête avec stats fraîcheur
+  const histCount = histEvents.length, rssCount = rssEvents.length;
+  const lastUpd = NEWS_STATE.lastUpdate ? Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000) : null;
+  const freshLabel = lastUpd===null ? 'aucune collecte' : (lastUpd<1?'à l\'instant':`il y a ${lastUpd} min`);
+  const freshCol = lastUpd===null||lastUpd>15 ? '#f59e0b' : '#22c55e';
+  const headerEl = document.getElementById('events-header');
+  if(headerEl){
+    headerEl.innerHTML = `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1428 0%,#060912 100%);border:1px solid #1a2340">
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+          <span style="font-size:.84rem;color:#cbd5e1"><i class="fa-solid fa-list-check" style="color:#60a5fa"></i> <b>Chronologie consolidée</b></span>
+          <span style="font-size:.74rem;color:#94a3b8">${list.length} événements affichés · ${histCount} jalons historiques · <span style="color:#86efac">${rssCount} événements RSS</span> · maj : <span style="color:${freshCol}">${freshLabel}</span></span>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <button class="btn ${srcFilter==='all'?'primary':'ghost'} sm" onclick="EV_STATE.source='all';renderEvents()"><i class="fa-solid fa-layer-group"></i> Tout (${histCount+rssCount})</button>
+          <button class="btn ${srcFilter==='rss'?'primary':'ghost'} sm" onclick="EV_STATE.source='rss';renderEvents()"><i class="fa-solid fa-broadcast-tower"></i> RSS live (${rssCount})</button>
+          <button class="btn ${srcFilter==='manual'?'primary':'ghost'} sm" onclick="EV_STATE.source='manual';renderEvents()"><i class="fa-solid fa-bookmark"></i> Jalons (${histCount})</button>
+          <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Actualiser</button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  document.getElementById('tbl-events').innerHTML = list.slice(0,200).map(e=>{
     const c = d.conflicts.find(x=>x.id===e.conflict_id);
-    return `<tr><td style="color:#94a3b8">${fmt.date(e.date)}</td><td><b>${c?.short||c?.name||'—'}</b></td><td>${e.rupture?'⚠ ':''}${e.title}</td><td>${e.country||''}</td><td><span class="chip ${e.rupture?'red':'gray'}">${e.rupture?'Rupture':e.type}</span></td><td>${sevBar(e.severity)}</td><td></td></tr>`;
-  }).join('') || '<tr><td colspan="7"><div class="empty"><i class="fa-solid fa-inbox"></i><p>Aucun résultat.</p></div></td></tr>';
+    const liveBadge = e._live ? '<span class="chip" style="background:rgba(34,197,94,.18);color:#86efac;font-size:.6rem;border:1px solid rgba(34,197,94,.35);font-weight:700"><i class="fa-solid fa-broadcast-tower" style="font-size:.55rem"></i> RSS</span>' : '<span class="chip" style="background:rgba(167,139,250,.15);color:#c4b5fd;font-size:.6rem;border:1px solid rgba(167,139,250,.35)">📚 Jalon</span>';
+    const titleHTML = e._live && e._link ? `<a href="${e._link}" target="_blank" rel="noopener" style="color:#e2e8f0;text-decoration:none">${e.rupture?'⚠ ':''}${(e.title||'').slice(0,160)}${(e.title||'').length>160?'…':''}<i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.6rem;margin-left:5px;color:#60a5fa"></i></a>` : `${e.rupture?'⚠ ':''}${e.title}`;
+    const typeChip = e._live ? `<span class="chip gray" style="font-size:.62rem">${e._source||e.type||'RSS'}</span>` : `<span class="chip ${e.rupture?'red':'gray'}" style="font-size:.62rem">${e.rupture?'Rupture':e.type||'—'}</span>`;
+    return `<tr><td style="color:#94a3b8;font-size:.74rem;white-space:nowrap">${fmt.date(e.date)}</td><td><b>${c?.short||c?.name||'—'}</b></td><td>${titleHTML}</td><td>${liveBadge}</td><td>${typeChip}</td><td>${sevBar(e.severity)}</td><td></td></tr>`;
+  }).join('') || '<tr><td colspan="7"><div class="empty"><i class="fa-solid fa-inbox"></i><p>Aucun résultat avec ces filtres.</p></div></td></tr>';
 }
 
 /* ============= NEWS / RSS — 5 proxies + catégorisation + auto-refresh + auto-désactivation ============= */
@@ -1566,6 +1679,7 @@ async function loadNews(){
   else if(cur==='sources') renderSources();
   else if(cur==='conflicts') renderConflicts();
   else if(cur==='worldwatch') renderWorldWatch();
+  else if(cur==='events') renderEvents();
   // Met à jour le badge "Veille mondiale" dans la sidebar (visible depuis toutes les pages)
   if(typeof wwUpdateBadge==='function') wwUpdateBadge();
   // Toujours mettre à jour la pill freshness en topbar
@@ -1691,6 +1805,7 @@ function startAutoRefresh(){
     if(cur==='sources') renderSources();
     if(cur==='conflicts') renderConflicts();
     if(cur==='worldwatch') renderWorldWatch();
+    if(cur==='events') renderEvents();
     if(typeof wwUpdateBadge==='function') wwUpdateBadge();
   }, INTERVAL_MS);
   // Countdown chaque 30s

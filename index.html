@@ -376,8 +376,19 @@ body.map-light .map-legend h4{color:#475569}
       </div>
 
       <div class="card mt">
-        <div class="card-hd"><h2><i class="fa-solid fa-clock-rotate-left"></i>Événements récents</h2><a class="link-btn" data-page="events">Tous →</a></div>
-        <div class="tbl-wrap" style="max-height:320px"><table class="tbl"><thead><tr><th>Date</th><th>Conflit</th><th>Événement</th><th>Type</th><th>Sévérité</th></tr></thead><tbody id="tbl-recent-events"></tbody></table></div>
+        <div class="card-hd"><h2><i class="fa-solid fa-clock-rotate-left"></i>Événements récents (ruptures historiques + RSS live)</h2><a class="link-btn" data-page="events">Chronologie complète →</a></div>
+        <div class="tbl-wrap" style="max-height:340px"><table class="tbl"><thead><tr><th>Date</th><th>Conflit</th><th>Événement</th><th>Source</th><th>Sévérité</th></tr></thead><tbody id="tbl-recent-events"></tbody></table></div>
+      </div>
+
+      <div class="grid-2e mt">
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-satellite-dish" style="color:#86efac"></i>Activité RSS récente <span style="font-size:.62rem;background:rgba(34,197,94,.18);color:#86efac;padding:2px 7px;border-radius:10px;margin-left:6px">● LIVE</span></h2><a class="link-btn" data-page="news">Tous les flux →</a></div>
+          <div id="dash-rss-recent" style="max-height:480px;overflow-y:auto"></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><h2><i class="fa-solid fa-globe" style="color:#86efac"></i>Tensions auto-détectées</h2><a class="link-btn" data-page="worldwatch">Veille mondiale complète →</a></div>
+          <div id="dash-ww-preview" style="max-height:480px;overflow-y:auto"></div>
+        </div>
       </div>
     </section>
 
@@ -551,8 +562,9 @@ body.map-light .map-legend h4{color:#475569}
 
     <!-- ============= EVENTS ============= -->
     <section class="page" data-page="events">
+      <div id="events-header"></div>
       <div class="card">
-        <div class="card-hd"><h2><i class="fa-solid fa-list-check"></i>Événements</h2><button class="btn primary sm" id="ev-add"><i class="fa-solid fa-plus"></i>Ajouter</button></div>
+        <div class="card-hd"><h2><i class="fa-solid fa-list-check"></i>Tous les événements (manuels + RSS)</h2><button class="btn primary sm" id="ev-add"><i class="fa-solid fa-plus"></i>Ajouter manuel</button></div>
         <div class="filters">
           <input type="text" id="ev-search" placeholder="Rechercher dans événements..."/>
           <select id="ev-filter-conflict"><option value="">Tous conflits</option></select>
