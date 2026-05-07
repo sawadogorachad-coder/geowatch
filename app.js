@@ -67,6 +67,31 @@ function sevBar(n){
 Chart.defaults.color='#94a3b8'; Chart.defaults.font.family="'Segoe UI',system-ui,sans-serif"; Chart.defaults.font.size=11; Chart.defaults.borderColor='#1a2340';
 function chartOpts(extra={}){ return { responsive:true, maintainAspectRatio:false, plugins:{ legend:{labels:{color:'#cbd5e1',font:{size:11},usePointStyle:true,padding:12}}, tooltip:{backgroundColor:'#0c1426',titleColor:'#e2e8f0',bodyColor:'#cbd5e1',borderColor:'#2a3a60',borderWidth:1,padding:10,cornerRadius:6}}, scales:{x:{grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'},beginAtZero:true}}, ...extra }; }
 
+/* Helper : titre d'axe lisible */
+function axT(text){ return { display:true, text, color:'#cbd5e1', font:{size:11,weight:'600'}, padding:{top:6,bottom:6} }; }
+
+/* Helper : panneau "Comment lire" en dessous d'un chart */
+function chartInsight(canvasId, methodHTML, lectureHTML, color='#60a5fa'){
+  const el = document.getElementById(canvasId); if(!el) return;
+  const card = el.closest('.card'); if(!card) return;
+  let ins = card.querySelector('.chart-insight');
+  if(!ins){
+    ins = document.createElement('div');
+    ins.className='chart-insight';
+    ins.style.cssText='margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.78rem;line-height:1.55';
+    card.appendChild(ins);
+  }
+  ins.innerHTML = `
+    <div style="background:rgba(148,163,184,.06);border-left:3px solid #94a3b8;padding:9px 11px;border-radius:4px;color:#cbd5e1">
+      <div style="font-size:.68rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:4px"><i class="fa-solid fa-book-open"></i> Méthode</div>
+      ${methodHTML}
+    </div>
+    <div style="background:${color}10;border-left:3px solid ${color};padding:9px 11px;border-radius:4px;color:#e2e8f0">
+      <div style="font-size:.68rem;color:${color};text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:4px"><i class="fa-solid fa-magnifying-glass-chart"></i> Lecture</div>
+      ${lectureHTML}
+    </div>`;
+}
+
 const CHARTS = {};
 function makeChart(id, cfg){ if(CHARTS[id]){CHARTS[id].destroy(); delete CHARTS[id];} const el=document.getElementById(id); if(!el) return null; CHARTS[id]=new Chart(el,cfg); return CHARTS[id]; }
 
@@ -146,13 +171,28 @@ function renderDashboard(){
     return d.events.filter(e=>{const t=new Date(e.date); return t>=m && t<next;}).reduce((s,e)=>s+(e.severity||0),0);
   });
   makeChart('ch-dash-escalation',{type:'line',data:{labels:monthLabels,datasets:[
-    {label:'Score d\'escalade global',data:scoreByMonth,borderColor:'#ef4444',backgroundColor:'rgba(239,68,68,.15)',fill:true,tension:.3,borderWidth:2,pointRadius:3,pointHoverRadius:6}
-  ]},options:chartOpts({plugins:{legend:{display:false},tooltip:Chart.defaults.plugins.tooltip}})});
+    {label:'Score d\'escalade (Σ sévérités)',data:scoreByMonth,borderColor:'#ef4444',backgroundColor:'rgba(239,68,68,.15)',fill:true,tension:.3,borderWidth:2,pointRadius:3,pointHoverRadius:6}
+  ]},options:chartOpts({plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`Score : ${ctx.parsed.y} pts`}}},scales:{x:{title:axT('Mois (12 derniers)'),grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{title:axT('Score (Σ sévérités événements 1-10)'),grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'},beginAtZero:true}}})});
+  // Insight escalade
+  const last3=scoreByMonth.slice(-3),prev3=scoreByMonth.slice(-6,-3);
+  const trend = last3.reduce((a,b)=>a+b,0) - prev3.reduce((a,b)=>a+b,0);
+  const trendStr = trend>0 ? `<span style="color:#ef4444">↗ Accélération (+${trend} pts vs trimestre précédent)</span>` : trend<0 ? `<span style="color:#22c55e">↘ Décélération (${trend} pts vs trimestre précédent)</span>` : '<span style="color:#94a3b8">→ Stabilité</span>';
+  chartInsight('ch-dash-escalation',
+    `Pour chaque mois, on additionne la <b>sévérité (1-10)</b> de tous les événements enregistrés. Plus la courbe monte, plus la période est intense. Repère mental : <code>&lt;30</code> calme, <code>30-80</code> tendu, <code>&gt;80</code> crise active.`,
+    `Tendance trimestrielle : ${trendStr}. Pic 12 mois : <b>${Math.max(...scoreByMonth)} pts</b> (${monthLabels[scoreByMonth.indexOf(Math.max(...scoreByMonth))]}).`,
+    trend>0?'#ef4444':'#22c55e');
 
   // Régions
   const regions = {};
   active.forEach(c=>{ regions[c.region]=(regions[c.region]||0)+c.intensity; });
-  makeChart('ch-dash-region',{type:'doughnut',data:{labels:Object.keys(regions),datasets:[{data:Object.values(regions),backgroundColor:['#ef4444','#f97316','#f59e0b','#eab308','#22c55e','#06b6d4','#3b82f6','#a78bfa'],borderColor:'#0a0f1c',borderWidth:2}]},options:chartOpts({scales:{},plugins:{legend:{position:'right',labels:{color:'#cbd5e1',font:{size:10},padding:8,boxWidth:10}}}})});
+  const regionTotal = Object.values(regions).reduce((a,b)=>a+b,0);
+  makeChart('ch-dash-region',{type:'doughnut',data:{labels:Object.keys(regions),datasets:[{data:Object.values(regions),backgroundColor:['#ef4444','#f97316','#f59e0b','#eab308','#22c55e','#06b6d4','#3b82f6','#a78bfa'],borderColor:'#0a0f1c',borderWidth:2}]},options:chartOpts({scales:{},plugins:{legend:{position:'right',labels:{color:'#cbd5e1',font:{size:10},padding:8,boxWidth:10}},tooltip:{callbacks:{label:ctx=>`${ctx.label} : ${ctx.parsed} pts (${Math.round(ctx.parsed/regionTotal*100)}%)`}}}})});
+  // Insight régions
+  const topReg = Object.entries(regions).sort((a,b)=>b[1]-a[1])[0];
+  chartInsight('ch-dash-region',
+    `Chaque part = <b>somme des intensités des conflits actifs</b> dans la région (échelle 1-10). Pondère par <i>gravité</i>, pas par <i>nombre</i> : 1 conflit à 10/10 pèse autant que 10 conflits à 1/10.`,
+    topReg?`Région la plus exposée : <b style="color:#ef4444">${topReg[0]}</b> avec ${topReg[1]} pts cumulés (<b>${Math.round(topReg[1]/regionTotal*100)}%</b> du total mondial actif).`:'Aucun conflit actif.',
+    '#f97316');
 
   // Top conflits par intensité
   const top = active.slice().sort((a,b)=>b.intensity-a.intensity).slice(0,7);
@@ -471,8 +511,15 @@ function renderScenarios(){
   makeChart('ch-scen-matrix',{
     type:'scatter',
     data:{datasets:points.map(p=>({label:p.label,data:[{x:p.x,y:p.y}],backgroundColor:p.color,borderColor:p.color,pointRadius:7,pointHoverRadius:10}))},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:(ctx)=>ctx.dataset.label+` (${ctx.parsed.x}% / impact ${ctx.parsed.y})`},backgroundColor:'#0c1426',titleColor:'#e2e8f0',bodyColor:'#cbd5e1',borderColor:'#2a3a60',borderWidth:1}},scales:{x:{title:{display:true,text:'Probabilité (%)',color:'#94a3b8'},min:0,max:100,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{title:{display:true,text:'Impact (/10)',color:'#94a3b8'},min:0,max:10,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}}}}
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:(ctx)=>ctx.dataset.label+` (${ctx.parsed.x}% / impact ${ctx.parsed.y}/10)`},backgroundColor:'#0c1426',titleColor:'#e2e8f0',bodyColor:'#cbd5e1',borderColor:'#2a3a60',borderWidth:1}},scales:{x:{title:axT('Probabilité d\'occurrence (%)'),min:0,max:100,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{title:axT('Impact si réalisé (/10)'),min:0,max:10,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}}}}
   });
+  // Insight matrice scénarios (méthode Godet : 4 cadrans)
+  const critical = points.filter(p=>p.x>=40 && p.y>=7).length;
+  const surveiller = points.filter(p=>p.x<40 && p.y>=7).length;
+  chartInsight('ch-scen-matrix',
+    `Méthode <b>Godet</b> à 4 cadrans : <span style="color:#ef4444"><b>haut-droite (proba≥40% & impact≥7) = scénario critique à anticiper</b></span> ; <span style="color:#f97316">haut-gauche = surprise stratégique</span> ; <span style="color:#f59e0b">bas-droite = bruit</span> ; <span style="color:#22c55e">bas-gauche = négligeable</span>. Couleur = intensité actuelle du conflit parent.`,
+    `<b>${points.length}</b> scénarios projetés. <b style="color:#ef4444">${critical}</b> critiques (proba ≥40% × impact ≥7). <b style="color:#f97316">${surveiller}</b> surprises stratégiques (impact fort, proba faible — à surveiller).`,
+    critical>0?'#ef4444':'#f59e0b');
 }
 
 /* ============= INDICATEURS À SURVEILLER ============= */
@@ -585,38 +632,70 @@ function renderAnalyses(){
 
   const scoresByP = byPeriod.map(arr=>arr.reduce((s,e)=>s+e.severity,0));
   const countsByP = byPeriod.map(arr=>arr.length);
+  const periodLabel = AN_STATE.period==='day'?'Jour':AN_STATE.period==='week'?'Semaine':'Mois';
   makeChart('ch-evo',{type:'line',data:{labels:periods.map(p=>p.label),datasets:[
-    {label:'Score',data:scoresByP,borderColor:'#ef4444',backgroundColor:'rgba(239,68,68,.15)',fill:true,tension:.3,borderWidth:2,pointRadius:3,yAxisID:'y'},
-    {label:'Jalons',data:countsByP,borderColor:'#60a5fa',backgroundColor:'transparent',borderDash:[4,4],tension:.3,borderWidth:2,pointRadius:3,yAxisID:'y1'}
-  ]},options:chartOpts({scales:{x:{grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{position:'left',beginAtZero:true,ticks:{color:'#ef4444'}},y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},ticks:{color:'#60a5fa'}}}})});
+    {label:'Score (Σ sévérités) — axe gauche',data:scoresByP,borderColor:'#ef4444',backgroundColor:'rgba(239,68,68,.15)',fill:true,tension:.3,borderWidth:2,pointRadius:3,yAxisID:'y'},
+    {label:'Nombre de jalons — axe droit',data:countsByP,borderColor:'#60a5fa',backgroundColor:'transparent',borderDash:[4,4],tension:.3,borderWidth:2,pointRadius:3,yAxisID:'y1'}
+  ]},options:chartOpts({scales:{x:{title:axT(periodLabel+' (du plus ancien au plus récent)'),grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{title:axT('Score (rouge)'),position:'left',beginAtZero:true,ticks:{color:'#ef4444'}},y1:{title:axT('Jalons (bleu)'),position:'right',beginAtZero:true,grid:{drawOnChartArea:false},ticks:{color:'#60a5fa'}}}})});
+  const lastIdx = scoresByP.length-1;
+  const divergence = countsByP[lastIdx]>0 && scoresByP[lastIdx]/countsByP[lastIdx] > 6 ? 'Sévérité moyenne élevée (peu d\'événements mais graves).' : countsByP[lastIdx]>0 ? `Sévérité moyenne : ${(scoresByP[lastIdx]/countsByP[lastIdx]).toFixed(1)}/10.` : 'Aucun jalon récent.';
+  chartInsight('ch-evo',
+    `Deux séries superposées : <span style="color:#ef4444"><b>rouge plein</b></span> = score cumulé de sévérité (1-10 par événement, additionnés) ; <span style="color:#60a5fa"><b>bleu pointillé</b></span> = nombre de jalons. Si le rouge monte plus vite que le bleu, peu d'événements mais très graves.`,
+    `Dernière période : <b>${scoresByP[lastIdx]||0} pts</b> sur <b>${countsByP[lastIdx]||0} jalons</b>. ${divergence}`,
+    '#ef4444');
 
-  const sevB = [[1,3,'Faible','#22c55e'],[4,6,'Moyenne','#f59e0b'],[7,8,'Élevée','#f97316'],[9,10,'Critique','#ef4444']];
-  makeChart('ch-sev',{type:'bar',data:{labels:periods.map(p=>p.label),datasets:sevB.map(([lo,hi,lbl,col])=>({label:lbl,backgroundColor:col,stack:'s',data:byPeriod.map(arr=>arr.filter(e=>e.severity>=lo&&e.severity<=hi).length)}))},options:chartOpts({scales:{x:{stacked:true,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{stacked:true,beginAtZero:true,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}}}})});
+  const sevB = [[1,3,'Faible (1-3)','#22c55e'],[4,6,'Moyenne (4-6)','#f59e0b'],[7,8,'Élevée (7-8)','#f97316'],[9,10,'Critique (9-10)','#ef4444']];
+  makeChart('ch-sev',{type:'bar',data:{labels:periods.map(p=>p.label),datasets:sevB.map(([lo,hi,lbl,col])=>({label:lbl,backgroundColor:col,stack:'s',data:byPeriod.map(arr=>arr.filter(e=>e.severity>=lo&&e.severity<=hi).length)}))},options:chartOpts({scales:{x:{title:axT(periodLabel),stacked:true,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{title:axT('Nombre de jalons'),stacked:true,beginAtZero:true,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}}}})});
+  const totalCrit = byPeriod.flat().filter(e=>e.severity>=9).length;
+  const totalEvts = byPeriod.flat().length || 1;
+  chartInsight('ch-sev',
+    `Chaque barre = nombre de jalons par période, <b>empilés par strate de sévérité</b> : <span style="color:#22c55e">vert (1-3)</span>, <span style="color:#f59e0b">orange (4-6)</span>, <span style="color:#f97316">élevé (7-8)</span>, <span style="color:#ef4444">rouge critique (9-10)</span>.`,
+    `<b>${totalCrit} jalons critiques</b> (sévérité ≥9) sur <b>${totalEvts}</b> au total — <b>${Math.round(totalCrit/totalEvts*100)}%</b> de la période. Plus de rouge = escalade.`,
+    totalCrit/totalEvts>0.15?'#ef4444':'#22c55e');
 
-  // Type doughnut → ici "rupture vs autres"
+  // Type doughnut : rupture vs ordinaire
   const ruptCount = evs.filter(e=>e.rupture).length;
-  makeChart('ch-type',{type:'doughnut',data:{labels:['Seuils de rupture ⚠','Jalons ordinaires'],datasets:[{data:[ruptCount, evs.length-ruptCount],backgroundColor:['#ef4444','#60a5fa'],borderColor:'#0a0f1c',borderWidth:2}]},options:chartOpts({scales:{},plugins:{legend:{position:'right',labels:{color:'#cbd5e1',font:{size:11}}}}})});
+  makeChart('ch-type',{type:'doughnut',data:{labels:['Seuils de rupture ⚠','Jalons ordinaires'],datasets:[{data:[ruptCount, evs.length-ruptCount],backgroundColor:['#ef4444','#60a5fa'],borderColor:'#0a0f1c',borderWidth:2}]},options:chartOpts({scales:{},plugins:{legend:{position:'right',labels:{color:'#cbd5e1',font:{size:11}}},tooltip:{callbacks:{label:ctx=>`${ctx.label} : ${ctx.parsed} (${evs.length?Math.round(ctx.parsed/evs.length*100):0}%)`}}}})});
+  chartInsight('ch-type',
+    `Un <b>seuil de rupture</b> est un jalon marqué comme tournant majeur (assassinat ciblé, frappe massive, prise de capitale, accord historique, retournement diplomatique...). Méthodologiquement = champ <code>rupture:true</code> dans la base.`,
+    `<b>${ruptCount}/${evs.length}</b> jalons sont des ruptures (<b>${evs.length?Math.round(ruptCount/evs.length*100):0}%</b>). Au-delà de 20%, période d'instabilité structurelle.`,
+    ruptCount/Math.max(evs.length,1)>0.2?'#ef4444':'#60a5fa');
 
-  // Acteurs : remplace par "intensité par conflit"
+  // Top conflits par intensité (renommé : "Acteurs impliqués" était trompeur)
   const conflictInt = d.conflicts.filter(c=>c.status!=='frozen'&&c.status!=='resolved').sort((a,b)=>b.intensity-a.intensity).slice(0,10);
-  makeChart('ch-actors',{type:'bar',data:{labels:conflictInt.map(c=>c.short||c.name),datasets:[{label:'Intensité',data:conflictInt.map(c=>c.intensity),backgroundColor:conflictInt.map(c=>conflictColor(c.intensity)),borderRadius:4}]},options:chartOpts({indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,max:10},y:{ticks:{color:'#cbd5e1'}}}})});
+  makeChart('ch-actors',{type:'bar',data:{labels:conflictInt.map(c=>c.short||c.name),datasets:[{label:'Intensité',data:conflictInt.map(c=>c.intensity),backgroundColor:conflictInt.map(c=>conflictColor(c.intensity)),borderRadius:4}]},options:chartOpts({indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{const c=conflictInt[ctx.dataIndex]; return [`Intensité : ${ctx.parsed.x}/10`, `Région : ${c.region}`, `Acteurs : ${(c.actors_etat||[]).length+(c.actors_non_etat||[]).length}`];}}}},scales:{x:{title:axT('Intensité (échelle 1-10)'),beginAtZero:true,max:10},y:{title:axT('Conflit'),ticks:{color:'#cbd5e1'}}}})});
+  const intHigh = conflictInt.filter(c=>c.intensity>=8).length;
+  chartInsight('ch-actors',
+    `Top 10 conflits actifs (hors gelés/résolus) classés par <b>intensité 1-10</b>. Couleur : <span style="color:#ef4444">rouge ≥9 (escalade)</span>, <span style="color:#f97316">orange ≥7 (intense)</span>, <span style="color:#f59e0b">jaune ≥5 (modéré)</span>, <span style="color:#22c55e">vert &lt;5 (faible)</span>.`,
+    `<b>${intHigh}/${conflictInt.length}</b> conflits en zone d'escalade (≥8/10). ${conflictInt[0]?`Plus intense : <b style="color:#ef4444">${conflictInt[0].short||conflictInt[0].name}</b> (${conflictInt[0].intensity}/10).`:''}`,
+    intHigh>3?'#ef4444':'#f59e0b');
 
   // Heatmap conflits × mois (12 derniers mois)
   const months=[]; for(let i=11;i>=0;i--){const s=new Date(now.getFullYear(),now.getMonth()-i,1); const e=new Date(now.getFullYear(),now.getMonth()-i+1,0,23,59,59); months.push({s,e,lbl:s.toLocaleDateString('fr-FR',{month:'short'})});}
   const allEv = d.events;
   const activeC = d.conflicts.filter(c=>c.status!=='frozen'&&c.status!=='resolved').slice(0,8);
-  makeChart('ch-heat',{type:'bar',data:{labels:months.map(m=>m.lbl),datasets:activeC.map((c,i)=>({label:c.short||c.name,data:months.map(m=>allEv.filter(e=>e.conflict_id===c.id && new Date(e.date)>=m.s && new Date(e.date)<=m.e).length),backgroundColor:['#ef4444','#f97316','#f59e0b','#eab308','#22c55e','#06b6d4','#3b82f6','#a78bfa'][i%8],stack:'h'}))},options:chartOpts({plugins:{legend:{position:'bottom',labels:{color:'#cbd5e1',font:{size:10},padding:6,boxWidth:10}}},scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true}}})});
+  makeChart('ch-heat',{type:'bar',data:{labels:months.map(m=>m.lbl),datasets:activeC.map((c,i)=>({label:c.short||c.name,data:months.map(m=>allEv.filter(e=>e.conflict_id===c.id && new Date(e.date)>=m.s && new Date(e.date)<=m.e).length),backgroundColor:['#ef4444','#f97316','#f59e0b','#eab308','#22c55e','#06b6d4','#3b82f6','#a78bfa'][i%8],stack:'h'}))},options:chartOpts({plugins:{legend:{position:'bottom',labels:{color:'#cbd5e1',font:{size:10},padding:6,boxWidth:10}}},scales:{x:{title:axT('Mois (12 derniers)'),stacked:true},y:{title:axT('Nombre de jalons (cumulé)'),stacked:true,beginAtZero:true}}})});
+  const monthlyTotals = months.map((m,mi)=>activeC.reduce((s,c,i)=>s+allEv.filter(e=>e.conflict_id===c.id&&new Date(e.date)>=m.s&&new Date(e.date)<=m.e).length,0));
+  const pkMonth = monthlyTotals.indexOf(Math.max(...monthlyTotals));
+  chartInsight('ch-heat',
+    `Pour chaque <b>mois</b>, on empile le <b>nombre de jalons</b> par conflit (top 8 actifs). Hauteur totale = activité globale du mois ; couleur dominante = conflit qui pèse le plus.`,
+    `Pic d'activité : <b>${months[pkMonth]?.lbl||'—'}</b> avec <b>${monthlyTotals[pkMonth]} jalons</b> cumulés. Total 12 mois : <b>${monthlyTotals.reduce((a,b)=>a+b,0)}</b>.`,
+    '#06b6d4');
 
   // Radar : top 5 conflits
   const top5 = d.conflicts.slice().sort((a,b)=>b.intensity-a.intensity).slice(0,5);
-  const dims = ['Intensité','Jalons 12 mois','Sévérité','Acteurs','Ancienneté'];
+  const dims = ['Intensité','Jalons 12 mois','Sévérité moy.','Acteurs','Ancienneté'];
   const raw = top5.map(c=>{
     const e12 = d.events.filter(e=>e.conflict_id===c.id && (now-new Date(e.date))/86400000<365);
     return [c.intensity, e12.length, e12.length?e12.reduce((s,e)=>s+e.severity,0)/e12.length:0, (c.actors_etat||[]).length+(c.actors_non_etat||[]).length, now.getFullYear()-c.start_year];
   });
   const norm = top5.map((c,i)=>dims.map((_,j)=>{const col=raw.map(r=>r[j]); return (raw[i][j]/Math.max(...col,1))*10;}));
   const pal = ['#ef4444','#f97316','#f59e0b','#60a5fa','#a78bfa'];
-  makeChart('ch-radar',{type:'radar',data:{labels:dims,datasets:top5.map((c,i)=>({label:c.short||c.name,data:norm[i],backgroundColor:pal[i]+'33',borderColor:pal[i],borderWidth:2,pointBackgroundColor:pal[i],pointRadius:3}))},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#cbd5e1',font:{size:10}}}},scales:{r:{min:0,max:10,angleLines:{color:'#1a2340'},grid:{color:'#1a2340'},pointLabels:{color:'#cbd5e1',font:{size:11}},ticks:{color:'#64748b',backdropColor:'transparent',stepSize:2}}}}});
+  makeChart('ch-radar',{type:'radar',data:{labels:dims,datasets:top5.map((c,i)=>({label:c.short||c.name,data:norm[i],backgroundColor:pal[i]+'33',borderColor:pal[i],borderWidth:2,pointBackgroundColor:pal[i],pointRadius:3}))},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#cbd5e1',font:{size:10}}},tooltip:{callbacks:{label:ctx=>{const r=raw[ctx.datasetIndex][ctx.dataIndex]; const lbl=dims[ctx.dataIndex]; const fmt=lbl==='Sévérité moy.'?r.toFixed(1)+'/10':lbl==='Ancienneté'?r+' ans':lbl==='Intensité'?r+'/10':r; return `${ctx.dataset.label} — ${lbl} : ${fmt} (normalisé ${ctx.parsed.r.toFixed(1)}/10)`;}}}},scales:{r:{min:0,max:10,angleLines:{color:'#1a2340'},grid:{color:'#1a2340'},pointLabels:{color:'#cbd5e1',font:{size:11}},ticks:{color:'#64748b',backdropColor:'transparent',stepSize:2}}}}});
+  chartInsight('ch-radar',
+    `5 conflits les + intenses sur <b>5 dimensions normalisées 0-10</b> (chaque dimension est rapportée à son maximum dans le top 5). Plus la forme est <b>large</b> = présent sur toutes les dimensions ; <b>étroite et pointue</b> = profil spécialisé (ex: vieux conflit peu actif).`,
+    `Comparaison : la <b>surface</b> de chaque polygone reflète la "charge totale" du conflit. Survolez les sommets pour voir les valeurs brutes (ex: nombre d'acteurs, années).`,
+    '#a78bfa');
 }
 
 /* ============= COUNTRIES (Fragile States Index) ============= */

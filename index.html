@@ -354,7 +354,7 @@ body.map-light .map-legend h4{color:#475569}
           <div class="chart-box"><canvas id="ch-dash-escalation"></canvas></div>
         </div>
         <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-chart-pie"></i>Répartition par région</h2></div>
+          <div class="card-hd"><h2><i class="fa-solid fa-chart-pie"></i>Exposition par région</h2><div class="help">Pondération par intensité cumulée (1-10), pas par nombre. Plus la part est grande, plus la région concentre des conflits graves.</div></div>
           <div class="chart-box"><canvas id="ch-dash-region"></canvas></div>
         </div>
       </div>
@@ -409,22 +409,22 @@ body.map-light .map-legend h4{color:#475569}
 
       <div class="grid-2">
         <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-chart-line"></i>Évolution de l'intensité</h2><div class="help">Score d'escalade cumulé par période</div></div>
+          <div class="card-hd"><h2><i class="fa-solid fa-chart-line"></i>Évolution score & jalons (double axe)</h2><div class="help">Rouge plein = score cumulé sévérité (gauche). Bleu pointillé = nombre de jalons (droite). Divergence = signal qualitatif.</div></div>
           <div class="chart-box lg"><canvas id="ch-evo"></canvas></div>
         </div>
         <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-chart-column"></i>Sévérité des événements</h2></div>
+          <div class="card-hd"><h2><i class="fa-solid fa-chart-column"></i>Distribution de sévérité</h2><div class="help">Empilé par strate : Faible (1-3), Moyenne (4-6), Élevée (7-8), Critique (9-10).</div></div>
           <div class="chart-box lg"><canvas id="ch-sev"></canvas></div>
         </div>
       </div>
 
       <div class="grid-2e mt">
         <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-layer-group"></i>Types d'événements</h2></div>
+          <div class="card-hd"><h2><i class="fa-solid fa-layer-group"></i>Ruptures vs jalons ordinaires</h2><div class="help">Un seuil de rupture = tournant majeur (assassinat, frappe massive, accord historique...). Au-delà de 20% = instabilité structurelle.</div></div>
           <div class="chart-box"><canvas id="ch-type"></canvas></div>
         </div>
         <div class="card">
-          <div class="card-hd"><h2><i class="fa-solid fa-users-between-lines"></i>Acteurs impliqués</h2></div>
+          <div class="card-hd"><h2><i class="fa-solid fa-ranking-star"></i>Top 10 conflits — classement par intensité</h2><div class="help">Échelle 1-10. Vert = faible, jaune = modéré, orange = intense, rouge = escalade.</div></div>
           <div class="chart-box"><canvas id="ch-actors"></canvas></div>
         </div>
       </div>
