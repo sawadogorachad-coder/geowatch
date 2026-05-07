@@ -110,6 +110,11 @@ const Router = {
     else if(page==='alerts') renderAlerts();
     else if(page==='events') renderEvents();
     else if(page==='admin') renderAdmin();
+    // Refresh RSS automatique si données stales (>5min) sur les pages dynamiques
+    if(['news','alerts','dash'].includes(page)){
+      const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
+      if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
+    }
   }
 };
 
@@ -338,7 +343,13 @@ function renderAnalyseSimplePanel(c){
     <i class="fa-solid fa-lightbulb" style="color:${col};font-size:1.3rem"></i>
     <h2 style="font-size:1rem;color:#e2e8f0;font-weight:700">Analyse géopolitique simplifiée</h2>
     <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.65rem">Pédagogique</span>
-    ${a.date_analyse?`<span class="chip gray" style="font-size:.65rem"><i class="fa-solid fa-calendar"></i> Màj : ${a.date_analyse}</span>`:'<span class="chip orange" style="font-size:.65rem">⚠ Non daté — à vérifier</span>'}
+    ${(()=>{ if(!a.date_analyse) return '<span class="chip orange" style="font-size:.65rem">⚠ Non daté — à vérifier</span>';
+      const ageDays = Math.floor((Date.now()-new Date(a.date_analyse))/86400000);
+      const col = ageDays>30 ? '#ef4444' : ageDays>14 ? '#f59e0b' : '#22c55e';
+      const lbl = ageDays===0?'aujourd\'hui':ageDays===1?'hier':`il y a ${ageDays} j`;
+      const warn = ageDays>30 ? ' • ⚠ Analyse à actualiser' : '';
+      return `<span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.65rem"><i class="fa-solid fa-calendar"></i> Màj ${a.date_analyse} (${lbl})${warn}</span>`;
+    })()}
     ${a.source_reference?`<span style="font-size:.65rem;color:#64748b"><i class="fa-solid fa-book"></i> ${a.source_reference}</span>`:''}
   </div>
   ${a.source_reference && a.source_reference.includes('prospectifs') ? `<div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:.75rem;color:#fca5a5"><i class="fa-solid fa-triangle-exclamation"></i> <b>Cette analyse contient des éléments prospectifs.</b> Vérifiez avec les dernières sources officielles avant toute utilisation.</div>`:''}
@@ -666,28 +677,93 @@ function addSourceFromTank(id){
 }
 
 /* ============= ALERTES ============= */
+/* Dérive les alertes EN DIRECT depuis les articles RSS détectés comme événements majeurs */
+function getDerivedAlertsFromNews(){
+  if(!NEWS_STATE?.items?.length) return [];
+  return NEWS_STATE.items.filter(it=>it._majors?.length>0).map(it=>{
+    const types = (it._majors||[]).map(m=>m.type);
+    let level = 'high';
+    if(types.includes('rupture') || types.includes('crise')) level = 'critical';
+    else if(types.includes('diplo_majeur')) level = 'high';
+    const seuilLabels = {rupture:'Rupture/escalade',diplo_majeur:'Diplomatie haut niveau',crise:'Crise systémique'};
+    return {
+      id:'rss_'+(it.link||it.title||'').replace(/[^a-z0-9]/gi,'').slice(0,30),
+      title: it.title,
+      description:(it.description||'').slice(0,500),
+      level, date: it.pubDate||new Date().toISOString(),
+      conflict_id:(it._conflicts||[])[0]?.id,
+      seuil: types.map(t=>seuilLabels[t]||t).join(' • '),
+      _live:true, _link:it.link, _source:it._source, _bf:!!it._bf,
+      _keywords:(it._majors||[]).map(m=>m.keyword)
+    };
+  });
+}
+
+/* Synthèse impact BF (gère les 2 structures : note_synthese OU dimensions) */
+function _impactBFSynthese(c){
+  if(!c?.impact_bf) return null;
+  if(c.impact_bf.note_synthese) return c.impact_bf.note_synthese;
+  const dims = ['securitaire','economique','diplomatique','sociopolitique'];
+  const parts = dims.filter(d=>c.impact_bf[d]?.titre).map(d=>{
+    const x=c.impact_bf[d]; return `[${d}] ${x.titre}${x.niveau?` (${x.niveau})`:''}`;
+  });
+  return parts.length? parts.join(' · ') : null;
+}
+
 function renderAlerts(){
   const d = DB.get();
+  const liveAlerts = getDerivedAlertsFromNews();
+  const all = [...liveAlerts, ...(d.alerts||[])].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
   const el = document.getElementById('alerts-list');
-  if(!d.alerts.length){ el.innerHTML='<div class="empty"><i class="fa-solid fa-bell-slash"></i><p>Aucune alerte.</p></div>'; return; }
-  el.innerHTML = d.alerts.sort((a,b)=>{const o={critical:0,high:1,medium:2,low:3}; return (o[a.level]||9)-(o[b.level]||9);}).map(a=>{
+  const lastUpd = NEWS_STATE.lastUpdate ? Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000) : null;
+  const freshLabel = lastUpd===null ? 'Aucune actualisation RSS' : lastUpd<1?'À l\'instant':`Il y a ${lastUpd} min`;
+  const freshColor = lastUpd===null||lastUpd>15 ? '#f59e0b' : '#22c55e';
+  const liveCount = liveAlerts.length, manualCount = (d.alerts||[]).length;
+  const critCount = all.filter(a=>a.level==='critical').length;
+  const highCount = all.filter(a=>a.level==='high').length;
+
+  const header = `<div class="card" style="margin-bottom:14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340">
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span style="font-size:.78rem;color:#94a3b8"><i class="fa-solid fa-satellite-dish"></i> Source RSS dernière vérification :</span>
+        <span style="font-size:.84rem;color:${freshColor};font-weight:700">${freshLabel}</span>
+        <span style="font-size:.7rem;color:#64748b">• Actualisation auto toutes les 10 min</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <span class="chip red" style="font-size:.7rem">${critCount} critique${critCount>1?'s':''}</span>
+        <span class="chip orange" style="font-size:.7rem">${highCount} élevée${highCount>1?'s':''}</span>
+        <span class="chip" style="background:rgba(34,197,94,.15);color:#86efac;font-size:.7rem;border:1px solid rgba(34,197,94,.3)">🛰 ${liveCount} live RSS</span>
+        <span class="chip gray" style="font-size:.7rem">📝 ${manualCount} manuelle${manualCount>1?'s':''}</span>
+        <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Actualiser RSS</button>
+      </div>
+    </div>
+  </div>`;
+
+  if(!all.length){ el.innerHTML = header + '<div class="empty"><i class="fa-solid fa-bell-slash"></i><p>Aucune alerte. Cliquez « Actualiser RSS » pour scanner les flux à la recherche d\'événements majeurs.</p></div>'; return; }
+
+  el.innerHTML = header + all.map(a=>{
     const c = d.conflicts.find(x=>x.id===a.conflict_id);
     const levelBg = a.level==='critical'?'#1a0609':a.level==='high'?'#1a0d05':'#0c1426';
     const levelBorder = a.level==='critical'?'#7f1d1d':a.level==='high'?'#7c2d12':'#1a2340';
+    const liveBadge = a._live ? `<span class="chip" style="background:rgba(34,197,94,.18);color:#86efac;font-size:.62rem;border:1px solid rgba(34,197,94,.35);font-weight:700"><i class="fa-solid fa-broadcast-tower" style="font-size:.6rem"></i> EN DIRECT</span>` : `<span class="chip gray" style="font-size:.62rem">📝 Manuelle</span>`;
+    const bfImpact = _impactBFSynthese(c);
+    const dateLabel = a._live ? `${fmt.dateTime(a.date)} (RSS)` : fmt.date(a.date);
     return `<div class="card" style="margin:0 0 12px;background:linear-gradient(135deg,${levelBg} 0%,#060912 100%);border-color:${levelBorder};border-width:1.5px">
       <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px">
         <div style="flex:1;min-width:280px">
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px">${liveBadge}${a._bf?'<span class="chip" style="background:rgba(253,224,71,.15);color:#fde047;font-size:.62rem;border:1px solid rgba(253,224,71,.35)">🇧🇫 Pertinent BF</span>':''}</div>
           <div style="font-size:1rem;font-weight:700;color:#e2e8f0;line-height:1.4;margin-bottom:5px">⚠ ${a.title}</div>
-          <div style="font-size:.76rem;color:#94a3b8;margin-bottom:8px">${fmt.date(a.date)} • ${a.region||'—'}${c?` • <span style="color:#60a5fa;cursor:pointer;text-decoration:underline" onclick="showConflictDetail('${c.id}')">${c.short||c.name}</span>`:''}</div>
-          ${a.seuil?`<div style="margin-bottom:9px"><span class="chip purple">Seuil : ${a.seuil}</span></div>`:''}
+          <div style="font-size:.76rem;color:#94a3b8;margin-bottom:8px">${dateLabel}${a._source?` • ${a._source}`:''}${c?` • <span style="color:#60a5fa;cursor:pointer;text-decoration:underline" onclick="showConflictDetail('${c.id}')">${c.short||c.name}</span>`:''}</div>
+          ${a.seuil?`<div style="margin-bottom:9px"><span class="chip purple" style="font-size:.7rem">Seuil détecté : ${a.seuil}</span></div>`:''}
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">${levelChip(a.level)}<button class="btn ghost sm" onclick="delAlert('${a.id}')" title="Supprimer"><i class="fa-solid fa-trash"></i></button></div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">${levelChip(a.level)}${!a._live?`<button class="btn ghost sm" onclick="delAlert('${a.id}')" title="Supprimer"><i class="fa-solid fa-trash"></i></button>`:''}</div>
       </div>
       <div style="background:rgba(0,0,0,.25);border-left:3px solid ${levelBorder};border-radius:4px;padding:11px 14px;font-size:.88rem;color:#e2e8f0;line-height:1.65;white-space:pre-wrap;word-wrap:break-word">${a.description||'<i style="color:#64748b">Pas de description.</i>'}</div>
       ${c?.brief_decideur?.[0]?`<div style="margin-top:10px;background:rgba(96,165,250,.05);border-left:3px solid #60a5fa;padding:9px 12px;border-radius:4px;font-size:.78rem;color:#cbd5e1"><b style="color:#60a5fa">📌 Contexte conflit lié :</b> ${c.brief_decideur[0]}</div>`:''}
-      ${c?.impact_bf?`<div style="margin-top:8px;background:rgba(253,224,71,.06);border-left:3px solid #fde047;padding:9px 12px;border-radius:4px;font-size:.78rem;color:#cbd5e1"><b style="color:#fde047">🇧🇫 Impact BF :</b> ${c.impact_bf.note_synthese}</div>`:''}
+      ${bfImpact?`<div style="margin-top:8px;background:rgba(253,224,71,.06);border-left:3px solid #fde047;padding:9px 12px;border-radius:4px;font-size:.78rem;color:#cbd5e1"><b style="color:#fde047">🇧🇫 Impact BF :</b> ${bfImpact}</div>`:''}
       <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
-        ${c?`<button class="btn ghost sm" onclick="showConflictDetail('${c.id}')"><i class="fa-solid fa-circle-info"></i> Fiche conflit complète</button>`:''}
+        ${a._live && a._link?`<a class="btn primary sm" href="${a._link}" target="_blank" rel="noopener" style="text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lire l'article source</a>`:''}
+        ${c?`<button class="btn ghost sm" onclick="showConflictDetail('${c.id}')"><i class="fa-solid fa-circle-info"></i> Fiche conflit</button>`:''}
         ${c?.id?`<button class="btn ghost sm" onclick="Router.go('impact_bf');setTimeout(()=>{const s=document.getElementById('bf-conflict');if(s){s.value='${c.id}';renderImpactBF();}},100)"><i class="fa-solid fa-flag-checkered" style="color:#fde047"></i> Voir impact BF</button>`:''}
       </div>
     </div>`;
@@ -1022,9 +1098,17 @@ async function loadNews(){
 
 function updateLastUpdateLabel(){
   const el = document.getElementById('news-last-update'); if(!el) return;
-  if(!NEWS_STATE.lastUpdate){ el.textContent='Pas encore actualisé'; return; }
+  if(!NEWS_STATE.lastUpdate){ el.textContent='⏳ Chargement automatique en cours…'; el.style.color='#f59e0b'; return; }
   const diff = Math.round((new Date()-NEWS_STATE.lastUpdate)/60000);
-  el.textContent = `Dernière maj : ${diff===0?'à l\'instant':diff+' min'}`;
+  const ageStr = diff===0?'à l\'instant':diff+' min';
+  let nextStr = '';
+  if(NEWS_STATE.nextRefresh && document.getElementById('news-auto')?.checked){
+    const sec = Math.max(0,Math.round((NEWS_STATE.nextRefresh-Date.now())/1000));
+    const m = Math.floor(sec/60), s = sec%60;
+    nextStr = ` • ⏱ next ${m}m${s.toString().padStart(2,'0')}`;
+  }
+  el.textContent = `🛰 Maj : ${ageStr}${nextStr}`;
+  el.style.color = diff<15 ? '#86efac' : '#f59e0b';
 }
 
 function renderNewsList(){
@@ -1089,13 +1173,22 @@ function renderNews(){
   } else { renderNewsList(); updateLastUpdateLabel(); }
 }
 
-/* Auto-refresh : 15 min par défaut */
+/* Auto-refresh : 10 min par défaut + countdown visible */
 function startAutoRefresh(){
   if(NEWS_STATE.autoTimer) clearInterval(NEWS_STATE.autoTimer);
+  if(NEWS_STATE.countdownTimer) clearInterval(NEWS_STATE.countdownTimer);
+  const INTERVAL_MS = 10*60*1000; // 10 min
+  NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS;
   NEWS_STATE.autoTimer = setInterval(()=>{
-    if(document.getElementById('news-auto')?.checked){ loadNews(); }
+    if(document.getElementById('news-auto')?.checked){ loadNews(); NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS; }
     updateLastUpdateLabel();
-  }, 15*60*1000);
+    // Re-render alerts si on est dessus pour rafraîchir les alertes live
+    const cur = document.querySelector('.page.active')?.dataset.page;
+    if(cur==='alerts') renderAlerts();
+    if(cur==='dash') renderDashboard();
+  }, INTERVAL_MS);
+  // Countdown chaque 30s
+  NEWS_STATE.countdownTimer = setInterval(()=>{ updateLastUpdateLabel(); }, 30*1000);
   // Mise à jour du label « il y a X minutes » toutes les 30 sec
   setInterval(updateLastUpdateLabel, 30000);
 }
@@ -2551,6 +2644,8 @@ window.addEventListener('DOMContentLoaded',()=>{
   setupEvents();
   Router.go('dash');
   updateNotifBadge();
+  // 🛰 Chargement RSS automatique IMMÉDIAT au démarrage (le site est vivant dès la 1ère seconde)
+  setTimeout(()=>{ loadNews().catch(e=>console.warn('Auto-load news failed:',e)); }, 800);
   // Demande permission notifications navigateur après 3s pour ne pas brusquer l'utilisateur
   setTimeout(requestNotifPermission, 3000);
 });
