@@ -328,6 +328,7 @@ body.map-light .map-legend h4{color:#475569}
       <div id="page-sub">Synthèse opérationnelle en temps réel</div>
     </div>
     <div class="tb-right">
+      <button id="tb-freshness" title="Cliquer pour actualiser RSS maintenant" style="background:#0a0f1c;color:#94a3b8;border:1px solid #1a2340;padding:5px 12px;border-radius:18px;font-size:.74rem;cursor:pointer;display:inline-flex;align-items:center;gap:7px"><span id="tb-freshness-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#64748b"></span><span id="tb-freshness-txt">RSS chargement…</span></button>
       <span id="tb-date"></span>
       <button id="tb-notif" title="Notifications" style="position:relative;background:#1e293b;color:#cbd5e1;border:1px solid #334155;padding:6px 12px;border-radius:18px;font-size:.78rem;display:inline-flex;align-items:center;gap:6px"><i class="fa-solid fa-bell"></i><span id="tb-notif-count">0</span><span id="tb-notif-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.6rem;font-weight:700;padding:2px 6px;border-radius:10px;min-width:18px;text-align:center"></span></button>
       <button id="tb-alerts"><i class="fa-solid fa-triangle-exclamation"></i><span id="tb-alerts-txt">0 alerte</span></button>
@@ -340,9 +341,9 @@ body.map-light .map-legend h4{color:#475569}
     <section class="page active" data-page="dash">
       <div class="stats">
         <div class="stat red"><i class="stat-icon fa-solid fa-fire"></i><div><div class="stat-val" id="kpi-active">0</div><div class="stat-lbl">Conflits actifs</div><div class="stat-trend flat" id="kpi-active-tr"></div></div></div>
-        <div class="stat orange"><i class="stat-icon fa-solid fa-bolt"></i><div><div class="stat-val" id="kpi-events">0</div><div class="stat-lbl">Événements (30 j)</div><div class="stat-trend flat" id="kpi-events-tr"></div></div></div>
-        <div class="stat purple"><i class="stat-icon fa-solid fa-arrow-trend-up"></i><div><div class="stat-val" id="kpi-intensity">0</div><div class="stat-lbl">Intensité moyenne</div><div class="stat-trend flat" id="kpi-intensity-tr"></div></div></div>
-        <div class="stat blue"><i class="stat-icon fa-solid fa-bell"></i><div><div class="stat-val" id="kpi-alerts">0</div><div class="stat-lbl">Alertes critiques</div><div class="stat-trend flat" id="kpi-alerts-tr"></div></div></div>
+        <div class="stat orange"><i class="stat-icon fa-solid fa-satellite-dish"></i><div><div class="stat-val" id="kpi-rss-24h">0</div><div class="stat-lbl">Articles RSS (24 h) <span style="color:#86efac;font-size:.62rem">● LIVE</span></div><div class="stat-trend flat" id="kpi-rss-tr"></div></div></div>
+        <div class="stat purple"><i class="stat-icon fa-solid fa-flag-checkered" style="color:#fde047"></i><div><div class="stat-val" id="kpi-bf">0</div><div class="stat-lbl">Articles pertinents BF (24 h)</div><div class="stat-trend flat" id="kpi-bf-tr"></div></div></div>
+        <div class="stat blue"><i class="stat-icon fa-solid fa-bell"></i><div><div class="stat-val" id="kpi-alerts">0</div><div class="stat-lbl">Alertes live + manuelles</div><div class="stat-trend flat" id="kpi-alerts-tr"></div></div></div>
       </div>
 
       <div class="grid-2">

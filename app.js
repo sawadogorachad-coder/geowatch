@@ -135,8 +135,8 @@ const Router = {
     else if(page==='alerts') renderAlerts();
     else if(page==='events') renderEvents();
     else if(page==='admin') renderAdmin();
-    // Refresh RSS automatique si données stales (>5min) sur les pages dynamiques
-    if(['news','alerts','dash'].includes(page)){
+    // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
+    if(['news','alerts','dash','sources','conflicts'].includes(page)){
       const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
       if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
     }
@@ -147,15 +147,29 @@ const Router = {
 function renderDashboard(){
   const d = DB.get(); const now=new Date();
   const active = d.conflicts.filter(c=>c.status!=='frozen'&&c.status!=='resolved');
-  const ev30 = d.events.filter(e=>(now-new Date(e.date))/86400000<30);
   const ruptures = d.events.filter(e=>e.rupture).length;
-  const alertsCrit = d.alerts.filter(a=>a.level==='critical'||a.level==='high').length;
+
+  // KPIs LIVE depuis RSS
+  const rss24h = (NEWS_STATE?.items||[]).filter(it=>{
+    if(!it.pubDate) return false;
+    return (Date.now()-new Date(it.pubDate))/3600000 < 24;
+  });
+  const bf24h = rss24h.filter(it=>it._bf);
+  const liveAlerts = (typeof getDerivedAlertsFromNews==='function'?getDerivedAlertsFromNews():[]);
+  const totalAlerts = liveAlerts.length + (d.alerts?.length||0);
+  const critAlerts = liveAlerts.filter(a=>a.level==='critical').length + (d.alerts||[]).filter(a=>a.level==='critical').length;
 
   document.getElementById('kpi-active').textContent = active.length;
-  document.getElementById('kpi-events').textContent = ev30.length;
-  document.getElementById('kpi-intensity').textContent = active.length ? (active.reduce((s,c)=>s+c.intensity,0)/active.length).toFixed(1) : 0;
-  document.getElementById('kpi-alerts').textContent = alertsCrit;
-  document.getElementById('kpi-events-tr').innerHTML = `${ruptures} seuils de rupture historiques recensés`;
+  const kpiRSS = document.getElementById('kpi-rss-24h'); if(kpiRSS) kpiRSS.textContent = rss24h.length;
+  const kpiRSStr = document.getElementById('kpi-rss-tr'); if(kpiRSStr) kpiRSStr.innerHTML = NEWS_STATE.lastUpdate ? `Maj : ${Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000)} min` : 'Chargement…';
+  const kpiBF = document.getElementById('kpi-bf'); if(kpiBF) kpiBF.textContent = bf24h.length;
+  const kpiBFtr = document.getElementById('kpi-bf-tr'); if(kpiBFtr) kpiBFtr.innerHTML = bf24h.length>0 ? `<span style="color:#fde047">📍 surveillance Sahel/AES active</span>` : 'Aucun signal BF en 24h';
+  document.getElementById('kpi-alerts').textContent = totalAlerts;
+  const kpiAtr = document.getElementById('kpi-alerts-tr'); if(kpiAtr) kpiAtr.innerHTML = `<span style="color:#ef4444">${critAlerts} critique${critAlerts>1?'s':''}</span> · ${liveAlerts.length} live RSS · ${d.alerts?.length||0} manuelles`;
+  // Ancien kpi-events (pour rétrocompat si élément encore présent)
+  const ev30El = document.getElementById('kpi-events'); if(ev30El) ev30El.textContent = d.events.filter(e=>(now-new Date(e.date))/86400000<30).length;
+  const evTr = document.getElementById('kpi-events-tr'); if(evTr) evTr.innerHTML = `${ruptures} seuils de rupture historiques recensés`;
+  const intEl = document.getElementById('kpi-intensity'); if(intEl) intEl.textContent = active.length ? (active.reduce((s,c)=>s+c.intensity,0)/active.length).toFixed(1) : 0;
 
   // alerts in topbar
   const tbA = document.getElementById('tb-alerts');
@@ -240,9 +254,20 @@ function renderConflicts(){
   const wrap = document.getElementById('cf-list');
   if(!list.length){ wrap.innerHTML='<div class="empty" style="grid-column:1/-1"><i class="fa-solid fa-inbox"></i><p>Aucun résultat.</p></div>'; return; }
 
+  // Compteurs RSS live par conflit (24h et total en mémoire)
+  const rssAll = NEWS_STATE?.items||[];
+  const rss24h = rssAll.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/3600000 < 24);
+  const rssCountFor = cid => rssAll.filter(it=>(it._conflicts||[]).some(c=>c.id===cid)).length;
+  const rss24Count = cid => rss24h.filter(it=>(it._conflicts||[]).some(c=>c.id===cid)).length;
+
   wrap.innerHTML = list.map(c=>{
     const col = conflictColor(c.intensity);
-    const has8 = !!c.causes_historiques;  // fiche complète ?
+    const has8 = !!c.causes_historiques;
+    const rTot = rssCountFor(c.id);
+    const r24 = rss24Count(c.id);
+    const liveBadge = rTot>0
+      ? `<span class="chip" style="background:rgba(34,197,94,.15);color:#86efac;font-size:.62rem;border:1px solid rgba(34,197,94,.35);font-weight:700"><i class="fa-solid fa-broadcast-tower" style="font-size:.55rem"></i> ${rTot} articles RSS${r24>0?` (${r24} en 24h)`:''}</span>`
+      : '<span class="chip gray" style="font-size:.62rem">Aucun article RSS récent</span>';
     return `<div class="conflict-card" data-cid="${c.id}" style="--cc:${col}">
       <div class="cc-hd">
         <div>
@@ -251,7 +276,7 @@ function renderConflicts(){
         </div>
         <div class="cc-intensity"><div class="cc-int-val">${c.intensity}</div><div class="cc-int-lbl">Int.</div></div>
       </div>
-      <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px">${statusChip(c.status)}${has8?'<span class="chip purple">Fiche 8 dim.</span>':'<span class="chip gray">Fiche compacte</span>'}${c.brief_decideur?'<span class="chip blue">Brief 2 couches</span>':''}${c.scenarios?'<span class="chip green">Scénarios</span>':''}</div>
+      <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px">${statusChip(c.status)}${liveBadge}${has8?'<span class="chip purple">Fiche 8 dim.</span>':''}${c.brief_decideur?'<span class="chip blue">Brief</span>':''}${c.scenarios?'<span class="chip green">Scénarios</span>':''}</div>
       <div class="cc-desc">${c.cle_historique||(c.brief_decideur?.[0])||''}</div>
       <div class="cc-meta" style="margin-top:8px">
         <span><b style="color:#e2e8f0">${(c.actors_etat||[]).length}</b> acteurs étatiques</span>
@@ -727,20 +752,94 @@ function renderCountries(){
 /* ============= SOURCES THINK TANKS ============= */
 function renderSources(){
   const sources = DB.get().sources;
-  const cats = [...new Set(sources.map(s=>s.categorie))];
   const wrap = document.getElementById('sources-grid');
-  wrap.innerHTML = sources.map(s=>{
+
+  // Active RSS sources from RSS_SOURCES_FULL pour mapping par nom
+  const activeRSS = (window.GW_DATA?.RSS_SOURCES_FULL||[]);
+  const dRSS = DB.get().rss_active||[];
+
+  // Statistiques RSS LIVE par source : on cherche les articles dont _source contient le nom du think tank
+  const findArticlesFor = (s)=>{
+    if(!NEWS_STATE?.items?.length) return [];
+    const needle = (s.name||'').toLowerCase().split(/[\s\-/]+/).filter(w=>w.length>3);
+    return NEWS_STATE.items.filter(it=>{
+      const src = (it._source||'').toLowerCase();
+      return needle.some(w=>src.includes(w));
+    });
+  };
+  const findActiveRSSFor = (s)=>{
+    const needle = (s.name||'').toLowerCase().split(/[\s\-/]+/).filter(w=>w.length>3);
+    return activeRSS.find(r=>{ const n=r.name.toLowerCase(); return needle.some(w=>n.includes(w)); });
+  };
+
+  // Banner freshness en haut de la page Sources
+  const lastUpd = NEWS_STATE.lastUpdate;
+  const ageStr = !lastUpd?'aucune':Math.round((Date.now()-new Date(lastUpd))/60000)+' min';
+  const totArticles = NEWS_STATE.items?.length||0;
+  const banner = `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1428 0%,#060912 100%);border:1px solid #1a2340">
+    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <span style="font-size:.84rem;color:#cbd5e1"><i class="fa-solid fa-satellite-dish" style="color:#60a5fa"></i> <b>Bibliothèque sources</b></span>
+        <span style="font-size:.74rem;color:#94a3b8">${sources.length} think tanks de référence • ${totArticles} articles RSS en mémoire • dernière collecte : <span style="color:${ageStr==='aucune'?'#f59e0b':'#86efac'}">${ageStr}</span></span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Collecter RSS</button>
+        <a class="btn ghost sm" data-page="news" href="#"><i class="fa-solid fa-arrow-right"></i> Voir flux RSS</a>
+      </div>
+    </div>
+  </div>`;
+
+  wrap.innerHTML = banner + sources.map(s=>{
     const catCol = s.categorie.includes('français')?'#ef4444':s.categorie.includes('US')?'#3b82f6':s.categorie.includes('UK')?'#8b5cf6':s.categorie.includes('international')?'#22c55e':'#f59e0b';
+    const arts = findArticlesFor(s);
+    const activeRSSEntry = findActiveRSSFor(s);
+    const isLive = !!activeRSSEntry && dRSS.includes(activeRSSEntry.id);
+    const liveBadge = isLive
+      ? `<span class="chip" style="background:rgba(34,197,94,.15);color:#86efac;font-size:.62rem;border:1px solid rgba(34,197,94,.35);font-weight:700"><i class="fa-solid fa-broadcast-tower" style="font-size:.55rem"></i> LIVE RSS</span>`
+      : activeRSSEntry
+        ? `<span class="chip gray" style="font-size:.62rem">RSS dispo (inactif)</span>`
+        : `<span class="chip gray" style="font-size:.62rem">Pas de RSS direct</span>`;
+    const lastArt = arts[0];
+    const lastArtStr = lastArt ? `Dernier article : <b>${(lastArt.title||'').slice(0,80)}${(lastArt.title||'').length>80?'…':''}</b><br><span style="font-size:.7rem;color:#64748b">${fmt.dateTime(lastArt.pubDate)}</span>` : '<span style="color:#64748b">Aucun article récent collecté.</span>';
+
     return `<div class="card" style="margin:0">
-      <div class="card-hd"><h2 style="font-size:.95rem"><i class="fa-solid fa-book-bookmark" style="color:${catCol}"></i>${s.name}</h2>
-        <span class="chip" style="background:${catCol}22;color:${catCol};border:1px solid ${catCol}55;font-size:.65rem">${s.categorie}</span></div>
-      <div style="font-size:.78rem;color:#cbd5e1;margin-bottom:10px;line-height:1.5"><b>Spécialité :</b> ${s.specialite}</div>
+      <div class="card-hd" style="margin-bottom:8px">
+        <h2 style="font-size:.95rem"><i class="fa-solid fa-book-bookmark" style="color:${catCol}"></i>${s.name}</h2>
+        <div style="display:flex;gap:5px;flex-wrap:wrap">
+          <span class="chip" style="background:${catCol}22;color:${catCol};border:1px solid ${catCol}55;font-size:.62rem">${s.categorie}</span>
+          ${liveBadge}
+        </div>
+      </div>
+      <div style="font-size:.76rem;color:#cbd5e1;margin-bottom:8px;line-height:1.5"><b>Spécialité :</b> ${s.specialite}</div>
+      ${arts.length>0 ? `<div style="background:rgba(34,197,94,.06);border-left:3px solid #22c55e;padding:8px 10px;border-radius:4px;margin-bottom:10px;font-size:.74rem;color:#cbd5e1;line-height:1.5"><b style="color:#86efac">🛰 ${arts.length} article${arts.length>1?'s':''} live</b><br>${lastArtStr}</div>` : `<div style="background:rgba(100,116,139,.06);border-left:3px solid #475569;padding:8px 10px;border-radius:4px;margin-bottom:10px;font-size:.72rem;color:#94a3b8">Aucun article live de cette source en mémoire. ${activeRSSEntry?'Activez le flux RSS pour collecter automatiquement.':'Pas de flux RSS disponible — consulter directement le site.'}</div>`}
       <div style="display:flex;gap:6px;flex-wrap:wrap">
-        <a href="${s.url_recherche}" target="_blank" rel="noopener" class="btn primary sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Recherche</a>
-        ${s.rss?`<button class="btn ghost sm" onclick="addSourceFromTank('${s.id}')"><i class="fa-solid fa-rss"></i> Activer RSS</button>`:''}
+        <a href="${s.url_recherche}" target="_blank" rel="noopener" class="btn primary sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Site officiel</a>
+        ${activeRSSEntry && !isLive ? `<button class="btn ghost sm" onclick="toggleRSSActive('${activeRSSEntry.id}',true)"><i class="fa-solid fa-rss"></i> Activer flux</button>` : ''}
+        ${isLive ? `<button class="btn ghost sm" onclick="filterNewsBySource('${(s.name||'').replace(/'/g,'')}')"><i class="fa-solid fa-filter"></i> Voir ses articles</button>` : ''}
       </div>
     </div>`;
   }).join('');
+}
+
+/* Active/désactive un flux RSS depuis la page Sources */
+function toggleRSSActive(rssId, activate){
+  const d = DB.get();
+  if(!d.rss_active) d.rss_active = [];
+  if(activate && !d.rss_active.includes(rssId)) d.rss_active.push(rssId);
+  if(!activate) d.rss_active = d.rss_active.filter(x=>x!==rssId);
+  d.rss_active_user_modified = true;
+  DB.save(d);
+  toast('Flux activé · collecte en cours…','success');
+  loadNews().then(()=>renderSources());
+}
+
+/* Filtre la page News par nom de source (texte dans search) */
+function filterNewsBySource(name){
+  Router.go('news');
+  setTimeout(()=>{
+    const inp = document.getElementById('news-search');
+    if(inp){ inp.value = name.split(' ')[0]; inp.dispatchEvent(new Event('input')); }
+  }, 200);
 }
 
 function addSourceFromTank(id){
@@ -1172,12 +1271,29 @@ async function loadNews(){
 
   renderNewsList();
   detectAndPushNewItems();
+  // Re-render TOUTES les pages qui dépendent de RSS pour qu'elles soient à jour
+  const cur = document.querySelector('.page.active')?.dataset.page;
+  if(cur==='dash') renderDashboard();
+  else if(cur==='alerts') renderAlerts();
+  else if(cur==='sources') renderSources();
+  else if(cur==='conflicts') renderConflicts();
+  // Toujours mettre à jour la pill freshness en topbar
+  updateLastUpdateLabel();
   toast(`${NEWS_STATE.items.length} articles • ${okCount}/${sources.length} flux OK${engCount>0?' • '+engCount+' traduits 🇫🇷':''}`, okCount>0?'success':'error');
 }
 
 function updateLastUpdateLabel(){
-  const el = document.getElementById('news-last-update'); if(!el) return;
-  if(!NEWS_STATE.lastUpdate){ el.textContent='⏳ Chargement automatique en cours…'; el.style.color='#f59e0b'; return; }
+  const el = document.getElementById('news-last-update');
+  const fdot = document.getElementById('tb-freshness-dot');
+  const ftxt = document.getElementById('tb-freshness-txt');
+  const fbtn = document.getElementById('tb-freshness');
+  if(!NEWS_STATE.lastUpdate){
+    if(el){ el.textContent='⏳ Chargement automatique en cours…'; el.style.color='#f59e0b'; }
+    if(fdot){ fdot.style.background='#f59e0b'; fdot.style.boxShadow='0 0 8px #f59e0b'; }
+    if(ftxt) ftxt.textContent='RSS chargement…';
+    if(fbtn) fbtn.style.borderColor='rgba(245,158,11,.4)';
+    return;
+  }
   const diff = Math.round((new Date()-NEWS_STATE.lastUpdate)/60000);
   const ageStr = diff===0?'à l\'instant':diff+' min';
   let nextStr = '';
@@ -1186,9 +1302,22 @@ function updateLastUpdateLabel(){
     const m = Math.floor(sec/60), s = sec%60;
     nextStr = ` • ⏱ next ${m}m${s.toString().padStart(2,'0')}`;
   }
-  el.textContent = `🛰 Maj : ${ageStr}${nextStr}`;
-  el.style.color = diff<15 ? '#86efac' : '#f59e0b';
+  if(el){
+    el.textContent = `🛰 Maj : ${ageStr}${nextStr}`;
+    el.style.color = diff<15 ? '#86efac' : '#f59e0b';
+  }
+  // Pill globale dans la topbar
+  const col = diff<10?'#22c55e':diff<30?'#f59e0b':'#ef4444';
+  const lbl = diff<10?'À jour':diff<30?'À actualiser':'Obsolète';
+  if(fdot){ fdot.style.background=col; fdot.style.boxShadow='0 0 8px '+col; fdot.style.animation='pulse 2s infinite'; }
+  if(ftxt) ftxt.innerHTML = `<b style="color:${col}">${lbl}</b> · RSS ${ageStr} · ${NEWS_STATE.items.length} articles`;
+  if(fbtn) fbtn.style.borderColor = col+'66';
 }
+
+/* Hook freshness pill click → loadNews */
+document.addEventListener('click',(ev)=>{
+  if(ev.target.closest('#tb-freshness')){ ev.preventDefault(); loadNews(); toast('Actualisation RSS en cours…','info'); }
+});
 
 function renderNewsList(){
   const search = (document.getElementById('news-search').value||'').toLowerCase();
@@ -1261,10 +1390,12 @@ function startAutoRefresh(){
   NEWS_STATE.autoTimer = setInterval(()=>{
     if(document.getElementById('news-auto')?.checked){ loadNews(); NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS; }
     updateLastUpdateLabel();
-    // Re-render alerts si on est dessus pour rafraîchir les alertes live
+    // Re-render TOUTES les pages dépendantes de RSS pour qu'elles restent live
     const cur = document.querySelector('.page.active')?.dataset.page;
     if(cur==='alerts') renderAlerts();
     if(cur==='dash') renderDashboard();
+    if(cur==='sources') renderSources();
+    if(cur==='conflicts') renderConflicts();
   }, INTERVAL_MS);
   // Countdown chaque 30s
   NEWS_STATE.countdownTimer = setInterval(()=>{ updateLastUpdateLabel(); }, 30*1000);
