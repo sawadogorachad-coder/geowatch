@@ -111,6 +111,7 @@ const Router = {
     countries:['Pays','Indice composite type Fragile States Index'],
     sources:['Sources think tanks','IRIS, FRS, ISW, ICG, ACLED, IFRI, RAND, Diploweb, LGC, LMD…'],
     news:['Flux RSS','Veille auto-taggée par conflit'],
+    worldwatch:['Veille mondiale automatique','Tensions, zones chaudes & événements détectés en temps réel depuis les flux RSS'],
     alerts:['Alertes','Seuils de rupture (cf. Codex Veille MO)'],
     events:['Chronologie','Tous événements consolidés'],
     admin:['Administration','Gestion des données']
@@ -132,11 +133,12 @@ const Router = {
     else if(page==='countries') renderCountries();
     else if(page==='sources') renderSources();
     else if(page==='news') renderNews();
+    else if(page==='worldwatch') renderWorldWatch();
     else if(page==='alerts') renderAlerts();
     else if(page==='events') renderEvents();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
-    if(['news','alerts','dash','sources','conflicts'].includes(page)){
+    if(['news','alerts','dash','sources','conflicts','worldwatch'].includes(page)){
       const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
       if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
     }
@@ -854,6 +856,292 @@ function addSourceFromTank(id){
   toast(tank.name+' ajouté à la veille RSS','success');
 }
 
+/* ============================================================
+   VEILLE MONDIALE AUTOMATIQUE
+   Détection heuristique de tensions à partir des articles RSS :
+   - Extraction pays mentionnés (dictionnaire)
+   - Extraction types de tension (mots-clés)
+   - Clustering par paire de pays + par pays unique
+   - Rendu en cartes auto-générées
+   ============================================================ */
+
+const WW_COUNTRIES = {
+  // ── Afrique
+  'Burkina Faso':['burkina','ouagadougou'],
+  'Mali':['mali','bamako','azawad'],
+  'Niger':['niger','niamey'],
+  'Nigéria':['nigeria','abuja','lagos','boko haram','iswap'],
+  'Tchad':['tchad','chad','n\'djamena','ndjamena'],
+  'Soudan':['soudan','sudan','khartoum','rsf','rapid support'],
+  'Soudan du Sud':['south sudan','soudan du sud','juba'],
+  'RDC':['rdc','dr congo','dem.rep.congo','kinshasa','goma','m23','kivu','congo-kinshasa'],
+  'Rwanda':['rwanda','kigali','kagame'],
+  'Éthiopie':['éthiopie','ethiopia','addis','tigray','amhara','oromo'],
+  'Érythrée':['érythrée','eritrea','asmara'],
+  'Somalie':['somalie','somalia','mogadiscio','shabaab','al-shabaab'],
+  'Kenya':['kenya','nairobi'],
+  'Afrique du Sud':['afrique du sud','south africa','pretoria','johannesburg'],
+  'Algérie':['algérie','algeria','alger'],
+  'Maroc':['maroc','morocco','rabat','sahara occidental'],
+  'Tunisie':['tunisie','tunisia','tunis'],
+  'Libye':['libye','libya','tripoli','benghazi','haftar'],
+  'Égypte':['égypte','egypt','le caire','cairo','sissi'],
+  'Sénégal':['sénégal','senegal','dakar'],
+  'Côte d\'Ivoire':['côte d\'ivoire','ivory coast','abidjan'],
+  'Mauritanie':['mauritanie','mauritania','nouakchott'],
+  'Bénin':['bénin','benin','cotonou'],
+  'Togo':['togo','lomé'],
+  'Cameroun':['cameroun','cameroon','yaoundé','douala','ambazonie'],
+  'RCA':['centrafrique','central african rep','bangui'],
+  'Mozambique':['mozambique','maputo','cabo delgado'],
+  'Zimbabwe':['zimbabwe','harare'],
+  // ── Moyen-Orient
+  'Israël':['israel','israël','tel aviv','jerusalem','jérusalem','idf','tsahal','netanyahu'],
+  'Palestine':['palestine','gaza','hamas','cisjordanie','west bank','ramallah','jihad islamique'],
+  'Liban':['liban','lebanon','beyrouth','beirut','hezbollah','nasrallah'],
+  'Syrie':['syrie','syria','damas','damascus','assad','hts','golan'],
+  'Iran':['iran','téhéran','tehran','khamenei','rgc','irgc','ayatollah','hormuz'],
+  'Iraq':['irak','iraq','bagdad','baghdad'],
+  'Yémen':['yémen','yemen','sanaa','sanaá','houthi','houthis','aden'],
+  'Arabie Saoudite':['arabie saoudite','saudi','saoudite','riyad','riyadh','mbs'],
+  'EAU':['émirats','emirates','uae','abu dhabi','dubai','dubaï'],
+  'Qatar':['qatar','doha'],
+  'Bahreïn':['bahreïn','bahrain'],
+  'Oman':['oman','muscat'],
+  'Koweït':['koweït','kuwait'],
+  'Jordanie':['jordanie','jordan','amman'],
+  'Turquie':['turquie','türkiye','turkey','ankara','erdogan','istanbul'],
+  // ── Asie
+  'Chine':['chine','china','pékin','beijing','xi jinping','pla','plén'],
+  'Taïwan':['taïwan','taiwan','taipei','formose'],
+  'Hong Kong':['hong kong','hongkong'],
+  'Japon':['japon','japan','tokyo','kishida'],
+  'Corée du Nord':['corée du nord','north korea','dprk','pyongyang','kim jong'],
+  'Corée du Sud':['corée du sud','south korea','séoul','seoul'],
+  'Inde':['inde','india','delhi','new delhi','modi','cachemire','kashmir'],
+  'Pakistan':['pakistan','islamabad','karachi'],
+  'Afghanistan':['afghanistan','kaboul','kabul','taliban','talibans'],
+  'Birmanie':['birmanie','myanmar','rangoun','yangon','rohingya'],
+  'Thaïlande':['thaïlande','thailand','bangkok'],
+  'Vietnam':['vietnam','hanoï','hanoi'],
+  'Philippines':['philippines','manille','manila'],
+  'Indonésie':['indonésie','indonesia','jakarta'],
+  'Bangladesh':['bangladesh','dacca','dhaka'],
+  // ── Europe & ex-URSS
+  'Russie':['russie','russia','moscou','moscow','poutine','putin','kremlin','wagner'],
+  'Ukraine':['ukraine','kiev','kyiv','zelensky','zelenskyy','donetsk','donbass','crimée','crimea','marioupol'],
+  'Biélorussie':['biélorussie','belarus','minsk','loukachenko','lukashenko'],
+  'Pologne':['pologne','poland','varsovie','warsaw'],
+  'Allemagne':['allemagne','germany','berlin','scholz'],
+  'France':['france','paris','élysée','elysée','macron'],
+  'Royaume-Uni':['royaume-uni','royaume uni','uk','britain','london','londres','starmer','sunak'],
+  'Italie':['italie','italy','rome','meloni'],
+  'Espagne':['espagne','spain','madrid'],
+  'Suède':['suède','sweden','stockholm'],
+  'Finlande':['finlande','finland','helsinki'],
+  'Géorgie':['géorgie','georgia','tbilissi','tbilisi'],
+  'Arménie':['arménie','armenia','erevan','yerevan'],
+  'Azerbaïdjan':['azerbaïdjan','azerbaijan','baku','bakou','haut-karabakh','nagorno'],
+  'Moldavie':['moldavie','moldova','chișinău'],
+  'Serbie':['serbie','serbia','belgrade'],
+  'Kosovo':['kosovo','pristina'],
+  // ── Amériques
+  'États-Unis':['états-unis','etats-unis','usa','united states','washington','pentagone','pentagon','biden','trump','white house','maison blanche'],
+  'Mexique':['mexique','mexico','mexique','sinaloa','cartel','jalisco'],
+  'Cuba':['cuba','la havane','havana'],
+  'Venezuela':['venezuela','caracas','maduro'],
+  'Colombie':['colombie','colombia','bogota','farc','eln'],
+  'Brésil':['brésil','brazil','brasília','brasilia','lula'],
+  'Argentine':['argentine','argentina','buenos aires','milei'],
+  'Chili':['chili','chile','santiago'],
+  'Pérou':['pérou','peru','lima'],
+  'Haïti':['haïti','haiti','port-au-prince'],
+  'Équateur':['équateur','ecuador','quito']
+};
+
+const WW_TENSION_KEYWORDS = {
+  military:    ['attaque','attaqué','frappe','missile','drone','bombarde','bombardement','combats','offensive','soldat','troupe','tank','char','blindé','airstrike','strike','bataille','front','tirs','tué','tués','assassinat','assassiné','terroriste','jihad','jihadiste','attentat','offensive','exfiltration','déploiement','occupation','frappe ciblée','operation','opération','snipe','tank','miliciens'],
+  diplomatic:  ['sanctions','rappel ambassadeur','expulsion ambassadeur','rupture diplomatique','sommet','traité','accord','reconnaissance','médiation','négociation','vote onu','résolution','session','condamnation','protestation','rétorsion'],
+  political:   ['coup d\'état','coup d\'etat','coup','manifestation','émeute','arrestation massive','élection contestée','fraude électorale','référendum','régime','autoritaire','renversement','opposition','dissidents'],
+  humanitarian:['déplacés','famine','réfugiés','crise humanitaire','choléra','épidémie','massacre','génocide','victimes civiles','blocus','siège','aide humanitaire','msf','hcr'],
+  economic:    ['sanctions économiques','blocus','embargo','effondrement','crise monétaire','dévaluation','inflation','ressources','pétrole','gaz','minerais','coltan','uranium']
+};
+
+/* Extrait pays + types de tension d'un article */
+function wwExtract(item){
+  const text = ((item.title||'')+' '+(item.description||'')).toLowerCase();
+  const countries = [];
+  Object.entries(WW_COUNTRIES).forEach(([country, terms])=>{
+    if(terms.some(t=>text.includes(t))) countries.push(country);
+  });
+  const types = [];
+  Object.entries(WW_TENSION_KEYWORDS).forEach(([type, kws])=>{
+    if(kws.some(kw=>text.includes(kw))) types.push(type);
+  });
+  return { countries, types };
+}
+
+/* Détecte les tensions BILATÉRALES (paires de pays co-mentionnés avec mots-clés tension) */
+function wwDetectBilateral(items){
+  const pairs = {};
+  items.forEach(it=>{
+    const { countries, types } = wwExtract(it);
+    if(countries.length<2 || types.length===0) return;
+    for(let i=0;i<countries.length;i++){
+      for(let j=i+1;j<countries.length;j++){
+        const key = [countries[i],countries[j]].sort().join('||');
+        if(!pairs[key]) pairs[key] = { pair:[countries[i],countries[j]].sort(), articles:[], types:new Set(), majors:0, bf:false };
+        pairs[key].articles.push(it);
+        types.forEach(t=>pairs[key].types.add(t));
+        if(it._majors?.length) pairs[key].majors++;
+        if(it._bf) pairs[key].bf = true;
+      }
+    }
+  });
+  return Object.values(pairs)
+    .filter(p=>p.articles.length>=2 && (p.types.has('military')||p.types.has('diplomatic')||p.types.has('political')||p.majors>0))
+    .map(p=>({...p, types:[...p.types]}))
+    .sort((a,b)=>b.majors-a.majors||b.articles.length-a.articles.length)
+    .slice(0,15);
+}
+
+/* Détecte les ZONES CHAUDES (pays uniques avec ≥3 articles de tension) */
+function wwDetectHotZones(items){
+  const zones = {};
+  items.forEach(it=>{
+    const { countries, types } = wwExtract(it);
+    if(types.length===0) return;
+    countries.forEach(c=>{
+      if(!zones[c]) zones[c] = { country:c, articles:[], types:new Set(), majors:0, severity:0 };
+      zones[c].articles.push(it);
+      types.forEach(t=>zones[c].types.add(t));
+      if(it._majors?.length) zones[c].majors++;
+      // Score de sévérité : militaire>diplo>politique>humanitaire>éco
+      zones[c].severity += (types.includes('military')?3:0) + (types.includes('diplomatic')?2:0) + (types.includes('political')?2:0) + (types.includes('humanitarian')?2:0) + (types.includes('economic')?1:0);
+    });
+  });
+  return Object.values(zones)
+    .filter(z=>z.articles.length>=3)
+    .map(z=>({...z, types:[...z.types]}))
+    .sort((a,b)=>b.severity-a.severity)
+    .slice(0,20);
+}
+
+/* Met à jour le badge sidebar avec le nb de tensions détectées */
+function wwUpdateBadge(){
+  if(!NEWS_STATE?.items?.length) return;
+  const bilat = wwDetectBilateral(NEWS_STATE.items).length;
+  const zones = wwDetectHotZones(NEWS_STATE.items).length;
+  const total = bilat + zones;
+  const badge = document.getElementById('nav-ww-badge');
+  if(badge){
+    if(total>0){ badge.style.display='inline-block'; badge.textContent = total; }
+    else badge.style.display='none';
+  }
+}
+
+function renderWorldWatch(){
+  const wrap = document.getElementById('ww-panel');
+  if(!wrap) return;
+  if(!NEWS_STATE?.items?.length){
+    wrap.innerHTML = `<div class="card" style="text-align:center;padding:40px"><i class="fa-solid fa-spinner fa-spin" style="font-size:2rem;color:#60a5fa"></i><h2 style="margin-top:16px;color:#e2e8f0">Veille mondiale en cours d'initialisation…</h2><p style="color:#94a3b8;margin-top:8px">Le système collecte les flux RSS et analyse les articles pour détecter les tensions, zones chaudes et événements majeurs.</p><button class="btn primary" onclick="loadNews()" style="margin-top:14px"><i class="fa-solid fa-rotate"></i> Lancer la collecte maintenant</button></div>`;
+    return;
+  }
+  const bilat = wwDetectBilateral(NEWS_STATE.items);
+  const zones = wwDetectHotZones(NEWS_STATE.items);
+  const majors = NEWS_STATE.items.filter(it=>it._majors?.length>0).slice(0,15);
+  const lastUpd = Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000);
+
+  const typeChip = (t)=>{
+    const map = {military:['#ef4444','⚔ Militaire'],diplomatic:['#3b82f6','🤝 Diplomatique'],political:['#a78bfa','🏛 Politique'],humanitarian:['#fde047','🆘 Humanitaire'],economic:['#22c55e','💰 Économique']};
+    const [c,l] = map[t]||['#94a3b8',t];
+    return `<span class="chip" style="background:${c}22;color:${c};border:1px solid ${c}55;font-size:.62rem">${l}</span>`;
+  };
+
+  // === HEADER ===
+  const header = `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1428 0%,#060912 100%);border:1px solid rgba(34,197,94,.3)">
+    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+      <div>
+        <div style="font-size:1rem;color:#86efac;font-weight:700"><i class="fa-solid fa-globe"></i> Veille mondiale automatique <span style="background:rgba(34,197,94,.2);color:#86efac;font-size:.62rem;padding:2px 7px;border-radius:10px;margin-left:8px"><i class="fa-solid fa-broadcast-tower" style="font-size:.55rem"></i> EN DIRECT</span></div>
+        <div style="font-size:.78rem;color:#94a3b8;margin-top:4px">${NEWS_STATE.items.length} articles analysés · ${bilat.length} tensions bilatérales · ${zones.length} zones chaudes · ${majors.length} événements majeurs · maj : ${lastUpd} min</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Réanalyser</button>
+      </div>
+    </div>
+    <div style="margin-top:10px;background:rgba(34,197,94,.06);border-left:3px solid #22c55e;padding:9px 12px;border-radius:4px;font-size:.74rem;color:#cbd5e1;line-height:1.6">
+      <b style="color:#86efac"><i class="fa-solid fa-cogs"></i> Méthode :</b> chaque article est scanné pour détecter les pays mentionnés (~80 pays référencés) × les types de tension (militaire, diplomatique, politique, humanitaire, économique). Les articles sont ensuite groupés en <b>tensions bilatérales</b> (≥2 articles entre 2 pays), <b>zones chaudes</b> (≥3 articles sur un pays unique avec un score de sévérité pondéré), <b>événements majeurs</b> (mots-clés rupture/crise/diplo). Tout est recalculé à chaque cycle RSS (10 min).
+    </div>
+  </div>`;
+
+  // === TENSIONS BILATÉRALES ===
+  const bilatHTML = bilat.length===0 ? '<div class="empty"><i class="fa-solid fa-handshake"></i><p>Aucune tension bilatérale détectée dans les articles récents.</p></div>' : bilat.map(p=>{
+    const sev = p.types.includes('military')?'critical':p.types.includes('diplomatic')||p.types.includes('political')?'high':'medium';
+    const col = sev==='critical'?'#ef4444':sev==='high'?'#f97316':'#f59e0b';
+    return `<div class="card" style="margin:0 0 10px;background:linear-gradient(135deg,#1a0d05 0%,#060912 100%);border-left:4px solid ${col}">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px">
+        <div style="flex:1">
+          <div style="font-size:1rem;font-weight:700;color:#e2e8f0">⚡ ${p.pair[0]} ↔ ${p.pair[1]}</div>
+          <div style="font-size:.74rem;color:#94a3b8;margin-top:4px">${p.articles.length} articles · ${p.majors} événement${p.majors>1?'s':''} majeur${p.majors>1?'s':''}${p.bf?' · <span style="color:#fde047">🇧🇫 pertinent BF</span>':''}</div>
+        </div>
+        <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:flex-start">${p.types.map(typeChip).join('')}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+        ${p.articles.slice(0,3).map(a=>`<a href="${a.link}" target="_blank" rel="noopener" style="text-decoration:none;display:block;padding:7px 10px;background:rgba(0,0,0,.3);border-left:2px solid ${col};border-radius:4px;font-size:.78rem;color:#cbd5e1"><b style="color:#e2e8f0">${(a.title||'').slice(0,140)}${(a.title||'').length>140?'…':''}</b><br><span style="font-size:.7rem;color:#64748b">${fmt.dateTime(a.pubDate)} · ${a._source||''}</span></a>`).join('')}
+      </div>
+      ${p.articles.length>3?`<div style="text-align:center;margin-top:6px;font-size:.74rem;color:#64748b">+ ${p.articles.length-3} autre${p.articles.length-3>1?'s':''} article${p.articles.length-3>1?'s':''}</div>`:''}
+    </div>`;
+  }).join('');
+
+  // === ZONES CHAUDES ===
+  const zonesHTML = zones.length===0 ? '<div class="empty"><i class="fa-solid fa-circle-check"></i><p>Aucune zone chaude détectée.</p></div>' : `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">${zones.map(z=>{
+    const sev = z.severity>=15?'critical':z.severity>=8?'high':z.severity>=4?'medium':'low';
+    const col = sev==='critical'?'#ef4444':sev==='high'?'#f97316':sev==='medium'?'#f59e0b':'#22c55e';
+    return `<div class="card" style="margin:0;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border-top:3px solid ${col}">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:6px">
+        <div>
+          <div style="font-size:.95rem;font-weight:700;color:#e2e8f0">📍 ${z.country}</div>
+          <div style="font-size:.7rem;color:#94a3b8;margin-top:3px">${z.articles.length} articles · score sévérité ${z.severity}</div>
+        </div>
+        <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.62rem;font-weight:700">${sev.toUpperCase()}</span>
+      </div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${z.types.map(typeChip).join('')}</div>
+      <a href="${z.articles[0].link}" target="_blank" rel="noopener" style="text-decoration:none;display:block;padding:6px 9px;background:rgba(0,0,0,.3);border-radius:4px;font-size:.74rem;color:#cbd5e1;line-height:1.4"><b style="color:#e2e8f0">${(z.articles[0].title||'').slice(0,90)}${(z.articles[0].title||'').length>90?'…':''}</b></a>
+    </div>`;
+  }).join('')}</div>`;
+
+  // === ÉVÉNEMENTS MAJEURS ===
+  const majorsHTML = majors.length===0 ? '<div class="empty"><i class="fa-solid fa-shield"></i><p>Aucun événement majeur détecté dans les flux récents.</p></div>' : majors.map(it=>{
+    const types = (it._majors||[]).map(m=>m.type);
+    const sev = types.includes('rupture')||types.includes('crise')?'#ef4444':'#f97316';
+    return `<div class="card" style="margin:0 0 8px;background:linear-gradient(135deg,#1a0609 0%,#060912 100%);border-left:4px solid ${sev}">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px">
+        <div style="flex:1">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px">${(it._majors||[]).map(m=>`<span class="chip" style="background:${sev}22;color:${sev};border:1px solid ${sev}55;font-size:.62rem;font-weight:700">${m.type.toUpperCase()}</span>`).join('')}${it._bf?'<span class="chip" style="background:rgba(253,224,71,.18);color:#fde047;font-size:.62rem;border:1px solid rgba(253,224,71,.4)">🇧🇫 BF</span>':''}</div>
+          <div style="font-size:.92rem;font-weight:700;color:#e2e8f0;line-height:1.4">⚠ ${it.title}</div>
+          <div style="font-size:.72rem;color:#94a3b8;margin-top:4px">${fmt.dateTime(it.pubDate)} · ${it._source||''}</div>
+        </div>
+        <a class="btn primary sm" href="${it.link}" target="_blank" rel="noopener" style="text-decoration:none;align-self:start"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lire</a>
+      </div>
+      <div style="font-size:.78rem;color:#cbd5e1;line-height:1.55;background:rgba(0,0,0,.25);border-left:2px solid ${sev};padding:7px 10px;border-radius:3px">${(it.description||'').slice(0,300)}${(it.description||'').length>300?'…':''}</div>
+    </div>`;
+  }).join('');
+
+  wrap.innerHTML = header + `
+    <div class="card" style="margin:0 0 14px">
+      <div class="card-hd" style="margin-bottom:10px"><h2 style="color:#ef4444"><i class="fa-solid fa-bolt"></i>Tensions bilatérales émergentes (${bilat.length})</h2><div class="help">Paires de pays co-mentionnés dans ≥2 articles avec au moins une tension militaire/diplo/politique.</div></div>
+      ${bilatHTML}
+    </div>
+    <div class="card" style="margin:0 0 14px">
+      <div class="card-hd" style="margin-bottom:10px"><h2 style="color:#f97316"><i class="fa-solid fa-fire"></i>Zones chaudes (${zones.length})</h2><div class="help">Pays uniques avec ≥3 articles de tension. Score sévérité = pondération militaire (×3) + diplo/polit/humanit. (×2) + éco (×1).</div></div>
+      ${zonesHTML}
+    </div>
+    <div class="card" style="margin:0 0 14px">
+      <div class="card-hd" style="margin-bottom:10px"><h2 style="color:#ef4444"><i class="fa-solid fa-triangle-exclamation"></i>Événements majeurs détectés (${majors.length})</h2><div class="help">Articles RSS contenant des mots-clés de rupture/crise/escalade (cf. <code>MAJOR_EVENT_KEYWORDS</code> dans <code>sources.js</code>).</div></div>
+      ${majorsHTML}
+    </div>`;
+}
+
 /* ============= ALERTES ============= */
 /* Dérive les alertes EN DIRECT depuis les articles RSS détectés comme événements majeurs */
 function getDerivedAlertsFromNews(){
@@ -1277,9 +1565,15 @@ async function loadNews(){
   else if(cur==='alerts') renderAlerts();
   else if(cur==='sources') renderSources();
   else if(cur==='conflicts') renderConflicts();
+  else if(cur==='worldwatch') renderWorldWatch();
+  // Met à jour le badge "Veille mondiale" dans la sidebar (visible depuis toutes les pages)
+  if(typeof wwUpdateBadge==='function') wwUpdateBadge();
   // Toujours mettre à jour la pill freshness en topbar
   updateLastUpdateLabel();
-  toast(`${NEWS_STATE.items.length} articles • ${okCount}/${sources.length} flux OK${engCount>0?' • '+engCount+' traduits 🇫🇷':''}`, okCount>0?'success':'error');
+  // Détection synthèse pour le toast
+  let wwTotal = 0;
+  try { wwTotal = wwDetectBilateral(NEWS_STATE.items).length + wwDetectHotZones(NEWS_STATE.items).length; } catch(e){}
+  toast(`${NEWS_STATE.items.length} articles • ${okCount}/${sources.length} flux OK${engCount>0?' • '+engCount+' traduits 🇫🇷':''}${wwTotal>0?' • '+wwTotal+' tensions détectées 🌍':''}`, okCount>0?'success':'error');
 }
 
 function updateLastUpdateLabel(){
@@ -1396,6 +1690,8 @@ function startAutoRefresh(){
     if(cur==='dash') renderDashboard();
     if(cur==='sources') renderSources();
     if(cur==='conflicts') renderConflicts();
+    if(cur==='worldwatch') renderWorldWatch();
+    if(typeof wwUpdateBadge==='function') wwUpdateBadge();
   }, INTERVAL_MS);
   // Countdown chaque 30s
   NEWS_STATE.countdownTimer = setInterval(()=>{ updateLastUpdateLabel(); }, 30*1000);

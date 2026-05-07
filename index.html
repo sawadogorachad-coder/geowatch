@@ -310,6 +310,7 @@ body.map-light .map-legend h4{color:#475569}
     <li><a href="#" data-page="map"><i class="fa-solid fa-map-location-dot"></i><span>Carte stratégique</span></a></li>
     <li><a href="#" data-page="countries"><i class="fa-solid fa-flag"></i><span>Pays (FSI)</span></a></li>
     <li class="nav-title">Veille &amp; sources</li>
+    <li><a href="#" data-page="worldwatch" style="color:#86efac"><i class="fa-solid fa-globe"></i><span>Veille mondiale</span><span class="badge" id="nav-ww-badge" style="display:none;background:#22c55e"></span></a></li>
     <li><a href="#" data-page="sources"><i class="fa-solid fa-book-bookmark"></i><span>Sources think tanks</span></a></li>
     <li><a href="#" data-page="news"><i class="fa-solid fa-newspaper"></i><span>Flux RSS</span></a></li>
     <li><a href="#" data-page="alerts"><i class="fa-solid fa-bell"></i><span>Alertes</span><span class="badge" id="nav-alerts-badge" style="display:none"></span></a></li>
@@ -617,6 +618,11 @@ body.map-light .map-legend h4{color:#475569}
         <div class="card-hd"><h2><i class="fa-solid fa-bell"></i>Alertes</h2><button class="btn primary sm" id="al-add"><i class="fa-solid fa-plus"></i>Nouvelle alerte</button></div>
         <div id="alerts-list"></div>
       </div>
+    </section>
+
+    <!-- ============= VEILLE MONDIALE (auto-détection RSS) ============= -->
+    <section class="page" data-page="worldwatch">
+      <div id="ww-panel"></div>
     </section>
 
     <!-- ============= ADMIN ============= -->
