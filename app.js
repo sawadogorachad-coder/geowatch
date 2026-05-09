@@ -103,6 +103,44 @@ function chartInsight(canvasId, methodHTML, lectureHTML, color='#60a5fa', bottom
     </div>`;
 }
 
+/* Helper : BANDEAU PÉDAGOGIQUE introductif d'une page
+   Args :
+     targetId  : l'élément où injecter le bandeau (en haut)
+     cfg       : { icon, color, title, what, howToRead[], takeaway }
+       icon       : nom Font Awesome (sans 'fa-')
+       color      : couleur thématique (hex)
+       title      : titre court de la page
+       what       : 1 phrase répondant à « À quoi ça sert ? »
+       howToRead  : tableau 2-4 lignes expliquant comment lire le contenu
+       takeaway   : (optionnel) phrase clé en gros pour décideur
+*/
+function pageIntroBanner(targetId, cfg){
+  const t = document.getElementById(targetId); if(!t) return;
+  if(t.querySelector('.page-intro-banner')) return; // déjà présent
+  const b = document.createElement('div');
+  b.className='page-intro-banner';
+  b.style.cssText=`background:linear-gradient(135deg,${cfg.color}11 0%,#0a0f1c 100%);border:1px solid ${cfg.color}55;border-left:4px solid ${cfg.color};border-radius:6px;padding:14px 18px;margin-bottom:16px`;
+  b.innerHTML = `
+    <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+      <div style="font-size:2.2rem;color:${cfg.color};line-height:1;flex-shrink:0"><i class="fa-solid fa-${cfg.icon}"></i></div>
+      <div style="flex:1;min-width:240px">
+        <div style="font-size:.62rem;color:${cfg.color};letter-spacing:2px;text-transform:uppercase;font-weight:800;margin-bottom:2px">⚡ ${cfg.title||''}</div>
+        <div style="font-size:1rem;color:#e2e8f0;font-weight:700;line-height:1.4;margin-bottom:7px">${cfg.what}</div>
+        ${cfg.howToRead?.length ? `
+          <div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:5px;padding:9px 11px;margin-top:6px">
+            <div style="font-size:.66rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:5px"><i class="fa-solid fa-circle-question"></i> Comment lire cette page</div>
+            ${cfg.howToRead.map(line=>`<div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ ${line}</div>`).join('')}
+          </div>` : ''}
+        ${cfg.takeaway ? `
+          <div style="background:linear-gradient(135deg,${cfg.color}25 0%,${cfg.color}10 100%);border:1px solid ${cfg.color}66;border-radius:5px;padding:8px 11px;margin-top:8px">
+            <span style="font-size:.62rem;color:${cfg.color};text-transform:uppercase;letter-spacing:1px;font-weight:800;display:block;margin-bottom:2px"><i class="fa-solid fa-bullseye"></i> Ce qu'on cherche à savoir</span>
+            <span style="font-size:.86rem;color:#e2e8f0;font-weight:600">${cfg.takeaway}</span>
+          </div>` : ''}
+      </div>
+    </div>`;
+  t.insertBefore(b, t.firstChild);
+}
+
 /* Helper : bandeau d'aide pédagogique général en haut d'une page riche en graphiques */
 function chartHelpBanner(targetId, title='Comment lire les graphiques de cette page'){
   const t = document.getElementById(targetId); if(!t) return;
@@ -1345,6 +1383,9 @@ function renderDashboard(){
   const active = d.conflicts.filter(c=>c.status!=='frozen'&&c.status!=='resolved');
   const ruptures = d.events.filter(e=>e.rupture).length;
 
+  // ═══ SYNTHÈSE DU JOUR — bandeau "À retenir aujourd'hui" ═══
+  renderDashSynthese();
+
   // ═══ JAUGE IMS-BF (rendu en tête du tableau de bord) ═══
   try { GW_INTEL.renderIMSGauge('ims-gauge'); } catch(e){ console.warn('IMS gauge:',e); }
 
@@ -1776,28 +1817,70 @@ function renderScenarios(){
   const cid = sel.value;
 
   const wrap = document.getElementById('scen-content');
+
+  // ═══ BANDEAU PÉDAGOGIQUE ═══
+  pageIntroBanner('scen-content', {
+    icon:'chess', color:'#a855f7', title:'Scénarios prospectifs',
+    what:'Pour chaque conflit, on imagine 3 à 5 futurs possibles avec leur probabilité et leur gravité.',
+    howToRead:[
+      '<b style="color:#fde047">Probabilité (%)</b> : chance estimée que le scénario se réalise sur l\'horizon donné',
+      '<b style="color:#fde047">Impact (/10)</b> : gravité des conséquences SI le scénario se produit',
+      '<b style="color:#ef4444">Couleur rouge</b> = très probable · <b style="color:#f59e0b">orange</b> = possible · <b style="color:#22c55e">vert</b> = peu probable',
+      '<b style="color:#fde047">⚡ Wild card</b> = scénario rare mais à fort impact (« cygne noir »)'
+    ],
+    takeaway:'Sur quoi le Burkina Faso doit-il se préparer en priorité ? On regarde d\'abord les scénarios à <b style="color:#ef4444">probabilité élevée × impact élevé</b>.'
+  });
+
   if(cid){
     const c = d.conflicts.find(x=>x.id===cid); if(!c||!c.scenarios) return;
-    wrap.innerHTML = `<div style="border-left:4px solid ${conflictColor(c.intensity)};padding:6px 0 6px 14px;margin-bottom:14px"><div style="font-size:1rem;color:#e2e8f0;font-weight:600">${c.name}</div></div>` + c.scenarios.map(s=>{
+    // Préserver le bandeau, on n'écrase que le contenu après
+    const banner = wrap.querySelector('.page-intro-banner');
+    wrap.innerHTML = (banner?banner.outerHTML:'') + `<div style="border-left:4px solid ${conflictColor(c.intensity)};padding:6px 0 6px 14px;margin-bottom:14px"><div style="font-size:1rem;color:#e2e8f0;font-weight:600">${c.name}</div></div>` + c.scenarios.map(s=>{
       const probaCol = s.proba>=40?'#ef4444':s.proba>=20?'#f97316':s.proba>=10?'#f59e0b':'#22c55e';
+      const probaLabel = s.proba>=40?'TRÈS PROBABLE':s.proba>=20?'PROBABLE':s.proba>=10?'POSSIBLE':'PEU PROBABLE';
+      const impactLabel = s.impact>=8?'CRITIQUE':s.impact>=6?'ÉLEVÉ':s.impact>=4?'MODÉRÉ':'FAIBLE';
+      const impactCol = s.impact>=8?'#ef4444':s.impact>=6?'#f97316':s.impact>=4?'#f59e0b':'#22c55e';
       const isWild = s.nom.toLowerCase().includes('wild');
+      const priority = (s.proba>=40 && s.impact>=7) ? '🔴 PRIORITÉ MAXIMALE' : (s.impact>=7 && s.proba<40) ? '⚡ SURPRISE STRATÉGIQUE' : (s.proba>=40 && s.impact<5) ? '📊 BRUIT' : '';
       return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-left:4px solid ${probaCol};border-radius:8px;padding:14px;margin-bottom:10px">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
-          <div><div style="font-size:1rem;color:#e2e8f0;font-weight:700">${isWild?'⚡ ':''}${s.nom}</div><div style="font-size:.74rem;color:#64748b;margin-top:2px">Horizon ${s.h}</div></div>
-          <div style="text-align:right"><div style="font-size:1.4rem;font-weight:700;color:${probaCol}">${s.proba}%</div><div style="font-size:.7rem;color:#64748b">Impact ${s.impact}/10</div></div>
+        ${priority?`<div style="display:inline-block;background:${probaCol}22;color:${probaCol};border:1px solid ${probaCol}66;padding:2px 9px;border-radius:11px;font-size:.62rem;font-weight:800;letter-spacing:1px;margin-bottom:8px">${priority}</div>`:''}
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px;flex-wrap:wrap">
+          <div style="flex:1;min-width:200px">
+            <div style="font-size:1.05rem;color:#e2e8f0;font-weight:700">${isWild?'⚡ ':''}${s.nom}</div>
+            <div style="font-size:.72rem;color:#64748b;margin-top:2px"><i class="fa-solid fa-clock"></i> Horizon : <b style="color:#cbd5e1">${s.h}</b></div>
+          </div>
+          <div style="display:flex;gap:14px">
+            <div style="text-align:center;background:#141c30;padding:6px 11px;border-radius:6px;border:1px solid ${probaCol}55">
+              <div style="font-size:1.4rem;font-weight:800;color:${probaCol};line-height:1">${s.proba}<span style="font-size:.78rem;color:#64748b">%</span></div>
+              <div style="font-size:.55rem;color:${probaCol};text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-top:2px">${probaLabel}</div>
+            </div>
+            <div style="text-align:center;background:#141c30;padding:6px 11px;border-radius:6px;border:1px solid ${impactCol}55">
+              <div style="font-size:1.4rem;font-weight:800;color:${impactCol};line-height:1">${s.impact}<span style="font-size:.78rem;color:#64748b">/10</span></div>
+              <div style="font-size:.55rem;color:${impactCol};text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-top:2px">IMPACT ${impactLabel}</div>
+            </div>
+          </div>
         </div>
-        <div style="font-size:.85rem;color:#cbd5e1;line-height:1.6">${s.d}</div>
+        <div style="font-size:.86rem;color:#cbd5e1;line-height:1.6;background:rgba(255,255,255,.02);padding:8px 11px;border-radius:5px;border-left:2px solid ${probaCol}88">${s.d}</div>
       </div>`;
     }).join('');
   } else {
     // Vue globale : liste tous conflits avec leurs scénarios
-    wrap.innerHTML = d.conflicts.filter(c=>c.scenarios).map(c=>{
+    const banner = wrap.querySelector('.page-intro-banner');
+    wrap.innerHTML = (banner?banner.outerHTML:'') + d.conflicts.filter(c=>c.scenarios).map(c=>{
       const col = conflictColor(c.intensity);
-      return `<div class="card" style="margin:0 0 12px"><div class="card-hd"><h2 style="color:${col}"><i class="fa-solid fa-fire"></i>${c.name}</h2></div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+      return `<div class="card" style="margin:0 0 12px"><div class="card-hd"><h2 style="color:${col}"><i class="fa-solid fa-fire"></i>${c.name}</h2><span style="font-size:.7rem;color:#64748b">${c.scenarios.length} scénarios</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px">
           ${c.scenarios.map(s=>{
             const pc = s.proba>=40?'#ef4444':s.proba>=20?'#f97316':s.proba>=10?'#f59e0b':'#22c55e';
-            return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-top:3px solid ${pc};border-radius:6px;padding:10px"><div style="font-size:.8rem;color:#e2e8f0;font-weight:600;margin-bottom:4px">${s.nom}</div><div style="font-size:.7rem;color:#64748b;margin-bottom:6px">${s.h}</div><div style="display:flex;justify-content:space-between"><span style="font-weight:700;color:${pc}">${s.proba}%</span><span style="color:#94a3b8;font-size:.75rem">Impact ${s.impact}</span></div></div>`;
+            const probaLabel = s.proba>=40?'Très probable':s.proba>=20?'Probable':s.proba>=10?'Possible':'Peu probable';
+            return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-top:3px solid ${pc};border-radius:6px;padding:10px;cursor:pointer" onclick="document.getElementById('scen-conflict').value='${c.id}';renderScenarios();">
+              <div style="font-size:.82rem;color:#e2e8f0;font-weight:700;margin-bottom:4px">${s.nom}</div>
+              <div style="font-size:.66rem;color:#64748b;margin-bottom:7px"><i class="fa-solid fa-clock" style="font-size:.6rem"></i> ${s.h}</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+                <div><span style="font-weight:800;color:${pc};font-size:1.1rem">${s.proba}%</span><div style="font-size:.6rem;color:${pc};font-weight:600">${probaLabel}</div></div>
+                <div style="text-align:right"><span style="color:#cbd5e1;font-size:.8rem;font-weight:700">${s.impact}/10</span><div style="font-size:.6rem;color:#94a3b8">Impact</div></div>
+              </div>
+            </div>`;
           }).join('')}
         </div>
       </div>`;
@@ -1828,23 +1911,49 @@ function renderScenarios(){
 function renderReconfig(){
   const recs = (window.GW_DATA && window.GW_DATA.RECONFIGURATIONS) || [];
   const palette = ['#ef4444','#f97316','#a78bfa','#60a5fa','#22c55e','#06b6d4'];
+  const wrap = document.getElementById('reconfig-content');
+  if(!wrap) return;
+  wrap.innerHTML = '';
+
+  // ═══ BANDEAU PÉDAGOGIQUE ═══
+  pageIntroBanner('reconfig-content', {
+    icon:'arrows-spin', color:'#06b6d4', title:'Reconfigurations stratégiques',
+    what:'Les grands basculements d\'équilibres internationaux qui redessinent l\'ordre mondial — et leur effet sur le Burkina Faso.',
+    howToRead:[
+      'Une <b style="color:#06b6d4">reconfiguration</b> = un changement profond et durable de l\'architecture géopolitique (ex : sortie CEDEAO, BRICS+, recul français)',
+      '<b style="color:#fde047">Niveau</b> indique l\'ampleur : <span style="color:#06b6d4">mineure</span> (régionale) → <span style="color:#a78bfa">majeure</span> (continentale) → <span style="color:#ef4444">structurelle</span> (mondiale)',
+      '<b style="color:#fde047">Horizon</b> = délai d\'effet : court (mois) / moyen (1-3 ans) / long (5+ ans)',
+      'Chaque fiche détaille les <b style="color:#fde047">conséquences attendues</b> et la <b style="color:#fde047">pertinence pour le Burkina Faso</b>'
+    ],
+    takeaway:'Quels sont les bouleversements en cours dans le monde et que signifient-ils concrètement pour notre pays ?'
+  });
+
+  if(!recs.length){
+    wrap.insertAdjacentHTML('beforeend','<div class="empty"><p>Pas de reconfiguration documentée.</p></div>');
+    return;
+  }
+
   const html = recs.map((r,i)=>{
     const col = palette[i%palette.length];
     return `<div class="card" style="margin:0 0 12px;border-left:4px solid ${col}">
       <div class="card-hd"><h2 style="color:${col}"><i class="fa-solid fa-arrows-spin"></i>${r.titre}</h2>
-        <div style="display:flex;gap:5px"><span class="chip gray">${r.h}</span><span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55">${r.niveau}</span></div></div>
-      <div style="font-size:.86rem;color:#cbd5e1;line-height:1.6;margin-bottom:12px">${r.description}</div>
+        <div style="display:flex;gap:5px;flex-wrap:wrap">
+          <span class="chip gray" title="Horizon temporel"><i class="fa-solid fa-clock" style="font-size:.6rem"></i> ${r.h}</span>
+          <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55" title="Ampleur de la reconfiguration"><i class="fa-solid fa-layer-group" style="font-size:.6rem"></i> ${r.niveau}</span>
+        </div></div>
+      <div style="font-size:.66rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;font-weight:700"><i class="fa-solid fa-quote-left"></i> Description du phénomène</div>
+      <div style="font-size:.88rem;color:#cbd5e1;line-height:1.65;margin-bottom:12px;padding:9px 12px;background:rgba(255,255,255,.02);border-left:2px solid ${col}66;border-radius:0 5px 5px 0">${r.description}</div>
       <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340;margin-bottom:10px">
-        <div style="font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px"><i class="fa-solid fa-bolt"></i> Conséquences</div>
-        <ul style="list-style:none;padding:0;margin:0">${r.consequences.map(c=>`<li style="padding:3px 0;color:#cbd5e1;font-size:.84rem;line-height:1.5">→ ${c}</li>`).join('')}</ul>
+        <div style="font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;font-weight:700"><i class="fa-solid fa-bolt"></i> Conséquences attendues</div>
+        <ul style="list-style:none;padding:0;margin:0">${r.consequences.map(c=>`<li style="padding:4px 0;color:#cbd5e1;font-size:.84rem;line-height:1.55;border-bottom:1px solid #141c30">→ ${c}</li>`).join('')}</ul>
       </div>
       <div style="background:rgba(253,224,71,.06);border:1px solid rgba(253,224,71,.3);padding:10px 13px;border-radius:6px">
-        <div style="font-size:.7rem;color:#fde047;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px"><i class="fa-solid fa-flag-checkered"></i> Pertinence Burkina Faso</div>
-        <div style="font-size:.84rem;color:#cbd5e1;line-height:1.5">${r.pertinence_bf}</div>
+        <div style="font-size:.7rem;color:#fde047;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;font-weight:700"><i class="fa-solid fa-flag-checkered"></i> Pertinence pour le Burkina Faso</div>
+        <div style="font-size:.86rem;color:#cbd5e1;line-height:1.55">${r.pertinence_bf}</div>
       </div>
     </div>`;
   }).join('');
-  document.getElementById('reconfig-content').innerHTML = html || '<div class="empty"><p>Pas de reconfiguration documentée.</p></div>';
+  wrap.insertAdjacentHTML('beforeend', html);
 }
 
 /* ============= IMPACTS BURKINA FASO ============= */
@@ -1853,38 +1962,92 @@ function renderImpactBF(){
   const sel = document.getElementById('bf-conflict');
   if(sel.options.length<=0){ d.conflicts.filter(c=>c.impact_bf).forEach((c,i)=>{ const o=document.createElement('option'); o.value=c.id; o.textContent=c.short||c.name; if(i===0) o.selected=true; sel.appendChild(o); }); }
   const cid = sel.value || (d.conflicts.find(c=>c.impact_bf)?.id);
-  if(!cid){ document.getElementById('bf-content').innerHTML='<div class="empty"><p>Aucune analyse d\'impact disponible.</p></div>'; return; }
-  const c = d.conflicts.find(x=>x.id===cid); if(!c||!c.impact_bf){ document.getElementById('bf-content').innerHTML='<div class="empty"><p>Pas de fiche d\'impact pour ce conflit.</p></div>'; return; }
-  document.getElementById('bf-content').innerHTML = renderBFPanel(c);
+  const wrap = document.getElementById('bf-content');
+
+  // ═══ BANDEAU PÉDAGOGIQUE ═══
+  pageIntroBanner('bf-content', {
+    icon:'flag-checkered', color:'#fde047', title:'Impacts sur le Burkina Faso',
+    what:'Pour chaque grand conflit mondial, on analyse comment il affecte concrètement le Burkina Faso, dimension par dimension.',
+    howToRead:[
+      '<b style="color:#ef4444">Sécuritaire</b> : risques d\'attaques, instabilité frontière, recrutement jihadiste',
+      '<b style="color:#f59e0b">Économique</b> : prix, marchés, exportations, importations, recettes État',
+      '<b style="color:#60a5fa">Diplomatique</b> : alliances, isolement, leviers de négociation',
+      '<b style="color:#a78bfa">Sociopolitique</b> : opinion publique, tensions internes, mobilisations',
+      '<b style="color:#fde047">Pertinence</b> : faible / moyenne / élevée / critique selon l\'effet attendu'
+    ],
+    takeaway:'Quel impact concret cet événement mondial a-t-il sur la vie quotidienne et les politiques publiques au Burkina Faso ?'
+  });
+
+  if(!cid){ wrap.insertAdjacentHTML('beforeend','<div class="empty"><p>Aucune analyse d\'impact disponible.</p></div>'); return; }
+  const c = d.conflicts.find(x=>x.id===cid); if(!c||!c.impact_bf){ wrap.insertAdjacentHTML('beforeend','<div class="empty"><p>Pas de fiche d\'impact pour ce conflit.</p></div>'); return; }
+
+  // Préserver le bandeau, remplacer le reste
+  const banner = wrap.querySelector('.page-intro-banner');
+  wrap.innerHTML = (banner?banner.outerHTML:'') + renderBFPanel(c);
 }
 
 function renderBFPanel(c){
   const i = c.impact_bf; if(!i) return '';
-  const dim = (icon, color, title, items)=>`<div style="background:#0a0f1c;border:1px solid #1a2340;border-left:4px solid ${color};border-radius:8px;padding:14px;margin-bottom:10px">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><i class="fa-solid ${icon}" style="color:${color};font-size:1.05rem"></i><h3 style="font-size:.95rem;color:#e2e8f0;font-weight:700">${title}</h3></div>
-    <ul style="list-style:none;padding:0;margin:0">${items.map(x=>`<li style="padding:5px 0;color:#cbd5e1;font-size:.84rem;line-height:1.55;border-bottom:1px solid #141c30">→ ${x}</li>`).join('')}</ul>
-  </div>`;
-  return `
-    <div style="border-left:4px solid ${conflictColor(c.intensity)};padding:6px 0 6px 14px;margin-bottom:14px;background:rgba(253,224,71,.04)">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-        <div><div style="font-size:1.05rem;color:#e2e8f0;font-weight:600">${c.name}</div><div style="font-size:.78rem;color:#94a3b8">${c.region} • ${statusChip(c.status)}</div></div>
-        <span class="chip" style="background:rgba(253,224,71,.15);color:#fde047;border:1px solid rgba(253,224,71,.4)">Pertinence : ${i.pertinence}</span>
+  const dim = (icon, color, title, items, explanation)=>`<div style="background:#0a0f1c;border:1px solid #1a2340;border-left:4px solid ${color};border-radius:8px;padding:14px;margin-bottom:10px">
+    <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:9px;flex-wrap:wrap">
+      <i class="fa-solid ${icon}" style="color:${color};font-size:1.2rem;margin-top:2px"></i>
+      <div style="flex:1;min-width:200px">
+        <h3 style="font-size:1rem;color:#e2e8f0;font-weight:700">${title}</h3>
+        <div style="font-size:.7rem;color:${color};font-style:italic">${explanation}</div>
       </div>
-      <div style="margin-top:10px;font-size:.86rem;color:#cbd5e1;line-height:1.55;font-style:italic">${i.note_synthese}</div>
+      <span class="chip" style="background:${color}22;color:${color};border:1px solid ${color}55;font-size:.65rem;font-weight:700">${items.length} effet${items.length>1?'s':''}</span>
+    </div>
+    ${items.length ? `<ul style="list-style:none;padding:0;margin:0">${items.map(x=>`<li style="padding:6px 0;color:#cbd5e1;font-size:.86rem;line-height:1.55;border-bottom:1px solid #141c30">→ ${x}</li>`).join('')}</ul>` : '<div style="color:#64748b;font-size:.78rem;font-style:italic">Pas d\'effet identifié sur cette dimension</div>'}
+  </div>`;
+
+  // Récupérer la note synthèse (compatibilité ancienne et nouvelle structure)
+  const synthese = (typeof _impactBFSynthese==='function')? _impactBFSynthese(c) : (i.note_synthese || '');
+  const pertinenceCol = i.pertinence==='critique'?'#ef4444':i.pertinence==='élevée'?'#f97316':i.pertinence==='moyenne'?'#f59e0b':'#22c55e';
+
+  return `
+    <!-- En-tête conflit + pertinence -->
+    <div style="border-left:4px solid ${conflictColor(c.intensity)};padding:10px 0 10px 14px;margin-bottom:14px;background:rgba(253,224,71,.04);border-radius:0 6px 6px 0">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+        <div>
+          <div style="font-size:1.15rem;color:#e2e8f0;font-weight:700">${c.name}</div>
+          <div style="font-size:.78rem;color:#94a3b8;margin-top:3px">${c.region} • ${statusChip(c.status)} • Intensité ${c.intensity}/10</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:.6rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;font-weight:700">Pertinence pour le BF</div>
+          <span class="chip" style="background:${pertinenceCol}22;color:${pertinenceCol};border:1px solid ${pertinenceCol}66;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 11px;margin-top:3px;display:inline-block">${i.pertinence||'—'}</span>
+        </div>
+      </div>
+      ${synthese ? `<div style="margin-top:12px;padding:10px 12px;background:rgba(0,0,0,.3);border-left:2px solid #fde047;border-radius:0 4px 4px 0">
+        <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:3px"><i class="fa-solid fa-quote-left"></i> Synthèse</div>
+        <div style="font-size:.88rem;color:#e2e8f0;line-height:1.55">${synthese}</div>
+      </div>` : ''}
     </div>
 
-    ${dim('fa-shield-halved','#ef4444','Dimension sécuritaire', i.securitaire||[])}
-    ${dim('fa-coins','#f59e0b','Dimension économique', i.economique||[])}
-    ${dim('fa-handshake','#60a5fa','Dimension diplomatique', i.diplomatique||[])}
-    ${dim('fa-users','#a78bfa','Dimension sociopolitique', i.sociopolitique||[])}
+    <!-- 4 dimensions d'impact -->
+    <div style="font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px"><i class="fa-solid fa-layer-group"></i> Effets par dimension</div>
+    ${dim('fa-shield-halved','#ef4444','1. Dimension sécuritaire', i.securitaire||[],'Risques d\'attaques, frontières, recrutement jihadiste, exactions')}
+    ${dim('fa-coins','#f59e0b','2. Dimension économique', i.economique||[],'Prix, marchés, recettes État, exportations, importations, dette')}
+    ${dim('fa-handshake','#60a5fa','3. Dimension diplomatique', i.diplomatique||[],'Alliances, isolement, partenariats, levées de sanctions')}
+    ${dim('fa-users','#a78bfa','4. Dimension sociopolitique', i.sociopolitique||[],'Opinion publique, tensions internes, mobilisations, identité')}
 
+    <!-- Indicateurs à surveiller -->
     <div class="card" style="margin:0;background:#0a0f1c">
-      <div class="card-hd"><h2><i class="fa-solid fa-binoculars"></i>Indicateurs Burkina Faso à surveiller</h2></div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      <div class="card-hd">
+        <h2><i class="fa-solid fa-binoculars"></i>Indicateurs Burkina Faso à surveiller</h2>
+        <div class="help">Signaux précis à surveiller pour anticiper les retombées</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
         ${(i.indicateurs_bf||[]).map(x=>{
           const c2 = x.h.includes('24')?'#ef4444':x.h.includes('7')?'#60a5fa':'#a78bfa';
-          return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-top:3px solid ${c2};border-radius:6px;padding:10px"><div style="font-size:.7rem;color:${c2};text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">${x.h}</div><div style="font-size:.78rem;color:#cbd5e1;line-height:1.5">${x.v}</div></div>`;
-        }).join('')}
+          const lbl = x.h.includes('24')?'COURT TERME':x.h.includes('7')?'MOYEN TERME':'LONG TERME';
+          return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-top:3px solid ${c2};border-radius:6px;padding:11px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+              <span style="font-size:.62rem;color:${c2};text-transform:uppercase;letter-spacing:1px;font-weight:800">${lbl}</span>
+              <span style="font-size:.7rem;color:${c2};font-weight:700">${x.h}</span>
+            </div>
+            <div style="font-size:.82rem;color:#cbd5e1;line-height:1.5">${x.v}</div>
+          </div>`;
+        }).join('') || '<div style="color:#64748b;font-size:.78rem">Aucun indicateur défini pour ce conflit</div>'}
       </div>
     </div>
   `;
@@ -1893,17 +2056,78 @@ function renderBFPanel(c){
 function renderIndicators(){
   const d = DB.get();
   const conflicts = d.conflicts.filter(c=>c.brief_analyste);
+  const wrap = document.getElementById('indic-content');
+  if(!wrap) return;
+  wrap.innerHTML='';
+
+  // ═══ BANDEAU PÉDAGOGIQUE ═══
+  pageIntroBanner('indic-content', {
+    icon:'binoculars', color:'#60a5fa', title:'Indicateurs à surveiller',
+    what:'Quels signaux précis surveiller pour détecter à l\'avance qu\'un conflit s\'aggrave ou évolue ?',
+    howToRead:[
+      '<b style="color:#ef4444">Court terme (24-72 h)</b> : signaux d\'alerte immédiats, à vérifier chaque jour',
+      '<b style="color:#60a5fa">Moyen terme (7-30 j)</b> : tendances à confirmer sur quelques semaines',
+      'Pour chaque conflit, on liste les <b style="color:#fde047">événements précis</b> à monitorer (ex : « manifestations à Bamako », « cours de l\'or », « rappel d\'ambassadeur »)',
+      'Si un signal s\'allume, c\'est qu\'un changement majeur est en cours <b style="color:#fde047">et que le BF doit en tenir compte rapidement</b>'
+    ],
+    takeaway:'Quels indicateurs concrets dois-je surveiller cette semaine pour ne pas être surpris ?'
+  });
+
+  if(!conflicts.length){
+    wrap.insertAdjacentHTML('beforeend','<div class="empty"><i class="fa-solid fa-inbox"></i><p>Aucun indicateur défini.</p></div>');
+    return;
+  }
+
+  // Statistique en tête
+  const total24h = conflicts.filter(c=>c.brief_analyste.indicateurs_24_72h).length;
+  const total7d  = conflicts.filter(c=>c.brief_analyste.indicateurs_7_30j).length;
+  wrap.insertAdjacentHTML('beforeend',`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:14px">
+    <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #ef4444;border-radius:5px;padding:10px 13px">
+      <div style="font-size:.6rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-stopwatch"></i> Court terme</div>
+      <div style="font-size:1.6rem;color:#ef4444;font-weight:800">${total24h}</div>
+      <div style="font-size:.7rem;color:#94a3b8">conflits avec signaux 24-72 h</div>
+    </div>
+    <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #60a5fa;border-radius:5px;padding:10px 13px">
+      <div style="font-size:.6rem;color:#60a5fa;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-calendar-week"></i> Moyen terme</div>
+      <div style="font-size:1.6rem;color:#60a5fa;font-weight:800">${total7d}</div>
+      <div style="font-size:.7rem;color:#94a3b8">conflits avec signaux 7-30 j</div>
+    </div>
+    <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #a78bfa;border-radius:5px;padding:10px 13px">
+      <div style="font-size:.6rem;color:#a78bfa;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-list-check"></i> Total</div>
+      <div style="font-size:1.6rem;color:#a78bfa;font-weight:800">${conflicts.length}</div>
+      <div style="font-size:.7rem;color:#94a3b8">conflits sous surveillance</div>
+    </div>
+  </div>`);
+
   const html = conflicts.map(c=>{
     const b = c.brief_analyste; const col = conflictColor(c.intensity);
     return `<div class="card" style="margin:0 0 12px;border-left:4px solid ${col}">
-      <div class="card-hd"><h2><i class="fa-solid fa-fire"></i>${c.name}</h2><span style="font-size:.74rem;color:#64748b">${c.region}</span></div>
+      <div class="card-hd">
+        <h2><i class="fa-solid fa-fire"></i>${c.name}</h2>
+        <div style="display:flex;gap:5px;align-items:center">
+          <span style="font-size:.7rem;color:#94a3b8">${c.region}</span>
+          <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.62rem;font-weight:700">Intensité ${c.intensity}/10</span>
+        </div>
+      </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340"><div style="font-size:.7rem;color:#ef4444;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px"><i class="fa-solid fa-stopwatch"></i> 24-72 h</div><div style="font-size:.82rem;color:#cbd5e1;line-height:1.55">${b.indicateurs_24_72h||'—'}</div></div>
-        <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340"><div style="font-size:.7rem;color:#60a5fa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px"><i class="fa-solid fa-calendar-week"></i> 7-30 j</div><div style="font-size:.82rem;color:#cbd5e1;line-height:1.55">${b.indicateurs_7_30j||'—'}</div></div>
+        <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340;border-left:3px solid #ef4444">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+            <span style="font-size:.66rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-stopwatch"></i> Court terme</span>
+            <span style="font-size:.6rem;color:#ef4444">24 à 72 heures</span>
+          </div>
+          <div style="font-size:.84rem;color:#cbd5e1;line-height:1.55">${b.indicateurs_24_72h||'<span style="color:#64748b;font-style:italic">Aucun signal court terme défini</span>'}</div>
+        </div>
+        <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340;border-left:3px solid #60a5fa">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+            <span style="font-size:.66rem;color:#60a5fa;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-calendar-week"></i> Moyen terme</span>
+            <span style="font-size:.6rem;color:#60a5fa">7 à 30 jours</span>
+          </div>
+          <div style="font-size:.84rem;color:#cbd5e1;line-height:1.55">${b.indicateurs_7_30j||'<span style="color:#64748b;font-style:italic">Aucun signal moyen terme défini</span>'}</div>
+        </div>
       </div>
     </div>`;
   }).join('');
-  document.getElementById('indic-content').innerHTML = html || '<div class="empty"><i class="fa-solid fa-inbox"></i><p>Aucun indicateur défini.</p></div>';
+  wrap.insertAdjacentHTML('beforeend', html);
 }
 
 /* ============= ANALYSES ============= */
@@ -1912,6 +2136,20 @@ function renderAnalyses(){
   const d = DB.get();
   const sel = document.getElementById('an-conflict');
   if(sel.options.length<=1){ d.conflicts.forEach(c=>{const o=document.createElement('option'); o.value=c.id; o.textContent=c.short||c.name; sel.appendChild(o);}); }
+
+  // ═══ BANDEAU PÉDAGOGIQUE ═══
+  pageIntroBanner('analyses-page', {
+    icon:'chart-line', color:'#22c55e', title:'Analyses quantitatives',
+    what:'Vue chiffrée et graphique des dynamiques de conflit : combien d\'événements ? où ? quand ? avec quelle gravité ?',
+    howToRead:[
+      '<b style="color:#fde047">4 indicateurs clés</b> en haut : nombre total de jalons recensés, événements de la dernière période, ruptures majeures, sévérité moyenne',
+      '<b style="color:#fde047">Évolution temporelle</b> : montre si l\'activité s\'accélère ou se stabilise (filtres Jour/Semaine/Mois)',
+      '<b style="color:#fde047">Distribution de sévérité</b> : combien d\'événements faibles vs critiques',
+      '<b style="color:#fde047">Heatmap</b> : intensité par conflit et par semaine — repère les périodes chaudes',
+      '<b style="color:#fde047">Radar</b> : comparaison côte-à-côte des 5 conflits les plus intenses'
+    ],
+    takeaway:'Y a-t-il une accélération des tensions ? Quels conflits dominent l\'attention ? Où concentrer la veille ?'
+  });
 
   const evs = AN_STATE.conflict ? d.events.filter(e=>e.conflict_id===AN_STATE.conflict) : d.events;
   const now = new Date();

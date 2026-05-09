@@ -1,5 +1,25 @@
 # GéoWatch v3 — Mémoire projet pour Claude Code
 
+## 📚 Bandeaux pédagogiques sur les pages
+
+Helper `pageIntroBanner(targetId, cfg)` ajoute un bandeau didactique en tête de page :
+```js
+pageIntroBanner('scen-content', {
+  icon:'chess', color:'#a855f7', title:'Scénarios prospectifs',
+  what:'1 phrase répondant à « À quoi ça sert ? »',
+  howToRead:[ '...', '...', '...' ],   // 3-5 lignes d'explication
+  takeaway:'Question stratégique principale à laquelle la page répond'
+});
+```
+Pages équipées :
+- `bf-content` (Impact BF) — 4 dimensions sécuritaire/éco/diplo/sociopolitique
+- `scen-content` (Scénarios) — explication proba × impact + Wild card
+- `reconfig-content` (Reconfigurations) — niveau + horizon + conséquences + pertinence BF
+- `indic-content` (Indicateurs) — court terme 24-72h vs moyen terme 7-30j + stats globales
+- `analyses-page` (Analyses) — guide de lecture des 5 graphiques
+
+Helper `chartInsight(canvasId, methodHTML, lectureHTML, color, bottomLine)` accepte désormais un **5e argument** `bottomLine` qui affiche un encart « À retenir » en gros pour le décideur.
+
 ## ⚡ Module GW_INTEL — Intelligence stratégique avancée
 
 Bloc IIFE situé juste avant `renderDashboard()` dans `app.js`. Expose 4 fonctionnalités :
