@@ -3301,17 +3301,8 @@ async function loadNews(){
 
   renderNewsList();
   detectAndPushNewItems();
-  // Re-render TOUTES les pages qui dépendent de RSS pour qu'elles soient à jour
-  const cur = document.querySelector('.page.active')?.dataset.page;
-  if(cur==='dash') renderDashboard();
-  else if(cur==='bqs') renderBQS();
-  else if(cur==='adversarial') renderAdversarial();
-  else if(cur==='impact_radar') renderImpactRadar();
-  else if(cur==='alerts') renderAlerts();
-  else if(cur==='sources') renderSources();
-  else if(cur==='conflicts') renderConflicts();
-  else if(cur==='worldwatch') renderWorldWatch();
-  else if(cur==='events') renderEvents();
+  // Re-render la page active (couvre TOUTES les pages dynamiques)
+  rerenderActivePage();
   // Met à jour le badge "Veille mondiale" dans la sidebar (visible depuis toutes les pages)
   if(typeof wwUpdateBadge==='function') wwUpdateBadge();
   // Toujours mettre à jour la pill freshness en topbar
@@ -3429,25 +3420,62 @@ function renderNews(){
 function startAutoRefresh(){
   if(NEWS_STATE.autoTimer) clearInterval(NEWS_STATE.autoTimer);
   if(NEWS_STATE.countdownTimer) clearInterval(NEWS_STATE.countdownTimer);
-  const INTERVAL_MS = 10*60*1000; // 10 min
+  if(NEWS_STATE.staleCheckTimer) clearInterval(NEWS_STATE.staleCheckTimer);
+
+  const INTERVAL_MS = 10*60*1000; // 10 min — actualisation RSS complète
   NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS;
+
+  // ═══ TIMER PRINCIPAL : RSS toutes les 10 min ═══
+  // Le checkbox news-auto, s'il existe, peut désactiver l'auto. Par défaut : ON.
   NEWS_STATE.autoTimer = setInterval(()=>{
-    if(document.getElementById('news-auto')?.checked){ loadNews(); NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS; }
+    const autoCheckbox = document.getElementById('news-auto');
+    const autoEnabled = !autoCheckbox || autoCheckbox.checked; // Par défaut ON si checkbox absent
+    if(autoEnabled){
+      loadNews().catch(e=>console.warn('Auto-refresh RSS failed:',e));
+      NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS;
+    }
     updateLastUpdateLabel();
-    // Re-render TOUTES les pages dépendantes de RSS pour qu'elles restent live
-    const cur = document.querySelector('.page.active')?.dataset.page;
-    if(cur==='alerts') renderAlerts();
-    if(cur==='dash') renderDashboard();
-    if(cur==='sources') renderSources();
-    if(cur==='conflicts') renderConflicts();
-    if(cur==='worldwatch') renderWorldWatch();
-    if(cur==='events') renderEvents();
+    rerenderActivePage();
     if(typeof wwUpdateBadge==='function') wwUpdateBadge();
   }, INTERVAL_MS);
-  // Countdown chaque 30s
+
+  // ═══ Countdown affiché toutes les 30s ═══
   NEWS_STATE.countdownTimer = setInterval(()=>{ updateLastUpdateLabel(); }, 30*1000);
-  // Mise à jour du label « il y a X minutes » toutes les 30 sec
-  setInterval(updateLastUpdateLabel, 30000);
+
+  // ═══ STALE-CHECK toutes les 60 sec : vérifie si la page actuelle est obsolète ═══
+  // Si l'utilisateur reste longtemps sur une page, on re-render toutes les 60s
+  // pour rafraîchir les compteurs, "il y a X min", etc. — sans nouveau loadNews.
+  NEWS_STATE.staleCheckTimer = setInterval(()=>{
+    rerenderActivePage();
+  }, 60*1000);
+}
+
+/* ====================================================================
+   Re-render la page active — appelé après RSS load et à chaque tick.
+   Couvre TOUTES les pages dynamiques pour éviter qu'une page reste figée.
+   ==================================================================== */
+function rerenderActivePage(){
+  const cur = document.querySelector('.page.active')?.dataset.page;
+  if(!cur) return;
+  try {
+    if(cur==='dash') renderDashboard();
+    else if(cur==='bqs') renderBQS();
+    else if(cur==='adversarial') renderAdversarial();
+    else if(cur==='impact_radar') renderImpactRadar();
+    else if(cur==='alerts') renderAlerts();
+    else if(cur==='sources') renderSources();
+    else if(cur==='conflicts') renderConflicts();
+    else if(cur==='worldwatch') renderWorldWatch();
+    else if(cur==='events') renderEvents();
+    else if(cur==='news') renderNewsList();
+    else if(cur==='briefs') renderBriefs();
+    else if(cur==='scenarios') renderScenarios();
+    else if(cur==='indicators') renderIndicators();
+    else if(cur==='reconfig') renderReconfig();
+    else if(cur==='impact_bf') renderImpactBF();
+    else if(cur==='analyses') renderAnalyses();
+    else if(cur==='countries' && typeof renderCountries==='function') renderCountries();
+  } catch(e){ console.warn('rerenderActivePage('+cur+'):', e); }
 }
 
 /* ============= NOTIFICATIONS (panel + Web API) ============= */

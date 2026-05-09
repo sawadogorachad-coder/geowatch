@@ -193,10 +193,18 @@ let NEWS_STATE = {
 }
 ```
 
-### Auto-refresh
-- Au démarrage : `setTimeout(() => loadNews(), 800)` dans DOMContentLoaded
-- Toutes les 10 min via `startAutoRefresh()`
-- À chaque navigation vers : `news`, `alerts`, `dash`, `sources`, `conflicts`, `worldwatch`, `events`
+### Auto-refresh — Système consolidé (4 niveaux)
+1. **Démarrage** : `setTimeout(loadNews, 800)` dans DOMContentLoaded → première collecte RSS dès 0,8 s
+2. **Timer principal — 10 min** : `startAutoRefresh()` relance `loadNews()` + `rerenderActivePage()`
+   - Auto-refresh activé par défaut (sans dépendre du checkbox `news-auto`)
+3. **Stale-check — 60 s** : timer secondaire qui re-render la page active sans relancer RSS
+   - Met à jour les compteurs "il y a X min", les chrono, les badges
+4. **Navigation** : `Router.go(page)` détecte si RSS stale (>5 min) et relance `loadNews()`
+
+### Fonction centralisée `rerenderActivePage()`
+Couvre TOUTES les pages dynamiques :
+`dash · bqs · adversarial · impact_radar · alerts · sources · conflicts · worldwatch · events · news · briefs · scenarios · indicators · reconfig · impact_bf · analyses · countries`
+→ Toute page reste vivante, même sans changement d'onglet.
 
 ---
 
