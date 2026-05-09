@@ -108,8 +108,23 @@ const Router = {
 
 ## 📡 Système RSS
 
-### Sources (dans sources.js)
-Think tanks : ICG, ACLED, ISW, IRIS, IFRI, FRS, Le Grand Continent, BBC Afrique, RFI, etc.
+### Sources (dans sources.js) — 140+ sources organisées en 14 blocs
+- **Bloc 1 — 🇧🇫 Burkina Faso local** (15) : Lefaso.net, Burkina24, Sidwaya, AIB, Wakat Séra, Le Pays, L'Économiste du Faso, Faso7, Mutations BF, Net Afrique, Radio Omega, L'Observateur Paalga, Minute BF, Faso24, Le Quotidien BF
+- **Bloc 2 — 🌍 Sahel voisins** (14) : Maliweb, Malijet, Studio Tamani, Journal du Mali, Essor, Niger24, ANIP, Studio Kalangou, Tamtaminfo, Tchadinfos, Alwihda, Cridem, Alakhbar, Sahara Médias
+- **Bloc 3 — 🌍 Afrique Ouest côtière** (15+) : Abidjan.net, Fratmat, Linfodrome, Koaci, Seneweb, Le Soleil, Dakaractu, Pressafrik, MyJoyOnline, GhanaWeb, Citi, La Nation Bénin, Bénin Web TV, Togo Infos, ATOP, Guineenews, Mediaguinee, Premium Times, Sahara Reporters, Vanguard, Punch
+- **Bloc 4 — 🌍 Afrique centrale & Est** : Camer, Journal du Cameroun, Gabon Review, Radio Okapi, ActualitéCD, 7sur7, ADIAC, Daily Nation, The Standard, Addis Standard, Sudan Tribune, Dabanga, News24, Daily Maverick
+- **Bloc 5 — 🌍 Maghreb** : TSA, El Watan, Le360, TelQuel, Médias 24, Hespress, Kapitalis, Webmanagercenter, Mada Masr, Libya Observer
+- **Bloc 6 — 🧠 Think tanks africains** : ISS Africa, ACSS, WATHI, ACLED, Mo Ibrahim, Clingendael, KAS Africa, IPSS, FES Africa
+- **Bloc 7 — 🇫🇷 Médias français de référence** : Le Monde (Inter/Éco/Afrique), France 24, Jeune Afrique, RFI Afrique/MO, TV5 Monde, Le Monde Diplo, APA, BBC Afrique, ONU Info FR, Libération, Figaro, Mediapart + think tanks (LGC, IRIS, Diploweb, IFRI, FRS)
+- **Bloc 8 — 🇺🇸 Anglophones majeurs** : ISW, CSIS, Brookings, RAND, CFR, Chatham House, RUSI, IISS, ECFR, Carnegie, Atlantic Council, ICG, SIPRI + NYT, WaPo, FT, Foreign Policy, Economist, BBC, Guardian, NPR, DW
+- **Bloc 9 — 🇷🇺 Russie** : TASS, RT FR, Sputnik Afrique, RIA Novosti
+- **Bloc 10 — 🇨🇳 Chine** : Xinhua, CGTN, Global Times, China Daily, SCMP
+- **Bloc 11 — 🇶🇦 Moyen-Orient/Golfe/Turquie** : Al Jazeera, Al Arabiya, Arab News, Al-Monitor, Times of Israel, Jerusalem Post, Haaretz, Daily Sabah, TRT World, Anadolu, Press TV, Tehran Times
+- **Bloc 12 — 🇮🇳 Inde/Asie Sud** : The Hindu, The Wire, Dawn
+- **Bloc 13 — 🌏 Asie/AmLat** : Nikkei, Japan Times, Bangkok Post, Jakarta Post, El País, Folha SP
+- **Bloc 14 — 🆘 Humanitaire/OI** : ONU News, ReliefWeb (+BF +Mali), HRW, Amnesty, MSF, CICR, FMI, Banque Mondiale
+
+Champs source : `{id, name, cat, region, lang, bloc, url, verified}` — `bloc` aligné avec `GW_INTEL.BLOCKS` pour la veille adversariale
 
 ### Cascade de proxies (5 niveaux)
 ```javascript

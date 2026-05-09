@@ -70,26 +70,55 @@ function chartOpts(extra={}){ return { responsive:true, maintainAspectRatio:fals
 /* Helper : titre d'axe lisible */
 function axT(text){ return { display:true, text, color:'#cbd5e1', font:{size:11,weight:'600'}, padding:{top:6,bottom:6} }; }
 
-/* Helper : panneau "Comment lire" en dessous d'un chart */
-function chartInsight(canvasId, methodHTML, lectureHTML, color='#60a5fa'){
+/* Helper : panneau "Comment lire" pédagogique en dessous d'un chart
+   Signature : chartInsight(canvasId, methodHTML, lectureHTML, color='#60a5fa', bottomLine='')
+   - methodHTML  : explication de comment lire le graphique (axes, échelles, conventions)
+   - lectureHTML : ce que les chiffres nous disent concrètement
+   - bottomLine  : (optionnel) phrase synthétique « À retenir » pour décideur
+*/
+function chartInsight(canvasId, methodHTML, lectureHTML, color='#60a5fa', bottomLine=''){
   const el = document.getElementById(canvasId); if(!el) return;
   const card = el.closest('.card'); if(!card) return;
   let ins = card.querySelector('.chart-insight');
   if(!ins){
     ins = document.createElement('div');
     ins.className='chart-insight';
-    ins.style.cssText='margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.78rem;line-height:1.55';
+    ins.style.cssText='margin-top:14px;font-size:.8rem;line-height:1.6';
     card.appendChild(ins);
   }
   ins.innerHTML = `
-    <div style="background:rgba(148,163,184,.06);border-left:3px solid #94a3b8;padding:9px 11px;border-radius:4px;color:#cbd5e1">
-      <div style="font-size:.68rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:4px"><i class="fa-solid fa-book-open"></i> Méthode</div>
-      ${methodHTML}
-    </div>
-    <div style="background:${color}10;border-left:3px solid ${color};padding:9px 11px;border-radius:4px;color:#e2e8f0">
-      <div style="font-size:.68rem;color:${color};text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:4px"><i class="fa-solid fa-magnifying-glass-chart"></i> Lecture</div>
-      ${lectureHTML}
+    ${bottomLine ? `<div style="background:linear-gradient(135deg,${color}25 0%,${color}10 100%);border:1px solid ${color}55;border-radius:6px;padding:10px 13px;margin-bottom:10px;color:#e2e8f0;font-size:.86rem;font-weight:600;line-height:1.5">
+      <span style="font-size:.66rem;color:${color};text-transform:uppercase;letter-spacing:1px;font-weight:800;display:block;margin-bottom:3px"><i class="fa-solid fa-bullseye"></i> À retenir</span>
+      ${bottomLine}
+    </div>` : ''}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:rgba(148,163,184,.06);border-left:3px solid #94a3b8;padding:10px 12px;border-radius:4px;color:#cbd5e1">
+        <div style="font-size:.68rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:5px"><i class="fa-solid fa-book-open"></i> Comment lire ce graphique</div>
+        ${methodHTML}
+      </div>
+      <div style="background:${color}10;border-left:3px solid ${color};padding:10px 12px;border-radius:4px;color:#e2e8f0">
+        <div style="font-size:.68rem;color:${color};text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:5px"><i class="fa-solid fa-magnifying-glass-chart"></i> Ce que les chiffres nous disent</div>
+        ${lectureHTML}
+      </div>
     </div>`;
+}
+
+/* Helper : bandeau d'aide pédagogique général en haut d'une page riche en graphiques */
+function chartHelpBanner(targetId, title='Comment lire les graphiques de cette page'){
+  const t = document.getElementById(targetId); if(!t) return;
+  if(t.querySelector('.chart-help-banner')) return; // déjà présent
+  const banner = document.createElement('div');
+  banner.className='chart-help-banner';
+  banner.style.cssText='background:linear-gradient(135deg,#0c1426 0%,#0a0f1c 100%);border:1px solid #1a2340;border-radius:6px;padding:11px 14px;margin-bottom:14px;font-size:.78rem;color:#94a3b8;line-height:1.55';
+  banner.innerHTML = `<div style="display:flex;gap:9px;align-items:flex-start">
+    <i class="fa-solid fa-circle-info" style="color:#60a5fa;font-size:1.05rem;margin-top:2px"></i>
+    <div style="flex:1">
+      <b style="color:#cbd5e1">${title}</b><br>
+      Chaque graphique dispose d'un encart <b style="color:#60a5fa">« Comment lire »</b> (méthode) et <b style="color:#fde047">« Ce que les chiffres nous disent »</b> (interprétation), avec si possible un encart <b style="color:#22c55e">« À retenir »</b> pour décideur.
+      <br><span style="color:#64748b;font-size:.74rem">Survolez les barres et points avec la souris pour obtenir les valeurs précises.</span>
+    </div>
+  </div>`;
+  t.insertBefore(banner, t.firstChild);
 }
 
 const CHARTS = {};
