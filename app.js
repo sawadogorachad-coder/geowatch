@@ -1377,6 +1377,119 @@ function renderBQS(){ GW_INTEL.renderBQS(); }
 function renderAdversarial(){ GW_INTEL.renderAdversarial(); }
 function renderImpactRadar(){ GW_INTEL.renderImpactRadar(); }
 
+/* ============= SYNTHÈSE DU JOUR (bandeau "À retenir") =============
+   Génère en haut du dashboard une synthèse en 2 lignes accessibles à tous :
+   - Tendance globale (calme / tendu / critique)
+   - Top sujet du jour (avec lien direct)
+   - Recommandation d'action immédiate
+   ============================================================== */
+function renderDashSynthese(){
+  const dash = document.querySelector('section[data-page="dash"]');
+  if(!dash) return;
+  let synth = document.getElementById('dash-synthese');
+  if(!synth){
+    synth = document.createElement('div');
+    synth.id = 'dash-synthese';
+    synth.style.cssText = 'margin-bottom:14px';
+    dash.insertBefore(synth, dash.firstChild);
+  }
+
+  const items = (window.NEWS_STATE?.items)||[];
+  const items24 = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/3600000 < 24);
+  const bf24 = items24.filter(it=>it._bf);
+  const majors24 = items24.filter(it=>(it._majors||[]).length>0);
+  const ims = (typeof GW_INTEL!=='undefined') ? GW_INTEL.computeIMS() : {score:0, level:'CALME', color:'#22c55e'};
+  const lastUpd = window.NEWS_STATE?.lastUpdate ? Math.round((Date.now()-new Date(window.NEWS_STATE.lastUpdate))/60000) : null;
+
+  // Top sujet : article majeur le plus récent, prioritairement BF
+  const topItem = bf24.find(it=>(it._majors||[]).length>0) || majors24[0] || bf24[0] || items24[0];
+
+  // État global calculé
+  let stateLabel, stateIcon, stateColor, recommendation;
+  if(ims.score>=70){ stateLabel='ÉTAT CRITIQUE'; stateIcon='triangle-exclamation'; stateColor='#ef4444';
+    recommendation='Mobilisation requise. Préparer note d\'alerte au plus vite.'; }
+  else if(ims.score>=50){ stateLabel='ÉTAT ÉLEVÉ'; stateIcon='exclamation'; stateColor='#f97316';
+    recommendation='Vigilance accrue. Surveiller chaque évolution sur les 24-48 h.'; }
+  else if(ims.score>=30){ stateLabel='ÉTAT MODÉRÉ'; stateIcon='circle-exclamation'; stateColor='#f59e0b';
+    recommendation='Surveillance routine. Contrôler les indicateurs de la semaine.'; }
+  else if(ims.score>=15){ stateLabel='ÉTAT FAIBLE'; stateIcon='circle-info'; stateColor='#eab308';
+    recommendation='Niveau de vigilance ordinaire. RAS dans l\'immédiat.'; }
+  else { stateLabel='ÉTAT CALME'; stateIcon='circle-check'; stateColor='#22c55e';
+    recommendation='Aucun signal d\'alerte. Profiter pour préparer analyses de fond.'; }
+
+  // Date / heure
+  const hr = new Date();
+  const greeting = hr.getHours()<12 ? 'Bonjour' : hr.getHours()<18 ? 'Bon après-midi' : 'Bonsoir';
+  const dateStr = hr.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+  synth.innerHTML = `
+    <div style="background:linear-gradient(135deg,${stateColor}11 0%,#0a0f1c 100%);border:1px solid ${stateColor}55;border-left:5px solid ${stateColor};border-radius:8px;padding:18px 22px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px;margin-bottom:12px">
+        <div>
+          <div style="font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1.5px;font-weight:700">${greeting} — ${dateStr}</div>
+          <div style="font-size:1.6rem;color:#e2e8f0;font-weight:800;margin-top:4px;line-height:1.15">À retenir aujourd'hui</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;background:#0a0f1c;padding:8px 14px;border-radius:8px;border:1px solid ${stateColor}66">
+          <i class="fa-solid fa-${stateIcon}" style="color:${stateColor};font-size:1.6rem"></i>
+          <div>
+            <div style="font-size:.62rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1px">Niveau global</div>
+            <div style="font-size:1rem;color:${stateColor};font-weight:800;letter-spacing:1px">${stateLabel}</div>
+          </div>
+        </div>
+      </div>
+
+      ${items24.length===0 ? `
+        <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:6px;padding:11px 14px;color:#fde047;font-size:.86rem;line-height:1.5">
+          <i class="fa-solid fa-spinner fa-spin"></i> <b>Collecte RSS en cours…</b> Les actualités du jour seront synthétisées dès que les flux auront répondu (1-2 minutes maximum).
+        </div>
+      ` : `
+        <!-- Mini-stats compréhensibles -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:9px;margin-bottom:13px">
+          <div style="background:#0a0f1c;border:1px solid #1a2340;padding:9px 12px;border-radius:6px">
+            <div style="font-size:1.5rem;font-weight:800;color:#60a5fa;line-height:1">${items24.length}</div>
+            <div style="font-size:.68rem;color:#94a3b8;line-height:1.3">articles agrégés<br>(24 dernières heures)</div>
+          </div>
+          <div style="background:#0a0f1c;border:1px solid #1a2340;padding:9px 12px;border-radius:6px">
+            <div style="font-size:1.5rem;font-weight:800;color:#fde047;line-height:1">${bf24.length}</div>
+            <div style="font-size:.68rem;color:#94a3b8;line-height:1.3">touchent directement<br>le Burkina Faso</div>
+          </div>
+          <div style="background:#0a0f1c;border:1px solid #1a2340;padding:9px 12px;border-radius:6px">
+            <div style="font-size:1.5rem;font-weight:800;color:#ef4444;line-height:1">${majors24.length}</div>
+            <div style="font-size:.68rem;color:#94a3b8;line-height:1.3">événements<br>jugés majeurs</div>
+          </div>
+          <div style="background:#0a0f1c;border:1px solid #1a2340;padding:9px 12px;border-radius:6px">
+            <div style="font-size:1.5rem;font-weight:800;color:${stateColor};line-height:1">${ims.score}<span style="font-size:.78rem;color:#64748b">/100</span></div>
+            <div style="font-size:.68rem;color:#94a3b8;line-height:1.3">indice de menace<br>stratégique BF</div>
+          </div>
+        </div>
+
+        ${topItem ? `
+          <div style="background:rgba(0,0,0,.35);border-left:3px solid ${stateColor};border-radius:0 6px 6px 0;padding:10px 13px;margin-bottom:11px">
+            <div style="font-size:.62rem;color:${stateColor};text-transform:uppercase;letter-spacing:1px;font-weight:800;margin-bottom:3px"><i class="fa-solid fa-bullseye"></i> Sujet n°1 du jour</div>
+            <a href="${topItem.link||'#'}" target="_blank" rel="noopener" style="font-size:.96rem;color:#e2e8f0;font-weight:700;text-decoration:none;line-height:1.45;display:block;margin-bottom:4px">${(topItem.title||'').slice(0,200)}${(topItem.title||'').length>200?'…':''}</a>
+            <div style="font-size:.7rem;color:#94a3b8">${topItem._source||'—'} · ${fmt.dateTime(topItem.pubDate)} ${topItem._bf?'· <span style="color:#fde047">🇧🇫 pertinent BF</span>':''} ${(topItem._majors||[]).length?'· <span style="color:#ef4444">⚠ événement majeur</span>':''}</div>
+          </div>
+        ` : ''}
+      `}
+
+      <!-- Recommandation d'action -->
+      <div style="background:linear-gradient(135deg,${stateColor}22 0%,${stateColor}08 100%);border:1px solid ${stateColor}55;border-radius:6px;padding:9px 13px;display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+        <i class="fa-solid fa-lightbulb" style="color:${stateColor};font-size:1.05rem"></i>
+        <span style="font-size:.62rem;color:${stateColor};text-transform:uppercase;letter-spacing:1px;font-weight:800">Recommandation</span>
+        <span style="font-size:.85rem;color:#e2e8f0;font-weight:600">${recommendation}</span>
+      </div>
+
+      <!-- Liens d'action rapide -->
+      <div style="display:flex;gap:7px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn primary sm" onclick="Router.go('bqs')"><i class="fa-solid fa-file-circle-exclamation"></i> Brief quotidien complet</button>
+        <button class="btn ghost sm" onclick="Router.go('alerts')"><i class="fa-solid fa-bell"></i> Voir alertes</button>
+        <button class="btn ghost sm" onclick="Router.go('impact_radar')"><i class="fa-solid fa-bullseye"></i> Radar 35 canaux</button>
+        ${lastUpd!==null && lastUpd<60 ? `<span style="font-size:.7rem;color:#86efac;align-self:center;margin-left:auto"><i class="fa-solid fa-circle" style="font-size:.5rem"></i> RSS à jour il y a ${lastUpd} min</span>` : `<button class="btn ghost sm" onclick="loadNews()" style="margin-left:auto"><i class="fa-solid fa-rotate"></i> Actualiser RSS</button>`}
+      </div>
+    </div>
+  `;
+}
+
 /* ============= DASHBOARD ============= */
 function renderDashboard(){
   const d = DB.get(); const now=new Date();
@@ -2688,38 +2801,118 @@ function _impactBFSynthese(c){
   return parts.length? parts.join(' · ') : null;
 }
 
+// État de filtrage des alertes
+let AL_STATE = { level:'all', source:'all', bfOnly:false };
+
 function renderAlerts(){
   const d = DB.get();
   const liveAlerts = getDerivedAlertsFromNews();
-  const all = [...liveAlerts, ...(d.alerts||[])].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
+  let all = [...liveAlerts, ...(d.alerts||[])].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
   const el = document.getElementById('alerts-list');
+  if(!el) return;
   const lastUpd = NEWS_STATE.lastUpdate ? Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000) : null;
-  const freshLabel = lastUpd===null ? 'Aucune actualisation RSS' : lastUpd<1?'À l\'instant':`Il y a ${lastUpd} min`;
+  const freshLabel = lastUpd===null ? 'jamais' : lastUpd<1?'à l\'instant':`il y a ${lastUpd} min`;
   const freshColor = lastUpd===null||lastUpd>15 ? '#f59e0b' : '#22c55e';
+
+  // Stats par niveau
   const liveCount = liveAlerts.length, manualCount = (d.alerts||[]).length;
   const critCount = all.filter(a=>a.level==='critical').length;
   const highCount = all.filter(a=>a.level==='high').length;
+  const mediumCount = all.filter(a=>a.level==='medium' || a.level==='info' || (!a.level)).length;
+  const bfCount = all.filter(a=>a._bf).length;
 
-  const header = `<div class="card" style="margin-bottom:14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340">
+  // Bandeau pédagogique
+  let html = `
+    <div style="background:linear-gradient(135deg,#1a060933 0%,#0a0f1c 100%);border:1px solid #7f1d1d;border-left:4px solid #ef4444;border-radius:6px;padding:14px 18px;margin-bottom:14px">
+      <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+        <div style="font-size:2.2rem;color:#ef4444;line-height:1;flex-shrink:0"><i class="fa-solid fa-bell"></i></div>
+        <div style="flex:1;min-width:240px">
+          <div style="font-size:.62rem;color:#ef4444;letter-spacing:2px;text-transform:uppercase;font-weight:800;margin-bottom:2px">⚡ Centre d'alertes</div>
+          <div style="font-size:1rem;color:#e2e8f0;font-weight:700;line-height:1.4;margin-bottom:7px">Tous les événements détectés comme « majeurs » par le système, automatiquement extraits des flux RSS et croisés avec le catalogue des conflits.</div>
+          <div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:5px;padding:9px 11px;margin-top:6px">
+            <div style="font-size:.66rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:5px"><i class="fa-solid fa-circle-question"></i> Comment fonctionnent les alertes ?</div>
+            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Le système scanne en permanence les ${(window.GW_DATA?.RSS_SOURCES_FULL?.length)||140}+ sources RSS configurées</div>
+            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Quand un titre/article contient un <b style="color:#fde047">mot-clé majeur</b> (coup d'État, frappe massive, accord historique, choc pétrolier...), il devient automatiquement une alerte <span style="color:#86efac">EN DIRECT</span></div>
+            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Niveau attribué : <span style="color:#ef4444">Critique</span> (rupture/crise) · <span style="color:#f97316">Élevée</span> (diplomatie majeure) · <span style="color:#fde047">Moyenne</span> (info importante)</div>
+            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Si l'article touche un conflit catalogué, on affiche aussi <b style="color:#fde047">l'impact pour le Burkina Faso</b></div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  // Stats clignotantes par niveau
+  html += `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px">
+    <div onclick="AL_STATE.level=AL_STATE.level==='critical'?'all':'critical';renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #7f1d1d;border-left:3px solid #ef4444;border-radius:5px;padding:11px 13px;${AL_STATE.level==='critical'?'box-shadow:0 0 0 2px #ef4444':''}">
+      <div style="font-size:.62rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-triangle-exclamation"></i> Critique</div>
+      <div style="font-size:1.6rem;color:#ef4444;font-weight:800">${critCount}</div>
+      <div style="font-size:.68rem;color:#94a3b8">action immédiate requise</div>
+    </div>
+    <div onclick="AL_STATE.level=AL_STATE.level==='high'?'all':'high';renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #7c2d12;border-left:3px solid #f97316;border-radius:5px;padding:11px 13px;${AL_STATE.level==='high'?'box-shadow:0 0 0 2px #f97316':''}">
+      <div style="font-size:.62rem;color:#f97316;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-exclamation"></i> Élevée</div>
+      <div style="font-size:1.6rem;color:#f97316;font-weight:800">${highCount}</div>
+      <div style="font-size:.68rem;color:#94a3b8">à traiter dans la journée</div>
+    </div>
+    <div onclick="AL_STATE.level=AL_STATE.level==='medium'?'all':'medium';renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #fde047;border-radius:5px;padding:11px 13px;${AL_STATE.level==='medium'?'box-shadow:0 0 0 2px #fde047':''}">
+      <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-circle-info"></i> Moyenne / info</div>
+      <div style="font-size:1.6rem;color:#fde047;font-weight:800">${mediumCount}</div>
+      <div style="font-size:.68rem;color:#94a3b8">à classer dans la veille</div>
+    </div>
+    <div onclick="AL_STATE.bfOnly=!AL_STATE.bfOnly;renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid ${AL_STATE.bfOnly?'#fde047':'#1a2340'};border-radius:5px;padding:11px 13px;${AL_STATE.bfOnly?'box-shadow:0 0 0 2px #fde047':''}">
+      <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-flag-checkered"></i> Pertinentes BF</div>
+      <div style="font-size:1.6rem;color:#fde047;font-weight:800">${bfCount}</div>
+      <div style="font-size:.68rem;color:#94a3b8">${AL_STATE.bfOnly?'(filtre actif — cliquer pour voir tout)':'cliquer pour filtrer'}</div>
+    </div>
+  </div>`;
+
+  // Bandeau de contrôle
+  const sourceLabel = AL_STATE.source==='live'?'EN DIRECT seulement':AL_STATE.source==='manual'?'manuelles seulement':'toutes sources';
+  html += `<div class="card" style="margin-bottom:14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340">
     <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-        <span style="font-size:.78rem;color:#94a3b8"><i class="fa-solid fa-satellite-dish"></i> Source RSS dernière vérification :</span>
-        <span style="font-size:.84rem;color:${freshColor};font-weight:700">${freshLabel}</span>
-        <span style="font-size:.7rem;color:#64748b">• Actualisation auto toutes les 10 min</span>
+        <span style="font-size:.78rem;color:#94a3b8"><i class="fa-solid fa-satellite-dish" style="color:${freshColor}"></i> RSS scanné <b style="color:${freshColor}">${freshLabel}</b></span>
+        <span style="font-size:.7rem;color:#64748b">· Actualisation auto toutes les 10 min</span>
+        <span style="font-size:.7rem;color:#64748b">· ${liveCount} EN DIRECT + ${manualCount} manuelles</span>
+        ${AL_STATE.level!=='all'||AL_STATE.bfOnly||AL_STATE.source!=='all' ? `<span class="chip" style="background:rgba(96,165,250,.15);color:#60a5fa;font-size:.66rem;border:1px solid rgba(96,165,250,.4)">🔍 Filtres actifs</span>` : ''}
       </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <span class="chip red" style="font-size:.7rem">${critCount} critique${critCount>1?'s':''}</span>
-        <span class="chip orange" style="font-size:.7rem">${highCount} élevée${highCount>1?'s':''}</span>
-        <span class="chip" style="background:rgba(34,197,94,.15);color:#86efac;font-size:.7rem;border:1px solid rgba(34,197,94,.3)">🛰 ${liveCount} live RSS</span>
-        <span class="chip gray" style="font-size:.7rem">📝 ${manualCount} manuelle${manualCount>1?'s':''}</span>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        ${AL_STATE.level!=='all'||AL_STATE.bfOnly||AL_STATE.source!=='all' ? `<button class="btn ghost sm" onclick="AL_STATE={level:'all',source:'all',bfOnly:false};renderAlerts()"><i class="fa-solid fa-xmark"></i> Réinitialiser filtres</button>` : ''}
         <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Actualiser RSS</button>
       </div>
     </div>
   </div>`;
 
-  if(!all.length){ el.innerHTML = header + '<div class="empty"><i class="fa-solid fa-bell-slash"></i><p>Aucune alerte. Cliquez « Actualiser RSS » pour scanner les flux à la recherche d\'événements majeurs.</p></div>'; return; }
+  // Application des filtres
+  if(AL_STATE.level!=='all'){
+    if(AL_STATE.level==='medium') all = all.filter(a=>!a.level || a.level==='medium' || a.level==='info' || a.level==='low');
+    else all = all.filter(a=>a.level===AL_STATE.level);
+  }
+  if(AL_STATE.bfOnly) all = all.filter(a=>a._bf);
+  if(AL_STATE.source==='live') all = all.filter(a=>a._live);
+  else if(AL_STATE.source==='manual') all = all.filter(a=>!a._live);
 
-  el.innerHTML = header + all.map(a=>{
+  // Cas vide
+  if(!all.length){
+    if(critCount===0 && highCount===0 && mediumCount===0){
+      // Vraiment aucune alerte
+      html += `<div style="background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340;border-radius:8px;padding:30px;text-align:center">
+        <i class="fa-solid fa-shield-halved" style="font-size:2.5rem;color:#22c55e;margin-bottom:10px"></i>
+        <div style="font-size:1.05rem;color:#86efac;font-weight:700;margin-bottom:5px">Aucune alerte active</div>
+        <div style="font-size:.84rem;color:#94a3b8;line-height:1.55;max-width:600px;margin:auto">Le système n'a détecté aucun événement majeur dans les flux RSS. Cela peut signifier soit que la situation est calme, soit que les flux RSS n'ont pas encore été collectés.<br>Cliquez sur <b style="color:#60a5fa">« Actualiser RSS »</b> ci-dessus pour relancer une collecte.</div>
+      </div>`;
+    } else {
+      // Filtres trop restrictifs
+      html += `<div style="background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340;border-radius:8px;padding:24px;text-align:center">
+        <i class="fa-solid fa-filter-circle-xmark" style="font-size:2rem;color:#f59e0b;margin-bottom:10px"></i>
+        <div style="font-size:.95rem;color:#fde047;font-weight:700;margin-bottom:4px">Aucune alerte ne correspond aux filtres actifs</div>
+        <div style="font-size:.78rem;color:#94a3b8">Cliquez sur <b style="color:#60a5fa">« Réinitialiser filtres »</b> pour voir toutes les alertes.</div>
+      </div>`;
+    }
+    el.innerHTML = html;
+    return;
+  }
+
+  // Liste des alertes
+  el.innerHTML = html + all.map(a=>{
     const c = d.conflicts.find(x=>x.id===a.conflict_id);
     const levelBg = a.level==='critical'?'#1a0609':a.level==='high'?'#1a0d05':'#0c1426';
     const levelBorder = a.level==='critical'?'#7f1d1d':a.level==='high'?'#7c2d12':'#1a2340';

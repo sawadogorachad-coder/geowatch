@@ -1,5 +1,28 @@
 # GéoWatch v3 — Mémoire projet pour Claude Code
 
+## 🌟 Synthèse "À retenir aujourd'hui" (Dashboard)
+
+Fonction `renderDashSynthese()` injecte en haut du dashboard un grand bandeau coloré qui synthétise en français simple :
+- Salutation + date
+- État global (CALME / FAIBLE / MODÉRÉ / ÉLEVÉ / CRITIQUE) basé sur l'IMS-BF
+- 4 mini-stats expliquées : articles 24h, articles BF, événements majeurs, score IMS
+- **Sujet n°1 du jour** (top article majeur ou BF)
+- **Recommandation d'action concrète** par niveau ("Mobilisation requise", "Vigilance accrue"...)
+- Boutons d'action rapide vers Brief Quotidien / Alertes / Radar
+
+Appelée automatiquement par `renderDashboard()` au tout début. Le div `dash-synthese` est créé dynamiquement si absent.
+
+## 🚨 Centre d'alertes opérationnel
+
+`renderAlerts()` refait avec :
+- Bandeau pédagogique « Comment fonctionnent les alertes ? » (4 puces explicatives)
+- 4 cards-stats cliquables = filtres rapides : **Critique / Élevée / Moyenne / Pertinente BF**
+- État `AL_STATE = {level, source, bfOnly}` pour les filtres
+- Bouton « Réinitialiser filtres » visible quand un filtre est actif
+- Cas vides intelligents :
+  - 0 alerte au total → message rassurant "Aucune alerte active" avec icône bouclier vert
+  - Filtres trop restrictifs → message "Aucune alerte ne correspond aux filtres actifs"
+
 ## 📚 Bandeaux pédagogiques sur les pages
 
 Helper `pageIntroBanner(targetId, cfg)` ajoute un bandeau didactique en tête de page :
