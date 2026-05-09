@@ -100,8 +100,9 @@ const Router = {
   current:'dash',
   titles:{
     dash:['Tableau de bord','Synthèse opérationnelle multi-théâtres'],
-    bqs:['Brief Quotidien Stratégique','Top 5 développements 24 h · format A4 exportable PDF'],
+    bqs:['Brief Quotidien Stratégique','Top 5 développements 24 h · exportable PDF & Word'],
     adversarial:['Veille adversariale','Cartographie des narratives par bloc géopolitique'],
+    impact_radar:['Veille Impact BF','Radar mondial — 35 canaux d\'impact direct, proximité, systémique sur le BF'],
     conflicts:['Fiches conflits','Note de situation 8 dimensions par conflit'],
     briefs:['Briefs 2 couches','Décideur (5 points) + analyste (faits, hypothèses, indicateurs)'],
     scenarios:['Scénarios prospectifs','Méthode Godet — proba × impact'],
@@ -126,6 +127,7 @@ const Router = {
     if(page==='dash') renderDashboard();
     else if(page==='bqs') renderBQS();
     else if(page==='adversarial') renderAdversarial();
+    else if(page==='impact_radar') renderImpactRadar();
     else if(page==='conflicts') renderConflicts();
     else if(page==='briefs') renderBriefs();
     else if(page==='scenarios') renderScenarios();
@@ -142,7 +144,7 @@ const Router = {
     else if(page==='events') renderEvents();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
-    if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial'].includes(page)){
+    if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial','impact_radar'].includes(page)){
       const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
       if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
     }
@@ -565,7 +567,8 @@ const GW_INTEL = (()=>{
             <div style="font-size:.74rem;color:#64748b;margin-top:2px">Généré à ${timeStr} · Cycle 24 heures · Document à diffusion restreinte</div>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <button class="btn primary sm" id="bqs-export-pdf"><i class="fa-solid fa-file-pdf"></i> Exporter PDF A4</button>
+            <button class="btn primary sm" id="bqs-export-pdf"><i class="fa-solid fa-file-pdf"></i> Exporter PDF</button>
+            <button class="btn primary sm" id="bqs-export-doc" style="background:#2563eb"><i class="fa-solid fa-file-word"></i> Exporter Word</button>
             <button class="btn ghost sm" id="bqs-refresh"><i class="fa-solid fa-rotate"></i> Actualiser</button>
           </div>
         </div>
@@ -615,6 +618,8 @@ const GW_INTEL = (()=>{
     // Bind boutons
     const expBtn = document.getElementById('bqs-export-pdf');
     if(expBtn) expBtn.onclick = ()=>exportBQSPDF(bqs);
+    const expDocBtn = document.getElementById('bqs-export-doc');
+    if(expDocBtn) expDocBtn.onclick = ()=>exportBQSDOCX(bqs);
     const refBtn = document.getElementById('bqs-refresh');
     if(refBtn) refBtn.onclick = ()=>{ if(typeof loadNews==='function'){ toast('Actualisation en cours…','info'); loadNews().then(()=>renderBQS()); } else renderBQS(); };
   }
@@ -857,20 +862,453 @@ const GW_INTEL = (()=>{
       </div>`;
   }
 
+  /* ====================================================================
+     ===== MATRICE D'IMPACT MONDIAL — 35 canaux affectant le BF =====
+     ====================================================================
+     Chaque canal détecte un type d'événement mondial et propose des
+     thèmes de recherche + questions analytiques pour le chercheur.
+     Niveau : direct | proximité | indirect | systémique
+     ==================================================================== */
+  const IMPACT_CHANNELS = [
+    /* ═══ SÉCURITAIRE ═══ */
+    {id:'sahel_jihad', cat:'security', label:'Jihadisme sahélien', icon:'⚔️', color:'#ef4444', level:'direct',
+     patterns:[/jnim|eigs|aqmi|aqim|al[- ]?qaida|qaeda|daesh|état islamique|islamic state|jihadiste|terroriste sahel/i, /(attaque|frappe|embuscade|tué).{0,40}(burkina|mali|niger|sahel|liptako)/i],
+     themes:['Évolution des modes opératoires JNIM/EIGS post-2024','Cartographie territoriale du contrôle jihadiste','Stratégie d\'épuisement vs AES'],
+     questions:['Comment la stratégie d\'usure affecte-t-elle la cohésion AES ?','Quels signaux d\'extension vers les zones côtières ?','Quelle relation JNIM ↔ acteurs transnationaux (AQ, EI core) ?']},
+    {id:'coastal_spillover', cat:'security', label:'Débordement côtier', icon:'🏖️', color:'#f97316', level:'proximité',
+     patterns:[/côte d'ivoire|ivoire|ghana|togo|bénin|benin|sénégal|senegal/i, /(attentat|attaque|incursion|jihadiste|terroriste)/i],
+     themes:['Modèle d\'extension Sahel→Golfe de Guinée','Capacités d\'anticipation des États côtiers','Coopération transfrontalière post-CEDEAO'],
+     questions:['Le Bénin est-il devenu le nouveau front ?','Quelles ripostes à l\'Initiative d\'Accra ?','Quel rôle pour les corridors logistiques côtiers ?']},
+    {id:'mercenaries_pmcs', cat:'security', label:'Sociétés militaires privées', icon:'🛡️', color:'#dc2626', level:'direct',
+     patterns:[/wagner|africa corps|mercenaire|pmc|société militaire privée|private military|prigojine/i],
+     themes:['Modèle économique des PMC russes en Afrique','Substitution Wagner→Africa Corps post-Prigojine','Comparatif coûts/bénéfices vs forces locales'],
+     questions:['Quel coût réel pour le BF en concessions minières ?','Quelle pérennité de l\'engagement russe ?','Émergence d\'alternatives (Turquie, EAU, Iran) ?']},
+    {id:'arms_trafficking', cat:'security', label:'Trafic d\'armes & flux illicites', icon:'🔫', color:'#b91c1c', level:'proximité',
+     patterns:[/trafic d'armes|arms traffic|flux illicite|libye.{0,30}armes|sahara.{0,30}arms/i, /armement|arsenal|munitions/i],
+     themes:['Flux libyens post-2011 dans le Sahel','Réseaux nord-africains d\'approvisionnement','Drones civils détournés (DJI, ZALA)'],
+     questions:['Comment perturber les réseaux de réapprovisionnement ?','Quel impact des sanctions UE/US sur les flux ?']},
+    {id:'drone_warfare', cat:'security', label:'Guerre des drones', icon:'🛸', color:'#dc2626', level:'direct',
+     patterns:[/drone|tb2|bayraktar|akinci|akıncı|shahed|uav|unmanned aerial/i],
+     themes:['Drones turcs Bayraktar TB2 dans la doctrine AES','Drones commerciaux dans les attaques jihadistes','Course technologique low-cost'],
+     questions:['Quelle adaptation tactique JNIM aux drones ?','Bilan opérationnel des TB2 au Burkina/Mali ?']},
+
+    /* ═══ DIPLOMATIQUE ═══ */
+    {id:'cedeao_pressure', cat:'diplo', label:'Pression CEDEAO/AES', icon:'🤝', color:'#a855f7', level:'direct',
+     patterns:[/cedeao|ecowas|aes|alliance des états du sahel/i, /(sortie|sanction|isolement|rupture|sommet)/i],
+     themes:['Architecture sécuritaire post-CEDEAO','Émergence d\'un bloc AES-Sud global','Statut juridique des ressortissants AES'],
+     questions:['Quel coût économique réel de la sortie pour BF ?','Quelle réintégration possible et à quel prix ?']},
+    {id:'france_fr_relations', cat:'diplo', label:'Relations France & Françafrique', icon:'🇫🇷', color:'#3b82f6', level:'direct',
+     patterns:[/france|français|françafrique|élysée|paris|macron|colon|néocolonial/i],
+     themes:['Dé-dollarisation de l\'aide française','Repositionnement stratégique français en Afrique','Médias français et narratives sur le BF'],
+     questions:['Quelle nouvelle équation France-AES après 2027 ?','Quel impact sur les diasporas ?']},
+    {id:'russia_pivot', cat:'diplo', label:'Pivot russe en Afrique', icon:'🐻', color:'#dc2626', level:'direct',
+     patterns:[/russie|russian|moscou|moscow|kremlin|poutine|putin|rt.com|sputnik/i, /(afrique|africa|sahel|sommet)/i],
+     themes:['Doctrine Lavrov pour l\'Afrique 2024-2030','Sommets Russie-Afrique : bilan opérationnel','Relai narratif RT/Sputnik'],
+     questions:['Quel coût réel pour la souveraineté monétaire AES ?','Capacité de la Russie à honorer ses promesses ?']},
+    {id:'china_engagement', cat:'diplo', label:'Engagement chinois', icon:'🐲', color:'#dc2626', level:'proximité',
+     patterns:[/chine|chinese|chinois|beijing|pékin|xi jinping|bri|belt and road|nouvelle route|focac/i],
+     themes:['Investissements chinois extractifs au Sahel','FOCAC 2024 et engagements pour le BF','Diplomatie de la dette africaine'],
+     questions:['Quel arbitrage AES entre Chine et Russie ?','Risque de dépendance dette ?']},
+    {id:'gulf_powers', cat:'diplo', label:'Golfe & Turquie en Afrique', icon:'🕌', color:'#a855f7', level:'proximité',
+     patterns:[/(émirats|emirats|uae|abu dhabi|qatar|arabie saoudite|saudi|turquie|turkey|erdogan|erdoğan|iran).{0,30}(afrique|africa|sahel|burkina|mali)/i],
+     themes:['EAU comme financier des juntes via or','Turquie : drones, mosquées, formation','Iran : uranium, drones, axe Sahel'],
+     questions:['Quelle architecture multipolaire émerge au Sahel ?','Concurrence ou complémentarité Golfe/Russie ?']},
+    {id:'usa_africom', cat:'diplo', label:'USA & AFRICOM', icon:'🇺🇸', color:'#3b82f6', level:'proximité',
+     patterns:[/états-unis|united states|américain|american|biden|trump|africom|pentagone|state department|cia/i],
+     themes:['Posture US post-retrait Niger 2024','Section 333 et financements de défense','Stratégie d\'endiguement de la Russie'],
+     questions:['Quelle redéfinition de la coopération militaire ?','Trump 2 : recul ou recadrage ?']},
+    {id:'un_unsc', cat:'diplo', label:'ONU & multilatéralisme', icon:'🌐', color:'#60a5fa', level:'systémique',
+     patterns:[/onu|united nations|conseil de sécurité|security council|guterres|minusma/i],
+     themes:['Désengagement onusien et alternatives','Capacité de l\'ONU à intervenir en Afrique','Réforme du Conseil de sécurité'],
+     questions:['Quel rôle pour l\'UA dans le post-MINUSMA ?']},
+
+    /* ═══ ÉCONOMIQUE ═══ */
+    {id:'gold_market', cat:'eco', label:'Marché de l\'or', icon:'💰', color:'#eab308', level:'direct',
+     patterns:[/(or|gold|aurifère|orpaillage).{0,40}(prix|cours|marché|export|exportation|burkina|mali|sahel)/i, /lbma|sgbf|mine d'or/i],
+     themes:['Or sahélien dans les chaînes mondiales','Captation Wagner et flux opaques (EAU)','Cours mondial et recettes État BF'],
+     questions:['Quelle traçabilité réelle de l\'or BF ?','Comment formaliser l\'orpaillage ?']},
+    {id:'cotton_textile', cat:'eco', label:'Coton & filière textile', icon:'🌾', color:'#a3e635', level:'direct',
+     patterns:[/coton|cotton|textile|sofitex|filature/i],
+     themes:['Effondrement filière coton sahélien','Pression climatique sur les rendements','Filières concurrentes (Asie centrale)'],
+     questions:['Comment redresser SOFITEX BF ?','Quelle adaptation aux dérèglements climatiques ?']},
+    {id:'oil_energy', cat:'eco', label:'Pétrole & énergie', icon:'⛽', color:'#f59e0b', level:'systémique',
+     patterns:[/(pétrole|petrole|petroleum|brent|wti|opep|opec).{0,30}(prix|baril|marché|mondial)/i, /(énergie|energy|électricité|electric).{0,30}(crise|prix|africa|afrique)/i],
+     themes:['Coût énergétique des États enclavés','Dépendance importations raffinées','Solaire comme alternative stratégique'],
+     questions:['Impact d\'une flambée pétrole sur l\'inflation BF ?','Stratégie énergétique souveraine ?']},
+    {id:'fcfa_currency', cat:'eco', label:'F CFA & monnaie souveraine', icon:'💱', color:'#a78bfa', level:'direct',
+     patterns:[/franc cfa|f cfa|fcfa|cfa franc|sortie cfa|monnaie sahel|monnaie aes|bceao|umoa/i],
+     themes:['Roadmap monnaie AES — réalisme technique','Impact sortie F CFA sur commerce extérieur','Modèles : Mauritanie ouguiya, Guinée franc'],
+     questions:['Quels stocks de réserves disponibles ?','Risque hyperinflation transitionnelle ?']},
+    {id:'food_security', cat:'eco', label:'Sécurité alimentaire', icon:'🌾', color:'#22c55e', level:'direct',
+     patterns:[/(famine|food security|sécurité alimentaire|insécurité alimentaire|fao|pam|wfp|hunger).{0,40}(sahel|africa|burkina|niger|mali)/i, /céréales|grain|wheat|riz|rice|maïs|maize/i],
+     themes:['Guerre en Ukraine et prix des céréales','Stocks stratégiques sahéliens','Innovation agricole face au climat'],
+     questions:['Quel point de bascule famine au BF ?','Capacité d\'autosuffisance céréalière ?']},
+    {id:'mining_commodities', cat:'eco', label:'Mines & métaux stratégiques', icon:'⛏️', color:'#ca8a04', level:'direct',
+     patterns:[/(uranium|lithium|cobalt|manganèse|manganese|coltan|terres rares|rare earth).{0,40}(afrique|africa|sahel|niger|mali|burkina)/i, /orano|areva/i],
+     themes:['Uranium nigérien et transition énergétique','Concurrence chinoise sur lithium africain','Géopolitique des terres rares'],
+     questions:['Comment capter plus de valeur extractive ?','Sécurisation des sites miniers ?']},
+    {id:'aid_sanctions', cat:'eco', label:'Aide & sanctions', icon:'📋', color:'#f59e0b', level:'direct',
+     patterns:[/(aide|aid|sanction|embargo|gel d'avoirs|usaid|afd|gtz|gef|kfw).{0,40}(afrique|africa|sahel|burkina|mali|niger)/i],
+     themes:['Effets boomerang des sanctions CEDEAO','Substitution Russie/Chine/Émirats à l\'aide occidentale','Conditionnalités de gouvernance'],
+     questions:['Trou budgétaire BF post-suspensions UE ?','Quelle dépendance aide réelle ?']},
+
+    /* ═══ SOCIO-POLITIQUE ═══ */
+    {id:'coups_juntas_global', cat:'socio', label:'Coups d\'État & juntes globales', icon:'⚓', color:'#dc2626', level:'systémique',
+     patterns:[/coup d'état|coup détat|coup d'etat|putsch|junta|junte/i, /(gabon|guinée|guinee|tchad|chad|venezuela|myanmar|honduras)/i],
+     themes:['Doctrine de la "vague des juntes" (2020-2024)','Apprentissage entre régimes militaires','Réception internationale comparée'],
+     questions:['Le BF est-il modèle ou exception ?','Quelle stabilisation civile post-junte ?']},
+    {id:'democracy_setback', cat:'socio', label:'Recul démocratique', icon:'📉', color:'#a855f7', level:'systémique',
+     patterns:[/(démocratie|democracy|autoritarisme|authoritarian|régime hybride|backsliding|recul démocratique|freedom house|v-dem)/i],
+     themes:['Indices V-Dem & Freedom House appliqués au BF','Légitimité plébiscitaire vs procédurale','Modèles asiatiques (Singapour, Vietnam)'],
+     questions:['Quel équilibre légitimité/efficacité pour le BF ?','Calendrier électoral réaliste ?']},
+    {id:'migration_flows', cat:'socio', label:'Flux migratoires & déplacés', icon:'🚸', color:'#06b6d4', level:'direct',
+     patterns:[/(migration|migrant|réfugié|refugee|déplacé|displaced|idp|hcr|unhcr).{0,40}(sahel|africa|afrique|burkina|niger)/i],
+     themes:['Couloir BF→Côte d\'Ivoire/Ghana','Politiques européennes anti-migration','Déplacés internes et capacité d\'accueil'],
+     questions:['2,1 M déplacés BF : capacité absorption ?','Migrations climatiques à 5 ans ?']},
+    {id:'religious_dynamics', cat:'socio', label:'Dynamiques religieuses', icon:'🕌', color:'#8b5cf6', level:'proximité',
+     patterns:[/(salafi|wahhabi|tijaniyya|qadiriyya|izala|sufi|soufi|missionnaire|missionnary|évangélique|evangelical|pentecôtiste|pentecostal)/i],
+     themes:['Compétition islamique au Sahel','Évangélisation pentecôtiste vs Islam','Géopolitique religieuse Sénégal/BF'],
+     questions:['Quelle alliance possible Soufis/État ?','Risque de polarisation chrétiens/musulmans ?']},
+    {id:'ethnic_tensions', cat:'socio', label:'Tensions ethno-communautaires', icon:'⚡', color:'#ef4444', level:'direct',
+     patterns:[/(peul|fulani|dogon|mossi|touareg|tuareg|sonrai|songhai|massalit|wolof).{0,40}(tension|conflit|conflict|massacre|exaction)/i, /communautaire|inter[- ]?communautaire|ethnique/i],
+     themes:['Stigmatisation Peuls/Fulani et radicalisation','Médiation traditionnelle vs justice étatique','Modèles ivoiriens d\'apaisement'],
+     questions:['Comment briser le cercle stigma→radicalisation ?','Rôle des chefferies traditionnelles ?']},
+
+    /* ═══ RUPTURES STRATÉGIQUES ═══ */
+    {id:'brics_global_south', cat:'strat', label:'BRICS & Sud global', icon:'🌍', color:'#22c55e', level:'systémique',
+     patterns:[/brics|sud global|global south|non[- ]?aligné|non[- ]?aligned|g77|bandoung/i],
+     themes:['Élargissement BRICS+ et nouvelle architecture','BNS et alternatives à la Banque mondiale','Doctrine post-westphalienne du Sud'],
+     questions:['Quelle stratégie BRICS pour l\'AES ?','Le BF peut-il être observateur BRICS ?']},
+    {id:'info_warfare', cat:'strat', label:'Guerre informationnelle', icon:'📡', color:'#dc2626', level:'direct',
+     patterns:[/(désinformation|disinformation|manipulation|fake news|propagande|propaganda|opération d'influence|info[- ]?op)/i, /(rt|sputnik|al jazeera|voa).{0,40}(afrique|africa|sahel|burkina)/i],
+     themes:['Cartographie des opérations d\'influence anti-BF','Capacités de riposte communicationnelle locale','Économie des fake news africaines'],
+     questions:['Quelle stratégie BF en guerre informationnelle ?','Faut-il un Conseil de l\'information ?']},
+    {id:'cyber_attacks', cat:'strat', label:'Cyber & sécurité numérique', icon:'💻', color:'#3b82f6', level:'systémique',
+     patterns:[/(cyberattaque|cyber[- ]?attack|piratage|hack|ransomware|fuite de données|data leak|ddos|spyware|pegasus)/i, /(afrique|africa|sahel|gouvernement)/i],
+     themes:['Posture cyber des États sahéliens','Souveraineté numérique : Starlink, fibre','Surveillance d\'État (Pegasus, Cellebrite)'],
+     questions:['Quelle dépendance cyber du BF ?','Stratégie nationale de cybersécurité ?']},
+    {id:'climate_security', cat:'strat', label:'Sécurité climatique', icon:'🌡️', color:'#0891b2', level:'systémique',
+     patterns:[/(climat|climate|sécheresse|drought|inondation|flood|désertification|desertification|sahel green|grande muraille verte)/i],
+     themes:['Sécurité climatique au Sahel — nexus','Adaptation agricole et conflits','Financement climat international'],
+     questions:['Quel impact +2°C sur la sécurité BF ?','Nature-based solutions au Sahel ?']},
+    {id:'pandemics_health', cat:'strat', label:'Pandémies & santé globale', icon:'🦠', color:'#06b6d4', level:'systémique',
+     patterns:[/(pandémie|pandemic|épidémie|epidemic|oms|who|ebola|covid|mpox|monkeypox|paludisme|malaria|tuberculose|tuberculosis)/i],
+     themes:['Souveraineté pharmaceutique africaine','Système de santé sahélien sous pression','Géopolitique vaccinale post-COVID'],
+     questions:['Capacité résilience pandémique du BF ?','BF dans Africa CDC ?']},
+
+    /* ═══ THÉÂTRES MAJEURS ═══ */
+    {id:'ukraine_russia', cat:'theatre', label:'Théâtre Ukraine-Russie', icon:'🇺🇦', color:'#3b82f6', level:'systémique',
+     patterns:[/ukraine|kiev|kyiv|zelensky|donbass|crimée|crimea/i],
+     themes:['Effets en cascade sur prix céréales','Mobilisation Wagner depuis l\'Afrique','Impact sur soutien occidental à l\'Afrique'],
+     questions:['Fin de guerre = retour Wagner en force au Sahel ?','Engagement BF dans une éventuelle médiation ?']},
+    {id:'middle_east', cat:'theatre', label:'Théâtre Moyen-Orient', icon:'🕊️', color:'#a855f7', level:'systémique',
+     patterns:[/(israël|israel|palestine|gaza|cisjordanie|hamas|hezbollah|iran|liban|lebanon|yémen|yemen|houthis|syrie|syria)/i],
+     themes:['Houthis et corridor maritime mer Rouge','Iran-AES : axe émergent','Impact narratif Gaza sur l\'opinion sahélienne'],
+     questions:['BF doit-il prendre position sur Gaza ?','Conséquences fermeture mer Rouge sur exports BF ?']},
+    {id:'china_taiwan', cat:'theatre', label:'Théâtre Indo-Pacifique', icon:'🌊', color:'#dc2626', level:'systémique',
+     patterns:[/(taïwan|taiwan|détroit|indo[- ]?pacific|aukus|quad|philippines|mer de chine)/i],
+     themes:['Effets d\'une crise Taïwan sur l\'attention US','Concurrence semiconducteurs et terres rares','Reconfiguration des alliances Sud global'],
+     questions:['Crise Taïwan = fenêtre AES pour Pékin ?']},
+    {id:'sudan_horn', cat:'theatre', label:'Théâtre Soudan/Corne', icon:'🌅', color:'#dc2626', level:'proximité',
+     patterns:[/(soudan|sudan|fsr|burhan|hemedti|hemeti|darfour|darfur|tigré|tigray|éthiopie|ethiopia|érythrée|eritrea|somalie|somalia|al[- ]?shabaab)/i],
+     themes:['Risque déstabilisation Tchad par contagion','Réseaux d\'or Soudan-EAU et impact BF','Modèle FSR vs JNIM'],
+     questions:['Capacité d\'absorption Tchad de réfugiés ?','Risque embrasement bassin tchadien ?']},
+    {id:'lake_chad', cat:'theatre', label:'Théâtre bassin Tchad', icon:'🐊', color:'#ef4444', level:'proximité',
+     patterns:[/(boko haram|iswap|lac tchad|lake chad|extrême[- ]?nord|borno|adamawa|diffa)/i],
+     themes:['Articulation ISWAP-EIGS','Coopération BF-Tchad-Niger','Modèle FMM (Force multinationale mixte)'],
+     questions:['Conflit Tchadien = ouverture frontière nord BF ?']},
+    {id:'libya_chaos', cat:'theatre', label:'Théâtre libyen', icon:'🏜️', color:'#f97316', level:'proximité',
+     patterns:[/libye|libya|haftar|tripoli|benghazi|misrata|sebha/i],
+     themes:['Stabilisation libyenne et flux Sahel','Présence Wagner en Libye et lien Sahel','Migrations subsahariennes'],
+     questions:['Réunification libyenne = baisse trafics armes ?']}
+  ];
+
+  function detectChannels(item){
+    const txt = ((item.title||'')+' '+(item.description||'')).toLowerCase();
+    const matched = [];
+    for(const ch of IMPACT_CHANNELS){
+      for(const p of ch.patterns){
+        if(p.test(txt)){ matched.push(ch.id); break; }
+      }
+    }
+    return matched;
+  }
+
+  function aggregateChannels(items){
+    const agg = {};
+    IMPACT_CHANNELS.forEach(ch=>{ agg[ch.id] = {channel:ch, count:0, items:[]}; });
+    items.forEach(it=>{
+      detectChannels(it).forEach(cid=>{
+        if(agg[cid]){ agg[cid].count++; agg[cid].items.push(it); }
+      });
+    });
+    return agg;
+  }
+
+  /* ===== RENDU PAGE "VEILLE IMPACT BF" ===== */
+  function renderImpactRadar(){
+    const el = document.getElementById('impact-content'); if(!el) return;
+    const items = (window.NEWS_STATE?.items)||[];
+    const week = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 7);
+    const agg = aggregateChannels(week);
+
+    // Catégories
+    const CATS = {
+      security:{label:'Sécuritaire',color:'#ef4444',icon:'fa-shield-halved'},
+      diplo:{label:'Diplomatique',color:'#a855f7',icon:'fa-handshake'},
+      eco:{label:'Économique',color:'#eab308',icon:'fa-coins'},
+      socio:{label:'Sociopolitique',color:'#06b6d4',icon:'fa-users'},
+      strat:{label:'Ruptures stratégiques',color:'#3b82f6',icon:'fa-bolt'},
+      theatre:{label:'Théâtres majeurs',color:'#22c55e',icon:'fa-globe'}
+    };
+
+    // Score d'exposition par catégorie
+    const catScore = {};
+    Object.keys(CATS).forEach(k=>catScore[k]={count:0, channels:0});
+    Object.values(agg).forEach(a=>{
+      catScore[a.channel.cat].count += a.count;
+      if(a.count>0) catScore[a.channel.cat].channels++;
+    });
+
+    // Niveau d'impact (colonnes)
+    const LEVEL_META = {
+      direct:{label:'IMPACT DIRECT',desc:'Affecte directement le BF',color:'#ef4444'},
+      proximité:{label:'PROXIMITÉ',desc:'Affecte les voisins ou alliés',color:'#f97316'},
+      systémique:{label:'SYSTÉMIQUE',desc:'Affecte l\'environnement global',color:'#3b82f6'},
+      indirect:{label:'INDIRECT',desc:'Effet de second ordre',color:'#a78bfa'}
+    };
+
+    const totalActive = Object.values(agg).filter(a=>a.count>0).length;
+    const totalArt = week.length;
+
+    // Top 5 canaux
+    const topChannels = Object.values(agg).filter(a=>a.count>0).sort((a,b)=>b.count-a.count).slice(0,5);
+
+    el.innerHTML = `
+      <!-- BANDEAU -->
+      <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0c1426 0%,#08101e 100%);border-color:#1a2340">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+          <div>
+            <div style="font-size:.66rem;color:#fde047;letter-spacing:3px;text-transform:uppercase;font-weight:800">⚡ Veille Impact Burkina Faso</div>
+            <div style="font-size:1.2rem;color:#e2e8f0;font-weight:700;margin-top:3px">Cartographie temps réel des dynamiques mondiales affectant le BF</div>
+            <div style="font-size:.74rem;color:#64748b;margin-top:3px">${IMPACT_CHANNELS.length} canaux scrutés · ${totalActive} actifs · ${totalArt} articles agrégés (7 jours)</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px">
+          ${Object.entries(CATS).map(([k,m])=>{
+            const score = catScore[k];
+            return `<div style="background:#0a0f1c;border-left:3px solid ${m.color};padding:9px 11px;border-radius:0 5px 5px 0">
+              <div style="font-size:.62rem;color:${m.color};letter-spacing:.5px;text-transform:uppercase;font-weight:700">${m.label}</div>
+              <div style="display:flex;align-items:flex-end;gap:5px;margin-top:3px">
+                <div style="font-size:1.4rem;color:${m.color};font-weight:800">${score.count}</div>
+                <div style="font-size:.66rem;color:#94a3b8;padding-bottom:5px">articles</div>
+              </div>
+              <div style="font-size:.65rem;color:#64748b">${score.channels} canaux actifs</div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- TOP 5 SIGNAUX FORTS -->
+      ${topChannels.length ? `<div class="card" style="margin:0 0 14px">
+        <div class="card-hd"><h2><i class="fa-solid fa-fire"></i>Signaux forts cette semaine</h2><div class="help">Top 5 canaux d'impact les plus actifs · 7 jours glissants</div></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
+          ${topChannels.map((a,rank)=>{
+            const ch = a.channel;
+            const lvl = LEVEL_META[ch.level];
+            return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-top:4px solid ${ch.color};border-radius:6px;padding:12px;cursor:pointer" onclick="document.getElementById('imp-ch-${ch.id}')?.scrollIntoView({behavior:'smooth',block:'start'})">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+                <span style="font-size:1.5rem">${ch.icon}</span>
+                <div style="text-align:right">
+                  <div style="font-size:1.6rem;color:${ch.color};font-weight:800;line-height:1">${a.count}</div>
+                  <div style="font-size:.62rem;color:#64748b">articles</div>
+                </div>
+              </div>
+              <div style="font-size:.85rem;color:#e2e8f0;font-weight:700;margin-bottom:3px">${ch.label}</div>
+              <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:6px">
+                <span class="chip" style="background:${lvl.color}22;color:${lvl.color};border:1px solid ${lvl.color}55;font-size:.6rem;font-weight:700">${lvl.label}</span>
+                <span class="chip gray" style="font-size:.6rem">#${rank+1}</span>
+              </div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>` : ''}
+
+      <!-- VUE COMPLÈTE PAR CATÉGORIE -->
+      ${Object.entries(CATS).map(([catKey,catMeta])=>{
+        const catChannels = Object.values(agg).filter(a=>a.channel.cat===catKey).sort((a,b)=>b.count-a.count);
+        if(!catChannels.length) return '';
+        return `<div class="card" style="margin:0 0 14px;border-left:4px solid ${catMeta.color}">
+          <div class="card-hd"><h2 style="color:${catMeta.color}"><i class="fa-solid ${catMeta.icon}"></i>${catMeta.label}</h2><span style="font-size:.74rem;color:#64748b">${catChannels.filter(a=>a.count>0).length}/${catChannels.length} canaux actifs</span></div>
+          ${catChannels.map(a=>{
+            const ch = a.channel;
+            const lvl = LEVEL_META[ch.level];
+            const isActive = a.count>0;
+            return `<div id="imp-ch-${ch.id}" style="background:${isActive?'#0a0f1c':'rgba(10,15,28,.4)'};border:1px solid ${isActive?'#1a2340':'#0c1426'};border-left:3px solid ${isActive?ch.color:'#1a2340'};border-radius:5px;padding:11px 13px;margin-bottom:8px;${isActive?'':'opacity:.45'}">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:7px">
+                <div style="flex:1;min-width:200px">
+                  <div style="font-size:.95rem;color:#e2e8f0;font-weight:700"><span style="margin-right:5px">${ch.icon}</span>${ch.label}</div>
+                  <div style="font-size:.66rem;color:${lvl.color};font-weight:700;letter-spacing:.5px;margin-top:2px">${lvl.label} · ${lvl.desc}</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-size:1.3rem;color:${isActive?ch.color:'#64748b'};font-weight:800">${a.count}</div>
+                  <div style="font-size:.62rem;color:#64748b">article${a.count>1?'s':''} · 7 j</div>
+                </div>
+              </div>
+              ${isActive ? `
+                <!-- Articles détectés -->
+                <details style="margin-top:7px"><summary style="cursor:pointer;font-size:.72rem;color:#60a5fa;font-weight:600">Voir les articles détectés (${a.count})</summary>
+                  <div style="margin-top:7px;max-height:180px;overflow-y:auto;border-left:2px solid ${ch.color}55;padding-left:8px">
+                    ${a.items.slice(0,8).map(it=>`<a href="${it.link||'#'}" target="_blank" rel="noopener" style="display:block;padding:4px 0;border-bottom:1px solid #141c30;font-size:.74rem;color:#cbd5e1;text-decoration:none">${reliabilityChip(it,{compact:true})} <span style="color:#94a3b8;font-size:.66rem">${it._source||'—'}</span> ${(it.title||'').slice(0,140)}</a>`).join('')}
+                    ${a.items.length>8?`<div style="font-size:.66rem;color:#64748b;padding:5px 0">+ ${a.items.length-8} autres</div>`:''}
+                  </div>
+                </details>
+                <!-- Thèmes de recherche -->
+                <div style="background:rgba(96,165,250,.05);border:1px solid rgba(96,165,250,.2);border-radius:4px;padding:8px 10px;margin-top:8px">
+                  <div style="font-size:.62rem;color:#60a5fa;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:4px"><i class="fa-solid fa-lightbulb"></i> Thèmes de recherche suggérés</div>
+                  ${ch.themes.map(t=>`<div style="font-size:.74rem;color:#cbd5e1;padding:2px 0;line-height:1.4">▸ ${t}</div>`).join('')}
+                </div>
+                <!-- Questions analytiques -->
+                <div style="background:rgba(253,224,71,.04);border:1px solid rgba(253,224,71,.2);border-radius:4px;padding:8px 10px;margin-top:5px">
+                  <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:4px"><i class="fa-solid fa-circle-question"></i> Questions à creuser</div>
+                  ${ch.questions.map(q=>`<div style="font-size:.74rem;color:#cbd5e1;padding:2px 0;line-height:1.4">→ ${q}</div>`).join('')}
+                </div>
+              ` : `<div style="font-size:.7rem;color:#64748b;font-style:italic">Aucun signal détecté cette semaine — canal en veille</div>`}
+            </div>`;
+          }).join('')}
+        </div>`;
+      }).join('')}
+
+      <!-- PIED -->
+      <div style="margin-top:14px;padding:10px 14px;background:rgba(96,165,250,.04);border:1px solid rgba(96,165,250,.15);border-radius:6px;font-size:.7rem;color:#64748b;line-height:1.5;text-align:center">
+        <b style="color:#94a3b8">Méthodologie :</b> détection par signatures lexicales (regex) sur ${IMPACT_CHANNELS.length} canaux · classification par catégorie + niveau d'impact · thèmes et questions construits à partir de la doctrine d'analyse think-tank · mise à jour à chaque collecte RSS.
+      </div>`;
+  }
+
+  /* ===== EXPORT BQS — VERSION WORD (.doc) ===== */
+  function exportBQSDOCX(bqs){
+    bqs = bqs || buildBQS();
+    const dateStr = bqs.date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    const timeStr = bqs.date.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    const ims = bqs.ims;
+
+    const css = `<style>
+      body{font-family:'Calibri',Arial,sans-serif;font-size:11pt;color:#222;line-height:1.5;margin:1.5cm}
+      h1{font-size:22pt;color:#0a3d62;border-bottom:3px solid #0a3d62;padding-bottom:6pt;margin:0 0 10pt 0}
+      h2{font-size:14pt;color:#a52e2e;border-bottom:1px solid #a52e2e;margin-top:16pt;padding-bottom:3pt}
+      h3{font-size:12pt;color:#1e40af;margin-top:8pt}
+      .meta{color:#666;font-style:italic;font-size:10pt}
+      .ims-box{display:table;width:100%;background:#f0f4f8;border-left:5px solid ${ims.color};padding:10pt 14pt;margin:10pt 0}
+      .ims-num{font-size:32pt;color:${ims.color};font-weight:bold;line-height:1}
+      .ims-lbl{font-size:11pt;color:#444;font-weight:bold}
+      table{width:100%;border-collapse:collapse;margin:8pt 0}
+      th{background:#0a3d62;color:#fff;text-align:left;padding:6pt;font-size:10pt}
+      td{border:1px solid #ccc;padding:6pt;font-size:10pt;vertical-align:top}
+      .top5{background:#f8fafc;border:1px solid #cbd5e1;border-left:4px solid ${ims.color};padding:10pt 14pt;margin:8pt 0;page-break-inside:avoid}
+      .top5-num{color:${ims.color};font-weight:bold;font-size:13pt}
+      .top5-title{font-weight:bold;font-size:12pt;color:#1a1a1a}
+      .top5-meta{color:#666;font-size:9pt;margin:4pt 0}
+      .impl{background:#fef3c7;border-left:4px solid #d97706;padding:8pt 12pt;margin:6pt 0}
+      .indic{background:#eff6ff;border-left:4px solid #2563eb;padding:6pt 12pt;margin:4pt 0;font-size:10.5pt}
+      .reliab{display:inline-block;font-family:'Courier New',monospace;font-weight:bold;padding:1pt 5pt;background:#ddd;color:#333;border-radius:2pt;font-size:9pt}
+      .footer{margin-top:24pt;padding-top:8pt;border-top:1px solid #ccc;color:#666;font-size:9pt;font-style:italic;text-align:center}
+      .bar{display:inline-block;height:8pt;background:#ddd;margin-right:4pt;vertical-align:middle;width:40%}
+      .bar-fill{display:inline-block;height:8pt;background:#a52e2e}
+    </style>`;
+
+    let html = `<!DOCTYPE html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="UTF-8"><title>Brief Quotidien Stratégique — ${bqs.date.toLocaleDateString('fr-FR')}</title>${css}</head><body>`;
+
+    // EN-TÊTE
+    html += `<h1>Brief Quotidien Stratégique</h1>
+      <p class="meta">GéoWatch — Cycle de veille automatisé • <span style="text-transform:capitalize">${dateStr}</span> à ${timeStr} • Document à diffusion restreinte</p>`;
+
+    // BANDEAU IMS
+    html += `<div class="ims-box">
+      <div style="display:table-cell;width:30%;vertical-align:middle">
+        <div class="ims-num">${ims.score}<span style="font-size:14pt;color:#666">/100</span></div>
+        <div class="ims-lbl" style="color:${ims.color}">${ims.level}</div>
+      </div>
+      <div style="display:table-cell;vertical-align:middle">
+        <b>Indice de Menace Stratégique — Burkina Faso</b><br>
+        <span class="meta">Calcul pondéré sur ${ims.dataPoints} articles · fenêtre ${ims.window}</span><br>
+        <span style="font-size:10pt">Articles 24h : <b>${bqs.stats.articles24}</b> · Pertinents BF : <b style="color:#d97706">${bqs.stats.bf24}</b> · Couverture occidentale : <b style="color:#a52e2e">${bqs.stats.adversarial}</b></span>
+      </div>
+    </div>`;
+
+    // RÉSUMÉ EXÉCUTIF
+    html += `<h2>Résumé exécutif (BLUF)</h2>`;
+    const bluf = `IMS-BF du jour : <b style="color:${ims.color}">${ims.score}/100 (${ims.level})</b>. ${bqs.stats.articles24} articles agrégés (${bqs.stats.bf24} pertinents BF, ${bqs.stats.adversarial} à analyser côté occidental). ${bqs.top5.length>0?'Le développement principal porte sur : <i>«&nbsp;'+(bqs.top5[0].title||'').slice(0,180)+'&nbsp;»</i>.':''}`;
+    html += `<p>${bluf}</p>`;
+
+    // DÉCOMPOSITION IMS
+    html += `<h2>Décomposition de l'indice de menace</h2><table>
+      <tr><th>Dimension</th><th>Poids</th><th>Score</th><th>Signaux</th><th>Visualisation</th></tr>`;
+    Object.values(ims.dimensions).forEach(d=>{
+      const dCol = d.score>=70?'#dc2626':d.score>=50?'#f97316':d.score>=30?'#f59e0b':d.score>=15?'#eab308':'#22c55e';
+      html += `<tr><td><b>${d.label}</b></td><td>${d.weight}%</td><td><b style="color:${dCol}">${d.score}/100</b></td><td>${d.count}</td><td><span class="bar"><span class="bar-fill" style="width:${d.score}%;background:${dCol}"></span></span></td></tr>`;
+    });
+    html += `</table>`;
+
+    // TOP 5
+    html += `<h2>Top 5 développements stratégiques (24 h)</h2>`;
+    if(bqs.top5.length){
+      bqs.top5.forEach((it,i)=>{
+        const block = classifyBlock(it);
+        const blockMeta = BLOCKS[block] || {label:'Non classé',flag:''};
+        const L = reliabilityLetter(it), N = credibilityNum(it);
+        const impl = bqs.implications[i] || [];
+        const date = it.pubDate ? new Date(it.pubDate).toLocaleString('fr-FR',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+        html += `<div class="top5">
+          <div class="top5-num">${i+1}.</div>
+          <div class="top5-title">${it.title||'(sans titre)'}</div>
+          <div class="top5-meta">
+            <span class="reliab">[${L}${N}]</span>
+            ${blockMeta.flag} ${blockMeta.label} · ${it._source||'—'} · ${date}
+          </div>
+          ${it.description?`<p style="color:#444;font-size:10.5pt">${(it.description||'').slice(0,300)}${(it.description||'').length>300?'…':''}</p>`:''}
+          <div class="impl">
+            <b style="color:#92400e">Implications Burkina Faso :</b>
+            ${impl.map(l=>`<div>→ ${l}</div>`).join('')}
+          </div>
+          ${it.link?`<p style="font-size:9pt;color:#3b82f6"><a href="${it.link}">${it.link}</a></p>`:''}
+        </div>`;
+      });
+    } else {
+      html += `<p class="meta">Aucun article à fort enjeu n'a été détecté sur la période. Les flux RSS sont peut-être en cours de chargement.</p>`;
+    }
+
+    // INDICATEURS
+    html += `<h2>Indicateurs à surveiller (J+1 → J+7)</h2>`;
+    bqs.indicators.forEach(ind=>{
+      html += `<div class="indic">▸ ${ind.replace(/^[🔴🟠🟡🟢]\s*/,'')}</div>`;
+    });
+
+    // PIED
+    html += `<div class="footer">GéoWatch — Cycle de veille automatisé · Cotes de fiabilité standard OTAN (A1–F6) · Document généré à partir de ${bqs.stats.articles24} sources internationales · Méthodologie : IMS = 0,25·Sécuritaire + 0,20·Diplo + 0,20·Éco + 0,15·Cohésion + 0,10·Régional + 0,10·Info</div>`;
+
+    html += `</body></html>`;
+
+    const blob = new Blob(['﻿', html], {type:'application/msword'});
+    const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`BQS_${bqs.date.toISOString().slice(0,10)}.doc`; a.click();
+    toast('Brief Quotidien exporté en Word','success');
+  }
+
   // Public API
   return {
     BLOCKS, classifyBlock,
     RELIABILITY_LETTER, CREDIBILITY_NUM, SOURCE_RATING,
     reliabilityLetter, credibilityNum, reliabilityChip,
     computeIMS, pushIMSHistory, getIMSHistory, renderIMSGauge,
-    buildBQS, renderBQS, exportBQSPDF,
-    renderAdversarial
+    buildBQS, renderBQS, exportBQSPDF, exportBQSDOCX,
+    renderAdversarial,
+    IMPACT_CHANNELS, detectChannels, aggregateChannels, renderImpactRadar
   };
 })();
 
-// Exposer renderBQS et renderAdversarial pour le Router
+// Exposer renderBQS, renderAdversarial et renderImpactRadar pour le Router
 function renderBQS(){ GW_INTEL.renderBQS(); }
 function renderAdversarial(){ GW_INTEL.renderAdversarial(); }
+function renderImpactRadar(){ GW_INTEL.renderImpactRadar(); }
 
 /* ============= DASHBOARD ============= */
 function renderDashboard(){
@@ -2408,6 +2846,7 @@ async function loadNews(){
   if(cur==='dash') renderDashboard();
   else if(cur==='bqs') renderBQS();
   else if(cur==='adversarial') renderAdversarial();
+  else if(cur==='impact_radar') renderImpactRadar();
   else if(cur==='alerts') renderAlerts();
   else if(cur==='sources') renderSources();
   else if(cur==='conflicts') renderConflicts();

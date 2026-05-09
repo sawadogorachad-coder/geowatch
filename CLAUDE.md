@@ -17,13 +17,33 @@ Bloc IIFE situé juste avant `renderDashboard()` dans `app.js`. Expose 4 fonctio
 - `GW_INTEL.buildBQS()` → top 5 articles 24h + implications BF + indicateurs J+1→J+7
 - Score articles : `_bf×30 + Burkina×25 + Sahel×18 + CEDEAO×12 + majeur×20 + ...`
 - Implications BF auto-générées par patterns regex
-- Export PDF A4 multi-pages via `GW_INTEL.exportBQSPDF(bqs)` (bandeau IMS, top 5, indicateurs, méthodologie)
+- **Export PDF A4** : `GW_INTEL.exportBQSPDF(bqs)` (bandeau IMS, top 5, indicateurs, méthodologie)
+- **Export Word (.doc)** : `GW_INTEL.exportBQSDOCX(bqs)` (HTML+Word XML, ouvrable dans Microsoft Word)
 
 ### 3. Cotes de fiabilité OTAN (A1-F6)
 - Lettre A-F pour la **source** (`reliabilityLetter(item)`) basée sur `SOURCE_RATING` (table de 30+ sources connues)
 - Chiffre 1-6 pour la **crédibilité** (`credibilityNum(item)`) calculée par corroboration multi-sources
 - `GW_INTEL.reliabilityChip(item, {compact})` → badge HTML stylisé
 - Affiché dans `renderNewsList()` à côté de chaque article
+
+### 5. MATRICE D'IMPACT MONDIAL — 35 canaux affectant le BF
+- Page `data-page="impact_radar"` accessible via nav (badge "35")
+- `GW_INTEL.IMPACT_CHANNELS` : taxonomie de 35 canaux d'impact sur 6 catégories :
+  - **Sécuritaire** (5) : sahel_jihad, coastal_spillover, mercenaries_pmcs, arms_trafficking, drone_warfare
+  - **Diplomatique** (7) : cedeao_pressure, france_fr_relations, russia_pivot, china_engagement, gulf_powers, usa_africom, un_unsc
+  - **Économique** (7) : gold_market, cotton_textile, oil_energy, fcfa_currency, food_security, mining_commodities, aid_sanctions
+  - **Sociopolitique** (5) : coups_juntas_global, democracy_setback, migration_flows, religious_dynamics, ethnic_tensions
+  - **Ruptures stratégiques** (5) : brics_global_south, info_warfare, cyber_attacks, climate_security, pandemics_health
+  - **Théâtres majeurs** (6) : ukraine_russia, middle_east, china_taiwan, sudan_horn, lake_chad, libya_chaos
+- Chaque canal : `{id, cat, label, icon, color, level, patterns[], themes[], questions[]}`
+- Niveau d'impact : `direct | proximité | indirect | systémique`
+- `GW_INTEL.detectChannels(item)` retourne les canaux activés par un article
+- `GW_INTEL.aggregateChannels(items)` retourne `{channel, count, items}` pour tous les canaux
+- `GW_INTEL.renderImpactRadar()` : rendu page complète avec :
+  - Score d'exposition par catégorie (compteurs colorés)
+  - Top 5 signaux forts (cards cliquables, scroll vers le canal)
+  - Vue complète par catégorie (canaux actifs avec articles + thèmes + questions)
+- **Pour chaque canal actif** : 3 thèmes de recherche suggérés + 2-3 questions analytiques
 
 ### 4. Veille adversariale
 - Page `data-page="adversarial"` accessible via nav
