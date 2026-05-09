@@ -43,6 +43,40 @@ Pages équipées :
 
 Helper `chartInsight(canvasId, methodHTML, lectureHTML, color, bottomLine)` accepte désormais un **5e argument** `bottomLine` qui affiche un encart « À retenir » en gros pour le décideur.
 
+## 🧬 Module GW_DEPTH — Profondeur analytique injectée
+
+Le module `GW_DEPTH` enrichit toutes les sections (Briefs, Scénarios, Indicateurs, Reconfigurations, Impact BF, Analyses) avec **6 couches de profondeur live** :
+
+### API publique
+```js
+GW_DEPTH.getConflictArticles(conflictId, days=7)  // Articles RSS récents pour un conflit
+GW_DEPTH.getRecentSources(conflictId, days)       // Sources distinctes qui ont parlé du conflit
+GW_DEPTH.detectActiveSignals(c)                   // Statut live des indicateurs (activated/monitoring/quiet)
+GW_DEPTH.detectScenarioTriggers(c)                // Statut des déclencheurs par scénario
+GW_DEPTH.getResearchAngles(c)                     // Questions de recherche spécifiques au conflit
+GW_DEPTH.getOperationalActions(c)                 // Actions BF concrètes triées par priorité
+GW_DEPTH.statusBadge(status)                      // Badge HTML du statut
+GW_DEPTH.articleLine(article, opts)               // Affichage compact d'un article
+GW_DEPTH.crossRefBlock(c)                         // Boutons cross-ref vers Brief/Scen/Indic/Impact
+GW_DEPTH.recentArticlesBlock(conflictId, days, max)
+GW_DEPTH.liveSignalsBlock(c)
+GW_DEPTH.researchAnglesBlock(c)
+GW_DEPTH.actionsBlock(c)
+```
+
+### Pages enrichies par GW_DEPTH
+- **Briefs (renderBriefs)** : 6 couches — Décideur · Analyste · Statut LIVE indicateurs · Citations RSS · Pistes recherche · Actions BF
+- **Scénarios (renderScenarios)** : statut déclencheur (DORMANT/PARTIEL/ACTIVÉ) par scénario, articles RSS qui activent
+- **Indicateurs (renderIndicators)** : compteurs Activés/Monitoring/Calmes + badge statut par signal + détails articles
+- **Reconfigurations (renderReconfig)** : phase d'avancement (LATENT/EN COURS/EN ACCÉLÉRATION) + articles qui matérialisent
+- **Impact BF (renderImpactBF)** : articles RSS qui matérialisent l'impact + actions opérationnelles
+- **Analyses (renderAnalyses)** : panneau « Anomalies détectées & insights automatiques » avec lecture interprétative
+
+### Heuristique d'activation (ex. signaux 24-72h)
+1. Extraction de mots-clés du texte de l'indicateur (mots ≥5 lettres, sans stopwords)
+2. Recherche dans les articles 24h pour ce conflit
+3. Statut : `activated` si match ≥1 · `monitoring` si articles RSS récents existent (sans match) · `quiet` sinon
+
 ## ⚡ Module GW_INTEL — Intelligence stratégique avancée
 
 Bloc IIFE situé juste avant `renderDashboard()` dans `app.js`. Expose 4 fonctionnalités :

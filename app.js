@@ -1377,6 +1377,270 @@ function renderBQS(){ GW_INTEL.renderBQS(); }
 function renderAdversarial(){ GW_INTEL.renderAdversarial(); }
 function renderImpactRadar(){ GW_INTEL.renderImpactRadar(); }
 
+/* ==========================================================================
+   ===== GW_DEPTH : PROFONDEUR ANALYTIQUE INTÉGRÉE =====
+   ==========================================================================
+   Module qui injecte des couches profondes dans chaque section :
+   - Articles RSS récents par conflit (citations live)
+   - Détection des déclencheurs activés
+   - Statut live des indicateurs (allumé/calme)
+   - Cross-références automatiques entre sections
+   - Questions de recherche spécifiques
+   - Actions opérationnelles concrètes pour le BF
+   ========================================================================== */
+const GW_DEPTH = (()=>{
+
+  /* ===== Articles RSS pertinents pour un conflit, fenêtre N jours ===== */
+  function getConflictArticles(conflictId, days=7){
+    const items = (window.NEWS_STATE?.items)||[];
+    const now = Date.now();
+    return items.filter(it=>{
+      if(!it.pubDate) return false;
+      if((now-new Date(it.pubDate))/86400000 > days) return false;
+      return (it._conflicts||[]).some(c=>c.id===conflictId);
+    }).sort((a,b)=>new Date(b.pubDate)-new Date(a.pubDate));
+  }
+
+  /* ===== Détection live des déclencheurs d'un conflit ===== */
+  // Pour chaque indicateur 24-72h ou 7-30j d'un conflit, on cherche s'il a un correspondant RSS
+  function detectActiveSignals(c){
+    const signals = [];
+    const articles = getConflictArticles(c.id, 7);
+    const articles24 = getConflictArticles(c.id, 1);
+
+    // Indicateur 24-72h
+    if(c.brief_analyste?.indicateurs_24_72h){
+      const text = c.brief_analyste.indicateurs_24_72h.toLowerCase();
+      const keywords = extractKeywords(text);
+      const matched = articles24.filter(a=>keywords.some(k=>((a.title||'')+' '+(a.description||'')).toLowerCase().includes(k)));
+      signals.push({
+        horizon: '24-72 h',
+        text: c.brief_analyste.indicateurs_24_72h,
+        status: matched.length>0 ? 'activated' : articles24.length>2 ? 'monitoring' : 'quiet',
+        articles: matched.slice(0,3),
+        articleCount: matched.length,
+        color: '#ef4444'
+      });
+    }
+    // Indicateur 7-30j
+    if(c.brief_analyste?.indicateurs_7_30j){
+      const text = c.brief_analyste.indicateurs_7_30j.toLowerCase();
+      const keywords = extractKeywords(text);
+      const matched = articles.filter(a=>keywords.some(k=>((a.title||'')+' '+(a.description||'')).toLowerCase().includes(k)));
+      signals.push({
+        horizon: '7-30 j',
+        text: c.brief_analyste.indicateurs_7_30j,
+        status: matched.length>=3 ? 'activated' : matched.length>0 ? 'monitoring' : 'quiet',
+        articles: matched.slice(0,3),
+        articleCount: matched.length,
+        color: '#60a5fa'
+      });
+    }
+    return signals;
+  }
+
+  /* ===== Extraction de mots-clés depuis un texte d'indicateur ===== */
+  function extractKeywords(text){
+    // Garder mots de plus de 4 lettres, sans accents, sans stopwords
+    const stopwords = new Set(['avec','dans','pour','vers','sans','sous','entre','aussi','plus','très','tout','tous','toutes','leur','leurs','celui','celle','cette','sont','être','avoir','faire','peut','doit','tout','depuis','également','également','jusqu\'à']);
+    return text.toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g,'')
+      .replace(/[^a-z0-9\s]/g,' ')
+      .split(/\s+/)
+      .filter(w=>w.length>=5 && !stopwords.has(w))
+      .slice(0,12);
+  }
+
+  /* ===== Détection des scénarios à déclencheurs activés ===== */
+  function detectScenarioTriggers(c){
+    if(!c.scenarios) return [];
+    const articles = getConflictArticles(c.id, 14);
+    return c.scenarios.map(s=>{
+      const keywords = extractKeywords((s.nom||'')+' '+(s.d||''));
+      const matched = articles.filter(a=>{
+        const txt = ((a.title||'')+' '+(a.description||'')).toLowerCase();
+        return keywords.filter(k=>txt.includes(k)).length>=2;
+      });
+      const triggerStatus = matched.length>=3 ? 'activated' : matched.length>0 ? 'partial' : 'dormant';
+      return {scenario:s, articles:matched.slice(0,3), articleCount:matched.length, triggerStatus};
+    });
+  }
+
+  /* ===== Sources qui ont mentionné le conflit récemment ===== */
+  function getRecentSources(conflictId, days=7){
+    const articles = getConflictArticles(conflictId, days);
+    const sources = {};
+    articles.forEach(a=>{
+      const src = a._source||'inconnue';
+      if(!sources[src]) sources[src] = {count:0, latest:a.pubDate};
+      sources[src].count++;
+      if(new Date(a.pubDate)>new Date(sources[src].latest)) sources[src].latest = a.pubDate;
+    });
+    return Object.entries(sources)
+      .map(([name, data])=>({name, ...data}))
+      .sort((a,b)=>b.count-a.count);
+  }
+
+  /* ===== Helper : badge de statut d'un signal ===== */
+  function statusBadge(status){
+    const meta = {
+      activated: {label:'🔴 ACTIVÉ', color:'#ef4444', desc:'Signal allumé maintenant'},
+      monitoring: {label:'🟡 EN COURS', color:'#f59e0b', desc:'Signal partiellement détecté'},
+      quiet: {label:'⚪ CALME', color:'#64748b', desc:'Aucun signal détecté'},
+      partial: {label:'🟡 PARTIEL', color:'#f59e0b', desc:'Quelques articles détectés'},
+      dormant: {label:'⚪ DORMANT', color:'#64748b', desc:'Aucun déclencheur'}
+    };
+    const m = meta[status] || meta.quiet;
+    return `<span class="chip" style="background:${m.color}22;color:${m.color};border:1px solid ${m.color}66;font-weight:800;font-size:.66rem;letter-spacing:.5px" title="${m.desc}">${m.label}</span>`;
+  }
+
+  /* ===== Affichage compact d'un article ===== */
+  function articleLine(a, opts={}){
+    if(!a) return '';
+    const titleMax = opts.titleMax || 140;
+    const date = a.pubDate ? new Date(a.pubDate).toLocaleString('fr-FR',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+    const src = a._source||'—';
+    const reliab = (typeof GW_INTEL!=='undefined') ? GW_INTEL.reliabilityChip(a,{compact:true}) : '';
+    const title = (a.title||'').slice(0,titleMax);
+    const ellipsis = (a.title||'').length>titleMax ? '…' : '';
+    return `<a href="${a.link||'#'}" target="_blank" rel="noopener" style="display:block;padding:6px 9px;border-bottom:1px solid #141c30;font-size:.74rem;color:#cbd5e1;text-decoration:none;line-height:1.4">
+      <div style="display:flex;gap:6px;align-items:center;margin-bottom:2px;flex-wrap:wrap">
+        ${reliab}
+        <span style="color:#94a3b8;font-size:.66rem">${src}</span>
+        <span style="color:#64748b;font-size:.62rem">· ${date}</span>
+      </div>
+      <div>${title}${ellipsis}</div>
+    </a>`;
+  }
+
+  /* ===== Génération de questions de recherche par conflit ===== */
+  function getResearchAngles(c){
+    const angles = [];
+    if(c.region?.toLowerCase().includes('afrique')){
+      angles.push(`Comment l'évolution de ${c.short||c.name} affecte-t-elle l'équilibre régional ouest-africain ?`);
+    }
+    if(c.actors_etat?.some(a=>/wagner|russie/i.test(a))){
+      angles.push(`Quelle est la trajectoire de l'engagement russe dans ${c.region} et ses limites soutenables ?`);
+    }
+    if(c.actors_non_etat?.some(a=>/jnim|eigs|aqim|daesh/i.test(a))){
+      angles.push(`Comment évoluent les modes opératoires des groupes armés non étatiques ?`);
+      angles.push(`Quels signaux d'extension territoriale sont observables ?`);
+    }
+    if(c.intensity>=7){
+      angles.push(`Quelles sont les conditions matérielles d'une désescalade dans ce conflit ?`);
+    }
+    if(c.scenarios?.length){
+      angles.push(`Quels indicateurs précoces permettraient de discriminer entre les scénarios projetés ?`);
+    }
+    angles.push(`Quel impact direct ${c.short||c.name} a-t-il sur les politiques publiques burkinabè à 6 mois ?`);
+    return angles;
+  }
+
+  /* ===== Actions opérationnelles BF concrètes ===== */
+  function getOperationalActions(c){
+    const actions = [];
+    const i = c.impact_bf;
+    if(c.intensity>=7){
+      actions.push({prio:'urgent', icon:'fa-bolt', text:'Mettre à jour la matrice de risques nationale (volet sécuritaire)'});
+    }
+    if(i?.economique?.length){
+      actions.push({prio:'haute', icon:'fa-chart-line', text:'Mettre en place une veille économique sur les indicateurs (or, coton, F CFA, dette)'});
+    }
+    if(i?.diplomatique?.length){
+      actions.push({prio:'haute', icon:'fa-handshake', text:'Préparer position diplomatique du Burkina Faso sur ce dossier'});
+    }
+    if(i?.securitaire?.length){
+      actions.push({prio:'urgent', icon:'fa-shield-halved', text:'Évaluation des points de friction frontaliers et capacités de riposte'});
+    }
+    actions.push({prio:'moyenne', icon:'fa-binoculars', text:'Cycle de monitoring hebdomadaire des indicateurs identifiés'});
+    actions.push({prio:'moyenne', icon:'fa-file-circle-check', text:'Note de situation actualisée mensuellement'});
+    return actions;
+  }
+
+  /* ===== Cross-references vers autres pages ===== */
+  function crossRefBlock(c){
+    return `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
+      <button class="btn ghost sm" onclick="Router.go('briefs');setTimeout(()=>{const s=document.getElementById('brief-conflict');if(s){s.value='${c.id}';renderBriefs();}},80)"><i class="fa-solid fa-bullseye"></i> Brief 2 couches</button>
+      <button class="btn ghost sm" onclick="Router.go('scenarios');setTimeout(()=>{const s=document.getElementById('scen-conflict');if(s){s.value='${c.id}';renderScenarios();}},80)"><i class="fa-solid fa-chess"></i> Scénarios</button>
+      <button class="btn ghost sm" onclick="Router.go('indicators')"><i class="fa-solid fa-binoculars"></i> Indicateurs</button>
+      <button class="btn ghost sm" onclick="Router.go('impact_bf');setTimeout(()=>{const s=document.getElementById('bf-conflict');if(s){s.value='${c.id}';renderImpactBF();}},80)"><i class="fa-solid fa-flag-checkered" style="color:#fde047"></i> Impact BF</button>
+      <button class="btn ghost sm" onclick="showConflictDetail('${c.id}')"><i class="fa-solid fa-circle-info"></i> Fiche complète</button>
+    </div>`;
+  }
+
+  /* ===== Bloc "Articles RSS récents pour ce conflit" ===== */
+  function recentArticlesBlock(conflictId, days=7, max=5){
+    const articles = getConflictArticles(conflictId, days);
+    if(!articles.length) return `<div style="background:#0a0f1c;border:1px dashed #1a2340;border-radius:5px;padding:11px 14px;font-size:.78rem;color:#64748b;font-style:italic">Aucun article RSS pertinent dans les ${days} derniers jours pour ce conflit. Les sources sont peut-être en cours de chargement, ou ce conflit ne fait pas l'actualité immédiate.</div>`;
+    const sources = getRecentSources(conflictId, days);
+    return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:6px;padding:11px 13px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;flex-wrap:wrap;gap:8px">
+        <div style="font-size:.7rem;color:#86efac;text-transform:uppercase;letter-spacing:1px;font-weight:700"><i class="fa-solid fa-broadcast-tower"></i> Articles RSS récents (${days} j) <span style="font-weight:400;color:#64748b">— ${articles.length} trouvés</span></div>
+        <div style="font-size:.66rem;color:#94a3b8">${sources.length} sources distinctes : ${sources.slice(0,3).map(s=>`<b style="color:#cbd5e1">${s.name}</b> (${s.count})`).join(' · ')}${sources.length>3?` <span style="color:#64748b">+${sources.length-3}</span>`:''}</div>
+      </div>
+      <div>
+        ${articles.slice(0,max).map(a=>articleLine(a)).join('')}
+        ${articles.length>max?`<div style="font-size:.66rem;color:#64748b;padding:5px 9px;font-style:italic">+ ${articles.length-max} autres articles disponibles</div>`:''}
+      </div>
+    </div>`;
+  }
+
+  /* ===== Bloc "Statut live des indicateurs" pour un conflit ===== */
+  function liveSignalsBlock(c){
+    const signals = detectActiveSignals(c);
+    if(!signals.length) return '';
+    return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:6px;padding:11px 13px">
+      <div style="font-size:.7rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:8px"><i class="fa-solid fa-radar" style="color:#fde047"></i> Statut live des signaux (croisement RSS automatique)</div>
+      ${signals.map(s=>`<div style="background:#141c30;border-left:3px solid ${s.color};border-radius:0 5px 5px 0;padding:9px 11px;margin-bottom:7px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:5px">
+          <span style="font-size:.7rem;color:${s.color};text-transform:uppercase;letter-spacing:1px;font-weight:800">${s.horizon}</span>
+          ${statusBadge(s.status)}
+        </div>
+        <div style="font-size:.78rem;color:#cbd5e1;line-height:1.5;margin-bottom:5px">${s.text}</div>
+        ${s.articleCount>0 ? `
+          <details style="margin-top:5px">
+            <summary style="cursor:pointer;font-size:.7rem;color:#60a5fa;font-weight:600">Voir ${s.articleCount} article${s.articleCount>1?'s':''} qui ${s.articleCount>1?'confirment':'confirme'} ce signal</summary>
+            <div style="margin-top:4px">${s.articles.map(a=>articleLine(a)).join('')}</div>
+          </details>` : `<div style="font-size:.7rem;color:#64748b;font-style:italic;margin-top:3px">Aucune corroboration RSS pour le moment — surveillance passive</div>`}
+      </div>`).join('')}
+    </div>`;
+  }
+
+  /* ===== Bloc "Questions de recherche" ===== */
+  function researchAnglesBlock(c){
+    const angles = getResearchAngles(c);
+    if(!angles.length) return '';
+    return `<div style="background:rgba(96,165,250,.05);border:1px solid rgba(96,165,250,.2);border-radius:6px;padding:11px 13px">
+      <div style="font-size:.7rem;color:#60a5fa;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:7px"><i class="fa-solid fa-lightbulb"></i> Pistes de recherche analytique pour ce conflit</div>
+      ${angles.map((q,i)=>`<div style="font-size:.78rem;color:#cbd5e1;padding:4px 0;line-height:1.5;border-bottom:1px solid #141c30"><span style="color:#60a5fa;font-weight:700">Q${i+1}.</span> ${q}</div>`).join('')}
+    </div>`;
+  }
+
+  /* ===== Bloc "Actions opérationnelles BF" ===== */
+  function actionsBlock(c){
+    const actions = getOperationalActions(c);
+    if(!actions.length) return '';
+    const prioCol = {urgent:'#ef4444',haute:'#f97316',moyenne:'#fde047'};
+    return `<div style="background:rgba(253,224,71,.04);border:1px solid rgba(253,224,71,.2);border-radius:6px;padding:11px 13px">
+      <div style="font-size:.7rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:8px"><i class="fa-solid fa-list-check"></i> Actions opérationnelles recommandées (volet Burkina Faso)</div>
+      ${actions.map(a=>`<div style="display:flex;align-items:center;gap:9px;padding:5px 0;border-bottom:1px solid #141c30">
+        <i class="fa-solid ${a.icon}" style="color:${prioCol[a.prio]||'#94a3b8'};font-size:.92rem;width:18px;text-align:center"></i>
+        <span class="chip" style="background:${prioCol[a.prio]}22;color:${prioCol[a.prio]};border:1px solid ${prioCol[a.prio]}55;font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0">${a.prio}</span>
+        <span style="font-size:.78rem;color:#cbd5e1;line-height:1.4">${a.text}</span>
+      </div>`).join('')}
+    </div>`;
+  }
+
+  return {
+    getConflictArticles, getRecentSources,
+    detectActiveSignals, detectScenarioTriggers,
+    getResearchAngles, getOperationalActions,
+    statusBadge, articleLine,
+    crossRefBlock, recentArticlesBlock, liveSignalsBlock,
+    researchAnglesBlock, actionsBlock
+  };
+})();
+
 /* ============= SYNTHÈSE DU JOUR (bandeau "À retenir") =============
    Génère en haut du dashboard une synthèse en 2 lignes accessibles à tous :
    - Tendance globale (calme / tendu / critique)
@@ -1909,15 +2173,84 @@ function renderBriefs(){
     ${b.implications_7_30j?`<div style="grid-column:1/-1;background:#0a0f1c;padding:12px 14px;border-radius:8px;border:1px solid #1a2340"><div style="font-size:.72rem;color:#f97316;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px"><i class="fa-solid fa-bolt"></i> Implications 7-30 j</div><div style="color:#cbd5e1;line-height:1.55;font-size:.86rem">${b.implications_7_30j}</div></div>`:''}
   </div>` : '<div class="empty"><p>Brief analyste non disponible.</p></div>';
 
+  // ═══ ENRICHISSEMENT GW_DEPTH : couches de profondeur live ═══
+  const articlesBlock     = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.recentArticlesBlock(c.id, 7, 6) : '';
+  const liveSignals       = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.liveSignalsBlock(c) : '';
+  const researchAngles    = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.researchAnglesBlock(c) : '';
+  const operationalActions= (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.actionsBlock(c) : '';
+  const crossRef          = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.crossRefBlock(c) : '';
+
+  // Compteurs live
+  const articles24h = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.getConflictArticles(c.id, 1).length : 0;
+  const articles7d  = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.getConflictArticles(c.id, 7).length : 0;
+  const sources7d   = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.getRecentSources(c.id, 7).length : 0;
+
   document.getElementById('brief-content').innerHTML = `
-    <div style="border-left:4px solid ${col};padding:6px 0 6px 14px;margin-bottom:14px"><div style="font-size:1.05rem;color:#e2e8f0;font-weight:600">${c.name}</div><div style="font-size:.78rem;color:#94a3b8">${c.region} • ${statusChip(c.status)} <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55">Intensité ${c.intensity}/10</span></div></div>
+    <!-- En-tête conflit avec mini-stats live -->
+    <div style="border-left:4px solid ${col};padding:10px 0 10px 14px;margin-bottom:14px;background:rgba(255,255,255,.02);border-radius:0 6px 6px 0">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+        <div>
+          <div style="font-size:1.15rem;color:#e2e8f0;font-weight:700">${c.name}</div>
+          <div style="font-size:.78rem;color:#94a3b8;margin-top:4px">${c.region} • ${statusChip(c.status)} <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55">Intensité ${c.intensity}/10</span> ${c.priority?`<span class="chip gray">Priorité ${c.priority}</span>`:''}</div>
+        </div>
+        <div style="display:flex;gap:9px;align-items:center">
+          <div style="text-align:center;background:#0a0f1c;padding:5px 11px;border-radius:5px;border:1px solid #1a2340">
+            <div style="font-size:1.05rem;color:#86efac;font-weight:800;line-height:1">${articles24h}</div>
+            <div style="font-size:.55rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px">articles 24h</div>
+          </div>
+          <div style="text-align:center;background:#0a0f1c;padding:5px 11px;border-radius:5px;border:1px solid #1a2340">
+            <div style="font-size:1.05rem;color:#60a5fa;font-weight:800;line-height:1">${articles7d}</div>
+            <div style="font-size:.55rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px">articles 7j</div>
+          </div>
+          <div style="text-align:center;background:#0a0f1c;padding:5px 11px;border-radius:5px;border:1px solid #1a2340">
+            <div style="font-size:1.05rem;color:#a78bfa;font-weight:800;line-height:1">${sources7d}</div>
+            <div style="font-size:.55rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px">sources</div>
+          </div>
+        </div>
+      </div>
+      ${c.cle_historique ? `<div style="margin-top:10px;padding:8px 11px;background:rgba(0,0,0,.3);border-left:2px solid #fde047;font-size:.82rem;color:#cbd5e1;line-height:1.55;border-radius:0 4px 4px 0"><b style="color:#fde047">Clé d'analyse :</b> ${c.cle_historique}</div>` : ''}
+    </div>
+
+    <!-- COUCHE 1 — DÉCIDEUR -->
     <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#1a0609 0%,#0e0304 100%);border-color:#7f1d1d">
       <div class="card-hd"><h2 style="color:#fca5a5"><i class="fa-solid fa-bullseye"></i> COUCHE 1 — DÉCIDEUR</h2><div class="help">5 points max, axes de risque, faits robustes, implications immédiates</div></div>
       ${briefDec}
     </div>
-    <div class="card" style="margin:0;background:linear-gradient(135deg,#0a0f1c 0%,#060912 100%);border-color:#1e3a5f">
+
+    <!-- COUCHE 2 — ANALYSTE -->
+    <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a0f1c 0%,#060912 100%);border-color:#1e3a5f">
       <div class="card-hd"><h2 style="color:#93c5fd"><i class="fa-solid fa-microscope"></i> COUCHE 2 — ANALYSTE</h2><div class="help">Faits, incertitudes, hypothèses pondérées, indicateurs à surveiller</div></div>
       ${briefAna}
+    </div>
+
+    <!-- ═══ COUCHE 3 — STATUT LIVE DES INDICATEURS (croisement RSS automatique) ═══ -->
+    ${liveSignals ? `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border-color:#fde047">
+      <div class="card-hd"><h2 style="color:#fde047"><i class="fa-solid fa-tower-broadcast"></i> COUCHE 3 — STATUT LIVE DES INDICATEURS</h2><div class="help">Le système croise automatiquement chaque indicateur avec les articles RSS récents pour vous dire lesquels sont déjà allumés</div></div>
+      ${liveSignals}
+    </div>` : ''}
+
+    <!-- ═══ COUCHE 4 — VEILLE RSS RÉCENTE ═══ -->
+    <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border-color:#22c55e">
+      <div class="card-hd"><h2 style="color:#86efac"><i class="fa-solid fa-broadcast-tower"></i> COUCHE 4 — CITATIONS RSS LIVE</h2><div class="help">Les articles internationaux récents qui parlent de ce conflit, croisés avec ${(window.GW_DATA?.RSS_SOURCES_FULL?.length)||140}+ sources</div></div>
+      ${articlesBlock}
+    </div>
+
+    <!-- ═══ COUCHE 5 — PISTES DE RECHERCHE ═══ -->
+    ${researchAngles ? `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border-color:#60a5fa">
+      <div class="card-hd"><h2 style="color:#93c5fd"><i class="fa-solid fa-lightbulb"></i> COUCHE 5 — PISTES DE RECHERCHE ANALYTIQUE</h2><div class="help">Questions stratégiques à creuser pour ce conflit, générées à partir de sa configuration</div></div>
+      ${researchAngles}
+    </div>` : ''}
+
+    <!-- ═══ COUCHE 6 — ACTIONS OPÉRATIONNELLES BF ═══ -->
+    ${operationalActions ? `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#1a1409 0%,#0e0a04 100%);border-color:#d97706">
+      <div class="card-hd"><h2 style="color:#fde047"><i class="fa-solid fa-list-check"></i> COUCHE 6 — ACTIONS OPÉRATIONNELLES (volet Burkina Faso)</h2><div class="help">Recommandations concrètes triées par priorité urgente / haute / moyenne</div></div>
+      ${operationalActions}
+    </div>` : ''}
+
+    <!-- Cross-ref : naviguer vers les autres pages liées -->
+    <div class="card" style="margin:0">
+      <div class="card-hd"><h2><i class="fa-solid fa-link"></i>Aller plus loin sur ce conflit</h2><div class="help">Toutes les sections du site liées à ${c.short||c.name}</div></div>
+      ${crossRef}
     </div>
   `;
 }
@@ -1946,9 +2279,25 @@ function renderScenarios(){
 
   if(cid){
     const c = d.conflicts.find(x=>x.id===cid); if(!c||!c.scenarios) return;
+
+    // ═══ ENRICHISSEMENT GW_DEPTH : déclencheurs détectés sur RSS ═══
+    const triggers = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.detectScenarioTriggers(c) : [];
+    const triggersByScenario = {};
+    triggers.forEach(t=>{ triggersByScenario[t.scenario.nom] = t; });
+
     // Préserver le bandeau, on n'écrase que le contenu après
     const banner = wrap.querySelector('.page-intro-banner');
-    wrap.innerHTML = (banner?banner.outerHTML:'') + `<div style="border-left:4px solid ${conflictColor(c.intensity)};padding:6px 0 6px 14px;margin-bottom:14px"><div style="font-size:1rem;color:#e2e8f0;font-weight:600">${c.name}</div></div>` + c.scenarios.map(s=>{
+    const articles14d = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.getConflictArticles(c.id, 14).length : 0;
+    wrap.innerHTML = (banner?banner.outerHTML:'') + `
+      <div style="border-left:4px solid ${conflictColor(c.intensity)};padding:10px 0 10px 14px;margin-bottom:14px;background:rgba(255,255,255,.02);border-radius:0 6px 6px 0">
+        <div style="font-size:1.1rem;color:#e2e8f0;font-weight:700">${c.name}</div>
+        <div style="font-size:.78rem;color:#94a3b8;margin-top:3px">${c.region} · ${c.scenarios.length} scénarios projetés · <span style="color:#86efac">${articles14d} articles RSS analysés (14 jours)</span></div>
+        <div style="margin-top:8px;padding:7px 11px;background:rgba(96,165,250,.05);border-left:2px solid #60a5fa;font-size:.74rem;color:#cbd5e1;line-height:1.5;border-radius:0 4px 4px 0">
+          <b style="color:#60a5fa">📌 Méthode :</b> Pour chaque scénario, le système analyse automatiquement les articles RSS récents et indique si <b style="color:#fde047">des déclencheurs sont détectés</b> ou non. Si oui, le scénario passe de « DORMANT » à « PARTIEL » ou « ACTIVÉ ».
+        </div>
+      </div>` + c.scenarios.map(s=>{
+      // Récupérer les triggers GW_DEPTH pour ce scénario
+      const trigger = triggersByScenario[s.nom];
       const probaCol = s.proba>=40?'#ef4444':s.proba>=20?'#f97316':s.proba>=10?'#f59e0b':'#22c55e';
       const probaLabel = s.proba>=40?'TRÈS PROBABLE':s.proba>=20?'PROBABLE':s.proba>=10?'POSSIBLE':'PEU PROBABLE';
       const impactLabel = s.impact>=8?'CRITIQUE':s.impact>=6?'ÉLEVÉ':s.impact>=4?'MODÉRÉ':'FAIBLE';
@@ -1973,7 +2322,19 @@ function renderScenarios(){
             </div>
           </div>
         </div>
-        <div style="font-size:.86rem;color:#cbd5e1;line-height:1.6;background:rgba(255,255,255,.02);padding:8px 11px;border-radius:5px;border-left:2px solid ${probaCol}88">${s.d}</div>
+        <div style="font-size:.86rem;color:#cbd5e1;line-height:1.6;background:rgba(255,255,255,.02);padding:8px 11px;border-radius:5px;border-left:2px solid ${probaCol}88;margin-bottom:8px">${s.d}</div>
+
+        <!-- ═══ STATUT DU DÉCLENCHEUR (analyse RSS automatique) ═══ -->
+        ${trigger ? `<div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:5px;padding:9px 11px;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:5px">
+            <div style="font-size:.66rem;color:#fde047;text-transform:uppercase;letter-spacing:.8px;font-weight:800"><i class="fa-solid fa-bolt"></i> Déclencheurs détectés sur RSS</div>
+            ${(typeof GW_DEPTH!=='undefined') ? GW_DEPTH.statusBadge(trigger.triggerStatus) : ''}
+          </div>
+          ${trigger.articleCount>0 ? `
+            <details><summary style="cursor:pointer;font-size:.7rem;color:#86efac;font-weight:600">${trigger.articleCount} article${trigger.articleCount>1?'s':''} récent${trigger.articleCount>1?'s':''} pourrai${trigger.articleCount>1?'ent':'t'} déclencher ce scénario</summary>
+              <div style="margin-top:5px">${trigger.articles.map(a=>(typeof GW_DEPTH!=='undefined' ? GW_DEPTH.articleLine(a) : '')).join('')}</div>
+            </details>` : `<div style="font-size:.7rem;color:#64748b;font-style:italic">Aucun signal récent compatible avec ce scénario — observation passive</div>`}
+        </div>` : ''}
       </div>`;
     }).join('');
   } else {
@@ -2046,13 +2407,31 @@ function renderReconfig(){
     return;
   }
 
+  // ═══ ENRICHISSEMENT GW_DEPTH : pour chaque reconfig, compter articles RSS pertinents ═══
+  const items = (window.NEWS_STATE?.items)||[];
+  const week = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 14);
+
   const html = recs.map((r,i)=>{
     const col = palette[i%palette.length];
+
+    // Détecter articles RSS qui matérialisent cette reconfiguration
+    const titreKeywords = (r.titre||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').split(/\s+/).filter(w=>w.length>=5).slice(0,5);
+    const matched = week.filter(a=>{
+      const txt = ((a.title||'')+' '+(a.description||'')).toLowerCase();
+      return titreKeywords.filter(k=>txt.includes(k)).length>=2;
+    }).slice(0,4);
+
+    // Phase d'avancement (heuristique simple)
+    const phase = matched.length>=4 ? {label:'EN ACCÉLÉRATION', color:'#ef4444', desc:'Plusieurs articles récents confirment'} :
+                  matched.length>=1 ? {label:'EN COURS', color:'#f59e0b', desc:'Phénomène actif sur le RSS'} :
+                  {label:'LATENT', color:'#64748b', desc:'Aucun signal RSS récent'};
+
     return `<div class="card" style="margin:0 0 12px;border-left:4px solid ${col}">
       <div class="card-hd"><h2 style="color:${col}"><i class="fa-solid fa-arrows-spin"></i>${r.titre}</h2>
         <div style="display:flex;gap:5px;flex-wrap:wrap">
           <span class="chip gray" title="Horizon temporel"><i class="fa-solid fa-clock" style="font-size:.6rem"></i> ${r.h}</span>
           <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55" title="Ampleur de la reconfiguration"><i class="fa-solid fa-layer-group" style="font-size:.6rem"></i> ${r.niveau}</span>
+          <span class="chip" style="background:${phase.color}22;color:${phase.color};border:1px solid ${phase.color}66;font-weight:800;font-size:.62rem" title="${phase.desc}">${phase.label}</span>
         </div></div>
       <div style="font-size:.66rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;font-weight:700"><i class="fa-solid fa-quote-left"></i> Description du phénomène</div>
       <div style="font-size:.88rem;color:#cbd5e1;line-height:1.65;margin-bottom:12px;padding:9px 12px;background:rgba(255,255,255,.02);border-left:2px solid ${col}66;border-radius:0 5px 5px 0">${r.description}</div>
@@ -2060,10 +2439,19 @@ function renderReconfig(){
         <div style="font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;font-weight:700"><i class="fa-solid fa-bolt"></i> Conséquences attendues</div>
         <ul style="list-style:none;padding:0;margin:0">${r.consequences.map(c=>`<li style="padding:4px 0;color:#cbd5e1;font-size:.84rem;line-height:1.55;border-bottom:1px solid #141c30">→ ${c}</li>`).join('')}</ul>
       </div>
-      <div style="background:rgba(253,224,71,.06);border:1px solid rgba(253,224,71,.3);padding:10px 13px;border-radius:6px">
+      <div style="background:rgba(253,224,71,.06);border:1px solid rgba(253,224,71,.3);padding:10px 13px;border-radius:6px;margin-bottom:10px">
         <div style="font-size:.7rem;color:#fde047;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;font-weight:700"><i class="fa-solid fa-flag-checkered"></i> Pertinence pour le Burkina Faso</div>
         <div style="font-size:.86rem;color:#cbd5e1;line-height:1.55">${r.pertinence_bf}</div>
       </div>
+      <!-- Veille RSS qui matérialise la reconfiguration -->
+      ${matched.length ? `
+        <div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:6px;padding:10px 12px">
+          <div style="font-size:.7rem;color:#86efac;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;font-weight:700"><i class="fa-solid fa-broadcast-tower"></i> Articles RSS qui matérialisent cette reconfiguration (14 j)</div>
+          ${matched.map(a=>(typeof GW_DEPTH!=='undefined'?GW_DEPTH.articleLine(a):'')).join('')}
+        </div>` : `
+        <div style="background:#0a0f1c;border:1px dashed #1a2340;border-radius:5px;padding:9px 12px;font-size:.74rem;color:#64748b;font-style:italic">
+          Aucun article RSS récent ne matérialise directement cette reconfiguration. Le phénomène reste latent ou diffus dans la couverture.
+        </div>`}
     </div>`;
   }).join('');
   wrap.insertAdjacentHTML('beforeend', html);
@@ -2144,7 +2532,7 @@ function renderBFPanel(c){
     ${dim('fa-users','#a78bfa','4. Dimension sociopolitique', i.sociopolitique||[],'Opinion publique, tensions internes, mobilisations, identité')}
 
     <!-- Indicateurs à surveiller -->
-    <div class="card" style="margin:0;background:#0a0f1c">
+    <div class="card" style="margin:0 0 14px;background:#0a0f1c">
       <div class="card-hd">
         <h2><i class="fa-solid fa-binoculars"></i>Indicateurs Burkina Faso à surveiller</h2>
         <div class="help">Signaux précis à surveiller pour anticiper les retombées</div>
@@ -2163,6 +2551,26 @@ function renderBFPanel(c){
         }).join('') || '<div style="color:#64748b;font-size:.78rem">Aucun indicateur défini pour ce conflit</div>'}
       </div>
     </div>
+
+    <!-- ═══ COUCHE PROFONDE — RSS croisé en temps réel ═══ -->
+    ${(typeof GW_DEPTH!=='undefined') ? `
+      <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border-color:#22c55e">
+        <div class="card-hd"><h2 style="color:#86efac"><i class="fa-solid fa-broadcast-tower"></i>Articles RSS récents qui matérialisent l'impact</h2><div class="help">Sources internationales croisées sur les 7 derniers jours pour ce conflit</div></div>
+        ${GW_DEPTH.recentArticlesBlock(c.id, 7, 6)}
+      </div>
+
+      <!-- ═══ Actions opérationnelles BF ═══ -->
+      <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#1a1409 0%,#0e0a04 100%);border-color:#d97706">
+        <div class="card-hd"><h2 style="color:#fde047"><i class="fa-solid fa-list-check"></i>Actions opérationnelles à activer côté BF</h2><div class="help">Recommandations triées par priorité urgente / haute / moyenne</div></div>
+        ${GW_DEPTH.actionsBlock(c)}
+      </div>
+
+      <!-- ═══ Cross-références ═══ -->
+      <div class="card" style="margin:0">
+        <div class="card-hd"><h2><i class="fa-solid fa-link"></i>Aller plus loin sur ce conflit</h2></div>
+        ${GW_DEPTH.crossRefBlock(c)}
+      </div>
+    ` : ''}
   `;
 }
 
@@ -2212,32 +2620,72 @@ function renderIndicators(){
     </div>
   </div>`);
 
+  // ═══ ENRICHISSEMENT GW_DEPTH : compter les conflits avec signaux activés ═══
+  let activatedCount = 0, monitoringCount = 0;
+  if(typeof GW_DEPTH!=='undefined'){
+    conflicts.forEach(c=>{
+      const sigs = GW_DEPTH.detectActiveSignals(c);
+      if(sigs.some(s=>s.status==='activated')) activatedCount++;
+      else if(sigs.some(s=>s.status==='monitoring')) monitoringCount++;
+    });
+    // Insérer un panneau de synthèse "live" supplémentaire
+    wrap.insertAdjacentHTML('beforeend',`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:14px">
+      <div style="background:#0a0f1c;border:1px solid #7f1d1d;border-left:3px solid #ef4444;border-radius:5px;padding:10px 13px">
+        <div style="font-size:.6rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-bell"></i> 🔴 Activés maintenant</div>
+        <div style="font-size:1.6rem;color:#ef4444;font-weight:800">${activatedCount}</div>
+        <div style="font-size:.7rem;color:#94a3b8">conflits avec signal allumé sur RSS</div>
+      </div>
+      <div style="background:#0a0f1c;border:1px solid #7c2d12;border-left:3px solid #f59e0b;border-radius:5px;padding:10px 13px">
+        <div style="font-size:.6rem;color:#f59e0b;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-magnifying-glass"></i> 🟡 En monitoring</div>
+        <div style="font-size:1.6rem;color:#f59e0b;font-weight:800">${monitoringCount}</div>
+        <div style="font-size:.7rem;color:#94a3b8">conflits avec activité RSS partielle</div>
+      </div>
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #64748b;border-radius:5px;padding:10px 13px">
+        <div style="font-size:.6rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-circle"></i> ⚪ Calmes</div>
+        <div style="font-size:1.6rem;color:#64748b;font-weight:800">${conflicts.length-activatedCount-monitoringCount}</div>
+        <div style="font-size:.7rem;color:#94a3b8">conflits sans signal détecté</div>
+      </div>
+    </div>`);
+  }
+
   const html = conflicts.map(c=>{
     const b = c.brief_analyste; const col = conflictColor(c.intensity);
+    // Statut live des signaux pour ce conflit
+    const signals = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.detectActiveSignals(c) : [];
+    const signalCT = signals.find(s=>s.horizon==='24-72 h');
+    const signalMT = signals.find(s=>s.horizon==='7-30 j');
+    const liveSignalsBlock = (typeof GW_DEPTH!=='undefined') ? GW_DEPTH.liveSignalsBlock(c) : '';
+
     return `<div class="card" style="margin:0 0 12px;border-left:4px solid ${col}">
       <div class="card-hd">
         <h2><i class="fa-solid fa-fire"></i>${c.name}</h2>
-        <div style="display:flex;gap:5px;align-items:center">
+        <div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap">
           <span style="font-size:.7rem;color:#94a3b8">${c.region}</span>
           <span class="chip" style="background:${col}22;color:${col};border:1px solid ${col}55;font-size:.62rem;font-weight:700">Intensité ${c.intensity}/10</span>
+          ${signalCT ? (typeof GW_DEPTH!=='undefined' ? `<span style="font-size:.6rem">CT</span>` + GW_DEPTH.statusBadge(signalCT.status) : '') : ''}
+          ${signalMT ? (typeof GW_DEPTH!=='undefined' ? `<span style="font-size:.6rem">MT</span>` + GW_DEPTH.statusBadge(signalMT.status) : '') : ''}
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
         <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340;border-left:3px solid #ef4444">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
-            <span style="font-size:.66rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-stopwatch"></i> Court terme</span>
-            <span style="font-size:.6rem;color:#ef4444">24 à 72 heures</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;flex-wrap:wrap;gap:6px">
+            <span style="font-size:.66rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-stopwatch"></i> Court terme · 24-72 h</span>
+            ${signalCT && typeof GW_DEPTH!=='undefined' ? GW_DEPTH.statusBadge(signalCT.status) : ''}
           </div>
-          <div style="font-size:.84rem;color:#cbd5e1;line-height:1.55">${b.indicateurs_24_72h||'<span style="color:#64748b;font-style:italic">Aucun signal court terme défini</span>'}</div>
+          <div style="font-size:.84rem;color:#cbd5e1;line-height:1.55;margin-bottom:6px">${b.indicateurs_24_72h||'<span style="color:#64748b;font-style:italic">Aucun signal court terme défini</span>'}</div>
+          ${signalCT && signalCT.articleCount>0 ? `<details><summary style="cursor:pointer;font-size:.66rem;color:#60a5fa;font-weight:600">${signalCT.articleCount} article${signalCT.articleCount>1?'s':''} corrobore${signalCT.articleCount>1?'nt':''}</summary><div style="margin-top:4px">${signalCT.articles.map(a=>(typeof GW_DEPTH!=='undefined'?GW_DEPTH.articleLine(a):'')).join('')}</div></details>` : ''}
         </div>
         <div style="background:#0a0f1c;padding:11px 13px;border-radius:6px;border:1px solid #1a2340;border-left:3px solid #60a5fa">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
-            <span style="font-size:.66rem;color:#60a5fa;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-calendar-week"></i> Moyen terme</span>
-            <span style="font-size:.6rem;color:#60a5fa">7 à 30 jours</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;flex-wrap:wrap;gap:6px">
+            <span style="font-size:.66rem;color:#60a5fa;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-calendar-week"></i> Moyen terme · 7-30 j</span>
+            ${signalMT && typeof GW_DEPTH!=='undefined' ? GW_DEPTH.statusBadge(signalMT.status) : ''}
           </div>
-          <div style="font-size:.84rem;color:#cbd5e1;line-height:1.55">${b.indicateurs_7_30j||'<span style="color:#64748b;font-style:italic">Aucun signal moyen terme défini</span>'}</div>
+          <div style="font-size:.84rem;color:#cbd5e1;line-height:1.55;margin-bottom:6px">${b.indicateurs_7_30j||'<span style="color:#64748b;font-style:italic">Aucun signal moyen terme défini</span>'}</div>
+          ${signalMT && signalMT.articleCount>0 ? `<details><summary style="cursor:pointer;font-size:.66rem;color:#60a5fa;font-weight:600">${signalMT.articleCount} article${signalMT.articleCount>1?'s':''} corrobore${signalMT.articleCount>1?'nt':''}</summary><div style="margin-top:4px">${signalMT.articles.map(a=>(typeof GW_DEPTH!=='undefined'?GW_DEPTH.articleLine(a):'')).join('')}</div></details>` : ''}
         </div>
       </div>
+      <!-- Bouton accès rapide -->
+      <button class="btn ghost sm" onclick="Router.go('briefs');setTimeout(()=>{const s=document.getElementById('brief-conflict');if(s){s.value='${c.id}';renderBriefs();}},80)" style="font-size:.68rem"><i class="fa-solid fa-arrow-right"></i> Voir le brief complet de ce conflit</button>
     </div>`;
   }).join('');
   wrap.insertAdjacentHTML('beforeend', html);
@@ -2281,6 +2729,76 @@ function renderAnalyses(){
     <div class="stat orange"><i class="stat-icon fa-solid fa-chart-simple"></i><div><div class="stat-val">${last}</div><div class="stat-lbl">Dernière période</div></div></div>
     <div class="stat red"><i class="stat-icon fa-solid fa-exclamation"></i><div><div class="stat-val">${ruptures}</div><div class="stat-lbl">Seuils de rupture</div></div></div>
     <div class="stat purple"><i class="stat-icon fa-solid fa-gauge-high"></i><div><div class="stat-val">${avgSev}</div><div class="stat-lbl">Sévérité moyenne</div></div></div>`;
+
+  // ═══ DÉTECTION D'ANOMALIES & INSIGHTS AUTO ═══
+  // Analyse interprétative des chiffres pour générer des insights actionnables
+  const insights = [];
+  const lastValue = byPeriod.at(-1).length;
+  const prev3 = byPeriod.slice(-4,-1).map(p=>p.length);
+  const avg3 = prev3.length ? prev3.reduce((a,b)=>a+b,0)/prev3.length : 0;
+  if(lastValue > avg3*1.5 && avg3>0){
+    insights.push({type:'alert', icon:'fa-arrow-trend-up', color:'#ef4444',
+      title:'⚠ Accélération anormale détectée',
+      desc:`La dernière période compte <b>${lastValue} jalons</b>, contre une moyenne de <b>${avg3.toFixed(1)}</b> pour les 3 périodes précédentes. C'est <b style="color:#ef4444">+${Math.round((lastValue-avg3)/Math.max(avg3,1)*100)}%</b> au-dessus de la moyenne — signal d'escalade.`});
+  } else if(lastValue < avg3*0.5 && avg3>0){
+    insights.push({type:'positive', icon:'fa-arrow-trend-down', color:'#22c55e',
+      title:'↘ Décélération significative',
+      desc:`La dernière période ne compte que <b>${lastValue} jalons</b>, vs <b>${avg3.toFixed(1)}</b> en moyenne. Soit <b style="color:#22c55e">-${Math.round((avg3-lastValue)/Math.max(avg3,1)*100)}%</b>. Phase de stabilisation possible.`});
+  }
+  // Sévérité critique
+  const critRecent = byPeriod.slice(-3).flat().filter(e=>e.severity>=9).length;
+  if(critRecent>=3){
+    insights.push({type:'alert', icon:'fa-skull', color:'#ef4444',
+      title:`${critRecent} événements critiques (sévérité ≥ 9) sur les 3 dernières périodes`,
+      desc:`Concentration anormale de ruptures : à creuser avec la liste des conflits actifs.`});
+  }
+  // Conflit dominant
+  if(!AN_STATE.conflict){
+    const byConflict = {};
+    byPeriod.slice(-3).flat().forEach(e=>{ byConflict[e.conflict_id] = (byConflict[e.conflict_id]||0)+1; });
+    const topConflict = Object.entries(byConflict).sort((a,b)=>b[1]-a[1])[0];
+    if(topConflict && topConflict[1]>=4){
+      const cf = d.conflicts.find(x=>x.id===topConflict[0]);
+      if(cf) insights.push({type:'info', icon:'fa-bullseye', color:'#fde047',
+        title:`Conflit dominant : ${cf.name}`,
+        desc:`Concentre <b>${topConflict[1]}</b> jalons sur les 3 dernières périodes — c'est la dynamique principale du moment. <a href="#" onclick="showConflictDetail('${cf.id}');return false" style="color:#60a5fa">Voir la fiche →</a>`});
+    }
+  }
+  // Sévérité vs nombre
+  if(lastValue>0 && scoresByP.at(-1)/lastValue >= 7){
+    insights.push({type:'alert', icon:'fa-fire', color:'#f97316',
+      title:'Événements peu nombreux mais très graves',
+      desc:`Sévérité moyenne <b>${(scoresByP.at(-1)/lastValue).toFixed(1)}/10</b> sur la dernière période — les rares jalons sont des ruptures structurelles.`});
+  }
+  // Bilan positif si rien de critique
+  if(!insights.length){
+    insights.push({type:'positive', icon:'fa-check-circle', color:'#22c55e',
+      title:'Aucune anomalie statistique détectée',
+      desc:`Tendance dans la moyenne des périodes précédentes. RAS dans l'immédiat.`});
+  }
+
+  // Injecter le panneau d'insights après les KPI
+  let insightsEl = document.getElementById('an-insights');
+  if(!insightsEl){
+    insightsEl = document.createElement('div');
+    insightsEl.id = 'an-insights';
+    insightsEl.style.cssText = 'margin:14px 0';
+    document.getElementById('an-kpi').insertAdjacentElement('afterend', insightsEl);
+  }
+  insightsEl.innerHTML = `<div class="card" style="margin:0;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border-color:#fde047">
+    <div class="card-hd"><h2 style="color:#fde047"><i class="fa-solid fa-brain"></i>Anomalies détectées & insights automatiques</h2><div class="help">Lecture interprétative des chiffres pour qu'un décideur sache quoi en faire</div></div>
+    <div style="display:grid;gap:8px">
+      ${insights.map(ins=>`<div style="background:#0a0f1c;border-left:3px solid ${ins.color};border-radius:0 5px 5px 0;padding:10px 13px">
+        <div style="display:flex;align-items:flex-start;gap:8px">
+          <i class="fa-solid ${ins.icon}" style="color:${ins.color};font-size:1.05rem;margin-top:2px"></i>
+          <div style="flex:1">
+            <div style="font-size:.86rem;color:#e2e8f0;font-weight:700;margin-bottom:3px">${ins.title}</div>
+            <div style="font-size:.78rem;color:#cbd5e1;line-height:1.5">${ins.desc}</div>
+          </div>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>`;
 
   const scoresByP = byPeriod.map(arr=>arr.reduce((s,e)=>s+e.severity,0));
   const countsByP = byPeriod.map(arr=>arr.length);
