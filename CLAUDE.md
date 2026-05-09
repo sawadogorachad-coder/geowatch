@@ -1,5 +1,44 @@
 # GéoWatch v3 — Mémoire projet pour Claude Code
 
+## ⚡ Module GW_INTEL — Intelligence stratégique avancée
+
+Bloc IIFE situé juste avant `renderDashboard()` dans `app.js`. Expose 4 fonctionnalités :
+
+### 1. IMS-BF — Indice de Menace Stratégique Burkina Faso
+- `GW_INTEL.computeIMS()` → `{score:0-100, level, color, dimensions, ...}`
+- 6 dimensions pondérées : Sécuritaire (25%) + Diplomatique (20%) + Économique (20%) + Cohésion (15%) + Régional (10%) + Informationnel (10%)
+- Fenêtre glissante 7 jours, recalcul à chaque RSS
+- `GW_INTEL.renderIMSGauge('ims-gauge')` → SVG circulaire premium + sparkline 30j
+- Historique stocké dans localStorage clé `gw_ims_history`
+- Appelée en tête de `renderDashboard()`
+
+### 2. BQS — Brief Quotidien Stratégique
+- Page `data-page="bqs"` accessible via nav
+- `GW_INTEL.buildBQS()` → top 5 articles 24h + implications BF + indicateurs J+1→J+7
+- Score articles : `_bf×30 + Burkina×25 + Sahel×18 + CEDEAO×12 + majeur×20 + ...`
+- Implications BF auto-générées par patterns regex
+- Export PDF A4 multi-pages via `GW_INTEL.exportBQSPDF(bqs)` (bandeau IMS, top 5, indicateurs, méthodologie)
+
+### 3. Cotes de fiabilité OTAN (A1-F6)
+- Lettre A-F pour la **source** (`reliabilityLetter(item)`) basée sur `SOURCE_RATING` (table de 30+ sources connues)
+- Chiffre 1-6 pour la **crédibilité** (`credibilityNum(item)`) calculée par corroboration multi-sources
+- `GW_INTEL.reliabilityChip(item, {compact})` → badge HTML stylisé
+- Affiché dans `renderNewsList()` à côté de chaque article
+
+### 4. Veille adversariale
+- Page `data-page="adversarial"` accessible via nav
+- `GW_INTEL.classifyBlock(item)` → un de : `occident_fr | occident_us | russie | golfe_mo | chine | turquie | afrique | bf_local | autre`
+- Détection des 6 narratives types : pro-AES, anti-AES, pro/anti-Russie, pro/anti-France
+- 8 blocs définis dans `BLOCKS` avec patterns d'URL et couleurs
+- Affichage : répartition en cards + narratives détectées + détail par bloc
+
+### Important
+- `window.NEWS_STATE = NEWS_STATE` est exposé après la ligne `const NEWS_STATE = ...` pour que GW_INTEL accède aux articles RSS
+- Le Router gère les pages `bqs` et `adversarial` (RSS auto-refresh inclus)
+- Re-render automatique de bqs/adversarial après `loadNews()`
+
+
+
 ## 🎯 Contexte & auteur
 - **Auteur :** Chercheur en sciences politiques, CNES Burkina Faso
 - **Objectif :** Observatoire géopolitique "think-tank grade" — veille conflits, alertes, chronologie, analyse mondiale

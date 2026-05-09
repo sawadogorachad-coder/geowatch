@@ -299,6 +299,8 @@ body.map-light .map-legend h4{color:#475569}
   <ul class="nav">
     <li class="nav-title">Vue d'ensemble</li>
     <li><a href="#" data-page="dash" class="active"><i class="fa-solid fa-gauge-high"></i><span>Tableau de bord</span></a></li>
+    <li><a href="#" data-page="bqs" style="color:#fca5a5;font-weight:700"><i class="fa-solid fa-file-circle-exclamation"></i><span>Brief quotidien</span><span class="badge" id="nav-bqs-badge" style="background:#ef4444">●</span></a></li>
+    <li><a href="#" data-page="adversarial" style="color:#fca5a5"><i class="fa-solid fa-satellite-dish"></i><span>Veille adversariale</span></a></li>
     <li><a href="#" data-page="conflicts"><i class="fa-solid fa-fire"></i><span>Fiches conflits</span></a></li>
     <li><a href="#" data-page="briefs"><i class="fa-solid fa-file-circle-exclamation"></i><span>Briefs 2 couches</span></a></li>
     <li><a href="#" data-page="scenarios"><i class="fa-solid fa-chess"></i><span>Scénarios</span></a></li>
@@ -340,6 +342,11 @@ body.map-light .map-legend h4{color:#475569}
 
     <!-- ============= DASHBOARD ============= -->
     <section class="page active" data-page="dash">
+      <!-- ═══ JAUGE IMS-BF (Indice de Menace Stratégique Burkina Faso) ═══ -->
+      <div class="card" id="ims-card" style="margin:0 0 14px;background:linear-gradient(135deg,#0c1426 0%,#08101e 100%);border:1px solid #1a2340;overflow:hidden">
+        <div id="ims-gauge" style="padding:14px 18px"></div>
+      </div>
+
       <div class="stats">
         <div class="stat red"><i class="stat-icon fa-solid fa-fire"></i><div><div class="stat-val" id="kpi-active">0</div><div class="stat-lbl">Conflits actifs</div><div class="stat-trend flat" id="kpi-active-tr"></div></div></div>
         <div class="stat orange"><i class="stat-icon fa-solid fa-satellite-dish"></i><div><div class="stat-val" id="kpi-rss-24h">0</div><div class="stat-lbl">Articles RSS (24 h) <span style="color:#86efac;font-size:.62rem">● LIVE</span></div><div class="stat-trend flat" id="kpi-rss-tr"></div></div></div>
@@ -390,6 +397,16 @@ body.map-light .map-legend h4{color:#475569}
           <div id="dash-ww-preview" style="max-height:480px;overflow-y:auto"></div>
         </div>
       </div>
+    </section>
+
+    <!-- ============= BRIEF QUOTIDIEN STRATÉGIQUE ============= -->
+    <section class="page" data-page="bqs">
+      <div id="bqs-content"></div>
+    </section>
+
+    <!-- ============= VEILLE ADVERSARIALE ============= -->
+    <section class="page" data-page="adversarial">
+      <div id="adv-content"></div>
     </section>
 
     <!-- ============= CONFLITS ============= -->

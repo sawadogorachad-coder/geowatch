@@ -100,6 +100,8 @@ const Router = {
   current:'dash',
   titles:{
     dash:['Tableau de bord','Synthèse opérationnelle multi-théâtres'],
+    bqs:['Brief Quotidien Stratégique','Top 5 développements 24 h · format A4 exportable PDF'],
+    adversarial:['Veille adversariale','Cartographie des narratives par bloc géopolitique'],
     conflicts:['Fiches conflits','Note de situation 8 dimensions par conflit'],
     briefs:['Briefs 2 couches','Décideur (5 points) + analyste (faits, hypothèses, indicateurs)'],
     scenarios:['Scénarios prospectifs','Méthode Godet — proba × impact'],
@@ -122,6 +124,8 @@ const Router = {
     document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active', p.dataset.page===page));
     const [t,s] = this.titles[page]||[page,'']; document.getElementById('page-title').textContent=t; document.getElementById('page-sub').textContent=s;
     if(page==='dash') renderDashboard();
+    else if(page==='bqs') renderBQS();
+    else if(page==='adversarial') renderAdversarial();
     else if(page==='conflicts') renderConflicts();
     else if(page==='briefs') renderBriefs();
     else if(page==='scenarios') renderScenarios();
@@ -138,18 +142,744 @@ const Router = {
     else if(page==='events') renderEvents();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
-    if(['news','alerts','dash','sources','conflicts','worldwatch','events'].includes(page)){
+    if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial'].includes(page)){
       const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
       if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
     }
   }
 };
 
+/* ============================================================
+   ===== GW_INTEL : MODULE INTELLIGENCE STRATÉGIQUE AVANCÉE =====
+   ============================================================
+   Composants :
+   - IMS-BF : Indice de Menace Stratégique pondéré (6 dimensions)
+   - BQS    : Brief Quotidien Stratégique (top 5, format A4, PDF)
+   - COTES  : Système de fiabilité OTAN (A1-F6) sur sources & articles
+   - ADV    : Veille adversariale (segmentation par bloc d'origine)
+   ============================================================ */
+const GW_INTEL = (()=>{
+
+  /* ===== TAXONOMIE DES SOURCES PAR BLOC (veille adversariale) ===== */
+  const BLOCKS = {
+    'occident_fr':{label:'Occident — francophone', flag:'🇫🇷', color:'#3b82f6',
+      patterns:['lemonde','rfi','france24','franceinfo','liberation','figaro','grandcontinent','le grand continent','diploweb','iris','ifri','frs.','politis','mediapart','euronews']},
+    'occident_us':{label:'Occident — anglophone', flag:'🇺🇸', color:'#60a5fa',
+      patterns:['nytimes','washingtonpost','foreignpolicy','voanews','voa.gov','ft.com','wsj','reuters','bbc.com','bbc.co.uk','economist','theatlantic','cnn.com','cfr.org','brookings','rand.org','aei.org','csis.org','isw.','crisisgroup','acleddata']},
+    'russie':{label:'Russie / pro-Moscou', flag:'🇷🇺', color:'#dc2626',
+      patterns:['rt.com','rt.fr','sputnik','tass','ria.ru','strategic-culture','katehon']},
+    'golfe_mo':{label:'Golfe / Moyen-Orient', flag:'🇶🇦', color:'#a855f7',
+      patterns:['aljazeera','alarabiya','almonitor','arabnews','tehran','presstv','iranintl','jpost','timesofisrael']},
+    'chine':{label:'Chine / pro-Pékin', flag:'🇨🇳', color:'#dc2626',
+      patterns:['xinhuanet','xinhua','cgtn','globaltimes','chinadaily','people.cn','scmp']},
+    'turquie':{label:'Turquie', flag:'🇹🇷', color:'#f97316',
+      patterns:['trtworld','trt ','anadoluagency','dailysabah','hurriyet']},
+    'afrique':{label:'Afrique panafricaine', flag:'🌍', color:'#22c55e',
+      patterns:['jeuneafrique','africanews','africa news','allafrica','iss africa','issafrica','bbc afrique','rfi afrique','apa news','afrik','agenceecofin']},
+    'bf_local':{label:'Burkina Faso — local', flag:'🇧🇫', color:'#fde047',
+      patterns:['lefaso','burkina24','sidwaya','aib.media','wakatsera','ouaga.com','radio omega']}
+  };
+
+  function classifyBlock(item){
+    const txt = ((item._source||'')+' '+(item.link||'')+' '+(item._feed||'')).toLowerCase();
+    for(const [key,b] of Object.entries(BLOCKS)){
+      if(b.patterns.some(p=>txt.includes(p))) return key;
+    }
+    return 'autre';
+  }
+
+  /* ===== COTES DE FIABILITÉ STYLE OTAN (A-F × 1-6) ===== */
+  // Lettre = fiabilité de la source / Chiffre = crédibilité de l'information
+  const RELIABILITY_LETTER = {
+    'A':{label:'Totalement fiable', desc:'Source officielle, think tank reconnu, archive primaire', color:'#22c55e'},
+    'B':{label:'Habituellement fiable', desc:'Média de référence, rédaction contrôlée', color:'#3b82f6'},
+    'C':{label:'Assez fiable', desc:'Agence de presse, média grand public neutre', color:'#a78bfa'},
+    'D':{label:'Pas habituellement fiable', desc:'Média d\'État partisan, propagande probable', color:'#f59e0b'},
+    'E':{label:'Non fiable', desc:'Source douteuse, blog non vérifié', color:'#ef4444'},
+    'F':{label:'Fiabilité indéterminée', desc:'Source inconnue ou nouvelle', color:'#64748b'}
+  };
+  const CREDIBILITY_NUM = {
+    1:'Confirmé par 3+ sources indépendantes',
+    2:'Probablement vrai (2 sources)',
+    3:'Possiblement vrai (1 source fiable)',
+    4:'Véracité douteuse',
+    5:'Improbable',
+    6:'Indéterminé'
+  };
+
+  // Tables de cotation des sources connues (lettre uniquement, le chiffre se calcule sur l'info)
+  const SOURCE_RATING = {
+    // A — think tanks et primaires
+    'crisisgroup':'A','iss':'A','iris':'A','ifri':'A','frs':'A','rand':'A','isw':'A','acled':'A','sipri':'A','csis':'A','cfr':'A','brookings':'A',
+    // B — médias de référence
+    'le monde':'B','bbc':'B','reuters':'B','financial times':'B','ft.com':'B','nytimes':'B','wsj':'B','washingtonpost':'B','le grand continent':'B','grandcontinent':'B','diploweb':'B','foreign policy':'B','foreignpolicy':'B','economist':'B','jeuneafrique':'B','jeune afrique':'B',
+    // C — agences neutres / médias grand public
+    'rfi':'C','france 24':'C','france24':'C','africanews':'C','africa news':'C','euronews':'C','dw':'C','liberation':'C','figaro':'C','allafrica':'C','agenceecofin':'C','apa news':'C',
+    // D — médias d'État partisans
+    'rt.com':'D','rt ':'D','sputnik':'D','tass':'D','xinhua':'D','cgtn':'D','globaltimes':'D','aljazeera':'D','al jazeera':'D','presstv':'D','trt':'D','voanews':'D','voa ':'D',
+    // BF — local
+    'lefaso':'C','burkina24':'C','sidwaya':'C','aib':'C','wakatsera':'C'
+  };
+
+  function reliabilityLetter(item){
+    const txt = ((item._source||'')+' '+(item.link||'')).toLowerCase();
+    for(const [k,v] of Object.entries(SOURCE_RATING)){
+      if(txt.includes(k)) return v;
+    }
+    return 'F';
+  }
+
+  function credibilityNum(item){
+    // Heuristique : un événement majeur (rupture/crise) avec confirmation multiple ⇒ 1-2
+    // Sinon par défaut 3 (source unique). Si source D, on dégrade à 4-5.
+    const letter = reliabilityLetter(item);
+    if(letter==='D' || letter==='E') return 4;
+    // Si plusieurs sources mentionnent le même événement (mots-clés du titre)
+    const allItems = (window.NEWS_STATE?.items)||[];
+    const titleWords = (item.title||'').toLowerCase().split(/\s+/).filter(w=>w.length>5).slice(0,5);
+    if(titleWords.length>0){
+      const corroborated = allItems.filter(it=>{
+        if(it===item || !it.title) return false;
+        const t = it.title.toLowerCase();
+        return titleWords.filter(w=>t.includes(w)).length >= 3;
+      }).length;
+      if(corroborated>=2) return 1;
+      if(corroborated===1) return 2;
+    }
+    return 3;
+  }
+
+  function reliabilityChip(item, opts={}){
+    const L = reliabilityLetter(item);
+    const N = credibilityNum(item);
+    const meta = RELIABILITY_LETTER[L];
+    const tipL = `${L} : ${meta.label} — ${meta.desc}`;
+    const tipN = `${N} : ${CREDIBILITY_NUM[N]}`;
+    const compact = opts.compact;
+    return `<span class="rel-chip" title="Cote OTAN — ${tipL} | ${tipN}" style="display:inline-flex;align-items:center;gap:0;padding:1px 0;background:${meta.color}15;color:${meta.color};border:1px solid ${meta.color}55;border-radius:4px;font-size:.62rem;font-weight:700;font-family:'Courier New',monospace;letter-spacing:.5px">
+      <span style="background:${meta.color};color:#0a0f1c;padding:1px 4px;border-radius:3px 0 0 3px">${L}${N}</span>${compact?'':`<span style="padding:1px 5px">${meta.label.split(' ')[0]}</span>`}
+    </span>`;
+  }
+
+  /* ===== IMS-BF : INDICE DE MENACE STRATÉGIQUE BF ===== */
+  // Calcul pondéré sur 6 dimensions (sortie 0-100)
+  function computeIMS(){
+    const items = (window.NEWS_STATE?.items)||[];
+    const d = DB.get();
+
+    // Fenêtre glissante 7 jours
+    const week = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 7);
+    const day = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 1);
+
+    // 1. SÉCURITAIRE (25%) — attaques, JNIM/EIGS, frappes près du BF
+    const secKw = ['attaque','attentat','frappe','embusca','tué','morts','jnim','eigs','aqim','daesh','jihadiste','terroriste','vbiéd','offensive','assaut','ied'];
+    const bfSec = week.filter(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      return (it._bf || /sahel|burkina|mali|niger|ouagadougou|bamako|niamey/i.test(txt)) && secKw.some(k=>txt.includes(k));
+    });
+    const secScore = Math.min(100, bfSec.length*8 + day.filter(it=>it._bf).length*4);
+
+    // 2. DIPLOMATIQUE (20%) — sanctions, ruptures, expulsions
+    const diploKw = ['sanction','expulsion','ambassadeur rappelé','rupture','isolement','suspension','condamnation','blocus'];
+    const diplo = week.filter(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      const isBFAxis = /burkina|mali|niger|aes|cedeao|ecowas|sahel/i.test(txt);
+      return isBFAxis && diploKw.some(k=>txt.includes(k));
+    });
+    const diploScore = Math.min(100, diplo.length*15);
+
+    // 3. ÉCONOMIQUE (20%) — or, coton, F CFA, dette, mines
+    const ecoKw = ['or','gold','coton','franc cfa','f cfa','dette','crise économique','inflation','mine','wagner','africa corps'];
+    const eco = week.filter(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      return /burkina|sahel|aes|mali|niger/i.test(txt) && ecoKw.some(k=>txt.includes(k));
+    });
+    const ecoScore = Math.min(100, eco.length*12);
+
+    // 4. COHÉSION INTERNE BF (15%) — manifestations, tensions, communautaires
+    const cohKw = ['manifestation','communautaire','peul','dozos','vdp','dozo','exaction','crime','massacre','déplacés','réfugiés'];
+    const coh = week.filter(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      return /burkina|ouagadougou|bobo|kaya|djibo|dori/i.test(txt) && cohKw.some(k=>txt.includes(k));
+    });
+    const cohScore = Math.min(100, coh.length*15);
+
+    // 5. ENVIRONNEMENT RÉGIONAL (10%) — Côte d'Ivoire, Ghana, Bénin, Togo, Sénégal, CEDEAO
+    const reg = week.filter(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      return /côte d'ivoire|ivoire|ghana|bénin|benin|togo|sénégal|senegal|cedeao|ecowas/i.test(txt) && /tension|crise|attaque|frontiere|frontière/i.test(txt);
+    });
+    const regScore = Math.min(100, reg.length*15);
+
+    // 6. PRESSION INFORMATIONNELLE (10%) — volume articles hostiles vs BF
+    const adv = week.filter(it=>{
+      const block = classifyBlock(it);
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      return ['occident_fr','occident_us'].includes(block) && /burkina|traoré|aes|junte|sahel/i.test(txt);
+    });
+    const infoScore = Math.min(100, adv.length*5);
+
+    // Score pondéré final
+    const score = Math.round(
+      secScore*0.25 + diploScore*0.20 + ecoScore*0.20 +
+      cohScore*0.15 + regScore*0.10 + infoScore*0.10
+    );
+
+    return {
+      score,
+      level: score>=70?'CRITIQUE':score>=50?'ÉLEVÉ':score>=30?'MODÉRÉ':score>=15?'FAIBLE':'CALME',
+      color: score>=70?'#ef4444':score>=50?'#f97316':score>=30?'#f59e0b':score>=15?'#eab308':'#22c55e',
+      dimensions: {
+        securitaire: {score:Math.round(secScore), weight:25, count:bfSec.length, label:'Menace sécuritaire'},
+        diplomatique: {score:Math.round(diploScore), weight:20, count:diplo.length, label:'Pression diplomatique'},
+        economique: {score:Math.round(ecoScore), weight:20, count:eco.length, label:'Vulnérabilité économique'},
+        cohesion: {score:Math.round(cohScore), weight:15, count:coh.length, label:'Cohésion interne'},
+        regional: {score:Math.round(regScore), weight:10, count:reg.length, label:'Environnement régional'},
+        info: {score:Math.round(infoScore), weight:10, count:adv.length, label:'Pression informationnelle'}
+      },
+      dataPoints: week.length,
+      window: '7 jours glissants',
+      computedAt: new Date().toISOString()
+    };
+  }
+
+  // Historique IMS sur 30 jours (stocké dans localStorage)
+  function pushIMSHistory(ims){
+    const HKEY = 'gw_ims_history';
+    let h = []; try { h = JSON.parse(localStorage.getItem(HKEY))||[]; } catch(e){}
+    const today = new Date().toISOString().slice(0,10);
+    h = h.filter(x=>x.date!==today);
+    h.push({date:today, score:ims.score, level:ims.level});
+    h = h.slice(-90); // 90 jours max
+    try { localStorage.setItem(HKEY, JSON.stringify(h)); } catch(e){}
+    return h;
+  }
+  function getIMSHistory(){
+    try { return JSON.parse(localStorage.getItem('gw_ims_history'))||[]; } catch(e){ return []; }
+  }
+
+  /* ===== JAUGE IMS-BF (SVG circulaire premium) ===== */
+  function renderIMSGauge(targetId='ims-gauge'){
+    const el = document.getElementById(targetId); if(!el) return;
+    const ims = computeIMS();
+    pushIMSHistory(ims);
+    const hist = getIMSHistory();
+
+    const r = 95, cx = 130, cy = 130;
+    const circ = 2 * Math.PI * r;
+    const dash = (ims.score/100) * circ;
+    const offset = circ - dash;
+
+    // Mini sparkline 30j
+    const last30 = hist.slice(-30);
+    const sparkW = 220, sparkH = 38;
+    let spark = '';
+    if(last30.length>1){
+      const max = Math.max(...last30.map(p=>p.score), 30);
+      const pts = last30.map((p,i)=>{
+        const x = (i/(last30.length-1))*sparkW;
+        const y = sparkH - (p.score/max)*sparkH;
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(' ');
+      spark = `<svg width="${sparkW}" height="${sparkH}" style="display:block">
+        <polyline fill="none" stroke="${ims.color}" stroke-width="1.8" points="${pts}"/>
+        <polyline fill="${ims.color}22" stroke="none" points="0,${sparkH} ${pts} ${sparkW},${sparkH}"/>
+      </svg>`;
+    }
+
+    const dimsHTML = Object.entries(ims.dimensions).map(([k,v])=>{
+      const dCol = v.score>=70?'#ef4444':v.score>=50?'#f97316':v.score>=30?'#f59e0b':v.score>=15?'#eab308':'#22c55e';
+      return `<div style="margin-bottom:7px">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:.7rem;margin-bottom:2px">
+          <span style="color:#cbd5e1"><b>${v.label}</b> <span style="color:#64748b">· ${v.weight}%</span></span>
+          <span style="color:${dCol};font-weight:700">${v.score}<span style="color:#64748b;font-weight:400">/100</span></span>
+        </div>
+        <div style="height:5px;background:#0a0f1c;border-radius:3px;overflow:hidden"><div style="height:100%;width:${v.score}%;background:${dCol};transition:width .8s ease"></div></div>
+      </div>`;
+    }).join('');
+
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:center">
+        <!-- JAUGE CIRCULAIRE -->
+        <div style="position:relative;width:260px;height:260px;margin:auto">
+          <svg width="260" height="260" viewBox="0 0 260 260">
+            <defs>
+              <linearGradient id="ims-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="${ims.color}" stop-opacity=".2"/>
+                <stop offset="100%" stop-color="${ims.color}" stop-opacity=".8"/>
+              </linearGradient>
+              <filter id="ims-glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#0a0f1c" stroke-width="14"/>
+            <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="url(#ims-grad)" stroke-width="14" stroke-linecap="round"
+              stroke-dasharray="${dash} ${circ}" stroke-dashoffset="0"
+              transform="rotate(-90 ${cx} ${cy})" filter="url(#ims-glow)"
+              style="transition:stroke-dasharray 1.2s ease"/>
+            <text x="${cx}" y="${cy-6}" text-anchor="middle" fill="${ims.color}" font-size="56" font-weight="800" font-family="Segoe UI">${ims.score}</text>
+            <text x="${cx}" y="${cy+18}" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="2">/ 100</text>
+            <text x="${cx}" y="${cy+42}" text-anchor="middle" fill="${ims.color}" font-size="13" font-weight="700" letter-spacing="3">${ims.level}</text>
+          </svg>
+          <div style="position:absolute;top:-6px;left:50%;transform:translateX(-50%);background:${ims.color};color:#0a0f1c;padding:3px 11px;border-radius:11px;font-size:.62rem;font-weight:800;letter-spacing:1px;box-shadow:0 0 12px ${ims.color}88">⚡ INDICE LIVE</div>
+        </div>
+
+        <!-- DIMENSIONS + SPARKLINE -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:10px;flex-wrap:wrap">
+            <div>
+              <div style="font-size:1.05rem;color:#e2e8f0;font-weight:700;letter-spacing:.3px">Indice de Menace Stratégique — Burkina Faso</div>
+              <div style="font-size:.72rem;color:#94a3b8;margin-top:2px">Calcul pondéré sur ${ims.dataPoints} articles · fenêtre ${ims.window}</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:.62rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px">Tendance 30 j</div>
+              ${spark}
+            </div>
+          </div>
+          ${dimsHTML}
+          <div style="margin-top:8px;padding:7px 10px;background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.2);border-radius:5px;font-size:.7rem;color:#94a3b8;line-height:1.45">
+            <i class="fa-solid fa-circle-info" style="color:#60a5fa"></i> <b style="color:#cbd5e1">Méthodologie :</b> Score = 0,25·Sécuritaire + 0,20·Diplo + 0,20·Éco + 0,15·Cohésion + 0,10·Régional + 0,10·Info. Mise à jour à chaque collecte RSS.
+          </div>
+        </div>
+      </div>`;
+  }
+
+  /* ===== BQS — BRIEF QUOTIDIEN STRATÉGIQUE ===== */
+  // Sélectionne les top 5 développements 24h pondérés par criticité pour le BF
+  function buildBQS(){
+    const items = (window.NEWS_STATE?.items)||[];
+    const items24 = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/3600000 < 24);
+
+    // Score chaque article : pertinence BF, sévérité, fiabilité
+    const scored = items24.map(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      let s = 0;
+      if(it._bf) s += 30;
+      if(/burkina|ouagadougou|traoré|aes/i.test(txt)) s += 25;
+      if(/sahel|mali|niger/i.test(txt)) s += 18;
+      if(/cedeao|ecowas|côte d'ivoire|ghana|bénin|togo/i.test(txt)) s += 12;
+      if((it._majors||[]).length) s += 20;
+      if((it._tags||[]).includes('military')) s += 8;
+      if(/attaque|frappe|tué|sanction|coup/i.test(txt)) s += 10;
+      const letter = reliabilityLetter(it);
+      if(letter==='A'||letter==='B') s += 5;
+      if(letter==='D'||letter==='E') s -= 5;
+      return {item:it, score:s};
+    }).filter(x=>x.score>0)
+      .sort((a,b)=>b.score-a.score);
+
+    const top5 = scored.slice(0,5).map(x=>x.item);
+
+    // Implications BF auto-générées par patterns
+    const implications = top5.map(it=>{
+      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+      const lines = [];
+      if(/burkina|ouagadougou|traoré/i.test(txt)){
+        if(/attaque|jihadiste|jnim/i.test(txt)) lines.push('Pression sécuritaire intérieure directe — réévaluer dispositif local');
+        if(/sanction|isolé|cedeao/i.test(txt)) lines.push('Pression diplomatique → opportunité narrative AES');
+        else lines.push('Effet d\'image direct sur la souveraineté burkinabè');
+      }
+      if(/mali|niger/i.test(txt) && !/burkina/i.test(txt)){
+        lines.push('Effet de contagion AES — coordination tripartite à surveiller');
+      }
+      if(/cedeao|ecowas/i.test(txt)){
+        lines.push('Posture régionale en évolution — implications corridor logistique côtier');
+      }
+      if(/wagner|africa corps|russie/i.test(txt)){
+        lines.push('Reconfiguration partenariat sécuritaire — surveiller livraisons');
+      }
+      if(/or|gold|mine/i.test(txt)){
+        lines.push('Levier économique extractif — vigilance sur recettes État');
+      }
+      if(/iran|israël|gaza|liban/i.test(txt)){
+        lines.push('Onde de choc Moyen-Orient — surveiller flux migratoires & inflation énergie');
+      }
+      if(/soudan|fsr|burhan/i.test(txt)){
+        lines.push('Crise soudanaise — risque déstabilisation régionale élargie');
+      }
+      if(lines.length===0) lines.push('Veille à maintenir — implications BF à confirmer sur 48-72 h');
+      return lines.slice(0,2);
+    });
+
+    // Indicateurs à surveiller (J+1 à J+7)
+    const indicators = [];
+    const ims = computeIMS();
+    if(ims.dimensions.securitaire.score>40) indicators.push('🔴 Activité JNIM/EIGS soutenue dans la région — vigilance frontière nord/est');
+    if(ims.dimensions.diplomatique.score>30) indicators.push('🟠 Tensions diplomatiques actives — déclarations CEDEAO/AES à venir');
+    if(ims.dimensions.economique.score>30) indicators.push('🟠 Cours or, coton, mouvements F CFA à surveiller cette semaine');
+    if(ims.dimensions.regional.score>30) indicators.push('🟡 Voisins côtiers en tension — corridor Lomé/Cotonou/Abidjan à surveiller');
+    if(ims.dimensions.info.score>30) indicators.push('🟡 Volume narratives occidentales hostiles élevé — préparer riposte com');
+    if(indicators.length===0) indicators.push('🟢 Pas de signal d\'alerte précoce identifié — maintien vigilance routine');
+
+    return {
+      date: new Date(),
+      ims,
+      top5,
+      implications,
+      indicators,
+      stats: {
+        articles24: items24.length,
+        bf24: items24.filter(it=>it._bf).length,
+        adversarial: items24.filter(it=>['occident_fr','occident_us'].includes(classifyBlock(it))).length
+      }
+    };
+  }
+
+  function renderBQS(){
+    const el = document.getElementById('bqs-content'); if(!el) return;
+    const bqs = buildBQS();
+    const ims = bqs.ims;
+    const dateStr = bqs.date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    const timeStr = bqs.date.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+
+    const top5HTML = bqs.top5.length ? bqs.top5.map((it,i)=>{
+      const block = classifyBlock(it);
+      const blockMeta = BLOCKS[block] || {flag:'🌐', label:'Non classé', color:'#64748b'};
+      const impl = bqs.implications[i] || [];
+      return `<div style="page-break-inside:avoid;border-left:3px solid ${ims.color};background:#0a0f1c;padding:11px 13px;margin-bottom:10px;border-radius:0 6px 6px 0">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px;flex-wrap:wrap">
+          <div style="font-size:.92rem;color:#e2e8f0;font-weight:700;line-height:1.35;flex:1">
+            <span style="color:${ims.color};margin-right:5px">${i+1}.</span> ${it.title||'(sans titre)'}
+          </div>
+          ${reliabilityChip(it)}
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:7px">
+          <span style="font-size:.62rem;color:${blockMeta.color};background:${blockMeta.color}15;border:1px solid ${blockMeta.color}55;padding:1px 7px;border-radius:9px">${blockMeta.flag} ${blockMeta.label}</span>
+          <span style="font-size:.62rem;color:#64748b">${fmt.dateTime(it.pubDate)} · ${it._source||'—'}</span>
+          ${(it._majors||[]).length?'<span class="chip" style="background:rgba(239,68,68,.15);color:#fca5a5;font-size:.6rem;border:1px solid rgba(239,68,68,.4);font-weight:700">⚠ MAJEUR</span>':''}
+        </div>
+        ${it.description?`<div style="font-size:.78rem;color:#94a3b8;line-height:1.5;margin-bottom:7px">${(it.description||'').slice(0,260)}${(it.description||'').length>260?'…':''}</div>`:''}
+        <div style="background:rgba(253,224,71,.05);border:1px solid rgba(253,224,71,.2);padding:7px 10px;border-radius:4px;margin-top:7px">
+          <div style="font-size:.64rem;color:#fde047;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;font-weight:700"><i class="fa-solid fa-flag-checkered"></i> Implications Burkina Faso</div>
+          ${impl.map(l=>`<div style="font-size:.76rem;color:#cbd5e1;line-height:1.45">→ ${l}</div>`).join('')}
+        </div>
+        ${it.link?`<a href="${it.link}" target="_blank" rel="noopener" style="font-size:.66rem;color:#60a5fa;display:inline-block;margin-top:6px"><i class="fa-solid fa-arrow-up-right-from-square"></i> Source</a>`:''}
+      </div>`;
+    }).join('') : '<div class="empty"><i class="fa-solid fa-spinner fa-spin"></i><p>Collecte RSS en cours… Le brief s\'enrichit dès que les articles sont disponibles.</p></div>';
+
+    el.innerHTML = `
+      <!-- EN-TÊTE BRIEF -->
+      <div style="background:linear-gradient(135deg,#0c1426 0%,#0a0f1c 100%);border:1px solid #1a2340;border-radius:8px;padding:16px 18px;margin-bottom:14px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+          <div>
+            <div style="font-size:.66rem;color:${ims.color};letter-spacing:3px;text-transform:uppercase;font-weight:800">⚡ Brief Quotidien Stratégique</div>
+            <div style="font-size:1.3rem;color:#e2e8f0;font-weight:700;margin-top:3px;text-transform:capitalize">${dateStr}</div>
+            <div style="font-size:.74rem;color:#64748b;margin-top:2px">Généré à ${timeStr} · Cycle 24 heures · Document à diffusion restreinte</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn primary sm" id="bqs-export-pdf"><i class="fa-solid fa-file-pdf"></i> Exporter PDF A4</button>
+            <button class="btn ghost sm" id="bqs-refresh"><i class="fa-solid fa-rotate"></i> Actualiser</button>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px">
+          <div style="background:#0a0f1c;border-left:3px solid ${ims.color};padding:8px 11px;border-radius:0 5px 5px 0">
+            <div style="font-size:.62rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px">IMS-BF</div>
+            <div style="font-size:1.5rem;color:${ims.color};font-weight:800">${ims.score}<span style="color:#64748b;font-size:.78rem;font-weight:500">/100</span></div>
+            <div style="font-size:.66rem;color:${ims.color};font-weight:700">${ims.level}</div>
+          </div>
+          <div style="background:#0a0f1c;border-left:3px solid #60a5fa;padding:8px 11px;border-radius:0 5px 5px 0">
+            <div style="font-size:.62rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px">Articles 24 h</div>
+            <div style="font-size:1.5rem;color:#60a5fa;font-weight:800">${bqs.stats.articles24}</div>
+            <div style="font-size:.66rem;color:#94a3b8">collectés</div>
+          </div>
+          <div style="background:#0a0f1c;border-left:3px solid #fde047;padding:8px 11px;border-radius:0 5px 5px 0">
+            <div style="font-size:.62rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px">Pertinents BF</div>
+            <div style="font-size:1.5rem;color:#fde047;font-weight:800">${bqs.stats.bf24}</div>
+            <div style="font-size:.66rem;color:#94a3b8">articles</div>
+          </div>
+          <div style="background:#0a0f1c;border-left:3px solid #ef4444;padding:8px 11px;border-radius:0 5px 5px 0">
+            <div style="font-size:.62rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px">Couverture occidentale</div>
+            <div style="font-size:1.5rem;color:#ef4444;font-weight:800">${bqs.stats.adversarial}</div>
+            <div style="font-size:.66rem;color:#94a3b8">articles à analyser</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP 5 DÉVELOPPEMENTS -->
+      <div class="card" style="margin:0 0 14px">
+        <div class="card-hd"><h2><i class="fa-solid fa-bullseye" style="color:${ims.color}"></i>Top 5 développements stratégiques (24 h)</h2><div class="help">Classement pondéré : pertinence BF · sévérité · fiabilité source</div></div>
+        ${top5HTML}
+      </div>
+
+      <!-- INDICATEURS À SURVEILLER -->
+      <div class="card" style="margin:0">
+        <div class="card-hd"><h2><i class="fa-solid fa-binoculars" style="color:#60a5fa"></i>Indicateurs à surveiller (J+1 → J+7)</h2><div class="help">Signaux faibles dérivés de l'analyse multidimensionnelle</div></div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          ${bqs.indicators.map(ind=>`<div style="background:#0a0f1c;border:1px solid #1a2340;padding:9px 12px;border-radius:5px;font-size:.85rem;color:#cbd5e1">${ind}</div>`).join('')}
+        </div>
+      </div>
+
+      <!-- PIED -->
+      <div style="margin-top:14px;padding:10px 14px;background:rgba(96,165,250,.04);border:1px solid rgba(96,165,250,.15);border-radius:6px;font-size:.7rem;color:#64748b;line-height:1.5;text-align:center">
+        <b style="color:#94a3b8">GéoWatch — Cycle de veille automatisé</b> · Cotes de fiabilité standard OTAN (A1–F6) · Document généré à partir de ${bqs.stats.articles24} sources internationales
+      </div>`;
+
+    // Bind boutons
+    const expBtn = document.getElementById('bqs-export-pdf');
+    if(expBtn) expBtn.onclick = ()=>exportBQSPDF(bqs);
+    const refBtn = document.getElementById('bqs-refresh');
+    if(refBtn) refBtn.onclick = ()=>{ if(typeof loadNews==='function'){ toast('Actualisation en cours…','info'); loadNews().then(()=>renderBQS()); } else renderBQS(); };
+  }
+
+  /* ===== EXPORT PDF DU BRIEF QUOTIDIEN (format A4) ===== */
+  function exportBQSPDF(bqs){
+    if(!window.jspdf){ toast('Bibliothèque PDF non chargée','error'); return; }
+    bqs = bqs || buildBQS();
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({unit:'mm',format:'a4'});
+    const W=210, H=297, M=15;
+    let y = M;
+
+    const dateStr = bqs.date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    const timeStr = bqs.date.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+
+    const checkPage = (need=20)=>{ if(y+need>H-15){ doc.addPage(); y=M; addFooter(); } };
+    const addFooter = ()=>{
+      const pn = doc.getCurrentPageInfo().pageNumber;
+      doc.setFont('helvetica','italic'); doc.setFontSize(7.5); doc.setTextColor(120);
+      doc.text(`GéoWatch — Brief Quotidien Stratégique — ${bqs.date.toLocaleDateString('fr-FR')}`, M, H-9);
+      doc.text(`Page ${pn}`, W-M, H-9, {align:'right'});
+      doc.setTextColor(0);
+    };
+
+    // BANDEAU EN-TÊTE
+    const imsHex = bqs.ims.color.replace('#','');
+    const r=parseInt(imsHex.slice(0,2),16), g=parseInt(imsHex.slice(2,4),16), b=parseInt(imsHex.slice(4,6),16);
+    doc.setFillColor(8,13,26); doc.rect(0,0,W,32,'F');
+    doc.setFillColor(r,g,b); doc.rect(0,32,W,1.5,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(22); doc.setTextColor(96,165,250);
+    doc.text('GéoWatch', M, 14);
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(180);
+    doc.text('BRIEF QUOTIDIEN STRATÉGIQUE', M, 21);
+    doc.setFontSize(8); doc.setTextColor(140);
+    doc.text(`${dateStr} · ${timeStr}`, M, 27);
+    // bloc IMS à droite
+    doc.setFillColor(r,g,b); doc.rect(W-50, 6, 36, 22, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor(255);
+    doc.text('IMS-BF', W-32, 11, {align:'center'});
+    doc.setFontSize(20); doc.text(String(bqs.ims.score), W-32, 22, {align:'center'});
+    doc.setFontSize(7); doc.text(bqs.ims.level, W-32, 26, {align:'center'});
+    doc.setFontSize(8); doc.setTextColor(180);
+    doc.text('Document à diffusion restreinte', W-M, 14, {align:'right'});
+    doc.setTextColor(0); y = 42;
+    addFooter();
+
+    // RÉSUMÉ EXÉCUTIF
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(20,40,90);
+    doc.text('RÉSUMÉ EXÉCUTIF (BLUF)', M, y); y+=2; doc.setDrawColor(20,40,90); doc.setLineWidth(.4); doc.line(M,y,W-M,y); y+=5;
+    doc.setTextColor(0);
+    const bluf = `IMS-BF du jour : ${bqs.ims.score}/100 (${bqs.ims.level}). ${bqs.stats.articles24} articles agrégés (${bqs.stats.bf24} pertinents BF, ${bqs.stats.adversarial} à analyser côté occidental). ${bqs.top5.length>0?'Le développement principal porte sur : '+(bqs.top5[0].title||'').slice(0,140)+'.':''}`;
+    doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(40);
+    doc.splitTextToSize(bluf, W-2*M).forEach(l=>{checkPage(5); doc.text(l, M, y); y+=4.7;});
+    y+=4;
+
+    // DIMENSIONS IMS
+    checkPage(50);
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(20,40,90);
+    doc.text('DÉCOMPOSITION DE L\'INDICE DE MENACE', M, y); y+=2; doc.line(M,y,W-M,y); y+=5;
+    doc.setTextColor(0);
+    Object.entries(bqs.ims.dimensions).forEach(([k,d])=>{
+      checkPage(8);
+      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(40);
+      doc.text(`${d.label} (poids ${d.weight}%)`, M, y);
+      doc.setFont('helvetica','normal');
+      doc.text(`${d.score}/100 — ${d.count} signal(aux)`, W-M, y, {align:'right'});
+      y+=2;
+      doc.setFillColor(230,230,230); doc.rect(M, y, W-2*M, 2.2, 'F');
+      const dHex = (d.score>=70?'ef4444':d.score>=50?'f97316':d.score>=30?'f59e0b':d.score>=15?'eab308':'22c55e');
+      const dr=parseInt(dHex.slice(0,2),16), dg=parseInt(dHex.slice(2,4),16), db=parseInt(dHex.slice(4,6),16);
+      doc.setFillColor(dr,dg,db); doc.rect(M, y, (W-2*M)*(d.score/100), 2.2, 'F');
+      y+=6;
+    });
+    y+=4;
+
+    // TOP 5
+    checkPage(20);
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(180,40,40);
+    doc.text('TOP 5 DÉVELOPPEMENTS STRATÉGIQUES (24 H)', M, y); y+=2; doc.setDrawColor(180,40,40); doc.line(M,y,W-M,y); y+=5;
+    doc.setTextColor(0);
+
+    bqs.top5.forEach((it,i)=>{
+      checkPage(35);
+      const block = classifyBlock(it);
+      const blockMeta = BLOCKS[block] || {label:'Non classé', flag:''};
+      const L = reliabilityLetter(it), N = credibilityNum(it);
+      const impl = bqs.implications[i] || [];
+      // numéro
+      doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(180,40,40);
+      doc.text(`${i+1}.`, M, y);
+      // titre
+      doc.setFontSize(10); doc.setTextColor(20);
+      doc.splitTextToSize(it.title||'(sans titre)', W-2*M-8).forEach((l,li)=>{ doc.text(l, M+8, y); if(li>=0) y+=4.7; });
+      // meta
+      doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(110);
+      const date = it.pubDate ? new Date(it.pubDate).toLocaleString('fr-FR',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+      doc.text(`[${L}${N}] ${blockMeta.label} · ${it._source||'—'} · ${date}`, M+8, y); y+=5;
+      // description courte
+      if(it.description){
+        doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(60);
+        doc.splitTextToSize((it.description||'').slice(0,260), W-2*M-8).forEach(l=>{checkPage(5); doc.text(l, M+8, y); y+=4.5;});
+      }
+      // implications BF
+      y+=1;
+      doc.setFillColor(255,250,220); doc.rect(M+8, y-1, W-2*M-8, impl.length*5+5, 'F');
+      doc.setDrawColor(220,180,40); doc.setLineWidth(.3); doc.line(M+8, y-1, M+8, y+impl.length*5+4);
+      doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(160,100,0);
+      doc.text('IMPLICATIONS BF :', M+11, y+3);
+      doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(40);
+      impl.forEach((l,li)=>{
+        const lines = doc.splitTextToSize('→ '+l, W-2*M-14);
+        lines.forEach(ln=>{ doc.text(ln, M+11, y+8+li*5); });
+      });
+      y += impl.length*5 + 9;
+      // séparateur
+      doc.setDrawColor(220); doc.setLineWidth(.2); doc.line(M, y, W-M, y); y+=4;
+    });
+
+    // INDICATEURS
+    checkPage(40);
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(20,80,150);
+    doc.text('INDICATEURS À SURVEILLER (J+1 → J+7)', M, y); y+=2; doc.setDrawColor(20,80,150); doc.line(M,y,W-M,y); y+=5;
+    doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(20);
+    bqs.indicators.forEach(ind=>{
+      checkPage(7);
+      doc.splitTextToSize('▸ '+ind.replace(/^[🔴🟠🟡🟢]\s*/,''), W-2*M-3).forEach(l=>{ doc.text(l, M+3, y); y+=4.7; });
+      y+=1;
+    });
+    y+=4;
+
+    // MÉTHODOLOGIE & DISCLAIMER
+    checkPage(30);
+    doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(100);
+    doc.text('MÉTHODOLOGIE', M, y); y+=4;
+    doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(120);
+    const meth = `IMS-BF = somme pondérée de 6 dimensions sur fenêtre 7 jours glissants : Sécuritaire 25% + Diplomatique 20% + Économique 20% + Cohésion 15% + Régional 10% + Informationnel 10%. Cotes de fiabilité = standard OTAN (lettre A-F pour la source, chiffre 1-6 pour l'information). Sources : ${bqs.stats.articles24} articles agrégés depuis flux RSS internationaux.`;
+    doc.splitTextToSize(meth, W-2*M).forEach(l=>{ doc.text(l, M, y); y+=3.5; });
+
+    doc.save(`BQS_${bqs.date.toISOString().slice(0,10)}.pdf`);
+    toast('Brief Quotidien exporté en PDF','success');
+  }
+
+  /* ===== VEILLE ADVERSARIALE — RENDU ===== */
+  function renderAdversarial(){
+    const el = document.getElementById('adv-content'); if(!el) return;
+    const items = (window.NEWS_STATE?.items)||[];
+    const week = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 7);
+
+    // Filtrage : articles parlant du Burkina/AES/Sahel
+    const subjectKw = /burkina|ouagadougou|traoré|aes|sahel|mali|niger|jnim|wagner|africa corps|junte/i;
+    const focused = week.filter(it=>{
+      const txt = (it.title||'')+' '+(it.description||'');
+      return subjectKw.test(txt);
+    });
+
+    // Classification par bloc
+    const byBlock = {};
+    Object.keys(BLOCKS).forEach(k=>byBlock[k]={items:[], block:BLOCKS[k]});
+    byBlock.autre = {items:[], block:{label:'Non classé',flag:'❓',color:'#64748b'}};
+
+    focused.forEach(it=>{
+      const b = classifyBlock(it);
+      (byBlock[b]||byBlock.autre).items.push(it);
+    });
+
+    // Détection narratives par mots-clés ciblés
+    const narrPatterns = [
+      {key:'pro_aes', label:'Pro-AES / pro-Traoré', color:'#22c55e', kw:['souveraineté','panafricanisme','indépendance','traoré héros','révolutionnaire','anti-impérialiste']},
+      {key:'anti_aes', label:'Anti-junte / pro-CEDEAO', color:'#ef4444', kw:['junte','régime militaire','putsch','dictature','isolement','sanction']},
+      {key:'pro_russia', label:'Pro-Russie / Wagner', color:'#dc2626', kw:['wagner partenaire','africa corps efficace','russie alliée','aide russe']},
+      {key:'anti_russia', label:'Anti-Russie / Wagner', color:'#3b82f6', kw:['wagner mercenaires','exactions wagner','crimes de guerre','manipulation russe']},
+      {key:'pro_france', label:'Pro-France / pro-occident', color:'#60a5fa', kw:['france soutient','aide française','partenariat européen','retour france']},
+      {key:'anti_france', label:'Anti-France / Françafrique', color:'#a855f7', kw:['françafrique','néocolonial','ingérence française','rupture france']}
+    ];
+
+    const narrCount = narrPatterns.map(n=>{
+      const matches = focused.filter(it=>{
+        const t = ((it.title||'')+' '+(it.description||'')).toLowerCase();
+        return n.kw.some(k=>t.includes(k));
+      });
+      return {...n, count:matches.length, items:matches};
+    }).filter(n=>n.count>0).sort((a,b)=>b.count-a.count);
+
+    const totalFocused = focused.length;
+
+    el.innerHTML = `
+      <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0c1426 0%,#0a0f1c 100%);border-color:#1a2340">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+          <div>
+            <div style="font-size:.62rem;color:#ef4444;letter-spacing:3px;text-transform:uppercase;font-weight:800">⚡ Veille adversariale</div>
+            <div style="font-size:1.15rem;color:#e2e8f0;font-weight:700;margin-top:3px">Cartographie des narratives sur le Burkina Faso & le Sahel</div>
+            <div style="font-size:.74rem;color:#64748b;margin-top:2px">${totalFocused} articles analysés sur 7 jours · répartis par bloc d'origine</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÉPARTITION PAR BLOC -->
+      <div class="card" style="margin:0 0 14px">
+        <div class="card-hd"><h2><i class="fa-solid fa-globe"></i>Répartition de la couverture par bloc géopolitique</h2><div class="help">Volume d'articles parlant du BF/Sahel/AES classés par origine éditoriale</div></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+          ${Object.values(byBlock).filter(b=>b.items.length>0).sort((a,b)=>b.items.length-a.items.length).map(b=>{
+            const pct = totalFocused>0 ? Math.round(b.items.length/totalFocused*100) : 0;
+            return `<div style="background:#0a0f1c;border:1px solid #1a2340;border-top:3px solid ${b.block.color};border-radius:6px;padding:11px">
+              <div style="font-size:1.4rem;font-weight:800;color:${b.block.color}">${b.block.flag} ${b.items.length}</div>
+              <div style="font-size:.78rem;color:#e2e8f0;font-weight:600;margin-top:2px">${b.block.label}</div>
+              <div style="font-size:.7rem;color:#64748b">${pct}% de la couverture</div>
+              <div style="height:4px;background:#141c30;border-radius:2px;margin-top:7px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${b.block.color}"></div></div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- NARRATIVES DÉTECTÉES -->
+      <div class="card" style="margin:0 0 14px">
+        <div class="card-hd"><h2><i class="fa-solid fa-comments"></i>Narratives détectées</h2><div class="help">Détection automatique par signatures lexicales — à vérifier manuellement</div></div>
+        ${narrCount.length ? `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+          ${narrCount.map(n=>`<div style="background:#0a0f1c;border-left:3px solid ${n.color};border-radius:5px;padding:11px 13px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+              <span style="font-size:.85rem;font-weight:700;color:${n.color}">${n.label}</span>
+              <span style="font-size:1.1rem;font-weight:800;color:${n.color}">${n.count}</span>
+            </div>
+            <div style="font-size:.7rem;color:#94a3b8">${n.items.slice(0,2).map(it=>'• '+(it.title||'').slice(0,80)+'…').join('<br>')}</div>
+          </div>`).join('')}
+        </div>` : '<div class="empty"><i class="fa-solid fa-shield-halved"></i><p>Aucune narrative caractéristique détectée pour le moment.</p></div>'}
+      </div>
+
+      <!-- ARTICLES PAR BLOC -->
+      <div class="card" style="margin:0">
+        <div class="card-hd"><h2><i class="fa-solid fa-list"></i>Détail des couvertures par bloc</h2></div>
+        ${Object.values(byBlock).filter(b=>b.items.length>0).map(b=>{
+          return `<div style="margin-bottom:14px">
+            <div style="font-size:.85rem;font-weight:700;color:${b.block.color};padding:6px 10px;background:${b.block.color}11;border-left:3px solid ${b.block.color};border-radius:0 4px 4px 0;margin-bottom:7px">${b.block.flag} ${b.block.label} <span style="color:#64748b;font-weight:400">· ${b.items.length} articles</span></div>
+            ${b.items.slice(0,5).map(it=>`<a href="${it.link||'#'}" target="_blank" rel="noopener" style="display:block;text-decoration:none;padding:6px 10px;border-bottom:1px solid #141c30;color:#cbd5e1;font-size:.78rem">
+              ${reliabilityChip(it,{compact:true})} <span style="color:#94a3b8;font-size:.66rem;margin:0 4px">${it._source||'—'} ·</span> ${(it.title||'').slice(0,140)}
+            </a>`).join('')}
+            ${b.items.length>5?`<div style="font-size:.7rem;color:#64748b;padding:5px 10px">+ ${b.items.length-5} autres articles</div>`:''}
+          </div>`;
+        }).join('')}
+      </div>`;
+  }
+
+  // Public API
+  return {
+    BLOCKS, classifyBlock,
+    RELIABILITY_LETTER, CREDIBILITY_NUM, SOURCE_RATING,
+    reliabilityLetter, credibilityNum, reliabilityChip,
+    computeIMS, pushIMSHistory, getIMSHistory, renderIMSGauge,
+    buildBQS, renderBQS, exportBQSPDF,
+    renderAdversarial
+  };
+})();
+
+// Exposer renderBQS et renderAdversarial pour le Router
+function renderBQS(){ GW_INTEL.renderBQS(); }
+function renderAdversarial(){ GW_INTEL.renderAdversarial(); }
+
 /* ============= DASHBOARD ============= */
 function renderDashboard(){
   const d = DB.get(); const now=new Date();
   const active = d.conflicts.filter(c=>c.status!=='frozen'&&c.status!=='resolved');
   const ruptures = d.events.filter(e=>e.rupture).length;
+
+  // ═══ JAUGE IMS-BF (rendu en tête du tableau de bord) ═══
+  try { GW_INTEL.renderIMSGauge('ims-gauge'); } catch(e){ console.warn('IMS gauge:',e); }
 
   // KPIs LIVE depuis RSS
   const rss24h = (NEWS_STATE?.items||[]).filter(it=>{
@@ -1373,6 +2103,7 @@ function renderEvents(){
 
 /* ============= NEWS / RSS — 5 proxies + catégorisation + auto-refresh + auto-désactivation ============= */
 const NEWS_STATE = { items:[], lastUpdate:null, autoTimer:null, currentCat:'all' };
+window.NEWS_STATE = NEWS_STATE; // Exposé pour le module GW_INTEL (IMS-BF, BQS, Veille adversariale)
 
 /* Compteur d'échecs persistant : auto-désactive les sources qui échouent 3 fois consécutives */
 function getFailCount(sourceId){
@@ -1675,6 +2406,8 @@ async function loadNews(){
   // Re-render TOUTES les pages qui dépendent de RSS pour qu'elles soient à jour
   const cur = document.querySelector('.page.active')?.dataset.page;
   if(cur==='dash') renderDashboard();
+  else if(cur==='bqs') renderBQS();
+  else if(cur==='adversarial') renderAdversarial();
   else if(cur==='alerts') renderAlerts();
   else if(cur==='sources') renderSources();
   else if(cur==='conflicts') renderConflicts();
@@ -1749,6 +2482,10 @@ function renderNewsList(){
     const conflictTags = (it._conflicts||[]).slice(0,3).map(c=>`<span class="chip orange" style="cursor:pointer" onclick="showConflictDetail('${c.id}')">${c.short||c.name}</span>`).join('');
     const themeTags = (it._tags||[]).map(t=>`<span class="chip ${tagColor[t]||'gray'}">${tagEmoji[t]||''} ${t}</span>`).join('');
     const bfBadge = it._bf ? `<span class="chip" style="background:rgba(253,224,71,.18);color:#fde047;border:1px solid rgba(253,224,71,.5)">🇧🇫 Pertinent BF</span>` : '';
+    const reliabilityBadge = (typeof GW_INTEL!=='undefined') ? GW_INTEL.reliabilityChip(it) : '';
+    const blockKey = (typeof GW_INTEL!=='undefined') ? GW_INTEL.classifyBlock(it) : null;
+    const blockMeta = blockKey && GW_INTEL.BLOCKS[blockKey];
+    const blockBadge = blockMeta ? `<span class="chip" style="background:${blockMeta.color}15;color:${blockMeta.color};border:1px solid ${blockMeta.color}55;font-size:.62rem" title="${blockMeta.label}">${blockMeta.flag} ${blockMeta.label.split(' ')[0]}</span>` : '';
     const srcObj = (window.GW_DATA?.RSS_SOURCES_FULL||[]).find(s=>s.id===it._sourceId);
     const isEn = srcObj?.lang==='en';
     const langBadge = !isEn
@@ -1767,7 +2504,7 @@ function renderNewsList(){
       </div>
       ${preview?`<div class="news-desc" id="ndesc-${globalIdx}">${preview}</div>`:''}
       ${hasMore?`<button class="btn ghost sm" style="margin:4px 0 2px;font-size:.74rem" onclick="expandNews(${globalIdx})"><i class="fa-solid fa-chevron-down"></i> Lire intégralement</button>`:''}
-      <div class="news-tags" style="margin-top:6px">${langBadge}${bfBadge}${conflictTags}${themeTags}
+      <div class="news-tags" style="margin-top:6px">${reliabilityBadge}${blockBadge}${langBadge}${bfBadge}${conflictTags}${themeTags}
         <a href="${it.link}" target="_blank" rel="noopener" class="chip gray" style="text-decoration:none;margin-left:auto"><i class="fa-solid fa-arrow-up-right-from-square"></i> Article source</a>
       </div>
     </div>`;
