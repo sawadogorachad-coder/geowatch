@@ -212,7 +212,7 @@ textarea.inp{resize:vertical;min-height:60px}
 .leaflet-popup-content{margin:10px 13px;font-size:.82rem;line-height:1.45}
 .leaflet-popup-content b{color:#60a5fa}
 .leaflet-container a.leaflet-popup-close-button{color:#64748b}
-/* Popups en mode carte claire (Diploweb / ISW) */
+/* Popups en mode carte claire (Clair éditorial / Topo) */
 body.map-light .leaflet-popup-content-wrapper{background:#ffffff;color:#1e293b;border:1px solid #cbd5e1;box-shadow:0 8px 24px rgba(15,23,42,.18)}
 body.map-light .leaflet-popup-tip{background:#ffffff;border:1px solid #cbd5e1}
 body.map-light .leaflet-popup-content b{color:#1e40af}
@@ -487,9 +487,9 @@ body.map-light .map-legend h4{color:#475569}
           <button class="tab" data-mode="world" style="font-weight:700">🌍 Carte stratégique mondiale</button>
         </div>
         <div class="tabs" id="map-tile">
-          <button class="tab active" data-tile="diplo" title="Style Diploweb — fond clair éditorial">Diploweb</button>
-          <button class="tab" data-tile="isw" title="Style ISW — relief topographique">ISW topo</button>
-          <button class="tab" data-tile="dark" title="Fond sombre">Dark</button>
+          <button class="tab active" data-tile="diplo" title="Style éditorial — fond clair pour lecture">Clair éditorial</button>
+          <button class="tab" data-tile="isw" title="Style topographique — relief géographique">Topo relief</button>
+          <button class="tab" data-tile="dark" title="Fond sombre">Sombre</button>
         </div>
         <select id="map-region" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"><option value="">Toutes régions</option></select>
         <select id="map-status" style="background:#0a0f1c;border:1px solid #1a2340;color:#e2e8f0;padding:7px 11px;border-radius:6px;font-size:.82rem"><option value="">Tous statuts</option><option value="escalating">Escalade</option><option value="active">Actif</option><option value="deescalating">Désescalade</option><option value="frozen">Gelé</option></select>
@@ -577,8 +577,8 @@ body.map-light .map-legend h4{color:#475569}
     <!-- ============= SOURCES THINK TANKS ============= -->
     <section class="page" data-page="sources">
       <div class="card">
-        <div class="card-hd"><h2><i class="fa-solid fa-book-bookmark"></i>Bibliothèque sources think tanks</h2></div>
-        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:12px">14 sources sélectionnées : think tanks français (IRIS, FRS, IFRI), américains (ISW, RAND, CSIS), britanniques (IISS, Chatham), revues (Le Grand Continent, Diploweb, LMD), données (ACLED), ONG (ICG).</div>
+        <div class="card-hd"><h2><i class="fa-solid fa-book-bookmark"></i>Bibliothèque sources internationales (140+)</h2></div>
+        <div class="help" style="font-size:.78rem;color:#94a3b8;margin-bottom:12px">Sources organisées en 14 blocs géographiques : 🇧🇫 BF locales (15) · Sahel voisins · Afrique Ouest côtière · Afrique centrale & Est · Maghreb · Think tanks africains (ISS Africa, WATHI, ACSS, Mo Ibrahim) · Think tanks internationaux (ICG, ACLED, IRIS, IFRI, ISW, Brookings, Chatham House, Carnegie) · Médias référence (Le Monde, BBC, Al Jazeera, NYT) · Russie/Chine/Moyen-Orient/Inde (veille adversariale) · Humanitaire (ReliefWeb, HRW, MSF).</div>
         <div id="sources-grid" class="grid-3"></div>
       </div>
     </section>
@@ -619,7 +619,7 @@ body.map-light .map-legend h4{color:#475569}
           </div>
         </div>
         <div class="help" style="font-size:.75rem;color:#94a3b8;margin-bottom:10px">
-          <b>11 sources vérifiées en direct (✓ vert)</b> : BBC World, BBC Afrique (FR), BBC Africa, BBC Business, Al Jazeera, NPR World, ONU Info FR/EN, Le Grand Continent, IRIS France, Diploweb. <span style="color:#f59e0b">⚠ Sources « à tester »</span> : flux bloqués en local (anti-bot, CORS) qui marcheront une fois le site déployé. <b>5 proxies en cascade</b> (rss2json, allorigins×2, corsproxy.io, thingproxy) pour résilience maximale.
+          <b>140+ sources distribuées en 14 blocs géographiques</b>. Sources actives par défaut (32) : 🇧🇫 BF locales (Lefaso, Burkina24, Sidwaya, AIB, Wakat Séra, Radio Omega) · Sahel (Maliweb, Studio Tamani, Niger24, Studio Kalangou, Tchadinfos, Cridem) · Afrique Ouest (Abidjan.net, Seneweb, MyJoyOnline, La Nation Bénin, Premium Times) · Médias FR (Le Monde, Le Monde Afrique, France 24, Jeune Afrique, RFI, BBC Afrique, Al Jazeera, ONU Info FR) · Think tanks (ISS Africa, WATHI, ACLED, ICG, IRIS, IFRI, ISW, Le Grand Continent, LMD) · Veille adversariale (RT FR, Sputnik Afrique, NYT, FP, Guardian) · Humanitaire (ReliefWeb Burkina). <span style="color:#f59e0b">⚠</span> <b>5 proxies en cascade</b> (rss2json, allorigins×2, corsproxy.io, thingproxy) pour résilience maximale.
         </div>
 
         <div class="tabs" id="news-cat" style="margin-bottom:10px">

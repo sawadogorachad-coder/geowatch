@@ -3,11 +3,20 @@
    Pour chaque conflit : brief pédagogique court accessible aux non-spécialistes
 
    ⚠️  AVERTISSEMENT IMPORTANT :
-   Ces analyses ont été rédigées le 29 avril 2026 à partir de sources publiques
-   (IRIS, ICG, ACLED, ONU, BBC, Al Jazeera, Le Grand Continent, Diploweb).
+   Ces analyses ont été rédigées le 29 avril 2026 à partir d'un croisement de sources
+   publiques diversifiées (140+ flux RSS) :
+     • Sources locales : Lefaso, Sidwaya, AIB, Burkina24 (Burkina Faso), Maliweb,
+       Studio Tamani (Mali), Niger24, Studio Kalangou (Niger), Tchadinfos, Cridem.
+     • Think tanks africains : ISS Africa, WATHI, ACSS, Mo Ibrahim, IPSS Addis-Abeba.
+     • Données conflictuelles : ACLED, ICG (Crisis Group).
+     • Think tanks internationaux : IRIS, IFRI, FRS, ISW, Brookings, Carnegie, RAND.
+     • Médias référence : BBC Afrique, RFI Afrique, Jeune Afrique, Al Jazeera, Le Monde
+       Afrique, France 24, Premium Times, Daily Nation, ONU Info.
+     • Revues : Le Grand Continent, Le Monde Diplomatique, Diploweb.
    Certains passages MÉLANGENT des faits avérés et des scénarios PROSPECTIFS
    (ce qui pourrait arriver) présentés comme possibles mais non certains.
-   → Toujours vérifier avec les derniers rapports IRIS/ICG/ACLED avant usage officiel.
+   → Toujours vérifier avec les sources locales (Lefaso, Sidwaya) et ACLED/ICG/ISS Africa
+     avant usage officiel.
    → Utilisez l'onglet Admin → Modifier les analyses pour mettre à jour le contenu.
    ========================================================================== */
 

@@ -179,7 +179,7 @@ const Router = {
     analyses:['Analyses quantitatives','Tendances, rythmes, comparaisons'],
     map:['Carte stratégique','Style ICG — zones, statut, intensité'],
     countries:['Pays','Indice composite type Fragile States Index'],
-    sources:['Sources think tanks','IRIS, FRS, ISW, ICG, ACLED, IFRI, RAND, Diploweb, LGC, LMD…'],
+    sources:['Sources think tanks & médias','140+ sources : 15 BF locales (Lefaso, Burkina24, Sidwaya, AIB, Wakat Séra…), Sahel (Maliweb, Niger24, Tchadinfos, Cridem…), Afrique (Abidjan.net, Seneweb, ISS Africa, WATHI…), think tanks (ICG, ACLED, IRIS, IFRI, ISW, Brookings, Carnegie…), médias (Le Monde, BBC, Al Jazeera, NYT, Jeune Afrique, RFI…)'],
     news:['Flux RSS','Veille auto-taggée par conflit'],
     worldwatch:['Veille mondiale automatique','Tensions, zones chaudes & événements détectés en temps réel depuis les flux RSS'],
     alerts:['Alertes','Seuils de rupture (cf. Codex Veille MO)'],
@@ -4796,7 +4796,7 @@ function exportNotePDF(cid){
   doc.setDrawColor(180); doc.setLineWidth(.3); doc.line(M,y,W-M,y); y+=5;
   doc.setFont('helvetica','italic'); doc.setFontSize(8); doc.setTextColor(100);
   doc.text(`Document généré par GéoWatch — Méthodologie : Note de situation 8 dimensions (gabarit CNES).`,M,y); y+=4;
-  doc.text(`Sources curées : IRIS, FRS, ISW, ICG, ACLED, IFRI, RAND, Diploweb, Le Grand Continent, Le Monde Diplomatique, IISS, CSIS, ECFR, Chatham House.`,M,y);
+  doc.text(`Sources curées (extrait sur 140+ sources actives) : Lefaso, Burkina24, Sidwaya, AIB, Wakat Séra, Maliweb, Niger24, Tchadinfos, Cridem, Abidjan.net, Seneweb, MyJoyOnline, ISS Africa, WATHI, ACLED, ICG, IRIS, IFRI, ISW, Brookings, Carnegie, Le Monde Afrique, BBC Afrique, RFI Afrique, Jeune Afrique, Al Jazeera, NYT, FT, Le Grand Continent, Diploweb, LMD.`,M,y);
 
   // Re-ajoute footer sur toutes pages générées
   const total = doc.getNumberOfPages();
@@ -4894,7 +4894,7 @@ function exportNoteDOCX(cid){
 
   if(c.sources?.length){ html += `<h2>Sources de référence</h2><ul>${c.sources.map(s=>`<li><b>${s.nom}</b> — ${s.url}</li>`).join('')}</ul>`; }
 
-  html += `<div class="footer">Document généré par GéoWatch — Méthodologie Note de situation 8 dimensions (gabarit CNES). Sources curées : IRIS, FRS, ISW, ICG, ACLED, IFRI, RAND, Diploweb, Le Grand Continent, Le Monde Diplomatique, IISS, CSIS.</div>`;
+  html += `<div class="footer">Document généré par GéoWatch — Méthodologie Note de situation 8 dimensions. Sources curées (extrait sur 140+ flux) : sources locales burkinabè (Lefaso, Burkina24, Sidwaya, AIB, Wakat Séra), sahéliennes (Maliweb, Niger24, Tchadinfos, Cridem), ouest-africaines (Abidjan.net, Seneweb, MyJoyOnline, Premium Times), think tanks africains (ISS Africa, WATHI, ACSS), internationaux (ACLED, ICG, IRIS, IFRI, ISW, Brookings, Carnegie, Le Grand Continent, Diploweb, LMD), médias (BBC Afrique, RFI, Le Monde Afrique, Jeune Afrique, Al Jazeera, NYT, FT).</div>`;
   html += `</body></html>`;
 
   const blob = new Blob(['﻿', html], {type:'application/msword'});
@@ -5061,7 +5061,7 @@ function exportNotePPTX(cid){
   pres.writeFile({fileName:`note_${c.id}_${new Date().toISOString().slice(0,10)}.pptx`}).then(()=>toast('Présentation PPTX exportée','success'));
 }
 
-/* ============= MAP (Diploweb / ISW / Dark — éditoriale) ============= */
+/* ============= MAP (Clair éditorial / Topo relief / Sombre) ============= */
 const MAP_STATE = { mode:'conflict', region:'', status:'', tile:'diplo' };
 const GeoMap = {
   map:null, layers:{conflicts:null, fsi:null}, tileLayers:[], _initialized:false,

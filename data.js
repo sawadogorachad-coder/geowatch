@@ -116,12 +116,33 @@ const CONFLITS = [
     ],
 
     sources: [
+      // Sources locales et régionales africaines (priorité)
+      {nom:'Lefaso.net (Burkina Faso)', url:'https://lefaso.net/'},
+      {nom:'Sidwaya (Burkina Faso)', url:'https://www.sidwaya.info/'},
+      {nom:'AIB — Agence d\'Information du Burkina', url:'https://www.aib.media/'},
+      {nom:'Maliweb', url:'https://www.maliweb.net/'},
+      {nom:'Studio Tamani (Mali)', url:'https://www.studiotamani.org/'},
+      {nom:'Niger24', url:'https://www.niger24.net/'},
+      {nom:'Studio Kalangou (Niger)', url:'https://www.studiokalangou.org/'},
+      // Think tanks africains
+      {nom:'ISS Africa — Institute for Security Studies', url:'https://issafrica.org/'},
+      {nom:'WATHI — Think tank ouest-africain', url:'https://www.wathi.org/'},
+      {nom:'ACSS — Africa Center for Strategic Studies', url:'https://africacenter.org/'},
+      // Données conflictuelles
       {nom:'ACLED Dashboard Sahel', url:'https://acleddata.com/dashboard/'},
-      {nom:'IRIS — Observatoire Boko Haram et Sahel', url:'https://www.iris-france.org/observatoires/observatoire-boko-haram/'},
-      {nom:'FRS — Sahel', url:'https://frstrategie.org/recherche/themes/afrique-subsaharienne'},
       {nom:'Crisis Group — Sahel', url:'https://www.crisisgroup.org/africa/sahel'},
-      {nom:'Diploweb — dossiers Sahel', url:'https://www.diploweb.com/-Afrique-.html'},
-      {nom:'Le Grand Continent — Afrique', url:'https://legrandcontinent.eu/fr/categorie/zones/afrique/'}
+      // Think tanks internationaux
+      {nom:'IRIS — Observatoire Sahel', url:'https://www.iris-france.org/observatoires/observatoire-boko-haram/'},
+      {nom:'IFRI — Programme Afrique', url:'https://www.ifri.org/fr/programmes/afrique-subsaharienne'},
+      {nom:'FRS — Afrique subsaharienne', url:'https://frstrategie.org/recherche/themes/afrique-subsaharienne'},
+      // Médias panafricains
+      {nom:'Jeune Afrique', url:'https://www.jeuneafrique.com/'},
+      {nom:'BBC Afrique', url:'https://www.bbc.com/afrique'},
+      {nom:'RFI Afrique', url:'https://www.rfi.fr/fr/afrique/'},
+      // Revues francophones
+      {nom:'Le Grand Continent — Afrique', url:'https://legrandcontinent.eu/fr/categorie/zones/afrique/'},
+      {nom:'Diploweb — dossiers Afrique', url:'https://www.diploweb.com/-Afrique-.html'},
+      {nom:'Le Monde Diplomatique', url:'https://www.monde-diplomatique.fr/'}
     ]
   },
 
