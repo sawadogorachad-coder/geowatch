@@ -43,6 +43,38 @@ Pages équipées :
 
 Helper `chartInsight(canvasId, methodHTML, lectureHTML, color, bottomLine)` accepte désormais un **5e argument** `bottomLine` qui affiche un encart « À retenir » en gros pour le décideur.
 
+## 🌐 Fusion GeoIntel (carte mondiale)
+
+Page `data-page="geointel"` accessible via la sidebar (item vert avec badge `+`).
+- **Iframe intégré** : `<iframe src="https://sawadogorachad-coder.github.io/geo-intel/">` chargé dynamiquement
+- Bouton **« Plein écran »** pour ouvrir GeoIntel dans un nouvel onglet
+- Bouton **« Recharger »** pour rafraîchir l'iframe
+- Bouton **« Carte GeoIntel »** ajouté dans `crossRefBlock(c)` GW_DEPTH (présent sur toutes les fiches enrichies)
+- Bouton **« Carte GeoIntel »** ajouté dans renderAlerts (sous chaque alerte)
+- `renderGeoIntel()` : binding du bouton recharger
+
+## 🔔 Système de notifications consolidé
+
+- **3 canaux complémentaires** :
+  1. Panel notifications GéoWatch (clic sur cloche en topbar) — toujours actif
+  2. Toast in-app à chaque nouvelle dépêche BF ou événement majeur — ne dépend PAS de la permission navigateur
+  3. Notification système (push navigateur) — nécessite `Notification.permission==='granted'`
+- **Bandeaux d'aide** dans le panel selon état permission : `default` → bouton "Activer" / `denied` → instructions / `granted` → confirmation
+- `requestNotifPermission()` avec notification de test au moment de l'octroi
+- `buildNotifEntry(it)` factorisé pour construire les entrées
+- Détection élargie : `_bf` OR conflit prioritaire OR military OR diplomatic
+
+## 📊 Matrice scénarios proba × impact pédagogique
+
+Encart visuel **massif au-dessus du graphique** :
+- Explication des deux axes en français simple
+- 4 cartes-cadrans colorées avec :
+  - Compteur live de scénarios dans chaque cadran
+  - Catégorie (CRITIQUES / SURPRISES / BRUIT / NÉGLIGEABLES)
+  - Action recommandée
+  - Exemples concrets
+- Tooltip enrichi sur chaque point : nom, proba, impact, cadran, action
+
 ## 🧬 Module GW_DEPTH — Profondeur analytique injectée
 
 Le module `GW_DEPTH` enrichit toutes les sections (Briefs, Scénarios, Indicateurs, Reconfigurations, Impact BF, Analyses) avec **6 couches de profondeur live** :

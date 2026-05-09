@@ -170,6 +170,7 @@ const Router = {
     bqs:['Brief Quotidien Stratégique','Top 5 développements 24 h · exportable PDF & Word'],
     adversarial:['Veille adversariale','Cartographie des narratives par bloc géopolitique'],
     impact_radar:['Veille Impact BF','Radar mondial — 35 canaux d\'impact direct, proximité, systémique sur le BF'],
+    geointel:['GeoIntel — Carte mondiale','Outil cartographique compagnon : mers, fleuves, détroits, territoires, fiches pays — fusion avec GéoWatch'],
     conflicts:['Fiches conflits','Note de situation 8 dimensions par conflit'],
     briefs:['Briefs 2 couches','Décideur (5 points) + analyste (faits, hypothèses, indicateurs)'],
     scenarios:['Scénarios prospectifs','Méthode Godet — proba × impact'],
@@ -195,6 +196,7 @@ const Router = {
     else if(page==='bqs') renderBQS();
     else if(page==='adversarial') renderAdversarial();
     else if(page==='impact_radar') renderImpactRadar();
+    else if(page==='geointel') renderGeoIntel();
     else if(page==='conflicts') renderConflicts();
     else if(page==='briefs') renderBriefs();
     else if(page==='scenarios') renderScenarios();
@@ -1377,6 +1379,17 @@ function renderBQS(){ GW_INTEL.renderBQS(); }
 function renderAdversarial(){ GW_INTEL.renderAdversarial(); }
 function renderImpactRadar(){ GW_INTEL.renderImpactRadar(); }
 
+/* ============= GEOINTEL — fusion compagnon ============= */
+function renderGeoIntel(){
+  // Bind du bouton recharger (au cas où)
+  const reloadBtn = document.getElementById('geointel-reload');
+  const iframe = document.getElementById('geointel-iframe');
+  if(reloadBtn && iframe && !reloadBtn._gwBound){
+    reloadBtn._gwBound = true;
+    reloadBtn.onclick = ()=>{ iframe.src = iframe.src; toast('GeoIntel rechargé','info'); };
+  }
+}
+
 /* ==========================================================================
    ===== GW_DEPTH : PROFONDEUR ANALYTIQUE INTÉGRÉE =====
    ==========================================================================
@@ -1565,6 +1578,7 @@ const GW_DEPTH = (()=>{
       <button class="btn ghost sm" onclick="Router.go('indicators')"><i class="fa-solid fa-binoculars"></i> Indicateurs</button>
       <button class="btn ghost sm" onclick="Router.go('impact_bf');setTimeout(()=>{const s=document.getElementById('bf-conflict');if(s){s.value='${c.id}';renderImpactBF();}},80)"><i class="fa-solid fa-flag-checkered" style="color:#fde047"></i> Impact BF</button>
       <button class="btn ghost sm" onclick="showConflictDetail('${c.id}')"><i class="fa-solid fa-circle-info"></i> Fiche complète</button>
+      <button class="btn ghost sm" onclick="Router.go('geointel')" style="color:#86efac"><i class="fa-solid fa-globe"></i> Carte GeoIntel</button>
     </div>`;
   }
 
@@ -2364,20 +2378,114 @@ function renderScenarios(){
   // Matrice scatter proba × impact
   const points = [];
   d.conflicts.filter(c=>c.scenarios).forEach(c=>{
-    c.scenarios.forEach(s=>points.push({x:s.proba, y:s.impact, label:`${c.short||c.name} — ${s.nom}`, color:conflictColor(c.intensity)}));
+    c.scenarios.forEach(s=>points.push({
+      x:s.proba, y:s.impact,
+      label:`${c.short||c.name} — ${s.nom}`,
+      color:conflictColor(c.intensity),
+      conflict: c.short||c.name,
+      scenario: s.nom
+    }));
   });
+  const critical    = points.filter(p=>p.x>=40 && p.y>=7).length;
+  const surveiller  = points.filter(p=>p.x<40 && p.y>=7).length;
+  const bruit       = points.filter(p=>p.x>=40 && p.y<7).length;
+  const negligeable = points.filter(p=>p.x<40 && p.y<7).length;
+
+  // ═══ GUIDE PÉDAGOGIQUE MASSIF AU-DESSUS DE LA MATRICE ═══
+  const matrixCanvas = document.getElementById('ch-scen-matrix');
+  if(matrixCanvas){
+    const card = matrixCanvas.closest('.card');
+    if(card && !card.querySelector('.matrix-guide')){
+      const guide = document.createElement('div');
+      guide.className = 'matrix-guide';
+      guide.style.cssText = 'margin-bottom:14px;background:linear-gradient(135deg,#0c1426 0%,#0a0f1c 100%);border:1px solid #1a2340;border-radius:6px;padding:13px 16px';
+      guide.innerHTML = `
+        <div style="font-size:.85rem;color:#e2e8f0;font-weight:700;margin-bottom:8px"><i class="fa-solid fa-graduation-cap" style="color:#fde047"></i> Comment lire ce graphique en 30 secondes</div>
+        <div style="font-size:.78rem;color:#cbd5e1;line-height:1.6;margin-bottom:10px">
+          Chaque <span style="display:inline-block;width:9px;height:9px;background:#94a3b8;border-radius:50%;vertical-align:middle"></span> <b>point représente un scénario possible</b>. Sa position sur les axes vous dit deux choses :
+          <br>• <b style="color:#fde047">Axe horizontal (gauche → droite) :</b> probabilité que le scénario arrive (de 0% à 100%)
+          <br>• <b style="color:#fde047">Axe vertical (bas → haut) :</b> gravité des conséquences SI le scénario arrive (de 0 à 10/10)
+        </div>
+        <div style="font-size:.78rem;color:#cbd5e1;line-height:1.55;margin-bottom:11px">
+          Le graphique se lit comme une grille à <b>4 cadrans</b>. Voici ce que chaque coin signifie :
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:11px">
+          <div style="background:rgba(239,68,68,.08);border:1px solid #7f1d1d;border-radius:5px;padding:9px 11px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <span style="font-size:.7rem;color:#ef4444;text-transform:uppercase;letter-spacing:.8px;font-weight:800">↗ Coin haut-droite</span>
+              <span style="font-size:1rem;color:#ef4444;font-weight:800">${critical}</span>
+            </div>
+            <div style="font-size:.74rem;color:#fca5a5;font-weight:700;margin-bottom:3px">🔴 SCÉNARIOS CRITIQUES</div>
+            <div style="font-size:.72rem;color:#cbd5e1;line-height:1.4">Très probables (≥40%) ET très graves (≥7/10).<br><b style="color:#fca5a5">Action : à anticiper en priorité absolue.</b></div>
+            <div style="font-size:.66rem;color:#94a3b8;margin-top:4px;font-style:italic">Ex : « offensive JNIM avant 2026 », « rupture monnaie F CFA »</div>
+          </div>
+          <div style="background:rgba(249,115,22,.08);border:1px solid #7c2d12;border-radius:5px;padding:9px 11px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <span style="font-size:.7rem;color:#f97316;text-transform:uppercase;letter-spacing:.8px;font-weight:800">↖ Coin haut-gauche</span>
+              <span style="font-size:1rem;color:#f97316;font-weight:800">${surveiller}</span>
+            </div>
+            <div style="font-size:.74rem;color:#fdba74;font-weight:700;margin-bottom:3px">⚡ SURPRISES STRATÉGIQUES</div>
+            <div style="font-size:.72rem;color:#cbd5e1;line-height:1.4">Peu probables (&lt;40%) MAIS très graves (≥7/10).<br><b style="color:#fdba74">Action : « cygnes noirs » à monitorer.</b></div>
+            <div style="font-size:.66rem;color:#94a3b8;margin-top:4px;font-style:italic">Ex : « front uni jihadiste », « coup d'État côte d'Ivoire »</div>
+          </div>
+          <div style="background:rgba(245,158,11,.06);border:1px solid #78350f;border-radius:5px;padding:9px 11px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <span style="font-size:.7rem;color:#f59e0b;text-transform:uppercase;letter-spacing:.8px;font-weight:800">↘ Coin bas-droite</span>
+              <span style="font-size:1rem;color:#f59e0b;font-weight:800">${bruit}</span>
+            </div>
+            <div style="font-size:.74rem;color:#fcd34d;font-weight:700;margin-bottom:3px">📊 BRUIT</div>
+            <div style="font-size:.72rem;color:#cbd5e1;line-height:1.4">Très probables (≥40%) MAIS peu graves (&lt;7/10).<br><b style="color:#fcd34d">Action : à connaître mais pas urgent.</b></div>
+            <div style="font-size:.66rem;color:#94a3b8;margin-top:4px;font-style:italic">Ex : « tensions diplomatiques continues », « manifestations »</div>
+          </div>
+          <div style="background:rgba(34,197,94,.06);border:1px solid #14532d;border-radius:5px;padding:9px 11px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <span style="font-size:.7rem;color:#22c55e;text-transform:uppercase;letter-spacing:.8px;font-weight:800">↙ Coin bas-gauche</span>
+              <span style="font-size:1rem;color:#22c55e;font-weight:800">${negligeable}</span>
+            </div>
+            <div style="font-size:.74rem;color:#86efac;font-weight:700;margin-bottom:3px">✓ NÉGLIGEABLES</div>
+            <div style="font-size:.72rem;color:#cbd5e1;line-height:1.4">Peu probables (&lt;40%) ET peu graves (&lt;7/10).<br><b style="color:#86efac">Action : à laisser de côté pour l'instant.</b></div>
+            <div style="font-size:.66rem;color:#94a3b8;margin-top:4px;font-style:italic">Ex : « scénarios spéculatifs », « bruits de couloir »</div>
+          </div>
+        </div>
+        <div style="background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.3);border-radius:5px;padding:9px 11px;font-size:.74rem;color:#cbd5e1;line-height:1.5">
+          <b style="color:#60a5fa">💡 Astuce :</b> survolez chaque point avec votre souris pour voir le nom du conflit, le scénario, la probabilité et l'impact exacts. La couleur du point reflète l'<b style="color:#fde047">intensité actuelle du conflit parent</b> (rouge = conflit chaud, vert = froid).
+        </div>`;
+      // Insertion juste avant le canvas
+      const chartBox = matrixCanvas.closest('.chart-box') || matrixCanvas.parentElement;
+      if(chartBox && chartBox.parentElement===card){
+        card.insertBefore(guide, chartBox);
+      } else {
+        card.insertBefore(guide, card.firstChild?.nextSibling || card.firstChild);
+      }
+    }
+  }
+
   makeChart('ch-scen-matrix',{
     type:'scatter',
-    data:{datasets:points.map(p=>({label:p.label,data:[{x:p.x,y:p.y}],backgroundColor:p.color,borderColor:p.color,pointRadius:7,pointHoverRadius:10}))},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:(ctx)=>ctx.dataset.label+` (${ctx.parsed.x}% / impact ${ctx.parsed.y}/10)`},backgroundColor:'#0c1426',titleColor:'#e2e8f0',bodyColor:'#cbd5e1',borderColor:'#2a3a60',borderWidth:1}},scales:{x:{title:axT('Probabilité d\'occurrence (%)'),min:0,max:100,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},y:{title:axT('Impact si réalisé (/10)'),min:0,max:10,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}}}}
+    data:{datasets:points.map(p=>({label:p.label,data:[{x:p.x,y:p.y}],backgroundColor:p.color,borderColor:p.color,pointRadius:8,pointHoverRadius:12}))},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{
+      legend:{display:false},
+      tooltip:{
+        callbacks:{
+          title:(ctx)=>ctx[0].dataset.label,
+          label:(ctx)=>{
+            const x=ctx.parsed.x, y=ctx.parsed.y;
+            const cadran = (x>=40 && y>=7)?'🔴 CRITIQUE — anticiper en priorité' : (x<40 && y>=7)?'⚡ SURPRISE STRATÉGIQUE — à monitorer' : (x>=40 && y<7)?'📊 BRUIT — à connaître' : '✓ NÉGLIGEABLE — pas urgent';
+            return [`Probabilité : ${x}%`, `Impact : ${y}/10`, ``, cadran];
+          }
+        },
+        backgroundColor:'#0c1426',titleColor:'#e2e8f0',bodyColor:'#cbd5e1',borderColor:'#2a3a60',borderWidth:1,padding:11
+      }
+    },scales:{
+      x:{title:axT('PROBABILITÉ (%) — chance que le scénario arrive →'),min:0,max:100,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}},
+      y:{title:axT('IMPACT (/10) — gravité si le scénario arrive ↑'),min:0,max:10,grid:{color:'rgba(26,35,64,.4)'},ticks:{color:'#64748b'}}
+    }}
   });
-  // Insight matrice scénarios (méthode Godet : 4 cadrans)
-  const critical = points.filter(p=>p.x>=40 && p.y>=7).length;
-  const surveiller = points.filter(p=>p.x<40 && p.y>=7).length;
   chartInsight('ch-scen-matrix',
-    `Méthode <b>Godet</b> à 4 cadrans : <span style="color:#ef4444"><b>haut-droite (proba≥40% & impact≥7) = scénario critique à anticiper</b></span> ; <span style="color:#f97316">haut-gauche = surprise stratégique</span> ; <span style="color:#f59e0b">bas-droite = bruit</span> ; <span style="color:#22c55e">bas-gauche = négligeable</span>. Couleur = intensité actuelle du conflit parent.`,
-    `<b>${points.length}</b> scénarios projetés. <b style="color:#ef4444">${critical}</b> critiques (proba ≥40% × impact ≥7). <b style="color:#f97316">${surveiller}</b> surprises stratégiques (impact fort, proba faible — à surveiller).`,
-    critical>0?'#ef4444':'#f59e0b');
+    `Voir l'encart pédagogique au-dessus du graphique. <b>Méthode</b> : Godet à 4 cadrans, abondamment utilisée dans les think tanks (RAND, IRIS, ICG).`,
+    `<b>${points.length}</b> scénarios projetés au total. <b style="color:#ef4444">${critical}</b> dans le coin <b>CRITIQUE</b> (haut-droite) — c'est ce qu'il faut anticiper. <b style="color:#f97316">${surveiller}</b> dans le coin <b>SURPRISES</b> (haut-gauche) — à monitorer.`,
+    critical>0?'#ef4444':'#f59e0b',
+    critical>0 ? `🔴 <b>${critical} scénario${critical>1?'s':''} dans la zone critique du graphique.</b> Ce sont les développements à anticiper EN PRIORITÉ pour le Burkina Faso.` : (surveiller>0 ? `⚡ <b>${surveiller} surprise${surveiller>1?'s':''} stratégique${surveiller>1?'s':''} à monitorer</b> : peu probables mais à très fort impact.` : `Aucun scénario dans la zone critique. La situation reste sous contrôle anticipatoire.`));
 }
 
 /* ============= INDICATEURS À SURVEILLER ============= */
@@ -3454,6 +3562,7 @@ function renderAlerts(){
         ${a._live && a._link?`<a class="btn primary sm" href="${a._link}" target="_blank" rel="noopener" style="text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lire l'article source</a>`:''}
         ${c?`<button class="btn ghost sm" onclick="showConflictDetail('${c.id}')"><i class="fa-solid fa-circle-info"></i> Fiche conflit</button>`:''}
         ${c?.id?`<button class="btn ghost sm" onclick="Router.go('impact_bf');setTimeout(()=>{const s=document.getElementById('bf-conflict');if(s){s.value='${c.id}';renderImpactBF();}},100)"><i class="fa-solid fa-flag-checkered" style="color:#fde047"></i> Voir impact BF</button>`:''}
+        <button class="btn ghost sm" onclick="Router.go('geointel')" style="color:#86efac"><i class="fa-solid fa-globe"></i> Carte GeoIntel</button>
       </div>
     </div>`;
   }).join('');
@@ -3992,6 +4101,7 @@ function rerenderActivePage(){
     else if(cur==='reconfig') renderReconfig();
     else if(cur==='impact_bf') renderImpactBF();
     else if(cur==='analyses') renderAnalyses();
+    else if(cur==='geointel') renderGeoIntel();
     else if(cur==='countries' && typeof renderCountries==='function') renderCountries();
   } catch(e){ console.warn('rerenderActivePage('+cur+'):', e); }
 }
@@ -4003,6 +4113,23 @@ function loadNotifSeen(){
   try{ const seen = JSON.parse(localStorage.getItem('gw_seen_news')||'[]'); seen.forEach(u=>NOTIF_STATE.seenUrls.add(u)); }catch(e){}
   try{ NOTIF_STATE.items = JSON.parse(localStorage.getItem('gw_notif_items')||'[]'); }catch(e){}
 }
+
+/* Helper : construit une entrée du panel notifications depuis un article */
+function buildNotifEntry(it){
+  return {
+    id:'n_'+Date.now()+Math.random(),
+    title:it.title,
+    desc:(it.description||'').slice(0,200),
+    link:it.link,
+    source:it._source||'',
+    date:it.pubDate,
+    bf:!!it._bf,
+    tags:it._tags||[],
+    majors:it._majors||[],
+    conflicts:(it._conflicts||[]).map(c=>({id:c.id,name:c.short||c.name})),
+    read:false
+  };
+}
 function saveNotifSeen(){
   // Limiter à 500 derniers urls vus
   const arr = [...NOTIF_STATE.seenUrls].slice(-500);
@@ -4011,13 +4138,46 @@ function saveNotifSeen(){
 }
 
 function requestNotifPermission(){
-  if(!('Notification' in window)) return;
+  if(!('Notification' in window)){
+    console.warn('Notifications non supportées par ce navigateur');
+    return;
+  }
   if(Notification.permission==='default'){
     Notification.requestPermission().then(p=>{
       NOTIF_STATE.permission = p;
-      if(p==='granted') toast('Notifications activées','success');
+      if(p==='granted'){
+        toast('🔔 Notifications activées — vous recevrez les alertes majeures','success');
+        // Notification de test pour confirmer
+        try{
+          new Notification('GéoWatch — notifications activées', {
+            body: 'Vous serez alerté(e) des événements majeurs détectés sur les flux RSS.',
+            icon:'data:image/svg+xml;base64,'+btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#1e293b"/><text x="32" y="44" text-anchor="middle" fill="#fde047" font-size="40" font-weight="bold">G</text></svg>')
+          });
+        }catch(e){}
+      } else if(p==='denied'){
+        toast('Notifications refusées. Vous pouvez les réactiver dans les paramètres du navigateur.','error');
+      }
     });
-  } else NOTIF_STATE.permission = Notification.permission;
+  } else {
+    NOTIF_STATE.permission = Notification.permission;
+    if(Notification.permission==='denied'){
+      // Bandeau persistant pour informer l'utilisateur
+      showNotifBlockedBanner();
+    }
+  }
+}
+
+/* Bandeau d'information : notifications bloquées */
+function showNotifBlockedBanner(){
+  if(document.getElementById('notif-blocked-banner')) return;
+  const b = document.createElement('div');
+  b.id = 'notif-blocked-banner';
+  b.style.cssText = 'background:rgba(245,158,11,.1);border:1px solid #d97706;border-radius:6px;padding:10px 14px;margin:0 0 12px;font-size:.78rem;color:#fde047;display:flex;align-items:center;gap:10px;flex-wrap:wrap';
+  b.innerHTML = `<i class="fa-solid fa-bell-slash" style="color:#f59e0b"></i>
+    <span style="flex:1"><b>Notifications bloquées</b> — pour les recevoir, cliquez sur 🔒 dans la barre d'adresse de votre navigateur et autorisez les notifications, puis rechargez la page.</span>
+    <button onclick="this.parentElement.remove()" style="background:transparent;border:1px solid #d97706;color:#fde047;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:.7rem">Fermer</button>`;
+  const main = document.querySelector('.main') || document.body;
+  main.insertBefore(b, main.firstChild);
 }
 
 function pushBrowserNotif(item){
@@ -4050,35 +4210,39 @@ function detectAndPushNewItems(){
   if(!NEWS_STATE.items.length) return;
   const newOnes = [];
   const majorEvents = [];
+  const isFirstRun = NOTIF_STATE.seenUrls.size === 0; // ne pas spammer au tout 1er chargement
   NEWS_STATE.items.forEach(it=>{
     if(!it.link) return;
     if(NOTIF_STATE.seenUrls.has(it.link)) return;
     NOTIF_STATE.seenUrls.add(it.link);
-    const isPriority = it._bf || (it._conflicts||[]).some(c=>c.priority===1) || (it._tags||[]).includes('military');
+    const isPriority = it._bf || (it._conflicts||[]).some(c=>c.priority===1) || (it._tags||[]).includes('military') || (it._tags||[]).includes('diplomatic');
     const majors = detectMajorEvent(it);
     it._majors = majors;
-    if(majors.length>0 && (it._bf || (it._conflicts||[]).length>0)){
+    if(majors.length>0){
       majorEvents.push(it);
     }
     if(isPriority){
       newOnes.push(it);
     }
   });
-  // Ajouter dans le panel notifications
-  newOnes.slice(0,10).forEach(it=>{
-    NOTIF_STATE.items.unshift({
-      id:'n_'+Date.now()+Math.random(),
-      title:it.title,
-      desc:(it.description||'').slice(0,200),
-      link:it.link,
-      source:it._source||'',
-      date:it.pubDate,
-      bf:!!it._bf,
-      tags:it._tags||[],
-      majors:it._majors||[],
-      conflicts:(it._conflicts||[]).map(c=>({id:c.id,name:c.short||c.name})),
-      read:false
-    });
+  // Au premier chargement (pas de seen), on ne pousse que les majeurs sans toast spammant
+  if(isFirstRun){
+    NOTIF_STATE.items = newOnes.slice(0,20).map(buildNotifEntry);
+    saveNotifSeen();
+    updateNotifBadge();
+    return;
+  }
+  // Toast in-app à chaque nouveau article BF (ne dépend PAS de la permission navigateur)
+  const newBF = newOnes.filter(it=>it._bf);
+  if(newBF.length>0){
+    toast(`🇧🇫 ${newBF.length} nouvelle${newBF.length>1?'s':''} dépêche${newBF.length>1?'s':''} pertinente${newBF.length>1?'s':''} pour le BF`, 'info');
+  }
+  if(majorEvents.length>0){
+    toast(`🚨 ${majorEvents.length} événement${majorEvents.length>1?'s':''} majeur${majorEvents.length>1?'s':''} détecté${majorEvents.length>1?'s':''} — voir notifications`, 'error');
+  }
+  // Ajouter dans le panel notifications (jusqu'à 15 nouveaux)
+  newOnes.slice(0,15).forEach(it=>{
+    NOTIF_STATE.items.unshift(buildNotifEntry(it));
   });
   NOTIF_STATE.items = NOTIF_STATE.items.slice(0,50);
   // Push notif navigateur RENFORCÉ pour les événements majeurs
@@ -4160,11 +4324,27 @@ function toggleNotifPanel(){
 }
 
 function renderNotifPanel(panel){
+  // Bandeau permission navigateur
+  let permBanner = '';
+  const permState = ('Notification' in window) ? Notification.permission : 'unsupported';
+  if(permState==='default'){
+    permBanner = `<div style="padding:11px 14px;background:rgba(96,165,250,.08);border-bottom:1px solid rgba(96,165,250,.3)">
+      <div style="font-size:.78rem;color:#cbd5e1;margin-bottom:7px;line-height:1.4"><i class="fa-solid fa-bell" style="color:#60a5fa"></i> <b>Recevez les alertes même quand l'onglet n'est pas ouvert</b><br><span style="color:#94a3b8;font-size:.72rem">Cliquez ci-dessous pour activer les notifications navigateur (push système).</span></div>
+      <button onclick="requestNotifPermission()" class="btn primary sm" style="width:100%"><i class="fa-solid fa-bell"></i> Activer les notifications navigateur</button>
+    </div>`;
+  } else if(permState==='denied'){
+    permBanner = `<div style="padding:11px 14px;background:rgba(245,158,11,.08);border-bottom:1px solid #d97706">
+      <div style="font-size:.74rem;color:#fde047;line-height:1.4"><i class="fa-solid fa-bell-slash"></i> <b>Notifications navigateur bloquées</b><br><span style="color:#fcd34d;font-size:.7rem">Cliquez sur 🔒 dans la barre d'adresse pour autoriser, puis rechargez la page. Les notifications in-app continuent de fonctionner.</span></div>
+    </div>`;
+  } else if(permState==='granted'){
+    permBanner = `<div style="padding:8px 14px;background:rgba(34,197,94,.06);border-bottom:1px solid rgba(34,197,94,.25);font-size:.7rem;color:#86efac"><i class="fa-solid fa-check-circle"></i> Notifications navigateur activées</div>`;
+  }
+
   if(!NOTIF_STATE.items.length){
-    panel.innerHTML = `<div style="padding:30px 20px;text-align:center;color:#64748b"><i class="fa-solid fa-bell-slash" style="font-size:2rem;margin-bottom:10px;display:block;opacity:.4"></i><div style="font-size:.85rem">Aucune notification.<br>Les nouvelles dépêches importantes apparaîtront ici.</div></div>`;
+    panel.innerHTML = permBanner + `<div style="padding:30px 20px;text-align:center;color:#64748b"><i class="fa-solid fa-bell-slash" style="font-size:2rem;margin-bottom:10px;display:block;opacity:.4"></i><div style="font-size:.85rem">Aucune notification pour l'instant.<br><span style="color:#94a3b8;font-size:.74rem">Le système surveille en permanence les flux RSS. Les dépêches importantes apparaîtront ici dès qu'une nouvelle dépêche sera détectée.</span></div></div>`;
     return;
   }
-  panel.innerHTML = `
+  panel.innerHTML = permBanner + `
     <div style="padding:14px 16px;border-bottom:1px solid #1a2340;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#0c1426;z-index:1">
       <div><b style="color:#e2e8f0;font-size:.9rem">Notifications</b><div style="font-size:.7rem;color:#64748b">${NOTIF_STATE.items.length} dépêche${NOTIF_STATE.items.length>1?'s':''} prioritaire${NOTIF_STATE.items.length>1?'s':''}</div></div>
       <button onclick="clearNotifs()" style="background:transparent;color:#64748b;border:none;font-size:.75rem;cursor:pointer">Effacer tout</button>

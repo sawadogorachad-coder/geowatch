@@ -311,6 +311,7 @@ body.map-light .map-legend h4{color:#475569}
     <li><a href="#" data-page="analyses"><i class="fa-solid fa-chart-line"></i><span>Analyses</span></a></li>
     <li class="nav-title">Cartographie</li>
     <li><a href="#" data-page="map"><i class="fa-solid fa-map-location-dot"></i><span>Carte stratégique</span></a></li>
+    <li><a href="#" data-page="geointel" style="color:#86efac"><i class="fa-solid fa-globe"></i><span>GeoIntel — Carte mondiale</span><span class="badge" style="background:#22c55e;color:#0a0f1c;font-size:.55rem">+</span></a></li>
     <li><a href="#" data-page="countries"><i class="fa-solid fa-flag"></i><span>Pays (FSI)</span></a></li>
     <li class="nav-title">Veille &amp; sources</li>
     <li><a href="#" data-page="worldwatch" style="color:#86efac"><i class="fa-solid fa-globe"></i><span>Veille mondiale</span><span class="badge" id="nav-ww-badge" style="display:none;background:#22c55e"></span></a></li>
@@ -473,6 +474,29 @@ body.map-light .map-legend h4{color:#475569}
       <div class="card mt">
         <div class="card-hd"><h2><i class="fa-solid fa-scale-balanced"></i>Comparaison multidimensionnelle</h2><div class="help">Top 5 conflits par intensité — radar des indicateurs clés</div></div>
         <div class="chart-box lg"><canvas id="ch-radar"></canvas></div>
+      </div>
+    </section>
+
+    <!-- ============= GEOINTEL — Fusion carte mondiale ============= -->
+    <section class="page" data-page="geointel">
+      <div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a1828 0%,#060912 100%);border-color:#22c55e">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+          <div>
+            <div style="font-size:.62rem;color:#86efac;letter-spacing:2px;text-transform:uppercase;font-weight:800">⚡ GeoIntel — Système intégré</div>
+            <div style="font-size:1.2rem;color:#e2e8f0;font-weight:700;margin-top:3px">Carte d'intelligence géopolitique mondiale</div>
+            <div style="font-size:.74rem;color:#94a3b8;margin-top:3px">Mers, océans, fleuves stratégiques, détroits, montagnes, villes, territoires contestés, conflits, fiches pays</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <a href="https://sawadogorachad-coder.github.io/geo-intel/" target="_blank" rel="noopener" class="btn primary sm" style="text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Plein écran</a>
+            <button class="btn ghost sm" id="geointel-reload"><i class="fa-solid fa-rotate"></i> Recharger</button>
+          </div>
+        </div>
+        <div style="margin-top:11px;padding:9px 12px;background:rgba(34,197,94,.06);border-left:3px solid #22c55e;border-radius:0 5px 5px 0;font-size:.74rem;color:#cbd5e1;line-height:1.5">
+          <b style="color:#86efac">📌 GeoIntel</b> est l'outil cartographique compagnon de GéoWatch. Il offre une vision géographique complète : mers et océans (avec superficies), fleuves stratégiques (Niger, Nil, Mékong, Indus...), détroits et canaux (Malacca, Ormuz, Bab el-Mandeb, Gibraltar, Suez, Panama...), territoires contestés et conflits, fiches pays détaillées (régime, ressources, énergie, économie, politique, voisinage). <b style="color:#fde047">Les deux outils sont conçus pour fonctionner ensemble</b> : GéoWatch pour le suivi temporel et la veille, GeoIntel pour la lecture spatiale.
+        </div>
+      </div>
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;overflow:hidden;height:calc(100vh - 240px);min-height:600px">
+        <iframe id="geointel-iframe" src="https://sawadogorachad-coder.github.io/geo-intel/" style="width:100%;height:100%;border:none;display:block" title="GeoIntel — Carte mondiale"></iframe>
       </div>
     </section>
 
