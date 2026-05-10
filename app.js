@@ -221,13 +221,44 @@ const Router = {
 };
 
 /* ============================================================
+   ===== CONTEXTE AES (Alliance des États du Sahel) =====
+   ============================================================
+   L'AES = Burkina Faso + Mali + Niger (Confédération depuis juillet 2024).
+   Toute l'analyse stratégique se fait DESORMAIS à l'échelle AES,
+   pas seulement BF. Les implications BF restent un sous-ensemble.
+   ============================================================ */
+const AES_CONTEXT = {
+  // Pays membres de l'AES
+  countries: ['Burkina Faso', 'Mali', 'Niger'],
+  shortName: 'AES',
+  fullName: 'Alliance des États du Sahel',
+  // Capitales
+  capitals: ['Ouagadougou', 'Bamako', 'Niamey'],
+  // Dirigeants actuels
+  leaders: ['Traoré', 'Goïta', 'Tiani'],
+  // Regex globale pour détecter tout contenu AES
+  regex: /\b(aes|sahel|alliance.{0,3}sahel|burkina|mali|niger|niger[ie]n|ouagadougou|bamako|niamey|traor[éeè]|goita|goïta|gou[ïi]ta|tiani|tchiani|fama|fan[ie]|vdp|junte|fcfa|f cfa|franc cfa|banque centrale.{0,40}sahel|cedeao|ecowas)\b/i,
+  // Mots-clés par dimension (élargis BF→AES)
+  keywords: {
+    security: /attaque|attentat|frappe|embuscade|ied|vbiéd|jnim|eigs|aqim|aqmi|daesh|jihadiste|terroriste|fama|vdp|fani|wagner|africa corps|tué.{0,20}(sahel|burkina|mali|niger)/i,
+    diplomatic: /sanction|expulsion|ambassadeur|rappel|condamnation|isolement|sortie cedeao|aes|alliance.{0,3}sahel|sommet/i,
+    economic: /\b(or|gold|aurifère|coton|cotton|fcfa|franc cfa|f cfa|dette|inflation|sanction économique|orpaillage|uranium|wagner|africa corps)\b/i,
+    cohesion: /manifestation|peul|fulani|dozos|vdp|exaction|massacre|déplacés|réfugiés/i,
+    regional: /\b(côte.{0,2}d.ivoire|ivoire|ghana|bénin|benin|togo|sénégal|senegal|cedeao|ecowas|tchad|chad)\b/i
+  },
+  // Pour la veille adversariale spécifiquement AES
+  subjectMatch: /\b(burkina|ouagadougou|traor[éeè]|aes|sahel|mali|niger|bamako|niamey|jnim|wagner|africa corps|junte)\b/i
+};
+
+/* ============================================================
    ===== GW_INTEL : MODULE INTELLIGENCE STRATÉGIQUE AVANCÉE =====
    ============================================================
    Composants :
-   - IMS-BF : Indice de Menace Stratégique pondéré (6 dimensions)
-   - BQS    : Brief Quotidien Stratégique (top 5, format A4, PDF)
-   - COTES  : Système de fiabilité OTAN (A1-F6) sur sources & articles
-   - ADV    : Veille adversariale (segmentation par bloc d'origine)
+   - IMS-AES : Indice de Menace Stratégique pondéré (6 dimensions)
+              à l'échelle AES (Burkina Faso + Mali + Niger)
+   - BQS     : Brief Quotidien Stratégique (top 5, format A4, PDF)
+   - COTES   : Système de fiabilité OTAN (A1-F6) sur sources & articles
+   - ADV     : Veille adversariale (segmentation par bloc d'origine)
    ============================================================ */
 const GW_INTEL = (()=>{
 
@@ -332,63 +363,63 @@ const GW_INTEL = (()=>{
     </span>`;
   }
 
-  /* ===== IMS-BF : INDICE DE MENACE STRATÉGIQUE BF ===== */
-  // Calcul pondéré sur 6 dimensions (sortie 0-100)
+  /* ===== IMS-AES : INDICE DE MENACE STRATÉGIQUE AES =====
+     Calcul pondéré sur 6 dimensions, échelle AES (BF + Mali + Niger).
+     Décomposition par pays pour traçabilité.
+     Sortie 0-100. */
   function computeIMS(){
     const items = (window.NEWS_STATE?.items)||[];
-    const d = DB.get();
 
-    // Fenêtre glissante 7 jours
     const week = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 7);
     const day = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 1);
 
-    // 1. SÉCURITAIRE (25%) — attaques, JNIM/EIGS, frappes près du BF
-    const secKw = ['attaque','attentat','frappe','embusca','tué','morts','jnim','eigs','aqim','daesh','jihadiste','terroriste','vbiéd','offensive','assaut','ied'];
-    const bfSec = week.filter(it=>{
+    // Mention AES (au moins un des 3 pays)
+    const isAES = (it)=>{
       const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
-      return (it._bf || /sahel|burkina|mali|niger|ouagadougou|bamako|niamey/i.test(txt)) && secKw.some(k=>txt.includes(k));
-    });
-    const secScore = Math.min(100, bfSec.length*8 + day.filter(it=>it._bf).length*4);
+      return AES_CONTEXT.regex.test(txt) || it._bf;
+    };
 
-    // 2. DIPLOMATIQUE (20%) — sanctions, ruptures, expulsions
-    const diploKw = ['sanction','expulsion','ambassadeur rappelé','rupture','isolement','suspension','condamnation','blocus'];
-    const diplo = week.filter(it=>{
+    // Décomposition par pays (pour mini-stats par État membre)
+    const countByCountry = {bf:0, ml:0, ne:0};
+    week.forEach(it=>{
       const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
-      const isBFAxis = /burkina|mali|niger|aes|cedeao|ecowas|sahel/i.test(txt);
-      return isBFAxis && diploKw.some(k=>txt.includes(k));
+      if(/\b(burkina|ouagadougou|bobo[- ]dioulasso|traor[éeè]|fama|vdp)\b/i.test(txt)) countByCountry.bf++;
+      if(/\b(mali|bamako|gao|kidal|m[éeè]naka|goita|goïta|fama)\b/i.test(txt)) countByCountry.ml++;
+      if(/\b(niger\b|niamey|tillabéri|tillaberi|tiani|tchiani|fani|fan)\b/i.test(txt)) countByCountry.ne++;
     });
-    const diploScore = Math.min(100, diplo.length*15);
 
-    // 3. ÉCONOMIQUE (20%) — or, coton, F CFA, dette, mines
-    const ecoKw = ['or','gold','coton','franc cfa','f cfa','dette','crise économique','inflation','mine','wagner','africa corps'];
-    const eco = week.filter(it=>{
+    // 1. SÉCURITAIRE (25%) — attaques sur AES, JNIM/EIGS
+    const secMatched = week.filter(it=>isAES(it) && AES_CONTEXT.keywords.security.test((it.title||'')+' '+(it.description||'')));
+    const secScore = Math.min(100, secMatched.length*7 + day.filter(it=>isAES(it)).length*3);
+
+    // 2. DIPLOMATIQUE (20%) — sanctions, ruptures, expulsions touchant AES/CEDEAO
+    const diploMatched = week.filter(it=>{
+      const txt = (it.title||'')+' '+(it.description||'');
+      return isAES(it) && AES_CONTEXT.keywords.diplomatic.test(txt);
+    });
+    const diploScore = Math.min(100, diploMatched.length*13);
+
+    // 3. ÉCONOMIQUE (20%) — or, coton, F CFA, dette, uranium
+    const ecoMatched = week.filter(it=>isAES(it) && AES_CONTEXT.keywords.economic.test((it.title||'')+' '+(it.description||'')));
+    const ecoScore = Math.min(100, ecoMatched.length*10);
+
+    // 4. COHÉSION INTERNE (15%) — manifestations, tensions, communautaires AES
+    const cohMatched = week.filter(it=>isAES(it) && AES_CONTEXT.keywords.cohesion.test((it.title||'')+' '+(it.description||'')));
+    const cohScore = Math.min(100, cohMatched.length*13);
+
+    // 5. ENVIRONNEMENT RÉGIONAL (10%) — voisins côtiers + CEDEAO + Tchad
+    const regMatched = week.filter(it=>{
       const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
-      return /burkina|sahel|aes|mali|niger/i.test(txt) && ecoKw.some(k=>txt.includes(k));
+      return AES_CONTEXT.keywords.regional.test(txt) && /tension|crise|attaque|frontiere|frontière|incursion|jihadiste/i.test(txt);
     });
-    const ecoScore = Math.min(100, eco.length*12);
+    const regScore = Math.min(100, regMatched.length*13);
 
-    // 4. COHÉSION INTERNE BF (15%) — manifestations, tensions, communautaires
-    const cohKw = ['manifestation','communautaire','peul','dozos','vdp','dozo','exaction','crime','massacre','déplacés','réfugiés'];
-    const coh = week.filter(it=>{
-      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
-      return /burkina|ouagadougou|bobo|kaya|djibo|dori/i.test(txt) && cohKw.some(k=>txt.includes(k));
-    });
-    const cohScore = Math.min(100, coh.length*15);
-
-    // 5. ENVIRONNEMENT RÉGIONAL (10%) — Côte d'Ivoire, Ghana, Bénin, Togo, Sénégal, CEDEAO
-    const reg = week.filter(it=>{
-      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
-      return /côte d'ivoire|ivoire|ghana|bénin|benin|togo|sénégal|senegal|cedeao|ecowas/i.test(txt) && /tension|crise|attaque|frontiere|frontière/i.test(txt);
-    });
-    const regScore = Math.min(100, reg.length*15);
-
-    // 6. PRESSION INFORMATIONNELLE (10%) — volume articles hostiles vs BF
-    const adv = week.filter(it=>{
+    // 6. PRESSION INFORMATIONNELLE (10%) — volume articles occidentaux sur AES
+    const advMatched = week.filter(it=>{
       const block = classifyBlock(it);
-      const txt = ((it.title||'')+' '+(it.description||'')).toLowerCase();
-      return ['occident_fr','occident_us'].includes(block) && /burkina|traoré|aes|junte|sahel/i.test(txt);
+      return ['occident_fr','occident_us'].includes(block) && AES_CONTEXT.subjectMatch.test((it.title||'')+' '+(it.description||''));
     });
-    const infoScore = Math.min(100, adv.length*5);
+    const infoScore = Math.min(100, advMatched.length*4);
 
     // Score pondéré final
     const score = Math.round(
@@ -401,14 +432,16 @@ const GW_INTEL = (()=>{
       level: score>=70?'CRITIQUE':score>=50?'ÉLEVÉ':score>=30?'MODÉRÉ':score>=15?'FAIBLE':'CALME',
       color: score>=70?'#ef4444':score>=50?'#f97316':score>=30?'#f59e0b':score>=15?'#eab308':'#22c55e',
       dimensions: {
-        securitaire: {score:Math.round(secScore), weight:25, count:bfSec.length, label:'Menace sécuritaire'},
-        diplomatique: {score:Math.round(diploScore), weight:20, count:diplo.length, label:'Pression diplomatique'},
-        economique: {score:Math.round(ecoScore), weight:20, count:eco.length, label:'Vulnérabilité économique'},
-        cohesion: {score:Math.round(cohScore), weight:15, count:coh.length, label:'Cohésion interne'},
-        regional: {score:Math.round(regScore), weight:10, count:reg.length, label:'Environnement régional'},
-        info: {score:Math.round(infoScore), weight:10, count:adv.length, label:'Pression informationnelle'}
+        securitaire: {score:Math.round(secScore), weight:25, count:secMatched.length, label:'Menace sécuritaire'},
+        diplomatique: {score:Math.round(diploScore), weight:20, count:diploMatched.length, label:'Pression diplomatique'},
+        economique: {score:Math.round(ecoScore), weight:20, count:ecoMatched.length, label:'Vulnérabilité économique'},
+        cohesion: {score:Math.round(cohScore), weight:15, count:cohMatched.length, label:'Cohésion interne'},
+        regional: {score:Math.round(regScore), weight:10, count:regMatched.length, label:'Environnement régional'},
+        info: {score:Math.round(infoScore), weight:10, count:advMatched.length, label:'Pression informationnelle'}
       },
+      byCountry: countByCountry,
       dataPoints: week.length,
+      aesArticles: week.filter(isAES).length,
       window: '7 jours glissants',
       computedAt: new Date().toISOString()
     };
@@ -497,17 +530,32 @@ const GW_INTEL = (()=>{
         <div>
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:10px;flex-wrap:wrap">
             <div>
-              <div style="font-size:1.05rem;color:#e2e8f0;font-weight:700;letter-spacing:.3px">Indice de Menace Stratégique — Burkina Faso</div>
-              <div style="font-size:.72rem;color:#94a3b8;margin-top:2px">Calcul pondéré sur ${ims.dataPoints} articles · fenêtre ${ims.window}</div>
+              <div style="font-size:1.05rem;color:#e2e8f0;font-weight:700;letter-spacing:.3px">Indice de Menace Stratégique — AES <span style="font-size:.72rem;color:#94a3b8;font-weight:400">(Burkina Faso · Mali · Niger)</span></div>
+              <div style="font-size:.72rem;color:#94a3b8;margin-top:2px">Calcul pondéré sur ${ims.aesArticles||0} articles AES (sur ${ims.dataPoints} total) · fenêtre ${ims.window}</div>
             </div>
             <div style="text-align:right">
               <div style="font-size:.62rem;color:#64748b;text-transform:uppercase;letter-spacing:.5px">Tendance 30 j</div>
               ${spark}
             </div>
           </div>
+          <!-- Décomposition par pays AES -->
+          ${ims.byCountry ? `<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px">
+            <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #fde047;border-radius:4px;padding:6px 9px;text-align:center">
+              <div style="font-size:.62rem;color:#fde047;font-weight:700">🇧🇫 Burkina</div>
+              <div style="font-size:1.1rem;color:#fde047;font-weight:800">${ims.byCountry.bf}</div>
+            </div>
+            <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #f97316;border-radius:4px;padding:6px 9px;text-align:center">
+              <div style="font-size:.62rem;color:#f97316;font-weight:700">🇲🇱 Mali</div>
+              <div style="font-size:1.1rem;color:#f97316;font-weight:800">${ims.byCountry.ml}</div>
+            </div>
+            <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #22c55e;border-radius:4px;padding:6px 9px;text-align:center">
+              <div style="font-size:.62rem;color:#22c55e;font-weight:700">🇳🇪 Niger</div>
+              <div style="font-size:1.1rem;color:#22c55e;font-weight:800">${ims.byCountry.ne}</div>
+            </div>
+          </div>` : ''}
           ${dimsHTML}
           <div style="margin-top:8px;padding:7px 10px;background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.2);border-radius:5px;font-size:.7rem;color:#94a3b8;line-height:1.45">
-            <i class="fa-solid fa-circle-info" style="color:#60a5fa"></i> <b style="color:#cbd5e1">Méthodologie :</b> Score = 0,25·Sécuritaire + 0,20·Diplo + 0,20·Éco + 0,15·Cohésion + 0,10·Régional + 0,10·Info. Mise à jour à chaque collecte RSS.
+            <i class="fa-solid fa-circle-info" style="color:#60a5fa"></i> <b style="color:#cbd5e1">Méthodologie :</b> AES = Confédération Sahel (BF+ML+NE). Score = 0,25·Sécuritaire + 0,20·Diplo + 0,20·Éco + 0,15·Cohésion + 0,10·Régional + 0,10·Info. Mise à jour à chaque collecte RSS.
           </div>
         </div>
       </div>`;
@@ -3042,7 +3090,103 @@ function renderSources(){
     </div>
   </div>`;
 
-  wrap.innerHTML = banner + sources.map(s=>{
+  // ═══ DIAGNOSTIC HONNÊTE DES 140+ FLUX RSS RÉELS ═══
+  // On affiche TOUS les flux configurés et on indique le STATUT RÉEL :
+  // ✅ Articles collectés · ⚠️ Pas encore d'articles · ❌ Échec / inconnu
+  const allRSS = (window.GW_DATA?.RSS_SOURCES_FULL||[]);
+  const activeIds = new Set(dRSS);
+  const itemsBySource = {};
+  (NEWS_STATE?.items||[]).forEach(it=>{
+    const sid = it._sourceId; if(!sid) return;
+    itemsBySource[sid] = (itemsBySource[sid]||0)+1;
+  });
+
+  // Groupement par bloc géographique
+  const blocLabels = {
+    bf_local:'🇧🇫 Burkina Faso (local)', sahel:'🌍 Sahel voisins',
+    ouest_afr:'🌍 Afrique Ouest', centre_afr:'🌍 Afrique centrale',
+    est_afr:'🌍 Afrique de l\'Est', sud_afr:'🌍 Afrique du Sud',
+    maghreb:'🌍 Maghreb', thinktank:'🧠 Think tanks',
+    geopol:'📰 Médias géopolitiques', africa:'📰 Médias africains',
+    economic:'💰 Économique', diplomatic:'🤝 Diplomatique',
+    humanitarian:'🆘 Humanitaire'
+  };
+  const grouped = {};
+  allRSS.forEach(s=>{
+    const k = s.cat || 'autre';
+    (grouped[k] = grouped[k]||[]).push(s);
+  });
+
+  // Statistiques globales
+  let nActive=0, nWithArt=0, nDormant=0, nInactive=0;
+  allRSS.forEach(s=>{
+    const isActive = activeIds.has(s.id);
+    const hasArt = (itemsBySource[s.id]||0)>0;
+    if(isActive){
+      nActive++;
+      if(hasArt) nWithArt++; else nDormant++;
+    } else nInactive++;
+  });
+
+  let diagHTML = `<div class="card" style="margin:0 0 14px;background:linear-gradient(135deg,#0a0f1c 0%,#060912 100%);border:1px solid #d97706">
+    <div class="card-hd"><h2 style="color:#fde047"><i class="fa-solid fa-stethoscope"></i>Diagnostic des ${allRSS.length} flux RSS configurés</h2><div class="help">Statut réel de chaque source — celles qui remontent vraiment des articles vs les autres</div></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:12px">
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #22c55e;border-radius:5px;padding:10px 12px">
+        <div style="font-size:.62rem;color:#86efac;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-check-circle"></i> Opérationnelles</div>
+        <div style="font-size:1.5rem;color:#86efac;font-weight:800">${nWithArt}</div>
+        <div style="font-size:.66rem;color:#94a3b8">flux actifs avec articles</div>
+      </div>
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #f59e0b;border-radius:5px;padding:10px 12px">
+        <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-circle-pause"></i> Dormants</div>
+        <div style="font-size:1.5rem;color:#fde047;font-weight:800">${nDormant}</div>
+        <div style="font-size:.66rem;color:#94a3b8">actifs mais 0 article</div>
+      </div>
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #64748b;border-radius:5px;padding:10px 12px">
+        <div style="font-size:.62rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-circle"></i> Inactifs</div>
+        <div style="font-size:1.5rem;color:#94a3b8;font-weight:800">${nInactive}</div>
+        <div style="font-size:.66rem;color:#94a3b8">configurés mais non activés</div>
+      </div>
+      <div style="background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #60a5fa;border-radius:5px;padding:10px 12px">
+        <div style="font-size:.62rem;color:#60a5fa;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-database"></i> Total</div>
+        <div style="font-size:1.5rem;color:#60a5fa;font-weight:800">${allRSS.length}</div>
+        <div style="font-size:.66rem;color:#94a3b8">flux dans le catalogue</div>
+      </div>
+    </div>
+    <div style="background:rgba(217,119,6,.08);border:1px solid #d97706;border-radius:5px;padding:9px 12px;margin-bottom:10px;font-size:.76rem;color:#fde047;line-height:1.5">
+      <b><i class="fa-solid fa-triangle-exclamation"></i> Honnêteté méthodologique :</b> Beaucoup de sources locales (BF, Sahel, Afrique francophone) ont été ajoutées comme <i>URL plausibles</i> mais n'ont pas été testées en direct. Les flux marqués <span style="color:#86efac;font-weight:700">vert</span> remontent vraiment des articles. Les <span style="color:#fde047;font-weight:700">jaunes</span> sont activés mais aucun article n'a été collecté (peut-être URL incorrecte ou bloquée). Les <span style="color:#94a3b8">gris</span> sont disponibles mais inactifs. Cliquez sur <b>« Tester »</b> pour vérifier en direct.
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+      <button class="btn primary sm" onclick="testAllRSSSources()"><i class="fa-solid fa-stethoscope"></i> Tester tous les flux</button>
+      <button class="btn ghost sm" onclick="loadNews().then(()=>renderSources())"><i class="fa-solid fa-rotate"></i> Recollecter RSS</button>
+    </div>
+  </div>`;
+
+  Object.entries(grouped).forEach(([cat, list])=>{
+    const lbl = blocLabels[cat] || cat;
+    diagHTML += `<details ${(cat==='bf_local'||cat==='sahel')?'open':''} style="margin-bottom:10px">
+      <summary style="cursor:pointer;padding:9px 12px;background:#0a0f1c;border:1px solid #1a2340;border-radius:5px;font-size:.84rem;color:#e2e8f0;font-weight:700">${lbl} <span style="color:#64748b;font-weight:400;margin-left:6px">(${list.length} sources)</span></summary>
+      <div style="padding:9px 0">`;
+    list.forEach(s=>{
+      const isActive = activeIds.has(s.id);
+      const arts = itemsBySource[s.id] || 0;
+      const status = arts>0 ? {color:'#22c55e', label:'✅ '+arts+' article'+(arts>1?'s':''), bg:'rgba(34,197,94,.06)'} :
+                     isActive ? {color:'#f59e0b', label:'⚠️ Activé · 0 article', bg:'rgba(245,158,11,.05)'} :
+                     {color:'#64748b', label:'⚪ Inactif', bg:'rgba(100,116,139,.04)'};
+      diagHTML += `<div style="display:flex;align-items:center;gap:9px;padding:6px 11px;background:${status.bg};border-bottom:1px solid #141c30;font-size:.74rem">
+        <div style="flex:1;min-width:0">
+          <div style="color:#e2e8f0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</div>
+          <div style="font-size:.62rem;color:#64748b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.url}</div>
+        </div>
+        <span style="color:${status.color};font-size:.66rem;font-weight:700;white-space:nowrap">${status.label}</span>
+        <button class="btn ghost sm" onclick="testRSSSource('${s.id}', this)" style="font-size:.62rem;padding:3px 7px"><i class="fa-solid fa-stethoscope"></i> Tester</button>
+        <button class="btn ghost sm" onclick="toggleRSSActive('${s.id}', ${!isActive})" style="font-size:.62rem;padding:3px 7px;color:${isActive?'#ef4444':'#22c55e'}"><i class="fa-solid fa-${isActive?'pause':'play'}"></i> ${isActive?'Désactiver':'Activer'}</button>
+      </div>`;
+    });
+    diagHTML += `</div></details>`;
+  });
+
+  // Insertion juste après le banner et avant la grille think tanks
+  wrap.innerHTML = banner + diagHTML + `<div style="font-size:.78rem;color:#94a3b8;margin:14px 0 6px;text-transform:uppercase;letter-spacing:1px;font-weight:700"><i class="fa-solid fa-book-bookmark"></i> Bibliothèque éditoriale (think tanks de référence)</div>` + sources.map(s=>{
     const catCol = s.categorie.includes('français')?'#ef4444':s.categorie.includes('US')?'#3b82f6':s.categorie.includes('UK')?'#8b5cf6':s.categorie.includes('international')?'#22c55e':'#f59e0b';
     const arts = findArticlesFor(s);
     const activeRSSEntry = findActiveRSSFor(s);
@@ -3072,6 +3216,191 @@ function renderSources(){
       </div>
     </div>`;
   }).join('');
+}
+
+/* ===== TEST INDIVIDUEL D'UN FLUX RSS ===== */
+async function testRSSSource(sourceId, btn){
+  const s = (window.GW_DATA?.RSS_SOURCES_FULL||[]).find(x=>x.id===sourceId);
+  if(!s){ toast('Source introuvable','error'); return; }
+  const oldHTML = btn?.innerHTML;
+  if(btn){ btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Test…'; }
+  // Tente 3 proxies en cascade (les mêmes que loadNews)
+  const proxies = [
+    u=>'https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(u),
+    u=>'https://api.allorigins.win/get?url='+encodeURIComponent(u),
+    u=>'https://corsproxy.io/?'+encodeURIComponent(u)
+  ];
+  let ok = false, hint = '';
+  for(let i=0;i<proxies.length;i++){
+    try {
+      const url = proxies[i](s.url);
+      const res = await fetch(url, {signal: AbortSignal.timeout(8000)});
+      if(!res.ok){ hint = `HTTP ${res.status}`; continue; }
+      const text = await res.text();
+      if(/<rss|<feed|<channel|<item|"items":|"feed":/i.test(text)){
+        ok = true;
+        // Compter approximativement le nombre d'items
+        const cntItems = (text.match(/<item[\s>]/gi)||[]).length || (text.match(/<entry[\s>]/gi)||[]).length || (text.match(/"title":/g)||[]).length;
+        hint = `flux valide · ~${cntItems} items détectés (proxy ${i+1})`;
+        break;
+      } else {
+        hint = `réponse non RSS (proxy ${i+1})`;
+      }
+    } catch(e){
+      hint = `erreur réseau (proxy ${i+1}): ${e.name||e.message||'timeout'}`;
+    }
+  }
+  if(btn){
+    btn.disabled = false;
+    btn.innerHTML = ok
+      ? '<i class="fa-solid fa-check-circle" style="color:#22c55e"></i> OK'
+      : '<i class="fa-solid fa-times-circle" style="color:#ef4444"></i> ÉCHEC';
+    btn.title = hint;
+    setTimeout(()=>{ if(btn) btn.innerHTML = oldHTML; }, 5000);
+  }
+  toast(`${s.name} : ${ok?'✅ '+hint:'❌ '+hint}`, ok?'success':'error');
+  return {ok, hint, source:s};
+}
+
+/* ===== TEST DE TOUS LES FLUX (avec rapport) ===== */
+async function testAllRSSSources(){
+  const all = (window.GW_DATA?.RSS_SOURCES_FULL||[]);
+  toast(`Test des ${all.length} flux en cours… ce sera long (~3-5 min)`, 'info');
+  const results = {ok:[], fail:[]};
+  // Test 5 par 5 en parallèle pour aller plus vite
+  const batchSize = 5;
+  for(let i=0;i<all.length;i+=batchSize){
+    const batch = all.slice(i,i+batchSize);
+    const batchResults = await Promise.all(batch.map(s=>testRSSSource(s.id, null)));
+    batchResults.forEach((r,j)=>{
+      const s = batch[j];
+      if(r.ok) results.ok.push({name:s.name, id:s.id, hint:r.hint});
+      else results.fail.push({name:s.name, id:s.id, hint:r.hint, url:s.url});
+    });
+  }
+  // Afficher le rapport dans un modal
+  const m = document.getElementById('modal');
+  if(m){
+    document.getElementById('modal-body').innerHTML = `
+      <h2 style="color:#fde047;margin-bottom:14px"><i class="fa-solid fa-stethoscope"></i> Rapport de diagnostic des flux RSS</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div style="background:rgba(34,197,94,.08);border:1px solid #14532d;border-radius:6px;padding:11px 13px">
+          <div style="font-size:1.6rem;color:#86efac;font-weight:800">${results.ok.length}</div>
+          <div style="font-size:.78rem;color:#cbd5e1">✅ Flux opérationnels</div>
+        </div>
+        <div style="background:rgba(239,68,68,.06);border:1px solid #7f1d1d;border-radius:6px;padding:11px 13px">
+          <div style="font-size:1.6rem;color:#fca5a5;font-weight:800">${results.fail.length}</div>
+          <div style="font-size:.78rem;color:#cbd5e1">❌ Flux en échec</div>
+        </div>
+      </div>
+      <details open><summary style="cursor:pointer;font-weight:700;color:#86efac;padding:8px 0">✅ Flux opérationnels (${results.ok.length})</summary>
+        <div style="max-height:200px;overflow-y:auto">${results.ok.map(r=>`<div style="padding:5px 9px;border-bottom:1px solid #141c30;font-size:.74rem;color:#cbd5e1"><b>${r.name}</b> <span style="color:#64748b;font-size:.66rem">— ${r.hint}</span></div>`).join('')||'<div style="color:#64748b;padding:9px">Aucun flux opérationnel détecté.</div>'}</div>
+      </details>
+      <details><summary style="cursor:pointer;font-weight:700;color:#fca5a5;padding:8px 0">❌ Flux en échec — à investiguer (${results.fail.length})</summary>
+        <div style="max-height:300px;overflow-y:auto">${results.fail.map(r=>`<div style="padding:5px 9px;border-bottom:1px solid #141c30;font-size:.74rem;color:#cbd5e1"><b>${r.name}</b><br><span style="color:#64748b;font-size:.62rem">${r.url}</span><br><span style="color:#fca5a5;font-size:.66rem">→ ${r.hint}</span></div>`).join('')}</div>
+      </details>
+      <div style="margin-top:12px;padding:9px 12px;background:rgba(96,165,250,.05);border-left:3px solid #60a5fa;border-radius:0 4px 4px 0;font-size:.74rem;color:#cbd5e1;line-height:1.5">
+        <b style="color:#60a5fa">📌 Conseil :</b> Les flux en échec peuvent l'être pour 3 raisons : (1) URL erronée — il faut chercher la vraie URL RSS du site, (2) site sans flux RSS — utiliser un service tiers comme RSS.app, (3) blocage CORS persistent — la source nécessite un proxy plus puissant.
+      </div>`;
+    document.getElementById('modal-bg').style.display='flex';
+  }
+  toast(`Diagnostic terminé : ${results.ok.length} OK / ${results.fail.length} échecs`, 'info');
+}
+
+/* ═══ TEST D'UNE SOURCE RSS EN DIRECT ═══
+   Fait un fetch via la cascade de proxies et reporte le résultat.
+   Met à jour le bouton avec le statut. */
+async function testRSSSource(rssId, btn){
+  const src = (window.GW_DATA?.RSS_SOURCES_FULL||[]).find(r=>r.id===rssId);
+  if(!src){ toast('Source introuvable','error'); return; }
+  if(btn){
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Test…';
+  }
+  let result;
+  try {
+    const items = await fetchRSS(src.url);
+    if(items && items.length){
+      result = {ok:true, count:items.length, msg:`✅ OK · ${items.length} articles`, color:'#22c55e'};
+      // Marquer verified:true en mémoire
+      src.verified = true;
+    } else {
+      result = {ok:false, count:0, msg:'⚠️ Vide', color:'#f59e0b'};
+    }
+  } catch(e){
+    result = {ok:false, count:0, msg:'❌ Échec proxies', color:'#ef4444'};
+  }
+  if(btn){
+    btn.disabled = false;
+    btn.style.color = result.color;
+    btn.innerHTML = `<i class="fa-solid fa-stethoscope"></i> ${result.msg}`;
+    setTimeout(()=>{
+      btn.style.color = '';
+      btn.innerHTML = '<i class="fa-solid fa-stethoscope"></i> Tester';
+    }, 6000);
+  }
+  toast(`${src.name} — ${result.msg}`, result.ok?'success':'error');
+  return result;
+}
+
+/* ═══ TEST DE TOUTES LES SOURCES (séquentiel pour ne pas saturer) ═══ */
+async function testAllRSSSources(){
+  const allRSS = (window.GW_DATA?.RSS_SOURCES_FULL||[]);
+  if(!allRSS.length){ toast('Aucune source à tester','error'); return; }
+  toast(`Test de ${allRSS.length} sources en cours… (cela peut prendre quelques minutes)`, 'info');
+
+  // Créer un bandeau de progression
+  let bar = document.getElementById('rss-test-progress');
+  if(!bar){
+    bar = document.createElement('div');
+    bar.id = 'rss-test-progress';
+    bar.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#0c1426;border:1px solid #60a5fa;border-radius:8px;padding:12px 16px;z-index:5000;box-shadow:0 8px 24px rgba(0,0,0,.5);min-width:280px';
+    document.body.appendChild(bar);
+  }
+
+  const results = {ok:0, vide:0, ko:0};
+  for(let i=0;i<allRSS.length;i++){
+    const s = allRSS[i];
+    bar.innerHTML = `<div style="font-size:.8rem;color:#e2e8f0;margin-bottom:7px"><b>Test des flux RSS</b> · ${i+1}/${allRSS.length}</div>
+      <div style="font-size:.7rem;color:#94a3b8;margin-bottom:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.name}</div>
+      <div style="height:6px;background:#0a0f1c;border-radius:3px;overflow:hidden;margin-bottom:6px"><div style="height:100%;width:${(i/allRSS.length*100).toFixed(1)}%;background:linear-gradient(90deg,#60a5fa,#22c55e);transition:width .3s"></div></div>
+      <div style="font-size:.66rem;color:#64748b">✅ ${results.ok} OK · ⚠️ ${results.vide} vides · ❌ ${results.ko} échecs</div>`;
+    try {
+      const items = await fetchRSS(s.url);
+      if(items && items.length){ results.ok++; s.verified = true; }
+      else { results.vide++; }
+    } catch(e){ results.ko++; }
+    // Petit délai pour éviter de saturer les proxies (200ms)
+    await new Promise(r=>setTimeout(r, 200));
+  }
+
+  // Stocker les résultats verified dans localStorage pour persistance
+  try {
+    const verifiedMap = {};
+    allRSS.forEach(s=>{ verifiedMap[s.id] = !!s.verified; });
+    localStorage.setItem('gw_rss_verified', JSON.stringify(verifiedMap));
+  } catch(e){}
+
+  bar.innerHTML = `<div style="font-size:.85rem;color:#86efac;margin-bottom:7px;font-weight:700"><i class="fa-solid fa-check-circle"></i> Test terminé</div>
+    <div style="font-size:.74rem;color:#cbd5e1;line-height:1.5">
+      <span style="color:#22c55e;font-weight:700">✅ ${results.ok}</span> sources opérationnelles<br>
+      <span style="color:#f59e0b;font-weight:700">⚠️ ${results.vide}</span> sources vides (URL OK mais pas d'articles)<br>
+      <span style="color:#ef4444;font-weight:700">❌ ${results.ko}</span> sources en échec (URL invalide ou bloquée)
+    </div>
+    <button onclick="document.getElementById('rss-test-progress').remove();renderSources()" class="btn primary sm" style="width:100%;margin-top:10px"><i class="fa-solid fa-xmark"></i> Fermer & rafraîchir</button>`;
+
+  // Auto-fermeture après 15s
+  setTimeout(()=>{ const el = document.getElementById('rss-test-progress'); if(el) el.remove(); renderSources(); }, 15000);
+}
+
+/* Charge les flags verified depuis localStorage au démarrage */
+function loadRSSVerified(){
+  try {
+    const map = JSON.parse(localStorage.getItem('gw_rss_verified')||'{}');
+    (window.GW_DATA?.RSS_SOURCES_FULL||[]).forEach(s=>{
+      if(map[s.id]!==undefined) s.verified = map[s.id];
+    });
+  } catch(e){}
 }
 
 /* Active/désactive un flux RSS depuis la page Sources */
