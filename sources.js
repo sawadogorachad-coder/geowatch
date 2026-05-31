@@ -291,7 +291,14 @@ const RSS_SOURCES_FULL = [
   {id:'rss_msf',        name:'MSF — Médecins Sans Frontières',cat:'humanitarian',region:'INT',lang:'fr',bloc:'autre',url:'https://www.msf.fr/rss',                                    verified:false},
   {id:'rss_icrc',       name:'CICR — Croix-Rouge',          cat:'humanitarian',region:'INT',lang:'fr',bloc:'autre',url:'https://www.icrc.org/fr/rss',                                  verified:false},
   {id:'rss_imf',        name:'FMI — World Economic Outlook',cat:'economic', region:'INT',lang:'en',bloc:'autre',  url:'https://www.imf.org/en/News/rss',                              verified:false},
-  {id:'rss_worldbank',  name:'Banque Mondiale',             cat:'economic', region:'INT',lang:'en',bloc:'autre',  url:'https://www.worldbank.org/en/news/all/rss.xml',                verified:false}
+  {id:'rss_worldbank',  name:'Banque Mondiale',             cat:'economic', region:'INT',lang:'en',bloc:'autre',  url:'https://www.worldbank.org/en/news/all/rss.xml',                verified:false},
+
+  /* --- Sources institutionnelles Moyen-Orient (importées d'Atlas Stratégique V2) ---
+     Seule l'AIEA propose un flux RSS exploitable (testé : 10 items renvoyés).
+     OCHA oPt, WHO EMRO, ICRC Israel/OT, UN Press Middle East et ACLED Middle East
+     n'ont pas de flux RSS thématique : à consulter manuellement.
+     Référentiel méthodologique complet : references-moyen-orient.md */
+  {id:'rss_iaea',       name:'AIEA — Top News (nucléaire)', cat:'diplomatic',region:'INT',lang:'en',bloc:'autre',  url:'https://www.iaea.org/feeds/topnews',                          verified:true}
 
 ];
 

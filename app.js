@@ -3724,25 +3724,145 @@ function renderWorldWatch(){
 
 /* ============= ALERTES ============= */
 /* Dérive les alertes EN DIRECT depuis les articles RSS détectés comme événements majeurs */
+/* Score d'importance par article RSS — refonte 2026-05-31 v2 (resserré) */
+function _scoreArticleForAlert(it, now){
+  const pubMs = new Date(it.pubDate||0).getTime();
+  if(!pubMs) return null;
+  const ageHours = (now - pubMs) / 3600000;
+  if(ageHours > 7*24) return null;
+
+  const tags = it._tags||[];
+  const types = (it._majors||[]).map(m=>m.type);
+  const conflicts = it._conflicts||[];
+
+  // PRÉ-FILTRE : un article doit avoir au moins un signal de conflictualité
+  // pour être éligible. Sinon on ignore (culture, sport, économie marginale, etc.)
+  const hasStrongTag = ['military','diplomatic','humanitarian'].some(t => tags.includes(t));
+  const hasMajor = types.length > 0;
+  const hasConflict = conflicts.length > 0;
+  if(!hasStrongTag && !hasMajor && !hasConflict) return null;
+
+  // PRÉ-FILTRE 2 : exclure les titres manifestement hors-sujet (culture, sport, événementiel)
+  const titleLow = ((it.title||'') + ' ' + (it.description||'').slice(0,200)).toLowerCase();
+  const benignTerms = [
+    'musique','football','sport','foire','festival','concert','cinéma','cinema',' dj ','théâtre','culture','culturel','danse','exposition',' gala ','match ','tournoi','prix littéraire','fashion','beauté',
+    'école de l','symposium','colloque','communauté gabonaise','lance l\'école','inaugur','cérémonie','remise de prix','vitrines',
+    'journée internationale','journée mondiale','journée nationale','quotidien',
+    'aux origines','rétrospective','décryptage','éditorial','perspectives','réflexion sur','comprendre','héritage','leçons','débat sur','avenir économique',
+    'caisses populaires','offre trois','offre cinq','offre dix',
+    'concours','prix d\'excellence','olympiade','distinction'
+  ];
+  if(benignTerms.some(t => titleLow.includes(t))) return null;
+
+  // PRÉ-FILTRE 3 : exiger un signal de conflictualité dans le titre (sauf si _majors déjà détecté)
+  // Liste minimale de mots-clés réellement liés à des événements géopolitiques
+  if(!hasMajor){
+    const conflictKW = [
+      'mort','morts','tué','tués','victim','blessé','disparu','exécut',
+      'attaqu','frappe','raid','bombard','missile','drone','offensive','assaut','embuscade',
+      'guerre','combat','affrontement','soldats','militaire','djihadi','jihadi','jnim','daesh','isgs','aqim','wagner','africa corps','mercenaire',
+      'crise','famine','réfugié','déplacé','exode','épidémie','choléra','catastrophe','urgence',
+      'sanction','expulsion','rupture','sommet','médiation','négociation','accord ','traité','résolution',
+      'coup d\'état','putsch','junte','transition','manifestation','protest',
+      'terroris','escalad','menace','ultimatum','blocus','embargo',
+      'nucléaire','iaea','aiea',
+      'évacuation','déploiement','rapatri',
+      'détroit','pipeline','choc pétrolier',
+      'rebelle','insurg','milice','enlèv','kidnapp','rançon',
+      'génocide','massacre','exécution',
+      'condamn','arrest','assassin'
+    ];
+    if(!conflictKW.some(kw => titleLow.includes(kw))) return null;
+  }
+
+  let score = 0;
+
+  // Signaux d'événement majeur (poids fort)
+  if(types.includes('rupture') || types.includes('crise')) score += 50;
+  else if(types.includes('diplo_majeur')) score += 35;
+  else if(types.length) score += 25;
+
+  // Type de tag — humanitaire et militaire valent plus que diplomatique
+  if(tags.includes('military'))     score += 18;
+  if(tags.includes('humanitarian')) score += 18;
+  if(tags.includes('diplomatic'))   score += 10;
+
+  // Lien avec conflit catalogué
+  score += Math.min(conflicts.length * 10, 20);
+
+  // Pertinence Burkina Faso (uniquement si déjà conflictuel — pré-filtre passé)
+  if(it._bf) score += 15;
+
+  // Fraîcheur (modeste, pour éviter qu'elle domine)
+  if(ageHours < 6)       score += 10;
+  else if(ageHours < 24) score += 5;
+
+  // Source institutionnelle de référence
+  const inst = ['ONU','UN News','AIEA','ReliefWeb','CICR','MSF','HRW','Amnesty','OMS','WHO','ACLED','ISS','Crisis Group','ICRC'];
+  if(inst.some(s => (it._source||'').includes(s))) score += 10;
+
+  if(score < 30) return null;
+  let level = score >= 65 ? 'critical' : score >= 45 ? 'high' : 'medium';
+
+  let theme = 'other';
+  if(tags.includes('military') || types.includes('rupture')) theme = 'security';
+  else if(tags.includes('humanitarian')) theme = 'humanitarian';
+  else if(tags.includes('diplomatic')) theme = 'diplomatic';
+  else if(tags.includes('economic') || types.includes('crise')) theme = 'energy';
+
+  return { score, level, theme, ageHours, types };
+}
+
+/* Dédoublonnage : regroupe les alertes parlant du même sujet (Jaccard sur mots-clés ≥4 chars) */
+function _groupSimilarAlerts(alerts){
+  const STOP = new Set(['avec','dans','pour','plus','sont','mais','vers','sous','entre','aussi','sera','sans','contre','depuis','encore','comment','quand','pourquoi','from','with','this','that','have','will','their','about','after','than','when','where','what','being','these','those','they','some','more','said','many','your','into','over','only','very','also','were','been','such']);
+  const sig = a => new Set(((a.title||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(w=>w.length>=4 && !STOP.has(w))));
+  const sigs = alerts.map(sig);
+  const jaccard = (a,b)=>{ if(!a.size||!b.size) return 0; let inter=0; a.forEach(x=>{if(b.has(x))inter++;}); return inter/(a.size+b.size-inter); };
+  const used = new Array(alerts.length).fill(false);
+  const out = [];
+  for(let i=0;i<alerts.length;i++){
+    if(used[i]) continue;
+    const main = {...alerts[i]};
+    const sources = new Set([main._source].filter(Boolean));
+    const links = [{src: main._source, url: main._link}];
+    for(let j=i+1;j<alerts.length;j++){
+      if(used[j]) continue;
+      if(jaccard(sigs[i], sigs[j]) >= 0.4){
+        used[j] = true;
+        if(alerts[j]._source){ sources.add(alerts[j]._source); links.push({src: alerts[j]._source, url: alerts[j]._link}); }
+      }
+    }
+    used[i] = true;
+    main._corroborations = sources.size;
+    main._sourcesList = [...sources].slice(0,5);
+    main._otherLinks = links.slice(1, 4);
+    out.push(main);
+  }
+  return out;
+}
+
 function getDerivedAlertsFromNews(){
   if(!NEWS_STATE?.items?.length) return [];
-  return NEWS_STATE.items.filter(it=>it._majors?.length>0).map(it=>{
-    const types = (it._majors||[]).map(m=>m.type);
-    let level = 'high';
-    if(types.includes('rupture') || types.includes('crise')) level = 'critical';
-    else if(types.includes('diplo_majeur')) level = 'high';
-    const seuilLabels = {rupture:'Rupture/escalade',diplo_majeur:'Diplomatie haut niveau',crise:'Crise systémique'};
-    return {
+  const now = Date.now();
+  const scored = [];
+  NEWS_STATE.items.forEach(it=>{
+    const s = _scoreArticleForAlert(it, now);
+    if(!s) return;
+    scored.push({
       id:'rss_'+(it.link||it.title||'').replace(/[^a-z0-9]/gi,'').slice(0,30),
       title: it.title,
       description:(it.description||'').slice(0,500),
-      level, date: it.pubDate||new Date().toISOString(),
+      level: s.level, score: s.score, theme: s.theme,
+      date: it.pubDate || new Date().toISOString(),
       conflict_id:(it._conflicts||[])[0]?.id,
-      seuil: types.map(t=>seuilLabels[t]||t).join(' • '),
+      seuil: s.types.length ? s.types.map(t=>({rupture:'Rupture',diplo_majeur:'Diplomatie haut niveau',crise:'Crise systémique'}[t]||t)).join(' • ') : null,
       _live:true, _link:it.link, _source:it._source, _bf:!!it._bf,
-      _keywords:(it._majors||[]).map(m=>m.keyword)
-    };
+      _ageHours: s.ageHours, _corroborations: 1
+    });
   });
+  scored.sort((a,b)=>b.score - a.score);
+  return _groupSimilarAlerts(scored);
 }
 
 /* Synthèse impact BF (gère les 2 structures : note_synthese OU dimensions) */
@@ -3756,145 +3876,189 @@ function _impactBFSynthese(c){
   return parts.length? parts.join(' · ') : null;
 }
 
-// État de filtrage des alertes
-let AL_STATE = { level:'all', source:'all', bfOnly:false };
+// État de filtrage des alertes (refonte 2026-05-31 : période + thème ajoutés)
+let AL_STATE = { period:'24h', level:'all', theme:'all', bfOnly:false };
+
+// Helpers d'affichage
+function _alFormatAge(h){
+  if(h < 1) return 'il y a ' + Math.max(1, Math.round(h*60)) + ' min';
+  if(h < 24) return 'il y a ' + Math.round(h) + ' h';
+  return 'il y a ' + Math.round(h/24) + ' j';
+}
+const _AL_THEME_META = {
+  security:    { label:'Sécurité',     icon:'fa-shield-halved', color:'#ef4444' },
+  diplomatic:  { label:'Diplomatique', icon:'fa-handshake',     color:'#60a5fa' },
+  humanitarian:{ label:'Humanitaire',  icon:'fa-heart-pulse',   color:'#fde047' },
+  energy:      { label:'Énergie/éco',  icon:'fa-bolt',          color:'#f97316' },
+  other:       { label:'Général',      icon:'fa-circle-info',   color:'#94a3b8' }
+};
+const _AL_LEVEL_META = {
+  critical:{ label:'Critique', color:'#ef4444', bg:'rgba(239,68,68,.10)' },
+  high:    { label:'Élevée',   color:'#f97316', bg:'rgba(249,115,22,.10)' },
+  medium:  { label:'À suivre', color:'#fde047', bg:'rgba(253,224,71,.08)' }
+};
 
 function renderAlerts(){
-  const d = DB.get();
-  const liveAlerts = getDerivedAlertsFromNews();
-  let all = [...liveAlerts, ...(d.alerts||[])].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
   const el = document.getElementById('alerts-list');
   if(!el) return;
-  const lastUpd = NEWS_STATE.lastUpdate ? Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000) : null;
-  const freshLabel = lastUpd===null ? 'jamais' : lastUpd<1?'à l\'instant':`il y a ${lastUpd} min`;
-  const freshColor = lastUpd===null||lastUpd>15 ? '#f59e0b' : '#22c55e';
+  const d = DB.get();
 
-  // Stats par niveau
-  const liveCount = liveAlerts.length, manualCount = (d.alerts||[]).length;
+  // Cleanup une-fois des alertes seed manuelles (suppression demandée par l'utilisateur)
+  if(!localStorage.getItem('gw_seed_alerts_purged_v2')){
+    if(d.alerts && d.alerts.length){ d.alerts = []; DB.save(d); }
+    localStorage.setItem('gw_seed_alerts_purged_v2','1');
+  }
+
+  // 100% live RSS — plus de manuelles
+  let all = getDerivedAlertsFromNews();
+
+  // Filtre période
+  const PERIOD_H = {'6h':6,'24h':24,'48h':48,'7j':168};
+  const periodH = PERIOD_H[AL_STATE.period] || 24;
+  all = all.filter(a => a._ageHours <= periodH);
+
+  // Compteurs sur la période (avant filtre niveau/thème)
   const critCount = all.filter(a=>a.level==='critical').length;
   const highCount = all.filter(a=>a.level==='high').length;
-  const mediumCount = all.filter(a=>a.level==='medium' || a.level==='info' || (!a.level)).length;
+  const mediumCount = all.filter(a=>a.level==='medium').length;
   const bfCount = all.filter(a=>a._bf).length;
+  const total = all.length;
 
-  // Bandeau pédagogique
+  // Filtres niveau / thème / BF
+  let filtered = all;
+  if(AL_STATE.level!=='all')  filtered = filtered.filter(a => a.level === AL_STATE.level);
+  if(AL_STATE.theme!=='all')  filtered = filtered.filter(a => a.theme === AL_STATE.theme);
+  if(AL_STATE.bfOnly)         filtered = filtered.filter(a => a._bf);
+
+  const lastUpd = NEWS_STATE.lastUpdate ? Math.round((Date.now()-new Date(NEWS_STATE.lastUpdate))/60000) : null;
+  const freshLabel = lastUpd===null ? '—' : lastUpd<1 ? 'à l\'instant' : 'il y a ' + lastUpd + ' min';
+  const freshColor = lastUpd===null||lastUpd>15 ? '#f59e0b' : '#22c55e';
+  const periodLabel = {'6h':'6 dernières heures','24h':'24h glissantes','48h':'48h glissantes','7j':'7 derniers jours'}[AL_STATE.period];
+
+  // ╔═══════════ HEADER COMPACT ═══════════╗
   let html = `
-    <div style="background:linear-gradient(135deg,#1a060933 0%,#0a0f1c 100%);border:1px solid #7f1d1d;border-left:4px solid #ef4444;border-radius:6px;padding:14px 18px;margin-bottom:14px">
-      <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
-        <div style="font-size:2.2rem;color:#ef4444;line-height:1;flex-shrink:0"><i class="fa-solid fa-bell"></i></div>
-        <div style="flex:1;min-width:240px">
-          <div style="font-size:.62rem;color:#ef4444;letter-spacing:2px;text-transform:uppercase;font-weight:800;margin-bottom:2px">⚡ Centre d'alertes</div>
-          <div style="font-size:1rem;color:#e2e8f0;font-weight:700;line-height:1.4;margin-bottom:7px">Tous les événements détectés comme « majeurs » par le système, automatiquement extraits des flux RSS et croisés avec le catalogue des conflits.</div>
-          <div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:5px;padding:9px 11px;margin-top:6px">
-            <div style="font-size:.66rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:5px"><i class="fa-solid fa-circle-question"></i> Comment fonctionnent les alertes ?</div>
-            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Le système scanne en permanence les ${(window.GW_DATA?.RSS_SOURCES_FULL?.length)||140}+ sources RSS configurées</div>
-            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Quand un titre/article contient un <b style="color:#fde047">mot-clé majeur</b> (coup d'État, frappe massive, accord historique, choc pétrolier...), il devient automatiquement une alerte <span style="color:#86efac">EN DIRECT</span></div>
-            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Niveau attribué : <span style="color:#ef4444">Critique</span> (rupture/crise) · <span style="color:#f97316">Élevée</span> (diplomatie majeure) · <span style="color:#fde047">Moyenne</span> (info importante)</div>
-            <div style="font-size:.78rem;color:#cbd5e1;padding:2px 0;line-height:1.45">▸ Si l'article touche un conflit catalogué, on affiche aussi <b style="color:#fde047">l'impact pour le Burkina Faso</b></div>
-          </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #1a2340">
+      <div>
+        <div style="font-size:1.35rem;font-weight:700;color:#e2e8f0;letter-spacing:-.3px">Centre d'alertes</div>
+        <div style="font-size:.78rem;color:#64748b;margin-top:2px">
+          <i class="fa-solid fa-satellite-dish" style="color:${freshColor}"></i>
+          RSS scanné <b style="color:${freshColor}">${freshLabel}</b>
+          · ${total} alerte${total>1?'s':''} sur ${periodLabel}
+          · <a href="#" onclick="event.preventDefault();document.getElementById('al-help').style.display=document.getElementById('al-help').style.display==='none'?'block':'none'" style="color:#60a5fa;text-decoration:underline">Comment ça marche ?</a>
         </div>
       </div>
+      <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Actualiser</button>
+    </div>
+
+    <div id="al-help" style="display:none;background:#0a0f1c;border:1px solid #1a2340;border-radius:6px;padding:11px 14px;margin-bottom:12px;font-size:.78rem;color:#94a3b8;line-height:1.55">
+      Le système score chaque article RSS sur la base de 8 critères (mots-clés majeurs, pertinence Burkina Faso, conflit catalogué, type de tag, fraîcheur, source institutionnelle). Score ≥ 70 = <b style="color:#ef4444">Critique</b>, 45-69 = <b style="color:#f97316">Élevée</b>, 25-44 = <b style="color:#fde047">À suivre</b>. Les articles parlant du même sujet sont regroupés et le nombre de sources corroborantes est affiché.
     </div>`;
 
-  // Stats clignotantes par niveau
-  html += `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px">
-    <div onclick="AL_STATE.level=AL_STATE.level==='critical'?'all':'critical';renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #7f1d1d;border-left:3px solid #ef4444;border-radius:5px;padding:11px 13px;${AL_STATE.level==='critical'?'box-shadow:0 0 0 2px #ef4444':''}">
-      <div style="font-size:.62rem;color:#ef4444;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-triangle-exclamation"></i> Critique</div>
-      <div style="font-size:1.6rem;color:#ef4444;font-weight:800">${critCount}</div>
-      <div style="font-size:.68rem;color:#94a3b8">action immédiate requise</div>
+  // ╔═══════════ BARRE DE FILTRES ═══════════╗
+  const pill = (active, color, label, onclick) => `<button onclick="${onclick}" style="background:${active?color:'transparent'};color:${active?'#0a0f1c':color};border:1px solid ${color};border-radius:14px;padding:5px 11px;font-size:.72rem;font-weight:700;cursor:pointer;transition:all .15s">${label}</button>`;
+
+  html += `<div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:14px;padding:10px 12px;background:#0a0f1c;border:1px solid #1a2340;border-radius:6px">
+    <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+      <span style="font-size:.66rem;color:#64748b;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-right:4px">Période</span>
+      ${['6h','24h','48h','7j'].map(p => pill(AL_STATE.period===p,'#60a5fa', p, `AL_STATE.period='${p}';renderAlerts()`)).join('')}
     </div>
-    <div onclick="AL_STATE.level=AL_STATE.level==='high'?'all':'high';renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #7c2d12;border-left:3px solid #f97316;border-radius:5px;padding:11px 13px;${AL_STATE.level==='high'?'box-shadow:0 0 0 2px #f97316':''}">
-      <div style="font-size:.62rem;color:#f97316;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-exclamation"></i> Élevée</div>
-      <div style="font-size:1.6rem;color:#f97316;font-weight:800">${highCount}</div>
-      <div style="font-size:.68rem;color:#94a3b8">à traiter dans la journée</div>
+    <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+      <span style="font-size:.66rem;color:#64748b;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-right:4px">Niveau</span>
+      ${pill(AL_STATE.level==='all','#94a3b8','Tous',`AL_STATE.level='all';renderAlerts()`)}
+      ${pill(AL_STATE.level==='critical','#ef4444','Critique '+critCount,`AL_STATE.level='${AL_STATE.level==='critical'?'all':'critical'}';renderAlerts()`)}
+      ${pill(AL_STATE.level==='high','#f97316','Élevée '+highCount,`AL_STATE.level='${AL_STATE.level==='high'?'all':'high'}';renderAlerts()`)}
+      ${pill(AL_STATE.level==='medium','#fde047','À suivre '+mediumCount,`AL_STATE.level='${AL_STATE.level==='medium'?'all':'medium'}';renderAlerts()`)}
     </div>
-    <div onclick="AL_STATE.level=AL_STATE.level==='medium'?'all':'medium';renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid #fde047;border-radius:5px;padding:11px 13px;${AL_STATE.level==='medium'?'box-shadow:0 0 0 2px #fde047':''}">
-      <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-circle-info"></i> Moyenne / info</div>
-      <div style="font-size:1.6rem;color:#fde047;font-weight:800">${mediumCount}</div>
-      <div style="font-size:.68rem;color:#94a3b8">à classer dans la veille</div>
+    <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+      <span style="font-size:.66rem;color:#64748b;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-right:4px">Thème</span>
+      ${pill(AL_STATE.theme==='all','#94a3b8','Tous',`AL_STATE.theme='all';renderAlerts()`)}
+      ${['security','diplomatic','humanitarian','energy'].map(t => pill(AL_STATE.theme===t, _AL_THEME_META[t].color, _AL_THEME_META[t].label, `AL_STATE.theme='${AL_STATE.theme===t?'all':t}';renderAlerts()`)).join('')}
     </div>
-    <div onclick="AL_STATE.bfOnly=!AL_STATE.bfOnly;renderAlerts()" style="cursor:pointer;background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid ${AL_STATE.bfOnly?'#fde047':'#1a2340'};border-radius:5px;padding:11px 13px;${AL_STATE.bfOnly?'box-shadow:0 0 0 2px #fde047':''}">
-      <div style="font-size:.62rem;color:#fde047;text-transform:uppercase;letter-spacing:1px;font-weight:800"><i class="fa-solid fa-flag-checkered"></i> Pertinentes BF</div>
-      <div style="font-size:1.6rem;color:#fde047;font-weight:800">${bfCount}</div>
-      <div style="font-size:.68rem;color:#94a3b8">${AL_STATE.bfOnly?'(filtre actif — cliquer pour voir tout)':'cliquer pour filtrer'}</div>
+    <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+      ${pill(AL_STATE.bfOnly,'#fde047','🇧🇫 Burkina Faso '+bfCount,`AL_STATE.bfOnly=!AL_STATE.bfOnly;renderAlerts()`)}
     </div>
   </div>`;
 
-  // Bandeau de contrôle
-  const sourceLabel = AL_STATE.source==='live'?'EN DIRECT seulement':AL_STATE.source==='manual'?'manuelles seulement':'toutes sources';
-  html += `<div class="card" style="margin-bottom:14px;background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340">
-    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between">
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-        <span style="font-size:.78rem;color:#94a3b8"><i class="fa-solid fa-satellite-dish" style="color:${freshColor}"></i> RSS scanné <b style="color:${freshColor}">${freshLabel}</b></span>
-        <span style="font-size:.7rem;color:#64748b">· Actualisation auto toutes les 10 min</span>
-        <span style="font-size:.7rem;color:#64748b">· ${liveCount} EN DIRECT + ${manualCount} manuelles</span>
-        ${AL_STATE.level!=='all'||AL_STATE.bfOnly||AL_STATE.source!=='all' ? `<span class="chip" style="background:rgba(96,165,250,.15);color:#60a5fa;font-size:.66rem;border:1px solid rgba(96,165,250,.4)">🔍 Filtres actifs</span>` : ''}
-      </div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap">
-        ${AL_STATE.level!=='all'||AL_STATE.bfOnly||AL_STATE.source!=='all' ? `<button class="btn ghost sm" onclick="AL_STATE={level:'all',source:'all',bfOnly:false};renderAlerts()"><i class="fa-solid fa-xmark"></i> Réinitialiser filtres</button>` : ''}
-        <button class="btn primary sm" onclick="loadNews()"><i class="fa-solid fa-rotate"></i> Actualiser RSS</button>
-      </div>
-    </div>
-  </div>`;
-
-  // Application des filtres
-  if(AL_STATE.level!=='all'){
-    if(AL_STATE.level==='medium') all = all.filter(a=>!a.level || a.level==='medium' || a.level==='info' || a.level==='low');
-    else all = all.filter(a=>a.level===AL_STATE.level);
-  }
-  if(AL_STATE.bfOnly) all = all.filter(a=>a._bf);
-  if(AL_STATE.source==='live') all = all.filter(a=>a._live);
-  else if(AL_STATE.source==='manual') all = all.filter(a=>!a._live);
-
-  // Cas vide
-  if(!all.length){
-    if(critCount===0 && highCount===0 && mediumCount===0){
-      // Vraiment aucune alerte
-      html += `<div style="background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340;border-radius:8px;padding:30px;text-align:center">
-        <i class="fa-solid fa-shield-halved" style="font-size:2.5rem;color:#22c55e;margin-bottom:10px"></i>
-        <div style="font-size:1.05rem;color:#86efac;font-weight:700;margin-bottom:5px">Aucune alerte active</div>
-        <div style="font-size:.84rem;color:#94a3b8;line-height:1.55;max-width:600px;margin:auto">Le système n'a détecté aucun événement majeur dans les flux RSS. Cela peut signifier soit que la situation est calme, soit que les flux RSS n'ont pas encore été collectés.<br>Cliquez sur <b style="color:#60a5fa">« Actualiser RSS »</b> ci-dessus pour relancer une collecte.</div>
+  // ╔═══════════ CAS VIDE ═══════════╗
+  if(!filtered.length){
+    if(total === 0){
+      html += `<div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:32px;text-align:center">
+        <i class="fa-solid fa-shield-halved" style="font-size:2.4rem;color:#22c55e;margin-bottom:12px"></i>
+        <div style="font-size:1rem;color:#86efac;font-weight:700;margin-bottom:6px">Calme plat sur ${periodLabel}</div>
+        <div style="font-size:.82rem;color:#94a3b8;max-width:560px;margin:auto;line-height:1.55">Aucun article RSS récent n'atteint le seuil d'importance (score ≥ 25). Cela signifie soit que la situation est stable, soit que les flux RSS n'ont pas encore été collectés ou ne contiennent pas d'événements à forte densité de signaux.<br>Tu peux essayer d'élargir la période à <b style="color:#60a5fa">7 jours</b> ou cliquer sur <b style="color:#60a5fa">« Actualiser »</b>.</div>
       </div>`;
     } else {
-      // Filtres trop restrictifs
-      html += `<div style="background:linear-gradient(135deg,#0a1020 0%,#060912 100%);border:1px solid #1a2340;border-radius:8px;padding:24px;text-align:center">
-        <i class="fa-solid fa-filter-circle-xmark" style="font-size:2rem;color:#f59e0b;margin-bottom:10px"></i>
-        <div style="font-size:.95rem;color:#fde047;font-weight:700;margin-bottom:4px">Aucune alerte ne correspond aux filtres actifs</div>
-        <div style="font-size:.78rem;color:#94a3b8">Cliquez sur <b style="color:#60a5fa">« Réinitialiser filtres »</b> pour voir toutes les alertes.</div>
+      html += `<div style="background:#0a0f1c;border:1px solid #1a2340;border-radius:8px;padding:22px;text-align:center">
+        <i class="fa-solid fa-filter-circle-xmark" style="font-size:1.8rem;color:#f59e0b;margin-bottom:10px"></i>
+        <div style="font-size:.92rem;color:#fde047;font-weight:700;margin-bottom:4px">Aucune alerte ne correspond aux filtres actifs</div>
+        <div style="font-size:.76rem;color:#94a3b8;margin-bottom:10px">${total} alertes existent sur la période mais sont masquées par les filtres niveau/thème/BF.</div>
+        <button class="btn primary sm" onclick="AL_STATE={period:'${AL_STATE.period}',level:'all',theme:'all',bfOnly:false};renderAlerts()"><i class="fa-solid fa-xmark"></i> Réinitialiser les filtres</button>
       </div>`;
     }
     el.innerHTML = html;
     return;
   }
 
-  // Liste des alertes
-  el.innerHTML = html + all.map(a=>{
-    const c = d.conflicts.find(x=>x.id===a.conflict_id);
-    const levelBg = a.level==='critical'?'#1a0609':a.level==='high'?'#1a0d05':'#0c1426';
-    const levelBorder = a.level==='critical'?'#7f1d1d':a.level==='high'?'#7c2d12':'#1a2340';
-    const liveBadge = a._live ? `<span class="chip" style="background:rgba(34,197,94,.18);color:#86efac;font-size:.62rem;border:1px solid rgba(34,197,94,.35);font-weight:700"><i class="fa-solid fa-broadcast-tower" style="font-size:.6rem"></i> EN DIRECT</span>` : `<span class="chip gray" style="font-size:.62rem">📝 Manuelle</span>`;
-    const bfImpact = _impactBFSynthese(c);
-    const dateLabel = a._live ? `${fmt.dateTime(a.date)} (RSS)` : fmt.date(a.date);
-    return `<div class="card" style="margin:0 0 12px;background:linear-gradient(135deg,${levelBg} 0%,#060912 100%);border-color:${levelBorder};border-width:1.5px">
-      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px">
-        <div style="flex:1;min-width:280px">
-          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px">${liveBadge}${a._bf?'<span class="chip" style="background:rgba(253,224,71,.15);color:#fde047;font-size:.62rem;border:1px solid rgba(253,224,71,.35)">🇧🇫 Pertinent BF</span>':''}</div>
-          <div style="font-size:1rem;font-weight:700;color:#e2e8f0;line-height:1.4;margin-bottom:5px">⚠ ${a.title}</div>
-          <div style="font-size:.76rem;color:#94a3b8;margin-bottom:8px">${dateLabel}${a._source?` • ${a._source}`:''}${c?` • <span style="color:#60a5fa;cursor:pointer;text-decoration:underline" onclick="showConflictDetail('${c.id}')">${c.short||c.name}</span>`:''}</div>
-          ${a.seuil?`<div style="margin-bottom:9px"><span class="chip purple" style="font-size:.7rem">Seuil détecté : ${a.seuil}</span></div>`:''}
+  // ╔═══════════ HERO — ALERTE #1 ═══════════╗
+  const hero = filtered[0];
+  const heroLevel = _AL_LEVEL_META[hero.level] || _AL_LEVEL_META.medium;
+  const heroTheme = _AL_THEME_META[hero.theme] || _AL_THEME_META.other;
+  const heroConflict = d.conflicts.find(x=>x.id===hero.conflict_id);
+  const heroBfImpact = _impactBFSynthese(heroConflict);
+
+  html += `<div style="background:linear-gradient(135deg, ${heroLevel.bg} 0%, #060912 100%);border:1px solid ${heroLevel.color}55;border-left:4px solid ${heroLevel.color};border-radius:8px;padding:18px 20px;margin-bottom:16px">
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px;font-size:.7rem">
+      <span style="background:${heroLevel.color};color:#0a0f1c;padding:3px 9px;border-radius:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase">${heroLevel.label}</span>
+      <span style="color:${heroTheme.color}"><i class="fa-solid ${heroTheme.icon}"></i> ${heroTheme.label}</span>
+      <span style="color:#94a3b8">${_alFormatAge(hero._ageHours)}</span>
+      <span style="color:#94a3b8">· ${hero._source||'Source inconnue'}</span>
+      ${hero._bf?'<span style="background:rgba(253,224,71,.18);color:#fde047;border:1px solid rgba(253,224,71,.4);padding:2px 8px;border-radius:11px;font-weight:700">🇧🇫 BF</span>':''}
+      ${hero._corroborations>1?`<span style="background:rgba(96,165,250,.15);color:#60a5fa;border:1px solid rgba(96,165,250,.35);padding:2px 8px;border-radius:11px;font-weight:700">+${hero._corroborations-1} source${hero._corroborations>2?'s':''} corroborent</span>`:''}
+      <span style="color:#475569;font-size:.66rem;margin-left:auto">score ${hero.score}</span>
+    </div>
+    <div style="font-size:1.25rem;font-weight:700;color:#f1f5f9;line-height:1.35;margin-bottom:10px">${hero.title}</div>
+    ${hero.description?`<div style="font-size:.88rem;color:#cbd5e1;line-height:1.6;margin-bottom:12px">${hero.description}</div>`:''}
+    ${heroBfImpact?`<div style="background:rgba(253,224,71,.06);border-left:3px solid #fde047;padding:9px 12px;border-radius:4px;font-size:.8rem;color:#cbd5e1;margin-bottom:12px"><b style="color:#fde047">Impact Burkina Faso :</b> ${heroBfImpact}</div>`:''}
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      ${hero._link?`<a class="btn primary sm" href="${hero._link}" target="_blank" rel="noopener" style="text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lire l'article</a>`:''}
+      ${heroConflict?`<button class="btn ghost sm" onclick="showConflictDetail('${heroConflict.id}')"><i class="fa-solid fa-circle-info"></i> Fiche : ${heroConflict.short||heroConflict.name}</button>`:''}
+      ${heroConflict?.id?`<button class="btn ghost sm" onclick="Router.go('impact_bf');setTimeout(()=>{const s=document.getElementById('bf-conflict');if(s){s.value='${heroConflict.id}';renderImpactBF();}},100)"><i class="fa-solid fa-flag-checkered" style="color:#fde047"></i> Impact BF</button>`:''}
+    </div>
+  </div>`;
+
+  // ╔═══════════ LISTE COMPACTE ═══════════╗
+  const rest = filtered.slice(1);
+  if(rest.length){
+    html += `<div style="font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin:18px 0 8px">Autres alertes (${rest.length})</div>`;
+    html += rest.map(a=>{
+      const lvl = _AL_LEVEL_META[a.level] || _AL_LEVEL_META.medium;
+      const thm = _AL_THEME_META[a.theme] || _AL_THEME_META.other;
+      const cf = d.conflicts.find(x=>x.id===a.conflict_id);
+      return `<div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;background:#0a0f1c;border:1px solid #1a2340;border-left:3px solid ${lvl.color};border-radius:5px;padding:10px 14px;margin-bottom:6px;transition:background .12s" onmouseover="this.style.background='#0c1426'" onmouseout="this.style.background='#0a0f1c'">
+        <div style="display:flex;flex-direction:column;gap:3px;min-width:78px">
+          <span style="color:${lvl.color};font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px">${lvl.label}</span>
+          <span style="color:#64748b;font-size:.68rem">${_alFormatAge(a._ageHours)}</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">${levelChip(a.level)}${!a._live?`<button class="btn ghost sm" onclick="delAlert('${a.id}')" title="Supprimer"><i class="fa-solid fa-trash"></i></button>`:''}</div>
-      </div>
-      <div style="background:rgba(0,0,0,.25);border-left:3px solid ${levelBorder};border-radius:4px;padding:11px 14px;font-size:.88rem;color:#e2e8f0;line-height:1.65;white-space:pre-wrap;word-wrap:break-word">${a.description||'<i style="color:#64748b">Pas de description.</i>'}</div>
-      ${c?.brief_decideur?.[0]?`<div style="margin-top:10px;background:rgba(96,165,250,.05);border-left:3px solid #60a5fa;padding:9px 12px;border-radius:4px;font-size:.78rem;color:#cbd5e1"><b style="color:#60a5fa">📌 Contexte conflit lié :</b> ${c.brief_decideur[0]}</div>`:''}
-      ${bfImpact?`<div style="margin-top:8px;background:rgba(253,224,71,.06);border-left:3px solid #fde047;padding:9px 12px;border-radius:4px;font-size:.78rem;color:#cbd5e1"><b style="color:#fde047">🇧🇫 Impact BF :</b> ${bfImpact}</div>`:''}
-      <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
-        ${a._live && a._link?`<a class="btn primary sm" href="${a._link}" target="_blank" rel="noopener" style="text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lire l'article source</a>`:''}
-        ${c?`<button class="btn ghost sm" onclick="showConflictDetail('${c.id}')"><i class="fa-solid fa-circle-info"></i> Fiche conflit</button>`:''}
-        ${c?.id?`<button class="btn ghost sm" onclick="Router.go('impact_bf');setTimeout(()=>{const s=document.getElementById('bf-conflict');if(s){s.value='${c.id}';renderImpactBF();}},100)"><i class="fa-solid fa-flag-checkered" style="color:#fde047"></i> Voir impact BF</button>`:''}
-        <button class="btn ghost sm" onclick="Router.go('geointel')" style="color:#86efac"><i class="fa-solid fa-globe"></i> Carte GeoIntel</button>
-      </div>
-    </div>`;
-  }).join('');
+        <div style="min-width:0">
+          <div style="font-size:.92rem;color:#e2e8f0;font-weight:600;line-height:1.4;margin-bottom:3px">${a.title}</div>
+          <div style="font-size:.7rem;color:#64748b;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+            <span style="color:${thm.color}"><i class="fa-solid ${thm.icon}" style="font-size:.6rem"></i> ${thm.label}</span>
+            <span>· ${a._source||'—'}</span>
+            ${a._bf?'<span style="color:#fde047">· 🇧🇫</span>':''}
+            ${a._corroborations>1?`<span style="color:#60a5fa">· +${a._corroborations-1} corrob.</span>`:''}
+            ${cf?`<span>· <a href="#" onclick="event.preventDefault();showConflictDetail('${cf.id}')" style="color:#60a5fa">${cf.short||cf.name}</a></span>`:''}
+            <span style="color:#475569;margin-left:auto">score ${a.score}</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px">
+          ${a._link?`<a href="${a._link}" target="_blank" rel="noopener" class="btn ghost sm" title="Lire l'article" style="text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`:''}
+          ${cf?`<button class="btn ghost sm" title="Fiche conflit" onclick="showConflictDetail('${cf.id}')"><i class="fa-solid fa-circle-info"></i></button>`:''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  el.innerHTML = html;
 }
 function delAlert(id){ if(confirm('Supprimer ?')){DB.del('alerts',id); toast('Supprimée','success'); renderAlerts();} }
 
