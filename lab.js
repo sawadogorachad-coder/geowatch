@@ -312,10 +312,19 @@
 
     if(!ACH_CURRENT){
       // Liste des analyses + création
-      html += `<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+      html += `<div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
         <input id="ach-new-q" placeholder="Question d'analyse (ex: L'AES va-t-elle adopter une monnaie commune en 2026 ?)" style="flex:1;min-width:280px;background:${T.card};color:${T.txt};border:1px solid ${T.border};border-radius:6px;padding:9px 12px;font-size:.85rem"/>
         <button id="ach-create" class="btn primary sm"><i class="fa-solid fa-plus"></i> Nouvelle analyse</button>
       </div>`;
+      // Génération automatique de l'ossature depuis la veille
+      if(window.GW_GEN && GW_GEN.THEATRES){
+        html += `<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center;background:${T.card};border:1px dashed ${T.purple}66;border-radius:8px;padding:10px 12px">
+          <span style="font-size:.78rem;color:${T.purple};font-weight:700"><i class="fa-solid fa-wand-magic-sparkles"></i> Pré-remplir depuis la veille :</span>
+          <select id="ach-gen-theatre" style="background:${T.bg};color:${T.txt};border:1px solid ${T.border};border-radius:5px;padding:6px 9px;font-size:.78rem">${Object.entries(GW_GEN.THEATRES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
+          <button id="ach-gen" class="btn ghost sm" style="color:${T.purple};border-color:${T.purple}66"><i class="fa-solid fa-bolt"></i> Générer hypothèses + indices</button>
+          <span style="font-size:.68rem;color:${T.faint}">Tu n'auras plus qu'à coter (cohérence) — le jugement reste le tien.</span>
+        </div>`;
+      }
       if(!analyses.length){
         html += `<div style="background:${T.card};border:1px solid ${T.border};border-radius:8px;padding:30px;text-align:center;color:${T.dim}"><i class="fa-solid fa-diagram-project" style="font-size:2rem;color:${T.purple};margin-bottom:10px"></i><div>Aucune analyse pour l'instant. Crée ta première question ci-dessus.</div></div>`;
       } else {
@@ -339,6 +348,40 @@
       };
       host.querySelectorAll('.ach-open').forEach(b=>b.onclick=()=>{ ACH_CURRENT=b.dataset.id; window.renderACH(); });
       host.querySelectorAll('.ach-del').forEach(b=>b.onclick=()=>{ if(confirm('Supprimer cette analyse ?')){ achSave(achLoad().filter(x=>x.id!==b.dataset.id)); window.renderACH(); } });
+      const genBtn=g('ach-gen');
+      if(genBtn) genBtn.onclick=()=>{
+        const key=g('ach-gen-theatre').value;
+        const th=GW_GEN.THEATRES[key];
+        let items=[];
+        try{ items=GW_GEN.relevant(key, 168)||[]; }catch(e){}
+        if(!items.length){ toast && toast('Veille vide pour ce théâtre — patiente ou élargis','info'); return; }
+        // Indices = titres des articles les plus pertinents (corroborés/majeurs d'abord)
+        const ranked=items.slice().sort((a,b)=>{
+          const sa=((a._majors||[]).length?2:0)+((a._conflicts||[]).length?1:0);
+          const sb=((b._majors||[]).length?2:0)+((b._conflicts||[]).length?1:0);
+          return sb-sa || new Date(b.pubDate)-new Date(a.pubDate);
+        });
+        const evidence=ranked.slice(0,7).map(it=>{
+          const r=it._rating?` (${it._rating})`:'';
+          let t=(it.title||'').replace(/\s+/g,' ').trim();
+          if(t.length>120) t=t.slice(0,119)+'…';
+          return `${t} — ${it._source||'source'}${r}`;
+        });
+        const a={
+          id:'ach_'+Date.now(),
+          question:`Évolution probable — ${th.label} (généré depuis la veille)`,
+          hypotheses:[
+            'Escalade / aggravation à court terme (7-30 j)',
+            'Maintien de la trajectoire actuelle (statu quo)',
+            'Désescalade / stabilisation'
+          ],
+          evidence,
+          matrix:{}
+        };
+        const arr=achLoad(); arr.unshift(a); achSave(arr); ACH_CURRENT=a.id;
+        toast && toast(`Ossature ACH générée : 3 hypothèses, ${evidence.length} indices à coter`,'success');
+        window.renderACH();
+      };
       return;
     }
 

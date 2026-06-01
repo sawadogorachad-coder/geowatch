@@ -211,6 +211,7 @@ const Router = {
     else if(page==='worldwatch') renderWorldWatch();
     else if(page==='alerts') renderAlerts();
     else if(page==='events') renderEvents();
+    else if(page==='generator') renderGenerator();
     else if(page==='timeline') renderTimeline();
     else if(page==='compare') renderCompare();
     else if(page==='ach') renderACH();
@@ -3730,11 +3731,18 @@ function renderWorldWatch(){
 /* ============= ALERTES ============= */
 /* Dérive les alertes EN DIRECT depuis les articles RSS détectés comme événements majeurs */
 /* Score d'importance par article RSS — refonte 2026-05-31 v2 (resserré) */
+// Sources d'ANALYSE (think tanks, revues) : publient de l'analyse, pas du breaking news.
+// Pour les ALERTES, on plafonne leur niveau à « à suivre » — jamais critique/élevée.
+const ANALYSIS_SOURCES = ['Grand Continent','Diploweb','IRIS','IFRI','ISW','Institute for the Study of War','Chatham','Carnegie','ECFR','CSIS','RAND','IISS','Brookings','Atlantic Council','SIPRI','Monde Diplomatique','Foreign Policy','Foreign Affairs','RUSI','Mo Ibrahim','Clingendael','Le Grand Continent'];
+function _isAnalysisSource(it){ return ANALYSIS_SOURCES.some(s => (it._source||'').includes(s)); }
+
 function _scoreArticleForAlert(it, now){
   const pubMs = new Date(it.pubDate||0).getTime();
   if(!pubMs) return null;
   const ageHours = (now - pubMs) / 3600000;
   if(ageHours > 7*24) return null;
+  // Garde-fou : essais / récap / sport → jamais une alerte
+  if(_MAJ_ANALYSIS.test((it.title||'').toLowerCase())) return null;
 
   const tags = it._tags||[];
   const types = (it._majors||[]).map(m=>m.type);
@@ -3808,6 +3816,12 @@ function _scoreArticleForAlert(it, now){
 
   if(score < 30) return null;
   let level = score >= 65 ? 'critical' : score >= 45 ? 'high' : 'medium';
+
+  // Plafond éditorial : une source d'analyse (think tank) ne peut pas être une alerte
+  // critique/élevée — sauf si le titre nomme un vrai événement de rupture/crise.
+  if(_isAnalysisSource(it) && !(types.includes('rupture') || types.includes('crise'))){
+    level = 'medium';
+  }
 
   let theme = 'other';
   if(tags.includes('military') || types.includes('rupture')) theme = 'security';
@@ -4375,7 +4389,7 @@ async function loadAgentData(opts){
       _conflicts: tagNewsByConflict(it),
       _tags: (it._tags && it._tags.length) ? it._tags : categorizeNews(it),
       _bf: (typeof it._bf==='boolean') ? it._bf : detectBFRelevance(it),
-      _majors: it._majors || [],
+      _majors: (typeof detectMajorEvent==='function') ? detectMajorEvent(it) : (it._majors || []),
       _agentGenerated: true,
       _rating: it._rating, _evidence: it._evidence, _score: it._score
     }));
@@ -4743,12 +4757,23 @@ function pushBrowserNotif(item){
 }
 
 /* Détecte si un article correspond à un ÉVÉNEMENT MAJEUR */
+// Titres d'analyse / récap / sport : jamais des événements majeurs (évite faux positifs)
+const _MAJ_ANALYSIS = /\b(synth[èe]se|g[ée]n[ée]ration|d[ée]cryptage|r[ée]trospective|chronique|[ée]dito(?:rial)?|tribune|entretien|podcast|revue de presse|le point sur|que retenir|aux origines|comprendre|pourquoi|dossier|portrait|interview|grand angle|d[ée]bat|opinion|points? de vue|analyse|carte blanche|billet|coupe du monde|coupe d.?afrique|fifa|caf|football|mondial 2026|messi|supporters?|championnat|ligue des champions|jeux olympiques|olympique)\b/i;
+// Mots trop ambigus seuls en FR (« coup » matche « coupe », « coup de chance »...) → ignorés
+const _MAJ_STOP = new Set(['coup','coups','offensive','front','breakthrough','recognition','strike','collapse','assault','seized','captured the capital','overthrow']);
+function _majKwInTitle(title, kw){
+  if(_MAJ_STOP.has(kw)) return false;
+  const e = kw.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return new RegExp('(^|[^a-zà-öø-ÿ])'+e+'($|[^a-zà-öø-ÿ])','i').test(title);
+}
 function detectMajorEvent(item){
-  const text = ((item.title||'')+' '+(item.description||'')).toLowerCase();
+  // Recherche dans le TITRE uniquement + mot entier + exclusion analyses/sport (anti faux positifs)
+  const title = ((item.title||'')).toLowerCase();
+  if(_MAJ_ANALYSIS.test(title)) return [];
   const M = window.GW_DATA?.MAJOR_EVENT_KEYWORDS || {};
   const matched = [];
   Object.entries(M).forEach(([k,kws])=>{
-    const found = kws.find(kw=>text.includes(kw));
+    const found = kws.find(kw=>_majKwInTitle(title, kw));
     if(found){ matched.push({type:k, keyword:found}); }
   });
   return matched;
