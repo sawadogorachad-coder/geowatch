@@ -211,11 +211,16 @@ const Router = {
     else if(page==='worldwatch') renderWorldWatch();
     else if(page==='alerts') renderAlerts();
     else if(page==='events') renderEvents();
+    else if(page==='timeline') renderTimeline();
+    else if(page==='compare') renderCompare();
+    else if(page==='ach') renderACH();
+    else if(page==='actors') renderActorsGraph();
+    else if(page==='referentiels') renderReferentiels();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
     if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial','impact_radar'].includes(page)){
       const stale = !NEWS_STATE.lastUpdate || (Date.now()-new Date(NEWS_STATE.lastUpdate))>5*60*1000;
-      if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; loadNews().finally(()=>{NEWS_STATE.loading=false;}); }
+      if(stale && !NEWS_STATE.loading){ NEWS_STATE.loading=true; refreshNews().finally(()=>{NEWS_STATE.loading=false;}); }
     }
   }
 };
@@ -4345,6 +4350,55 @@ async function translateEnglishItems(items){
   }
 }
 
+/* ============= CHARGEMENT DONNÉES AGENT (data/generated) =============
+   Le site privilégie les données collectées côté serveur par l'agent
+   GitHub Actions (fiables, sans proxy CORS). Repli automatique sur le RSS
+   navigateur si le fichier est absent ou trop ancien (> maxAgeH heures). */
+async function loadAgentData(opts){
+  opts = opts||{};
+  const maxAgeH = (opts.maxAgeH===null) ? null : (opts.maxAgeH || 6);
+  try{
+    const res = await fetch('data/generated/latest-news.json', {cache:'no-store'});
+    if(!res.ok) return false;
+    const data = await res.json();
+    const items = (data && data.items) || [];
+    if(!items.length) return false;
+    const genAt = data.generatedAt ? new Date(data.generatedAt) : null;
+    if(maxAgeH!==null && genAt){
+      const ageH = (Date.now()-genAt.getTime())/3600000;
+      if(ageH > maxAgeH) return false; // trop ancien → repli sur RSS live navigateur
+    }
+    // Ré-enrichit avec la détection de conflits propre au site (l'agent ne la calcule pas)
+    NEWS_STATE.items = items.slice(0,200).map(it=>({
+      title: it.title, link: it.link, pubDate: it.pubDate, description: it.description||'',
+      _source: it._source, _sourceId: it._sourceId, _sourceCat: it._sourceCat,
+      _conflicts: tagNewsByConflict(it),
+      _tags: (it._tags && it._tags.length) ? it._tags : categorizeNews(it),
+      _bf: (typeof it._bf==='boolean') ? it._bf : detectBFRelevance(it),
+      _majors: it._majors || [],
+      _agentGenerated: true,
+      _rating: it._rating, _evidence: it._evidence, _score: it._score
+    }));
+    NEWS_STATE.lastUpdate = genAt || new Date();
+    NEWS_STATE.dataSource = 'agent';
+    updateLastUpdateLabel();
+    renderNewsList();
+    detectAndPushNewItems();
+    rerenderActivePage();
+    if(typeof wwUpdateBadge==='function') wwUpdateBadge();
+    const ageMin = genAt ? Math.round((Date.now()-genAt.getTime())/60000) : 0;
+    toast(`${NEWS_STATE.items.length} articles via l'agent serveur (collecte il y a ${ageMin} min) 🤖`, 'success');
+    return true;
+  } catch(e){ console.warn('loadAgentData échec:', e); return false; }
+}
+
+/* Rafraîchissement intelligent : agent d'abord, repli RSS navigateur sinon. */
+async function refreshNews(){
+  const ok = await loadAgentData();
+  if(!ok){ NEWS_STATE.dataSource='live'; return loadNews(); }
+  return true;
+}
+
 async function loadNews(){
   const sources = getActiveSources();
   const statusEl = document.getElementById('src-status');
@@ -4454,7 +4508,8 @@ function updateLastUpdateLabel(){
     nextStr = ` • ⏱ next ${m}m${s.toString().padStart(2,'0')}`;
   }
   if(el){
-    el.textContent = `🛰 Maj : ${ageStr}${nextStr}`;
+    const srcTag = NEWS_STATE.dataSource==='agent' ? '🤖 agent serveur' : '🛰 RSS direct';
+    el.textContent = `${srcTag} · Maj : ${ageStr}${nextStr}`;
     el.style.color = diff<15 ? '#86efac' : '#f59e0b';
   }
   // Pill globale dans la topbar
@@ -4551,7 +4606,7 @@ function startAutoRefresh(){
     const autoCheckbox = document.getElementById('news-auto');
     const autoEnabled = !autoCheckbox || autoCheckbox.checked; // Par défaut ON si checkbox absent
     if(autoEnabled){
-      loadNews().catch(e=>console.warn('Auto-refresh RSS failed:',e));
+      refreshNews().catch(e=>console.warn('Auto-refresh failed:',e));
       NEWS_STATE.nextRefresh = Date.now() + INTERVAL_MS;
     }
     updateLastUpdateLabel();
@@ -6013,6 +6068,7 @@ function closeMapPopup(){ if(GeoMap.map) GeoMap.map.closePopup(); }
 function setupEvents(){
   document.getElementById('sb-toggle').onclick = ()=>document.getElementById('sidebar').classList.toggle('collapsed');
   document.querySelectorAll('a[data-page], button[data-page]').forEach(el=>el.addEventListener('click',ev=>{if(el.dataset.page){ev.preventDefault(); Router.go(el.dataset.page);}}));
+  document.getElementById('nav-kiosk')?.addEventListener('click', ev=>{ ev.preventDefault(); if(window.GW_LAB) GW_LAB.startKiosk(); });
   document.getElementById('tb-alerts').onclick = ()=>Router.go('alerts');
   document.getElementById('tb-notif')?.addEventListener('click', toggleNotifPanel);
 
@@ -6120,8 +6176,8 @@ window.addEventListener('DOMContentLoaded',()=>{
   setupEvents();
   Router.go('dash');
   updateNotifBadge();
-  // 🛰 Chargement RSS automatique IMMÉDIAT au démarrage (le site est vivant dès la 1ère seconde)
-  setTimeout(()=>{ loadNews().catch(e=>console.warn('Auto-load news failed:',e)); }, 800);
+  // 🛰 Chargement automatique au démarrage : agent serveur d'abord, repli RSS navigateur
+  setTimeout(()=>{ refreshNews().catch(e=>console.warn('Auto-load news failed:',e)); }, 800);
   // Demande permission notifications navigateur après 3s pour ne pas brusquer l'utilisateur
   setTimeout(requestNotifPermission, 3000);
 });

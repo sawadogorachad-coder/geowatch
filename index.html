@@ -319,6 +319,13 @@ body.map-light .map-legend h4{color:#475569}
     <li><a href="#" data-page="news"><i class="fa-solid fa-newspaper"></i><span>Flux RSS</span></a></li>
     <li><a href="#" data-page="alerts"><i class="fa-solid fa-bell"></i><span>Alertes</span><span class="badge" id="nav-alerts-badge" style="display:none"></span></a></li>
     <li><a href="#" data-page="events"><i class="fa-solid fa-list-check"></i><span>Chronologie</span></a></li>
+    <li class="nav-title" style="color:#a855f7">🧪 Laboratoire analyste</li>
+    <li><a href="#" data-page="timeline"><i class="fa-solid fa-timeline"></i><span>Frise par conflit</span></a></li>
+    <li><a href="#" data-page="compare"><i class="fa-solid fa-scale-unbalanced"></i><span>Comparateur pays</span></a></li>
+    <li><a href="#" data-page="ach" style="color:#c4b5fd"><i class="fa-solid fa-diagram-project"></i><span>Méthode ACH</span></a></li>
+    <li><a href="#" data-page="actors" style="color:#c4b5fd"><i class="fa-solid fa-circle-nodes"></i><span>Graphe d'acteurs</span></a></li>
+    <li><a href="#" data-page="referentiels"><i class="fa-solid fa-compass-drafting"></i><span>Référentiels veille</span></a></li>
+    <li><a href="#" id="nav-kiosk" style="color:#86efac"><i class="fa-solid fa-tv"></i><span>Mode kiosque</span></a></li>
     <li class="nav-sep"></li>
     <li><a href="#" data-page="admin"><i class="fa-solid fa-gear"></i><span>Admin</span></a></li>
   </ul>
@@ -674,7 +681,7 @@ body.map-light .map-legend h4{color:#475569}
     <!-- ============= ALERTS ============= -->
     <section class="page" data-page="alerts">
       <div class="card">
-        <div class="card-hd"><h2><i class="fa-solid fa-bell"></i>Alertes</h2><button class="btn primary sm" id="al-add"><i class="fa-solid fa-plus"></i>Nouvelle alerte</button></div>
+        <div class="card-hd"><h2><i class="fa-solid fa-bell"></i>Alertes</h2><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn ghost sm" onclick="GW_LAB.startKiosk()"><i class="fa-solid fa-tv"></i> Mode kiosque</button><button class="btn ghost sm" onclick="GW_LAB.emailBrief()"><i class="fa-solid fa-envelope"></i> Envoyer par mail</button><button class="btn primary sm" onclick="GW_LAB.exportNoteExpress()"><i class="fa-solid fa-file-pdf"></i> Note Express PDF</button></div></div>
         <div id="alerts-list"></div>
       </div>
     </section>
@@ -683,6 +690,13 @@ body.map-light .map-legend h4{color:#475569}
     <section class="page" data-page="worldwatch">
       <div id="ww-panel"></div>
     </section>
+
+    <!-- ============= LABORATOIRE ANALYSTE (features 5-9) ============= -->
+    <section class="page" data-page="timeline"><div id="timeline-content"></div></section>
+    <section class="page" data-page="compare"><div id="compare-content"></div></section>
+    <section class="page" data-page="ach"><div id="ach-content"></div></section>
+    <section class="page" data-page="actors"><div id="actors-content"></div></section>
+    <section class="page" data-page="referentiels"><div id="referentiels-content"></div></section>
 
     <!-- ============= ADMIN ============= -->
     <section class="page" data-page="admin">
@@ -706,5 +720,6 @@ body.map-light .map-legend h4{color:#475569}
 <script src="sources.js"></script>
 <script src="geo.js"></script>
 <script src="app.js"></script>
+<script src="lab.js"></script>
 </body>
 </html>
