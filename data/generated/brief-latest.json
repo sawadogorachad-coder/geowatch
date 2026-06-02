@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-02T10:51:27.686Z",
+  "generatedAt": "2026-06-02T11:14:34.210Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
     "ok": 116,
     "failed": 54,
-    "articles": 1915,
+    "articles": 1935,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,7 +40,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -98,11 +98,6 @@
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -130,7 +125,7 @@
       {
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_atop",
@@ -151,6 +146,11 @@
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
+      },
+      {
+        "id": "rss_vanguard",
+        "name": "Vanguard (Nigeria)",
+        "count": 20
       },
       {
         "id": "rss_punch",
@@ -630,6 +630,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -690,11 +695,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_vanguard",
-        "name": "Vanguard (Nigeria)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
@@ -702,7 +702,7 @@
       {
         "id": "rss_7sur7",
         "name": "7sur7.cd (RDC)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_adiac",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 44,
-    "alerts": 16,
-    "criticalAlerts": 8,
-    "sourcesDistinct": 72
+    "bfAes": 48,
+    "alerts": 13,
+    "criticalAlerts": 7,
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
     {
@@ -1099,7 +1099,7 @@
       "title": "Araghchi: Israeli attacks on Lebanon violate Iran-US ceasefire",
       "link": "https://presstv.ir/Detail/2026/06/01/769650/Iran-US-Israel-Lebanon-Araghchi",
       "source": "Press TV (Iran)",
-      "date": "2026-06-02T10:51:18.626Z",
+      "date": "2026-06-02T11:14:22.839Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1140,22 +1140,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Ukrainian strikes on Zaporozhye NPP risk major radiation disaster — diplomat",
-      "link": "https://tass.com/politics/2140055",
-      "source": "TASS (Russie, EN)",
-      "date": "2026-06-02T09:04:50.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
         }
       ]
     },
@@ -1318,72 +1302,36 @@
           "keyword": "génocide"
         }
       ]
-    },
-    {
-      "title": "Après l’assassinat de 19 civils, la Protection civile appelle les autorités à prendre \"au sérieux\" l’insécurité à Beni",
-      "link": "https://www.radiookapi.net/2026/06/01/actualite/securite/apres-lassassinat-de-19-civils-la-protection-civile-appelle-les",
-      "source": "Radio Okapi (RDC)",
-      "date": "2026-06-01T20:36:04.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "Trump declares Lebanon ceasefire, calls off IDF strike on Beirut after phone call with Netanyahu",
-      "link": "https://www.jpost.com/middle-east/article-898026",
-      "source": "Jerusalem Post",
-      "date": "2026-06-01T20:15:46.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      189
+      224
     ],
     [
       "occident_fr",
-      131
+      124
     ],
     [
       "autre",
-      108
+      109
     ],
     [
       "occident_us",
-      99
+      101
     ],
     [
       "golfe_mo",
-      96
+      94
     ],
     [
       "turquie",
-      47
-    ],
-    [
-      "russie",
-      44
+      48
     ],
     [
       "bf_local",
-      39
+      40
     ],
     [
       "chine",
@@ -1391,7 +1339,11 @@
     ],
     [
       "sahel",
-      17
+      16
+    ],
+    [
+      "russie",
+      14
     ]
   ],
   "indicators": [
@@ -1402,43 +1354,38 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-06-02T10:50:54.152Z",
+      "at": "2026-06-02T11:13:54.588Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-02T10:50:54.158Z",
+      "at": "2026-06-02T11:13:54.595Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-02T10:51:25.263Z",
+      "at": "2026-06-02T11:14:30.991Z",
       "agent": "Agent Collecte RSS",
-      "message": "116/170 flux OK, 1915 articles"
+      "message": "116/170 flux OK, 1935 articles"
     },
     {
-      "at": "2026-06-02T10:51:27.683Z",
+      "at": "2026-06-02T11:14:34.207Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-02T10:51:27.686Z",
+      "at": "2026-06-02T11:14:34.210Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 16 alertes"
+      "message": "8 developpements, 13 alertes"
     },
     {
-      "at": "2026-06-02T10:51:27.686Z",
+      "at": "2026-06-02T11:14:34.211Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-06-02T10:51:27.686Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
