@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-04T04:56:33.200Z",
+  "generatedAt": "2026-06-04T10:09:52.136Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 112,
-    "failed": 58,
-    "articles": 1939,
+    "ok": 115,
+    "failed": 55,
+    "articles": 1922,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,17 +40,12 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
-      },
-      {
-        "id": "rss_netafrique",
-        "name": "Net Afrique (BF)",
-        "count": 10
       },
       {
         "id": "rss_observ_bf",
@@ -95,6 +90,11 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
+        "count": 10
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -158,6 +158,11 @@
         "count": 30
       },
       {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
+      },
+      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -185,7 +190,7 @@
       {
         "id": "rss_news24",
         "name": "News24 (Afrique du Sud)",
-        "count": 13
+        "count": 11
       },
       {
         "id": "rss_tsa",
@@ -380,7 +385,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 8
+        "count": 10
       },
       {
         "id": "rss_fp",
@@ -405,7 +410,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 26
       },
       {
         "id": "rss_bbc_africa",
@@ -425,7 +430,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -498,6 +503,11 @@
         "count": 30
       },
       {
+        "id": "rss_anadolu",
+        "name": "Anadolu Agency (Turquie)",
+        "count": 30
+      },
+      {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
         "count": 30
@@ -520,7 +530,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -545,12 +555,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "count": 20
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_imf",
@@ -573,6 +588,11 @@
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_netafrique",
+        "name": "Net Afrique (BF)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_omega",
@@ -608,11 +628,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -667,7 +682,7 @@
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
-        "error": "HTTP 500"
+        "error": "fetch failed"
       },
       {
         "id": "rss_saharang",
@@ -678,11 +693,6 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "fetch failed"
       },
       {
         "id": "rss_7sur7",
@@ -815,11 +825,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_anadolu",
-        "name": "Anadolu Agency (Turquie)",
-        "error": "HTTP 502"
-      },
-      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -835,14 +840,9 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_amnesty",
@@ -863,12 +863,41 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 47,
-    "alerts": 25,
-    "criticalAlerts": 3,
-    "sourcesDistinct": 76
+    "bfAes": 28,
+    "alerts": 35,
+    "criticalAlerts": 4,
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
+    {
+      "title": "Grosses cylindrées : les autorités resserrent l’étau hors des agglomérations",
+      "link": "https://journaldumali.com/grosses-cylindrees-les-autorites-resserrent-letau-hors-des-agglomerations/",
+      "pubDate": "2026-06-04T10:00:40.000Z",
+      "description": "© Internet La circulation des motos de 125 cm³ et plus est désormais suspendue hors des grandes agglomérations. En parallèle, l’importation, la vente, le transit et la distribution de ces engins sont gelés pour un an renouvelable. Les motocyclettes de 125 cm³ et plus ne pourront plus circuler librement en dehors des grands centres urbains. La décision, prise par arrêté interministériel le 3 juin 2026, s’inscrit dans le dispositif de sécurisation engagé dans le cadre de l’opération « Dougoukoloko ». La restriction concerne l’ensemble du territoire national, à l’exception du District de Bamako, des chefs-lieux de région, de cercle et d’arrondissement. Les représentants de l’État au niveau régional peuvent toutefois étendre la mesure à certains chefs-lieux, lorsque la situation sécuritaire l’exige. Les forces chargées de l’application du texte sont les commandants des théâtres d’opération, la Police nationale et la Gendarmerie nationale. Les autorités cherchent ainsi à réduire les déplacements suspects sur les pistes rurales, les zones de brousse et les axes secondaires, où les contrôles restent plus difficiles. Une autre décision complète ce dispositif. Elle suspend pour un an renouvelable l’importation, le transit, la commercialisation, la vente et la distribution gratuite des motos de 125 cm³ et plus, ainsi que de leurs accessoires. Les commerçants disposant de stocks ou de commandes en cours doivent les déclarer dans un délai de 90 jours auprès des services compétents. Les engins non déclarés peuvent être saisis. Cette double mesure intervient dans un climat sécuritaire tendu, après les attaques coordonnées du 25 avril 2026 contre plusieurs localités et positions stratégiques, notamment Bamako, Kati, Gao, Sévaré, Mopti et Kidal. Ces attaques ont remis au premier plan la question de la mobilité des groupes armés, qui utilisent les motos pour se déplacer rapidement, contourner les postes de contrôle, mener des reconnaissances et se replier après des opérations. Dans le Sahel, la moto est devenue un outil central des conflits. Peu coûteuse, robuste, facile à réparer et adaptée aux pistes, elle permet à de petits groupes de parcourir de longues distances avec peu de carburant. Les mêmes qualités qui en font un moyen de transport indispensable pour les populations rurales en font aussi un instrument recherché par les groupes armés. Cette réalité complique l’application de la mesure. Dans de nombreuses localités, la moto sert à aller au champ, rejoindre un marché, transporter un malade, acheminer des marchandises ou assurer de petits services entre villages. Plus de la moitié de la population vit encore en milieu rural, selon les données de la Banque mondiale, dans un pays où les distances, l’état des routes et la rareté des transports publics rendent les deux-roues difficiles à remplacer. Les restrictions de motos ne sont pas nouvelles dans la région. Le Mali, le Burkina Faso, le Niger et d’autres pays confrontés à l’insécurité ont déjà utilisé des interdictions de circulation, des couvre-feux ou des limitations par type d’engin pour freiner les mouvements des groupes armés. Les résultats restent toutefois liés à la capacité des forces de sécurité à contrôler les axes, surveiller les marchés, suivre les stocks et éviter les contournements. L’enjeu sera donc autant sécuritaire que social. Les autorités devront concilier la nécessité de couper les moyens de mobilité des groupes armés avec les besoins quotidiens des populations, notamment dans les zones rurales et périurbaines. Dans un contexte humanitaire déjà fragile, où 5,1 millions de personnes ont besoin d’assistance en 2026, toute restriction de mouvement peut avoir des effets directs sur l’accès aux services, aux marchés et aux moyens de subsistance. La mesure ouvre aussi une phase de surveillance économique. L’arrêt de l’importation et de la vente des grosses cylindrées pourrait modifier les circuits commerciaux, renchérir certaines pièces et favoriser des marchés parallèles si les contrôles ne sont pas stricts. Les mécaniciens, revendeurs et usagers devront désormais s’adapter à un cadre plus contraignant. Pour les autorités, l’objectif immédiat est de réduire la liberté de mouvement des assaillants dans les zones hors agglomérations. Son efficacité dépendra de la coordination entre les forces de sécurité, les autorités administratives, les commerçants et les communautés locales, mais aussi de la clarté des exemptions pour les urgences, les services publics et les activités économiques essentielles.",
+      "_source": "Journal du Mali",
+      "_sourceId": "rss_journ_mali",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127
+    },
     {
       "title": "Les Thermidoriens du Projet : anatomie d’une pathétique contre-révolution",
       "link": "https://lesoleil.sn/opinions/tribune-dexpert/les-thermidoriens-du-projet-anatomie-dune-pathetique-contre-revolution/",
@@ -901,7 +930,7 @@
       "title": "Commerce illicite: la traque des contrebandiers et des fraudeurs",
       "link": "https://www.sidwaya.info/commerce-illicite-la-traque-des-contrebandiers-et-des-fraudeurs/",
       "pubDate": "2026-06-03T22:48:38.000Z",
-      "description": "La peur du Burkinabè d’acheter et de consommer des produits périmés, avariés ou prohibés sans le savoir se dissipe de plus en plus. Les saisies régulières de ces produits grâce aux actions conjuguées de lutte contre la fraude de la douane, de la Brigade mobile de contrôle économique et de la répression des fraudes (BMCRF) et de la Coordination nationale de lutte contre la fraude (CNLF) en disent long. Comment se mène cette bataille acharnée sur le terrain pour préserver la santé des Burkinabè et assainir l’économie nationale ? Immersion dans les opérations de controles et de saisies. Sur l’axe Tenkodogo-Cinkansé, à la sortie Est de la ville de Tenkodogo, le flux permanent des véhicules gros porteurs est perceptible. Nous sommes dans l’après-midi du lundi 23 mars 2026. Il est environ 15h, lorsque nous arpentions l’axe en direction de la cité de Rialé. En ce mois de mars, la chaleur est accablante. A environ 15 km de la ville, des citernes, des cars, des minicars et des remorques sont stationnés en file indienne. L’on se croirait sur une aire de stationnement. Ces véhicules sont immobilisés pour les formalités douanières au poste de contrôle de la brigade mobile des douanes de Tenkodogo. Les gabelous, sans répit, sont à la tâche : contrôle des documents de transport, des déclarations douanières, des factures commerciales, des pièces d’identité des conducteurs, etc. Tous les véhicules passent au « scanneur » des douaniers afin de détecter la présence d’éventuelles marchandises frauduleuses, prohibées, non déclarés ou des objets de contrebande. Baquette en fer à la main, un agent contrôleur, l’air serein, transperce des sacs pour s’assurer qu’il n’y a pas d’autres produits dissimulés à l’intérieur. « Que ce soient des camions en partance pour le Togo ou qui en reviennent, ils sont tous fouillés », confie le chef d’escouade du poste de contrôle de la brigade mobile des douanes de Tenkodogo, Constant Bazié. Toutefois, indique- t-il, il arrive que les fraudeurs forcent la barrière. « Immédiatement, le siège est alerté de la situation et des agents interceptent ledit véhicule. Souvent, cela se fait à travers des courses-poursuite », fait savoir le chef de la brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. De jour comme de nuit, ces actions se mènent en vue de réduire considérablement la fraude en mettant la main sur les contrevenants. A la direction générale des douanes à Ouagadougou, l’importance des marchandises saisies et entreposées, à l’arrière du bâtiment principal, témoigne de l’ampleur du phénomène. Le 24 février 2026, 19 tonnes de sucre, 6 449 cartons d’huile de moteur, 313 amphétamines, 3 744 cartons de biscuits, 24 kg de chanvres indien y étaient entassés. A cela, s’ajoute un véhicule rempli de 5 000 plaquettes d’œufs et un autre contenant du cyanure dissimulé dans du clinker, 5 295 bâtons d’explosifs, 1366 cartons de boissons alcoolisées et énergisantes et bien d’autres produits prohibés. La valeur de l’ensemble de la saisie est estimée à 1,062 milliard F CFA. Le constat est le même à la direction régionale de l’industrie, du commerce et de l’artisanat du Nakambé ce lundi 23 mars 2026. Là encore, sont entreposés des produits contrefaits et interdits de commercialisation. …que les agents de la douane détectent les cas de fraude. Il s’agit de la cigarette, de la boisson alcoolisée, des pagnes contrefaits, des produits pharmaceutiques, des amandes de karité, des cartons de fil de coton importés, des sachets plastiques. « Ces saisies ont été opérées lors des sorties de terrain sur les axes et dans les marchés », informe le chef de service contrôle par intérim à la direction régionale, Zakaria Badjelle. Le 8 mai 2026 à Koudougou, dans deux entrepôts d’une entreprise, plus de 1 000 tonnes de sel périmé et reconditionné sont saisies par la Coordination nationale de lutte contre la fraude (CNLF). Déclenchée à la suite d’une dénonciation, l’enquête conduite par le coordinateur national de la CNLF révèle que l’entreprise reconditionne du sel périmé, depuis deux ans, dans de nouveaux emballages, avec des dates de péremption falsifiées qu’elle introduit sur le marché. Ce sel impropre à la consommation servait également de matière première dans la fabrication d’autres épices pour être commercialisées. Il ressort également qu’à l’aide des machines, le sel est broyé et mélangé à d’autres substances chimiques pour en sortir du cube Maggie blanc. Et cela, dans des conditions d’hygiène précaires préjudiciables à la santé des consommateurs. Le premier contrôle à la frontière Ces exemples sont légions, témoignant de l’engagement de la douane, la CNLF et la BMCRF dans leur combat contre la fraude pour la protection de la santé des consommateurs et l’amélioration du climat des affaires et de la mobilisation des recettes nationales. En effet, la lutte contre la fraude commence depuis les frontières. Du poste juxtaposé de Cinkansé au bureau des douanes de deuxième catégorie de Dakola, il ressort que les contrebandiers dissimulent de diverses manières les produits prohibés ou avariés dans des contenants des marchandises. Autre stratégie, ils empruntent des pistes détournées pour traverser les frontières par des moyens divers. « Les frontières sont un peu poreuses. On ne peut pas sécuriser toute la bande », confie le chef de bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré. Selon lui, lorsque les marchandises arrivent du Ghana, la prise en charge commence par l’identification. Elle consiste à connaitre la quantité et le poids. « Avec ces éléments, on enclenche le processus de contrôle documentaire pour s'assurer que ladite marchandise répond aux papiers qui vont avec. Ensuite, nous faisons le contrôle physique et les documents sont transmis à un transitaire pour faire la déclaration. On peut avoir une déclaration pour le transit ou une mise à la consommation pour tout ce qui est du produit communautaire. Ces camions attendent d’être contrôlés au poste de contrôle juxtaposé de Cinkansé. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1024x683.jpg\" class=\"size-medium wp-image-163531\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Ces camions attendent d’être contrôlés au poste de contrôle juxtaposé de Cinkansé. Une fois la déclaration faite, un vérificateur est chargé d'étudier le dossier dans le fond avec les documents joints afin de s’assurer de la qualité de la marchandise », explique-t-il. Ainsi, munis de techniques et de savoir-faire, doublé d’un flair, le vérificateur inspecte les coins et recoins du moyen de transport en vue de s’assurer qu’il n’y a pas de produits de fraude. Passer toutes ces étapes, le camion est mis sous balise. Ce dispositif, fait-il savoir, est satellitaire et permet de suivre la marchandise pendant son transit. « On peut le suivre en temps réel pour connaître sa position et savoir s'il y a de la manipulation en cours de route ou pas », renchérit M. Gansoré. Ainsi, les marchandises peuvent être dédouanées à Dakola ou à Cinkansé. Il explique que le dédouanement dans les bureaux frontaliers concerne les produits de grande consommation, notamment le riz, l’huile d'une certaine quantité. En ce qui concerne les marchandises venant de la Chine, des Etats-Unis ou de l'Europe, les droits sont payés dans les bureaux intérieurs comme Ouagadougou et Bobo-Dioulasso. Pour le directeur de la surveillance du territoire, Tégawendé André Zagré, le suivi satellitaire fait que toutes les marchandises respectent la réglementation douanière. Cependant, lorsque la main est mise sur des produits frauduleux, un procès-verbal de saisie est rédigé et les produits sont stockés en attendant de faire suivre la procédure. « Si on a l'occasion de mettre la main sur le contrevenant, on le transfert à la police pour la suite de la procédure », confirme le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. Et, lorsque les documents ne correspondent pas à ce qui est présenté comme marchandise, celle-ci est bloquée jusqu’à ce que lesdits documents soient appropriés. Mais, il peut arriver que des produits fraudés traversent la frontière sans qu’on le sache du fait du flux important. « Par jour, c’est plus de 700 véhicules qui sont contrôlés. Il est donc difficile de tout fouiller », reconnait M. Valéa. C’est le cas au poste de contrôle de Dakola. « Vu l’importance du trafic, on ne peut pas tout contrôler, mais l’on fait la gestion et l'analyse des risques pour cibler les marchandises qui peuvent être à risque », explique le directeur de la surveillance du territoire, Tégawendé André Zagré. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--1024x683.jpg\" class=\"size-medium wp-image-163536\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Vu l’importance du trafic, on ne peut pas tout contrôler, mais l’on fait la gestion et l'analyse des risques pour cibler les marchandises qui peuvent être à risque », explique le directeur de la surveillance du territoire, Tégawendé André Zagré. Sur la plateforme, en moyenne 300 camions par jour qui sont contrôlés. « Mais, on peut atteindre 500 voire 600 camions par jour selon l’affluence », témoigne le chef de bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré. Toutefois, poursuit-il, si quelque chose leur échappe, le long de la voie, la brigade de ligne et la brigade mobile des douanes font également des contrôles. En effet, dans un rayon de 10 km d’un poste frontalier, existe une brigade de ligne, en arrière-plan qui veille à sécuriser tout ce qui sort du bureau. Passer cette étape, la brigade mobile prend la relève. Toujours en alerte A la brigade mobile des douanes de Tenkodogo, plus de place pour stocker les marchandises saisies. Les trois magasins de la brigade sont pleins. Des centaines de cartons de boissons, des tonnes de sucre, des dizaines de bidons d’huile, des tonnes de sachets plastiques y sont entassés. Des camions toujours chargés de marchandises sont visibles. C’est le même décor à la brigade mobile des douanes de Manga, dans le Nazinon. Là, en plus des milliers de cartons de boissons alcoolisées stockés dans des magasins, des dizaines de « véhicules kamikazes » sont stationnés. Ce résultat est à mettre à l’actif du renseignement, selon le responsable de la brigade Raymond Bagré. « Nous fonctionnons sur la base des renseignements. Avec ces centaines de camions qui passent sur l’axe, la fraude peut nous passer sous les yeux. Ainsi, quand on reçoit l’alerte, on fait l'analyse du risque et si des éléments ne concordent pas avec la déclaration, le véhicule est convoyé à la brigade mobile pour des contrôles plus approfondis », détaille Kalifassoro Sanou. Au-delà des principaux axes routiers, les fraudeurs se frayent un passage sur des pistes détournées. « Nous menons la lutte sur ces voies. Il nous arrive de mettre la main sur certains. Ainsi, de janvier en mars 2026, nous sommes à 13 affaires contentieuses d’un montant d'environ 1,7 milliard F CFA. Ce sont des éléments qui confortent notre position quant à lutter efficacement contre la fraude », rassure Laurent Marie Gansoré. Il explique que « Déjà, en ce premier trimestre de cette année 2026, plus de 2 milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--1024x683.jpg\" class=\"size-medium wp-image-163544\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Déjà, en ce premier trimestre de cette année 2026, plus de 2 milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. lorsqu’une une saisie est faite, l’amende est fonction du type d'infraction. Cependant, quand il s'agit de la drogue, des armes, des explosifs, des médicaments, le procès-verbal est fait et le contrevenant est remis à la justice pour suite à donner. « La fraude est réelle du fait de notre proximité avec le Ghana, car il y a des produits prohibés au Burkina Faso qui ne le sont pas au Ghana. Vu le brassage entre les populations, certaines s'adonnent au trafic de ces produits. Pour la plupart des cas d’embuscade que nous menons, c'est sur renseignement. Le seul bémol est que les fraudeurs ont aussi des informateurs qui leur donnent la position des agents lorsqu’ils sont en mouvement. Qu’à cela ne tienne, au premier trimestre de l’année 2026, il y a eu une saisie importante de 5 295 bâtons d'explosifs et environ 120 kg de chanvre indien », confie le chef de la brigade mobile des douanes de Manga, Raymond Bagré, ajoutant que l’espace de surveillance de cette brigade va de la zone de Zabré à Sapouy, en passant par Zécco, Dakola, Guiaro et Léo et s'étend sur toute la bande sud du pays. « Nous demandons l’accompagnement et le soutien constant des populations pour réussir la lutte contre la fraude », souhaite le chef de la Brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--683x1024.jpg\" class=\"size-medium wp-image-163532\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg\" alt=\"\" width=\"200\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg 200w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--683x1024.jpg 683w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--768x1152.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1024x1536.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1365x2048.jpg 1365w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--280x420.jpg 280w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--150x225.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--300x450.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--696x1044.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1068x1602.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1920x2880.jpg 1920w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--scaled.jpg 1707w\" sizes=\"auto, (max-width: 200px) 100vw, 200px\" /> « Nous demandons l’accompagnement et le soutien constant des populations pour réussir la lutte contre la fraude », souhaite le chef de la Brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. Des équipes sont donc reparties sur les différents axes. Pour un bilan d’étape, le directeur de la surveillance du territoire, Tégawendé André Zagré souligne qu’au premier trimestre de l’année 2026, la douane a fait un excédent de 11 milliards F CFA. Cela, soutient-il, grâce à la lutte acharnée contre la fraude pour assainir le marché pour que le commerce légal se porte mieux. Malgré cette lutte, la fraude persiste. Des produits fraudés et impropres à la consommation se retrouvent toujours dans les grandes villes. La CNLF et la BMCRF dans la danse A côté de la douane, la CNLF et la BMCRF poursuivent la traque des contrebandiers. Dans les entrepôts, les magasins, les boutiques, les marchés et les yaars, elles dénichent des produits ne respectant pas le prix du marché, ceux périmés ou interdits à la commercialisation. La CNLF, selon son coordonnateur national, Mohamadi Compaoré, s’investit dans la lutte contre la tromperie des consommateurs, contre l’incivisme fiscal et les produits périmés ou avariés. « Des opérateurs économiques tentent toujours de passer entre les mailles du filet pour ne pas se conformer », relève-t-il. De ce fait, sur la base de renseignements, la CNLF mène des investigations jusqu’à la saisie des marchandises. Les amendes sont fixées en fonction du degré d’infraction. Elles tiennent compte des dommages que pourraient causer la merchandise sur le plan environnemental, commercial, des taxes douanières et fiscales. « Si le contrebandier reconnait sa faute, le règlement transactionnel peut se faire. Au cas où l’incriminé conteste, le règlement passe à la phase contentieuse. Il est donc remis à la justice pour la suite de la procédure », souligne le coordonnateur national du CNLF. Le combat au premier trimestre de l’année 2026, affirme-t-il, a permis d’encaisser 561 millions F CFA au profit du budget de l’Etat. Quant à la BMCRF, son combat concerne la veille des prix des produits sur le marché. Dans cette dynamique, les agents des directions régionales en charge du commerce sillonnent les marchés des villages pour le constat. « Nous effectuons des sorties inopinées en vue de veiller à la fragmentation économique, à la lutte contre la fraude, la commercialisation des produits périmés, le contrôle des prix des produits de grande consommation », renchérit le chef de service de contrôle économique et de la répression des fraudes de Manga, Soumaila Lonfo. Il relate qu’au cours des sorties, les commerçants véreux prennent la poudre d’escampette. Seule la marchandise est saisie. « On n'a même pas l'occasion de connaitre son identité », « Les aliments périmés perdent leur valeur nutritionnelle » , précise la diététicienne, Yasmine Zerbo. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6-.jpg\" class=\"size-medium wp-image-163533\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg\" alt=\"\" width=\"242\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg 242w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--339x420.jpg 339w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--150x186.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--300x372.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--324x400.jpg 324w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-.jpg 600w\" sizes=\"auto, (max-width: 242px) 100vw, 242px\" /> « Les aliments périmés perdent leur valeur nutritionnelle » , précise la diététicienne, Yasmine Zerbo. regrette M. Lonfo. Par contre, dans les boutiques, le fraudeur est convoqué pour s’expliquer et est amendé. « On l'informe que ladite marchandise est saisie », poursuit le chef de service contrôle par intérim de la direction régionale de l’industrie, du commerce et de l’artisanat du Nakambé, Zakaria Badjelle. En plus de la croisade de la douane, la CNLF et la BMCRF contre le phénomène, il y a la Ligue des consommateurs du Burkina Faso (LCB) qui travaille à l’éveil des consciences des consommateurs. Pour son président (NDLR : au moment de l’entretien, le 2 avril 2026, Dasmané Traoré, pour réussir la lutte, il faut être exigeant. « On doit avoir cette volonté de vérifier la date de péremption pour s’assurer de la validité du produit. Aussi, à vue d’œil, on peut détecter un produit sain d'un produit qui ne l'est pas », soutient-il. En cas de produit suspect, informe-t-il, le consommateur appelle sur le numéro vert de la Ligue. Et après vérification, la douane, la police, la gendarmerie, la BMCRF ou la CNLF est saisie sur la présence du produits contrefait sur le marché. « Il revient à l'autorité de faire la saisie ou de le retirer du marché au grand bonheur des consommateurs », rassure le président. La santé publique en danger Toutefois, selon M. Traoré, aujourd'hui, la digitalisation vient compliquer la situation du consommateur, tout lui est vendu moins cher sur les plateformes. « Tant qu'il n'y a pas eu une vérification de la qualité de ces produits, nous ne pouvons pas d’emblée dire que le produit n'est pas de bonne qualité. Nous sommes donc obligés, après des plaintes, d’acheter ces produits pour les faire analyser. C’est à l’issue de cela que nous pouvons informer les autorités sur la qualité et celle-ci agit », explique Dasmané Traoré. Malheureusement, la consommation de ces produits périmés, avariés ou prohibés représente un risque sanitaire majeur. En effet, selon la diététicienne Yasmine Zerbo, les produits périmés peuvent engendrer une intoxication alimentaire avec des allergies chez certaines personnes. « La consommation d’huiles périmées peut entraîner des lésions hépatiques et augmenter le risque de maladie cardiaque et peuvent provoquer des symptômes allergiques », indique-t-elle. Pour elle, les aliments qui vieillissent perdent leur valeur nutritionnelle, et leur consommation peut également entraîner une carence en certains nutriments, avec des effets à long terme sur la santé. « Manger des aliments moisis peut provoquer des réactions allergiques, des problèmes respiratoires, des dommages neurologiques et produire des substances toxiques pouvant provoquer des maladies graves », poursuit-elle. Selon le chef de Bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré, c’est en moyenne 300 camions par jour qui sont contrôlés au poste. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--1024x683.jpg\" class=\"size-medium wp-image-163534\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Selon le chef de Bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré, c’est en moyenne 300 camions par jour qui sont contrôlés au poste. Au regard de tout cela, le directeur général de l'agence nationale pour la sécurité sanitaire, de l'environnement, de l'alimentation, du travail et des produits de santé, Elie Kabré, estime que les pratiques frauduleuses mettent en échec tous les efforts déployés par les autorités en charge de la santé. « Je suis heureux de voir de quelle catastrophe notre pays est de plus en plus soustrait grâce aux saisies de part et d’autre », apprécie -t-il. A cet effet, il salue les efforts qui sont faits pour pouvoir mettre hors d’état de nuire ces personnes qui jettent en pâture la santé publique pour le gain. « Nous devons nous mobiliser autour de toutes les forces qui se battent pour notre sécurité physique, mais aussi pour notre sécurité sanitaire », fait comprendre M. Kabré. Estimant que la fraude est en recul au regard des actions menées, il invite à être toujours vigilants, au regard de l’ingéniosité de ses pratiquants. « Nous devons nous adapter pour pouvoir toujours déceler les irrégularités », conseille pour sa part, Dasmané Traoré. Face à cette gangrène qui persiste, désormais, la douane, la CNLF et la BMCRF présentent les contrevenants à la presse et confisquent les moyens de déplacements en plus de la saisie des marchandises. Une manière pour eux de dissuader d’éventuels fraudeurs à ne pas mener cette activité. C’est du moins l’appel lancé par un fraudeur de médicaments contrefaits, arrêté le 5 mars 2026 lors d’un contrôle des gabelous à Zorgho. Il a été présenté à la presse le 6 mars 2026. Celui-ci reconnait son tort et demande pardon à la population. « C’était pour moi une occasion pour me faire de l’argent. J’ignorais que cette activité est dangereuse pour la « Nous faisons régulièrement des saisies et elles concernent principalement les bâtons d'explosifs », confie le chef de la Brigade mobile des douanes de Manga, Raymond Bagré. milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. \" data-medium-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg\" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--1024x683.jpg\" class=\"size-medium wp-image-163535\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Nous faisons régulièrement des saisies et elles concernent principalement les bâtons d'explosifs », confie le chef de la Brigade mobile des douanes de Manga, Raymond Bagré. milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. santé des populations. Je promets changer de métier », témoigne-t-il. A cet effet, il lance également un appel à ses coéquipiers de changer de métier qui leur permettra de gagner dignement leur vie en digne Burkinabè. Même son de cloche pour Boureima Soré, interpelé lors d’un contrôle de prix de la BMCRF, le 13 mai 2026. Pour non-respect des prix du ciment, ce grossiste a été convoqué au siège. Il promet de respecter la règlementation en vigueur et invite ces collègues à arrêter la spéculation autour du ciment. Du reste, la population est aussi invitée à accompagner les acteurs de lutte contre la fraude par des dénonciations de mauvaises pratiques. Fleur BIRBA fleurbirba@gmail.com Ce que dit la loi en matière de fraude La loi n°016 du 27 avril 2017 portant organisation de la concurrence au Burkina Faso, régit la liberté des prix, la saine concurrence et la protection du consommateur. Elle a pour objet de préserver et de favoriser la concurrence et de protéger le consommateur. A son article 41, elle stipule que tout vendeur de biens, tout prestataire de service doit, par voie de marquage, d’étiquetage, d’affichage ou par tout autre procédé approprié, informer le consommateur sur les prix, les limitations éventuelles de la responsabilité contractuelle et les conditions particulières de la vente. L’article 52 interdit à l’importation ou à l’exportation des produits contrefaisants destinés au commerce. Les infractions de la présente loi relatives aux tromperies et falsifications et à la sécurité du consommateur sont punies d’une amende de 500 000 à 500 000 000 F CFA et d’un emprisonnement d’un an à cinq ans ou de l’une de ces deux peines seulement. F.B. Un scanner pour renforcer la lutte En vue de renforcer l’efficacité dans la lutte contre la fraude, il ressort que la mise à la disposition d’un scanner dans les postes de contrôle des douanes serait d’une grande importance. Dans ce sens, le ministère de l’Economie et des Finances, avec l’appui de la Chambre de commerce et d’industrie, prévoit d’installer un scanner au bureau des douanes de 2e catégorie de Dakola, mais qui se fait toujours attendre. Vivement l’installation de cet appareil qui devra faciliter le contrôle des marchandises, contribuer à réduire considérablement la fraude. F.B. Un groupe WhatsApp pour stimuler les agents dans la lutte contre la fraude Un gabelou a créé un groupe WhatsApp en vue de motiver ses collègues à accentuer la lutte contre la fraude. Chaque jour, il diffuse les saisies qui sont opérées. Dans ces publications, il présente les techniques d’opération, stimulant ainsi tous les agents et renforçant leur vigilance. Une manière pour lui d’appeler ses collègues à ne pas baisser la garde dans la traque des contrebandiers qui produit des résultats probants. F.B.",
+      "description": "La peur du Burkinabè d’acheter et de consommer des produits périmés, avariés ou prohibés sans le savoir se dissipe de plus en plus. Les saisies régulières de ces produits grâce aux actions conjuguées de lutte contre la fraude de la douane, de la Brigade mobile de contrôle économique et de la répression des fraudes (BMCRF) et de la Coordination nationale de lutte contre la fraude (CNLF) en disent long. Comment se mène cette bataille acharnée sur le terrain pour préserver la santé des Burkinabè et assainir l’économie nationale ? Immersion dans les opérations de controles et de saisies. Sur l’axe Tenkodogo-Cinkansé, à la sortie Est de la ville de Tenkodogo, le flux permanent des véhicules gros porteurs est perceptible. Nous sommes dans l’après-midi du lundi 23 mars 2026. Il est environ 15h, lorsque nous arpentions l’axe en direction de la cité de Rialé. En ce mois de mars, la chaleur est accablante. A environ 15 km de la ville, des citernes, des cars, des minicars et des remorques sont stationnés en file indienne. L’on se croirait sur une aire de stationnement. Ces véhicules sont immobilisés pour les formalités douanières au poste de contrôle de la brigade mobile des douanes de Tenkodogo. Les gabelous, sans répit, sont à la tâche : contrôle des documents de transport, des déclarations douanières, des factures commerciales, des pièces d’identité des conducteurs, etc. Tous les véhicules passent au « scanneur » des douaniers afin de détecter la présence d’éventuelles marchandises frauduleuses, prohibées, non déclarés ou des objets de contrebande. Baquette en fer à la main, un agent contrôleur, l’air serein, transperce des sacs pour s’assurer qu’il n’y a pas d’autres produits dissimulés à l’intérieur. « Que ce soient des camions en partance pour le Togo ou qui en reviennent, ils sont tous fouillés », confie le chef d’escouade du poste de contrôle de la brigade mobile des douanes de Tenkodogo, Constant Bazié. Toutefois, indique- t-il, il arrive que les fraudeurs forcent la barrière. « Immédiatement, le siège est alerté de la situation et des agents interceptent ledit véhicule. Souvent, cela se fait à travers des courses-poursuite », fait savoir le chef de la brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. De jour comme de nuit, ces actions se mènent en vue de réduire considérablement la fraude en mettant la main sur les contrevenants. A la direction générale des douanes à Ouagadougou, l’importance des marchandises saisies et entreposées, à l’arrière du bâtiment principal, témoigne de l’ampleur du phénomène. Le 24 février 2026, 19 tonnes de sucre, 6 449 cartons d’huile de moteur, 313 amphétamines, 3 744 cartons de biscuits, 24 kg de chanvres indien y étaient entassés. A cela, s’ajoute un véhicule rempli de 5 000 plaquettes d’œufs et un autre contenant du cyanure dissimulé dans du clinker, 5 295 bâtons d’explosifs, 1366 cartons de boissons alcoolisées et énergisantes et bien d’autres produits prohibés. La valeur de l’ensemble de la saisie est estimée à 1,062 milliard F CFA. Le constat est le même à la direction régionale de l’industrie, du commerce et de l’artisanat du Nakambé ce lundi 23 mars 2026. Là encore, sont entreposés des produits contrefaits et interdits de commercialisation. …que les agents de la douane détectent les cas de fraude. Il s’agit de la cigarette, de la boisson alcoolisée, des pagnes contrefaits, des produits pharmaceutiques, des amandes de karité, des cartons de fil de coton importés, des sachets plastiques. « Ces saisies ont été opérées lors des sorties de terrain sur les axes et dans les marchés », informe le chef de service contrôle par intérim à la direction régionale, Zakaria Badjelle. Le 8 mai 2026 à Koudougou, dans deux entrepôts d’une entreprise, plus de 1 000 tonnes de sel périmé et reconditionné sont saisies par la Coordination nationale de lutte contre la fraude (CNLF). Déclenchée à la suite d’une dénonciation, l’enquête conduite par le coordinateur national de la CNLF révèle que l’entreprise reconditionne du sel périmé, depuis deux ans, dans de nouveaux emballages, avec des dates de péremption falsifiées qu’elle introduit sur le marché. Ce sel impropre à la consommation servait également de matière première dans la fabrication d’autres épices pour être commercialisées. Il ressort également qu’à l’aide des machines, le sel est broyé et mélangé à d’autres substances chimiques pour en sortir du cube Maggie blanc. Et cela, dans des conditions d’hygiène précaires préjudiciables à la santé des consommateurs. Le premier contrôle à la frontière Ces exemples sont légions, témoignant de l’engagement de la douane, la CNLF et la BMCRF dans leur combat contre la fraude pour la protection de la santé des consommateurs et l’amélioration du climat des affaires et de la mobilisation des recettes nationales. En effet, la lutte contre la fraude commence depuis les frontières. Du poste juxtaposé de Cinkansé au bureau des douanes de deuxième catégorie de Dakola, il ressort que les contrebandiers dissimulent de diverses manières les produits prohibés ou avariés dans des contenants des marchandises. Autre stratégie, ils empruntent des pistes détournées pour traverser les frontières par des moyens divers. « Les frontières sont un peu poreuses. On ne peut pas sécuriser toute la bande », confie le chef de bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré. Selon lui, lorsque les marchandises arrivent du Ghana, la prise en charge commence par l’identification. Elle consiste à connaitre la quantité et le poids. « Avec ces éléments, on enclenche le processus de contrôle documentaire pour s'assurer que ladite marchandise répond aux papiers qui vont avec. Ensuite, nous faisons le contrôle physique et les documents sont transmis à un transitaire pour faire la déclaration. On peut avoir une déclaration pour le transit ou une mise à la consommation pour tout ce qui est du produit communautaire. Ces camions attendent d’être contrôlés au poste de contrôle juxtaposé de Cinkansé. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1024x683.jpg\" class=\"size-medium wp-image-163531\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Ces camions attendent d’être contrôlés au poste de contrôle juxtaposé de Cinkansé. Une fois la déclaration faite, un vérificateur est chargé d'étudier le dossier dans le fond avec les documents joints afin de s’assurer de la qualité de la marchandise », explique-t-il. Ainsi, munis de techniques et de savoir-faire, doublé d’un flair, le vérificateur inspecte les coins et recoins du moyen de transport en vue de s’assurer qu’il n’y a pas de produits de fraude. Passer toutes ces étapes, le camion est mis sous balise. Ce dispositif, fait-il savoir, est satellitaire et permet de suivre la marchandise pendant son transit. « On peut le suivre en temps réel pour connaître sa position et savoir s'il y a de la manipulation en cours de route ou pas », renchérit M. Gansoré. Ainsi, les marchandises peuvent être dédouanées à Dakola ou à Cinkansé. Il explique que le dédouanement dans les bureaux frontaliers concerne les produits de grande consommation, notamment le riz, l’huile d'une certaine quantité. En ce qui concerne les marchandises venant de la Chine, des Etats-Unis ou de l'Europe, les droits sont payés dans les bureaux intérieurs comme Ouagadougou et Bobo-Dioulasso. Pour le directeur de la surveillance du territoire, Tégawendé André Zagré, le suivi satellitaire fait que toutes les marchandises respectent la réglementation douanière. Cependant, lorsque la main est mise sur des produits frauduleux, un procès-verbal de saisie est rédigé et les produits sont stockés en attendant de faire suivre la procédure. « Si on a l'occasion de mettre la main sur le contrevenant, on le transfert à la police pour la suite de la procédure », confirme le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. Et, lorsque les documents ne correspondent pas à ce qui est présenté comme marchandise, celle-ci est bloquée jusqu’à ce que lesdits documents soient appropriés. Mais, il peut arriver que des produits fraudés traversent la frontière sans qu’on le sache du fait du flux important. « Par jour, c’est plus de 700 véhicules qui sont contrôlés. Il est donc difficile de tout fouiller », reconnait M. Valéa. C’est le cas au poste de contrôle de Dakola. « Vu l’importance du trafic, on ne peut pas tout contrôler, mais l’on fait la gestion et l'analyse des risques pour cibler les marchandises qui peuvent être à risque », explique le directeur de la surveillance du territoire, Tégawendé André Zagré. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--1024x683.jpg\" class=\"size-medium wp-image-163536\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Vu l’importance du trafic, on ne peut pas tout contrôler, mais l’on fait la gestion et l'analyse des risques pour cibler les marchandises qui peuvent être à risque », explique le directeur de la surveillance du territoire, Tégawendé André Zagré. Sur la plateforme, en moyenne 300 camions par jour qui sont contrôlés. « Mais, on peut atteindre 500 voire 600 camions par jour selon l’affluence », témoigne le chef de bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré. Toutefois, poursuit-il, si quelque chose leur échappe, le long de la voie, la brigade de ligne et la brigade mobile des douanes font également des contrôles. En effet, dans un rayon de 10 km d’un poste frontalier, existe une brigade de ligne, en arrière-plan qui veille à sécuriser tout ce qui sort du bureau. Passer cette étape, la brigade mobile prend la relève. Toujours en alerte A la brigade mobile des douanes de Tenkodogo, plus de place pour stocker les marchandises saisies. Les trois magasins de la brigade sont pleins. Des centaines de cartons de boissons, des tonnes de sucre, des dizaines de bidons d’huile, des tonnes de sachets plastiques y sont entassés. Des camions toujours chargés de marchandises sont visibles. C’est le même décor à la brigade mobile des douanes de Manga, dans le Nazinon. Là, en plus des milliers de cartons de boissons alcoolisées stockés dans des magasins, des dizaines de « véhicules kamikazes » sont stationnés. Ce résultat est à mettre à l’actif du renseignement, selon le responsable de la brigade Raymond Bagré. « Nous fonctionnons sur la base des renseignements. Avec ces centaines de camions qui passent sur l’axe, la fraude peut nous passer sous les yeux. Ainsi, quand on reçoit l’alerte, on fait l'analyse du risque et si des éléments ne concordent pas avec la déclaration, le véhicule est convoyé à la brigade mobile pour des contrôles plus approfondis », détaille Kalifassoro Sanou. Au-delà des principaux axes routiers, les fraudeurs se frayent un passage sur des pistes détournées. « Nous menons la lutte sur ces voies. Il nous arrive de mettre la main sur certains. Ainsi, de janvier en mars 2026, nous sommes à 13 affaires contentieuses d’un montant d'environ 1,7 milliard F CFA. Ce sont des éléments qui confortent notre position quant à lutter efficacement contre la fraude », rassure Laurent Marie Gansoré. Il explique que « Déjà, en ce premier trimestre de cette année 2026, plus de 2 milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--1024x683.jpg\" class=\"size-medium wp-image-163544\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Déjà, en ce premier trimestre de cette année 2026, plus de 2 milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. lorsqu’une une saisie est faite, l’amende est fonction du type d'infraction. Cependant, quand il s'agit de la drogue, des armes, des explosifs, des médicaments, le procès-verbal est fait et le contrevenant est remis à la justice pour suite à donner. « La fraude est réelle du fait de notre proximité avec le Ghana, car il y a des produits prohibés au Burkina Faso qui ne le sont pas au Ghana. Vu le brassage entre les populations, certaines s'adonnent au trafic de ces produits. Pour la plupart des cas d’embuscade que nous menons, c'est sur renseignement. Le seul bémol est que les fraudeurs ont aussi des informateurs qui leur donnent la position des agents lorsqu’ils sont en mouvement. Qu’à cela ne tienne, au premier trimestre de l’année 2026, il y a eu une saisie importante de 5 295 bâtons d'explosifs et environ 120 kg de chanvre indien », confie le chef de la brigade mobile des douanes de Manga, Raymond Bagré, ajoutant que l’espace de surveillance de cette brigade va de la zone de Zabré à Sapouy, en passant par Zécco, Dakola, Guiaro et Léo et s'étend sur toute la bande sud du pays. « Nous demandons l’accompagnement et le soutien constant des populations pour réussir la lutte contre la fraude », souhaite le chef de la Brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--683x1024.jpg\" class=\"size-medium wp-image-163532\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg\" alt=\"\" width=\"200\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg 200w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--683x1024.jpg 683w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--768x1152.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1024x1536.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1365x2048.jpg 1365w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--280x420.jpg 280w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--150x225.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--300x450.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--696x1044.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1068x1602.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1920x2880.jpg 1920w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--scaled.jpg 1707w\" sizes=\"auto, (max-width: 200px) 100vw, 200px\" /> « Nous demandons l’accompagnement et le soutien constant des populations pour réussir la lutte contre la fraude », souhaite le chef de la Brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. Des équipes sont donc reparties sur les différents axes. Pour un bilan d’étape, le directeur de la surveillance du territoire, Tégawendé André Zagré souligne qu’au premier trimestre de l’année 2026, la douane a fait un excédent de 11 milliards F CFA. Cela, soutient-il, grâce à la lutte acharnée contre la fraude pour assainir le marché pour que le commerce légal se porte mieux. Malgré cette lutte, la fraude persiste. Des produits fraudés et impropres à la consommation se retrouvent toujours dans les grandes villes. La CNLF et la BMCRF dans la danse A côté de la douane, la CNLF et la BMCRF poursuivent la traque des contrebandiers. Dans les entrepôts, les magasins, les boutiques, les marchés et les yaars, elles dénichent des produits ne respectant pas le prix du marché, ceux périmés ou interdits à la commercialisation. La CNLF, selon son coordonnateur national, Mohamadi Compaoré, s’investit dans la lutte contre la tromperie des consommateurs, contre l’incivisme fiscal et les produits périmés ou avariés. « Des opérateurs économiques tentent toujours de passer entre les mailles du filet pour ne pas se conformer », relève-t-il. De ce fait, sur la base de renseignements, la CNLF mène des investigations jusqu’à la saisie des marchandises. Les amendes sont fixées en fonction du degré d’infraction. Elles tiennent compte des dommages que pourraient causer la merchandise sur le plan environnemental, commercial, des taxes douanières et fiscales. « Si le contrebandier reconnait sa faute, le règlement transactionnel peut se faire. Au cas où l’incriminé conteste, le règlement passe à la phase contentieuse. Il est donc remis à la justice pour la suite de la procédure », souligne le coordonnateur national du CNLF. Le combat au premier trimestre de l’année 2026, affirme-t-il, a permis d’encaisser 561 millions F CFA au profit du budget de l’Etat. Quant à la BMCRF, son combat concerne la veille des prix des produits sur le marché. Dans cette dynamique, les agents des directions régionales en charge du commerce sillonnent les marchés des villages pour le constat. « Nous effectuons des sorties inopinées en vue de veiller à la fragmentation économique, à la lutte contre la fraude, la commercialisation des produits périmés, le contrôle des prix des produits de grande consommation », renchérit le chef de service de contrôle économique et de la répression des fraudes de Manga, Soumaila Lonfo. Il relate qu’au cours des sorties, les commerçants véreux prennent la poudre d’escampette. Seule la marchandise est saisie. « On n'a même pas l'occasion de connaitre son identité », « Les aliments périmés perdent leur valeur nutritionnelle » , précise la diététicienne, Yasmine Zerbo. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6-.jpg\" class=\"size-medium wp-image-163533\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg\" alt=\"\" width=\"242\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg 242w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--339x420.jpg 339w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--150x186.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--300x372.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--324x400.jpg 324w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-.jpg 600w\" sizes=\"auto, (max-width: 242px) 100vw, 242px\" /> « Les aliments périmés perdent leur valeur nutritionnelle » , précise la diététicienne, Yasmine Zerbo. regrette M. Lonfo. Par contre, dans les boutiques, le fraudeur est convoqué pour s’expliquer et est amendé. « On l'informe que ladite marchandise est saisie », poursuit le chef de service contrôle par intérim de la direction régionale de l’industrie, du commerce et de l’artisanat du Nakambé, Zakaria Badjelle. En plus de la croisade de la douane, la CNLF et la BMCRF contre le phénomène, il y a la Ligue des consommateurs du Burkina Faso (LCB) qui travaille à l’éveil des consciences des consommateurs. Pour son président (NDLR : au moment de l’entretien, le 2 avril 2026, Dasmané Traoré, pour réussir la lutte, il faut être exigeant. « On doit avoir cette volonté de vérifier la date de péremption pour s’assurer de la validité du produit. Aussi, à vue d’œil, on peut détecter un produit sain d'un produit qui ne l'est pas », soutient-il. En cas de produit suspect, informe-t-il, le consommateur appelle sur le numéro vert de la Ligue. Et après vérification, la douane, la police, la gendarmerie, la BMCRF ou la CNLF est saisie sur la présence du produits contrefait sur le marché. « Il revient à l'autorité de faire la saisie ou de le retirer du marché au grand bonheur des consommateurs », rassure le président. La santé publique en danger Toutefois, selon M. Traoré, aujourd'hui, la digitalisation vient compliquer la situation du consommateur, tout lui est vendu moins cher sur les plateformes. « Tant qu'il n'y a pas eu une vérification de la qualité de ces produits, nous ne pouvons pas d’emblée dire que le produit n'est pas de bonne qualité. Nous sommes donc obligés, après des plaintes, d’acheter ces produits pour les faire analyser. C’est à l’issue de cela que nous pouvons informer les autorités sur la qualité et celle-ci agit », explique Dasmané Traoré. Malheureusement, la consommation de ces produits périmés, avariés ou prohibés représente un risque sanitaire majeur. En effet, selon la diététicienne Yasmine Zerbo, les produits périmés peuvent engendrer une intoxication alimentaire avec des allergies chez certaines personnes. « La consommation d’huiles périmées peut entraîner des lésions hépatiques et augmenter le risque de maladie cardiaque et peuvent provoquer des symptômes allergiques », indique-t-elle. Pour elle, les aliments qui vieillissent perdent leur valeur nutritionnelle, et leur consommation peut également entraîner une carence en certains nutriments, avec des effets à long terme sur la santé. « Manger des aliments moisis peut provoquer des réactions allergiques, des problèmes respiratoires, des dommages neurologiques et produire des substances toxiques pouvant provoquer des maladies graves », poursuit-elle. Selon le chef de Bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré, c’est en moyenne 300 camions par jour qui sont contrôlés au poste. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--1024x683.jpg\" class=\"size-medium wp-image-163534\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Selon le chef de Bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré, c’est en moyenne 300 camions par jour qui sont contrôlés au poste. Au regard de tout cela, le directeur général de l'agence nationale pour la sécurité sanitaire, de l'environnement, de l'alimentation, du travail et des produits de santé, Elie Kabré, estime que les pratiques frauduleuses mettent en échec tous les efforts déployés par les autorités en charge de la santé. « Je suis heureux de voir de quelle catastrophe notre pays est de plus en plus soustrait grâce aux saisies de part et d’autre », apprécie -t-il. A cet effet, il salue les efforts qui sont faits pour pouvoir mettre hors d’état de nuire ces personnes qui jettent en pâture la santé publique pour le gain. « Nous devons nous mobiliser autour de toutes les forces qui se battent pour notre sécurité physique, mais aussi pour notre sécurité sanitaire », fait comprendre M. Kabré. Estimant que la fraude est en recul au regard des actions menées, il invite à être toujours vigilants, au regard de l’ingéniosité de ses pratiquants. « Nous devons nous adapter pour pouvoir toujours déceler les irrégularités », conseille pour sa part, Dasmané Traoré. Face à cette gangrène qui persiste, désormais, la douane, la CNLF et la BMCRF présentent les contrevenants à la presse et confisquent les moyens de déplacements en plus de la saisie des marchandises. Une manière pour eux de dissuader d’éventuels fraudeurs à ne pas mener cette activité. C’est du moins l’appel lancé par un fraudeur de médicaments contrefaits, arrêté le 5 mars 2026 lors d’un contrôle des gabelous à Zorgho. Il a été présenté à la presse le 6 mars 2026. Celui-ci reconnait son tort et demande pardon à la population. « C’était pour moi une occasion pour me faire de l’argent. J’ignorais que cette activité est dangereuse pour la « Nous faisons régulièrement des saisies et elles concernent principalement les bâtons d'explosifs », confie le chef de la Brigade mobile des douanes de Manga, Raymond Bagré. milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--1024x683.jpg\" class=\"size-medium wp-image-163535\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Nous faisons régulièrement des saisies et elles concernent principalement les bâtons d'explosifs », confie le chef de la Brigade mobile des douanes de Manga, Raymond Bagré. milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. santé des populations. Je promets changer de métier », témoigne-t-il. A cet effet, il lance également un appel à ses coéquipiers de changer de métier qui leur permettra de gagner dignement leur vie en digne Burkinabè. Même son de cloche pour Boureima Soré, interpelé lors d’un contrôle de prix de la BMCRF, le 13 mai 2026. Pour non-respect des prix du ciment, ce grossiste a été convoqué au siège. Il promet de respecter la règlementation en vigueur et invite ces collègues à arrêter la spéculation autour du ciment. Du reste, la population est aussi invitée à accompagner les acteurs de lutte contre la fraude par des dénonciations de mauvaises pratiques. Fleur BIRBA fleurbirba@gmail.com Ce que dit la loi en matière de fraude La loi n°016 du 27 avril 2017 portant organisation de la concurrence au Burkina Faso, régit la liberté des prix, la saine concurrence et la protection du consommateur. Elle a pour objet de préserver et de favoriser la concurrence et de protéger le consommateur. A son article 41, elle stipule que tout vendeur de biens, tout prestataire de service doit, par voie de marquage, d’étiquetage, d’affichage ou par tout autre procédé approprié, informer le consommateur sur les prix, les limitations éventuelles de la responsabilité contractuelle et les conditions particulières de la vente. L’article 52 interdit à l’importation ou à l’exportation des produits contrefaisants destinés au commerce. Les infractions de la présente loi relatives aux tromperies et falsifications et à la sécurité du consommateur sont punies d’une amende de 500 000 à 500 000 000 F CFA et d’un emprisonnement d’un an à cinq ans ou de l’une de ces deux peines seulement. F.B. Un scanner pour renforcer la lutte En vue de renforcer l’efficacité dans la lutte contre la fraude, il ressort que la mise à la disposition d’un scanner dans les postes de contrôle des douanes serait d’une grande importance. Dans ce sens, le ministère de l’Economie et des Finances, avec l’appui de la Chambre de commerce et d’industrie, prévoit d’installer un scanner au bureau des douanes de 2e catégorie de Dakola, mais qui se fait toujours attendre. Vivement l’installation de cet appareil qui devra faciliter le contrôle des marchandises, contribuer à réduire considérablement la fraude. F.B. Un groupe WhatsApp pour stimuler les agents dans la lutte contre la fraude Un gabelou a créé un groupe WhatsApp en vue de motiver ses collègues à accentuer la lutte contre la fraude. Chaque jour, il diffuse les saisies qui sont opérées. Dans ces publications, il présente les techniques d’opération, stimulant ainsi tous les agents et renforçant leur vigilance. Une manière pour lui d’appeler ses collègues à ne pas baisser la garde dans la traque des contrebandiers qui produit des résultats probants. F.B.",
       "_source": "Sidwaya",
       "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
@@ -925,87 +954,6 @@
       },
       "_rating": "C2",
       "_score": 127
-    },
-    {
-      "title": "Diplomatie: Romuald Wadagni poursuit sa tournée ouest-africaine avec une étape stratégique au Togo",
-      "link": "https://www.wakatsera.com/diplomatie-romuald-wadagni-poursuit-sa-tournee-ouest-africaine-avec-une-etape-strategique-au-togo/",
-      "pubDate": "2026-06-03T17:54:20.000Z",
-      "description": "Après le Nigeria, le Niger et le Burkina Faso, le président béninois Romuald Wadagni a effectué, ce mercredi 3 juin 2026, une visite officielle au Togo. Cette nouvelle étape de sa tournée sous-régionale vise à consolider les relations de coopération et à renforcer les concertations autour des enjeux sécuritaires, économiques et d'intégration régionale en Afrique de l'Ouest. Le président de la République du Bénin, Romuald Wadagni, poursuit son offensive diplomatique dans la sous-région ouest-africaine. Au lendemain de ses visites au Nigéria, Niger et au Burkina Faso, le chef de l'État béninois s'est rendu ce mercredi 3 juin 2026 à Lomé, en République togolaise, où il a été accueilli par le président du Conseil de la République togolaise, Faure Essozimna Gnassingbé. Cette rencontre s'inscrit dans une dynamique de rapprochement entre les États de la région, dans un contexte marqué par des défis sécuritaires persistants et de la nécessité de renforcer les mécanismes de coopération économique et politique. Ce voyage est la première visite officielle d'un président béninois au Togo depuis plusieurs années. La dernière visite de ce type remonte à octobre 2017, lorsque Patrice Talon s'était rendu à Lomé pour s'entretenir avec le président togolais Faure Gnassingbé. Les deux dirigeants ont eu un entretien en tête-à-tête au cours duquel ils ont abordé plusieurs sujets d'intérêt commun. Les échanges ont notamment porté sur le renforcement de la coopération bilatérale entre le Bénin et le Togo, la lutte contre les menaces sécuritaires qui affectent l'Afrique de l'Ouest, ainsi que les perspectives d'intégration régionale et de développement économique partagé. Cette visite intervient après les déplacements effectués mardi par Romuald Wadagni dans les pays de l'Alliance des États du Sahel (AES), notamment au Niger et au Burkina Faso. À travers cette tournée, le président béninois affiche sa volonté de maintenir un dialogue constructif avec l'ensemble des pays de la sous-région et de contribuer au raffermissement des liens de fraternité et de coopération. Le périple diplomatique du chef de l'État béninois se poursuivra dès ce jeudi 4 juin en Côte d'Ivoire. Il est attendu à Abidjan pour une rencontre avec son homologue ivoirien, Alassane Ouattara, dans le cadre de la même démarche visant à consolider les relations bilatérales et à promouvoir une coopération régionale renforcée. À travers cette série de visites dans plusieurs capitales ouest-africaines, Romuald Wadagni entend donner un nouvel élan à la diplomatie béninoise et favoriser une concertation accrue entre les États de la région. Une initiative qui traduit la volonté de Cotonou de jouer un rôle actif dans la construction d'une Afrique de l'Ouest plus stable, plus intégrée et davantage tournée vers le développement commun. Par Valentin SOMANDE L’article Diplomatie: Romuald Wadagni poursuit sa tournée ouest-africaine avec une étape stratégique au Togo est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127
-    },
-    {
-      "title": "Bénin-Niger : Romuald Wadagni et Abdourahamane Tiani s’engagent à rouvrir la frontière",
-      "link": "https://www.jeuneafrique.com/1800663/politique/benin-niger-romuald-wadagni-et-abdourahamane-tiani-sengagent-a-rouvrir-la-frontiere/",
-      "pubDate": "2026-06-03T15:07:09.000Z",
-      "description": "Le successeur de Patrice Talon a rencontré ses homologues nigérien et burkinabè le 2 juin. Une tournée symbolique qui acte la réouverture prochaine de la frontière entre le Niger et le Bénin et la reprise de la coopération sécuritaire avec Ouagadougou.",
-      "_source": "Jeune Afrique",
-      "_sourceId": "rss_jeuneafr",
-      "_sourceCat": "africa",
-      "_sourceBloc": "occident_fr",
-      "_sourceVerified": false,
-      "_tags": [
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "B2"
-      },
-      "_rating": "B2",
-      "_score": 127
-    },
-    {
-      "title": "Security Cooperation with Niger Overlooks Rights Violations",
-      "link": "https://www.hrw.org/news/2026/06/03/security-cooperation-with-niger-overlooks-rights-violations",
-      "pubDate": "2026-06-03T15:10:00.000Z",
-      "description": "Click to expand Image Nigerien military police stand guard outside airbases in Niamey, as supporters of Niger's military junta gather on August 27, 2023. © 2023 AFP via Getty Images The United States delivered US$2.3 million worth of military equipment to Niger’s armed forces, including uniforms, protective gear, and medical supplies on May 26. The US said the assistance will strengthen cooperation against terrorism and disrupt criminal networks while helping Niger secure its borders. Washington has been pursuing closer security ties with Sahel governments, including Niger, which in 2024 had ended a US military deployment agreement. Italy, which also supports Niger’s security forces, is the only Western country with a continued military presence in the country. Niger faces insurgencies from Islamist armed groups linked to the Islamic State and Al-Qaeda that frequently attack security forces and civilians, particularly in the regions bordering Mali and Burkina Faso. But any military assistance, including the non-lethal kind provided by the US, should factor in the Nigerien government’s poor human rights record and attach safeguards to ensure the assistance does not facilitate future abuses. After the military seized power in 2023, Niger’s junta began a crackdown on political opposition, independent media, and civil society groups. The military authorities continue to arbitrarily detain former President Mohamed Bazoumand the prominent human rights defender Moussa Tiangari, among others. The junta withdrew from the Economic Community of West African States in 2025 and announced plans to leave the International Criminal Court, actions that distance Niger from regional and international accountability mechanisms. Nigerien security forces have been implicated in grave abuses against civilians during counterinsurgency operations. Human Rights Watch documented a military drone strike on a crowded market in western Niger in January 2026 that killed 17 civilians. Security cooperation that overlooks human rights risks undermining its own objectives. In Niger and across the Sahel, military abuses have fueled grievances, weakened trust in state institutions, and created opportunities for armed groups to recruit. The US, Italy, and other partners should ensure that military assistance to Niger is conditioned on measures to protect civilians, on the vetting of troops receiving assistance, and on credible investigations into alleged military abuses. For the US, full adherence to the “Leahy Laws,” which mandate review of the human rights record of recipient military units, should be followed. Both countries should also press for an end to the repression of journalists, activists, and political opponents. Partners that continue to provide military assistance to Niger without adequate safeguards risk enabling further abuses and undermining accountability.",
-      "_source": "Human Rights Watch",
-      "_sourceId": "rss_hrw",
-      "_sourceCat": "humanitarian",
-      "_sourceBloc": "occident_us",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 119
     },
     {
       "title": "Une vision intégratrice salutaire",
@@ -1065,19 +1013,20 @@
       "_score": 115
     },
     {
-      "title": "Africa Day 2026 : UBA Burkina célèbre l’unité et la culture africaine",
-      "link": "https://netafrique.net/africa-day-2026-uba-burkina-celebre-lunite-et-la-culture-africaine/",
-      "pubDate": "2026-06-03T21:34:46.000Z",
-      "description": "La Banque UBA Burkina a célébré, ce 25 mai, l’Africa Day à travers une série d’activités culturelles et ludiques alliant cohésion interne et proximité avec sa clientèle. Le lundi 25 mai 2026, UBA Burkina a célébré Africa Day, une date symbolique qui commémore chaque année l’unité du continent africain et met en lumière la richesse de ses cultures, de ses peuples et de ses identités. Placée sous le thème « Celebrating Africans, Empowering Africans », l’édition 2026 s’inscrit dans la vision du groupe United Bank for Africa, qui entend valoriser les talents africains tout en accompagnant les populations et les entreprises grâce à des solutions financières adaptées et inclusives. Cette célébration traduit également la volonté de la banque de renforcer son ancrage panafricain et son rôle dans la transformation économique du continent. La Directrice Générale de UBA Burkina, Madame Rasmata Djibo, a rappelé que cette journée constitue un moment fort pour l’institution, permettant de réaffirmer son identité panafricaine et de traduire concrètement son engagement en faveur du développement de l’Afrique. Elle a également salué la forte mobilisation des membres du personnel, soulignant que leur engagement, leur énergie et leur esprit d’équipe contribuent au rayonnement de UBA Burkina au sein du groupe. De son côté, le Directeur Général Adjoint, M. Serge Coulibaly, a mis en avant le rôle stratégique de l’institution dans l’intégration économique africaine. Selon lui, la présence de UBA dans plusieurs pays du continent permet de faciliter les échanges commerciaux, les investissements et les transactions transfrontalières, contribuant ainsi à rapprocher davantage les économies africaines. La célébration de Africa Day 2026 a été marquée par une série d’activités organisées aussi bien en interne qu’en externe. En interne , les collaborateurs ont participé à des animations mettant en valeur les tenues traditionnelles africaines, des prestations artistiques et musicales, ainsi que des quiz portant sur la culture africaine et les produits de la banque. Un concours des meilleures tenues individuelles et en groupe a également permis de renforcer l’esprit de convivialité et de cohésion au sein des équipes. En externe , la banque a déployé plusieurs initiatives digitales, notamment des jeux-concours et quiz sur les réseaux sociaux, permettant d’impliquer les clients et le grand public. Des actions de proximité ont également été menées dans les agences, avec des animations et échanges visant à renforcer la relation client et à promouvoir l’identité africaine de la banque. Au-delà de son caractère festif, Africa Day est ainsi présenté comme un moment de cohésion interne, de reconnaissance du personnel et de renforcement du lien avec la clientèle. Pour UBA Burkina, l’objectif reste clair : projeter une image moderne, dynamique et profondément africaine, tout en affirmant son rôle actif dans la transformation économique et l’intégration du continent. A PROPOS DE UBA BURKINA Nous sommes une banque axée sur le client, numérique et intégrée. Notre offre de services est centrée sur des solutions Clients à travers les services bancaires aux : Particuliers Petites et moyennes entreprises Sociétés Commerciales Grandes Entreprises et Multinationales Gouvernements, Entreprises parapubliques, Institutions financières. Nous sommes présents sur le territoire national à travers un réseau de 26 agences en constante évolution, un parc de 41 guichets automatiques de billets, un ensemble de TPE et un personnel de 450 employés dévoués à la cause de sa clientèle. Nous bénéficions de la solide expérience du Groupe UBA Plc. L’article Africa Day 2026 : UBA Burkina célèbre l’unité et la culture africaine est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "Prévention des conflits dans le Golfe de Guinée : Les acteurs attendent passer des promesses aux actions",
+      "link": "https://atop.tg/prevention-des-conflits-dans-le-golfe-de-guinee-les-acteurs-attendent-passer-des-promesses-aux-actions/",
+      "pubDate": "2026-06-03T21:07:26.000Z",
+      "description": "Lomé, 3 juin (ATOP) – La capitale togolaise abrite les 3 et 4 juin, le Dialogue régional de haut niveau sur la prévention des conflits dans le Golfe de Guinée. L’activité est co-organisée par le Programme des Nations Unies pour le développement (PNUD), le Fonds des Nations Unies pour la population (UNFPA) et le Haut-Commissariat des Nations Unies pour les réfugiés (HCR). Elle réunit de hauts responsables gouvernementaux, des institutions régionales, du système des Nations Unies, des partenaires au développement afin de traduire un agenda de prévention partagé en actions concrètes et durables. Le Dialogue objet de cette rencontre, est une plateforme orientée vers la prise de décisions, pour des engagements concrets adossés à une volonté politique affirmée. Les échanges seront structurés autour de discussions en table ronde facilitées sur les interconnexions systémiques entre l’insécurité rurale, les économies illicites, les dynamiques de déplacement et les vulnérabilités des zones côtières. Le ministre de la Sécurité, Calixte Madjoulba a fait savoir que le Golfe de Guinée, est un espace géographique qui fait face à une convergence rapide de menaces multiples. Il a cité notamment l’extrémisme violent, le crime organisé transnational, la piraterie maritime, les trafics illicites, les conflits entre agriculteurs-éleveurs exacerbés par les effets du changement climatique, ainsi que la prolifération des armes légères et de petit calibre. Le ministre a mentionné que cette situation crée un cycle d’insécurité infernale qu’aucun pays ne peut seul affronter. Il a fait appel à des actions collectives, coordonnées et durables fondées sur la solidarité régionale et le partage d’expériences. La cordonnatrice résidente du système des Nations Unies au Togo, Mme Coumba Sow a indiqué que face à cette complexité, les réponses traditionnelles montrent leurs limites. « Nous devons adopter une approche de sécurité développementale intégrée, dans laquelle la sécurité n’est plus uniquement militaire, le développement n’est plus sectoriel, et la gouvernance devient un levier central de stabilisation », a-t-elle déclaré. Mme Coumba a fait savoir que dans ce cadre, la prévention devient un enjeu de souveraineté préventive collective, car aucune frontière ne retient les flux de menaces, qu’elles soient sécuritaires, économiques ou climatiques. La Facilité de Dialogue envisagée, marquera un changement de paradigme fondamental. Il s’agira de passer de réponses réactives et cloisonnées fondées sur des projets à un modèle évolutif, coordonné au niveau régional, qui articule soutien à la gouvernance, création de moyens de subsistance et programmation de la protection au sein d’un cadre programmatique unique. Il est attendu le lancement de la plateforme Facilité de Prévention pour le Golfe de Guinée (2026-2029), qui sera pilotée pour le développement et pour la prévention des conflits dans la sous-région. Une feuille de route régionale en matière de prévention sera également élaborée et adoptée par les participants. Elle définira clairement les priorités et les axes de mise en œuvre dans les cinq pays. Le Golfe de Guinée englobe le Bénin, le Burkina Faso, la Côte d’Ivoire, le Ghana et le Togo. ATOP/KYA/BA",
+      "_source": "ATOP (Togo)",
+      "_sourceId": "rss_atop",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
         "military",
+        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -1091,6 +1040,59 @@
       },
       "_rating": "F2",
       "_score": 115
+    },
+    {
+      "title": "Forces armées nationales: hommage au général de division à la retraite Nabéré Honoré Traoré",
+      "link": "https://www.sidwaya.info/forces-armees-nationales-hommage-au-general-de-division-a-la-retraite-nabere-honore-traore/",
+      "pubDate": "2026-06-03T23:18:12.000Z",
+      "description": "Les forces armées nationales pleurent l’un de leur plus valeureux fils. Le général de division, Honoré Nabéré Traoré a tiré sa révérence, le 25 mai 2026, laissant derrière lui le souvenir impérissable d’un officier qui a entièrement consacré sa vie au service de la Nation. Ancien chef d’Etat-major général des armées d’avril 2011 à septembre 2014, il a marqué de son empreinte l’histoire des forces armées nationales par son sens élevé du devoir, sa rigueur, son professionnalisme et son attachement indéfectible à la patrie. Son leadership et sa vision ont marqué son temps de commandement. …ont marqué son temps de commandement. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-1024x683.jpg\" class=\"size-medium wp-image-163549\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1-1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-1.jpg 1240w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> …ont marqué son temps de commandement. Attaché aux valeurs cardinales de l’institution militaire et toujours soucieux du bien-être de ses subordonnés, il a été un homme d’honneur pendant les périodes décisives de l’histoire du Burkina Faso, s’affirmant avec courage et sens de la responsabilité. Son parcours demeurera une source d’inspiration pour les générations présentes et futures, particulièrement les officiers de la 18e promotion de l’académie militaire Georges-Namoano. Reposez en paix, mon général. “Aux grands hommes, la mort enlève la présence, mais jamais la memoire”. Etat-major général des armées",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 107
+    },
+    {
+      "title": "Coopération parlementaire: une délégation de députés serbes échange avec Ousmane Bougouma",
+      "link": "https://www.sidwaya.info/cooperation-parlementaire-une-delegation-de-deputes-serbes-echange-avec-ousmane-bougouma/",
+      "pubDate": "2026-06-03T22:39:10.000Z",
+      "description": "Le Président de l’Assemblée législative du peuple, Ousmane Bougouma, a reçu, en audience une délégation du parlement serbe, conduite par le député Slavenko Ristic, président directeur général de Tehnicki Remont Bratunac. En visite de travail au Burkina Faso, depuis le 1er juin 2026, une délégation serbe, conduite par Slavenko Ristic, député et président directeur général de la société Tehnicki Remont Bratunac, a échangé avec le Président de l’Assemblée législative du peuple (ALP), Ousmane Bougouma. C’était au cours d’une audience qui a eu lieu, dans l’après-midi du mercredi 3 juin 2026, au Parlement. Cette visite de courtoisie, a fait savoir Slavenko Ristic, à sa sortie d’audience, a porté sur une possibilité d’établir une coopération parlementaire entre le Burkina Faso et la République de Serbie. « Nous sommes là dans le cadre d’une coopération internationale. Nous croyons au Burkina Faso et le capitaine Ibrahim Traoré est très connu dans mon pays. Nous croyons en la capacité du Burkina Faso », a-t-il déclaré. En perspectives, l’hôte du Président de l’ALP, Ousmane Bougouma, a ajouté que les échanges ont aussi porté sur les domaines de la défense, de la sécurité. Cela, a-t-il souligné, dans la mesure où il n’y a pas de développement économique sans la paix et la sécurité. « Nous prévoyons également collaborer dans le domaine de l’agriculture, de la formation, de l’éducation et des transferts de compétences », a souligné le chef de la délégation serbe, Slavenko Ristic. Notons que la société Tehnicki Remont Bratunac qu’il dirige évolue dans le domaine des technologies de la défense. Soumaïla BONKOUNGOU & Mouniratou OUEDRAOGO (Stagiaire)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 103
     }
   ],
   "alerts": [
@@ -1098,7 +1100,7 @@
       "title": "Iran rejects ‘excessive demands’ in talks or ceasefire, Leader’s advisor warns US",
       "link": "https://presstv.ir/Detail/2026/06/03/769771/No-room-for-excessive-demands-in-talks-or-ceasefire-Iran-official-warns-US",
       "source": "Press TV (Iran)",
-      "date": "2026-06-04T04:56:24.773Z",
+      "date": "2026-06-04T10:09:42.710Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1107,6 +1109,358 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Lebanon ceasefire raises hopes of progess for Iran deal",
+      "link": "https://www.al-monitor.com/originals/2026/06/lebanon-ceasefire-raises-hopes-progess-iran-deal",
+      "source": "Al-Monitor",
+      "date": "2026-06-04T10:01:48.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Beijing slaps travel ban on New Zealand MPs for ‘crossing red line’ with Taiwan visit",
+      "link": "https://www.scmp.com/news/china/diplomacy/article/3355971/beijing-slaps-travel-ban-new-zealand-mps-crossing-red-line-taiwan-visit?utm_source=rss_feed",
+      "source": "South China Morning Post",
+      "date": "2026-06-04T10:01:15.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "red line"
+        }
+      ]
+    },
+    {
+      "title": "Lebanese president says implementation of Israel ceasefire ‘could begin within 24 hours’ of final approval",
+      "link": "https://www.aa.com.tr/en/middle-east/lebanese-president-says-implementation-of-israel-ceasefire-could-begin-within-24-hours-of-final-approval/3956358",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-04T10:00:19.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Iran-US conflict enters 'battle of wills' phase amid fragile ceasefire, say analysts",
+      "link": "https://www.aa.com.tr/en/us-israel-iran-war/iran-us-conflict-enters-battle-of-wills-phase-amid-fragile-ceasefire-say-analysts/3956327",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-04T09:40:01.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel far-right Minister slams ceasefire with Lebanon as 'serious mistake'",
+      "link": "https://www.thehindu.com/news/international/israel-far-right-minister-slams-ceasefire-with-lebanon-as-serious-mistake/article71060107.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-04T09:37:44.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Lebanese President says ceasefire may come into effect within a day of parties' approval",
+      "link": "https://www.al-monitor.com/originals/2026/06/lebanese-president-says-ceasefire-may-come-effect-within-day-parties-approval",
+      "source": "Al-Monitor",
+      "date": "2026-06-04T09:36:44.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Middle East crisis live: Israel to continue ground operation in southern Lebanon despite agreed ceasefire",
+      "link": "https://www.theguardian.com/world/live/2026/jun/04/middle-east-crisis-israel-lebanon-hezbolllah-us-ceasefire-southern-military-attacks-continue-latest-news-updates",
+      "source": "The Guardian World",
+      "date": "2026-06-04T09:34:50.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "EN DIRECT - Moyen-Orient : un Casque bleu a été tué et deux autres blessés dans le sud du Liban, malgré l’accord de cessez-le-feu",
+      "link": "https://www.liberation.fr/international/moyen-orient/en-direct-moyen-orient-israel-et-le-liban-conditionnent-un-cessez-le-feu-a-larret-des-tirs-du-hezbollah-20260604_756SANZIRVBZPCXJ6FIVMMLGQA/",
+      "source": "Libération International",
+      "date": "2026-06-04T09:04:38.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "3 family members injured in Israeli strike in southern Lebanon despite renewed ceasefire",
+      "link": "https://www.aa.com.tr/en/middle-east/3-family-members-injured-in-israeli-strike-in-southern-lebanon-despite-renewed-ceasefire/3956267",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-04T09:02:18.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Entre Israël et le Liban, un accord minimaliste qui repousse la perspective d’un cessez-le-feu durable",
+      "link": "https://www.lemonde.fr/international/article/2026/06/04/entre-israel-et-le-liban-un-accord-minimaliste-qui-repousse-la-perspective-d-un-cessez-le-feu-durable_6697336_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-06-04T09:00:08.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon renew ceasefire deal without Hezbollah, a main combatant",
+      "link": "https://www.washingtonpost.com/world/2026/06/04/israel-lebanon-renew-ceasefire-deal-without-hezbollah/",
+      "source": "Washington Post World",
+      "date": "2026-06-04T08:51:46.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Pris au piège du blocus du détroit d'Ormuz depuis près de 100 jours : « Il n'y a qu'une seule issue »",
+      "link": "https://www.bbc.com/afrique/articles/ckgpr41x91eo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Afrique (FR)",
+      "date": "2026-06-04T08:47:29.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
+      "title": "Israel, Lebanon agree to conditional ceasefire",
+      "link": "https://www.dawn.com/news/2005110/israel-lebanon-agree-to-conditional-ceasefire",
+      "source": "Dawn (Pakistan)",
+      "date": "2026-06-04T08:42:16.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "West Asia war LIVE: Lebanon reports Israeli strikes after conditional ceasefire announcement",
+      "link": "https://www.thehindu.com/news/international/usa-iran-war-updates-israel-lebanon-ceasefire-hezbollah-june-4-2026/article71059457.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-04T08:33:59.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon agree to implement ceasefire if Hezbollah stops attacks",
+      "link": "https://www.bbc.com/news/articles/c5y01pdqvkgo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-06-04T07:49:33.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon agree to conditional ceasefire",
+      "link": "https://www.aljazeera.com/news/2026/6/4/israel-and-lebanon-agree-to-conditional-ceasefire?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-06-04T07:37:33.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon agree new ceasefire as Trump scrambles to end Iran war",
+      "link": "https://www.theguardian.com/world/2026/jun/04/israel-lebanon-renew-ceasefire-hezbollah-trump-iran-deal-middle-east-us",
+      "source": "The Guardian World",
+      "date": "2026-06-04T07:28:55.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon agree to implement ceasefire",
+      "link": "https://www.ft.com/content/468ce636-1a7e-4a14-9be1-6d0f48b6b48f",
+      "source": "Financial Times World",
+      "date": "2026-06-04T06:47:02.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Trump says he won’t end ceasefire unless Iran attacks kill US troops: Report",
+      "link": "https://www.aa.com.tr/en/americas/trump-says-he-won-t-end-ceasefire-unless-iran-attacks-kill-us-troops-report/3956008",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-04T06:41:53.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel to continue operations in Lebanon for now despite ceasefire, defence minister says",
+      "link": "https://www.al-monitor.com/originals/2026/06/israel-continue-operations-lebanon-now-despite-ceasefire-defence-minister-says",
+      "source": "Al-Monitor",
+      "date": "2026-06-04T06:36:40.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "En dépit du cessez-le-feu, Israël prévoit de \"poursuivre ses tirs\" au Liban",
+      "link": "https://www.france24.com/fr/moyen-orient/20260604-isra%C3%ABl-et-le-liban-conditionnent-un-cessez-le-feu-%C3%A0-l-arr%C3%AAt-des-tirs-du-hezbollah-netanyahu-trump-litani-tyr-zones-pilotes",
+      "source": "France 24",
+      "date": "2026-06-04T05:43:42.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Beijing warns of 'costs' over 'crossing red line' on Taiwan after 4 New Zealand MPs banned from entering China",
+      "link": "https://www.aa.com.tr/en/asia-pacific/beijing-warns-of-costs-over-crossing-red-line-on-taiwan-after-4-new-zealand-mps-banned-from-entering-china/3955944",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-04T05:00:41.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "red line"
         }
       ]
     },
@@ -1143,7 +1497,7 @@
       ]
     },
     {
-      "title": "EN DIRECT - Moyen-Orient: Israël et le Liban conditionnent un cessez-le-feu à l'arrêt des tirs du Hezbollah",
+      "title": "EN DIRECT - Moyen-Orient: Israël «poursuivra ses tirs et opérations» dans le sud du Liban, malgré l’annonce d’un accord de cessez-le-feu",
       "link": "https://www.rfi.fr/fr/moyen-orient/20260604-en-direct-moyen-orient-isra%C3%ABl-et-le-liban-conditionnent-un-cessez-le-feu-%C3%A0-l-arr%C3%AAt-des-tirs-du-hezbollah",
       "source": "RFI Moyen-Orient",
       "date": "2026-06-04T04:18:30.000Z",
@@ -1175,22 +1529,6 @@
       ]
     },
     {
-      "title": "Israel, Lebanon agree to conditional ceasefire",
-      "link": "https://www.dawn.com/news/2005110/israel-lebanon-agree-to-conditional-ceasefire",
-      "source": "Dawn (Pakistan)",
-      "date": "2026-06-04T04:10:15.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "News24 | Trump seeks meeting with Iran’s injured supreme leader amid ceasefire crisis",
       "link": "https://www.news24.com/world/trump-seeks-meeting-with-irans-injured-supreme-leader-amid-ceasefire-crisis-20260603-0868",
       "source": "News24 (Afrique du Sud)",
@@ -1207,26 +1545,10 @@
       ]
     },
     {
-      "title": "Israel, Lebanon agree to conditional ceasefire",
-      "link": "https://www.al-monitor.com/originals/2026/06/israel-lebanon-agree-conditional-ceasefire-0",
-      "source": "Al-Monitor",
-      "date": "2026-06-04T04:00:15.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "En Iran et dans les pays du Golfe, une guerre de faible intensité s’installe dans la durée, malgré le cessez-le-feu",
       "link": "https://www.lemonde.fr/international/article/2026/06/04/en-iran-et-dans-les-pays-du-golfe-une-guerre-de-faible-intensite-s-installe-dans-la-duree-malgre-le-cessez-le-feu_6696941_3210.html",
       "source": "Le Monde International",
-      "date": "2026-06-04T03:28:17.000Z",
+      "date": "2026-06-04T03:28:15.000Z",
       "rating": "B2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1239,42 +1561,10 @@
       ]
     },
     {
-      "title": "Israel and Lebanon agree to renew ceasefire as Trump seeks to overcome barriers to Iran deal",
-      "link": "https://www.theguardian.com/world/2026/jun/04/israel-lebanon-renew-ceasefire-hezbollah-trump-iran-deal-middle-east-us",
-      "source": "The Guardian World",
-      "date": "2026-06-04T03:22:55.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Oil falls as Israel and Lebanon agree to conditional ceasefire",
       "link": "https://www.japantimes.co.jp/business/2026/06/04/israel-lebanon-ceasefire-oil/",
       "source": "The Japan Times",
       "date": "2026-06-04T02:30:00.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israel, Lebanon agree to ceasefire on condition of end to Hezbollah fire, US State Department says",
-      "link": "https://www.jpost.com/israel-news/defense-news/article-898323",
-      "source": "Jerusalem Post",
-      "date": "2026-06-04T02:10:13.000Z",
       "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
@@ -1303,45 +1593,13 @@
       ]
     },
     {
-      "title": "Israel and Lebanon agree to implement ceasefire if Hezbollah stops attacks",
-      "link": "https://www.bbc.com/news/articles/c5y01pdqvkgo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "date": "2026-06-04T00:16:44.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Iran war live: Ceasefire tested by US-Iran clashes; Israel kills 9 in Gaza",
+      "title": "Iran war live: Israel attack injuries several after new Lebanon ceasefire",
       "link": "https://www.aljazeera.com/news/liveblog/2026/6/4/iran-war-live-tensions-simmer-after-latest-us-iran-clashes-in-gulf?traffic_source=rss",
       "source": "Al Jazeera English",
       "date": "2026-06-04T00:00:00.000Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israel, Lebanon agree to renew ceasefire as Trump and Netanyahu play down heated call",
-      "link": "https://www.scmp.com/news/world/middle-east/article/3355889/israel-and-lebanon-agree-renew-fragile-ceasefire-create-hezbollah-free-zones?utm_source=rss_feed",
-      "source": "South China Morning Post",
-      "date": "2026-06-03T23:43:46.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
       "bf": false,
       "majors": [
         {
@@ -1383,38 +1641,6 @@
       ]
     },
     {
-      "title": "EN DIRECT, Moyen-Orient : Israël et le Liban déclarent s’être accordés sur « la mise en œuvre d’un cessez-le-feu » conditionné, notamment, « à l’arrêt complet des tirs du Hezbollah »",
-      "link": "https://www.lemonde.fr/international/live/2026/06/04/en-direct-moyen-orient-israel-et-le-liban-declarent-s-etre-accordes-sur-la-mise-en-uvre-d-un-cessez-le-feu-conditionne-notamment-a-l-arret-des-tirs-du-hezbollah_6694380_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-03T23:19:42.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Trump reportedly tells aides he would end ceasefire if Iran kills US troops",
-      "link": "https://www.timesofisrael.com/liveblog-june-4-2026/",
-      "source": "Times of Israel",
-      "date": "2026-06-03T22:04:24.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Human bones discovered in Kibbutz Kfar Aza neighborhood devastated in October 7 massacre",
       "link": "https://www.jpost.com/israel-news/article-898309",
       "source": "Jerusalem Post",
@@ -1429,112 +1655,48 @@
           "keyword": "massacre"
         }
       ]
-    },
-    {
-      "title": "Why Iran strikes on Kuwait pose dilemma for US Navy’s blockade",
-      "link": "https://www.al-monitor.com/originals/2026/06/why-iran-strikes-kuwait-pose-dilemma-us-navys-blockade",
-      "source": "Al-Monitor",
-      "date": "2026-06-03T19:27:52.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "One killed and 63 hurt in Iran attack on Kuwait airport as Trump says ceasefire talks ongoing",
-      "link": "https://www.theguardian.com/world/2026/jun/03/us-fires-missile-tanker-strait-of-hormuz",
-      "source": "The Guardian World",
-      "date": "2026-06-03T17:08:10.000Z",
-      "rating": "A1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Le Japon porté par l’IA : le Nikkei atteint un nouveau sommet historique",
-      "link": "https://francais.rt.com/news/134736-japon-porte-par-ia-nikkei-atteint-nouveau-sommet-historique",
-      "source": "RT en français",
-      "date": "2026-06-03T16:41:50.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Le retour d'El Niño aggrave la catastrophe climatique",
-      "link": "https://www.france24.com/fr/%C3%A9missions/%C3%A9l%C3%A9ment-terre-la-quotidienne/20260603-le-retour-d-el-ni%C3%B1o-aggrave-la-catastrophe-climatique",
-      "source": "France 24",
-      "date": "2026-06-03T16:14:25.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "catastrophe"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      228
+      215
     ],
     [
       "occident_fr",
-      127
-    ],
-    [
-      "autre",
-      114
-    ],
-    [
-      "occident_us",
-      112
+      119
     ],
     [
       "golfe_mo",
-      99
+      103
     ],
     [
-      "bf_local",
-      39
+      "occident_us",
+      102
+    ],
+    [
+      "autre",
+      101
+    ],
+    [
+      "russie",
+      52
+    ],
+    [
+      "turquie",
+      48
     ],
     [
       "chine",
       30
     ],
     [
+      "bf_local",
+      17
+    ],
+    [
       "sahel",
-      22
-    ],
-    [
-      "russie",
-      18
-    ],
-    [
-      "turquie",
-      11
+      13
     ]
   ],
   "indicators": [
@@ -1549,37 +1711,37 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-04T04:55:52.720Z",
+      "at": "2026-06-04T10:09:11.905Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-04T04:55:52.728Z",
+      "at": "2026-06-04T10:09:11.913Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-04T04:56:30.197Z",
+      "at": "2026-06-04T10:09:49.280Z",
       "agent": "Agent Collecte RSS",
-      "message": "112/170 flux OK, 1939 articles"
+      "message": "115/170 flux OK, 1922 articles"
     },
     {
-      "at": "2026-06-04T04:56:33.197Z",
+      "at": "2026-06-04T10:09:52.133Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-04T04:56:33.201Z",
+      "at": "2026-06-04T10:09:52.137Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 25 alertes"
+      "message": "8 developpements, 35 alertes"
     },
     {
-      "at": "2026-06-04T04:56:33.201Z",
+      "at": "2026-06-04T10:09:52.137Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-04T04:56:33.201Z",
+      "at": "2026-06-04T10:09:52.137Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
