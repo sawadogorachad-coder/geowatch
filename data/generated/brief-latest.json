@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-04T10:36:27.702Z",
+  "generatedAt": "2026-06-04T15:36:01.566Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 115,
-    "failed": 55,
-    "articles": 1953,
+    "ok": 112,
+    "failed": 58,
+    "articles": 1936,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -58,13 +58,13 @@
         "count": 0
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "count": 10
-      },
-      {
         "id": "rss_maliweb",
         "name": "Maliweb",
+        "count": 0
+      },
+      {
+        "id": "rss_malijet",
+        "name": "Malijet",
         "count": 0
       },
       {
@@ -90,6 +90,11 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
+        "count": 10
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -185,7 +190,7 @@
       {
         "id": "rss_news24",
         "name": "News24 (Afrique du Sud)",
-        "count": 12
+        "count": 17
       },
       {
         "id": "rss_tsa",
@@ -205,11 +210,6 @@
       {
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
-        "count": 10
-      },
-      {
-        "id": "rss_hespress",
-        "name": "Hespress (Maroc, FR)",
         "count": 10
       },
       {
@@ -380,7 +380,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 10
+        "count": 8
       },
       {
         "id": "rss_fp",
@@ -405,7 +405,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 26
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -498,11 +498,6 @@
         "count": 30
       },
       {
-        "id": "rss_anadolu",
-        "name": "Anadolu Agency (Turquie)",
-        "count": 30
-      },
-      {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
         "count": 30
@@ -525,7 +520,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -550,17 +545,7 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 0
-      },
-      {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "count": 0
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_hrw",
@@ -595,6 +580,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -603,11 +593,6 @@
         "id": "rss_quotidien_bf",
         "name": "Le Quotidien (BF)",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_malijet",
-        "name": "Malijet",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_essor_mali",
@@ -628,11 +613,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "fetch failed"
       },
       {
         "id": "rss_cridem",
@@ -682,7 +662,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
@@ -733,6 +713,11 @@
         "id": "rss_le360",
         "name": "Le360 (Maroc)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_hespress",
+        "name": "Hespress (Maroc, FR)",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_libya_obs",
@@ -830,6 +815,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_anadolu",
+        "name": "Anadolu Agency (Turquie)",
+        "error": "HTTP 502"
+      },
+      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -843,6 +833,16 @@
         "id": "rss_folha",
         "name": "Folha de São Paulo (Brésil)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "error": "HTTP 406"
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "error": "HTTP 406"
       },
       {
         "id": "rss_amnesty",
@@ -863,12 +863,41 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 37,
-    "alerts": 34,
-    "criticalAlerts": 3,
-    "sourcesDistinct": 71
+    "bfAes": 40,
+    "alerts": 29,
+    "criticalAlerts": 4,
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
+    {
+      "title": "Commandement militaire : Les lignes bougent après le 25 avril",
+      "link": "https://journaldumali.com/commandement-militaire-les-lignes-bougent-apres-le-25-avril/",
+      "pubDate": "2026-06-04T15:21:44.000Z",
+      "description": "© Internet Les nominations du 29 mai 2026 réorganisent plusieurs postes sensibles de la chaîne militaire malienne. Elles interviennent après une offensive qui a modifié les priorités sécuritaires de Bamako. Ce changement ne se limite pas à une circulation de noms dans l’appareil militaire. Il intervient après les attaques coordonnées du 25 avril, revendiquées par le JNIM et le Front de libération de l’Azawad, dans un contexte marqué par la mort de l’ancien ministre de la Défense, le Général Sadio Camara, la reprise directe du portefeuille de la Défense par le Président de la Transition, le Général d’armée Assimi Goïta et la nomination du Général Oumar Diarra comme ministre délégué chargé de la Défense. Menaces Depuis cette date, le dispositif malien fait face à des menaces plus complexes. La jonction opérationnelle entre la mouvance jihadiste affiliée à Al-Qaïda et certains groupes armés du Nord donne aux attaques une autre portée. Elle combine pression militaire, guerre d’axes, frappes contre des positions symboliques, communication de guerre et contrôle de portions stratégiques du territoire. La reprise de Kidal par ces groupes armés après les événements du 25 avril a renforcé cette lecture. Les décrets du 29 mai organisent une réponse à plusieurs étages. Le Général de brigade Makan Alassane Diarra est désigné Commandant de la Force unifiée de l’Alliance des États du Sahel. Ancien sous-Chef d’état-major chargé des Opérations à l’État-major général des Armées, il passe ainsi du pilotage opérationnel national à un commandement régional censé incarner la réponse militaire commune du Mali, du Burkina Faso et du Niger. Son remplacement à l’EMGA par le Général de brigade Mamadou Massaoulé Samaké donne aussi un signal. Le poste de sous-Chef d’état-major chargé des Opérations est central dans la planification, le suivi des théâtres, la coordination des moyens et la conduite des réponses militaires. Le Colonel-major Yacouba Sanogo devient Conseiller en stratégie à l’État-major général des Armées. Ces mouvements redessinent l’articulation entre anticipation, planification et exécution. Théâtres d’opérations Les commandements des théâtres d’opérations sont également redistribués dans le cadre de l’Opération Dougoukoloko, qui couvre l’ensemble du territoire national. Karim Traoré prend le Théâtre Est, couvrant Gao, Ménaka et Kidal, Didier Dembélé le Théâtre Sud, qui regroupe les régions du sud et de l’ouest, et Issa Bagayoko le Théâtre Centre, qui couvre notamment Ségou, San, Mopti, Bandiagara, Douentza, Tombouctou et Taoudenni. Ces nominations visent à replacer des profils de terrain à des postes où la connaissance des axes, des unités et des zones d’attaques compte autant que le grade. La principale nouveauté est la concentration de l’arbitrage autour de la Présidence. En reprenant la Défense, Assimi Goïta évite l’ouverture d’une compétition autour d’un ministère stratégique après la mort de Sadio Camara. Oumar Diarra assure le relais politico-militaire, Élisée Jean Dao conduit l’État-major, Makan Diarra prend l’AES et les théâtres sont redistribués. Le système devient plus lisible, mais aussi plus dépendant de la coordination au sommet. Cette centralisation peut produire des effets opérationnels si elle réduit les lenteurs, clarifie les responsabilités et améliore la circulation du renseignement. Elle peut aussi permettre de mieux aligner la Défense nationale, l’EMGA, les commandements de théâtre et la Force unifiée de l’AES, à un moment où les groupes armés cherchent à tester simultanément plusieurs fronts. Limites Pour autant, elle comporte également des limites. Une chaîne trop resserrée peut ralentir les réponses locales si les commandants de terrain ne disposent pas de marges suffisantes. Elle peut aussi exposer davantage le sommet politique aux revers militaires, surtout lorsque les attaques touchent les axes routiers, les villes du Nord, les corridors économiques et les symboles de l’État. La question russe s’ajoute à cette équation. Après les informations faisant état d’un retrait d’Africa Corps de Kidal sans combat direct avec les groupes armés, Bamako devra préciser les modalités de coordination avec son partenaire militaire. Il ne s’agit pas d’une rupture annoncée, mais d’un réajustement nécessaire entre appui extérieur, commandement malien et montée en puissance de l’AES. Dans les crises sécuritaires, un recentrage du commandement peut être utile s’il s’accompagne de moyens, de renseignement fiable, de discipline opérationnelle et d’un retour visible de l’État. Au Mali, l’efficacité de cette réorganisation se mesurera moins aux décrets qu’à la capacité à protéger les populations, sécuriser les axes, tenir les positions et empêcher les groupes armés d’imposer leur propre rythme militaire.",
+      "_source": "Journal du Mali",
+      "_sourceId": "rss_journ_mali",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127
+    },
     {
       "title": "Grosses cylindrées : les autorités resserrent l’étau hors des agglomérations",
       "link": "https://journaldumali.com/grosses-cylindrees-les-autorites-resserrent-letau-hors-des-agglomerations/",
@@ -899,19 +928,19 @@
       "_score": 127
     },
     {
-      "title": "Les Thermidoriens du Projet : anatomie d’une pathétique contre-révolution",
-      "link": "https://lesoleil.sn/opinions/tribune-dexpert/les-thermidoriens-du-projet-anatomie-dune-pathetique-contre-revolution/",
-      "pubDate": "2026-06-03T23:18:52.000Z",
-      "description": "L'histoire politique obéit à une loi aussi constante que méconnue : les révolutions ne succombent presque jamais sous les coups de leurs ennemis déclarés. Elles sont plus souvent vaincues par l'épuisement de leur propre souffle, par l'affadissement de leur ambition fondatrice ou par l'action de ceux qui, après avoir bénéficié de leur victoire, entreprennent de les dépouiller progressivement de leur substance. Les révolutionnaires tombent rarement face à leurs adversaires. Ils sont plus souvent neutralisés par leurs héritiers. La Révolution française a connu Thermidor. La Révolution russe a connu le révisionnisme. La Révolution chinoise a connu ses forces réfractaires. Chaque séquence historique de rupture produit inévitablement sa propre réaction interne, son propre mécanisme de normalisation, son propre appareil de domestication du changement. Ce phénomène est si récurrent qu'il constitue presque une loi de la sociologie politique. À l'origine de toute révolution se trouve une promesse. Une promesse de rupture avec un ordre devenu incapable de répondre aux aspirations du peuple. Cette promesse mobilise les énergies, fédère les mécontentements et transforme les frustrations individuelles en espérance collective. Mais une fois la victoire acquise, une nouvelle contradiction apparaît : ceux qui ont contribué à conquérir le pouvoir doivent désormais décider s'ils veulent transformer le système ou simplement l'administrer. C'est là que se joue le destin des révolutions. Karl Kautsky fut longtemps considéré comme le plus grand théoricien du socialisme européen. Lénine lui-même le tenait en haute estime. Pourtant, lorsque la révolution devint réalité, Kautsky préféra la sécurité de l'ordre existant aux incertitudes de la transformation historique. Son cas demeure exemplaire non parce qu'il rejoignit les adversaires de la révolution, mais parce qu'il conserva son langage tout en abandonnant sa finalité. Depuis lors, le terme de « renégat » désigne moins celui qui combat ouvertement la révolution que celui qui en conserve les symboles tout en en vidant le contenu. L'expérience chinoise offre un enseignement tout aussi éclairant. Mao Zedong considérait que la menace principale pesant sur la révolution n'était pas extérieure mais intérieure. Une fois la victoire acquise, expliquait-il, les anciennes élites, les habitudes bureaucratiques, les réflexes conservateurs et les ambitions individuelles tendent naturellement à reconstituer les mécanismes de domination que la révolution prétendait abolir. La contre-révolution ne se présente alors plus sous les traits de l'opposition. Elle parle le langage du changement tout en travaillant à son ralentissement. Elle invoque la stabilité pour neutraliser l'audace. Elle invoque les institutions pour contenir la transformation. Lin Biao demeure à cet égard une figure symbolique. Présenté comme l'héritier naturel de Mao et comme le plus fidèle gardien de la révolution, il rappelle que la proximité avec le pouvoir révolutionnaire n'est jamais une garantie de fidélité à son esprit. L'histoire des révolutions est remplie de ces personnages qui, après avoir bénéficié de la confiance du mouvement, finissent par s'éloigner de sa trajectoire originelle. Cette grille de lecture éclaire avec une remarquable pertinence certaines dynamiques observées aujourd'hui dans plusieurs expériences politiques contemporaines. Car ce qui distingue les grandes figures historiques n'est pas leur capacité à accéder au pouvoir. C'est leur capacité à créer une conscience collective. Nelson Mandela n'est pas devenu une référence mondiale parce qu'il fut président de l'Afrique du Sud. Thomas Sankara n'est pas devenu un symbole parce qu'il occupait le palais de Ouagadougou. Patrice Lumumba n'est pas entré dans l'histoire parce qu'il dirigeait le gouvernement congolais. Ils sont devenus des références parce qu'ils ont incarné une idée plus grande qu'eux-mêmes. Au Sénégal, c'est précisément cette dimension qui explique la singularité du phénomène Ousmane Sonko. Au-delà même du Sénégal, cette dynamique s'inscrit dans un mouvement historique plus vaste qui traverse aujourd'hui l'ensemble du continent africain. PASTEF apparaît à cet égard comme l'une des expressions politiques les plus avant-gardistes de cette nouvelle séquence africaine portée par une jeunesse consciente, connectée et déterminée à reprendre en main son destin. Des rives du fleuve Sénégal aux grandes métropoles africaines, une même aspiration s'affirme : celle de la souveraineté politique, économique, monétaire et culturelle. Contrairement aux lectures superficielles qui réduisent ces bouleversements à des épisodes conjoncturels, il s'agit en réalité de révolutions profondes dont les ressorts historiques, démographiques et générationnels les rendent largement irréversibles. PASTEF fait partie des premiers à théoriser, structurer et traduire politiquement cette exigence de rupture portée par la jeunesse africaine. C'est précisément cette capacité d'anticipation qui explique sa résonance bien au-delà des frontières nationales et son inscription dans le grand mouvement de renaissance politique qui redessine progressivement le visage de l'Afrique contemporaine. Pendant plus d'une décennie, Ousmane SONKO n'a pas seulement construit une organisation politique. Il a contribué à façonner une nouvelle conscience nationale autour des thèmes de la souveraineté, de la dignité, de la justice sociale et de la réappropriation du destin collectif. Son principal apport à l'histoire politique sénégalaise n'est pas électoral. Il est civilisationnel. Il a transformé une contestation dispersée en vision cohérente. Il a donné un langage politique à une génération entière. Il a fait de la souveraineté non plus un slogan, mais une exigence populaire. C'est pourquoi le Projet a toujours dépassé la question des personnes. Dès son origine, il s'est voulu une entreprise de refondation nationale. Or toute entreprise de refondation rencontre inévitablement ses propres Thermidoriens. Ce sont ceux qui considèrent la victoire comme une fin alors qu'elle n'était qu'un commencement. Ce sont ceux qui préfèrent la gestion à la transformation. Ce sont ceux qui confondent la conquête du pouvoir avec l'accomplissement du Projet. Ce sont ceux qui pensent que les institutions peuvent survivre sans l'énergie morale qui leur a donné naissance. L'histoire montre pourtant que la normalisation est souvent le premier stade de la déchéance politique. Les révolutions ne meurent pas brutalement. Elles s'éteignent progressivement. Elles perdent d'abord leur audace, ensuite leur cohérence et enfin leur raison d'être. Le véritable enjeu de notre époque n'est donc pas la destinée de tel ou tel responsable politique. Il est infiniment plus important. Il concerne la fidélité à la promesse historique qui a mobilisé des millions de citoyens. Car les peuples peuvent accepter les erreurs. Ils peuvent comprendre les contraintes du pouvoir. Ils peuvent même tolérer les compromis. Mais ils pardonnent rarement l'abandon du cap. Au terme de toutes les grandes séquences révolutionnaires, une seule question demeure : qui est resté fidèle à l'esprit fondateur ? C'est à cette question, et à elle seule, que l'histoire finit toujours par répondre. Et son verdict est généralement sans appel. Moctar BA Economiste",
-      "_source": "Le Soleil (Sénégal)",
-      "_sourceId": "rss_lesoleil",
+      "title": "Beyond historical pathways: Securing the Volta-Togo border in an era of emerging threats",
+      "link": "https://www.myjoyonline.com/beyond-historical-pathways-securing-the-volta-togo-border-in-an-era-of-emerging-threats/",
+      "pubDate": "2026-06-04T14:30:49.000Z",
+      "description": "The recent remarks by the Minister for the Interior regarding the existence of more than one hundred unauthorised entry routes along the Volta-Togo border have generated considerable public discussion. While some have interpreted the Minister’s comments through historical, cultural, and political lenses, the broader issue before the nation is far more consequential. It is a matter of national security. It is a matter of human security. It is a matter of Ghana’s preparedness to confront emerging threats in an increasingly complex regional environment. The Volta Region, particularly border communities such as Aflao, Denu, Akanu, Dzodze, Weta, Agbozume, and adjoining settlements, occupies a unique place in Ghana’s history. Long before the emergence of modern nation-states, these communities shared common ancestry, language, traditions, trade routes, and social systems with communities across present-day Togo. Colonial boundary demarcation divided territories but could not erase centuries of cultural and familial connections. These historical realities are undeniable. However, while history explains the existence of numerous border pathways, it does not remove the responsibility of the modern state to secure its borders and protect its citizens. This is where the Minister’s warning deserves serious national attention. The Changing Security Landscape For decades, Ghana has enjoyed a reputation as one of the most peaceful and stable countries in West Africa. Yet the regional security environment is changing rapidly. The expansion of violent extremist groups across the Sahel, instability in Burkina Faso, Mali, and Niger, the proliferation of small arms, transnational organised crime, human trafficking, drug smuggling, cyber-enabled criminal networks, and irregular migration have collectively transformed the security architecture of West Africa. Security threats no longer arrive with formal declarations. They move quietly through weak governance spaces. They exploit porous borders. They take advantage of intelligence gaps. They thrive where state visibility is limited. In this context, the identification of over one hundred unauthorised routes along a major international frontier cannot be treated as a routine administrative issue. It represents a potential vulnerability that requires urgent policy attention. Understanding the Security Concern The debate surrounding the Minister’s remarks has unfortunately created the impression that security agencies are concerned about ordinary cross-border interactions among local communities. This is not the issue. No serious security agency is concerned about a farmer cultivating land near the border, a trader conducting lawful business, or families maintaining traditional relationships across the frontier. The concern is different. The concern is that individuals may enter Ghana through routes that bypass official immigration controls, security screening mechanisms, and identity verification systems. When people cross through approved border posts, authorities are able to: Verify identities; Conduct security checks; Establish travel records; Monitor movements; Detect suspicious activities. When entry occurs through unauthorised routes, these safeguards are circumvented. The result is an intelligence blind spot. The state loses visibility over who enters, why they entered, where they came from, and what activities they may undertake once inside the country. No responsible government can ignore such a situation. Why This Matters for Human Security Border security is often viewed exclusively through a national security lens. However, from a Human Security perspective, effective border management is equally important for protecting communities and livelihoods. Human Security extends beyond territorial protection. It encompasses the safety, dignity, and well-being of individuals and communities. Weak border controls can expose communities to: Human trafficking; Drug trafficking; Arms smuggling; Organised criminal networks; Exploitation of vulnerable populations; Economic insecurity. The first victims of these activities are often the residents of border communities themselves. Therefore, strengthening border governance is not only about protecting the state, it is also about protecting people. Lessons from Other Regions Across Africa, countries that underestimated the security implications of porous borders have often paid a heavy price. Several states initially viewed unauthorised border crossings as harmless local practices rooted in historical realities. Over time, criminal networks and extremist groups exploited these same routes to establish operational footholds. The lesson is clear: Historical legitimacy does not eliminate contemporary risk. A pathway that once served traditional trade and social interaction can equally be exploited by actors whose objectives threaten public safety and national stability. This is why security assessments must focus not only on the existence of routes but also on who uses them, for what purpose, and under what conditions. A New Border Governance Approach The solution is not to criminalise border communities. Nor is it to dismiss legitimate security concerns. The solution lies in a balanced and integrated border governance framework. Government should: Strengthen border surveillance and monitoring systems; Enhance intelligence gathering and information sharing; Deploy modern technologies, including drones, GIS, and remote sensing; Increase collaboration among Immigration, National Security, Police, Customs, and other agencies; Deepen partnerships with traditional authorities and local communities; Improve socio-economic opportunities within border communities; Promote community-based intelligence and early warning systems. Traditional leaders possess invaluable local knowledge that can support national security efforts. Border communities should therefore be viewed as strategic partners rather than passive subjects of security interventions. The Way Forward The debate generated by the Minister’s remarks presents an opportunity for Ghana to rethink border governance in the twenty-first century. The issue is not whether historical pathways exist. The issue is whether Ghana can effectively manage those pathways in a manner that safeguards both national security and human security. History matters, Culture matters, Cross-border livelihoods matter. But in an era characterised by emerging and evolving threats, effective border governance matters too. The Volta-Togo border remains a vital gateway for trade, social interaction, and regional integration. It must also remain secure. The Minister’s warning should therefore not be viewed as a criticism of border communities. Rather, it should be understood as a call for vigilance, cooperation, and proactive action. Ghana’s future security will depend not only on the strength of its institutions but also on its ability to balance historical realities with contemporary security imperatives. The time to have that conversation is now. Author Bio Godson Bill Ocloo is a Human Security Analyst, Disaster Risk Management Practitioner, and Executive Director of the Africa Centre for Human Security and Emergency Management (ACHSEM). He has extensive experience in disaster risk governance, emergency management, resilience policy, community-based risk reduction, and public policy analysis. His work focuses on the intersection of human security, national security, disaster resilience, and sustainable development.",
+      "_source": "MyJoyOnline (Ghana)",
+      "_sourceId": "rss_myjoyonline",
       "_sourceCat": "ouest_afr",
       "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
         "military",
+        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -924,70 +953,13 @@
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 127
+      "_score": 119
     },
     {
-      "title": "Commerce illicite: la traque des contrebandiers et des fraudeurs",
-      "link": "https://www.sidwaya.info/commerce-illicite-la-traque-des-contrebandiers-et-des-fraudeurs/",
-      "pubDate": "2026-06-03T22:48:38.000Z",
-      "description": "La peur du Burkinabè d’acheter et de consommer des produits périmés, avariés ou prohibés sans le savoir se dissipe de plus en plus. Les saisies régulières de ces produits grâce aux actions conjuguées de lutte contre la fraude de la douane, de la Brigade mobile de contrôle économique et de la répression des fraudes (BMCRF) et de la Coordination nationale de lutte contre la fraude (CNLF) en disent long. Comment se mène cette bataille acharnée sur le terrain pour préserver la santé des Burkinabè et assainir l’économie nationale ? Immersion dans les opérations de controles et de saisies. Sur l’axe Tenkodogo-Cinkansé, à la sortie Est de la ville de Tenkodogo, le flux permanent des véhicules gros porteurs est perceptible. Nous sommes dans l’après-midi du lundi 23 mars 2026. Il est environ 15h, lorsque nous arpentions l’axe en direction de la cité de Rialé. En ce mois de mars, la chaleur est accablante. A environ 15 km de la ville, des citernes, des cars, des minicars et des remorques sont stationnés en file indienne. L’on se croirait sur une aire de stationnement. Ces véhicules sont immobilisés pour les formalités douanières au poste de contrôle de la brigade mobile des douanes de Tenkodogo. Les gabelous, sans répit, sont à la tâche : contrôle des documents de transport, des déclarations douanières, des factures commerciales, des pièces d’identité des conducteurs, etc. Tous les véhicules passent au « scanneur » des douaniers afin de détecter la présence d’éventuelles marchandises frauduleuses, prohibées, non déclarés ou des objets de contrebande. Baquette en fer à la main, un agent contrôleur, l’air serein, transperce des sacs pour s’assurer qu’il n’y a pas d’autres produits dissimulés à l’intérieur. « Que ce soient des camions en partance pour le Togo ou qui en reviennent, ils sont tous fouillés », confie le chef d’escouade du poste de contrôle de la brigade mobile des douanes de Tenkodogo, Constant Bazié. Toutefois, indique- t-il, il arrive que les fraudeurs forcent la barrière. « Immédiatement, le siège est alerté de la situation et des agents interceptent ledit véhicule. Souvent, cela se fait à travers des courses-poursuite », fait savoir le chef de la brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. De jour comme de nuit, ces actions se mènent en vue de réduire considérablement la fraude en mettant la main sur les contrevenants. A la direction générale des douanes à Ouagadougou, l’importance des marchandises saisies et entreposées, à l’arrière du bâtiment principal, témoigne de l’ampleur du phénomène. Le 24 février 2026, 19 tonnes de sucre, 6 449 cartons d’huile de moteur, 313 amphétamines, 3 744 cartons de biscuits, 24 kg de chanvres indien y étaient entassés. A cela, s’ajoute un véhicule rempli de 5 000 plaquettes d’œufs et un autre contenant du cyanure dissimulé dans du clinker, 5 295 bâtons d’explosifs, 1366 cartons de boissons alcoolisées et énergisantes et bien d’autres produits prohibés. La valeur de l’ensemble de la saisie est estimée à 1,062 milliard F CFA. Le constat est le même à la direction régionale de l’industrie, du commerce et de l’artisanat du Nakambé ce lundi 23 mars 2026. Là encore, sont entreposés des produits contrefaits et interdits de commercialisation. …que les agents de la douane détectent les cas de fraude. Il s’agit de la cigarette, de la boisson alcoolisée, des pagnes contrefaits, des produits pharmaceutiques, des amandes de karité, des cartons de fil de coton importés, des sachets plastiques. « Ces saisies ont été opérées lors des sorties de terrain sur les axes et dans les marchés », informe le chef de service contrôle par intérim à la direction régionale, Zakaria Badjelle. Le 8 mai 2026 à Koudougou, dans deux entrepôts d’une entreprise, plus de 1 000 tonnes de sel périmé et reconditionné sont saisies par la Coordination nationale de lutte contre la fraude (CNLF). Déclenchée à la suite d’une dénonciation, l’enquête conduite par le coordinateur national de la CNLF révèle que l’entreprise reconditionne du sel périmé, depuis deux ans, dans de nouveaux emballages, avec des dates de péremption falsifiées qu’elle introduit sur le marché. Ce sel impropre à la consommation servait également de matière première dans la fabrication d’autres épices pour être commercialisées. Il ressort également qu’à l’aide des machines, le sel est broyé et mélangé à d’autres substances chimiques pour en sortir du cube Maggie blanc. Et cela, dans des conditions d’hygiène précaires préjudiciables à la santé des consommateurs. Le premier contrôle à la frontière Ces exemples sont légions, témoignant de l’engagement de la douane, la CNLF et la BMCRF dans leur combat contre la fraude pour la protection de la santé des consommateurs et l’amélioration du climat des affaires et de la mobilisation des recettes nationales. En effet, la lutte contre la fraude commence depuis les frontières. Du poste juxtaposé de Cinkansé au bureau des douanes de deuxième catégorie de Dakola, il ressort que les contrebandiers dissimulent de diverses manières les produits prohibés ou avariés dans des contenants des marchandises. Autre stratégie, ils empruntent des pistes détournées pour traverser les frontières par des moyens divers. « Les frontières sont un peu poreuses. On ne peut pas sécuriser toute la bande », confie le chef de bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré. Selon lui, lorsque les marchandises arrivent du Ghana, la prise en charge commence par l’identification. Elle consiste à connaitre la quantité et le poids. « Avec ces éléments, on enclenche le processus de contrôle documentaire pour s'assurer que ladite marchandise répond aux papiers qui vont avec. Ensuite, nous faisons le contrôle physique et les documents sont transmis à un transitaire pour faire la déclaration. On peut avoir une déclaration pour le transit ou une mise à la consommation pour tout ce qui est du produit communautaire. Ces camions attendent d’être contrôlés au poste de contrôle juxtaposé de Cinkansé. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1024x683.jpg\" class=\"size-medium wp-image-163531\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-1-1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Ces camions attendent d’être contrôlés au poste de contrôle juxtaposé de Cinkansé. Une fois la déclaration faite, un vérificateur est chargé d'étudier le dossier dans le fond avec les documents joints afin de s’assurer de la qualité de la marchandise », explique-t-il. Ainsi, munis de techniques et de savoir-faire, doublé d’un flair, le vérificateur inspecte les coins et recoins du moyen de transport en vue de s’assurer qu’il n’y a pas de produits de fraude. Passer toutes ces étapes, le camion est mis sous balise. Ce dispositif, fait-il savoir, est satellitaire et permet de suivre la marchandise pendant son transit. « On peut le suivre en temps réel pour connaître sa position et savoir s'il y a de la manipulation en cours de route ou pas », renchérit M. Gansoré. Ainsi, les marchandises peuvent être dédouanées à Dakola ou à Cinkansé. Il explique que le dédouanement dans les bureaux frontaliers concerne les produits de grande consommation, notamment le riz, l’huile d'une certaine quantité. En ce qui concerne les marchandises venant de la Chine, des Etats-Unis ou de l'Europe, les droits sont payés dans les bureaux intérieurs comme Ouagadougou et Bobo-Dioulasso. Pour le directeur de la surveillance du territoire, Tégawendé André Zagré, le suivi satellitaire fait que toutes les marchandises respectent la réglementation douanière. Cependant, lorsque la main est mise sur des produits frauduleux, un procès-verbal de saisie est rédigé et les produits sont stockés en attendant de faire suivre la procédure. « Si on a l'occasion de mettre la main sur le contrevenant, on le transfert à la police pour la suite de la procédure », confirme le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. Et, lorsque les documents ne correspondent pas à ce qui est présenté comme marchandise, celle-ci est bloquée jusqu’à ce que lesdits documents soient appropriés. Mais, il peut arriver que des produits fraudés traversent la frontière sans qu’on le sache du fait du flux important. « Par jour, c’est plus de 700 véhicules qui sont contrôlés. Il est donc difficile de tout fouiller », reconnait M. Valéa. C’est le cas au poste de contrôle de Dakola. « Vu l’importance du trafic, on ne peut pas tout contrôler, mais l’on fait la gestion et l'analyse des risques pour cibler les marchandises qui peuvent être à risque », explique le directeur de la surveillance du territoire, Tégawendé André Zagré. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--1024x683.jpg\" class=\"size-medium wp-image-163536\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/9--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/9--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Vu l’importance du trafic, on ne peut pas tout contrôler, mais l’on fait la gestion et l'analyse des risques pour cibler les marchandises qui peuvent être à risque », explique le directeur de la surveillance du territoire, Tégawendé André Zagré. Sur la plateforme, en moyenne 300 camions par jour qui sont contrôlés. « Mais, on peut atteindre 500 voire 600 camions par jour selon l’affluence », témoigne le chef de bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré. Toutefois, poursuit-il, si quelque chose leur échappe, le long de la voie, la brigade de ligne et la brigade mobile des douanes font également des contrôles. En effet, dans un rayon de 10 km d’un poste frontalier, existe une brigade de ligne, en arrière-plan qui veille à sécuriser tout ce qui sort du bureau. Passer cette étape, la brigade mobile prend la relève. Toujours en alerte A la brigade mobile des douanes de Tenkodogo, plus de place pour stocker les marchandises saisies. Les trois magasins de la brigade sont pleins. Des centaines de cartons de boissons, des tonnes de sucre, des dizaines de bidons d’huile, des tonnes de sachets plastiques y sont entassés. Des camions toujours chargés de marchandises sont visibles. C’est le même décor à la brigade mobile des douanes de Manga, dans le Nazinon. Là, en plus des milliers de cartons de boissons alcoolisées stockés dans des magasins, des dizaines de « véhicules kamikazes » sont stationnés. Ce résultat est à mettre à l’actif du renseignement, selon le responsable de la brigade Raymond Bagré. « Nous fonctionnons sur la base des renseignements. Avec ces centaines de camions qui passent sur l’axe, la fraude peut nous passer sous les yeux. Ainsi, quand on reçoit l’alerte, on fait l'analyse du risque et si des éléments ne concordent pas avec la déclaration, le véhicule est convoyé à la brigade mobile pour des contrôles plus approfondis », détaille Kalifassoro Sanou. Au-delà des principaux axes routiers, les fraudeurs se frayent un passage sur des pistes détournées. « Nous menons la lutte sur ces voies. Il nous arrive de mettre la main sur certains. Ainsi, de janvier en mars 2026, nous sommes à 13 affaires contentieuses d’un montant d'environ 1,7 milliard F CFA. Ce sont des éléments qui confortent notre position quant à lutter efficacement contre la fraude », rassure Laurent Marie Gansoré. Il explique que « Déjà, en ce premier trimestre de cette année 2026, plus de 2 milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--1024x683.jpg\" class=\"size-medium wp-image-163544\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/4--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Déjà, en ce premier trimestre de cette année 2026, plus de 2 milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. lorsqu’une une saisie est faite, l’amende est fonction du type d'infraction. Cependant, quand il s'agit de la drogue, des armes, des explosifs, des médicaments, le procès-verbal est fait et le contrevenant est remis à la justice pour suite à donner. « La fraude est réelle du fait de notre proximité avec le Ghana, car il y a des produits prohibés au Burkina Faso qui ne le sont pas au Ghana. Vu le brassage entre les populations, certaines s'adonnent au trafic de ces produits. Pour la plupart des cas d’embuscade que nous menons, c'est sur renseignement. Le seul bémol est que les fraudeurs ont aussi des informateurs qui leur donnent la position des agents lorsqu’ils sont en mouvement. Qu’à cela ne tienne, au premier trimestre de l’année 2026, il y a eu une saisie importante de 5 295 bâtons d'explosifs et environ 120 kg de chanvre indien », confie le chef de la brigade mobile des douanes de Manga, Raymond Bagré, ajoutant que l’espace de surveillance de cette brigade va de la zone de Zabré à Sapouy, en passant par Zécco, Dakola, Guiaro et Léo et s'étend sur toute la bande sud du pays. « Nous demandons l’accompagnement et le soutien constant des populations pour réussir la lutte contre la fraude », souhaite le chef de la Brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--683x1024.jpg\" class=\"size-medium wp-image-163532\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg\" alt=\"\" width=\"200\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5--200x300.jpg 200w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--683x1024.jpg 683w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--768x1152.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1024x1536.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1365x2048.jpg 1365w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--280x420.jpg 280w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--150x225.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--300x450.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--696x1044.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1068x1602.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--1920x2880.jpg 1920w, https://www.sidwaya.info/wp-content/uploads/2026/06/5--scaled.jpg 1707w\" sizes=\"auto, (max-width: 200px) 100vw, 200px\" /> « Nous demandons l’accompagnement et le soutien constant des populations pour réussir la lutte contre la fraude », souhaite le chef de la Brigade mobile des douanes de Tenkodogo, Kalifassoro Sanou. Des équipes sont donc reparties sur les différents axes. Pour un bilan d’étape, le directeur de la surveillance du territoire, Tégawendé André Zagré souligne qu’au premier trimestre de l’année 2026, la douane a fait un excédent de 11 milliards F CFA. Cela, soutient-il, grâce à la lutte acharnée contre la fraude pour assainir le marché pour que le commerce légal se porte mieux. Malgré cette lutte, la fraude persiste. Des produits fraudés et impropres à la consommation se retrouvent toujours dans les grandes villes. La CNLF et la BMCRF dans la danse A côté de la douane, la CNLF et la BMCRF poursuivent la traque des contrebandiers. Dans les entrepôts, les magasins, les boutiques, les marchés et les yaars, elles dénichent des produits ne respectant pas le prix du marché, ceux périmés ou interdits à la commercialisation. La CNLF, selon son coordonnateur national, Mohamadi Compaoré, s’investit dans la lutte contre la tromperie des consommateurs, contre l’incivisme fiscal et les produits périmés ou avariés. « Des opérateurs économiques tentent toujours de passer entre les mailles du filet pour ne pas se conformer », relève-t-il. De ce fait, sur la base de renseignements, la CNLF mène des investigations jusqu’à la saisie des marchandises. Les amendes sont fixées en fonction du degré d’infraction. Elles tiennent compte des dommages que pourraient causer la merchandise sur le plan environnemental, commercial, des taxes douanières et fiscales. « Si le contrebandier reconnait sa faute, le règlement transactionnel peut se faire. Au cas où l’incriminé conteste, le règlement passe à la phase contentieuse. Il est donc remis à la justice pour la suite de la procédure », souligne le coordonnateur national du CNLF. Le combat au premier trimestre de l’année 2026, affirme-t-il, a permis d’encaisser 561 millions F CFA au profit du budget de l’Etat. Quant à la BMCRF, son combat concerne la veille des prix des produits sur le marché. Dans cette dynamique, les agents des directions régionales en charge du commerce sillonnent les marchés des villages pour le constat. « Nous effectuons des sorties inopinées en vue de veiller à la fragmentation économique, à la lutte contre la fraude, la commercialisation des produits périmés, le contrôle des prix des produits de grande consommation », renchérit le chef de service de contrôle économique et de la répression des fraudes de Manga, Soumaila Lonfo. Il relate qu’au cours des sorties, les commerçants véreux prennent la poudre d’escampette. Seule la marchandise est saisie. « On n'a même pas l'occasion de connaitre son identité », « Les aliments périmés perdent leur valeur nutritionnelle » , précise la diététicienne, Yasmine Zerbo. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6-.jpg\" class=\"size-medium wp-image-163533\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg\" alt=\"\" width=\"242\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6--242x300.jpg 242w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--339x420.jpg 339w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--150x186.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--300x372.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/6--324x400.jpg 324w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-.jpg 600w\" sizes=\"auto, (max-width: 242px) 100vw, 242px\" /> « Les aliments périmés perdent leur valeur nutritionnelle » , précise la diététicienne, Yasmine Zerbo. regrette M. Lonfo. Par contre, dans les boutiques, le fraudeur est convoqué pour s’expliquer et est amendé. « On l'informe que ladite marchandise est saisie », poursuit le chef de service contrôle par intérim de la direction régionale de l’industrie, du commerce et de l’artisanat du Nakambé, Zakaria Badjelle. En plus de la croisade de la douane, la CNLF et la BMCRF contre le phénomène, il y a la Ligue des consommateurs du Burkina Faso (LCB) qui travaille à l’éveil des consciences des consommateurs. Pour son président (NDLR : au moment de l’entretien, le 2 avril 2026, Dasmané Traoré, pour réussir la lutte, il faut être exigeant. « On doit avoir cette volonté de vérifier la date de péremption pour s’assurer de la validité du produit. Aussi, à vue d’œil, on peut détecter un produit sain d'un produit qui ne l'est pas », soutient-il. En cas de produit suspect, informe-t-il, le consommateur appelle sur le numéro vert de la Ligue. Et après vérification, la douane, la police, la gendarmerie, la BMCRF ou la CNLF est saisie sur la présence du produits contrefait sur le marché. « Il revient à l'autorité de faire la saisie ou de le retirer du marché au grand bonheur des consommateurs », rassure le président. La santé publique en danger Toutefois, selon M. Traoré, aujourd'hui, la digitalisation vient compliquer la situation du consommateur, tout lui est vendu moins cher sur les plateformes. « Tant qu'il n'y a pas eu une vérification de la qualité de ces produits, nous ne pouvons pas d’emblée dire que le produit n'est pas de bonne qualité. Nous sommes donc obligés, après des plaintes, d’acheter ces produits pour les faire analyser. C’est à l’issue de cela que nous pouvons informer les autorités sur la qualité et celle-ci agit », explique Dasmané Traoré. Malheureusement, la consommation de ces produits périmés, avariés ou prohibés représente un risque sanitaire majeur. En effet, selon la diététicienne Yasmine Zerbo, les produits périmés peuvent engendrer une intoxication alimentaire avec des allergies chez certaines personnes. « La consommation d’huiles périmées peut entraîner des lésions hépatiques et augmenter le risque de maladie cardiaque et peuvent provoquer des symptômes allergiques », indique-t-elle. Pour elle, les aliments qui vieillissent perdent leur valeur nutritionnelle, et leur consommation peut également entraîner une carence en certains nutriments, avec des effets à long terme sur la santé. « Manger des aliments moisis peut provoquer des réactions allergiques, des problèmes respiratoires, des dommages neurologiques et produire des substances toxiques pouvant provoquer des maladies graves », poursuit-elle. Selon le chef de Bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré, c’est en moyenne 300 camions par jour qui sont contrôlés au poste. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--1024x683.jpg\" class=\"size-medium wp-image-163534\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/7--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/7--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Selon le chef de Bureau des douanes de deuxième catégorie de Dakola, Laurent Marie Gansoré, c’est en moyenne 300 camions par jour qui sont contrôlés au poste. Au regard de tout cela, le directeur général de l'agence nationale pour la sécurité sanitaire, de l'environnement, de l'alimentation, du travail et des produits de santé, Elie Kabré, estime que les pratiques frauduleuses mettent en échec tous les efforts déployés par les autorités en charge de la santé. « Je suis heureux de voir de quelle catastrophe notre pays est de plus en plus soustrait grâce aux saisies de part et d’autre », apprécie -t-il. A cet effet, il salue les efforts qui sont faits pour pouvoir mettre hors d’état de nuire ces personnes qui jettent en pâture la santé publique pour le gain. « Nous devons nous mobiliser autour de toutes les forces qui se battent pour notre sécurité physique, mais aussi pour notre sécurité sanitaire », fait comprendre M. Kabré. Estimant que la fraude est en recul au regard des actions menées, il invite à être toujours vigilants, au regard de l’ingéniosité de ses pratiquants. « Nous devons nous adapter pour pouvoir toujours déceler les irrégularités », conseille pour sa part, Dasmané Traoré. Face à cette gangrène qui persiste, désormais, la douane, la CNLF et la BMCRF présentent les contrevenants à la presse et confisquent les moyens de déplacements en plus de la saisie des marchandises. Une manière pour eux de dissuader d’éventuels fraudeurs à ne pas mener cette activité. C’est du moins l’appel lancé par un fraudeur de médicaments contrefaits, arrêté le 5 mars 2026 lors d’un contrôle des gabelous à Zorgho. Il a été présenté à la presse le 6 mars 2026. Celui-ci reconnait son tort et demande pardon à la population. « C’était pour moi une occasion pour me faire de l’argent. J’ignorais que cette activité est dangereuse pour la « Nous faisons régulièrement des saisies et elles concernent principalement les bâtons d'explosifs », confie le chef de la Brigade mobile des douanes de Manga, Raymond Bagré. milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--1024x683.jpg\" class=\"size-medium wp-image-163535\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/8--300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--2048x1365.jpg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/8--1920x1280.jpg 1920w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> « Nous faisons régulièrement des saisies et elles concernent principalement les bâtons d'explosifs », confie le chef de la Brigade mobile des douanes de Manga, Raymond Bagré. milliards FCFA ont été mobilisés », indique le chef de bureau adjoint du poste de contrôle juxtaposé de Cinkansé, Lucien Valéa. santé des populations. Je promets changer de métier », témoigne-t-il. A cet effet, il lance également un appel à ses coéquipiers de changer de métier qui leur permettra de gagner dignement leur vie en digne Burkinabè. Même son de cloche pour Boureima Soré, interpelé lors d’un contrôle de prix de la BMCRF, le 13 mai 2026. Pour non-respect des prix du ciment, ce grossiste a été convoqué au siège. Il promet de respecter la règlementation en vigueur et invite ces collègues à arrêter la spéculation autour du ciment. Du reste, la population est aussi invitée à accompagner les acteurs de lutte contre la fraude par des dénonciations de mauvaises pratiques. Fleur BIRBA fleurbirba@gmail.com Ce que dit la loi en matière de fraude La loi n°016 du 27 avril 2017 portant organisation de la concurrence au Burkina Faso, régit la liberté des prix, la saine concurrence et la protection du consommateur. Elle a pour objet de préserver et de favoriser la concurrence et de protéger le consommateur. A son article 41, elle stipule que tout vendeur de biens, tout prestataire de service doit, par voie de marquage, d’étiquetage, d’affichage ou par tout autre procédé approprié, informer le consommateur sur les prix, les limitations éventuelles de la responsabilité contractuelle et les conditions particulières de la vente. L’article 52 interdit à l’importation ou à l’exportation des produits contrefaisants destinés au commerce. Les infractions de la présente loi relatives aux tromperies et falsifications et à la sécurité du consommateur sont punies d’une amende de 500 000 à 500 000 000 F CFA et d’un emprisonnement d’un an à cinq ans ou de l’une de ces deux peines seulement. F.B. Un scanner pour renforcer la lutte En vue de renforcer l’efficacité dans la lutte contre la fraude, il ressort que la mise à la disposition d’un scanner dans les postes de contrôle des douanes serait d’une grande importance. Dans ce sens, le ministère de l’Economie et des Finances, avec l’appui de la Chambre de commerce et d’industrie, prévoit d’installer un scanner au bureau des douanes de 2e catégorie de Dakola, mais qui se fait toujours attendre. Vivement l’installation de cet appareil qui devra faciliter le contrôle des marchandises, contribuer à réduire considérablement la fraude. F.B. Un groupe WhatsApp pour stimuler les agents dans la lutte contre la fraude Un gabelou a créé un groupe WhatsApp en vue de motiver ses collègues à accentuer la lutte contre la fraude. Chaque jour, il diffuse les saisies qui sont opérées. Dans ces publications, il présente les techniques d’opération, stimulant ainsi tous les agents et renforçant leur vigilance. Une manière pour lui d’appeler ses collègues à ne pas baisser la garde dans la traque des contrebandiers qui produit des résultats probants. F.B.",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127
-    },
-    {
-      "title": "Une vision intégratrice salutaire",
-      "link": "https://www.sidwaya.info/une-vision-integratrice-salutaire/",
-      "pubDate": "2026-06-03T23:21:19.000Z",
-      "description": "Petit à petit, la libre circulation des personnes et des biens, sur le continent africain, devient une réalité. Les décisions prises dans ce sens, ces dernières années, en disent long. A juste titre, cela est à l’honneur de tout panafricain qui fait de l’unité des peuples africains son cheval de bataille, ainsi que l’avaient rêvé les pères des indépendances africaines. Le Rwanda, dans sa politique migratoire, fait figure de pionnier de la libre circulation tant souhaitée en Afrique, avec une exemption totale de visa pour tous les citoyens africains depuis 2023. La Gambie a également impulsé une politique d’accès sans visa depuis 2020, tandis que les Seychelles maintiennent, depuis plusieurs années, un régime de libre entrée pour les Africains. On le sait, la question de la libre circulation revient à plusieurs reprises au cœur des politiques d’intégration africaine, du fait de sa place dans le développement du continent. Les mesures prises dans ce sens par certains pays sont donc plus que réconfortantes. Ils sont aujourd’hui près d’une dizaine de pays africains à supprimer le visa d’entrée sur leur territoire. L’on retient particulièrement la Gambie, le Bénin, le Rwanda, le Ghana, le Burkina Faso et très récemment le Togo et le Congo. Pour le dernier pays cité, l’annonce a été faite le 25 mai 2026, à Brazzaville par le Président Denis Sassou-Nguesso. Celui-ci a indiqué, à l’occasion de la célébration de la 63e journée de l’Afrique, tenue en amont des Assemblées annuelles de la Banque africaine de développement (BAD), qu’à compter du 1er janvier 2027, les ressortissants africains pourront entrer en République du Congo pays sans visa. Ces réformes s’inscrivent dans la logique de l’intégration africaine, défendue depuis les indépendances par les dirigeants panafricanistes, puis reprise par l’Union africaine, à travers l’Agenda 2063 et la Zone de libre-échange continentale africaine (ZLECAF). L’on se rappelle que l’Union africaine avait d’ailleurs présenté, en 2016, son projet de passeport africain destiné à favoriser la libre circulation sur le continent. Dix ans plus tard, cette ambition peine encore à se concrétiser à grande échelle. Mais, au regard des actions posées par certains chefs d’Etat, dans la dynamique d’ouverture des frontières africaines et de renforcement de la libre circulation sur le continent, dans le cadre de la Zone de libre-échange continentale africaine, on peut s’en féliciter. Parce que, comme le souhaitent beaucoup d’Africains, cela peut accélérer l’intégration économique, la mobilité régionale et les échanges intra-africains. Cette nouvelle vision intégratrice intervient également dans un contexte de réduction annoncée d’environ 40 % du coût des billets d’avion dans l’espace ouest-africain, afin de favoriser les déplacements sur le continent. Toute chose qu’il faut saluer, ce d’autant plus que la combinaison entre baisse des coûts de transport et suppression des visas pourrait renforcer la fréquentation des aéroports africains et soutenir le développement des services liés au tourisme, à l’hôtellerie, à la culture et aux loisirs. En effet, il faut dire que la Zone de libre-échange continentale africaine constitue un levier d’industrialisation du continent à travers la transformation locale des matières premières, la création d’emplois et le renforcement de la compétitivité des économies africaines. C’est pourquoi, il convient d’encourager la dynamique de promotion de la libre circulation entre Etats pour stimuler les échanges économiques, le tourisme et les investissements intra-africains. Ainsi, plutôt que de se livrer à des bisbilles inopportunes, les dirigeants africains à la traine de la nouvelle dynamique doivent se raviser et comprendre que seule une meilleure intégration des peuples peut être le gage incontournable du développement socioéconomique du continent. Soumaïla BONKOUNGOU",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115
-    },
-    {
-      "title": "Burkina/Musique : « J'évite la vulgarité et les messages susceptibles d'égarer, par conviction », dixit Nabalüm",
-      "link": "https://lefaso.net/spip.php?article146905",
-      "pubDate": "2026-06-03T22:30:00.000Z",
-      "description": "Discrète dans ses apparitions médiatiques, la chanteuse Nabalüm a créé l'événement en animant une conférence de presse le vendredi 29 mai 2026 à Ouagadougou. Face aux professionnels des médias, l'artiste, qui accorde rarement des entretiens, a annoncé sa volonté de renforcer ses relations avec la presse. Une occasion que Lefaso.net n'a pas manqué de saisir pour recueillir ses confidences sur ses dix années de carrière, les défis qu'elle a relevés, ses projets, … Lefaso.net : Qu'est-ce qui vous a amené à choisir la musique comme carrière il y a dix ans ? Nabalüm : Au départ, tout s'est fait avec patience. Je pense que le chant est ce que je fais le mieux. Je ne peux pas passer une journée sans chanter. La musique fait partie de moi ; c'est une passion avec laquelle je suis née. Pouvoir l'exercer de manière professionnelle était un rêve que je nourrissais depuis 2016. Dix ans plus tard, je suis toujours présente sur la scène musicale burkinabè. Au fil de mon parcours, j'ai compris que ce métier n'était pas aussi facile que je l'imaginais à mes débuts. Aujourd'hui, grâce à Dieu, je poursuis mon chemin avec détermination. Je crois avoir acquis une place dans le paysage musical burkinabè, une place qui mérite d'être davantage reconnue et valorisée. Lorsque vous faites le bilan de ces dix années de carrière, quels moments de bonheur retenez-vous particulièrement et quels épisodes plus douloureux ont marqué votre parcours ? Parmi mes plus beaux souvenirs de ces dix années de carrière, il y a d'abord ma première grande scène à Paris. Ensuite, lorsque je suis arrivée au Burkina Faso en juin 2016, deux mois après la sortie de la chanson “M'yamê”, j'ai découvert avec émotion à quel point le public l'avait adoptée. Le titre était diffusé partout : à la radio, à la télévision et dans les différents espaces publics. Cet engouement m'a profondément touchée. Je garde également de merveilleux souvenirs des nombreuses scènes que j'ai eu l'occasion de partager, au Burkina Faso comme à l'étranger. Celle qui m'a le plus marquée reste sans doute mon concert au Soudan. Plus d'un millier de personnes étaient présentes et un écran avait même été installé à l'extérieur afin que ceux qui ne pouvaient pas accéder à la salle puissent suivre le spectacle. C'était un moment exceptionnel, d'autant plus qu'il s'agit d'un pays où les populations ont rarement l'occasion d'assister à des spectacles en raison de la crise sécuritaire et humanitaire. Ce qui m'a particulièrement marquée ce jour-là, c'est la connexion qui s'est créée entre le public et moi. Pourtant, je chantais majoritairement en mooré et la plupart des spectateurs ne comprenaient pas la langue. Malgré cela, ils étaient pleinement réceptifs à la musique et à l'émotion que je transmettais. Ce sont des instants comme celui-là qui marquent un artiste à vie. J'ai eu la chance de vivre des expériences similaires au Burkina Faso, à Abidjan, notamment lors du Marché des arts du spectacle africain (MASA), à Djibouti et dans plusieurs autres pays. Ce sont ces moments de partage avec le public qui nous donnent la force de continuer malgré les difficultés. Concernant les souvenirs plus difficiles, je dirais qu'ils sont liés à la perte de certaines illusions. Au début, on imagine souvent que tout sera simple et harmonieux. Avec le temps, on découvre que le milieu artistique n'est pas toujours un long fleuve tranquille. Comme dans beaucoup d'autres domaines, il est marqué par des coups bas et parfois par la méchanceté. Toutefois, je préfère ne pas concentrer mon énergie sur ces aspects. Je choisis plutôt de me focaliser sur ce qui me permet d'avancer, de résister et de poursuivre mon chemin. La plus grande épreuve a sans doute été cette désillusion : le moment où l'on doit abandonner une part de sa naïveté, ouvrir les yeux sur les réalités du métier et trouver en soi le courage nécessaire pour continuer à progresser. L'artiste a débuté sa carrière en 2016 Après avoir collaboré avec deux maisons de production, La Cour du Naaba et Destiny Prod, vous avez choisi, en 2026, de créer votre propre structure, Karism Prod. Quelles sont les raisons qui ont motivé cette décision ? J'ai créé ma propre structure de production parce que j'avais envie de m'exprimer pleinement et de porter ma vision artistique en toute liberté. Mes expériences au sein des deux maisons de production par lesquelles je suis passée m'ont énormément appris. Je tiens d'ailleurs à leur exprimer ma reconnaissance, car certaines choses ne s'achètent pas avec de l'argent. Elles ont investi de l'énergie, du temps et des moyens pour accompagner nos projets, et cela mérite d'être salué. Aujourd'hui, j'ai voulu créer Karism Prod afin de pouvoir être entièrement moi-même dans ma démarche artistique. Lorsqu'on évolue sous une maison de production, il peut naturellement exister des visions ou des orientations qui ne s'alignent pas toujours, puisque chaque personne a sa manière de voir les choses, son calendrier et ses priorités. Avec Karism Prod, c'est véritablement l'univers de Nabalüm qui pourra s'exprimer de la manière la plus authentique possible. J'espère naturellement que cette vision trouvera un écho favorable auprès du public. Nous continuerons également à apprendre de nos erreurs et des expériences qui fonctionneront moins bien, car l'apprentissage est permanent. Dans ce milieu, personne ne détient à lui seul le secret de la réussite. Chacun avance étape par étape, avec le désir de progresser et l'espoir que les choses évoluent positivement. En choisissant l'auto-production, vous assumez désormais seule les risques et les coûts liés à votre carrière artistique. Cette nouvelle responsabilité ne vous inquiète-t-elle pas ? Au départ, il y a naturellement une part d'appréhension. Mais avec le temps, on finit par se convaincre que lorsqu'on a choisi de se lancer, il faut aller jusqu'au bout. Comme on le dit souvent, lorsqu'on saute à l'eau, il faut apprendre à nager. Aujourd'hui, je poursuis ce chemin avec détermination, en gardant à l'esprit l'objectif d'atteindre l'autre rive. Votre univers musical est parfois perçu comme élitiste et davantage destiné à un public plus âgé. Comment accueillez-vous ces critiques et quel regard portez-vous sur cette perception ? Je pense que cette perception est aussi liée à ma personnalité. Je suis quelqu'un de posé et de réfléchi. Avant d'entreprendre quelque chose, je m'assure d'être capable de l'assumer pleinement. Lorsque j'ai choisi de faire de la musique, je me suis fixé une ligne de conduite. J'aimerais qu'un jour mes enfants puissent faire écouter mes chansons à d'autres personnes avec fierté. C'est pourquoi j'évite la vulgarité et les messages susceptibles d'égarer, par conviction et par principe. Je suis consciente que tout le monde ne se reconnaît pas forcément dans mon univers artistique. Certains apprécient ce que je fais, d'autres moins. Mais jusqu'à présent, j'ai réussi à toucher et à satisfaire une grande partie de mon public, et cela me convient. J'espère qu'avec le temps, d'autres personnes rejoindront cette grande famille. Quant à ceux qui qualifient ma musique d'élitiste, je dirais que mes choix artistiques sont assumés. Un jour, nous vieillirons tous, et j'aimerais pouvoir regarder mes clips et réécouter mes chansons sans aucun malaise, avec la même fierté qu'aujourd'hui. Les journalistes présents à la conférence de presse de Nabalüm De nombreux acteurs du show-business estiment qu'au regard de votre talent, de la qualité de vos prestations scéniques et de votre maîtrise du live, la reconnaissance dont vous bénéficiez aujourd'hui n'est pas encore à la hauteur de votre mérite. Que vous inspirent ces appréciations qui reviennent régulièrement ? C'est une remarque qui me revient effectivement très souvent. Mais comme le dit l'adage : « Nul n'est prophète en son pays ». Malheureusement, c'est un constat que l'on peut faire dans notre pays : de nombreux artistes talentueux, qui ont beaucoup à apporter, ne bénéficient pas toujours de la reconnaissance qu'ils méritent. Cette situation ne date pas d'aujourd'hui et ne me concerne pas uniquement. Avant moi, plusieurs artistes de grande valeur ont connu la même réalité. Je pense notamment à Bil Aka Kora et à bien d'autres qui ont énormément contribué au développement de la musique burkinabè et qui ont encore beaucoup à offrir. Je suis convaincue que les véritables talents ne sont pas suffisamment valorisés au Burkina Faso. J'espère que les choses évolueront avec le temps. En attendant, nous continuons notre parcours avec détermination, en donnant le meilleur de nous-mêmes et en partageant ce que nous avons à offrir. Par ailleurs, nous constatons souvent que notre travail est davantage reconnu à l'extérieur du pays que chez nous. C'est une réalité avec laquelle nous composons, tout en gardant l'espoir qu'un changement de regard et de mentalité s'opérera progressivement. Dans un milieu où la visibilité et l'exposition médiatique occupent une place importante, votre tempérament plutôt introverti représente-t-il un défi pour votre carrière ? En vérité, la plupart des artistes que vous voyez sont introvertis. Un artiste est quelqu'un qui joue un rôle lorsqu'il est sur scène, mais sa personnalité est souvent tout autre dans la vie de tous les jours. J'ai rencontré des artistes qui paraissaient très extravertis, voire un peu excentriques sur scène, mais qui, dans la réalité, étaient extrêmement timides. Certains ont même du mal à regarder leurs interlocuteurs dans les yeux. Je ne pense donc pas que l'introversion soit un frein à une carrière artistique. Cela dit, il est vrai que notre métier exige une certaine interaction avec le public et les médias, puisque nous sommes des personnalités publiques. J'ai beaucoup travaillé sur cet aspect au fil des années. Si aujourd'hui je peux décider d'organiser une conférence de presse et de rencontrer des journalistes, c'est parce que j'ai fourni de gros efforts pour sortir de ma zone de confort. À terme, Nabalüm ambitionne de produire et d'accompagner de jeunes talents Malgré tout, je fonctionne beaucoup au ressenti. Je ne me sens obligée de rien. Je fais les choses lorsque je me sens prête, afin de pouvoir les assumer pleinement par la suite. Au-delà de votre musique, de nombreux hommes disent être séduits par votre personnalité et votre physique. Comment vivez-vous cette attention particulière ? Avez-vous parfois été confrontée à des comportements envahissants ou déplacés ? Tant que cela se fait dans le respect, je ne vois aucun problème. On ne peut pas empêcher les gens de nous admirer. Au contraire, j'en suis reconnaissante. Je sais que je ne suis pas la plus belle femme du Burkina Faso, donc le fait que certaines personnes apprécient ma personnalité, mon image ou ce que je dégage ne me semble pas négatif en soi. Lorsqu'une personne me dit avec respect qu'elle m'apprécie, qu'elle me trouve belle ou qu'elle aime mon travail, cela me fait sourire. Je me dis que si je peux susciter un sentiment positif chez quelqu'un, c'est plutôt une bonne chose. En revanche, lorsque cette admiration prend une tournure déplacée ou perverse, cela devient dérangeant. J'essaie pourtant, à travers mon image et mon comportement, de ne laisser croire à personne qu'il existe des possibilités au-delà de ce que je suis prête à offrir. Mais chacun est libre de ses pensées et de ses interprétations. Il arrive effectivement que certaines situations soient désagréables. On croise parfois des personnes très directes, voire vulgaires dans leur manière de s'exprimer. Heureusement, elles restent minoritaires. Je remercie tous ceux qui me témoignent leur affection, que ce soit à travers des messages privés, des courriels ou des commentaires. Que Dieu les bénisse et j'espère que leurs compagnes seront heureuses à leurs côtés. Mais je ne peux pas être la femme de tout le monde (rires). Dix ans de carrière, quel programme avez-vous concocté pour cet anniversaire ? Au programme de cette célébration, il y a d'abord un nouvel album sur lequel nous travaillons actuellement et que nous espérons sortir cette année. Nous prévoyons également un grand concert afin de communier avec toutes les personnes qui accompagnent Nabalüm depuis 2016 jusqu'à aujourd'hui. Des prestations sont aussi prévues à l'extérieur du pays. Pour le reste, les détails seront dévoilés au moment opportun. Nous réservons encore quelques surprises au public. Nabalüm exprime sa gratitude à ses fans pour leur soutien constant Quels conseils donneriez-vous à une jeune fille ou à une femme qui aspire à faire carrière dans la musique ? Je leur conseille de garder la tête sur les épaules, peu importe le succès qui viendra. Quand on est une femme, on est un trésor, une fleur. Il ne faut donc pas être prête à tout pour réussir. Il y aura certainement beaucoup de propositions qui promettront une réussite rapide, mais il est important de connaître ses valeurs et de les préserver. Il faut se fixer des limites et faire du travail sa principale arme. Je suis convaincue que celui qui travaille n'échoue jamais. Peu importe le temps que cela prend pour accomplir de grandes choses, chaque effort finit toujours par être récompensé. Il faut donc bien réfléchir avant de se lancer. Il ne faut pas arriver dans ce milieu avec naïveté en pensant que tout est rose. Il y a beaucoup de difficultés, mais rien n'est impossible. Si les hommes peuvent le faire, nous aussi, nous pouvons y arriver. Quel est votre mot de la fin ? Notre dernier mot est un souhait de paix pour notre pays, le Burkina Faso, que nous aimons profondément. À travers nos chansons et les actions que nous menons, nous essayons, à notre manière, de contribuer à cet idéal. Nous prions pour notre pays et espérons qu'un jour, les artistes pourront à nouveau parcourir toutes les régions du Burkina Faso, y donner des concerts et aller à la rencontre de leurs fans. Mon plus grand souhait est également de voir la musique burkinabè s'exporter davantage et rayonner à l'international, à l'image de ce que réussissent aujourd'hui de nombreux autres pays. Interview réalisée par Samirah Bationo Lefaso.net",
+      "title": "Sports de combat : Baba Ayoub Diarra, champion de Vô Vietnam et journaliste reporter d'images au service de l'excellence",
+      "link": "https://lefaso.net/spip.php?article146920",
+      "pubDate": "2026-06-04T12:53:35.000Z",
+      "description": "Athlète international de Vô Vietnam Võ Cõ Truyên (arts martiaux vietnamiens) et journaliste reporter d'images, Baba Ayoub Diarra mène de front deux passions qu'il nourrit avec la même détermination. Champion national incontesté de sa discipline depuis 2020, il s'est imposé au fil des années parmi les meilleurs représentants burkinabè sur les scènes africaine et mondiale. Derrière la caméra comme sur les aires de combat, ce jeune professionnel cultive le goût de l'effort et de l'excellence. Son ambition aujourd'hui : offrir au Burkina Faso sa toute première médaille d'or mondiale en Vô Vietnam. Athlète international de Vô Vietnam, journaliste reporter d'images et passionné de sports de combat, Baba Ayoub Diarra incarne la persévérance et l'abnégation. Champion national depuis 2020, il s'est progressivement imposé comme l'un des meilleurs représentants burkinabè de sa discipline sur les scènes africaine et mondiale. Aujourd'hui, son plus grand rêve est d'offrir au Burkina Faso sa première médaille d'or mondiale. Portrait d'un combattant déterminé qui refuse de renoncer à ses ambitions malgré les obstacles. L'histoire entre Baba Ayoub Diarra et le Vô Vietnam débute en 2017. À l'époque, il est étudiant en première année d'anglais à l'université Joseph-Ki-Zerbo. Désireux de découvrir les arts martiaux, il s'inscrit à l'Université club de Ouagadougou (UCO). Très passionné, il parvient à concilier ses études et les entraînements. Entre les cours, les révisions et la pratique sportive, il trouve le temps nécessaire pour progresser. En 2018, seulement une année après ses débuts, il participe pour la première fois au championnat national de Vô Vietnam Võ Cõ Truyên. Mais c'est en 2019, lors de sa deuxième participation, qu'il se révèle véritablement en décrochant la médaille d'argent. L'année suivante, en 2020, Baba Ayoub Diarra inscrit son nom au palmarès du championnat national en remportant sa première médaille d'or. Depuis lors, il demeure le champion national incontesté de sa catégorie. 2019, premier test réussi sur la scène internationale Deux ans seulement après ses débuts dans la discipline, Baba Ayoub Diarra est repéré par la Fédération burkinabè de Vô Vietnam. Grâce à ses performances, il est sélectionné en 2019 pour participer à sa première compétition internationale en Côte d'Ivoire. Très vite, il se distingue et crée la surprise. À l'issue de la compétition, il décroche deux médailles d'argent et devient vice-champion d'Afrique. « J'ai été vice-champion d'Afrique avec deux médailles d'argent pour une première participation à une compétition internationale. Et le déclic est parti de là », se rappelle-t-il. Cette performance marque un tournant dans sa carrière. Rapidement, Baba Ayoub Diarra s'adapte au niveau continental et devient un habitué des compétitions internationales. En 2022, il participe au championnat du monde de Vô Vietnam Võ Cõ Truyên en Algérie. Il y remporte deux médailles de bronze et décroche également un titre de vice-champion du monde dans sa catégorie. Son parcours sportif connaît toutefois un coup d'arrêt après le championnat d'Afrique de Vô Vietnam Võ Cõ Truyên organisé à Ouagadougou en 2023. Bien qu'il y ait remporté deux médailles d'or et une médaille d'argent, il devra patienter plusieurs années avant de retrouver la scène internationale. Des difficultés financières et administratives l'empêchent en effet de participer à certaines compétitions mondiales, dont l'une prévue au Vietnam. Baba Ayoub Diarra lors du tournoi international de Võ Cõ Truyên Võ Viet au Maroc a obtenu 7 médailles. « Je devais aller en 2023 au Vietnam, pour prendre part au tournoi international de Ximing City. Je n'ai pas pu le faire parce qu'il y avait quelques soucis. L'année qui a suivi, en 2024, je devais y aller encore mais j'ai été bloqué à Istanbul », a-t-il déclaré. Plutôt que de s'apitoyer sur son sort après trois années de disette internationale, le champion choisit de transformer cette période en opportunité. Il intensifie ses entraînements afin de corriger certaines lacunes et refuse de céder au découragement. « Cette période m'a permis de quitter ma zone de confort, de savoir ce que je dois travailler afin de pouvoir mieux manœuvrer, d'améliorer mes performances pour les échéances qui allaient venir », confie le champion national de Vô Vietnam Võ Cõ Truyên. Les résultats ne tardent pas à suivre. Pour son retour sur la scène internationale en 2026, Baba Ayoub Diarra réalise une performance remarquable lors du tournoi international de Võ Cõ Truyên Võ Viet organisé au Maroc. Il y décroche sept médailles au total, dont deux en or, trois en argent et deux en bronze. « Il faut savoir également que cette victoire est dédiée à tout le peuple burkinabè, à toutes les forces combattantes qui se battent pour permettre au Burkina Faso de rester debout. Et cette victoire est également pour tous ceux qui m'ont soutenu dans l'ombre, pour que je puisse participer à cette compétition », raconte-t-il à son retour du Maroc. En plus de sa passion pour le sport, Baba Ayoub Diarra est journaliste reporter d'images, une passion qui lui permet de se prendre en charge. Entre passion du sport et vocation journalistique Parallèlement à sa carrière sportive, Baba Ayoub Diarra nourrit depuis longtemps une passion pour le journalisme. Dès le lycée, il effectue des stages en radio à Bobo Dioulasso d'où il est originaire. « J'ai commencé par la radio. Quand je suis venu à Ouagadougou pour mes études supérieures, j'étais également stagiaire à la télévision Canal 3. Cela fait que j'ai pratiqué plusieurs choses à la fois. C'est ainsi que je me suis débrouillé jusqu'à aujourd'hui », explique-t-il. Aujourd'hui, l'athlète international exerce comme journaliste reporter d'images à la Télévision C360. Une profession qui lui permet de vivre de sa passion tout en poursuivant son parcours sportif de haut niveau. « Aujourd'hui, ce qui me permet de joindre les deux bouts, c'est le journalisme. J'ai une licence en anglais pour le moment. Mais c'est le journalisme qui est mon métier, ma profession aujourd'hui », raconte-t-il. Entre le journalisme et les arts martiaux, Baba Ayoub Diarra continue de nourrir de grandes ambitions. Son regard est désormais tourné vers le prochain championnat du monde, pour lequel il se prépare activement depuis plusieurs semaines. « Mes ambitions ou mes perspectives, c'est d'offrir au Burkina Faso la toute première médaille d'or mondiale. Parce qu'aujourd'hui, c'est vrai que j'ai engrangé des médailles un peu partout, mais mon plus grand rêve, mon plus grand souhait, c'est d'aller vraiment à la conquête de la médaille d'or au championnat du monde pour mon pays », lance-t-il, visiblement déterminé à écrire une nouvelle page de l'histoire du Vô Vietnam burkinabè. Jean Élysée Nikiéma (stagiaire) Lefaso.net",
       "_source": "Lefaso.net",
       "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
@@ -997,7 +969,6 @@
         "economic",
         "diplomatic",
         "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -1013,20 +984,19 @@
       "_score": 115
     },
     {
-      "title": "Africa Day 2026 : UBA Burkina célèbre l’unité et la culture africaine",
-      "link": "https://netafrique.net/africa-day-2026-uba-burkina-celebre-lunite-et-la-culture-africaine/",
-      "pubDate": "2026-06-03T21:34:46.000Z",
-      "description": "La Banque UBA Burkina a célébré, ce 25 mai, l’Africa Day à travers une série d’activités culturelles et ludiques alliant cohésion interne et proximité avec sa clientèle. Le lundi 25 mai 2026, UBA Burkina a célébré Africa Day, une date symbolique qui commémore chaque année l’unité du continent africain et met en lumière la richesse de ses cultures, de ses peuples et de ses identités. Placée sous le thème « Celebrating Africans, Empowering Africans », l’édition 2026 s’inscrit dans la vision du groupe United Bank for Africa, qui entend valoriser les talents africains tout en accompagnant les populations et les entreprises grâce à des solutions financières adaptées et inclusives. Cette célébration traduit également la volonté de la banque de renforcer son ancrage panafricain et son rôle dans la transformation économique du continent. La Directrice Générale de UBA Burkina, Madame Rasmata Djibo, a rappelé que cette journée constitue un moment fort pour l’institution, permettant de réaffirmer son identité panafricaine et de traduire concrètement son engagement en faveur du développement de l’Afrique. Elle a également salué la forte mobilisation des membres du personnel, soulignant que leur engagement, leur énergie et leur esprit d’équipe contribuent au rayonnement de UBA Burkina au sein du groupe. De son côté, le Directeur Général Adjoint, M. Serge Coulibaly, a mis en avant le rôle stratégique de l’institution dans l’intégration économique africaine. Selon lui, la présence de UBA dans plusieurs pays du continent permet de faciliter les échanges commerciaux, les investissements et les transactions transfrontalières, contribuant ainsi à rapprocher davantage les économies africaines. La célébration de Africa Day 2026 a été marquée par une série d’activités organisées aussi bien en interne qu’en externe. En interne , les collaborateurs ont participé à des animations mettant en valeur les tenues traditionnelles africaines, des prestations artistiques et musicales, ainsi que des quiz portant sur la culture africaine et les produits de la banque. Un concours des meilleures tenues individuelles et en groupe a également permis de renforcer l’esprit de convivialité et de cohésion au sein des équipes. En externe , la banque a déployé plusieurs initiatives digitales, notamment des jeux-concours et quiz sur les réseaux sociaux, permettant d’impliquer les clients et le grand public. Des actions de proximité ont également été menées dans les agences, avec des animations et échanges visant à renforcer la relation client et à promouvoir l’identité africaine de la banque. Au-delà de son caractère festif, Africa Day est ainsi présenté comme un moment de cohésion interne, de reconnaissance du personnel et de renforcement du lien avec la clientèle. Pour UBA Burkina, l’objectif reste clair : projeter une image moderne, dynamique et profondément africaine, tout en affirmant son rôle actif dans la transformation économique et l’intégration du continent. A PROPOS DE UBA BURKINA Nous sommes une banque axée sur le client, numérique et intégrée. Notre offre de services est centrée sur des solutions Clients à travers les services bancaires aux : Particuliers Petites et moyennes entreprises Sociétés Commerciales Grandes Entreprises et Multinationales Gouvernements, Entreprises parapubliques, Institutions financières. Nous sommes présents sur le territoire national à travers un réseau de 26 agences en constante évolution, un parc de 41 guichets automatiques de billets, un ensemble de TPE et un personnel de 450 employés dévoués à la cause de sa clientèle. Nous bénéficions de la solide expérience du Groupe UBA Plc. L’article Africa Day 2026 : UBA Burkina célèbre l’unité et la culture africaine est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
+      "title": "Burkina: attention, de nouvelles fausses plateformes d’investissement en ligne",
+      "link": "https://www.wakatsera.com/burkina-attention-de-nouvelles-fausses-plateformes-dinvestissement-en-ligne/",
+      "pubDate": "2026-06-04T12:39:18.000Z",
+      "description": "La Brigade Centrale de Lutte Contre la Cybercriminalité (BCLCC), à travers son service d’assistance et de veille technologique, constate l’apparition de nouvelles fausses plateformes d’investissement en ligne dénommées «Electron by Goldex» et «NIO». Même mode opératoire que toutes les autres plateformes qui ont cramés : ✓ promesse de revenus journaliers élevés et de gains rapides ; ✓ invitation à investir dans l’achat de prétendus packs ou kits d’investissement ; ✓ système de parrainage afin d’attirer de nouveaux adhérents ; ✓ versement de petits gains au départ afin de gagner la confiance des investisseurs ✓ incitation des victimes à investir des sommes importantes dans l’espoir de réaliser davantage de profits. Le piège derrière ces plateformes Apres avoir collecté d’importantes sommes d’argent : ✓ les retraits deviennent difficiles, puis impossibles ; ✓ les comptes des victimes sont bloqués ou restreints sans explication ; ✓ les plateformes deviennent soudainement inaccessibles ; ✓ les promoteurs disparaissent avec les fonds des victimes Conseils pour se protéger : ✓ Méfiez-vous des plateformes qui promettent des gains élevés, rapides et garantis ; ✓ Ne prenez jamais une décision d’investissement sous la pression ou l’urgence ; ✓ Soyez particulièrement prudents face aux systèmes de parrainage qui conditionnent les gains au recrutement de nouveaux adhérents. La BCLCC invite les populations à faire preuve de la plus grande vigilance face à ces plateformes d’investissement en ligne. Derrière les promesses de revenus faciles, rapides et garantis se cachent souvent des mécanismes frauduleux susceptibles d'occasionner d'importantes pertes financières. Signalez tout cas suspect via la plateforme Alerte-BCLCC. Source: BCLCC L’article Burkina: attention, de nouvelles fausses plateformes d’investissement en ligne est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
-        "political"
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -1035,49 +1005,20 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "A2"
       },
-      "_rating": "F2",
-      "_score": 115
+      "_rating": "A2",
+      "_score": 111
     },
     {
-      "title": "Prévention des conflits dans le Golfe de Guinée : Les acteurs attendent passer des promesses aux actions",
-      "link": "https://atop.tg/prevention-des-conflits-dans-le-golfe-de-guinee-les-acteurs-attendent-passer-des-promesses-aux-actions/",
-      "pubDate": "2026-06-03T21:07:26.000Z",
-      "description": "Lomé, 3 juin (ATOP) – La capitale togolaise abrite les 3 et 4 juin, le Dialogue régional de haut niveau sur la prévention des conflits dans le Golfe de Guinée. L’activité est co-organisée par le Programme des Nations Unies pour le développement (PNUD), le Fonds des Nations Unies pour la population (UNFPA) et le Haut-Commissariat des Nations Unies pour les réfugiés (HCR). Elle réunit de hauts responsables gouvernementaux, des institutions régionales, du système des Nations Unies, des partenaires au développement afin de traduire un agenda de prévention partagé en actions concrètes et durables. Le Dialogue objet de cette rencontre, est une plateforme orientée vers la prise de décisions, pour des engagements concrets adossés à une volonté politique affirmée. Les échanges seront structurés autour de discussions en table ronde facilitées sur les interconnexions systémiques entre l’insécurité rurale, les économies illicites, les dynamiques de déplacement et les vulnérabilités des zones côtières. Le ministre de la Sécurité, Calixte Madjoulba a fait savoir que le Golfe de Guinée, est un espace géographique qui fait face à une convergence rapide de menaces multiples. Il a cité notamment l’extrémisme violent, le crime organisé transnational, la piraterie maritime, les trafics illicites, les conflits entre agriculteurs-éleveurs exacerbés par les effets du changement climatique, ainsi que la prolifération des armes légères et de petit calibre. Le ministre a mentionné que cette situation crée un cycle d’insécurité infernale qu’aucun pays ne peut seul affronter. Il a fait appel à des actions collectives, coordonnées et durables fondées sur la solidarité régionale et le partage d’expériences. La cordonnatrice résidente du système des Nations Unies au Togo, Mme Coumba Sow a indiqué que face à cette complexité, les réponses traditionnelles montrent leurs limites. « Nous devons adopter une approche de sécurité développementale intégrée, dans laquelle la sécurité n’est plus uniquement militaire, le développement n’est plus sectoriel, et la gouvernance devient un levier central de stabilisation », a-t-elle déclaré. Mme Coumba a fait savoir que dans ce cadre, la prévention devient un enjeu de souveraineté préventive collective, car aucune frontière ne retient les flux de menaces, qu’elles soient sécuritaires, économiques ou climatiques. La Facilité de Dialogue envisagée, marquera un changement de paradigme fondamental. Il s’agira de passer de réponses réactives et cloisonnées fondées sur des projets à un modèle évolutif, coordonné au niveau régional, qui articule soutien à la gouvernance, création de moyens de subsistance et programmation de la protection au sein d’un cadre programmatique unique. Il est attendu le lancement de la plateforme Facilité de Prévention pour le Golfe de Guinée (2026-2029), qui sera pilotée pour le développement et pour la prévention des conflits dans la sous-région. Une feuille de route régionale en matière de prévention sera également élaborée et adoptée par les participants. Elle définira clairement les priorités et les axes de mise en œuvre dans les cinq pays. Le Golfe de Guinée englobe le Bénin, le Burkina Faso, la Côte d’Ivoire, le Ghana et le Togo. ATOP/KYA/BA",
-      "_source": "ATOP (Togo)",
-      "_sourceId": "rss_atop",
+      "title": "Wa West, Batié leaders push for border integration and shared development",
+      "link": "https://www.myjoyonline.com/wa-west-batie-leaders-push-for-border-integration-and-shared-development/",
+      "pubDate": "2026-06-04T15:29:38.000Z",
+      "description": "Traditional authorities, local government officials and security agencies from Ghana’s Wa West District and the Commune of Batié in Burkina Faso have reaffirmed their commitment to transforming their shared border into a corridor of economic integration, peace and sustainable development. The commitment was made during a bilateral stakeholder engagement held in Wechiau under the SKBoWa project, an initiative implemented by the German development agency, aimed at promoting peace, security and social cohesion in border communities. Speaking on behalf of the Chief of Wechiau, Naa Imoru Nandong Gomah II, Razack Yamusah Abdulai Issahaku described national borders as artificial divisions that should not undermine the long-standing cultural and family ties between communities on both sides of the frontier. He noted that the Black Volta River serves both populations and should be regarded as a shared resource rather than a dividing line. Drawing a comparison with the nearby , Mr Issahaku said wildlife moves freely across borders without regard for national boundaries. “Hippos do not carry passports, elephants do not stop at border posts,” he remarked. “If animals can share one ecosystem, why should humans fight over one land?” He urged security agencies in both countries to strengthen intelligence sharing and cooperation, arguing that collaboration was more effective in maintaining peace than reliance on armed enforcement alone. Wa West District Chief Executive Richard Wulo described relations between Wa West and Batié as being founded on shared history, family connections and trade. Against the backdrop of growing insecurity and violent extremism in parts of West Africa, Mr Wulo called for stronger unity among border communities. He highlighted three key pillars of the SKBoWa project: inclusive dialogue, community micro-projects and a Soccer for Peace tournament aimed at fostering social cohesion and youth engagement. The Chief of Batié, Dah Sanhoulo, also stressed the importance of cooperation between the two communities. He noted that despite the Black Volta River being at full capacity, the Burkinabe delegation had crossed the river to attend the forum, demonstrating its commitment to the peace initiative. He called for regular joint border patrols and improved communication channels between Ghanaian and Burkinabe security agencies to enable the swift resolution of localised disputes before they escalate. Mr Sanhoulo further urged local government authorities to assign defined development responsibilities to traditional leaders, arguing that their influence could be harnessed more effectively in promoting peace and development. Participants at the forum broadly agreed on the need to share social infrastructure and resources across the border. Mr Issahaku advocated unrestricted access to essential services such as healthcare, education and agriculture, regardless of nationality. “If a clinic is full in Wechiau, Batié mothers should enter. If Batié has seeds that survive drought, Wechiau farmers should plant them,” he said, adding that effective border management should focus on maximising shared opportunities. GIZ SKBoWa Project Components Manager, Dorcas Affi, reiterated that the project’s central objective is to strengthen friendship, cooperation and peaceful coexistence among border communities. She noted that dialogue and joint activities, including recent cross-border football tournaments, remain important tools for conflict prevention, youth participation and long-term regional stability. To translate discussions into practical actions, participants were divided into three working groups tasked with identifying challenges, proposing collaborative interventions and developing recommendations for implementation. The groups focused on promoting social cohesion between Wa West and Batié, addressing border harassment through enhanced cross-border cooperation, and strengthening local economic development. Resolutions emerging from the discussions are expected to provide a framework for the next phase of development, security cooperation and community integration between the two neighbouring districts.",
+      "_source": "MyJoyOnline (Ghana)",
+      "_sourceId": "rss_myjoyonline",
       "_sourceCat": "ouest_afr",
       "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115
-    },
-    {
-      "title": "Burkina : Le terme ‘’camarade’’ consacré dans les correspondances administratives et les prises de parole",
-      "link": "https://netafrique.net/burkina-le-terme-camarade-consacre-dans-les-correspondances-administratives-et-les-prises-de-parole/",
-      "pubDate": "2026-06-03T23:56:59.000Z",
-      "description": "Dans le contexte de la Révolution progressiste populaire (RPP), le Premier ministre du Burkina, Rimtalba Jean Emmanuel Ouédraogo demande aux présidents des institutions et les ministres de consacrer le terme ‘’camarade’’ dans les correspondances administratives et les prises de parole. D’après le Premier ministre, il ‘’importe de veiller à ce que notre langage officiel reflète l’esprit d’égalité, de fraternité combattante et de solidarité active entre les dirigeants et le peuple en marche vers l’édification d’un Burkina Faso nouveau’’. À cet effet, ‘’dans un esprit d’harmonisation des pratiques déjà en cours au sein de l’administration publique, je vous invite à consacrer l’usage du terme ‘’camarade’’ que ce soit dans les correspondances administratives, que lors des prises de parole et des discours’’. L’article Burkina : Le terme ‘’camarade’’ consacré dans les correspondances administratives et les prises de parole est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
@@ -1095,6 +1036,60 @@
       },
       "_rating": "F2",
       "_score": 107
+    },
+    {
+      "title": "Coopération Burkina Faso–Serbie : « L’Afrique est le futur et nous voulons en faire partie », affirme Slavenko Ristic",
+      "link": "https://burkina24.com/2026/06/04/cooperation-burkina-faso-serbie-lafrique-est-le-futur-et-nous-voulons-en-faire-partie-affirme-slavenko-ristic/",
+      "pubDate": "2026-06-04T14:02:15.000Z",
+      "description": "Le Burkina Faso et la Serbie affichent leur volonté de renforcer leurs relations bilatérales. Le ministre des Affaires étrangères, de la Coopération régionale et des Burkinabè de l’Extérieur, Karamoko Jean Marie Traoré, accompagné du ministre délégué Bêbgnasgnan Stella Eldine Kabré/Kaboré, a reçu en audience, le mercredi 3 juin 2026, une délégation de parlementaires serbes conduite … The post Coopération Burkina Faso–Serbie : « L’Afrique est le futur et nous voulons en faire partie », affirme Slavenko Ristic appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 103
+    },
+    {
+      "title": "Région du Kadiogo : De nouvelles lignes de la Société de Transport en Commun (SOTRACO) bientôt opérationnelles",
+      "link": "https://faso7.com/2026/06/04/faso7-region-du-kadiogo-de-nouvelles-lignes-de-la-societe-de-transport-en-commun-sotraco-bientot-operationnelles/",
+      "pubDate": "2026-06-04T13:48:59.000Z",
+      "description": "De nouvelles lignes du réseau d'autobus de la Société de Transport en Commun (SOTRACO) seront bientôt opérationnelles. Elles sont en cours de validation dans le cadre d'un atelier, ce 4 juin 2026 à la Mairie Centrale de Ouagadougou. Il est question de 13 nouvelles lignes pour le réseau de Ouagadougou, qui passe ainsi de 17 à 30 lignes. La ligne 18 reliera le Terminus de la Place Naba Koom au Terminus de Sondogo. La ligne 19 ira du Terminus Naba Koom à la Station OTAM de Yamtenga. La ligne 20 desservira le trajet de Naba Koom au Lycée Notre-Dame de la Victoire de Saaba. Toutes les parties prenantes prennent part à l'atelier de validation -©️Faso7 La ligne 21 ira de Naba Koom à la Station Shell de Karpala, non loin du site SOTRACO. La ligne 22 reliera l'Université Joseph Ki-Zerbo (UJKZ) à Boulmiougou, précisément au Marché de Naab Puugo. La ligne 23 ira de l'UJKZ au Rond-point Marcoussis. La ligne 24 desservira le trajet de l'UJKZ à la Station SOGELB de Dayongo. La ligne 25 ira de l'UJKZ à Brafaso. La ligne 26 reliera l'UJKZ au Cimetière route de Saponé. La ligne 27 ira de l'UJKZ à la Trame d'accueil. La ligne 28 couvrira le trajet Échangeur du Nord – Échangeur de l'Est – Ouaga Inter. La ligne 29 reliera Nioko 2 au Rond-point des Nations Unies. La ligne 30, enfin, ira du Rond-point Cité Yennenga à l'Espace Morêne. De nouvelles lignes intercommunales également À ces 13 nouvelles lignes urbaines s'ajoutent 9 nouvelles lignes intercommunales. La ligne Komsilga ira de l'Espace Morêne à la Mairie de Komsilga. La ligne Boussé reliera la Gare de Tampouy à la Mairie de Boussé. La ligne Kokologho ira du siège de l'ONEA au marché de Kokologho. La ligne Nagréongo reliera la Gare de l'Est au Marché de Malgretenga. La ligne Dapélogo ira du Musée des Martyrs au Marché de Dapélogo. La ligne Kombissiri reliera Ouaga Inter à l'Hôtel Mitib-Kéita. La ligne Saponé ira de l'Espace Morêne à Karkuidguin. La ligne Donsin reliera le siège de la SOTRACO à l'aéroport de Donsin. La ligne Bingo, enfin, ira du siège de la SONABHY au Dépôt SONABHY de Bingo. Les échanges au cours de cette rencontre de validation ont tourné autour du thème : « Amélioration de la mobilité des populations de Ouagadougou et des communes environnantes grâce au transport en commun ». Elle a connu notamment la présence de présidents de délégations spéciales, de préfets, de représentants du secteur des transports, d'élèves et étudiants et des forces de défense et de sécurité, relevant tous de la région du Kadiogo. Le Directeur Général de la SOTRACO, Drissa Sawadogo, a fait comprendre qu'une étude a été menée au préalable avant le choix de ces nouvelles lignes, pour répondre aux besoins réels des populations. « Avoir les bus, c'est une chose. Mais concevoir un réseau performant, équitable et adapté aux réalités du terrain en est une autre » , a-t-il lancé. Présent à cet événement, le Gouverneur de la région du Kadiogo, Abdoulaye Bassinga, a indiqué que la population de son territoire, qui était de 3 millions d'habitants, s'est multipliée par 2,5 en 15 ans, concentrant 14,8 % de la population nationale. À cet accroissement démographique s'ajoute l'extension géographique de la commune de Ouagadougou, donnant naissance au concept du Grand Ouaga. Il a salué cette initiative d'extension qui vient répondre à la forte demande de mobilité des personnes et des biens, avec la concentration des activités sociales, économiques et administratives. « En validant ce réseau, nous contribuons directement à réduire le taux d'abandon scolaire et estudiantin lié aux difficultés du transport, à désengorger nos artères saturées et à lutter efficacement contre la pollution atmosphérique, tout en limitant la dépendance exclusive aux engins à deux roues » , a-t-il déclaré. Bientôt, la mobilité des étudiants, des élèves et de l'ensemble de la population sera donc améliorée par la SOTRACO. Josué TIENDREBEOGO Faso7 L’article Région du Kadiogo : De nouvelles lignes de la Société de Transport en Commun (SOTRACO) bientôt opérationnelles est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 103
     }
   ],
   "alerts": [
@@ -1102,7 +1097,7 @@
       "title": "Iran rejects ‘excessive demands’ in talks or ceasefire, Leader’s advisor warns US",
       "link": "https://presstv.ir/Detail/2026/06/03/769771/No-room-for-excessive-demands-in-talks-or-ceasefire-Iran-official-warns-US",
       "source": "Press TV (Iran)",
-      "date": "2026-06-04T10:36:16.914Z",
+      "date": "2026-06-04T15:35:52.451Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1115,11 +1110,11 @@
       ]
     },
     {
-      "title": "Israel and Lebanon renew ceasefire deal without Hezbollah, a main combatant",
-      "link": "https://www.washingtonpost.com/world/2026/06/04/israel-lebanon-renew-ceasefire-deal-without-hezbollah/",
-      "source": "Washington Post World",
-      "date": "2026-06-04T10:32:14.000Z",
-      "rating": "B1",
+      "title": "Hezbollah chief Qassem rejects ceasefire with Israel, says northern Israel still at risk",
+      "link": "https://www.jpost.com/middle-east/article-898404",
+      "source": "Jerusalem Post",
+      "date": "2026-06-04T15:28:46.000Z",
+      "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1131,11 +1126,11 @@
       ]
     },
     {
-      "title": "Israel says southern Lebanon offensive ‘ongoing’ despite Washington ceasefire deal",
-      "link": "https://www.aa.com.tr/en/middle-east/israel-says-southern-lebanon-offensive-ongoing-despite-washington-ceasefire-deal/3956388",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-06-04T10:25:04.000Z",
-      "rating": "F1",
+      "title": "News24 | Trump seeks meeting with Iran’s injured supreme leader amid ceasefire crisis",
+      "link": "https://www.news24.com/world/trump-seeks-meeting-with-irans-injured-supreme-leader-amid-ceasefire-crisis-20260603-0868",
+      "source": "News24 (Afrique du Sud)",
+      "date": "2026-06-04T15:22:40.000Z",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1143,6 +1138,38 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "EN DIRECT - Moyen-Orient : le Hezbollah refuse l’accord de cessez-le-feu avec Israël",
+      "link": "https://www.liberation.fr/international/moyen-orient/en-direct-moyen-orient-israel-et-le-liban-conditionnent-un-cessez-le-feu-a-larret-des-tirs-du-hezbollah-20260604_756SANZIRVBZPCXJ6FIVMMLGQA/",
+      "source": "Libération International",
+      "date": "2026-06-04T15:05:48.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Tchaoudjo/30e édition de la journée des retraités du Togo : Les aînés demandent la reconnaissance officielle de leur journée",
+      "link": "https://atop.tg/tchaoudjo-30e-edition-de-la-journee-des-retraites-du-togo-les-aines-demandent-la-reconnaissance-officielle-de-leur-journee/",
+      "source": "ATOP (Togo)",
+      "date": "2026-06-04T15:05:01.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
         }
       ]
     },
@@ -1150,8 +1177,8 @@
       "title": "Middle East crisis live: Israel to continue ground operation in southern Lebanon despite agreed ceasefire",
       "link": "https://www.theguardian.com/world/live/2026/jun/04/middle-east-crisis-israel-lebanon-hezbolllah-us-ceasefire-southern-military-attacks-continue-latest-news-updates",
       "source": "The Guardian World",
-      "date": "2026-06-04T10:23:10.000Z",
-      "rating": "F1",
+      "date": "2026-06-04T15:02:48.000Z",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1163,10 +1190,10 @@
       ]
     },
     {
-      "title": "Israel and Lebanon agree to implement ceasefire",
-      "link": "https://www.ft.com/content/468ce636-1a7e-4a14-9be1-6d0f48b6b48f",
-      "source": "Financial Times World",
-      "date": "2026-06-04T10:22:59.000Z",
+      "title": "Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon",
+      "link": "https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-06-04T14:54:22.000Z",
       "rating": "B1",
       "evidence": "Corrobore",
       "level": "high",
@@ -1179,10 +1206,10 @@
       ]
     },
     {
-      "title": "West Asia war LIVE: Lebanon reports Israeli strikes after conditional ceasefire announcement",
-      "link": "https://www.thehindu.com/news/international/usa-iran-war-updates-israel-lebanon-ceasefire-hezbollah-june-4-2026/article71059457.ece",
+      "title": "Hezbollah rejects latest ceasefire agreement as Israeli strikes kill 4 in Lebanon",
+      "link": "https://www.thehindu.com/news/international/hezbollah-rejects-latest-ceasefire-agreement-as-israeli-strikes-kill-4-in-lebanon/article71061792.ece",
       "source": "The Hindu (Inde)",
-      "date": "2026-06-04T10:19:43.000Z",
+      "date": "2026-06-04T14:35:37.000Z",
       "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
@@ -1195,10 +1222,218 @@
       ]
     },
     {
-      "title": "Israel and Lebanon agree new ceasefire as Trump scrambles to end Iran war",
-      "link": "https://www.theguardian.com/world/2026/jun/04/israel-lebanon-renew-ceasefire-hezbollah-trump-iran-deal-middle-east-us",
-      "source": "The Guardian World",
-      "date": "2026-06-04T10:08:42.000Z",
+      "title": "Hezbollah denounces Israel-Lebanon ceasefire deal as a ‘farce’",
+      "link": "https://www.washingtonpost.com/world/2026/06/04/israel-lebanon-renew-ceasefire-deal-without-hezbollah/",
+      "source": "Washington Post World",
+      "date": "2026-06-04T14:23:52.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Hezbollah rejects fictitious ceasefire in Israel’s interest — statement",
+      "link": "https://tass.com/world/2141503",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-06-04T14:03:14.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Are Japan-Philippines talks a maritime red line for China’s blue-water ambitions?",
+      "link": "https://www.scmp.com/news/china/diplomacy/article/3355969/are-japan-philippines-talks-maritime-red-line-chinas-blue-water-ambitions?utm_source=rss_feed",
+      "source": "South China Morning Post",
+      "date": "2026-06-04T14:00:13.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "red line"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon agree to implement ceasefire",
+      "link": "https://www.ft.com/content/468ce636-1a7e-4a14-9be1-6d0f48b6b48f",
+      "source": "Financial Times World",
+      "date": "2026-06-04T13:36:10.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Procès Athanor: les Maarek, commanditaires d’un assassinat malgré eux",
+      "link": "https://www.mediapart.fr/journal/france/040626/proces-athanor-les-maarek-commanditaires-d-un-assassinat-malgre-eux",
+      "source": "Mediapart International",
+      "date": "2026-06-04T13:15:31.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ]
+    },
+    {
+      "title": "What’s in new Israel-Lebanon ceasefire deal — and what’s missing?",
+      "link": "https://www.al-monitor.com/originals/2026/06/whats-new-israel-lebanon-ceasefire-deal-and-whats-missing",
+      "source": "Al-Monitor",
+      "date": "2026-06-04T13:11:15.000Z",
+      "rating": "A1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "EN DIRECT, Moyen-Orient : la France soutient le cessez-le-feu entre le Liban et Israël « pour restaurer la paix », déclare Emmanuel Macron",
+      "link": "https://www.lemonde.fr/international/live/2026/06/04/en-direct-moyen-orient-le-hezbollah-exige-un-cessez-le-feu-global-et-un-retrait-d-israel-du-liban_6694380_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-06-04T13:05:55.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon reach an agreement, but ceasefire stalls",
+      "link": "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
+      "source": "NPR World",
+      "date": "2026-06-04T13:00:18.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel and Lebanon agree to implement a US-brokered ceasefire",
+      "link": "https://www.ft.com/content/5a0033b0-ae2f-409b-9a6e-d17eff04e67c",
+      "source": "Financial Times World",
+      "date": "2026-06-04T13:00:07.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Lebanon ceasefire raises hopes of progress for Iran deal",
+      "link": "https://www.al-monitor.com/originals/2026/06/lebanon-ceasefire-raises-hopes-progress-iran-deal",
+      "source": "Al-Monitor",
+      "date": "2026-06-04T12:02:13.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israël poursuit ses frappes au Liban malgré l'annonce d'un cessez-le-feu",
+      "link": "https://telquel.ma/instant-t/2026/06/04/israel-poursuit-ses-frappes-au-liban-malgre-lannonce-dun-cessez-le-feu_1992418/",
+      "source": "TelQuel (Maroc)",
+      "date": "2026-06-04T11:24:29.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Tiananmen dissident lambasts China on massacre anniversary",
+      "link": "https://www.dw.com/en/tiananmen-dissident-lambasts-china-on-massacre-anniversary/a-77420338?maca=en-rss-en-world-4025-rdf",
+      "source": "Deutsche Welle (EN)",
+      "date": "2026-06-04T11:10:00.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "massacre"
+        }
+      ]
+    },
+    {
+      "title": "Watch: Lebanon-Israel ceasefire deal made in 'hope rather than expectation'",
+      "link": "https://www.bbc.com/news/videos/cwy20yggenxo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-06-04T11:02:17.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Israel far-right Minister slams ceasefire with Lebanon as 'serious mistake'",
+      "link": "https://www.thehindu.com/news/international/israel-far-right-minister-slams-ceasefire-with-lebanon-as-serious-mistake/article71060107.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-04T10:40:14.000Z",
       "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
@@ -1215,7 +1450,7 @@
       "link": "https://www.al-monitor.com/originals/2026/06/lebanon-ceasefire-raises-hopes-progess-iran-deal",
       "source": "Al-Monitor",
       "date": "2026-06-04T10:01:48.000Z",
-      "rating": "F2",
+      "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1243,22 +1478,6 @@
       ]
     },
     {
-      "title": "Lebanese president says implementation of Israel ceasefire ‘could begin within 24 hours’ of final approval",
-      "link": "https://www.aa.com.tr/en/middle-east/lebanese-president-says-implementation-of-israel-ceasefire-could-begin-within-24-hours-of-final-approval/3956358",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-06-04T10:00:19.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Israel and Lebanon agree on ceasefire framework in US-led talks",
       "link": "https://www.aljazeera.com/video/newsfeed/2026/6/4/israel-and-lebanon-agree-on-ceasefire-framework-in-us-led-talks?traffic_source=rss",
       "source": "Al Jazeera English",
@@ -1275,10 +1494,10 @@
       ]
     },
     {
-      "title": "Iran-US conflict enters 'battle of wills' phase amid fragile ceasefire, say analysts",
-      "link": "https://www.aa.com.tr/en/us-israel-iran-war/iran-us-conflict-enters-battle-of-wills-phase-amid-fragile-ceasefire-say-analysts/3956327",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-06-04T09:40:01.000Z",
+      "title": "Lebanese President says ceasefire may come into effect within a day of parties' approval",
+      "link": "https://www.al-monitor.com/originals/2026/06/lebanese-president-says-ceasefire-may-come-effect-within-day-parties-approval",
+      "source": "Al-Monitor",
+      "date": "2026-06-04T09:36:44.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1291,71 +1510,7 @@
       ]
     },
     {
-      "title": "Israel far-right Minister slams ceasefire with Lebanon as 'serious mistake'",
-      "link": "https://www.thehindu.com/news/international/israel-far-right-minister-slams-ceasefire-with-lebanon-as-serious-mistake/article71060107.ece",
-      "source": "The Hindu (Inde)",
-      "date": "2026-06-04T09:37:44.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Lebanese President says ceasefire may come into effect within a day of parties' approval",
-      "link": "https://www.al-monitor.com/originals/2026/06/lebanese-president-says-ceasefire-may-come-effect-within-day-parties-approval",
-      "source": "Al-Monitor",
-      "date": "2026-06-04T09:36:44.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "EN DIRECT - Moyen-Orient : un Casque bleu a été tué et deux autres blessés dans le sud du Liban, malgré l’accord de cessez-le-feu",
-      "link": "https://www.liberation.fr/international/moyen-orient/en-direct-moyen-orient-israel-et-le-liban-conditionnent-un-cessez-le-feu-a-larret-des-tirs-du-hezbollah-20260604_756SANZIRVBZPCXJ6FIVMMLGQA/",
-      "source": "Libération International",
-      "date": "2026-06-04T09:04:38.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "3 family members injured in Israeli strike in southern Lebanon despite renewed ceasefire",
-      "link": "https://www.aa.com.tr/en/middle-east/3-family-members-injured-in-israeli-strike-in-southern-lebanon-despite-renewed-ceasefire/3956267",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-06-04T09:02:18.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Entre Israël et le Liban, un accord minimaliste qui repousse la perspective d’un cessez-le-feu durable",
+      "title": "Israël-Liban : un accord minimaliste qui repousse la perspective d’un cessez-le-feu durable",
       "link": "https://www.lemonde.fr/international/article/2026/06/04/entre-israel-et-le-liban-un-accord-minimaliste-qui-repousse-la-perspective-d-un-cessez-le-feu-durable_6697336_3210.html",
       "source": "Le Monde International",
       "date": "2026-06-04T09:00:08.000Z",
@@ -1401,288 +1556,48 @@
           "keyword": "ceasefire"
         }
       ]
-    },
-    {
-      "title": "Israel and Lebanon agree to implement ceasefire if Hezbollah stops attacks",
-      "link": "https://www.bbc.com/news/articles/c5y01pdqvkgo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "date": "2026-06-04T07:49:33.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israel and Lebanon agree to conditional ceasefire",
-      "link": "https://www.aljazeera.com/news/2026/6/4/israel-and-lebanon-agree-to-conditional-ceasefire?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "date": "2026-06-04T07:37:33.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israel to continue operations in Lebanon for now despite ceasefire, defence minister says",
-      "link": "https://www.al-monitor.com/originals/2026/06/israel-continue-operations-lebanon-now-despite-ceasefire-defence-minister-says",
-      "source": "Al-Monitor",
-      "date": "2026-06-04T06:36:40.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "En dépit du cessez-le-feu, Israël prévoit de \"poursuivre ses tirs\" au Liban",
-      "link": "https://www.france24.com/fr/moyen-orient/20260604-isra%C3%ABl-et-le-liban-conditionnent-un-cessez-le-feu-%C3%A0-l-arr%C3%AAt-des-tirs-du-hezbollah-netanyahu-trump-litani-tyr-zones-pilotes",
-      "source": "France 24",
-      "date": "2026-06-04T05:43:42.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Israel, Lebanon Agree to US-Brokered Ceasefire — State Department",
-      "link": "https://sputnikglobe.com/20260604/israel-lebanon-agree-to-us-brokered-ceasefire--state-department-1124251425.html",
-      "source": "RIA Novosti (EN)",
-      "date": "2026-06-04T04:21:06.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israël et le Liban annoncent un accord de cessez-le-feu sous conditions",
-      "link": "https://www.lemonde.fr/international/article/2026/06/04/israel-et-le-liban-annoncent-un-accord-de-cessez-le-feu-sous-conditions_6697016_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-04T04:20:05.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "EN DIRECT - Moyen-Orient: Israël «poursuivra ses tirs et opérations» dans le sud du Liban, malgré l’annonce d’un accord de cessez-le-feu",
-      "link": "https://www.rfi.fr/fr/moyen-orient/20260604-en-direct-moyen-orient-isra%C3%ABl-et-le-liban-conditionnent-un-cessez-le-feu-%C3%A0-l-arr%C3%AAt-des-tirs-du-hezbollah",
-      "source": "RFI Moyen-Orient",
-      "date": "2026-06-04T04:18:30.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Israel, Lebanon agree to conditional ceasefire",
-      "link": "https://www.thehindu.com/news/international/israel-lebanon-agree-to-conditional-ceasefire/article71059536.ece",
-      "source": "The Hindu (Inde)",
-      "date": "2026-06-04T04:17:10.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "News24 | Trump seeks meeting with Iran’s injured supreme leader amid ceasefire crisis",
-      "link": "https://www.news24.com/world/trump-seeks-meeting-with-irans-injured-supreme-leader-amid-ceasefire-crisis-20260603-0868",
-      "source": "News24 (Afrique du Sud)",
-      "date": "2026-06-04T04:08:11.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "En Iran et dans les pays du Golfe, une guerre de faible intensité s’installe dans la durée, malgré le cessez-le-feu",
-      "link": "https://www.lemonde.fr/international/article/2026/06/04/en-iran-et-dans-les-pays-du-golfe-une-guerre-de-faible-intensite-s-installe-dans-la-duree-malgre-le-cessez-le-feu_6696941_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-04T03:28:15.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Oil falls as Israel and Lebanon agree to conditional ceasefire",
-      "link": "https://www.japantimes.co.jp/business/2026/06/04/israel-lebanon-ceasefire-oil/",
-      "source": "The Japan Times",
-      "date": "2026-06-04T02:30:00.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israel, Lebanon agree to conditional ceasefire",
-      "link": "https://www.al-monitor.com/originals/2026/06/israel-lebanon-agree-conditional-ceasefire",
-      "source": "Al-Monitor",
-      "date": "2026-06-04T01:00:19.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "En direct : Israël et le Liban conviennent de renouveler le cessez-le-feu sous conditions",
-      "link": "https://www.france24.com/fr/moyen-orient/20260603-en-direct-moyen-orient-guerre-iran-congres-americain-donald-trump-liban-hezbollah-cessez-le-feu",
-      "source": "France 24",
-      "date": "2026-06-03T23:43:41.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Israel and Lebanon agree to implement ceasefire",
-      "link": "https://www.al-monitor.com/originals/2026/06/israel-and-lebanon-agree-implement-ceasefire",
-      "source": "Al-Monitor",
-      "date": "2026-06-03T23:36:39.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Human bones discovered in Kibbutz Kfar Aza neighborhood devastated in October 7 massacre",
-      "link": "https://www.jpost.com/israel-news/article-898309",
-      "source": "Jerusalem Post",
-      "date": "2026-06-03T21:41:45.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "massacre"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      220
+      239
     ],
     [
       "occident_fr",
-      124
+      119
     ],
     [
       "golfe_mo",
-      103
+      101
     ],
     [
       "autre",
-      102
+      92
     ],
     [
       "occident_us",
-      102
-    ],
-    [
-      "turquie",
-      53
-    ],
-    [
-      "chine",
-      30
-    ],
-    [
-      "bf_local",
-      28
+      89
     ],
     [
       "russie",
-      25
+      61
+    ],
+    [
+      "turquie",
+      30
+    ],
+    [
+      "chine",
+      27
     ],
     [
       "sahel",
-      13
+      26
+    ],
+    [
+      "bf_local",
+      16
     ]
   ],
   "indicators": [
@@ -1693,38 +1608,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-06-04T10:35:43.521Z",
+      "at": "2026-06-04T15:35:26.166Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-04T10:35:43.528Z",
+      "at": "2026-06-04T15:35:26.174Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-04T10:36:24.736Z",
+      "at": "2026-06-04T15:35:58.686Z",
       "agent": "Agent Collecte RSS",
-      "message": "115/170 flux OK, 1953 articles"
+      "message": "112/170 flux OK, 1936 articles"
     },
     {
-      "at": "2026-06-04T10:36:27.699Z",
+      "at": "2026-06-04T15:36:01.563Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-04T10:36:27.703Z",
+      "at": "2026-06-04T15:36:01.567Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 34 alertes"
+      "message": "8 developpements, 29 alertes"
     },
     {
-      "at": "2026-06-04T10:36:27.703Z",
+      "at": "2026-06-04T15:36:01.567Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-06-04T15:36:01.567Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
