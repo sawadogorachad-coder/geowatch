@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-04T22:26:56.028Z",
+  "generatedAt": "2026-06-05T04:40:27.105Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 116,
-    "failed": 54,
-    "articles": 1972,
+    "ok": 114,
+    "failed": 56,
+    "articles": 1934,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -68,6 +68,11 @@
         "count": 0
       },
       {
+        "id": "rss_malijet",
+        "name": "Malijet",
+        "count": 0
+      },
+      {
         "id": "rss_studio_tam",
         "name": "Studio Tamani (Mali)",
         "count": 10
@@ -90,11 +95,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -373,11 +373,6 @@
         "count": 30
       },
       {
-        "id": "rss_sipri",
-        "name": "SIPRI — Stockholm Intl Peace Research",
-        "count": 0
-      },
-      {
         "id": "rss_nyt",
         "name": "NYT World",
         "count": 30
@@ -503,11 +498,6 @@
         "count": 30
       },
       {
-        "id": "rss_anadolu",
-        "name": "Anadolu Agency (Turquie)",
-        "count": 30
-      },
-      {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
         "count": 30
@@ -530,7 +520,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -610,11 +600,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_malijet",
-        "name": "Malijet",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_essor_mali",
         "name": "L'Essor (Mali)",
         "error": "fetch failed"
@@ -633,6 +618,11 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "fetch failed"
       },
       {
         "id": "rss_cridem",
@@ -810,6 +800,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_sipri",
+        "name": "SIPRI — Stockholm Intl Peace Research",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
         "error": "HTTP 403"
@@ -828,6 +823,11 @@
         "id": "rss_trtworld",
         "name": "TRT World (Turquie)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_anadolu",
+        "name": "Anadolu Agency (Turquie)",
+        "error": "HTTP 502"
       },
       {
         "id": "rss_bangkok",
@@ -863,12 +863,40 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 53,
-    "alerts": 27,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 76
+    "bfAes": 63,
+    "alerts": 17,
+    "criticalAlerts": 1,
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
+    {
+      "title": "Match amical Burkina Faso – Mali : les Étalons Dames et les Aigles Dames se séparent dos à dos",
+      "link": "https://netafrique.net/match-amical-burkina-faso-mali-les-etalons-dames-et-les-aigles-dames-se-separent-dos-a-dos/",
+      "pubDate": "2026-06-04T23:00:25.000Z",
+      "description": "Dans le cadre de leur préparation pour la CAN féminine Maroc 2026, les Étalons Dames du Burkina Faso ont affronté ce jeudi 04 juin 2026 la sélection malienne au Stade du 4 Août de Ouagadougou. Au terme d’une rencontre disputée, les deux équipes se sont quittées sur un score nul et vierge (0-0). Dominatrices en première période, les Maliennes ont ensuite laissé l’initiative aux Burkinabè, plus entreprenantes après la pause. Solides défensivement, les deux formations ont su préserver leur cage inviolée jusqu’au coup de sifflet final. Elles se retrouveront ce dimanche 7 juin à 16h au Stade du 4 Août pour le match retour qui s’annonce décisif et promet une confrontation encore plus engagée. DCRP/MSJE L’article Match amical Burkina Faso – Mali : les Étalons Dames et les Aigles Dames se séparent dos à dos est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127
+    },
     {
       "title": "Niger au Forum international sur la sécurité ISF‑26 à Moscou : appel à une sécurité collective adaptée aux réalités du Sahel…",
       "link": "https://tamtaminfo.com/niger-au-forum-international-sur-la-securite-isf-26-a-moscou-appel-a-une-securite-collective-adaptee-aux-realites-du-sahel/",
@@ -884,34 +912,6 @@
         "diplomatic",
         "military",
         "humanitarian"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127
-    },
-    {
-      "title": "Brutality of French colonial footprint in Africa resurfaces",
-      "link": "https://www.myjoyonline.com/brutality-of-french-colonial-footprint-in-africa-resurfaces/",
-      "pubDate": "2026-06-04T16:05:36.000Z",
-      "description": "As African leaders are demanding that former colonisers compensate for the wealth and power built through slavery, the French President Emmanuel Macron is continuing his Africa charm offensive despite refusing to take responsibility. But across the continent, African unity is rapidly becoming the primary force enabling African nations to break free from Paris’ postcolonial shadow. With countries in North and West Africa turning to China for financial alternatives in development funding, such as infrastructure investment, and political alignment. The changes are steadily helping dismantle the pillars that once propped up French influence in West Africa. Only last week, France moved to repeal outdated legislation that defines people enslaved in its colonies as “moveable goods”, in a symbolic move as the country grapples with its colonial legacy while trying hard to maintain influence in Africa. The question is, why only now? The French were the third largest slave traders in Europe, after the British and the Portuguese In 2001 the country recognised slavery and the slave trade as “crimes against humanity” yet failed to apologise for its role in slavery trade despite growing demands in Africa for reparations. Further than that, France failed to support the recent UN resolution sponsored by Ghana declaring Transatlantic slavery as the greatest crime against humanity. By its own admission, ships departed from French ports between the 17th and 19th centuries forcibly transported more than one million men, women and children from Africa into slavery, many to plantations in its overseas colonies in the Caribbean. France ended slavery in 1794 under the French Revolution, but Napoleon Bonaparte ordered troops to be sent to Guadeloupe in 1802 to restore the practice. France then abolished it again in 1848; to the surprise of many, it was slave owners who received financial compensation rather than formerly enslaved people. Historically, France exerted influence across Africa through political networks, military and defence partnerships, and currency control through the CFA franc. France formerly dominated about 21 countries across the continent, organised into the federations of French West Africa and French Equatorial Africa. Today, it has lost every influence as France’s military withdrawal has revealed the most significant weakness in the Françafrique system. After years of conducting security operations under Operation Barkhane, France was expelled from Mali (2022), Burkina Faso (2023), and Niger (2023). The increasing levels of anti-French sentiment in its former African colonies have forced the former slave trader to prioritise building new political and commercial ties with anglophone African nations such as Kenya. Paris-based professor of political science at the American Graduate School, Douglas Yates, said: “Through its predatory neocolonial relationships, France underdeveloped its francophone African states.” The Ivory Coast, Chad, and Senegal have since ordered the exit of French troops. France handed over control of its last major military facility in Senegal after Senegalese President Bassirou Diomaye Faye, who attended the Kenya summit, said French bases were incompatible with the country’s sovereignty. France as a source of instability Since 1990, 78% of the 27 coups in sub-Saharan Africa have occurred in Francophone states, leading commentators to ask whether France – or the legacy of French colonialism – is to blame. France’s Africa strategy of the 1950s, which was built upon cultural diplomacy – an exchange of ideas, values, traditions and other aspects of culture – is being revived through the Nairobi Summit. The Africa Forward Summit held in Kenya was met with chaos in Nairobi and widespread protests against Macron. Such protests are similar to those of the post-1945 period, when African trade unionists and members of civil society began making political claims and calling for a new relationship with Paris. At the time, Madagascar was gripped by a violent nationalist revolt against France between 1947 and 1948. Senegal became the epicentre of anti-colonial activism as trade unions grew more political, as shown by the 1946 general strike. What is distinctive about France’s role in Africa is the extent to which it continued to meddle in the politics and economics of its former territories after independence. The question we must ask ourselves is why French President Emmanuel Macron is suddenly heading to Ghana to discuss reparations? This is just weeks after France abstained from the historical United Nations vote declaring the transatlantic slave trade the gravest crime against humanity, Macron is now embracing conversations about reparatory justice and preparing to engage with African leaders in Accra. Analysts believe this is a calculated diplomatic strategy aimed at rebuilding French influence on a continent that has been rejected in West and Central Africa. The noticeable shift in France’s position, Ghana’s growing role in the global reparations movement, the collapse of traditional French influence across Africa, the future of the CFA Franc, and the fact that Africa’s rising leverage, including the emergence of BRICS, are all forcing Europe to rethink its entire approach to the continent. Many Ghanaians are asking why Macron is being invited to Ghana and how that sends a highly contradictory signal, especially when the continent is actively pushing for sovereignty and moving away from French neocolonial interference. “We cannot talk about historical justice, reparations, or protecting our own family values from foreign ideologies on one hand, and then turn around to sign security deals with the very architect of Françafrique on the other. The Alliance of Sahel States (AES) showed that true advancement comes from self-reliance and regional solidarity, not from back-door deals with Paris. Ghana needs to stand firm, not compromise its stance for Western photo-ops,” answered one popular commentator. ******** The writer, Tintswalo Baloyi, is a senior political journalist for CAJ News Africa",
-      "_source": "MyJoyOnline (Ghana)",
-      "_sourceId": "rss_myjoyonline",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -955,20 +955,18 @@
       "_score": 127
     },
     {
-      "title": "3e foire « De la graine à la table »: Faire des semences paysannes un levier de la souveraineté alimentaire",
-      "link": "https://www.sidwaya.info/3e-foire-de-la-graine-a-la-table-faire-des-semences-paysannes-un-levier-de-la-souverainete-alimentaire/",
-      "pubDate": "2026-06-04T22:14:09.000Z",
-      "description": "Après trois jours d’expositions, de rencontres, de réseautage, de réflexions, d’échanges autour des panels, la IIIe édition de la Foire des semences paysannes, dénommée « De la graine à la table » a pris fin, le samedi 23 mai 2026, à Loumbila. La cérémonie de clôture a été marquée par l’adoption d’une feuille de route pour la promotion des systèmes semenciers paysans et la préservation des ressources phytogénétiques au Burkina Faso. L’association Yelemani est convaincue qu’il n’y a pas de souveraineté alimentaire sans souveraineté semencière. Dans le but de contribuer à garantir cette souveraineté, elle a initié la foire « De la graine à la table », qui se veut un cadre de promotion et de préservation des semences paysannes, de valorisation et de transmission des savoirs endogènes en la matière. La IIIe édition de ce rendez-vous annuel s’est tenue, du 21 au 23 mai 2026, à Loumbila, sur le thème : « Banque de semences paysannes et souveraineté alimentaire au Burkina Faso : enjeux, défis et perspectives ». Elle a été marquée par plusieurs activités à savoir des panels et table ronde, démonstrations de pratiques de production de semences maraichères, compétitions d’arts oratoire, culinaire et de semences paysannes, des expositions de semences et de produits bio, une représentation théâtrale sur l’agroécologie. Les échanges se sont articulés autour des thématiques suivantes : « collaboration banques communautaires et la recherche », « gestion efficiente des ressources phytogénétiques au niveau national et local pour notre souveraineté alimentaire », « gestion de la banque par les communautés ». A l’issue des 72 heures, les participants ont adopté une feuille de route visant à « renforcer les dynamiques nationales pour la promotion des systèmes semenciers paysans et la préservation des ressources phylogénétiques au Burkina Faso ». Elle est assortie de recommandations adressées à l’Etat, à l’association Yelemani, aux organisations de la société civile et aux ONG et PTF. Recommandations et actions prioritaires Il s’agit, entre autres, de la nécessité de faire la promotion des résultats des chercheurs sur les variétés paysannes, partager les différentes stratégies adoptées au niveau national avec les acteurs à la base pour une meilleure appropriation, renforcer les banques communautaires de semences paysannes, développer une collaboration durable entre chercheurs et communautés, sensibiliser davantage les producteurs sur les risques liés aux nouveaux OGM et à la pollution génétique, Il a également été recommandé de promouvoir la recherche-action paysanne et les savoirs locaux, d’impliquer les agents Etatiques dans la promotion des semences paysannes, valoriser les résultats comparatifs montrant la performance des variétés paysannes, sensibiliser les écoles sur les semences paysannes et les semences en voie de disparition. La feuille de route comporte également des actions prioritaires à court, moyen et long terme. Elles portent sur la mobilisation des acteurs, le plaidoyer sur les semences locales et l’agroécologie, les partenariats scientifiques et institutionnels, l’intégration des savoirs endogènes dans les politiques publiques, le renforcement des réseaux de producteurs et consommateurs. Plus concrètement, il s’agit d’élaborer un bulletin sur les semences paysannes, faire la connexion entre les banques de semences paysannes et les jardins scolaires, sensibiliser les producteurs et organisations des producteurs sur les enjeux majeurs liés aux ressources phytogénétiques, assurer la visibilité des initiatives des banques communautaires, mettre en place un catalogue des semences paysannes et diffusion des résultats, sensibiliser les médias sur l’agroécologie, etc. Poursuivre le combat La présidente de l’association Yelemani, Blandine Sankara, s’est réjouie des résultats atteints à l’issue de la foire. Pour elle, l’évènement a permis de valoriser les semences paysannes et la biodiversité agricole, promouvoir une alimentation saine, locale et nutritive, renforcer les liens entre producteurs, consommateurs, restauratrices, jeunes et chercheurs, entre autres. « Durant ces journées, nous avons célébré bien plus que des semences, des mets locaux ou des savoir-faire culinaires. Nous avons célébré la vie, la transmission, la mémoire de nos terroirs et la capacité de nos communautés à nourrir le présent tout en protégeant l’avenir », a-t-elle confié. Pour Mme Sankara, la foire vient rappeler une vérité implacable. « La souveraineté alimentaire commence par la maitrise de nos semences, de nos terres, de nos savoirs et de nos habitudes alimentaires », a souligné Blandine Sankara. Elle a exhorté les acteurs à poursuivre le combat pour la souveraineté alimentaire dans les champs, les écoles les marchés, les cuisines et les communautés. « Continuons ensemble à semer la conscience, cultiver la dignité et récolter un avenir plus juste et plus sain pour nos populations », a conclu la présidente de Yelemani. Mahamadi SEBOGO",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Marché financier régional : Pour un besoin de 45 milliards F CFA exprimé par le Burkina Faso, les investisseurs proposent 126,56 milliards FCFA",
+      "link": "https://netafrique.net/marche-financier-regional-pour-un-besoin-de-45-milliards-f-cfa-exprime-par-le-burkina-faso-les-investisseurs-proposent-12656-milliards-fcfa/",
+      "pubDate": "2026-06-04T23:22:16.000Z",
+      "description": "Le Trésor public du Burkina Faso a réalisé une performance remarquable sur le marché financier régional des titres publics de l’UMOA le 3 juin 2026. Alors que l'État sollicitait 45 milliards FCFA, il a fait face à un véritable raz-de-marée de souscriptions, les investisseurs proposant un montant global de 126,56 milliards FCFA, soit un taux de couverture exceptionnel de 281,25 %. Ce succès éclatant, porté principalement par des souscripteurs burkinabè et ivoiriens, confirme la solidité de la signature de l'État et sa capacité à mobiliser massivement des ressources pour financer son développement. La journée du 3 juin 2026 marquera les annales du marché des Titres publics de l’UMOA. Dans un contexte de recherche de financement pour ses économies, le Burkina Faso a démontré que sa crédibilité auprès des investisseurs reste intacte, voire renforcée. Initialement venu chercher 45 milliards FCFA via une émission simultanée de Bons (BAT) et d’Obligations (OAT) du Trésor, le pays a vu les offres pleuvoir. Le montant total proposé par les investisseurs a atteint 126,56 milliards FCFA, soit près de trois fois le montant recherché. Face à cette abondance de liquidités, le Trésor burkinabè a fait preuve de sélectivité en ne retenant que les 45 milliards FCFA prévus, rejetant ainsi plus de 81 milliards d'offres excédentaires. Ce tri stratégique permet au pays d'afficher un taux d’absorption de 35,56 %, signe d'une gestion rigoureuse de sa dette. L’analyse détaillée de l’opération révèle une préférence marquée des investisseurs pour les titres de longue durée. Les Obligations Assimilables du Trésor (OAT) de 3, 5 et 7 ans ont capté l'essentiel de l'intérêt. Les titres à 3 ans ont notamment mobilisé 38,91 milliards FCFA, tandis que ceux à 5 et 7 ans ont chacun recueilli environ 18 milliards de soumissions. À l’inverse, bien que les investisseurs aient proposé 51 milliards FCFA sur le segment court terme (BAT de 364 jours), le Trésor a choisi de rejeter l’intégralité de ces offres. Ce succès ne s'est pas construit de manière isolée. La participation a été majoritairement portée par les investisseurs burkinabè et ivoiriens. Les résidents du Burkina Faso ont injecté d'importantes sommes sur les différentes maturités, suivis de près par les investisseurs de Côte d’Ivoire qui ont soumis plus de 25 milliards FCFA cumulés sur les OAT. Des contributions notables sont également venues du Mali, du Sénégal et du Bénin, confirmant l'intégration et la solidarité du marché régional. Avec des rendements moyens pondérés oscillant entre 7,21 % et 7,53 % selon les maturités, le Burkina Faso offre une rémunération attractive qui justifie cet appétit des marchés. Cette opération n'est pas seulement un succès comptable ; elle est le témoignage d'une confiance renouvelée dans les perspectives économiques du pays et dans la solidité de sa gestion financière. L’article Marché financier régional : Pour un besoin de 45 milliards F CFA exprimé par le Burkina Faso, les investisseurs proposent 126,56 milliards FCFA est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -977,71 +975,15 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C2"
+        "rating": "A2"
       },
-      "_rating": "C2",
-      "_score": 115
-    },
-    {
-      "title": "Burkina: le compte rendu du Conseil des ministres du jeudi 4 juin 2026",
-      "link": "https://www.wakatsera.com/burkina-le-compte-rendu-du-conseil-des-ministres-du-jeudi-4-juin-2026/",
-      "pubDate": "2026-06-04T21:20:50.000Z",
-      "description": "Le Conseil des ministres s’est tenu à Ouagadougou, le jeudi 04 juin 2026, en séance ordinaire, de 09 H 00 mn à 12 H 21 mn, sous la présidence du Camarade Capitaine Ibrahim TRAORE, Président du Faso, Président du Conseil des ministres. Il a délibéré sur les dossiers inscrits à son ordre du jour, entendu des communications orales, procédé à des nominations, mis fin à une fonction et autorisé des missions à l’étranger. I. DELIBERATIONS I.1. AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Le Conseil a adopté deux (02) décrets. Le premier décret porte liste des communes selon leur statut. Ce décret vise l’application de la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Cette loi dispose que les communes sont classées en fonction de leur capacité de mobilisation des ressources propres. Elle établit la liste des communes selon leur statut, sur la base de la moyenne des montants des ressources budgétaires propres issus des comptes administratifs gestion 2023 et 2024 approuvés et la taille de la population. Le nombre des communes en fonction de leur statut s’établit comme suit : – deux cents (200) communes de moyen exercice ; – cent quarante-neuf (149) communes de plein exercice ; – deux (02) communes à statut particulier. L’adoption de ce décret permet de disposer d’un répertoire des communes selon leur statut, conformément à la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Le second décret porte modalités de changement de statut des communes. Ce décret vise l’application de la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Il consacre : – la désignation de la Commission nationale des finances locales (CONAFIL) comme organe chargé de l’évaluation périodique des ressources budgétaires propres des communes ; – l’identification des comptes administratifs des trois derniers exercices des communes comme documents devant servir à l’évaluation des recettes propres ; – la constatation du changement de statut des communes par décret en Conseil des ministres ; – l’évaluation des ressources budgétaires propres des communes en période de délégation spéciale générale tous les trois ans et la possibilité de changement de statut des communes ; – la possibilité de faire recours devant les juridictions administratives pour les contestations liées au changement de statut des communes. L’adoption de ce décret permet de préciser les modalités de changement de statut des communes en vue de renforcer les initiatives de mobilisation des ressources endogènes. I.2. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté deux (02) décrets. Le premier décret porte indemnité et avantages spécifiques de l’Agent judiciaire de l’Etat, du premier adjoint de l’Agent judiciaire de l’Etat, des Agents judiciaires adjoints de l’Etat et des Comptables publics. Ce décret vise l’application de la loi n°019-2025/ALT du 21 novembre 2025 portant Statut de l’Agent judiciaire de l’Etat. L’innovation majeure du décret porte sur l’extension de l’indemnité spécifique de représentation et de la prime de documentation au personnel d’appui, aux comptables publics ainsi qu’au premier adjoint de l’Agent judiciaire. L’adoption de ce décret permet de fixer l’indemnité et les avantages spécifiques de l’Agent judiciaire de l’Etat, de son premier adjoint, des Agents judiciaires adjoints de l’Etat et des comptables publics. Le second décret porte renouvellement du mandat d’un Membre de la Cellule nationale de traitement des informations financières (CENTIF). Ce décret vise l’application du décret n°2019-0878/PRES/PM/MINEFID/MSECU/MJ du 12 septembre 2019 portant attributions, organisation et fonctionnement de la Cellule nationale de traitement des informations financières. L’adoption de ce décret permet le renouvellement du mandat du camarade Pierre Lagoun ZALLA, Mle 111 447 J, Commissaire principal de Police, Membre de la Cellule nationale de traitement des informations financières, pour une dernière période de trois (03) ans. I.3. AU TITRE DU MINISTERE DE LA SECURITE Le Conseil a adopté un rapport relatif aux projets spécifiques du ministère de la Sécurité. Ces projets spécifiques visent à renforcer les capacités opérationnelles des Forces armées nationales et des Forces de sécurité intérieure déployées sur l’ensemble du territoire national. Ces projets concernent : – l’acquisition de matériels spécifiques au profit des Forces armées nationales et des Forces de sécurité intérieure employées dans le cadre des missions de l’Office national de sécurisation des sites miniers (ONASSIM) ; – l’acquisition de matériels au profit de l’Office national de la sécurité routière (ONASER) ; – l’acquisition de matériels de sécurité et d’effets d’habillement au profit des élèves de l’Ecole nationale de Police (ENP); – l’acquisition d’effets d’habillement au profit du personnel de la Direction générale de la Police nationale (DGPN) ; – l’acquisition d’effets d’habillement au profit de la Direction générale des eaux et forêts (DGEF) ; – l’acquisition d’effets d’habillement au profit du personnel de la Brigade LAABAL ; – l’acquisition d’effets d’habillement au profit des élèves de l’Académie de Police. Le coût global de ces projets spécifiques s’élève à cinq milliards sept cent trente-sept millions six cent soixante-cinq mille six cent soixante (5 737 665 660) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.4. AU TITRE DU MINISTERE DE LA SANTE Le Conseil a adopté un rapport relatif à une demande d’autorisation pour la passation et l’exécution de marchés publics dans le cadre des projets spécifiques du ministère de la Santé. Ces projets spécifiques visent l’acquisition de biens et services dans des délais réduits pour une amélioration continue de la prise en charge sanitaire des populations. Il s’agit : – de la construction d’infrastructures sanitaires dans plusieurs localités du Burkina Faso ; – de l’acquisition d’équipements médicotechniques au profit des formations sanitaires. Le coût global des projets s’élève à vingt-quatre milliards six cent soixante-onze millions neuf cent sept mille trois cent quatorze (24 671 907 314) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.5. AU TITRE DU MINISTERE DE LA CONSTRUCTION DE LA PATRIE Le Conseil a adopté un décret portant définition et catégorisation des villes au Burkina Faso. Le Burkina Faso fait face à une urbanisation rapide, des mutations territoriales profondes ainsi que des défis sécuritaires, démographiques et socio-économiques. Cette dynamique entraîne une transformation accélérée des espaces urbains et des modes d’occupation du territoire, nécessitant un renforcement du cadre normatif en matière d’organisation et de gouvernance urbaines. Ce décret permet d’actualiser la définition de la ville, devenue obsolète au regard des réalités actuelles depuis l’adoption de la Politique nationale de l’habitat et du développement urbain de 2008, et d’instituer une catégorisation des villes. Selon le décret, est considérée comme ville : – toute localité d’une commune de plein exercice, bâtie en continu, abritant au moins quinze mille (15 000) habitants, dotée d’un réseau d’adduction en eau potable, d’électricité et de transport, avec des activités et des fonctions des secteurs secondaire et tertiaire dominantes ; – tout chef-lieu de commune chef-lieu de province ; – tout chef-lieu de commune de plein exercice, quelle que soit sa taille démographique. En outre, le décret retient trois catégories de villes. Il s’agit des villes métropole, moyenne et petite. L’adoption de ce décret permet de doter l’Etat et les collectivités territoriales d’un nouveau cadre de référence pour la planification et la gouvernance urbaines, et de promouvoir un développement territorial équilibré et durable. I.6. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT DE BASE, DE L’ALPHABETISATION ET DE LA PROMOTION DES LANGUES NATIONALES Le Conseil a adopté un rapport relatif à une demande d’autorisation pour la passation et l’exécution de marchés publics dans le cadre des projets spécifiques du ministère de l’Enseignement de base, de l’alphabétisation et de la promotion des langues nationales. Ces projets spécifiques concernent la réalisation d’infrastructures dans le cadre du Projet de renforcement de la performance du système éducatif et d’amélioration de la résilience (REPAIR). Il s’agit de la construction de 15 complexes scolaires R+3 dans 15 provinces du Burkina Faso. Le coût global de ces projets s’élève à vingt et un milliards (21 000 000 000) F CFA TTC. II. COMMUNICATIONS ORALES II.1. Le ministre d’Etat, ministre de l’Agriculture, de l’eau, des ressources animales et halieutiques a fait au Conseil le compte rendu de la participation du Burkina Faso au 17e forum économique international « Russie-Monde Islamique », tenu du 10 au 18 mai 2026 à Kazan en Fédération de Russie. Ce forum constitue l’une des principales plateformes internationales de dialogue économique, politique, culturel et scientifique entre la Fédération de Russie et les pays du monde islamique. Il s’inscrit au cœur d’une dynamique de renforcement de la coopération entre les pays. Le rendez-vous de Kazan a permis à la délégation burkinabè de consolider le partenariat stratégique de notre pays avec la Fédération de Russie notamment dans les domaines de l’agriculture, de l’eau, des ressources animales et halieutiques. Il a également permis de présenter et de promouvoir les potentialités agricoles du Burkina Faso. II.2. Le ministre des Affaires étrangères a fait au Conseil le compte rendu de l’organisation du « Forum économique et de l’investissement du Burkina Faso », tenu du 8 au 10 mai 2026 à Pékin, en République populaire de Chine. Ce forum a été organisé par l’Ambassade du Burkina Faso à Pékin en partenariat avec le Comté de Luanzhou (province du Hebei) et le Centre asiatique de commerce et d’économie. Il avait pour objectifs de présenter l’environnement économique et des affaires de notre pays auprès des investisseurs chinois, de mettre en lumière les secteurs porteurs de l’économie nationale ainsi que les projets prioritaires du Gouvernement. A l’issue du forum, plusieurs accords de partenariat ont été signés avec la partie chinoise portant sur la création d’une unité de production et de transformation de l’arachide au Burkina Faso, l’implantation d’une unité de fabrication d’emballages à base de pierre, un accord de fourniture de sésame et un accord de fourniture de baguettes de soudure. II.3. Le ministre de l’Enseignement supérieur, de la recherche et de l’innovation a fait au Conseil une communication relative à l’organisation de la Semaine nationale des arts et de la culture des Universités du Burkina Faso (SENAC-UB), prévue du 7 au 14 juin 2026 à Dédougou, région de Bankui. Placée sous le Haut patronage du camarade Premier ministre, Chef du Gouvernement, la Semaine nationale des arts et de la culture des universités du Burkina Faso a pour thème : « Diversité culturelle et engagement patriotique : la jeunesse universitaire au service de la cohésion nationale ». L’édition 2026 de la SENAC-UB sera marquée par plusieurs activités parmi lesquelles des compétitions en arts du spectacle, en arts de la scène, en art culinaire, une conférence publique ainsi que des compétitions en handisport. Elle connaîtra la participation d’environ 1200 étudiants de plus de 30 universités publiques et privées du Burkina Faso. II.4. Le ministre de l’Enseignement secondaire et de la formation professionnelle et technique assurant l’intérim du ministre des Sports, de la jeunesse et de l’emploi a fait au Conseil trois (03) communications : – la première est relative à l’organisation par le Burkina Faso de la 3e édition du Festival international de pétanque de Ouagadougou (FIPO), prévue du 23 au 28 juin 2026. Cette édition du FIPO connaîtra la participation de 13 pays africains et contribuera au rayonnement du Burkina Faso sur la scène sportive internationale tout en favorisant le développement de la pétanque au plan national. L’organisation du Festival international de pétanque de Ouagadougou est une opportunité de renforcement des capacités des acteurs nationaux de la pétanque ainsi qu’un cadre de détection de jeunes talents. Ce festival s’inscrit dans la dynamique de promotion du sport comme facteur de cohésion sociale, de paix et de résilience. – la deuxième est relative à l’organisation du tournoi IHF Trophy Senior Dames Zone III en Septembre 2026 à Ouagadougou. Ce tournoi est une compétition de handball dames regroupant huit (08) pays de l’Afrique de l’Ouest, organisé sous l’égide de la Fédération internationale de Handball (IHF) en collaboration avec la Confédération africaine de Handball et la Fédération burkinabè de Handball. Cette compétition compte pour les éliminatoires du championnat continental de handball. Elle constitue une phase de préparation pour les handballeuses burkinabè et permettra de renforcer la collaboration avec les instances dirigeantes internationales de handball. – la troisième est relative au compte rendu de la participation du Burkina Faso aux 24e Championnats d’Afrique d’athlétisme seniors, tenus du 12 au 17 mai 2026 à Accra au Ghana. A cette compétition, le Burkina Faso a réalisé une performance honorable terminant 8e au classement sur 48 nations avec un total de 02 médailles dont une médaille d’or remportée par Nemata NIKIEMA et une médaille d’argent obtenue par Marthe Yasmine KOALA. Par ailleurs, 03 athlètes burkinabè Zalissa ZONGO, Alan SAWADOGO et Abdoul Rachid TRAORE ont réalisé les minimas de qualification pour les championnats du monde juniors U20 prévus du 05 au 09 août 2026 à Eugène/Oregon aux Etats-Unis. Les Championnats d’Afrique d’athlétisme seniors constituent une compétition continentale majeure organisée sous l’égide de la Confédération africaine d’athlétisme. Ils regroupent les meilleurs athlètes du continent africain et offrent une plateforme de haut niveau pour l’expression du talent sportif africain. La participation du Burkina Faso à cette compétition visait à la fois la conquête de médailles et la préparation des athlètes en vue des championnats du monde 2027 et des Jeux olympiques de Los Angeles 2028. Le Conseil félicite les acteurs pour les résultats obtenus lors de ces Championnats d’Afrique d’athlétisme et les encourage à poursuivre dans cette dynamique. III. NOMINATIONS III.1. NOMINATIONS DANS LES FONCTIONS INDIVIDUELLES A. AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE – Camarade Teega-Wende Rodrigue NANA, Mle 304 114 C, Administrateur civil, 1ère classe, 5e échelon, est nommé Conseiller technique du Gouverneur de la région du Djôrô, chargé des questions relatives aux libertés publiques, à la prévention et à la gestion des conflits. B. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES – Camarade Adama FAYAMA, Mle 239 628 E, Inspecteur du trésor, 1ère classe, 4e échelon, est nommé Fondé de pouvoirs du Directeur de la Banque de dépôts du trésor ; – Camarade Bègboayaonne Prosper SOMDA, Mle 91 629 S, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Fondé de pouvoirs du trésorier auprès du ministère des Affaires étrangères ; – Camarade Noël DABIRE, Mle 210 699 N, Inspecteur du trésor, 1ère classe, 4e échelon, est nommé Fondé de pouvoirs du trésorier général de l’Etat ; – Camarade Idrissa NANA, Mle 272 948 X, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Fondé de pouvoirs du trésorier auprès du ministère de l’Enseignement de base, de l’alphabétisation et de la promotion des langues nationales ; – Camarade Jean ZINSONE, Mle 46 263 C, Inspecteur du trésor, 2e classe, 3e échelon, est nommé Receveur général ; – Camarade Tadioa Martin COULIBALY, Mle 112 470 G, Inspecteur du trésor, 1ère classe, 6e échelon, est nommé Trésorier de l’Institut « DEEN KANU » ; – Camarade Sibiri BITIBALY, Mle 57 157 C, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Trésorier auprès du ministère de l’Agriculture, de l’eau, des ressources animales et halieutiques ; – Camarade Moussa NIKIEMA, Mle 216 170 T, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Trésorier auprès de l’Agence burkinabè pour l’emploi « Faso Tonlo Zï » ; – Camarade Agnès SOUSSANGO/ZONGO, Mle 46 220 G, Inspecteur du trésor, 2e classe, 4e échelon, est nommée Trésorier auprès du ministère de la Construction de la Patrie ; – Camarade Issa SAGNON, Mle 216 178 R, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Trésorier auprès du ministère de la Communication, de la culture, des arts et du tourisme et du ministère des Sports, de la jeunesse et de l’emploi ; – Camarade Jean Baptiste ZEIDA, Mle 43 132 B, Inspecteur du trésor, 1ère classe, 12e échelon, est nommé Trésorier auprès du ministère des Affaires étrangères. – Camarade Issouf OUEDRAOGO, Mle 57 172 E, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Agent comptable central de l’Etat ; – Camarade Hamado SEOGO, Mle 245 222 E, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Directeur de la dette publique ; – Camarade Emmanuel SAWADOGO, Mle 236 096 F, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Trésorier régional de Nando ; – Camarade Issa YONABA, Mle 46 226 T, Inspecteur du trésor, 2e classe, 4e échelon, est nommé Trésorier régional de Oubri ; – Camarade Maboudou KEKELE, Mle 46 224 Y, Inspecteur du trésor, 2e classe, 5e échelon, est nommé Trésorier régional du Guiriko. C. AU TITRE DU MINISTERE DE LA SECURITE – Camarade Wamedo Melaine Raymond OUEDRAOGO, Mle 46 777 N, Commissaire principal de Police, 2e classe, 2e échelon, est nommé Secrétaire général de l’Office national de la sécurité routière (ONASER). D. AU TITRE DU MINISTERE DES AFFAIRES ETRANGERES – Camarade Abdoul Wabou DRABO, Mle 54 589 N, Conseiller des affaires étrangères, 1ère classe, 6e échelon, est nommé Chargé de mission ; – Camarade Abdoulaye ZONGO, Mle 75 297 K, Conseiller des affaires étrangères, 2e classe, 9e échelon, est nommé Chargé de mission ; – Camarade Basnewendé Martine Eliane OUEDRAOGO/GYENGUERE, Mle 104 414 S, Conseiller des affaires étrangères, 2e classe, 5e échelon, est nommée Chargé de mission. E. AU TITRE DU MINISTERE DE LA COMMUNICATION, DE LA CULTURE, DES ARTS ET DU TOURISME – Camarade Awa COMPAORE, Mle 244 961 D, Conseiller en sciences et techniques de l’information et de la communication, 2e classe, 2e échelon, est nommée Chargé d’études ; – Camarade Noëlie CONGO/SALOUKA, Mle 216 714 W, Conseiller des affaires culturelles, 1ère classe, 5e échelon, est nommée Responsable du programme « Culture », cumulativement avec ses fonctions de Directrice générale de la culture et des arts ; – Camarade Salifou OUARMA, Mle 220 278 V, Conseiller en sciences et techniques de l’information et de la communication, 1ère classe, 5e échelon, est nommée Responsable du Programme « Communication », cumulativement avec ses fonctions de Directeur général de la communication et des médias. F. AU TITRE DU MINISTERE DE LA CONSTRUCTION DE LA PATRIE – Camarade Zézouma SANON, Mle 00 00 29 Z, Ingénieur de conception en génie civil, 1ère classe, 11e échelon, est nommé Directeur général de l’Agence de conseil et de maîtrise d’ouvrage déléguée en bâtiment et aménagement urbain (ACOMOD-BURKINA). G. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT SUPERIEUR, DE LA RECHERCHE ET DE L’INNOVATION – Camarade Belo ADIOLA, Mle 342 994 A, Enseignant-chercheur, catégorie PA, grade initial, 2e échelon, est nommé Directeur du Conseil à l’orientation universitaire. III.2. FIN DE FONCTIONS AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Le Conseil a mis fin aux fonctions de : – Camarade Siebi Ahmed OUATTARA, Mle 260 413 H, Secrétaire administratif, Préfet du département de Gossina, province du Nayala. III.3. NOMINATIONS DANS LES CONSEILS D’ADMINISTRATION Le Conseil a procédé à la nomination d’Administrateurs aux Conseils d’administration : – de l’Institut national de la statistique et de la démographie (INSD) au titre du ministère de l’Economie et des finances ; – de la Société de gestion du patrimoine ferroviaire du Burkina (SOPAFER-B) au titre du ministère de la Construction de la Patrie. A. MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté un décret portant nomination du Camarade Brama DAO, Mle 230 010 X, Attaché en études et analyses, Administrateur représentant l’Etat, au titre du ministère de l’Industrie, du commerce et de l’artisanat au Conseil d’administration de l’Institut national de la statistique et de la démographie (INSD) pour un premier mandat de trois (03) ans. B. MINISTERE DE LA CONSTRUCTION DE LA PATRIE Le Conseil a adopté un décret portant nomination du Camarade Ousmane SAVADOGO, Mle 138, Conseiller en administration des finances et du contrôle, Administrateur représentant le Conseil burkinabè des chargeurs, au Conseil d’administration de la Société de gestion du patrimoine ferroviaire du Burkina (SOPAFER-B) pour un premier mandat de trois (03) ans, en remplacement du Camarade Sayouba KIENDREBEOGO. Le Porte-parole du Gouvernement, Pingdwendé Gilbert OUEDRAOGO Officier de l’Ordre de l’Etalon L’article Burkina: le compte rendu du Conseil des ministres du jeudi 4 juin 2026 est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 115
-    },
-    {
-      "title": "Burkina : Compte-rendu du conseil des ministres du 04 juin 2026",
-      "link": "https://www.minute.bf/burkina-compte-rendu-du-conseil-des-ministres-du-04-juin-2026/",
-      "pubDate": "2026-06-04T20:44:33.000Z",
-      "description": "Le Conseil des ministres s’est tenu à Ouagadougou, le jeudi 04 juin 2026, en séance ordinaire, de 09 H 00 mn à 12 H 21 mn, sous la présidence du Camarade Capitaine Ibrahim TRAORE, Président du Faso, Président du Conseil des ministres. Il a délibéré sur les dossiers inscrits à son ordre du jour, entendu des communications orales, procédé à des nominations, mis fin à une fonction et autorisé des missions à l’étranger. I. DELIBERATIONS I.1. AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Le Conseil a adopté deux (02) décrets. Le premier décret porte liste des communes selon leur statut. Ce décret vise l’application de la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Cette loi dispose que les communes sont classées en fonction de leur capacité de mobilisation des ressources propres. Elle établit la liste des communes selon leur statut, sur la base de la moyenne des montants des ressources budgétaires propres issus des comptes administratifs gestion 2023 et 2024 approuvés et la taille de la population. Le nombre des communes en fonction de leur statut s’établit comme suit : deux cents (200) communes de moyen exercice ; cent quarante-neuf (149) communes de plein exercice ; deux (02) communes à statut particulier. L’adoption de ce décret permet de disposer d’un répertoire des communes selon leur statut, conformément à la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Le second décret porte modalités de changement de statut des communes. Ce décret vise l’application de la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Il consacre : la désignation de la Commission nationale des finances locales (CONAFIL) comme organe chargé de l’évaluation périodique des ressources budgétaires propres des communes ; l’identification des comptes administratifs des trois derniers exercices des communes comme documents devant servir à l’évaluation des recettes propres ; la constatation du changement de statut des communes par décret en Conseil des ministres ; l’évaluation des ressources budgétaires propres des communes en période de délégation spéciale générale tous les trois ans et la possibilité de changement de statut des communes ; la possibilité de faire recours devant les juridictions administratives pour les contestations liées au changement de statut des communes. L’adoption de ce décret permet de préciser les modalités de changement de statut des communes en vue de renforcer les initiatives de mobilisation des ressources endogènes. I.2. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté deux (02) décrets. Le premier décret porte indemnité et avantages spécifiques de l’Agent judiciaire de l’Etat, du premier adjoint de l’Agent judiciaire de l’Etat, des Agents judiciaires adjoints de l’Etat et des Comptables publics. Ce décret vise l’application de la loi n°019-2025/ALT du 21 novembre 2025 portant Statut de l’Agent judiciaire de l’Etat. L’innovation majeure du décret porte sur l’extension de l’indemnité spécifique de représentation et de la prime de documentation au personnel d’appui, aux comptables publics ainsi qu’au premier adjoint de l’Agent judiciaire. L’adoption de ce décret permet de fixer l’indemnité et les avantages spécifiques de l’Agent judiciaire de l’Etat, de son premier adjoint, des Agents judiciaires adjoints de l’Etat et des comptables publics. Le second décret porte renouvellement du mandat d’un Membre de la Cellule nationale de traitement des informations financières (CENTIF). Ce décret vise l’application du décret n°2019-0878/PRES/PM/MINEFID/MSECU/MJ du 12 septembre 2019 portant attributions, organisation et fonctionnement de la Cellule nationale de traitement des informations financières. L’adoption de ce décret permet le renouvellement du mandat du camarade Pierre Lagoun ZALLA, Mle 111 447 J, Commissaire principal de Police, Membre de la Cellule nationale de traitement des informations financières, pour une dernière période de trois (03) ans. I.3. AU TITRE DU MINISTERE DE LA SECURITE Le Conseil a adopté un rapport relatif aux projets spécifiques du ministère de la Sécurité. Ces projets spécifiques visent à renforcer les capacités opérationnelles des Forces armées nationales et des Forces de sécurité intérieure déployées sur l’ensemble du territoire national. Ces projets concernent : l’acquisition de matériels spécifiques au profit des Forces armées nationales et des Forces de sécurité intérieure employées dans le cadre des missions de l’Office national de sécurisation des sites miniers (ONASSIM) ; l’acquisition de matériels au profit de l’Office national de la sécurité routière (ONASER) ; l’acquisition de matériels de sécurité et d’effets d’habillement au profit des élèves de l’Ecole nationale de Police (ENP); l’acquisition d’effets d’habillement au profit du personnel de la Direction générale de la Police nationale (DGPN) ; l’acquisition d’effets d’habillement au profit de la Direction générale des eaux et forêts (DGEF) ; l’acquisition d’effets d’habillement au profit du personnel de la Brigade LAABAL ; l’acquisition d’effets d’habillement au profit des élèves de l’Académie de Police. Le coût global de ces projets spécifiques s’élève à cinq milliards sept cent trente-sept millions six cent soixante-cinq mille six cent soixante (5 737 665 660) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.4. AU TITRE DU MINISTERE DE LA SANTE Le Conseil a adopté un rapport relatif à une demande d’autorisation pour la passation et l’exécution de marchés publics dans le cadre des projets spécifiques du ministère de la Santé. Ces projets spécifiques visent l’acquisition de biens et services dans des délais réduits pour une amélioration continue de la prise en charge sanitaire des populations. Il s’agit : de la construction d’infrastructures sanitaires dans plusieurs localités du Burkina Faso ; de l’acquisition d’équipements médicotechniques au profit des formations sanitaires. Le coût global des projets s’élève à vingt-quatre milliards six cent soixante-onze millions neuf cent sept mille trois cent quatorze (24 671 907 314) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.5. AU TITRE DU MINISTERE DE LA CONSTRUCTION DE LA PATRIE Le Conseil a adopté un décret portant définition et catégorisation des villes au Burkina Faso. Le Burkina Faso fait face à une urbanisation rapide, des mutations territoriales profondes ainsi que des défis sécuritaires, démographiques et socio-économiques. Cette dynamique entraîne une transformation accélérée des espaces urbains et des modes d’occupation du territoire, nécessitant un renforcement du cadre normatif en matière d’organisation et de gouvernance urbaines. Ce décret permet d’actualiser la définition de la ville, devenue obsolète au regard des réalités actuelles depuis l’adoption de la Politique nationale de l’habitat et du développement urbain de 2008, et d’instituer une catégorisation des villes. Selon le décret, est considérée comme ville : toute localité d’une commune de plein exercice, bâtie en continu, abritant au moins quinze mille (15 000) habitants, dotée d’un réseau d’adduction en eau potable, d’électricité et de transport, avec des activités et des fonctions des secteurs secondaire et tertiaire dominantes ; tout chef-lieu de commune chef-lieu de province ; tout chef-lieu de commune de plein exercice, quelle que soit sa taille démographique. En outre, le décret retient trois catégories de villes. Il s’agit des villes métropole, moyenne et petite. L’adoption de ce décret permet de doter l’Etat et les collectivités territoriales d’un nouveau cadre de référence pour la planification et la gouvernance urbaines, et de promouvoir un développement territorial équilibré et durable. I.6. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT DE BASE, DE L’ALPHABETISATION ET DE LA PROMOTION DES LANGUES NATIONALES Le Conseil a adopté un rapport relatif à une demande d’autorisation pour la passation et l’exécution de marchés publics dans le cadre des projets spécifiques du ministère de l’Enseignement de base, de l’alphabétisation et de la promotion des langues nationales. Ces projets spécifiques concernent la réalisation d’infrastructures dans le cadre du Projet de renforcement de la performance du système éducatif et d’amélioration de la résilience (REPAIR). Il s’agit de la construction de 15 complexes scolaires R+3 dans 15 provinces du Burkina Faso. Le coût global de ces projets s’élève à vingt et un milliards (21 000 000 000) F CFA TTC. II. COMMUNICATIONS ORALES II.1. Le ministre d’Etat, ministre de l’Agriculture, de l’eau, des ressources animales et halieutiques a fait au Conseil le compte rendu de la participation du Burkina Faso au 17e forum économique international « Russie-Monde Islamique », tenu du 10 au 18 mai 2026 à Kazan en Fédération de Russie. Ce forum constitue l’une des principales plateformes internationales de dialogue économique, politique, culturel et scientifique entre la Fédération de Russie et les pays du monde islamique. Il s’inscrit au cœur d’une dynamique de renforcement de la coopération entre les pays. Le rendez-vous de Kazan a permis à la délégation burkinabè de consolider le partenariat stratégique de notre pays avec la Fédération de Russie notamment dans les domaines de l’agriculture, de l’eau, des ressources animales et halieutiques. Il a également permis de présenter et de promouvoir les potentialités agricoles du Burkina Faso. II.2. Le ministre des Affaires étrangères a fait au Conseil le compte rendu de l’organisation du « Forum économique et de l’investissement du Burkina Faso », tenu du 8 au 10 mai 2026 à Pékin, en République populaire de Chine. Ce forum a été organisé par l’Ambassade du Burkina Faso à Pékin en partenariat avec le Comté de Luanzhou (province du Hebei) et le Centre asiatique de commerce et d’économie. Il avait pour objectifs de présenter l’environnement économique et des affaires de notre pays auprès des investisseurs chinois, de mettre en lumière les secteurs porteurs de l’économie nationale ainsi que les projets prioritaires du Gouvernement. A l’issue du forum, plusieurs accords de partenariat ont été signés avec la partie chinoise portant sur la création d’une unité de production et de transformation de l’arachide au Burkina Faso, l’implantation d’une unité de fabrication d’emballages à base de pierre, un accord de fourniture de sésame et un accord de fourniture de baguettes de soudure. II.3. Le ministre de l’Enseignement supérieur, de la recherche et de l’innovation a fait au Conseil une communication relative à l’organisation de la Semaine nationale des arts et de la culture des Universités du Burkina Faso (SENAC-UB), prévue du 7 au 14 juin 2026 à Dédougou, région de Bankui. Placée sous le Haut patronage du camarade Premier ministre, Chef du Gouvernement, la Semaine nationale des arts et de la culture des universités du Burkina Faso a pour thème : « Diversité culturelle et engagement patriotique : la jeunesse universitaire au service de la cohésion nationale ». L’édition 2026 de la SENAC-UB sera marquée par plusieurs activités parmi lesquelles des compétitions en arts du spectacle, en arts de la scène, en art culinaire, une conférence publique ainsi que des compétitions en handisport. Elle connaîtra la participation d’environ 1200 étudiants de plus de 30 universités publiques et privées du Burkina Faso. II.4. Le ministre de l’Enseignement secondaire et de la formation professionnelle et technique assurant l’intérim du ministre des Sports, de la jeunesse et de l’emploi a fait au Conseil trois (03) communications : la première est relative à l’organisation par le Burkina Faso de la 3e édition du Festival international de pétanque de Ouagadougou (FIPO), prévue du 23 au 28 juin 2026. Cette édition du FIPO connaîtra la participation de 13 pays africains et contribuera au rayonnement du Burkina Faso sur la scène sportive internationale tout en favorisant le développement de la pétanque au plan national. L’organisation du Festival international de pétanque de Ouagadougou est une opportunité de renforcement des capacités des acteurs nationaux de la pétanque ainsi qu’un cadre de détection de jeunes talents. Ce festival s’inscrit dans la dynamique de promotion du sport comme facteur de cohésion sociale, de paix et de résilience. la deuxième est relative à l’organisation du tournoi IHF Trophy Senior Dames Zone III en Septembre 2026 à Ouagadougou. Ce tournoi est une compétition de handball dames regroupant huit (08) pays de l’Afrique de l’Ouest, organisé sous l’égide de la Fédération internationale de Handball (IHF) en collaboration avec la Confédération africaine de Handball et la Fédération burkinabè de Handball. Cette compétition compte pour les éliminatoires du championnat continental de handball. Elle constitue une phase de préparation pour les handballeuses burkinabè et permettra de renforcer la collaboration avec les instances dirigeantes internationales de handball. la troisième est relative au compte rendu de la participation du Burkina Faso aux 24e Championnats d’Afrique d’athlétisme seniors, tenus du 12 au 17 mai 2026 à Accra au Ghana. A cette compétition, le Burkina Faso a réalisé une performance honorable terminant 8e au classement sur 48 nations avec un total de 02 médailles dont une médaille d’or remportée par Nemata NIKIEMA et une médaille d’argent obtenue par Marthe Yasmine KOALA. Par ailleurs, 03 athlètes burkinabè Zalissa ZONGO, Alan SAWADOGO et Abdoul Rachid TRAORE ont réalisé les minimas de qualification pour les championnats du monde juniors U20 prévus du 05 au 09 août 2026 à Eugène/Oregon aux Etats-Unis. Les Championnats d’Afrique d’athlétisme seniors constituent une compétition continentale majeure organisée sous l’égide de la Confédération africaine d’athlétisme. Ils regroupent les meilleurs athlètes du continent africain et offrent une plateforme de haut niveau pour l’expression du talent sportif africain. La participation du Burkina Faso à cette compétition visait à la fois la conquête de médailles et la préparation des athlètes en vue des championnats du monde 2027 et des Jeux olympiques de Los Angeles 2028. Le Conseil félicite les acteurs pour les résultats obtenus lors de ces Championnats d’Afrique d’athlétisme et les encourage à poursuivre dans cette dynamique. III. NOMINATIONS III.1. NOMINATIONS DANS LES FONCTIONS INDIVIDUELLES A. AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Camarade Teega-Wende Rodrigue NANA, Mle 304 114 C, Administrateur civil, 1ère classe, 5e échelon, est nommé Conseiller technique du Gouverneur de la région du Djôrô, chargé des questions relatives aux libertés publiques, à la prévention et à la gestion des conflits. B. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES Camarade Adama FAYAMA, Mle 239 628 E, Inspecteur du trésor, 1ère classe, 4e échelon, est nommé Fondé de pouvoirs du Directeur de la Banque de dépôts du trésor ; Camarade Bègboayaonne Prosper SOMDA, Mle 91 629 S, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Fondé de pouvoirs du trésorier auprès du ministère des Affaires étrangères ; Camarade Noël DABIRE, Mle 210 699 N, Inspecteur du trésor, 1ère classe, 4e échelon, est nommé Fondé de pouvoirs du trésorier général de l’Etat ; Camarade Idrissa NANA, Mle 272 948 X, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Fondé de pouvoirs du trésorier auprès du ministère de l’Enseignement de base, de l’alphabétisation et de la promotion des langues nationales ; Camarade Jean ZINSONE, Mle 46 263 C, Inspecteur du trésor, 2e classe, 3e échelon, est nommé Receveur général ; Camarade Tadioa Martin COULIBALY, Mle 112 470 G, Inspecteur du trésor, 1ère classe, 6e échelon, est nommé Trésorier de l’Institut « DEEN KANU » ; Camarade Sibiri BITIBALY, Mle 57 157 C, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Trésorier auprès du ministère de l’Agriculture, de l’eau, des ressources animales et halieutiques ; Camarade Moussa NIKIEMA, Mle 216 170 T, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Trésorier auprès de l’Agence burkinabè pour l’emploi « Faso Tonlo Zï » ; Camarade Agnès SOUSSANGO/ZONGO, Mle 46 220 G, Inspecteur du trésor, 2e classe, 4e échelon, est nommée Trésorier auprès du ministère de la Construction de la Patrie ; Camarade Issa SAGNON, Mle 216 178 R, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Trésorier auprès du ministère de la Communication, de la culture, des arts et du tourisme et du ministère des Sports, de la jeunesse et de l’emploi ; Camarade Jean Baptiste ZEIDA, Mle 43 132 B, Inspecteur du trésor, 1ère classe, 12e échelon, est nommé Trésorier auprès du ministère des Affaires étrangères. Camarade Issouf OUEDRAOGO, Mle 57 172 E, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Agent comptable central de l’Etat ; Camarade Hamado SEOGO, Mle 245 222 E, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Directeur de la dette publique ; Camarade Emmanuel SAWADOGO, Mle 236 096 F, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Trésorier régional de Nando ; Camarade Issa YONABA, Mle 46 226 T, Inspecteur du trésor, 2e classe, 4e échelon, est nommé Trésorier régional de Oubri ; Camarade Maboudou KEKELE, Mle 46 224 Y, Inspecteur du trésor, 2e classe, 5e échelon, est nommé Trésorier régional du Guiriko. C. AU TITRE DU MINISTERE DE LA SECURITE Camarade Wamedo Melaine Raymond OUEDRAOGO, Mle 46 777 N, Commissaire principal de Police, 2e classe, 2e échelon, est nommé Secrétaire général de l’Office national de la sécurité routière (ONASER). D. AU TITRE DU MINISTERE DES AFFAIRES ETRANGERES Camarade Abdoul Wabou DRABO, Mle 54 589 N, Conseiller des affaires étrangères, 1ère classe, 6e échelon, est nommé Chargé de mission ; Camarade Abdoulaye ZONGO, Mle 75 297 K, Conseiller des affaires étrangères, 2e classe, 9e échelon, est nommé Chargé de mission ; Camarade Basnewendé Martine Eliane OUEDRAOGO/GYENGUERE, Mle 104 414 S, Conseiller des affaires étrangères, 2e classe, 5e échelon, est nommée Chargé de mission. E. AU TITRE DU MINISTERE DE LA COMMUNICATION, DE LA CULTURE, DES ARTS ET DU TOURISME Camarade Awa COMPAORE, Mle 244 961 D, Conseiller en sciences et techniques de l’information et de la communication, 2e classe, 2e échelon, est nommée Chargé d’études ; Camarade Noëlie CONGO/SALOUKA, Mle 216 714 W, Conseiller des affaires culturelles, 1ère classe, 5e échelon, est nommée Responsable du programme « Culture », cumulativement avec ses fonctions de Directrice générale de la culture et des arts ; Camarade Salifou OUARMA, Mle 220 278 V, Conseiller en sciences et techniques de l’information et de la communication, 1ère classe, 5e échelon, est nommée Responsable du Programme « Communication », cumulativement avec ses fonctions de Directeur général de la communication et des médias. F. AU TITRE DU MINISTERE DE LA CONSTRUCTION DE LA PATRIE Camarade Zézouma SANON, Mle 00 00 29 Z, Ingénieur de conception en génie civil, 1ère classe, 11e échelon, est nommé Directeur général de l’Agence de conseil et de maîtrise d’ouvrage déléguée en bâtiment et aménagement urbain (ACOMOD-BURKINA). G. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT SUPERIEUR, DE LA RECHERCHE ET DE L’INNOVATION Camarade Belo ADIOLA, Mle 342 994 A, Enseignant-chercheur, catégorie PA, grade initial, 2e échelon, est nommé Directeur du Conseil à l’orientation universitaire. III.2. FIN DE FONCTIONS AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Le Conseil a mis fin aux fonctions de : Camarade Siebi Ahmed OUATTARA, Mle 260 413 H, Secrétaire administratif, Préfet du département de Gossina, province du Nayala. III.3. NOMINATIONS DANS LES CONSEILS D’ADMINISTRATION Le Conseil a procédé à la nomination d’Administrateurs aux Conseils d’administration : de l’Institut national de la statistique et de la démographie (INSD) au titre du ministère de l’Economie et des finances ; de la Société de gestion du patrimoine ferroviaire du Burkina (SOPAFER-B) au titre du ministère de la Construction de la Patrie. A. MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté un décret portant nomination du Camarade Brama DAO, Mle 230 010 X, Attaché en études et analyses, Administrateur représentant l’Etat, au titre du ministère de l’Industrie, du commerce et de l’artisanat au Conseil d’administration de l’Institut national de la statistique et de la démographie (INSD) pour un premier mandat de trois (03) ans. B. MINISTERE DE LA CONSTRUCTION DE LA PATRIE Le Conseil a adopté un décret portant nomination du Camarade Ousmane SAVADOGO, Mle 138, Conseiller en administration des finances et du contrôle, Administrateur représentant le Conseil burkinabè des chargeurs, au Conseil d’administration de la Société de gestion du patrimoine ferroviaire du Burkina (SOPAFER-B) pour un premier mandat de trois (03) ans, en remplacement du Camarade Sayouba KIENDREBEOGO. Le Porte-parole du Gouvernement, Pingdwendé Gilbert OUEDRAOGO Officier de l’Ordre de l’Etalon Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 115
+      "_rating": "A2",
+      "_score": 123
     },
     {
       "title": "Compte-rendu du Conseil des ministres du jeudi 04 juin 2026",
       "link": "https://netafrique.net/compte-rendu-du-conseil-des-ministres-du-jeudi-04-juin-2026/",
-      "pubDate": "2026-06-04T20:36:16.000Z",
+      "pubDate": "2026-06-04T23:50:16.000Z",
       "description": "Le Conseil des ministres s’est tenu à Ouagadougou, le jeudi 04 juin 2026, en séance ordinaire, de 09 H 00 mn à 12 H 21 mn, sous la présidence du Camarade Capitaine Ibrahim TRAORE, Président du Faso, Président du Conseil des ministres. Il a délibéré sur les dossiers inscrits à son ordre du jour, entendu des communications orales, procédé à des nominations, mis fin à une fonction et autorisé des missions à l’étranger. I. DELIBERATIONS I.1. AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Le Conseil a adopté deux (02) décrets. Le premier décret porte liste des communes selon leur statut. Ce décret vise l’application de la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Cette loi dispose que les communes sont classées en fonction de leur capacité de mobilisation des ressources propres. Elle établit la liste des communes selon leur statut, sur la base de la moyenne des montants des ressources budgétaires propres issus des comptes administratifs gestion 2023 et 2024 approuvés et la taille de la population. Le nombre des communes en fonction de leur statut s’établit comme suit : – deux cents (200) communes de moyen exercice ; – cent quarante-neuf (149) communes de plein exercice ; – deux (02) communes à statut particulier. L’adoption de ce décret permet de disposer d’un répertoire des communes selon leur statut, conformément à la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Le second décret porte modalités de changement de statut des communes. Ce décret vise l’application de la loi n°024-2025/ALT du 30 décembre 2025 portant Code général des collectivités territoriales. Il consacre : – la désignation de la Commission nationale des finances locales (CONAFIL) comme organe chargé de l’évaluation périodique des ressources budgétaires propres des communes ; – l’identification des comptes administratifs des trois derniers exercices des communes comme documents devant servir à l’évaluation des recettes propres ; – la constatation du changement de statut des communes par décret en Conseil des ministres ; – l’évaluation des ressources budgétaires propres des communes en période de délégation spéciale générale tous les trois ans et la possibilité de changement de statut des communes ; – la possibilité de faire recours devant les juridictions administratives pour les contestations liées au changement de statut des communes. L’adoption de ce décret permet de préciser les modalités de changement de statut des communes en vue de renforcer les initiatives de mobilisation des ressources endogènes. I.2. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté deux (02) décrets. Le premier décret porte indemnité et avantages spécifiques de l’Agent judiciaire de l’Etat, du premier adjoint de l’Agent judiciaire de l’Etat, des Agents judiciaires adjoints de l’Etat et des Comptables publics. Ce décret vise l’application de la loi n°019-2025/ALT du 21 novembre 2025 portant Statut de l’Agent judiciaire de l’Etat. L’innovation majeure du décret porte sur l’extension de l’indemnité spécifique de représentation et de la prime de documentation au personnel d’appui, aux comptables publics ainsi qu’au premier adjoint de l’Agent judiciaire. L’adoption de ce décret permet de fixer l’indemnité et les avantages spécifiques de l’Agent judiciaire de l’Etat, de son premier adjoint, des Agents judiciaires adjoints de l’Etat et des comptables publics. Le second décret porte renouvellement du mandat d’un Membre de la Cellule nationale de traitement des informations financières (CENTIF). Ce décret vise l’application du décret n°2019-0878/PRES/PM/MINEFID/MSECU/MJ du 12 septembre 2019 portant attributions, organisation et fonctionnement de la Cellule nationale de traitement des informations financières. L’adoption de ce décret permet le renouvellement du mandat du camarade Pierre Lagoun ZALLA, Mle 111 447 J, Commissaire principal de Police, Membre de la Cellule nationale de traitement des informations financières, pour une dernière période de trois (03) ans. I.3. AU TITRE DU MINISTERE DE LA SECURITE Le Conseil a adopté un rapport relatif aux projets spécifiques du ministère de la Sécurité. Ces projets spécifiques visent à renforcer les capacités opérationnelles des Forces armées nationales et des Forces de sécurité intérieure déployées sur l’ensemble du territoire national. Ces projets concernent : – l’acquisition de matériels spécifiques au profit des Forces armées nationales et des Forces de sécurité intérieure employées dans le cadre des missions de l’Office national de sécurisation des sites miniers (ONASSIM) ; – l’acquisition de matériels au profit de l’Office national de la sécurité routière (ONASER) ; – l’acquisition de matériels de sécurité et d’effets d’habillement au profit des élèves de l’Ecole nationale de Police (ENP); – l’acquisition d’effets d’habillement au profit du personnel de la Direction générale de la Police nationale (DGPN) ; – l’acquisition d’effets d’habillement au profit de la Direction générale des eaux et forêts (DGEF) ; – l’acquisition d’effets d’habillement au profit du personnel de la Brigade LAABAL ; – l’acquisition d’effets d’habillement au profit des élèves de l’Académie de Police. Le coût global de ces projets spécifiques s’élève à cinq milliards sept cent trente-sept millions six cent soixante-cinq mille six cent soixante (5 737 665 660) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.4. AU TITRE DU MINISTERE DE LA SANTE Le Conseil a adopté un rapport relatif à une demande d’autorisation pour la passation et l’exécution de marchés publics dans le cadre des projets spécifiques du ministère de la Santé. Ces projets spécifiques visent l’acquisition de biens et services dans des délais réduits pour une amélioration continue de la prise en charge sanitaire des populations. Il s’agit : – de la construction d’infrastructures sanitaires dans plusieurs localités du Burkina Faso ; – de l’acquisition d’équipements médicotechniques au profit des formations sanitaires. Le coût global des projets s’élève à vingt-quatre milliards six cent soixante-onze millions neuf cent sept mille trois cent quatorze (24 671 907 314) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.5. AU TITRE DU MINISTERE DE LA CONSTRUCTION DE LA PATRIE Le Conseil a adopté un décret portant définition et catégorisation des villes au Burkina Faso. Le Burkina Faso fait face à une urbanisation rapide, des mutations territoriales profondes ainsi que des défis sécuritaires, démographiques et socio-économiques. Cette dynamique entraîne une transformation accélérée des espaces urbains et des modes d’occupation du territoire, nécessitant un renforcement du cadre normatif en matière d’organisation et de gouvernance urbaines. Ce décret permet d’actualiser la définition de la ville, devenue obsolète au regard des réalités actuelles depuis l’adoption de la Politique nationale de l’habitat et du développement urbain de 2008, et d’instituer une catégorisation des villes. Selon le décret, est considérée comme ville : – toute localité d’une commune de plein exercice, bâtie en continu, abritant au moins quinze mille (15 000) habitants, dotée d’un réseau d’adduction en eau potable, d’électricité et de transport, avec des activités et des fonctions des secteurs secondaire et tertiaire dominantes ; – tout chef-lieu de commune chef-lieu de province ; – tout chef-lieu de commune de plein exercice, quelle que soit sa taille démographique. En outre, le décret retient trois catégories de villes. Il s’agit des villes métropole, moyenne et petite. L’adoption de ce décret permet de doter l’Etat et les collectivités territoriales d’un nouveau cadre de référence pour la planification et la gouvernance urbaines, et de promouvoir un développement territorial équilibré et durable. I.6. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT DE BASE, DE L’ALPHABETISATION ET DE LA PROMOTION DES LANGUES NATIONALES Le Conseil a adopté un rapport relatif à une demande d’autorisation pour la passation et l’exécution de marchés publics dans le cadre des projets spécifiques du ministère de l’Enseignement de base, de l’alphabétisation et de la promotion des langues nationales. Ces projets spécifiques concernent la réalisation d’infrastructures dans le cadre du Projet de renforcement de la performance du système éducatif et d’amélioration de la résilience (REPAIR). Il s’agit de la construction de 15 complexes scolaires R+3 dans 15 provinces du Burkina Faso. Le coût global de ces projets s’élève à vingt et un milliards (21 000 000 000) F CFA TTC. II. COMMUNICATIONS ORALES II.1. Le ministre d’Etat, ministre de l’Agriculture, de l’eau, des ressources animales et halieutiques a fait au Conseil le compte rendu de la participation du Burkina Faso au 17e forum économique international « Russie-Monde Islamique », tenu du 10 au 18 mai 2026 à Kazan en Fédération de Russie. Ce forum constitue l’une des principales plateformes internationales de dialogue économique, politique, culturel et scientifique entre la Fédération de Russie et les pays du monde islamique. Il s’inscrit au cœur d’une dynamique de renforcement de la coopération entre les pays. Le rendez-vous de Kazan a permis à la délégation burkinabè de consolider le partenariat stratégique de notre pays avec la Fédération de Russie notamment dans les domaines de l’agriculture, de l’eau, des ressources animales et halieutiques. Il a également permis de présenter et de promouvoir les potentialités agricoles du Burkina Faso. II.2. Le ministre des Affaires étrangères a fait au Conseil le compte rendu de l’organisation du « Forum économique et de l’investissement du Burkina Faso », tenu du 8 au 10 mai 2026 à Pékin, en République populaire de Chine. Ce forum a été organisé par l’Ambassade du Burkina Faso à Pékin en partenariat avec le Comté de Luanzhou (province du Hebei) et le Centre asiatique de commerce et d’économie. Il avait pour objectifs de présenter l’environnement économique et des affaires de notre pays auprès des investisseurs chinois, de mettre en lumière les secteurs porteurs de l’économie nationale ainsi que les projets prioritaires du Gouvernement. A l’issue du forum, plusieurs accords de partenariat ont été signés avec la partie chinoise portant sur la création d’une unité de production et de transformation de l’arachide au Burkina Faso, l’implantation d’une unité de fabrication d’emballages à base de pierre, un accord de fourniture de sésame et un accord de fourniture de baguettes de soudure. II.3. Le ministre de l’Enseignement supérieur, de la recherche et de l’innovation a fait au Conseil une communication relative à l’organisation de la Semaine nationale des arts et de la culture des Universités du Burkina Faso (SENAC-UB), prévue du 7 au 14 juin 2026 à Dédougou, région de Bankui. Placée sous le Haut patronage du camarade Premier ministre, Chef du Gouvernement, la Semaine nationale des arts et de la culture des universités du Burkina Faso a pour thème : « Diversité culturelle et engagement patriotique : la jeunesse universitaire au service de la cohésion nationale ». L’édition 2026 de la SENAC-UB sera marquée par plusieurs activités parmi lesquelles des compétitions en arts du spectacle, en arts de la scène, en art culinaire, une conférence publique ainsi que des compétitions en handisport. Elle connaîtra la participation d’environ 1200 étudiants de plus de 30 universités publiques et privées du Burkina Faso. II.4. Le ministre de l’Enseignement secondaire et de la formation professionnelle et technique assurant l’intérim du ministre des Sports, de la jeunesse et de l’emploi a fait au Conseil trois (03) communications : – la première est relative à l’organisation par le Burkina Faso de la 3e édition du Festival international de pétanque de Ouagadougou (FIPO), prévue du 23 au 28 juin 2026. Cette édition du FIPO connaîtra la participation de 13 pays africains et contribuera au rayonnement du Burkina Faso sur la scène sportive internationale tout en favorisant le développement de la pétanque au plan national. L’organisation du Festival international de pétanque de Ouagadougou est une opportunité de renforcement des capacités des acteurs nationaux de la pétanque ainsi qu’un cadre de détection de jeunes talents. Ce festival s’inscrit dans la dynamique de promotion du sport comme facteur de cohésion sociale, de paix et de résilience. – la deuxième est relative à l’organisation du tournoi IHF Trophy Senior Dames Zone III en Septembre 2026 à Ouagadougou. Ce tournoi est une compétition de handball dames regroupant huit (08) pays de l’Afrique de l’Ouest, organisé sous l’égide de la Fédération internationale de Handball (IHF) en collaboration avec la Confédération africaine de Handball et la Fédération burkinabè de Handball. Cette compétition compte pour les éliminatoires du championnat continental de handball. Elle constitue une phase de préparation pour les handballeuses burkinabè et permettra de renforcer la collaboration avec les instances dirigeantes internationales de handball. – la troisième est relative au compte rendu de la participation du Burkina Faso aux 24e Championnats d’Afrique d’athlétisme seniors, tenus du 12 au 17 mai 2026 à Accra au Ghana. A cette compétition, le Burkina Faso a réalisé une performance honorable terminant 8e au classement sur 48 nations avec un total de 02 médailles dont une médaille d’or remportée par Nemata NIKIEMA et une médaille d’argent obtenue par Marthe Yasmine KOALA. Par ailleurs, 03 athlètes burkinabè Zalissa ZONGO, Alan SAWADOGO et Abdoul Rachid TRAORE ont réalisé les minimas de qualification pour les championnats du monde juniors U20 prévus du 05 au 09 août 2026 à Eugène/Oregon aux Etats-Unis. Les Championnats d’Afrique d’athlétisme seniors constituent une compétition continentale majeure organisée sous l’égide de la Confédération africaine d’athlétisme. Ils regroupent les meilleurs athlètes du continent africain et offrent une plateforme de haut niveau pour l’expression du talent sportif africain. La participation du Burkina Faso à cette compétition visait à la fois la conquête de médailles et la préparation des athlètes en vue des championnats du monde 2027 et des Jeux olympiques de Los Angeles 2028. Le Conseil félicite les acteurs pour les résultats obtenus lors de ces Championnats d’Afrique d’athlétisme et les encourage à poursuivre dans cette dynamique. III. NOMINATIONS III.1. NOMINATIONS DANS LES FONCTIONS INDIVIDUELLES A. AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE – Camarade Teega-Wende Rodrigue NANA, Mle 304 114 C, Administrateur civil, 1ère classe, 5e échelon, est nommé Conseiller technique du Gouverneur de la région du Djôrô, chargé des questions relatives aux libertés publiques, à la prévention et à la gestion des conflits. B. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES – Camarade Adama FAYAMA, Mle 239 628 E, Inspecteur du trésor, 1ère classe, 4e échelon, est nommé Fondé de pouvoirs du Directeur de la Banque de dépôts du trésor ; – Camarade Bègboayaonne Prosper SOMDA, Mle 91 629 S, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Fondé de pouvoirs du trésorier auprès du ministère des Affaires étrangères ; – Camarade Noël DABIRE, Mle 210 699 N, Inspecteur du trésor, 1ère classe, 4e échelon, est nommé Fondé de pouvoirs du trésorier général de l’Etat ; – Camarade Idrissa NANA, Mle 272 948 X, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Fondé de pouvoirs du trésorier auprès du ministère de l’Enseignement de base, de l’alphabétisation et de la promotion des langues nationales ; – Camarade Jean ZINSONE, Mle 46 263 C, Inspecteur du trésor, 2e classe, 3e échelon, est nommé Receveur général ; – Camarade Tadioa Martin COULIBALY, Mle 112 470 G, Inspecteur du trésor, 1ère classe, 6e échelon, est nommé Trésorier de l’Institut « DEEN KANU » ; – Camarade Sibiri BITIBALY, Mle 57 157 C, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Trésorier auprès du ministère de l’Agriculture, de l’eau, des ressources animales et halieutiques ; – Camarade Moussa NIKIEMA, Mle 216 170 T, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Trésorier auprès de l’Agence burkinabè pour l’emploi « Faso Tonlo Zï » ; – Camarade Agnès SOUSSANGO/ZONGO, Mle 46 220 G, Inspecteur du trésor, 2e classe, 4e échelon, est nommée Trésorier auprès du ministère de la Construction de la Patrie ; – Camarade Issa SAGNON, Mle 216 178 R, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Trésorier auprès du ministère de la Communication, de la culture, des arts et du tourisme et du ministère des Sports, de la jeunesse et de l’emploi ; – Camarade Jean Baptiste ZEIDA, Mle 43 132 B, Inspecteur du trésor, 1ère classe, 12e échelon, est nommé Trésorier auprès du ministère des Affaires étrangères. – Camarade Issouf OUEDRAOGO, Mle 57 172 E, Inspecteur du trésor, 2e classe, 2e échelon, est nommé Agent comptable central de l’Etat ; – Camarade Hamado SEOGO, Mle 245 222 E, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Directeur de la dette publique ; – Camarade Emmanuel SAWADOGO, Mle 236 096 F, Inspecteur du trésor, 2e classe, 1er échelon, est nommé Trésorier régional de Nando ; – Camarade Issa YONABA, Mle 46 226 T, Inspecteur du trésor, 2e classe, 4e échelon, est nommé Trésorier régional de Oubri ; – Camarade Maboudou KEKELE, Mle 46 224 Y, Inspecteur du trésor, 2e classe, 5e échelon, est nommé Trésorier régional du Guiriko. C. AU TITRE DU MINISTERE DE LA SECURITE – Camarade Wamedo Melaine Raymond OUEDRAOGO, Mle 46 777 N, Commissaire principal de Police, 2e classe, 2e échelon, est nommé Secrétaire général de l’Office national de la sécurité routière (ONASER). D. AU TITRE DU MINISTERE DES AFFAIRES ETRANGERES – Camarade Abdoul Wabou DRABO, Mle 54 589 N, Conseiller des affaires étrangères, 1ère classe, 6e échelon, est nommé Chargé de mission ; – Camarade Abdoulaye ZONGO, Mle 75 297 K, Conseiller des affaires étrangères, 2e classe, 9e échelon, est nommé Chargé de mission ; – Camarade Basnewendé Martine Eliane OUEDRAOGO/GYENGUERE, Mle 104 414 S, Conseiller des affaires étrangères, 2e classe, 5e échelon, est nommée Chargé de mission. E. AU TITRE DU MINISTERE DE LA COMMUNICATION, DE LA CULTURE, DES ARTS ET DU TOURISME – Camarade Awa COMPAORE, Mle 244 961 D, Conseiller en sciences et techniques de l’information et de la communication, 2e classe, 2e échelon, est nommée Chargé d’études ; – Camarade Noëlie CONGO/SALOUKA, Mle 216 714 W, Conseiller des affaires culturelles, 1ère classe, 5e échelon, est nommée Responsable du programme « Culture », cumulativement avec ses fonctions de Directrice générale de la culture et des arts ; – Camarade Salifou OUARMA, Mle 220 278 V, Conseiller en sciences et techniques de l’information et de la communication, 1ère classe, 5e échelon, est nommée Responsable du Programme « Communication », cumulativement avec ses fonctions de Directeur général de la communication et des médias. F. AU TITRE DU MINISTERE DE LA CONSTRUCTION DE LA PATRIE – Camarade Zézouma SANON, Mle 00 00 29 Z, Ingénieur de conception en génie civil, 1ère classe, 11e échelon, est nommé Directeur général de l’Agence de conseil et de maîtrise d’ouvrage déléguée en bâtiment et aménagement urbain (ACOMOD-BURKINA). G. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT SUPERIEUR, DE LA RECHERCHE ET DE L’INNOVATION – Camarade Belo ADIOLA, Mle 342 994 A, Enseignant-chercheur, catégorie PA, grade initial, 2e échelon, est nommé Directeur du Conseil à l’orientation universitaire. III.2. FIN DE FONCTIONS AU TITRE DU MINISTERE DE L’ADMINISTRATION TERRITORIALE ET DE LA MOBILITE Le Conseil a mis fin aux fonctions de : – Camarade Siebi Ahmed OUATTARA, Mle 260 413 H, Secrétaire administratif, Préfet du département de Gossina, province du Nayala. III.3. NOMINATIONS DANS LES CONSEILS D’ADMINISTRATION Le Conseil a procédé à la nomination d’Administrateurs aux Conseils d’administration : – de l’Institut national de la statistique et de la démographie (INSD) au titre du ministère de l’Economie et des finances ; – de la Société de gestion du patrimoine ferroviaire du Burkina (SOPAFER-B) au titre du ministère de la Construction de la Patrie. A. MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté un décret portant nomination du Camarade Brama DAO, Mle 230 010 X, Attaché en études et analyses, Administrateur représentant l’Etat, au titre du ministère de l’Industrie, du commerce et de l’artisanat au Conseil d’administration de l’Institut national de la statistique et de la démographie (INSD) pour un premier mandat de trois (03) ans. B. MINISTERE DE LA CONSTRUCTION DE LA PATRIE Le Conseil a adopté un décret portant nomination du Camarade Ousmane SAVADOGO, Mle 138, Conseiller en administration des finances et du contrôle, Administrateur représentant le Conseil burkinabè des chargeurs, au Conseil d’administration de la Société de gestion du patrimoine ferroviaire du Burkina (SOPAFER-B) pour un premier mandat de trois (03) ans, en remplacement du Camarade Sayouba KIENDREBEOGO. Le Porte-parole du Gouvernement, Pingdwendé Gilbert OUEDRAOGO Officier de l’Ordre de l’Etalon L’article Compte-rendu du Conseil des ministres du jeudi 04 juin 2026 est apparu en premier sur NetAfrique.net .",
       "_source": "Net Afrique (BF)",
       "_sourceId": "rss_netafrique",
@@ -1067,17 +1009,18 @@
       "_score": 115
     },
     {
-      "title": "Autosuffisance alimentaire : Le Bureau national des grands projets évalue les VDP agricoles à Dano et Bapla",
-      "link": "https://faso7.com/2026/06/04/autosuffisance-alimentaire-le-bureau-national-des-grands-projets-evalue-les-vdp-agricoles-a-dano-et-bapla/",
-      "pubDate": "2026-06-04T20:18:52.000Z",
-      "description": "Le Bureau National des Grands Projets du Burkina a effectué, le 3 juin 2026, une visite de terrain dans les centres de formation des VDP agricoles de Dano et de Bapla, dans la région du Djôrô. Cette mission visait à évaluer l’état d’avancement de la formation de la troisième cohorte des VDP agricoles engagés dans le cadre de l’Initiative présidentielle pour l’agriculture et l’autosuffisance alimentaire. Après trois mois de formation, les VDP agricoles des centres de Dano et de Bapla sont fin prêts pour se lancer pleinement dans l’agriculture. C’est le constat fait par le Bureau national des grands projets après des échanges avec les apprenants et la visite des différents travaux pratiques réalisés durant leur formation. Selon le coordonnateur de l’Initiative présidentielle pour l’agriculture et l’autosuffisance alimentaire, Inoussa Ouédraogo, le bilan est très satisfaisant, car l’ensemble des modules prévus a été dispensé conformément au programme établi. « Tous les modules inscrits dans le cadre de cette formation ont été dispensés intégralement et dans les délais. Nous avons même été agréablement surpris de constater que plusieurs formations complémentaires ont été ajoutées au-delà de ce qui était prévu dans la convention », a-t-il indiqué. Inoussa Ouédraogo, Coordonnateur de l’Initiative présidentielle pour l’agriculture et l’autosuffisance alimentaire remettant un trophée à un VDP agricole -©️Faso7 Au-delà du respect du programme pédagogique, les responsables de l’initiative se réjouissent des résultats obtenus sur le terrain. Parmi les acquis majeurs figure la remise en cause de certaines idées reçues concernant les productions agricoles en saison sèche. « Les stagiaires pensaient qu’il était impossible de cultiver certaines spéculations pendant la saison sèche, notamment le gombo. Aujourd’hui, dans les deux centres, ils en sont déjà à leur deuxième récolte en moins de deux mois », a salué le coordonnateur. Ces performances témoignent de l’efficacité de l’approche pratique adoptée durant la formation et renforcent la confiance des futurs producteurs dans leurs capacités à exploiter pleinement les potentialités agricoles de leurs localités. Une formation axée sur la diversification des compétences L’ambition de l’initiative ne se limite toutefois pas à la seule production agricole. Les apprenants ont également bénéficié de formations en transformation des produits agricoles, notamment dans la fabrication de jus naturels, de confitures et d’autres produits dérivés à faible coût d’investissement. Par ailleurs, des modules pratiques sur l’élevage et la pisciculture ont aussi été dispensés aux stagiaires. Cette diversification vise à offrir aux VDP agricoles des compétences variées susceptibles de générer des revenus complémentaires et de renforcer leur résilience économique après leur installation. Des bénéficiaires convaincus de l’importance de l’initiative Du côté des apprenants, l’appréciation est unanimement positive. Pour le délégué de la promotion du centre de Dano, Josué Bayé, cette formation a profondément transformé leur perception du métier d’agriculteur. « Cette formation a changé notre vision de l’agriculture, que beaucoup considéraient autrefois comme un métier réservé aux pauvres », a-t-il affirmé. Les VDP agricoles ont pris l’engagement de mettre en pratique les connaissances acquises. ©️Faso7 Reconnaissants envers les autorités et particulièrement envers le capitaine Ibrahim Traoré, initiateur du projet, les VDP agricoles ont pris l’engagement de mettre en pratique les connaissances acquises afin de contribuer efficacement à l’atteinte de l’autosuffisance alimentaire du Burkina Faso. Les responsables des centres de formation saluent également le comportement exemplaire des participants tout au long du stage. Selon Abdourahime Gamsoré, directeur général du centre Dreyer Industrie Vert et Environnement, la discipline des VDP a grandement facilité le déroulement des activités. « Les stagiaires sont venus avec un esprit militaire et une grande discipline, ce qui nous a permis de dérouler sans difficulté les différents modules de formation » , a-t-il confié. Les formateurs ont invité les futurs producteurs à demeurer engagés et à mettre en application, une fois de retour dans leurs communes respectives, les connaissances et compétences acquises durant leur parcours. L’article Autosuffisance alimentaire : Le Bureau national des grands projets évalue les VDP agricoles à Dano et Bapla est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "Mémorial Thomas Sankara : Les Burkinabè invités à poursuivre son combat et ses idéaux",
+      "link": "https://lefaso.net/spip.php?article146928",
+      "pubDate": "2026-06-04T23:04:00.000Z",
+      "description": "Le mémorial Thomas Sankara a accueilli, ce jeudi 4 juin 2026 à Ouagadougou, le 8ᵉ cérémonial militaire d'hommage au capitaine Thomas Sankara et à ses douze compagnons tombés lors des événements du 15 octobre 1987. Cette cérémonie a été l'occasion pour les autorités burkinabè de réaffirmer leur attachement aux idéaux du père de la Révolution et leur volonté de poursuivre la valorisation de son héritage. Placée sous le signe du devoir de mémoire et de la transmission des idéaux révolutionnaires, cette cérémonie a réuni membres du gouvernement, corps diplomatique, représentants d'organisations internationales, responsables du Comité international mémorial Thomas Sankara et de nombreux citoyens venus honorer la mémoire de celui qui demeure une figure emblématique du Burkina Faso, de l'Afrique et du monde. Institué sur instruction du président du Faso, le capitaine Ibrahim Traoré, ce cérémonial est désormais un rendez-vous annuel consacré à la célébration de l'héritage politique, social et panafricain de Thomas Sankara. Ce 8ᵉ cérémonial, placé sous le thème « Thomas Sankara vit toujours », a été l'occasion pour les autorités de rappeler l'actualité de sa pensée et la nécessité de préserver sa mémoire pour les générations futures. Le ministre de la Communication, de la Culture, des Arts et du Tourisme, Pingdwendé Gilbert Ouédraogo, s'exprimant également au nom du Comité international mémorial Thomas Sankara, a souligné la portée universelle de l'ancien chef de la Révolution démocratique et populaire. Les autorités gouvernementales, le corps diplomatique et les invités ont rendu hommage au capitaine Thomas Sankara et à ses compagnons. « Thomas Sankara est un fils du Burkina Faso, certes, mais Thomas Sankara appartient désormais à l'humanité », a-t-il déclaré. Le ministre a rappelé que cet hommage est dédié non seulement au capitaine Thomas Sankara, mais également à tous ses compagnons tombés lors des événements d'octobre 1987. Selon lui, ce devoir de mémoire constitue une responsabilité collective qui transcende les générations. Pour Pingdwendé Gilbert Ouédraogo, les idéaux défendus par Thomas Sankara demeurent d'une grande actualité. Il a notamment cité la dignité humaine, la justice sociale, l'émancipation des peuples, la solidarité entre les nations et le panafricanisme comme des valeurs universelles qui continuent d'inspirer les peuples du monde entier. Revenant sur le parcours international de l'ancien président burkinabè, il a rappelé que Thomas Sankara avait effectué de nombreuses visites à travers le monde entre 1983 et 1987, portant partout un message d'unité africaine, de souveraineté des peuples et de coopération entre les nations. « Aujourd'hui, nous sommes tous des héritiers de Sankara. Nous devons défendre ses idéaux et perpétuer sa mémoire », a-t-il affirmé. L'un des temps forts de son intervention a concerné le projet de construction du mémorial Thomas Sankara. Le ministre a invité les Burkinabè de l'intérieur et de la diaspora, ainsi que les partenaires internationaux, à accompagner l'initiative de mobilisation de ressources destinée à achever les infrastructures du site. Le ministre en charge de la communication, Pingdwendé Gilbert Ouédraogo, a appelé à la préservation et à la valorisation de l'héritage sankariste. Selon lui, les réalisations actuellement visibles ne représentent qu'une infime partie du projet global envisagé pour faire du mémorial un espace de référence dédié à la conservation et à la valorisation de l'héritage sankariste. Dans cette dynamique, il a également lancé un appel à la collecte d'archives, de documents historiques et d'objets ayant appartenu à Thomas Sankara ou liés à son parcours. Ces éléments viendront enrichir les collections de la future bibliothèque et des espaces muséographiques du mémorial. S'adressant particulièrement au corps diplomatique présent à la cérémonie, il a sollicité son appui pour identifier et récupérer les archives conservées dans les différents pays visités par Thomas Sankara au cours de son mandat. Présidant la cérémonie, le ministre des Affaires étrangères, Karamoko Jean-Marie Traoré, a livré un message empreint d'émotion et de reconnaissance envers celui qu'il considère comme l'une des plus grandes figures de l'histoire contemporaine africaine. Selon lui, la prophétie de Thomas Sankara annonçant la naissance de « milliers de Sankara » est aujourd'hui une réalité. « Nous pouvons dire que les milliers de Sankara qu'il avait annoncés vivent déjà et que d'autres milliers naîtront encore pour poursuivre son combat », a-t-il déclaré. Pour le chef de la diplomatie burkinabè, faire vivre Sankara ne consiste pas uniquement à commémorer son souvenir, mais surtout à incarner au quotidien les valeurs qu'il a défendues tout au long de sa vie. Karamoko Jean-Marie Traoré a invité les Burkinabè à faire vivre les idéaux de Thomas Sankara au quotidien Il a cité notamment la dignité humaine, la liberté, l'égalité, la justice sociale, l'émancipation des peuples et la souveraineté des nations africaines comme autant de principes qui doivent continuer à guider l'action des Burkinabè. « Sankara vivant, c'est Sankara dans chacun de nos actes, dans nos pensées et dans nos comportements quotidiens », a-t-il soutenu. Le président de la cérémonie a également salué le travail accompli par le Comité international mémorial Thomas Sankara, dont les efforts ont permis la concrétisation progressive du projet mémoriel. Il a rendu hommage à l'ensemble des militants et sympathisants sankaristes à travers le monde qui contribuent à maintenir vivante la mémoire du capitaine Thomas Sankara. Une pensée particulière a été adressée à une militante sankariste récemment décédée lors d'un séjour au Burkina Faso. Karamoko Jean-Marie Traoré a par ailleurs remercié le ministère de la Communication, de la Culture, des Arts et du Tourisme pour son accompagnement constant dans la mise en œuvre des initiatives de préservation de l'héritage sankariste. Le chef de la diplomatie burkinabè a également exprimé sa gratitude au corps diplomatique pour sa présence et son soutien aux actions entreprises autour du mémorial Thomas Sankara et du rayonnement de ses idéaux. Au-delà de la commémoration, cette 8ᵉ édition du cérémonial militaire d'hommage a réaffirmé la volonté des autorités burkinabè de faire du mémorial Thomas Sankara un lieu de mémoire, de recherche, d'éducation et de transmission. Le cérémonial s'est achevé par une visite du mémorial dédiée à la mémoire du capitaine Thomas Sankara et de ses compagnons. Trente-neuf ans après sa disparition, le capitaine Thomas Sankara continue de susciter admiration et inspiration bien au-delà des frontières du Burkina Faso. La cérémonie s'est achevée par une visite du mémorial Thomas Sankara, symbole de la volonté des autorités de faire de ce site un espace de mémoire, d'éducation et de transmission pour les générations futures. À travers cette cérémonie, les autorités ont renouvelé leur engagement à préserver son héritage et à transmettre aux générations futures les valeurs de dignité, de justice, de patriotisme et de souveraineté qu'il a incarnées tout au long de son combat. Anita Mireille Zongo Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
+      "_sourceVerified": true,
       "_tags": [
         "economic",
+        "diplomatic",
         "military",
         "political"
       ],
@@ -1088,9 +1031,65 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A2"
+        "rating": "C1"
       },
-      "_rating": "A2",
+      "_rating": "C1",
+      "_score": 115
+    },
+    {
+      "title": "Cérémonial militaire d’hommage à Thomas Sankara: les diplomates s’engagent dans une collecte internationale des archives de Sankara",
+      "link": "https://www.sidwaya.info/ceremonial-militaire-dhommage-a-thomas-sankara-les-diplomates-sengagent-dans-une-collecte-internationale-des-archives-de-sankara/",
+      "pubDate": "2026-06-04T22:58:37.000Z",
+      "description": "La huitième édition du cérémonial militaire solennel organisée, chaque premier jeudi du mois, au Mémorial Thomas-Sankara pour rendre hommage au père de la Révolution et à ses compagnons, s’est déroulée le jeudi 4 juin 2026, à Ouagadougou, sous la présidence du ministre des Affaires étrangères, Karamoko Jean Marie Traoré. Les Burkinabè continuent de magnifier et perpétuer la mémoire du capitaine révolutionnaire Thomas Sankara. Ainsi, le jeudi 4 juin 2026 à Ouagadougou, les populations ont répondu présent au traditionnel cérémonial militaire en sa mémoire. Présidé par le ministre des Affaires étrangères, Karamoko Jean Marie Traoré, ce rendez-vous a permis d’assister au protocole de relève de la garde militaire au Mémorial Thomas-Sankara. Cette séquence a été présentée par les éléments de la garde rouge et de la cavalerie du groupement d’escorte et d’honneur de la Gendarmerie nationale. Puis, devant les participants dont la majorité est composée des différents services rattachés au ministère des Affaires étrangères, le ministre de tutelle, Karamoko Jean Marie Traoré, président de la huitième journée du cérémonial, a fait savoir qu’il est important de marquer une halte à chaque début de mois pour magnifier et se rappeler des hauts fait du leader de la Révolution d’aout 1983. Il a également ajouté que chaque Burkinabè ou Africain doit être un « Sankara » c’est-à-dire un « acteur de la justice sociale, de la dignité et de la lutte pour la liberté des peuples opprimés ». Le ministre des Affaires étrangères, Karamoko Jean Marie Traoré, a remis les archives de Thomas Sankara à son homologue chargé de la Communication, Pingwendé Gilbert Ouédraogo \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-1024x682.jpeg\" class=\"size-medium wp-image-163611\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-300x200.jpeg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-300x200.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-1024x682.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-768x512.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-630x420.jpeg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-150x100.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-696x464.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1-1068x712.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-1.jpeg 1280w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Le ministre des Affaires étrangères, Karamoko Jean Marie Traoré, a remis les archives de Thomas Sankara à son homologue chargé de la Communication, Pingwendé Gilbert Ouédraogo « Sankara doit être vivant dans nos pensées, nos faits et gestes, nos actes au quotidien etc. Aujourd’hui, plus que jamais, le legs de Thomas Sankara est porté avec dignité, abnégation et détermination par le capitaine-Président Ibrahim Traoré pour la construction d’un Burkina Faso nouveau, libre et souverain », a fait remarquer le patron de la diplomatie burkinabè. Et de préciser que son département jouera sa partition comme il l’a toujours fait dans le cadre de la collecte des archives et artéfacts de Thomas Sankara et de la Révolution démocratique et populaire. Déjà, à la fin de l’hommage militaire, un lot d’archives retraçant un pan de l’histoire de Thomas Sankara a été remis au ministre de la Communication, de la Culture, des Arts et du Tourisme. Un acte salué par le ministre chargé de la Communication, Pingdwendé Gilbert Ouédraogo, qui a invité une fois de plus les diplomates à accompagner la collecte internationale des archives de la RDP. « Pour rependre les idéaux de la Révolution et la lutte pour la libération de l’Afrique en général et du Burkina Faso en particulier, Thomas Sankara voyageait beaucoup. Ainsi, nous souhaitons que vous soyez les relais dans vos pays hôtes respectifs dans le cadre de la collecte des archives de Thomas Sankara », a indiqué le ministre Ouédraogo aux ambassadeurs présents à la cérémonie. Il a également insisté sur l’engagement de chacun pour l’initiative « Ma brique pour Sankara » qui se veut une mobilisation financière afin de poursuivre et de parachever le Mémorial Thomas-Sankara qui n’est qu’à ses débuts. Une visite guidée au Mémorial a été effectuée par les participants au cérémonial militaire mensuel. Wanlé Gérard COULIBALY",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 115
+    },
+    {
+      "title": "Baseball Five: GIP-PNVB / JICA Wendpanga-A s’adjuge le trophée inaugural",
+      "link": "https://www.sidwaya.info/baseball-five-gip-pnvb-jica-wendpanga-a-sadjuge-le-trophee-inaugural/",
+      "pubDate": "2026-06-04T22:45:33.000Z",
+      "description": "Le plateau omnisports de la Maison des Jeunes et de la Culture de Ouagadougou (MJCO) a accueilli, les 23 et 24 mai 2026, la première édition de la compétition intercommunale de Baseball Five. Organisé par le Groupement d’intérêt public – Programme national de volontariat au Burkina Faso (GIP-PNVB), en partenariat avec l’Agence japonaise de coopération internationale (JICA) et la Fédération burkinabè de baseball, le tournoi a été remporté par l’école primaire Wendpanga-A, victorieuse de Pabré-B sur le score de 16 points à 11. Le sport comme vecteur d’inclusion sociale et de brassage entre les jeunes. Telle est l’ambition portée par le Groupement d’Intérêt Public – Programme National de Volontariat au Burkina Faso, en collaboration avec la JICA, à travers cette première édition de la compétition intercommunale de Baseball Five. Pendant deux jours, la Maison des Jeunes et de la Culture de Ouagadougou a vibré au rythme des encouragements des supporters, des autorités présentes et des performances des jeunes athlètes. Initiée dans le cadre de la coopération technique japonaise, cette compétition a réuni plusieurs équipes issues des communes de la région du Kadiogo. Au terme des différentes confrontations, les formations de Wendpanga-A et de Pabré-B se sont hissées en finale pour un duel engagé et spectaculaire. A l’arrivée, l’équipe de Wendpanga-A a pris le meilleur sur celle de Pabré-B par 16 points à 11, décrochant ainsi le trophée de cette édition inaugurale. Le match, disputé en plusieurs manches, a tenu toutes ses promesses. Dès la première phase, les deux équipes se sont livrées un véritable mano a mano, se neutralisant sur le score de 10 points partout. La deuxième manche a permis à Wendpanga-A de prendre l’ascendant grâce à une meilleure organisation défensive et offensive. Les futurs vainqueurs se sont imposés par 2 points à 0, profitant de quelques erreurs de concentration de leurs adversaires. Dans la troisième phase, Wendpanga-A a confirmé sa domination en remportant la manche par 4 points à 1 grâce à des frappes précises et une excellente coordination collective. La quatrième et dernière phase n’a enregistré aucun point, les deux équipes accusant le coup physiquement après une rencontre particulièrement intense. Au classement final, Pabré-A s’est adjugé la troisième place tandis que Wendpanga-B a terminé au pied du podium. Discipline dérivée du baseball traditionnel, le Baseball Five se joue avec des équipes mixtes composées de cinq joueurs et nécessite uniquement une balle en caoutchouc. Facilement accessible sur le plan matériel, cette pratique favorise la participation des jeunes filles et garçons issus de différents milieux sociaux, notamment les personnes déplacées internes et les communautés hôtes. Pour le coach national de la Fédération burkinabè de baseball, Junior Zabré, le niveau technique affiché par les différentes équipes demeure encourageant au regard du temps relativement court consacré à l’apprentissage de la discipline. « Ils n’ont eu que trois mois pour découvrir et apprendre cette discipline. Ce n’était pas évident de maîtriser les règles en si peu de temps, mais le niveau présenté aujourd’hui est satisfaisant. Au vu de cette finale, nous pouvons affirmer que la relève est assurée au Burkina Faso », a-t-il apprécié. Le coach de l’équipe victorieuse, Abdoul Aziz Bonkoungou, a pour sa part expliqué ce succès par la solidité mentale de ses joueurs et le travail accompli durant la préparation. « Je leur demande toujours de ne pas s’attarder sur les erreurs commises, mais de rester concentrés sur les actions suivantes. C’est un travail collectif construit progressivement qui a été récompensé aujourd’hui », a-t-il confié. Au-delà de l’aspect purement sportif, cette compétition s’inscrit dans les objectifs du Programme de renforcement des capacités des jeunes au Burkina Faso (PRCJ), mis en œuvre depuis 2024 avec l’appui de la JICA. Le programme a permis le déploiement de 103 « Le directeur général du GIP-PNVB, Djourmité Nestor Noufé, a salué l’engagement des jeunes et les valeurs de cohésion véhiculés par le sport. » \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-770x1024.jpeg\" class=\"size-medium wp-image-163607\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-226x300.jpeg\" alt=\"\" width=\"226\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-226x300.jpeg 226w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-770x1024.jpeg 770w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-768x1021.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-316x420.jpeg 316w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-150x199.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-300x399.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6-696x925.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-6.jpeg 963w\" sizes=\"auto, (max-width: 226px) 100vw, 226px\" /> « Le directeur général du GIP-PNVB, Djourmité Nestor Noufé, a salué l’engagement des jeunes et les valeurs de cohésion véhiculés par le sport. » volontaires nationaux dans plusieurs communes de la région, notamment Pabré, Saaba, Tanghin-Dassouri et Ouagadougou. Ces volontaires interviennent dans des domaines variés tels que l’encadrement préscolaire, l’agriculture hors-sol et la réfection routière. Le volet sportif vise particulièrement à renforcer la cohésion sociale et la solidarité intercommunale. Le directeur général du GIP-PNVB, Djourmité Nestor Noufé, a salué l’engagement des neuf équipes engagées dans la compétition. « Derrière le sport, il y a la cohésion sociale, le rassemblement et des valeurs de civisme qui contribuent à former les citoyens de demain. Cette compétition traduit notre volonté d’offrir à la jeunesse des cadres d’expression saine », a-t-il indiqué, tout en exprimant le souhait de voir l’événement se poursuivre dans les années à venir avec l’accompagnement de la JICA. Le représentant résident de la JICA, Kobayashi Takemichi, s’est également réjoui du bon déroulement du tournoi. « Le baseball est un sport très populaire au Japon et nous sommes heureux de partager cette expérience avec la jeunesse burkinabè. Les rencontres ont été très intéressantes, le fair-play a prévalu et les jeunes ont surtout pris du plaisir ensemble », a-t-il souligné. Cette première édition se referme ainsi sur une note de satisfaction générale, laissant entrevoir de belles perspectives pour le développement du Baseball Five au Burkina Faso. Pengdwendé Achille OUEDRAOGO Fatimata ZOUNGRANA (Stagiaire)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
       "_score": 115
     }
   ],
@@ -1099,10 +1098,74 @@
       "title": "‘Enough bloodshed’: In open letter to Putin, Zelensky calls for meeting and ceasefire",
       "link": "https://presstv.ir/Detail/2026/06/04/769845/%E2%80%98Enough-bloodshed%E2%80%99--Zelensky-calls-on-Putin-to-sit-down-and-end-the-war",
       "source": "Press TV (Iran)",
-      "date": "2026-06-04T22:26:43.852Z",
+      "date": "2026-06-05T04:40:16.950Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "EN DIRECT, Moyen-Orient : huit morts dans une attaque israélienne sur le Liban, malgré l’annonce d’un cessez-le-feu ; un soldat israélien tué par un missile du Hezbollah",
+      "link": "https://www.lemonde.fr/international/live/2026/06/05/en-direct-moyen-orient-huit-morts-dans-une-attaque-israelienne-sur-le-liban-apres-l-annonce-du-cessez-le-feu-un-soldat-israelien-tue-par-un-missile-du-hezbollah_6697888_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-06-05T03:57:34.000Z",
+      "rating": "A1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "News24 | Hezbollah rejects truce, vows to keep attacking as ceasefire hangs by a thread",
+      "link": "https://www.news24.com/world/hezbollah-rejects-truce-vows-to-keep-attacking-as-ceasefire-hangs-by-a-thread-20260604-1014",
+      "source": "News24 (Afrique du Sud)",
+      "date": "2026-06-05T03:07:56.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon",
+      "link": "https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-06-05T01:44:16.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "In open letter to Putin, Zelenskyy calls for meeting and ceasefire",
+      "link": "https://www.thehindu.com/news/international/in-open-letter-to-putin-zelenskyy-calls-for-meeting-and-ceasefire/article71062934.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-04T23:02:33.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
       "bf": false,
       "majors": [
         {
@@ -1176,22 +1239,6 @@
       ]
     },
     {
-      "title": "Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon",
-      "link": "https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "date": "2026-06-04T20:37:46.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Moyen-Orient : le Hezbollah refuse l’accord de cessez-le-feu avec Israël",
       "link": "https://www.liberation.fr/international/moyen-orient/en-direct-moyen-orient-israel-et-le-liban-conditionnent-un-cessez-le-feu-a-larret-des-tirs-du-hezbollah-20260604_756SANZIRVBZPCXJ6FIVMMLGQA/",
       "source": "Libération International",
@@ -1204,22 +1251,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Russia calls for immediate ceasefire and Israeli troop withdrawal from Lebanese territory",
-      "link": "https://www.aa.com.tr/en/middle-east/russia-calls-for-immediate-ceasefire-and-israeli-troop-withdrawal-from-lebanese-territory/3956995",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-06-04T19:40:53.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
         }
       ]
     },
@@ -1240,74 +1271,10 @@
       ]
     },
     {
-      "title": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky propose une rencontre directe à Vladimir Poutine et un « cessez-le-feu complet » le temps des discussions",
-      "link": "https://www.lemonde.fr/international/live/2026/06/04/en-direct-guerre-en-ukraine-volodymyr-zelensky-propose-une-rencontre-directe-a-vladimir-poutine-et-un-cessez-le-feu-complet-le-temps-des-discussions_6695365_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-04T18:50:19.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
       "title": "Soldier killed in anti-tank missile attack as Hezbollah rejects Lebanon ceasefire proposal",
       "link": "https://www.timesofisrael.com/rockets-drones-trigger-warnings-in-north-after-hezbollah-rejects-lebanon-ceasefire-proposal/",
       "source": "Times of Israel",
       "date": "2026-06-04T18:35:52.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "News24 | Hezbollah rejects truce, vows to keep attacking as ceasefire hangs by a thread",
-      "link": "https://www.news24.com/world/hezbollah-rejects-truce-vows-to-keep-attacking-as-ceasefire-hangs-by-a-thread-20260604-1014",
-      "source": "News24 (Afrique du Sud)",
-      "date": "2026-06-04T16:54:33.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Hizbollah rejects US-brokered ceasefire as Israel pursues offensive",
-      "link": "https://www.ft.com/content/043db4e6-d1e4-414b-8b4f-317c85ec2e5c",
-      "source": "Financial Times World",
-      "date": "2026-06-04T16:52:42.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon",
-      "link": "https://www.myjoyonline.com/hezbollah-rejects-renewed-ceasefire-agreed-by-israel-and-lebanon/",
-      "source": "MyJoyOnline (Ghana)",
-      "date": "2026-06-04T16:46:40.000Z",
       "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
@@ -1384,22 +1351,6 @@
       ]
     },
     {
-      "title": "Hezbollah rejects ceasefire after US announces ceasefire between Israel, Lebanon",
-      "link": "https://www.jpost.com/middle-east/article-898404",
-      "source": "Jerusalem Post",
-      "date": "2026-06-04T15:28:46.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Tchaoudjo/30e édition de la journée des retraités du Togo : Les aînés demandent la reconnaissance officielle de leur journée",
       "link": "https://atop.tg/tchaoudjo-30e-edition-de-la-journee-des-retraites-du-togo-les-aines-demandent-la-reconnaissance-officielle-de-leur-journee/",
       "source": "ATOP (Togo)",
@@ -1414,160 +1365,48 @@
           "keyword": "reconnaissance"
         }
       ]
-    },
-    {
-      "title": "Hezbollah rejects latest ceasefire agreement as Israeli strikes kill 4 in Lebanon",
-      "link": "https://www.thehindu.com/news/international/hezbollah-rejects-latest-ceasefire-agreement-as-israeli-strikes-kill-4-in-lebanon/article71061792.ece",
-      "source": "The Hindu (Inde)",
-      "date": "2026-06-04T14:35:37.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Hezbollah denounces Israel-Lebanon ceasefire deal as a ‘farce’",
-      "link": "https://www.washingtonpost.com/world/2026/06/04/israel-lebanon-renew-ceasefire-deal-without-hezbollah/",
-      "source": "Washington Post World",
-      "date": "2026-06-04T14:23:52.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Are Japan-Philippines talks a maritime red line for China’s blue-water ambitions?",
-      "link": "https://www.scmp.com/news/china/diplomacy/article/3355969/are-japan-philippines-talks-maritime-red-line-chinas-blue-water-ambitions?utm_source=rss_feed",
-      "source": "South China Morning Post",
-      "date": "2026-06-04T14:00:13.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "red line"
-        }
-      ]
-    },
-    {
-      "title": "Israel and Lebanon agree to implement ceasefire",
-      "link": "https://www.ft.com/content/468ce636-1a7e-4a14-9be1-6d0f48b6b48f",
-      "source": "Financial Times World",
-      "date": "2026-06-04T13:36:10.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Procès Athanor: les Maarek, commanditaires d’un assassinat malgré eux",
-      "link": "https://www.mediapart.fr/journal/france/040626/proces-athanor-les-maarek-commanditaires-d-un-assassinat-malgre-eux",
-      "source": "Mediapart International",
-      "date": "2026-06-04T13:15:31.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "Hezbollah rejects ceasefire deal agreed on by Israel and Lebanon",
-      "link": "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
-      "source": "NPR World",
-      "date": "2026-06-04T13:00:18.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Israel and Lebanon agree to implement a US-brokered ceasefire",
-      "link": "https://www.ft.com/content/5a0033b0-ae2f-409b-9a6e-d17eff04e67c",
-      "source": "Financial Times World",
-      "date": "2026-06-04T13:00:07.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      245
+      231
     ],
     [
       "occident_fr",
-      111
+      123
+    ],
+    [
+      "occident_us",
+      105
     ],
     [
       "golfe_mo",
       101
     ],
     [
-      "occident_us",
-      94
-    ],
-    [
       "autre",
-      58
-    ],
-    [
-      "turquie",
-      54
-    ],
-    [
-      "russie",
-      52
+      98
     ],
     [
       "bf_local",
-      39
-    ],
-    [
-      "sahel",
-      26
+      51
     ],
     [
       "chine",
-      20
+      30
+    ],
+    [
+      "sahel",
+      29
+    ],
+    [
+      "turquie",
+      19
+    ],
+    [
+      "russie",
+      13
     ]
   ],
   "indicators": [
@@ -1582,37 +1421,37 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-04T22:26:11.249Z",
+      "at": "2026-06-05T04:39:45.020Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-04T22:26:11.257Z",
+      "at": "2026-06-05T04:39:45.027Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-04T22:26:52.901Z",
+      "at": "2026-06-05T04:40:23.890Z",
       "agent": "Agent Collecte RSS",
-      "message": "116/170 flux OK, 1972 articles"
+      "message": "114/170 flux OK, 1934 articles"
     },
     {
-      "at": "2026-06-04T22:26:56.024Z",
+      "at": "2026-06-05T04:40:27.102Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-04T22:26:56.028Z",
+      "at": "2026-06-05T04:40:27.105Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 27 alertes"
+      "message": "8 developpements, 17 alertes"
     },
     {
-      "at": "2026-06-04T22:26:56.029Z",
+      "at": "2026-06-05T04:40:27.106Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-04T22:26:56.029Z",
+      "at": "2026-06-05T04:40:27.106Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
