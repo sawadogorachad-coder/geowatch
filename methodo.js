@@ -1,0 +1,391 @@
+/* ==========================================================================
+   GéoWatch — MÉTHODO : taxonomie + matrice de pertinence + desks
+   Module autonome. Dépend de : window.NEWS_STATE (articles RSS), GW_INTEL (optionnel, cotes).
+   Expose : window.renderMatrice, window.renderDesks, window.GW_METHODO
+   Appelé par le Router (app.js) : pages data-page="matrice" et data-page="desks".
+   Aligné sur la méthodologie SEMDE (12 thématiques codées, 18 zones, matrice ●/○).
+   ========================================================================== */
+(function(){
+  'use strict';
+
+  const T = { bg:'#0a0f1c', card:'#0c1426', border:'#1a2340', txt:'#e2e8f0', dim:'#94a3b8',
+              faint:'#64748b', blue:'#60a5fa', green:'#22c55e', orange:'#f97316', red:'#ef4444',
+              yellow:'#fde047', purple:'#a855f7' };
+  const g = id => document.getElementById(id);
+  const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+  /* ---------- 12 THÉMATIQUES CODÉES ---------- */
+  const THEMES = [
+    {code:'S', label:'Sécurité & défense', color:'#ef4444',
+     re:/attaque|offensive|frappe|jihad|djihad|terror|militaire|arm[ée]e|soldat|mercenaire|wagner|africa corps|jnim|eigs|daesh|drone|embuscade|attentat|coup d.?[ée]tat|putsch|insurg|raid|bombard|affrontement|enl[èe]vement|otage/gi},
+    {code:'D', label:'Diplomatie & alliances', color:'#a855f7',
+     re:/diploma|ambassad|sanction|cedeao|union africaine|sommet|accord bilat|trait[ée]|reconnaissance|expuls|rupture des relations|alliance|coop[ée]ration|m[ée]diation|n[ée]gociation|partenariat strat[ée]gique/gi},
+    {code:'E', label:'Économie & ressources', color:'#f59e0b',
+     re:/[ée]conomi|investiss|\bmine|orpaillage|cours de l.or|p[ée]trole|\bgaz\b|dette|\bfmi\b|banque mondiale|inflation|c[ée]r[ée]ale|carburant|export|import|fcfa|franc cfa|budget|croissance|commerce|douane|redevance/gi},
+    {code:'L', label:'Logistique & corridors', color:'#22c55e',
+     re:/corridor|\bport\b|\bports\b|fronti[èe]re|fermeture|blocus|blocage|transit|approvisionn|ravitaill|axe routier|a[ée]roport|espace a[ée]rien|logistique|cha[îi]ne d.approvision/gi},
+    {code:'H', label:'Humanitaire & social', color:'#38bdf8',
+     re:/humanitaire|d[ée]plac[ée]|r[ée]fugi|famine|crise alimentaire|[ée]pid[ée]mie|chol[ée]ra|malnutrition|secours|\bhcr\b|ocha|civils tu[ée]s|massacre|exaction|aide d.urgence/gi},
+    {code:'I', label:'Information & influence', color:'#e879f9',
+     re:/propagand|d[ée]sinformation|narratif|guerre cognitive|fake news|r[ée]seaux sociaux|campagne d.influence|manipulation de l.information|\btroll|d[ée]bunk|infox/gi},
+    {code:'C', label:'Climat & environnement', color:'#84cc16',
+     re:/climat|s[ée]cheresse|inondation|d[ée]sertification|p[ée]nurie d.eau|barrage|agropastoral|[ée]leveur|r[ée]chauffement|catastrophe naturelle|crise de l.eau/gi},
+    {code:'N', label:'Nucléaire & prolifération', color:'#fb7185',
+     re:/nucl[ée]aire|uranium|prolif[ée]ration|\baiea\b|enrichissement|arme atomique|missile balistique|ogive/gi},
+    {code:'M', label:'Maritime & océanique', color:'#06b6d4',
+     re:/maritime|golfe de guin[ée]e|piraterie|d[ée]troit|\bnavire|c[âa]ble sous-marin|\bp[êe]che\b|bab el.?mandeb|ormuz|hormuz|mer rouge|porte-conteneurs/gi},
+    {code:'T', label:'Technologie & cyber', color:'#818cf8',
+     re:/\bcyber|num[ée]rique|semi-conducteur|t[ée]l[ée]communicat|satellite|intelligence artificielle|piratage informatique|hacking|fuite de donn[ée]es|starlink|fibre optique/gi},
+    {code:'P', label:'Politique interne & gouvernance', color:'#f97316',
+     re:/[ée]lection|r[ée]f[ée]rendum|transition|junte|gouvernement|constitution|manifestation|opposition|pr[ée]sident|remaniement|l[ée]gitimit[ée]|prise de pouvoir|dissolution/gi},
+    {code:'J', label:'Justice & droit international', color:'#c4b5fd',
+     re:/\bcpi\b|cour p[ée]nale|\bjustice\b|proc[èe]s|tribunal|enqu[êe]te|crime de guerre|condamn|mandat d.arr[êe]t|poursuites|inculp/gi}
+  ];
+  const THEME_BY = {}; THEMES.forEach(t=>THEME_BY[t.code]=t);
+  const COLS = ['S','D','E','L','H','I','C','P','J','N','M','T'];
+
+  /* ---------- 18 ZONES + PIVOTS ---------- */
+  const ZONES = [
+    {id:1, label:'Sahel & Afrique de l’Ouest francophone', short:'1. Sahel & AO franco.', pivots:'Burkina, Mali, Niger, Tchad',
+     re:/burkina|ouagadougou|bobo[- ]?dioulasso|\bmali\b|bamako|\bniger\b|niamey|tchad|n.?djamena|s[ée]n[ée]gal|dakar|guin[ée]e\b|conakry|c[ôo]te d.ivoire|abidjan|b[ée]nin|cotonou|\btogo\b|lom[ée]|mauritanie|nouakchott|\baes\b|sahel|liptako/gi},
+    {id:2, label:'Afrique de l’Ouest anglophone & côtière', short:'2. AO anglo. & côtière', pivots:'Nigeria, Ghana',
+     re:/nigeria|abuja|lagos|\bghana\b|accra|sierra leone|freetown|liberia|monrovia|gambie|banjul/gi},
+    {id:3, label:'Afrique centrale', short:'3. Afrique centrale', pivots:'Tchad, Cameroun, RDC',
+     re:/cameroun|yaound[ée]|douala|centrafric|\brca\b|bangui|gabon|libreville|\bcongo\b|brazzaville|guin[ée]e [ée]quatoriale/gi},
+    {id:4, label:'Afrique des Grands Lacs', short:'4. Grands Lacs', pivots:'RDC, Rwanda, Ouganda',
+     re:/\brdc\b|kinshasa|\bkivu\b|\bm23\b|rwanda|kigali|burundi|bujumbura|ouganda|kampala|tanzanie|grands lacs/gi},
+    {id:5, label:'Corne de l’Afrique', short:'5. Corne de l’Afrique', pivots:'Soudan, Éthiopie, Somalie',
+     re:/soudan|khartoum|[ée]rythr[ée]e|asmara|djibouti|[ée]thiopie|addis[- ]?abeba|somalie|mogadiscio|corne de l.afrique/gi},
+    {id:6, label:'Afrique australe', short:'6. Afrique australe', pivots:'Afrique du Sud, Angola',
+     re:/angola|luanda|zambie|zimbabwe|harare|malawi|mozambique|namibie|botswana|afrique du sud|pretoria|johannesbourg|madagascar|lesotho|eswatini/gi},
+    {id:7, label:'Maghreb & Afrique du Nord', short:'7. Maghreb & Afr. Nord', pivots:'Algérie, Libye, Maroc, Égypte',
+     re:/alg[ée]rie|alger\b|libye|tripoli|\bmaroc\b|rabat|casablanca|tunisie|\btunis\b|[ée]gypte|le caire|maghreb/gi},
+    {id:8, label:'Moyen-Orient', short:'8. Moyen-Orient', pivots:'Iran, Arabie saoudite, Turquie, Émirats',
+     re:/turquie|ankara|istanbul|\bliban\b|beyrouth|syrie|\bdamas\b|\birak\b|bagdad|\biran\b|t[ée]h[ée]ran|isra[ëe]l|j[ée]rusalem|\bgaza\b|hamas|hezbollah|arabie saoudite|riyad|y[ée]men|\bqatar\b|[ée]mirats|dubai|golfe persique|\boman\b|kowe[ïi]t|moyen-orient/gi},
+    {id:9, label:'Europe occidentale & centrale', short:'9. Europe occidentale', pivots:'France, Allemagne, Royaume-Uni',
+     re:/\bfrance\b|paris|allemagne|berlin|royaume-uni|londres|union europ[ée]enne|bruxelles|espagne|\bmadrid\b|italie|\brome\b|suisse|otan/gi},
+    {id:10, label:'Europe orientale & Balkans', short:'10. Europe orient. & Balkans', pivots:'Russie, Ukraine',
+     re:/russie|moscou|poutine|ukraine|\bkiev\b|\bkyiv\b|bi[ée]lorussie|moldavie|g[ée]orgie|arm[ée]nie|azerba[ïi]djan|serbie|balkans|mer noire/gi},
+    {id:11, label:'Asie centrale', short:'11. Asie centrale', pivots:'Kazakhstan, Afghanistan',
+     re:/kazakhstan|kirghiz|tadjik|turkm[ée]nistan|ouzb[ée]kistan|afghanistan|kaboul|taliban|asie centrale/gi},
+    {id:12, label:'Asie du Sud', short:'12. Asie du Sud', pivots:'Inde, Pakistan',
+     re:/\binde\b|new delhi|\bdelhi\b|pakistan|islamabad|bangladesh|dhaka|n[ée]pal|sri lanka|colombo/gi},
+    {id:13, label:'Asie du Sud-Est', short:'13. Asie du Sud-Est', pivots:'Indonésie, Vietnam, Singapour',
+     re:/birmanie|myanmar|tha[ïi]lande|bangkok|\blaos\b|cambodge|vietnam|hano[ïi]|malaisie|singapour|indon[ée]sie|jakarta|philippines|manille|asean|anase/gi},
+    {id:14, label:'Extrême-Orient', short:'14. Extrême-Orient', pivots:'Chine, Japon, Taïwan',
+     re:/\bchine\b|p[ée]kin|beijing|xi jinping|ta[ïi]wan|cor[ée]e|s[ée]oul|pyongyang|\bjapon\b|tokyo|mongolie|mer de chine/gi},
+    {id:15, label:'Océanie & Pacifique', short:'15. Océanie & Pacifique', pivots:'Australie',
+     re:/australie|canberra|sydney|nouvelle-z[ée]lande|papouasie|\bfidji\b|pacifique sud|oc[ée]anie/gi},
+    {id:16, label:'Amérique du Nord', short:'16. Amérique du Nord', pivots:'États-Unis',
+     re:/[ée]tats-unis|washington|maison blanche|\btrump\b|\bbiden\b|\bcanada\b|ottawa|mexique|mexico/gi},
+    {id:17, label:'Amérique centrale & Caraïbes', short:'17. Amérique C. & Caraïbes', pivots:'Selon l’actualité',
+     re:/cara[ïi]bes|\bcuba\b|la havane|ha[ïi]ti|\bpanama\b|guatemala|honduras|nicaragua|costa rica|salvador|r[ée]publique dominicaine/gi},
+    {id:18, label:'Amérique du Sud', short:'18. Amérique du Sud', pivots:'Brésil, Venezuela',
+     re:/br[ée]sil|brasilia|argentine|buenos aires|colombie|bogota|venezuela|caracas|p[ée]rou\b|\blima\b|\bchili\b|santiago|[ée]quateur|bolivie|guyane/gi}
+  ];
+  const ZONE_BY = {}; ZONES.forEach(z=>ZONE_BY[z.id]=z);
+
+  /* ---------- MATRICE DE PERTINENCE (Annexe C) : A=active, L=légère, .=nulle ----------
+     Ordre des colonnes = COLS (S D E L H I C P J N M T) */
+  const RELEVANCE_ROWS = {
+    1:'AAAAAAAAA..L', 2:'AAAAAAAAA.LL', 3:'AAAAAAAAA..L', 4:'AAALALAAL..L',
+    5:'AAALAAAAA.AL', 6:'LAA.LLLLL.LL', 7:'AAAAAAAAL.AL', 8:'AAAALALALAAL',
+    9:'LAALLA.LA.LA', 10:'AAALLALLAALL', 11:'AAALLLLALL.L', 12:'LAALLLLLLAAL',
+    13:'.LLL..LL..AL', 14:'LAALLALLLAAA', 15:'.LL...L...LL', 16:'LAALLA.LLALA',
+    17:'.LL...L...LL', 18:'.LA.......LL'
+  };
+  // validation
+  Object.keys(RELEVANCE_ROWS).forEach(k=>{ if(RELEVANCE_ROWS[k].length!==12) console.warn('[methodo] ligne matrice invalide zone', k, RELEVANCE_ROWS[k].length); });
+
+  /* ---------- PERSISTANCE (overrides matrice + config desks) ---------- */
+  const LS_MAT = 'gw_methodo_matrix';
+  const LS_DESK = 'gw_methodo_desks';
+  function loadMatrixOverrides(){ try{ return JSON.parse(localStorage.getItem(LS_MAT))||{}; }catch(e){ return {}; } }
+  function saveMatrixOverrides(o){ try{ localStorage.setItem(LS_MAT, JSON.stringify(o)); }catch(e){} }
+  function relevance(zoneId, code){
+    const ov = loadMatrixOverrides();
+    if(ov[zoneId] && ov[zoneId][code]) return ov[zoneId][code];
+    const row = RELEVANCE_ROWS[zoneId]; if(!row) return '.';
+    return row[COLS.indexOf(code)] || '.';
+  }
+
+  const DESKS_DEFAULT = {
+    desks:[
+      {id:'A1', name:'A1 — Cœur AES', themes:'S, P, D, I, J'},
+      {id:'A2', name:'A2 — Façade & corridors', themes:'L, E, S, M'},
+      {id:'A3', name:'A3 — Afrique élargie', themes:'S, D, E, H, M'},
+      {id:'A4', name:'A4 — Maghreb & Méditerranée', themes:'D, E, L, I, M'},
+      {id:'A5', name:'A5 — Moyen-Orient & influences', themes:'D, E, I, N, S'},
+      {id:'A6', name:'A6 — Desk transverse (puissances & institutions)', themes:'D, E, I, J, T', transverse:true}
+    ],
+    owner:{1:'A1', 2:'A2', 3:'A3', 4:'A3', 5:'A3', 6:'A6', 7:'A4', 8:'A5',
+           9:'A6', 10:'A6', 11:'A6', 12:'A6', 13:'A6', 14:'A6', 15:'A6', 16:'A6', 17:'A6', 18:'A6'}
+  };
+  function loadDesks(){
+    try{ const d = JSON.parse(localStorage.getItem(LS_DESK)); if(d && d.desks && d.owner) return d; }catch(e){}
+    return JSON.parse(JSON.stringify(DESKS_DEFAULT));
+  }
+  function saveDesks(d){ try{ localStorage.setItem(LS_DESK, JSON.stringify(d)); }catch(e){} }
+
+  /* ---------- MOTEUR D'ÉTIQUETAGE ---------- */
+  function getItems(){ try{ return (window.NEWS_STATE && window.NEWS_STATE.items) || []; }catch(e){ return []; } }
+  function txtOf(it){ return (it.title||'')+' '+(it.description||it.summary||''); }
+  function countRe(text, re){ const m = text.match(re); return m? m.length : 0; }
+
+  function tagItem(it){
+    const text = txtOf(it);
+    let zScores = [], tScores = [];
+    for(const z of ZONES){ const n = countRe(text, z.re); if(n>0) zScores.push([z.id,n]); }
+    for(const t of THEMES){ const n = countRe(text, t.re); if(n>0) tScores.push([t.code,n]); }
+    zScores.sort((a,b)=>b[1]-a[1]); tScores.sort((a,b)=>b[1]-a[1]);
+    let pz = zScores.length? zScores[0][0] : null;
+    let pt = tScores.length? tScores[0][0] : null;
+    if(!pz && it._bf) pz = 1;            // tout contenu BF non géolocalisé → Sahel/AES
+    if(pz===null && it._bf===undefined){ /* rien */ }
+    return { pz, pt, zones: zScores.map(x=>x[0]), themes: tScores.map(x=>x[0]) };
+  }
+
+  function reliabilityChip(it){
+    try{ if(typeof GW_INTEL!=='undefined' && GW_INTEL && GW_INTEL.reliabilityChip) return GW_INTEL.reliabilityChip(it,{compact:true}); }catch(e){}
+    return '';
+  }
+  function srcName(it){ return it._source || it.source || (it.sourceName) || ''; }
+  function itemLink(it){ return it.link || it.url || '#'; }
+
+  /* ---------- PAGE : MATRICE DE PERTINENCE ---------- */
+  let MAT_EDIT = false;
+  let MAT_SEL = null; // {z, c}
+
+  window.renderMatrice = function(){
+    const host = g('matrice-content'); if(!host) return;
+    const items = getItems();
+    // pré-tag tous les articles une fois
+    const tagged = items.map(it=>({it, tag:tagItem(it)}));
+    // compteur par cellule
+    const cellCount = {}; let totalTagged=0, inActive=0, inLight=0;
+    tagged.forEach(({it,tag})=>{
+      if(tag.pz && tag.pt){
+        const k = tag.pz+'|'+tag.pt; cellCount[k]=(cellCount[k]||0)+1; totalTagged++;
+        const r = relevance(tag.pz, tag.pt);
+        if(r==='A') inActive++; else if(r==='L') inLight++;
+      }
+    });
+    const pct = totalTagged? Math.round(inActive*100/totalTagged) : 0;
+
+    let html = '';
+    html += banner('table-cells', T.purple, 'Matrice de pertinence — zones × thématiques',
+      'Pour chaque zone du monde et chacune des 12 thématiques, la matrice dit ce que l’on suit activement (●), légèrement (○) ou pas du tout (vide). C’est le filtre qui concentre l’effort là où il compte pour l’AES.',
+      ['● veille active = collecte systématique (quotidien/hebdo)', '○ veille légère = revue mensuelle / alertes', 'Case vide = pas de veille', 'Le chiffre dans une case = articles RSS récents détectés pour ce croisement']);
+
+    // barre de stats + contrôles
+    html += `<div class="card" style="margin-bottom:14px"><div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between">
+      <div style="display:flex;gap:22px;flex-wrap:wrap">
+        ${stat(totalTagged, 'articles classés', T.blue)}
+        ${stat(inActive, 'en veille active ●', T.green)}
+        ${stat(inLight, 'en veille légère ○', T.yellow)}
+        ${stat(pct+'%', 'de la matière en zone active', T.purple)}
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <label style="font-size:.78rem;color:${T.dim};display:flex;align-items:center;gap:6px;cursor:pointer">
+          <input type="checkbox" id="mat-edit" ${MAT_EDIT?'checked':''}> Mode édition (cliquer une case la fait passer ● → ○ → vide)
+        </label>
+        <button class="btn ghost sm" id="mat-refresh"><i class="fa-solid fa-rotate"></i> Rafraîchir</button>
+        <button class="btn ghost sm" id="mat-reset"><i class="fa-solid fa-rotate-left"></i> Réinitialiser</button>
+      </div>
+    </div>`;
+
+    // tableau
+    html += `<div class="card" style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;font-size:.72rem">`;
+    html += `<thead><tr><th style="position:sticky;left:0;background:${T.card};text-align:left;padding:6px 8px;color:${T.dim};border-bottom:2px solid ${T.border};min-width:170px">Zone</th>`;
+    COLS.forEach(c=>{ const t=THEME_BY[c]; html += `<th title="${esc(t.label)}" style="padding:6px 4px;color:${t.color};border-bottom:2px solid ${T.border};font-weight:700">${c}</th>`; });
+    html += `</tr></thead><tbody>`;
+    ZONES.forEach(z=>{
+      html += `<tr><td style="position:sticky;left:0;background:${T.card};text-align:left;padding:5px 8px;color:${T.txt};border-bottom:1px solid ${T.border};white-space:nowrap" title="${esc(z.label)} — pivots : ${esc(z.pivots)}">${esc(z.short)}</td>`;
+      COLS.forEach(c=>{
+        const r = relevance(z.id, c);
+        const k = z.id+'|'+c; const n = cellCount[k]||0;
+        const sym = r==='A'?'●' : r==='L'?'○' : '';
+        const col = r==='A'?T.green : r==='L'?T.yellow : T.faint;
+        const bg = (MAT_SEL && MAT_SEL.z===z.id && MAT_SEL.c===c)? 'rgba(96,165,250,.25)' : 'transparent';
+        const badge = n>0? `<span style="font-size:.6rem;color:${T.blue};margin-left:2px">${n}</span>` : '';
+        html += `<td class="mat-cell" data-z="${z.id}" data-c="${c}" style="text-align:center;padding:4px 3px;border-bottom:1px solid ${T.border};cursor:pointer;background:${bg}"><span style="color:${col};font-size:.9rem">${sym}</span>${badge}</td>`;
+      });
+      html += `</tr>`;
+    });
+    html += `</tbody></table></div>`;
+
+    // détail cellule sélectionnée
+    html += `<div id="mat-detail" style="margin-top:14px"></div>`;
+    host.innerHTML = html;
+
+    // bindings
+    g('mat-edit').onchange = e=>{ MAT_EDIT = e.target.checked; };
+    g('mat-refresh').onclick = ()=> window.renderMatrice();
+    g('mat-reset').onclick = ()=>{ if(confirm('Réinitialiser la matrice aux valeurs par défaut ?')){ saveMatrixOverrides({}); window.renderMatrice(); } };
+    host.querySelectorAll('.mat-cell').forEach(td=>{
+      td.onclick = ()=>{
+        const z = +td.dataset.z, c = td.dataset.c;
+        if(MAT_EDIT){
+          const cur = relevance(z,c);
+          const next = cur==='A'?'L' : cur==='L'?'.' : 'A';
+          const ov = loadMatrixOverrides(); ov[z]=ov[z]||{}; ov[z][c]=next; saveMatrixOverrides(ov);
+          window.renderMatrice();
+        } else {
+          MAT_SEL = {z, c}; showCellDetail(z, c, tagged);
+          host.querySelectorAll('.mat-cell').forEach(x=>x.style.background='transparent');
+          td.style.background='rgba(96,165,250,.25)';
+        }
+      };
+    });
+    if(MAT_SEL) showCellDetail(MAT_SEL.z, MAT_SEL.c, tagged);
+  };
+
+  function showCellDetail(zoneId, code, tagged){
+    const box = g('mat-detail'); if(!box) return;
+    const z = ZONE_BY[zoneId], t = THEME_BY[code];
+    const r = relevance(zoneId, code);
+    const lvl = r==='A'?'<span style="color:'+T.green+'">● veille active</span>' : r==='L'?'<span style="color:'+T.yellow+'">○ veille légère</span>' : '<span style="color:'+T.faint+'">vide — pas de veille</span>';
+    const matched = tagged.filter(x=>x.tag.pz===zoneId && x.tag.pt===code)
+      .sort((a,b)=> new Date(b.it.pubDate||0)-new Date(a.it.pubDate||0)).slice(0,25);
+    let html = `<div class="card"><div class="card-hd"><h2><i class="fa-solid fa-filter" style="color:${T.blue}"></i> ${esc(z.short)} × ${esc(t.label)} (${code})</h2></div>`;
+    html += `<div style="font-size:.8rem;color:${T.dim};margin-bottom:10px">Niveau de veille : ${lvl} · ${matched.length} article(s) récent(s) détecté(s).</div>`;
+    if(!matched.length){ html += `<div style="color:${T.faint};font-size:.82rem">Aucun article RSS récent pour ce croisement. (Charge les flux via le Tableau de bord si la liste est vide.)</div>`; }
+    else {
+      html += `<div style="display:flex;flex-direction:column;gap:8px">`;
+      matched.forEach(({it})=>{
+        const d = it.pubDate? new Date(it.pubDate).toLocaleString('fr-FR',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'';
+        html += `<div style="border-left:3px solid ${t.color};padding:6px 10px;background:rgba(255,255,255,.02);border-radius:0 6px 6px 0">
+          <a href="${esc(itemLink(it))}" target="_blank" rel="noopener" style="color:${T.txt};text-decoration:none;font-size:.84rem;font-weight:600">${esc(it.title||'(sans titre)')}</a>
+          <div style="font-size:.66rem;color:${T.faint};margin-top:3px">${esc(srcName(it))} · ${d} ${reliabilityChip(it)}</div>
+        </div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+    box.innerHTML = html;
+  }
+
+  /* ---------- PAGE : DESKS / RÉPARTITION ---------- */
+  let DESK_EDIT = false;
+
+  function routeItem(it, cfg){
+    const tag = tagItem(it);
+    if(!tag.pz) return {deskId:null, tag};
+    const owner = cfg.owner[tag.pz];
+    if(owner) return {deskId:owner, tag};
+    const trans = cfg.desks.find(d=>d.transverse);
+    return {deskId: trans?trans.id:null, tag};
+  }
+
+  window.renderDesks = function(){
+    const host = g('desks-content'); if(!host) return;
+    const cfg = loadDesks();
+    const items = getItems();
+    const routed = {}; cfg.desks.forEach(d=>routed[d.id]=[]);
+    let unrouted = 0;
+    items.forEach(it=>{ const {deskId, tag} = routeItem(it, cfg); if(deskId && routed[deskId]) routed[deskId].push({it, tag}); else unrouted++; });
+
+    let html = '';
+    html += banner('people-group', T.green, 'Desks / Répartition de la veille',
+      'Chaque zone du monde est confiée à un analyste (desk). Toute dépêche est automatiquement routée vers le desk responsable de sa zone. Le desk transverse récupère les grandes puissances, les institutions et le reste du monde.',
+      ['Socle proposé : 6 desks (modulable de 3 à 10).', 'Chaque article est rangé selon sa zone principale détectée.', 'Clique « Configurer » pour réaffecter les zones aux analystes.']);
+
+    html += `<div class="card" style="margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <div style="display:flex;gap:22px;flex-wrap:wrap">
+        ${stat(cfg.desks.length, 'desks', T.blue)}
+        ${stat(items.length, 'articles en circulation', T.green)}
+        ${stat(unrouted, 'non routés (hors périmètre)', T.faint)}
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn ghost sm" id="desk-refresh"><i class="fa-solid fa-rotate"></i> Rafraîchir</button>
+        <button class="btn ${DESK_EDIT?'primary':'ghost'} sm" id="desk-config"><i class="fa-solid fa-sliders"></i> Configurer la répartition</button>
+      </div>
+    </div>`;
+
+    if(DESK_EDIT){ html += deskEditor(cfg); }
+
+    html += `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px">`;
+    cfg.desks.forEach(d=>{
+      const zonesOwned = Object.keys(cfg.owner).filter(z=>cfg.owner[z]===d.id).map(z=>ZONE_BY[+z]);
+      const arr = (routed[d.id]||[]).sort((a,b)=> new Date(b.it.pubDate||0)-new Date(a.it.pubDate||0));
+      const top = arr.slice(0,6);
+      html += `<div class="card" style="border-top:3px solid ${d.transverse?T.purple:T.blue}">
+        <div style="font-weight:700;color:${T.txt};font-size:.92rem">${esc(d.name)}</div>
+        <div style="font-size:.68rem;color:${T.dim};margin:4px 0">Thématiques dominantes : <b style="color:${T.blue}">${esc(d.themes||'—')}</b></div>
+        <div style="font-size:.66rem;color:${T.faint};margin-bottom:8px">Zones : ${zonesOwned.length? zonesOwned.map(z=>esc(z.short.replace(/^\d+\.\s*/,''))).join(' · '):'<i>aucune</i>'}</div>
+        <div style="font-size:.72rem;color:${T.dim};margin-bottom:6px"><b style="color:${T.green}">${arr.length}</b> dépêche(s) routée(s) · ${top.length? 'dernières :':''}</div>
+        <div style="display:flex;flex-direction:column;gap:6px">`;
+      if(!top.length){ html += `<div style="color:${T.faint};font-size:.74rem">Aucune dépêche récente pour ce desk.</div>`; }
+      top.forEach(({it,tag})=>{
+        const d2 = it.pubDate? new Date(it.pubDate).toLocaleString('fr-FR',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'';
+        const chips = (tag.pt?`<span style="background:${(THEME_BY[tag.pt]||{}).color||T.faint}22;color:${(THEME_BY[tag.pt]||{}).color||T.dim};padding:1px 5px;border-radius:6px;font-size:.58rem">${tag.pt}</span>`:'');
+        html += `<div style="border-left:3px solid ${d.transverse?T.purple:T.blue};padding:4px 8px;background:rgba(255,255,255,.02);border-radius:0 6px 6px 0">
+          <a href="${esc(itemLink(it))}" target="_blank" rel="noopener" style="color:${T.txt};text-decoration:none;font-size:.76rem;font-weight:600">${esc((it.title||'').slice(0,110))}</a>
+          <div style="font-size:.6rem;color:${T.faint};margin-top:2px">${chips} ${esc(srcName(it))} · ${d2} ${reliabilityChip(it)}</div>
+        </div>`;
+      });
+      html += `</div></div>`;
+    });
+    html += `</div>`;
+    host.innerHTML = html;
+
+    g('desk-refresh').onclick = ()=> window.renderDesks();
+    g('desk-config').onclick = ()=>{ DESK_EDIT = !DESK_EDIT; window.renderDesks(); };
+    if(DESK_EDIT) bindDeskEditor(cfg);
+  };
+
+  function deskEditor(cfg){
+    let html = `<div class="card" style="margin-bottom:14px;border:1px solid ${T.blue}">
+      <div class="card-hd"><h2><i class="fa-solid fa-sliders" style="color:${T.blue}"></i> Configurer la répartition</h2></div>
+      <div style="font-size:.74rem;color:${T.dim};margin-bottom:10px">Attribue chaque zone à un analyste. Modifie les noms si besoin, puis enregistre.</div>`;
+    // noms des desks
+    html += `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;margin-bottom:12px">`;
+    cfg.desks.forEach(d=>{ html += `<div><label style="font-size:.62rem;color:${T.faint}">${d.id}</label><input class="desk-name" data-id="${d.id}" value="${esc(d.name)}" style="width:100%;background:${T.bg};border:1px solid ${T.border};color:${T.txt};border-radius:6px;padding:5px 8px;font-size:.74rem"></div>`; });
+    html += `</div>`;
+    // zone -> desk
+    html += `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px">`;
+    ZONES.forEach(z=>{
+      html += `<div style="display:flex;align-items:center;gap:8px">
+        <span style="flex:1;font-size:.72rem;color:${T.txt}">${esc(z.short)}</span>
+        <select class="zone-owner" data-z="${z.id}" style="background:${T.bg};border:1px solid ${T.border};color:${T.txt};border-radius:6px;padding:4px 6px;font-size:.72rem">
+          ${cfg.desks.map(d=>`<option value="${d.id}" ${cfg.owner[z.id]===d.id?'selected':''}>${esc(d.id)}</option>`).join('')}
+        </select></div>`;
+    });
+    html += `</div>`;
+    html += `<div style="margin-top:12px;display:flex;gap:8px">
+      <button class="btn primary sm" id="desk-save"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+      <button class="btn ghost sm" id="desk-reset"><i class="fa-solid fa-rotate-left"></i> Réinitialiser (socle 6 desks)</button>
+    </div></div>`;
+    return html;
+  }
+
+  function bindDeskEditor(cfg){
+    const sv = g('desk-save'); if(sv) sv.onclick = ()=>{
+      const newCfg = JSON.parse(JSON.stringify(cfg));
+      document.querySelectorAll('.desk-name').forEach(inp=>{ const d=newCfg.desks.find(x=>x.id===inp.dataset.id); if(d) d.name=inp.value.trim()||d.id; });
+      document.querySelectorAll('.zone-owner').forEach(sel=>{ newCfg.owner[+sel.dataset.z]=sel.value; });
+      saveDesks(newCfg); DESK_EDIT=false; window.renderDesks();
+      try{ if(window.toast) window.toast('Répartition enregistrée'); }catch(e){}
+    };
+    const rs = g('desk-reset'); if(rs) rs.onclick = ()=>{ if(confirm('Revenir au socle de 6 desks par défaut ?')){ saveDesks(JSON.parse(JSON.stringify(DESKS_DEFAULT))); DESK_EDIT=false; window.renderDesks(); } };
+  }
+
+  /* ---------- helpers UI ---------- */
+  function banner(icon, color, title, what, lines){
+    return `<div class="card" style="margin-bottom:14px;border-left:4px solid ${color}">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+        <i class="fa-solid fa-${icon}" style="color:${color};font-size:1.1rem"></i>
+        <span style="font-weight:700;color:${T.txt};font-size:1rem">${esc(title)}</span>
+      </div>
+      <div style="font-size:.82rem;color:${T.dim};margin-bottom:8px">${esc(what)}</div>
+      <ul style="margin:0;padding-left:18px;color:${T.faint};font-size:.74rem">${lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>
+    </div>`;
+  }
+  function stat(val, label, color){
+    return `<div><div style="font-size:1.3rem;font-weight:800;color:${color}">${val}</div><div style="font-size:.66rem;color:${T.dim}">${esc(label)}</div></div>`;
+  }
+
+  /* ---------- API publique ---------- */
+  window.GW_METHODO = { THEMES, ZONES, COLS, relevance, tagItem, routeItem, loadDesks, RELEVANCE_ROWS };
+
+})();
