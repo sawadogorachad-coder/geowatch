@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-06T04:14:02.949Z",
+  "generatedAt": "2026-06-06T08:44:53.522Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1902,
+    "ok": 112,
+    "failed": 58,
+    "articles": 1922,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -58,11 +58,6 @@
         "count": 0
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "count": 10
-      },
-      {
         "id": "rss_maliweb",
         "name": "Maliweb",
         "count": 0
@@ -95,11 +90,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -141,6 +131,11 @@
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "count": 20
       },
       {
         "id": "rss_premiumng",
@@ -363,6 +358,11 @@
         "count": 25
       },
       {
+        "id": "rss_carnegie",
+        "name": "Carnegie Endowment",
+        "count": 0
+      },
+      {
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
@@ -380,7 +380,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 4
+        "count": 5
       },
       {
         "id": "rss_fp",
@@ -405,7 +405,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 29
+        "count": 30
       },
       {
         "id": "rss_bbc_africa",
@@ -520,7 +520,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -545,17 +545,7 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 0
-      },
-      {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "count": 0
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_hrw",
@@ -590,6 +580,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -618,6 +613,11 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -673,11 +673,6 @@
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
-      },
-      {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "error": "fetch failed"
       },
       {
         "id": "rss_saharang",
@@ -795,11 +790,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_carnegie",
-        "name": "Carnegie Endowment",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_crisisgroup",
         "name": "ICG — International Crisis Group",
         "error": "HTTP 403"
@@ -827,7 +817,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 502"
       },
       {
         "id": "rss_bangkok",
@@ -837,12 +827,22 @@
       {
         "id": "rss_jakartap",
         "name": "Jakarta Post",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_folha",
         "name": "Folha de São Paulo (Brésil)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "error": "HTTP 406"
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "error": "HTTP 406"
       },
       {
         "id": "rss_amnesty",
@@ -857,16 +857,16 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 49,
+    "bfAes": 41,
     "alerts": 16,
     "criticalAlerts": 4,
-    "sourcesDistinct": 73
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
@@ -892,9 +892,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A2"
+        "rating": "A1"
       },
-      "_rating": "A2",
+      "_rating": "A1",
       "_score": 123
     },
     {
@@ -981,18 +981,19 @@
       "_score": 115
     },
     {
-      "title": "Koro : don de vivres aux nouveaux réfugiés burkinabè",
-      "link": "https://www.studiotamani.org/203624-koro-don-de-vivres-aux-nouveaux-refugies-burkinabe",
-      "pubDate": "2026-06-05T14:32:58.000Z",
-      "description": "Ce jeudi 4 juin, les familles venues du Burkina Faso ont recu un don compose de 100 sacs de 25 kg de riz, 100 bidons de 5 litres d'huile et 15 sacs de 100 kg de mil. Ce don de la chambre locale de Koro vise a soulager ces refugies dont la majorite sont des femmes et des enfants. Les beneficiaires ont salue le geste. L’article Koro : don de vivres aux nouveaux réfugiés burkinabè est apparu en premier sur Studio Tamani - Informations, débats, magazines : toute l’actualité du Mali, en 5 langues .",
-      "_source": "Studio Tamani (Mali)",
-      "_sourceId": "rss_studio_tam",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
+      "title": "Unité nationale: Bertrand Traoré témoigne son soutien aux efforts de sécurisation du Burkina Faso",
+      "link": "https://www.wakatsera.com/unite-nationale-bertrand-traore-temoigne-son-soutien-aux-efforts-de-securisation-du-burkina-faso/",
+      "pubDate": "2026-06-06T07:58:56.000Z",
+      "description": "L’international burkinabè Bertrand Traoré a été reçu en audience, dans l’après-midi du vendredi 5 juin 2026, par le ministre de la Sécurité. À sa sortie d’audience, le capitaine des Étalons a exprimé sa satisfaction d’avoir rencontré le premier responsable du département en charge de la sécurité. « C’est un honneur pour moi d’être venu. Nous avons eu des échanges enrichissants. J’ai exprimé ma fierté d’appartenir à cette grande Nation et je suis venu saluer le travail remarquable accompli sur le terrain et témoigner de mon soutien à celles et ceux qui œuvrent chaque jour pour la sécurité de notre pays », a déclaré Bertrand Traoré. L’international burkinabè a également adressé un message de reconnaissance et d’encouragement aux Forces de défense et de sécurité (FDS) ainsi qu’aux Volontaires pour la défense de la patrie (VDP), engagés quotidiennement dans les efforts de préservation de la paix et de la sécurité au Burkina Faso. « À l’endroit des FDS et des VDP, je voudrais simplement dire merci. Je leur souhaite beaucoup de courage et prie pour que Dieu les accompagne chaque jour dans leur noble mission au service de la Nation », a-t-il ajouté. DCRP-MSECU L’article Unité nationale: Bertrand Traoré témoigne son soutien aux efforts de sécurisation du Burkina Faso est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "humanitarian"
+        "diplomatic",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -1001,10 +1002,10 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "A1"
       },
-      "_rating": "F2",
-      "_score": 107
+      "_rating": "A1",
+      "_score": 111
     },
     {
       "title": "Burkina/Sécurité sociale : Plus de 13 000 employeurs contrôlés par la CNSS en 2025",
@@ -1081,9 +1082,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A1"
+        "rating": "A2"
       },
-      "_rating": "A1",
+      "_rating": "A2",
       "_score": 103
     }
   ],
@@ -1092,10 +1093,58 @@
       "title": "Lebanon's Berri blasts US-mediated ceasefire deal as 'rigged' in favor of Israel",
       "link": "https://presstv.ir/Detail/2026/06/05/769885/Lebanon-Berri--Hezbollah-US-Israel--",
       "source": "Press TV (Iran)",
-      "date": "2026-06-06T04:13:45.554Z",
+      "date": "2026-06-06T08:44:44.592Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "​Incomplete truce: On the Israel-Lebanon ceasefire",
+      "link": "https://www.thehindu.com/opinion/editorial/incomplete-truce-on-the-israel-lebanon-ceasefire/article71064864.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-06T06:55:33.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "News24 | Ceasefire in name only: Why powerful nations keep bombing and face no consequences",
+      "link": "https://www.news24.com/world/ceasefire-in-name-only-why-powerful-nations-keep-bombing-and-face-no-consequences-20260605-0931",
+      "source": "News24 (Afrique du Sud)",
+      "date": "2026-06-06T06:22:41.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "US and Iran exchange strikes in Gulf in latest test of ceasefire",
+      "link": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-06-06T06:16:28.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
       "bf": false,
       "majors": [
         {
@@ -1185,6 +1234,22 @@
       ]
     },
     {
+      "title": "Why Iran is making Hezbollah a red line in postwar diplomacy",
+      "link": "https://www.al-monitor.com/originals/2026/06/why-iran-making-hezbollah-red-line-postwar-diplomacy",
+      "source": "Al-Monitor",
+      "date": "2026-06-05T20:54:09.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "red line"
+        }
+      ]
+    },
+    {
       "title": "‘Pervasive fear’ grips Gaza as Israeli attacks persist despite ceasefire",
       "link": "https://www.aljazeera.com/news/2026/6/5/pervasive-fear-grips-gaza-as-israeli-attacks-persist-despite-ceasefire?traffic_source=rss",
       "source": "Al Jazeera English",
@@ -1192,22 +1257,6 @@
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "​Incomplete truce: On the Israel-Lebanon ceasefire",
-      "link": "https://www.thehindu.com/opinion/editorial/incomplete-truce-on-the-israel-lebanon-ceasefire/article71064864.ece",
-      "source": "The Hindu (Inde)",
-      "date": "2026-06-05T18:46:30.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
       "bf": false,
       "majors": [
         {
@@ -1295,64 +1344,20 @@
           "keyword": "séisme"
         }
       ]
-    },
-    {
-      "title": "News24 | Ceasefire in name only: Why powerful nations keep bombing and face no consequences",
-      "link": "https://www.news24.com/world/ceasefire-in-name-only-why-powerful-nations-keep-bombing-and-face-no-consequences-20260605-0931",
-      "source": "News24 (Afrique du Sud)",
-      "date": "2026-06-05T15:32:07.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "L’Irlande interdit l’entrée sur son territoire aux ministres israéliens Itamar Ben Gvir et Bezalel Smotrich pour leur rôle dans la « catastrophe en cours à Gaza »",
-      "link": "https://www.lemonde.fr/international/article/2026/06/05/l-irlande-interdit-l-entree-sur-son-territoire-de-deux-ministres-israeliens-en-raison-de-leur-role-dans-la-catastrophe-en-cours-a-gaza_6697978_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-05T14:01:20.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "catastrophe"
-        }
-      ]
-    },
-    {
-      "title": "Parité, femmes dans l’armée, nomination des femmes au sommet de l’Etat: Des mouvements féminins exaltent l’héritage précieux d’Abdoulaye Wade",
-      "link": "https://lesoleil.sn/actualites/politique/parite-femmes-dans-larmee-nomination-des-femmes-au-sommet-de-letat-des-mouvements-feminins-exaltent-lheritage-precieux-dabdoulaye-wade/",
-      "source": "Le Soleil (Sénégal)",
-      "date": "2026-06-05T13:48:55.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      237
+      221
     ],
     [
       "occident_fr",
-      145
+      148
+    ],
+    [
+      "autre",
+      103
     ],
     [
       "occident_us",
@@ -1360,15 +1365,11 @@
     ],
     [
       "golfe_mo",
-      97
-    ],
-    [
-      "autre",
-      83
+      98
     ],
     [
       "russie",
-      40
+      44
     ],
     [
       "chine",
@@ -1376,15 +1377,15 @@
     ],
     [
       "bf_local",
-      29
+      22
     ],
     [
       "sahel",
-      24
+      21
     ],
     [
       "turquie",
-      14
+      12
     ]
   ],
   "indicators": [
@@ -1399,37 +1400,37 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-06T04:13:15.194Z",
+      "at": "2026-06-06T08:44:11.635Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-06T04:13:15.201Z",
+      "at": "2026-06-06T08:44:11.642Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-06T04:13:59.707Z",
+      "at": "2026-06-06T08:44:50.472Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1902 articles"
+      "message": "112/170 flux OK, 1922 articles"
     },
     {
-      "at": "2026-06-06T04:14:02.946Z",
+      "at": "2026-06-06T08:44:53.520Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-06T04:14:02.950Z",
+      "at": "2026-06-06T08:44:53.523Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 16 alertes"
     },
     {
-      "at": "2026-06-06T04:14:02.950Z",
+      "at": "2026-06-06T08:44:53.523Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-06T04:14:02.950Z",
+      "at": "2026-06-06T08:44:53.523Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
