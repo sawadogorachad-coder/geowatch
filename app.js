@@ -185,6 +185,8 @@ const Router = {
     worldwatch:['Veille mondiale automatique','Tensions, zones chaudes & événements détectés en temps réel depuis les flux RSS'],
     alerts:['Alertes','Seuils de rupture (cf. Codex Veille MO)'],
     events:['Chronologie','Tous événements consolidés'],
+    matrice:['Matrice de pertinence','Zones × thématiques — ce que l\'on suit (●) ou survole (○)'],
+    desks:['Desks / Répartition','Affectation des analystes et routage automatique des dépêches'],
     admin:['Administration','Gestion des données']
   },
   go(page){
@@ -217,6 +219,8 @@ const Router = {
     else if(page==='ach') renderACH();
     else if(page==='actors') renderActorsGraph();
     else if(page==='referentiels') renderReferentiels();
+    else if(page==='matrice') renderMatrice();
+    else if(page==='desks') renderDesks();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
     if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial','impact_radar'].includes(page)){
