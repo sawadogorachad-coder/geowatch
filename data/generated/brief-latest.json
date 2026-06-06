@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-06T16:05:15.345Z",
+  "generatedAt": "2026-06-06T16:14:45.513Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 115,
-    "failed": 55,
-    "articles": 1981,
+    "ok": 111,
+    "failed": 59,
+    "articles": 1871,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -23,11 +23,6 @@
         "count": 10
       },
       {
-        "id": "rss_wakatsera",
-        "name": "Wakat Séra",
-        "count": 10
-      },
-      {
         "id": "rss_lepays_bf",
         "name": "Le Pays (BF)",
         "count": 12
@@ -40,7 +35,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -56,11 +51,6 @@
         "id": "rss_observ_bf",
         "name": "L'Observateur Paalga",
         "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "count": 10
       },
       {
         "id": "rss_maliweb",
@@ -85,11 +75,6 @@
       {
         "id": "rss_kalangou",
         "name": "Studio Kalangou (Niger)",
-        "count": 10
-      },
-      {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
         "count": 10
       },
       {
@@ -143,11 +128,6 @@
         "count": 30
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
-      },
-      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
@@ -161,11 +141,6 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -316,11 +291,6 @@
         "id": "rss_rfimo",
         "name": "RFI Moyen-Orient",
         "count": 30
-      },
-      {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "count": 20
       },
       {
         "id": "rss_bbc_afr",
@@ -560,7 +530,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -590,8 +570,18 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_wakatsera",
+        "name": "Wakat Séra",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -618,6 +608,11 @@
         "id": "rss_anip_niger",
         "name": "ANIP — Agence Nigérienne de Presse",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_alwihda",
@@ -672,12 +667,17 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_saharang",
@@ -688,6 +688,11 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -765,6 +770,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_apa",
         "name": "APA News Afrique",
         "error": "HTTP 403"
@@ -835,16 +845,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -857,46 +857,18 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 36,
-    "alerts": 17,
+    "bfAes": 23,
+    "alerts": 18,
     "criticalAlerts": 4,
-    "sourcesDistinct": 68
+    "sourcesDistinct": 63
   },
   "topDevelopments": [
-    {
-      "title": "Littérature : Le Dr Abdallah Ouédraogo raconte la renaissance du CMU Gounghin 6 dans un essai",
-      "link": "https://www.minute.bf/litterature-le-dr-abdallah-ouedraogo-raconte-la-renaissance-du-cmu-gounghin-6-dans-un-essai/",
-      "pubDate": "2026-06-06T09:16:54.000Z",
-      "description": "Le médecin généraliste et artiste-musicien, Dr Abdallah Ouédraogo, a dédicacé son tout premier ouvrage intitulé « Là où tout semblait perdu : De l’oubli à l’excellence par la mobilisation communautaire », le vendredi 5 juin 2026 à Ouagadougou. La cérémonie de dédicace a été placée sous le patronage du ministre de la Santé, Dr. Jean-Claude Lucien Robert Kargougou et sous le parrainage du ministre en charge de la Communication, Pingdwendé Gilbert Ouédraogo. Comment une communauté peut-elle transformer l’abandon en excellence ? C’est à cette question que répond le Dr Abdallah Ouédraogo dans ce premier essai . Dans cet ouvrage de 267 pages réparties en 13 chapitres et publié aux Éditions IKS, l'auteur retrace l’histoire d’un projet mené dans le Centre Médical Gounghin 6 confronté à de nombreuses difficultés. Il revient sur les obstacles rencontrés, les moments de doute, les efforts de mobilisation, les partenariats noués et les résultats obtenus grâce à une vision partagée du développement. Dr Abdallah Ouédraogo a dédicacé le livre d'or Selon l'auteur du livre, Dr. Abdallah Ouédraogo, chaque citoyen devait apporter sa contribution, aussi modeste soit-elle, afin de soutenir la transformation du Centre Médical Gounghin 6. « Face à la dégradation de la situation et à l’absence de réponses aux différents appels à l’aide lancés, j'ai fait le pari de la mobilisation communautaire. Une vision qui a trouvé un écho favorable auprès des populations et des partenaires. Ainsi, grâce à cela, nous avons pu transformer et réhabiliter notre CMU, qui est un bien pour toute la communauté », a-t-il relaté. Pour Dr Abdallah Ouédraogo, l’objectif de cet essai est avant tout d’inspirer d’autres initiatives similaires à travers le pays. « Je voulais vraiment dire à toute la population que tout est possible. Ce que nous observons ailleurs et qui se fait, nous pouvons également le réaliser au Burkina Faso. Nous avons osé avec la communauté. Grâce au travail d’équipe, nous avons obtenu des résultats qui peuvent être reproduits ailleurs », a-t-il déclaré. Des Attestations ont été remises aux structures ayant contribué à la concrétisation du projet L’analyse rhétorique du titre et du sous-titre de l’ouvrage, réalisée par Cheick Omar Zoré, responsable du service communication du groupe IKS, révèle une architecture linguistique et symbolique marquée par une forte dimension narrative. Selon lui, l’expression « Là où tout semblait perdu » évoque un contexte de désespoir apparent tout en laissant entrevoir une issue positive. Le sous-titre, « De l’oubli à l’excellence par la mobilisation communautaire », résume à lui seul le message central de l’ouvrage : lorsqu’une communauté s’unit autour d’un objectif commun, elle peut transformer son destin. L’illustration de la couverture traduit visuellement cette évolution, selon lui. Dr. Ardjima Combary, représentant le patron de la cérémonie a salué l'engagement qu'à fait preuve l'auteur Représentant le ministre de la Santé, Dr. Ardjima Combary, a salué l’engagement de l’auteur, de son équipe ainsi que des communautés qui ont accompagné le projet de transformation du CMU Gounghin 6. « L’engagement, le sacrifice et la solidarité ont permis la normalisation du centre de santé. Aujourd’hui, il figure parmi les meilleurs centres médicaux du district sanitaire de Baskuy. Pour l’année 2025 le CMU Gounghin 6 a obtenu plusieurs distinctions, dont la certification »Un Caurie » qui témoignent de la qualité des services offerts », a-t-il rappelé. Dr. Combary a également exprimé le vœu que cet ouvrage soit largement lu et diffusé afin qu’il puisse inspirer d’autres acteurs du développement communautaire. Le représentant du ministre en charge de la culture, Clément Zongo, a, pour sa part, félicité l’auteur pour cette production qu’il juge remarquable, estimant qu’elle contribue à enrichir le patrimoine documentaire national et à préserver la mémoire collective. « Là où tout semblait perdu » n’est pas seulement un titre. C’est une promesse, c’est un témoignage, c’est une victoire. Aujourd’hui, ce centre de santé n’est plus un symbole de difficulté. Il est devenu un symbole de réussite. Or, l’une des plus grandes richesses d’une nation réside dans sa capacité à apprendre de ses expériences », a-t-il soutenu. Une vue des participants à la dédicace Le ministère de la communication a contribué à l’édition de l’ouvrage à travers un appui financier de 500 000 FCFA. Selon son représentant, ce soutien ne visait pas seulement à accompagner l’impression du livre, mais également à encourager la diffusion d’un exemple inspirant et la transmission d’un héritage d’engagement communautaire. Le livre est disponible à la maison d’édition IKS au prix unitaire de 8 000 FCFA. Le livre d’or a été vendu à 150 000 FCFA. Fort de cette expérience, le Dr Abdallah Ouédraogo nourrit désormais l’ambition de créer une coopérative de santé dénommée « M'Laafi ». Pour concrétiser ce projet, il estime les besoins de financement à un milliard de FCFA. Nadège KINDA et Sidziguin Irène Corinne SAWADOGO (Stagiaire) Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 135
-    },
     {
       "title": "Soutien aux FDS et VDP : Le capitaine Bertrand Traoré au front diplomatique pour la sécurité",
       "link": "https://netafrique.net/soutien-aux-fds-et-vdp-le-capitaine-bertrand-traore-au-front-diplomatique-pour-la-securite/",
@@ -920,38 +892,10 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A1"
+        "rating": "A2"
       },
-      "_rating": "A1",
+      "_rating": "A2",
       "_score": 123
-    },
-    {
-      "title": "Burkina Faso : 8 000 jeunes de la 3e cohorte des VDP agricoles prêts pour le terrain",
-      "link": "https://faso7.com/2026/06/06/burkina-faso-8-000-jeunes-de-la-3e-cohorte-des-vdp-agricoles-prets-pour-le-terrain/",
-      "pubDate": "2026-06-06T08:22:48.000Z",
-      "description": "La cérémonie officielle de sortie de la 3e cohorte des VDP agricoles et de fin de formation de 8 000 jeunes en entrepreneuriat agricole s’est tenue le 5 juin 2026 à l’École nationale de formation agricole (ENAFA) de Matourkou. Cette initiative s’inscrit dans le cadre de l’Initiative présidentielle pour l’agriculture et l’autosuffisance alimentaire, portée par les plus hautes autorités du pays. Le directeur exécutif du Bureau national des grands projets du Burkina, Hamidou Sawadogo, a salué l’engagement des jeunes bénéficiaires. Selon lui, cette initiative traduit la volonté des autorités de relancer durablement la production agricole nationale afin de réduire la dépendance alimentaire du pays et de promouvoir la consommation ainsi que la commercialisation des produits locaux. Il a souligné que les bénéficiaires ont reçu une formation multidimensionnelle alliant techniques agricoles, civisme, patriotisme et initiation militaire. Une approche qui vise à faire de ces jeunes non seulement des acteurs du développement agricole, mais également des ambassadeurs des valeurs citoyennes et de la résilience nationale dans un contexte sécuritaire particulier. Le coordonnateur technique de l’Initiative présidentielle pour la production agricole et l’autosuffisance alimentaire, Inoussa Ouédraogo, a, pour sa part, insisté sur la nécessité de changer la perception de l’agriculture auprès de la jeunesse. L’ambition, a-t-il expliqué, est de faire de l’agriculture un véritable métier créateur de richesses et d’emplois. Pour accompagner cette vision, des mesures concrètes ont été mises en place. Dans plusieurs communes du pays, des sites d’au moins 12,5 hectares ont été attribués à des coopératives de jeunes grâce à l’implication des autorités administratives et coutumières. Ces espaces seront progressivement aménagés et dotés d’infrastructures essentielles, notamment des forages et des parcelles clôturées destinées à la production en toute saison. Au-delà de l’accès à la terre, les jeunes bénéficieront d’un accompagnement matériel important. Des semences, des engrais ainsi que divers équipements agricoles leur seront fournis. À moyen terme, les coopératives pourront également accéder à des équipements plus performants sous forme de prêts, notamment des tracteurs, motoculteurs et semoirs mécanisés. Selon Inoussa Ouédraogo, les objectifs initiaux du programme sont déjà en voie d’être dépassés. Alors que 4 000 hectares de terres devaient être mobilisés pour les 8 000 jeunes formés, ce sont déjà 4 335 hectares qui ont été identifiés, avec encore plusieurs communes en cours de mobilisation. Plus de 1 000 hectares seraient déjà aménagés, tandis que les travaux d’équipement et de forage se poursuivent sur le terrain. Les responsables du programme entendent également encourager la transformation des produits agricoles afin de créer davantage de valeur ajoutée et d’opportunités économiques pour les jeunes. Plusieurs bénéficiaires, notamment des femmes, ont déjà entrepris des activités dans ce domaine. À terme, l’initiative ambitionne d’aménager jusqu’à 123 000 hectares et de favoriser l’émergence de dizaines de milliers de producteurs organisés en coopératives. Pour les initiateurs du projet, cette dynamique devrait contribuer à renforcer la souveraineté alimentaire du Burkina Faso tout en offrant à la jeunesse de nouvelles perspectives d’insertion socio-économique. L’article Burkina Faso : 8 000 jeunes de la 3e cohorte des VDP agricoles prêts pour le terrain est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115
     },
     {
       "title": "Défense nationale : Le Ministre de la Guerre galvanise les Forces armées nationales",
@@ -1009,39 +953,12 @@
       "_score": 115
     },
     {
-      "title": "Unité nationale: Bertrand Traoré témoigne son soutien aux efforts de sécurisation du Burkina Faso",
-      "link": "https://www.wakatsera.com/unite-nationale-bertrand-traore-temoigne-son-soutien-aux-efforts-de-securisation-du-burkina-faso/",
-      "pubDate": "2026-06-06T07:58:56.000Z",
-      "description": "L’international burkinabè Bertrand Traoré a été reçu en audience, dans l’après-midi du vendredi 5 juin 2026, par le ministre de la Sécurité. À sa sortie d’audience, le capitaine des Étalons a exprimé sa satisfaction d’avoir rencontré le premier responsable du département en charge de la sécurité. « C’est un honneur pour moi d’être venu. Nous avons eu des échanges enrichissants. J’ai exprimé ma fierté d’appartenir à cette grande Nation et je suis venu saluer le travail remarquable accompli sur le terrain et témoigner de mon soutien à celles et ceux qui œuvrent chaque jour pour la sécurité de notre pays », a déclaré Bertrand Traoré. L’international burkinabè a également adressé un message de reconnaissance et d’encouragement aux Forces de défense et de sécurité (FDS) ainsi qu’aux Volontaires pour la défense de la patrie (VDP), engagés quotidiennement dans les efforts de préservation de la paix et de la sécurité au Burkina Faso. « À l’endroit des FDS et des VDP, je voudrais simplement dire merci. Je leur souhaite beaucoup de courage et prie pour que Dieu les accompagne chaque jour dans leur noble mission au service de la Nation », a-t-il ajouté. DCRP-MSECU L’article Unité nationale: Bertrand Traoré témoigne son soutien aux efforts de sécurisation du Burkina Faso est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A1"
-      },
-      "_rating": "A1",
-      "_score": 111
-    },
-    {
-      "title": "Mortalité de poissons au barrage n°3 de Ouagadougou: que révèlent les analyses du laboratoire ?",
-      "link": "https://www.wakatsera.com/mortalite-de-poissons-au-barrage-n3-de-ouagadougou-que-revelent-les-analyses-du-laboratoire/",
-      "pubDate": "2026-06-06T15:33:46.000Z",
-      "description": "Le vendredi 5 juin 2026, une importante mortalité de poissons, principalement des tilapias, a été constatée au barrage n°3 de Ouagadougou. Dès la survenue du phénomène, le Ministère de l'Agriculture, de l'Eau, des Ressources animales et halieutiques a immédiatement déployé des équipes techniques sur le terrain afin d'évaluer la situation, de mettre en œuvre des mesures conservatoires et de procéder à des prélèvements pour analyses. Cette intervention rapide visait à limiter les impacts environnementaux et sanitaires de l'incident tout en identifiant avec précision les causes de cette mortalité inhabituelle. Une vue des agents faisant des prélèvements pour les analyses Constats et résultats Les investigations menées par les services techniques ont révélé une mortalité particulièrement importante touchant à la fois les populations de poissons sauvages et les poissons élevés en cages flottantes, essentiellement des tilapias. Les analyses physico-chimiques réalisées dans les laboratoires du Ministère ont mis en évidence: -Un PH fortement acide de 4,48; -Une température de l'eau variant entre 29 et 30 °C selon la profondeur; -Un déficit marqué en oxygène dissous aussi bien en surface qu'en profondeur, ayant provoqué une asphyxie massive des poissons. Des poissons morts Les équipes techniques ont également relevé plusieurs facteurs environnementaux ayant contribué à la dégradation de la qualité de l'eau, notamment : -La présence de canaux drainant des eaux usées vers le barrage; -Les activités hôtelières générant des rejets d'eaux usées dans le plan d'eau ; -Les activités maraîchères pratiquées autour de la retenue avec l'utilisation de produits phytosanitaires; -Le lessivage des sols consécutif aux premières pluies de la saison, ayant entraîné vers le barrage des matières organiques, des résidus de pesticides et divers autres polluants. Au regard des résultats obtenus, la cause principale de cette mortalité est liée à un déséquilibre brutal des paramètres physico-chimiques du milieu aquatique, ayant entraîné une chute critique du taux d'oxygène dissous et, par conséquent, l'asphyxie des poissons. Actions engagées par le Ministère Face à cette situation, plusieurs mesures d'urgence ont été immédiatement mises en œuvre : -L'enlèvement et la gestion sécurisée des poissons morts -La sensibilisation des pécheurs sur les dangers liés à la commercialisation et à la consommation des poissons morts; -La sensibilisation des populations riveraines sur les mesures de précaution à observer. Le Ministère de l'Agriculture, de l'Eau, des Ressources animales et halieutiques rassure les populations que toutes les dispositions nécessaires sont prises pour assurer un suivi rigoureux de la situation, protéger la santé publique et préserver durablement l'écosystème du barrage n°3 de Ouagadougou. DCRP/MAERAH L’article Mortalité de poissons au barrage n°3 de Ouagadougou: que révèlent les analyses du laboratoire ? est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
+      "title": "Mortalité de poissons au barrage n°3 de Ouagadougou : Ce que révèlent les analyses du laboratoire",
+      "link": "https://burkina24.com/2026/06/06/mortalite-de-poissons-au-barrage-n3-de-ouagadougou-ce-que-revelent-les-analyses-du-laboratoire/",
+      "pubDate": "2026-06-06T14:54:42.000Z",
+      "description": "Le vendredi 5 juin 2026, une importante mortalité de poissons, principalement des tilapias, a été constatée au barrage n°3 de Ouagadougou. Dès la survenue du phénomène, le Ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques a immédiatement déployé des équipes techniques sur le terrain afin d’évaluer la situation, de mettre en œuvre des … The post Mortalité de poissons au barrage n°3 de Ouagadougou : Ce que révèlent les analyses du laboratoire appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1061,17 +978,95 @@
       "_score": 103
     },
     {
-      "title": "Mortalité de poissons au barrage n 3 de Ouagadougou : Ce que révèlent les analyses du laboratoire",
-      "link": "https://www.minute.bf/mortalite-de-poissons-au-barrage-n-3-de-ouagadougou-ce-que-revelent-les-analyses-du-laboratoire/",
-      "pubDate": "2026-06-06T15:29:16.000Z",
-      "description": "Le vendredi 5 juin 2026, une importante mortalité de poissons, principalement des tilapias, a été constatée au barrage n 3 de Ouagadougou. Dès la survenue du phénomène, le Ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques a immédiatement déployé des équipes techniques sur le terrain afin d’évaluer la situation, de mettre en œuvre des mesures conservatoires et de procéder à des prélèvements pour analyses. Cette intervention rapide visait à limiter les impacts environnementaux et sanitaires de l’incident tout en identifiant avec précision les causes de cette mortalité inhabituelle. Constats et résultats Les investigations menées par les services techniques ont révélé une mortalité particulièrement importante touchant à la fois les populations de poissons sauvages et les poissons élevés en cages flottantes, essentiellement des tilapias. Les analyses physico-chimiques réalisées dans les laboratoires du ministère ont mis en évidence : Un pH fortement acide de 4,48 Une température de l’eau variant entre 29 et 30 deg C selon la profondeur Un déficit marqué en oxygène dissous aussi bien en surface qu’en profondeur, ayant provoqué une asphyxie massive des poissons Les équipes techniques ont également relevé plusieurs facteurs environnementaux ayant contribué à la dégradation de la qualité de l’eau, notamment : La présence de canaux drainant des eaux usées vers le barrage Les activités hôtelières générant des rejets d’eaux usées dans le plan d’eau Les activités maraîchères pratiquées autour de la retenue avec l’utilisation de produits phytosanitaires Le lessivage des sols consécutif aux premières pluies de la saison, ayant entraîné vers le barrage des matières organiques, des résidus de pesticides et divers autres polluants Au regard des résultats obtenus, la cause principale de cette mortalité est liée à un déséquilibre brutal des paramètres physico-chimiques du milieu aquatique, ayant entraîné une chute critique du taux d’oxygène dissous et, par conséquent, l’asphyxie des poissons. Actions engagées par le ministère Face à cette situation, plusieurs mesures d’urgence ont été immédiatement mises en œuvre : L’enlèvement et la gestion sécurisée des poissons morts La sensibilisation des pêcheurs sur les dangers liés à la commercialisation et à la consommation des poissons morts La sensibilisation des populations riveraines sur les mesures de précaution à observer Le Ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques rassure les populations que toutes les dispositions nécessaires sont prises pour assurer un suivi rigoureux de la situation, protéger la santé publique et préserver durablement l’écosystème du barrage n 3 de Ouagadougou. 𝗗𝗖𝗥𝗣/𝗠𝗔𝗘𝗥𝗔𝗛 Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Faso Mêbo : Les contributions franchissent la barre des 261 millions F CFA, le Kadiogo toujours en tête",
+      "link": "https://burkina24.com/2026/06/06/faso-mebo-les-contributions-franchissent-la-barre-des-261-millions-f-cfa-le-kadiogo-toujours-en-tete/",
+      "pubDate": "2026-06-06T12:25:03.000Z",
+      "description": "L’élan de solidarité autour de l’agence « Faso Mêbo » continue de prendre de l’ampleur. Selon les dernières données publiées par le ministère de l’Économie et des Finances, les contributions enregistrées au profit des comptes dédiés ont atteint 261 348 207 FCFA à la date du 5 juin 2026. Cette mobilisation nationale témoigne de l’engagement … The post Faso Mêbo : Les contributions franchissent la barre des 261 millions F CFA, le Kadiogo toujours en tête appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 103
+    },
+    {
+      "title": "« Là où tout semblait perdu » : le récit d’une renaissance sanitaire portée par la communauté",
+      "link": "https://www.sidwaya.info/la-ou-tout-semblait-perdu-le-recit-dune-renaissance-sanitaire-portee-par-la-communaute/",
+      "pubDate": "2026-06-06T09:24:54.000Z",
+      "description": "À travers son ouvrage « Là où tout semblait perdu : de l’oubli à l’excellence par la mobilisation communautaire » , le Dr Abdallah Ouédraogo retrace l’extraordinaire transformation du Centre médical urbain de Gounghin 6 autrefois en difficulté devenu une référence nationale. Lors de la cérémonie de dédicace tenue à Ouagadougou le 05 juin 2026, l’auteur et plusieurs personnalités ont salué la force de l’engagement collectif comme moteur du développement sanitaire et social. Le Dr Abdallah Ouédraogo a officiellement présenté son premier ouvrage intitulé « Là où tout semblait perdu : de l’oubli à l’excellence par la mobilisation communautaire » , un essai de 260 pages qui raconte l’expérience de transformation d’un centre de santé grâce à l’implication des populations, du personnel soignant et des partenaires. Dr Abdallah Ouédraogo a déclaré qu’il ne voit pas 260 pages, mais des visages, pour dire que les véritables auteurs de cette réussite sont les communautés qui ont cru à la possibilité du changement \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-1024x461.jpeg\" class=\"size-full wp-image-163663\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01.jpeg\" alt=\"\" width=\"1280\" height=\"576\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01.jpeg 1280w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-300x135.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-1024x461.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-768x346.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-933x420.jpeg 933w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-150x68.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-696x313.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.01-1068x481.jpeg 1068w\" sizes=\"(max-width: 1280px) 100vw, 1280px\" /> Dr Abdallah Ouédraogo a déclaré qu’il ne voit pas 260 pages, mais des visages, pour dire que les véritables auteurs de cette réussite sont les communautés qui ont cru à la possibilité du changement Devant un public composé d’acteurs du monde de la santé, de l’édition et des autorités administratives, l’auteur a expliqué que son livre est avant tout un hommage aux femmes et aux hommes qui ont refusé de céder au découragement. « Je ne vois pas 260 pages, je vois des visages », a-t-il déclaré, soulignant que les véritables auteurs de cette réussite sont les communautés qui ont cru à la possibilité du changement. Selon lui, l’ouvrage relate une aventure humaine qui a permis d’améliorer les infrastructures sanitaires, de renforcer la qualité de l’accueil des patients et de restaurer la confiance de la population. Cette dynamique a conduit le Centre médical urbain de Gounghin 6 à être classé meilleur centre médical de son district en 2025 et à obtenir une certification de qualité. Au-delà du témoignage, le livre se veut également un appel à l’action. Le Dr Ouédraogo a profité de la cérémonie pour présenter son ambition de créer une coopérative de santé dénommée « M’Laafi, qui signifie ma Santé » , un projet communautaire destiné à mobiliser les citoyens autour de la construction d’un centre de santé moderne, performant et accessible à tous. Dr Adjima Combary, représentant le ministre de la Santé, a salué une initiative qui illustre parfaitement les principes de la santé communautaire \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1024x461.jpeg\" class=\"size-full wp-image-163665\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58.jpeg\" alt=\"\" width=\"1280\" height=\"576\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58.jpeg 1280w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-300x135.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1024x461.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-768x346.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-933x420.jpeg 933w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-150x68.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-696x313.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1068x481.jpeg 1068w\" sizes=\"(max-width: 1280px) 100vw, 1280px\" /> Dr Adjima Combary, représentant le ministre de la Santé, a salué une initiative qui illustre parfaitement les principes de la santé communautaire Représentant le ministre de la Santé, le Dr Adjima Combary a salué une initiative qui illustre parfaitement les principes de la santé communautaire. Selon lui, lorsque les populations participent à la conception et à la réalisation d’un projet, elles en deviennent naturellement les gardiennes et les bénéficiaires. Journaliste-écrivain, Clément Zongo, représentant du ministre de la Communication, de la Culture, des Arts et du Tourisme, « cette ouvrage constitue un outil de transmission, de leadership communautaire et de promotion de la souveraineté sanitaire» \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-1024x461.jpeg\" class=\"size-full wp-image-163664\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1.jpeg\" alt=\"\" width=\"1280\" height=\"576\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1.jpeg 1280w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-300x135.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-1024x461.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-768x346.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-933x420.jpeg 933w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-150x68.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-696x313.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.14.58-1-1068x481.jpeg 1068w\" sizes=\"(max-width: 1280px) 100vw, 1280px\" /> Journaliste-écrivain, Clément Zongo, représentant du ministre de la Communication, de la Culture, des Arts et du Tourisme, « cette ouvrage constitue un outil de transmission, de leadership communautaire et de promotion de la souveraineté sanitaire» Même son de cloche du côté du représentant du ministre de la Communication, de la Culture, des Arts et du Tourisme, le journaliste-écrivain Clément Zongo. Parrain de l’événement, il a estimé que l’ouvrage constitue un outil de transmission, de leadership communautaire et de promotion de la souveraineté sanitaire. À cette occasion, il a annoncé un appui de 500 000 FCFA pour soutenir l’édition de l’œuvre. Cheikh Omar Zoré, le Directeur Général de IKS, a mis en lumière la richesse symbolique du titre et du sous-titre, qui traduisent le passage du désespoir à la réussite grâce à l’action collective. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-1024x461.jpeg\" class=\"size-full wp-image-163666\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00.jpeg\" alt=\"\" width=\"1280\" height=\"576\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00.jpeg 1280w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-300x135.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-1024x461.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-768x346.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-933x420.jpeg 933w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-150x68.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-696x313.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-09.15.00-1068x481.jpeg 1068w\" sizes=\"auto, (max-width: 1280px) 100vw, 1280px\" /> Cheikh Omar Zoré, le Directeur Général de IKS, a mis en lumière la richesse symbolique du titre et du sous-titre, qui traduisent le passage du désespoir à la réussite grâce à l’action collective. Présentant l’ouvrage, le critique littéraire Cheikh Omar Zoré, le Directeur Général de IKS, a mis en lumière la richesse symbolique du titre et du sous-titre, qui traduisent le passage du désespoir à la réussite grâce à l’action collective. À travers cette publication, le Dr Abdallah Ouédraogo livre ainsi bien plus qu’un récit personnel : un plaidoyer pour la mobilisation communautaire et la conviction que, même lorsque tout semble perdu, l’engagement collectif peut rendre l’impossible possible. Hubert BADO",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 103
+    },
+    {
+      "title": "Mondial 2026 : L’Allemagne appelle en renfort Assan Ouédraogo, fils de l’ex Étalon Alassane Ouédraogo",
+      "link": "https://netafrique.net/mondial-2026-lallemagne-appelle-en-renfort-assan-ouedraogo-fils-de-lex-etalon-alassane-ouedraogo/",
+      "pubDate": "2026-06-05T22:57:08.000Z",
+      "description": "C'est un moment d'histoire pour le nom Ouédraogo : le jeune Assan, digne héritier d'une lignée de footballeurs, s'apprête à porter haut les couleurs de la Mannschaft lors de la plus grande des compétitions planétaires. Le prodige de 20 ans du RB Leipzig a été officiellement appelé par Julian Nagelsmann pour pallier le forfait sur blessure de Lennart Karl. Si cette convocation est une reconnaissance de son excellence sur les pelouses européennes, elle résonne avec une émotion particulière à Ouagadougou. Fils d’Alassane Ouédraogo, ancien milieu offensif emblématique des Étalons, Assan portera les couleurs de son pays de naissance, l'Allemagne, après une trajectoire qui l'a mené naturellement des centres de formation de la Ruhr jusqu'au sommet du football mondial. Le destin international d’Assan Ouédraogo vient de franchir une étape décisive. Écarté de justesse de la liste initiale, ce puissant milieu de terrain d’1m91 profite d’un rappel en urgence pour s’envoler vers les pelouses américaines. Pour l’Allemagne, c’est l’assurance de compter sur l’un des binationaux les plus prometteurs de sa génération ; pour le Burkina Faso, c’est le symbole d’un immense talent qui s’épanouira loin du maillot vert et blanc. Dans les rues de la capitale burkinabè, le nom d'Ouédraogo n'est pas celui d'un inconnu. Assan est le digne héritier d’Alassane Ouédraogo, milieu offensif emblématique des Étalons aux 33 sélections nationales. Né en Allemagne en 2006 durant la carrière professionnelle de son père, le jeune Assan a été couvé par l'académie du FC Schalke 04 avant de briller sous les couleurs du RB Leipzig. Mais malgré cet ancrage profond dans l'élite du football burkinabè, c'est bien la tunique de la Mannschaft qu'il a revêtue dès les moins de 16 ans. Le rendez-vous manqué avec la FBF Pourquoi n'a-t-il pas suivi les traces de son père ? La réponse, Assan l'a confiée avec une franchise désarmante au média d’État Sidwaya Sport : « Je suis né en Allemagne, j'y ai grandi et c'est là-bas que j'ai été formé. C'est donc arrivé naturellement ». Mais au-delà de ce sentiment d'appartenance, le joueur a révélé une zone d'ombre administrative : il n'a jamais été approché par la Fédération Burkinabè de Football (FBF). Ce silence des autorités sportives nationales a laissé le champ libre à la fédération allemande pour sécuriser sa pépite jusqu'à ses débuts chez les A en novembre 2025. Le sort a voulu que l'Allemagne soit placée dans le Groupe E de ce Mondial, une poule qui abrite également la Côte d'Ivoire, pays voisin de la terre de ses ancêtres. Bien que son maillot soit frappé de l'aigle allemand, toute l'Afrique de l'Ouest gardera un œil attentif sur ce joueur dont la trajectoire souligne la richesse et parfois l'évasion du vivier des binationaux d'origine burkinabè en Europe. Assan Ouédraogo s'apprête désormais à écrire sa propre légende mondiale, portant avec lui une part de l'histoire du football burkinabè sur la plus grande des scènes. L’article Mondial 2026 : L'Allemagne appelle en renfort Assan Ouédraogo, fils de l’ex Étalon Alassane Ouédraogo est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 103
+    },
+    {
+      "title": "Mystère au barrage de Tanghin de Ouagadougou : Des milliers de poissons retrouvés morts",
+      "link": "https://netafrique.net/mortalite-de-poissons-au-barrage-n3-de-ouagadougou-le-maerah-reagit-promptement-des-equipes-techniques-deja-a-pied-doeuvre/",
+      "pubDate": "2026-06-05T22:48:07.000Z",
+      "description": "Une scène de désolation a frappé les exploitants du barrage n°3 de Ouagadougou, communément appelé barrage de Tanghin, ce vendredi 5 juin 2026. Une mortalité massive et soudaine de poissons a été constatée, soulevant une vive inquiétude au sein de la population et des autorités. Face à ce qui ressemble à un véritable désastre écologique, le Ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques (MAERAH) a immédiatement mobilisé ses techniciens pour prélever des échantillons. Entre pollution suspectée et phénomène naturel, les laboratoires s'activent pour percer le mystère de cette hécatombe qui menace l'équilibre de cet écosystème urbain majeur. C'est une nappe argentée et inerte qui a recouvert une partie des eaux du barrage n°3 ce vendredi matin. Le spectacle de milliers de poissons flottant à la surface a rapidement alerté les usagers de ce site emblématique de la capitale, déclenchant une vague d'inquiétude quant à la santé de l'écosystème aquatique local. Dès que l'alerte a été donnée, le ministère de l'Agriculture, de l'Eau, des Ressources animales et halieutiques (MAERAH) a fait preuve de célérité. Des équipes techniques ont été dépêchées « à pied d’œuvre » sur les berges du barrage pour effectuer une première évaluation de l'ampleur des dégâts. L'objectif des spécialistes est clair : comprendre comment et pourquoi des milliers de poissons ont succombé en si peu de temps. Sur le terrain, les techniciens ont procédé à des prélèvements systématiques d’eau ainsi qu’à la collecte d’échantillons de poissons morts. Ces éléments ont été envoyés en laboratoire pour subir des analyses rigoureuses. À ce stade, plusieurs hypothèses sont sur la table des experts : une pollution chimique accidentelle, un phénomène d’eutrophisation lié à la chaleur ou une baisse brutale du taux d'oxygène dans l'eau. Les conclusions scientifiques sont désormais attendues avec impatience pour orienter les mesures de réponse appropriées. Au-delà de l'aspect visuel tragique, cette mortalité massive pose la question de la préservation des ressources halieutiques de la capitale. Le ministère a tenu à rassurer l'opinion publique en affirmant que des dispositions seront prises pour rétablir l’équilibre écologique du site. En attendant les résultats officiels des analyses, une vigilance accrue est de mise autour du barrage de Tanghin. Alors que le mystère reste entier, les autorités promettent une transparence totale et communiqueront les causes de ce drame dès que les preuves scientifiques seront établies. Pour Ouagadougou, l'enjeu est de taille : sauver l'un de ses principaux poumons bleus d'une crise environnementale profonde. L’article Mystère au barrage de Tanghin de Ouagadougou : Des milliers de poissons retrouvés morts est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -1088,10 +1083,10 @@
   ],
   "alerts": [
     {
-      "title": "Lebanese army colonel, troops killed in Israeli air raid despite ceasefire",
-      "link": "https://presstv.ir/Detail/2026/06/06/769922/Lebanon-Lebanese-army-colonel-soldiers-killed-Israeli-strike-southern-Lebanon-ceasefire-agreement",
+      "title": "Iran urges UN to stop repeated US violations of ceasefire after attack on radar facilities",
+      "link": "https://presstv.ir/Detail/2026/06/06/769951/Iran-US-aggression-Qeshm-",
       "source": "Press TV (Iran)",
-      "date": "2026-06-06T16:05:06.033Z",
+      "date": "2026-06-06T16:14:34.326Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1104,10 +1099,10 @@
       ]
     },
     {
-      "title": "Iran urges UN to stop repeated US violations of ceasefire after attack on radar facilities",
-      "link": "https://presstv.ir/Detail/2026/06/06/769951/Iran-US-aggression-Qeshm-",
+      "title": "Lebanese army colonel, troops killed in Israeli air raid despite ceasefire",
+      "link": "https://presstv.ir/Detail/2026/06/06/769922/Lebanon-Lebanese-army-colonel-soldiers-killed-Israeli-strike-southern-Lebanon-ceasefire-agreement",
       "source": "Press TV (Iran)",
-      "date": "2026-06-06T16:05:06.032Z",
+      "date": "2026-06-06T16:14:34.326Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1248,6 +1243,22 @@
       ]
     },
     {
+      "title": "IAEA turns blind eye to Kiev’s ceasefire violation — diplomat",
+      "link": "https://tass.com/politics/2143549",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-06-06T12:20:54.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
       "title": "Israeli airstrikes kill nine, including Lebanese army officers after ceasefire deal",
       "link": "https://www.thehindu.com/news/international/israeli-airstrikes-kill-nine-including-lebanese-army-officers-after-ceasefire-deal/article71069541.ece",
       "source": "The Hindu (Inde)",
@@ -1363,43 +1374,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      204
+      199
     ],
     [
       "occident_fr",
-      144
+      142
     ],
     [
       "occident_us",
-      108
+      105
     ],
     [
       "autre",
-      103
+      102
     ],
     [
       "golfe_mo",
-      100
+      98
+    ],
+    [
+      "russie",
+      56
     ],
     [
       "turquie",
       34
     ],
     [
-      "bf_local",
-      33
-    ],
-    [
       "chine",
       30
     ],
     [
-      "russie",
-      26
+      "bf_local",
+      18
     ],
     [
       "sahel",
-      18
+      16
     ]
   ],
   "indicators": [
@@ -1414,37 +1425,37 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-06T16:04:30.557Z",
+      "at": "2026-06-06T16:14:01.196Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-06T16:04:30.564Z",
+      "at": "2026-06-06T16:14:01.204Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-06T16:05:12.330Z",
+      "at": "2026-06-06T16:14:42.674Z",
       "agent": "Agent Collecte RSS",
-      "message": "115/170 flux OK, 1981 articles"
+      "message": "111/170 flux OK, 1871 articles"
     },
     {
-      "at": "2026-06-06T16:05:15.342Z",
+      "at": "2026-06-06T16:14:45.510Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-06T16:05:15.345Z",
+      "at": "2026-06-06T16:14:45.514Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 17 alertes"
+      "message": "8 developpements, 18 alertes"
     },
     {
-      "at": "2026-06-06T16:05:15.346Z",
+      "at": "2026-06-06T16:14:45.514Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-06T16:05:15.346Z",
+      "at": "2026-06-06T16:14:45.514Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
