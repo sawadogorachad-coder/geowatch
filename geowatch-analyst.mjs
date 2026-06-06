@@ -75,6 +75,22 @@ async function loadMethodo() {
   } catch (e) { agentLog('Agent Analyste', `methodo.js indisponible: ${e.message}`); return null; }
 }
 
+// Charge la liste des conflits (data.js -> data5.js) dans un bac a sable,
+// pour produire une analyse PAR CONFLIT (memes ids/keywords que le site).
+async function loadConflicts() {
+  try {
+    const noop = () => {};
+    const sandbox = { window: {}, console: { log: noop, warn: noop, error: noop }, document: {}, navigator: {}, setTimeout: noop, setInterval: noop };
+    vm.createContext(sandbox);
+    for (const f of ['data.js', 'data2.js', 'data3.js', 'data4.js', 'data5.js']) {
+      try { vm.runInContext(await fs.readFile(path.join(ROOT, f), 'utf8'), sandbox, { filename: f }); }
+      catch (e) { agentLog('Agent Analyste', `${f}: ${e.message}`); }
+    }
+    const gd = sandbox.window.GW_DATA || {};
+    return Array.isArray(gd.CONFLITS) ? gd.CONFLITS : [];
+  } catch (e) { agentLog('Agent Analyste', `conflits indisponibles: ${e.message}`); return []; }
+}
+
 function ensureTags(items, methodo) {
   if (!methodo) return;
   for (const it of items) {
@@ -258,6 +274,37 @@ function buildEtudesThematiques(items, snap, findings, methodo) {
   return out;
 }
 
+// --- Analyse PAR CONFLIT (rattachement par keywords, comme le site) ---
+function buildByConflict(items, conflicts, methodo) {
+  const out = {};
+  for (const c of (conflicts || [])) {
+    const kws = (c.keywords || []).map(k => String(k).toLowerCase());
+    if (!kws.length) continue;
+    const matched = items.filter(it => {
+      const t = ((it.title || '') + ' ' + (it.description || '')).toLowerCase();
+      return kws.some(k => t.includes(k));
+    }).sort((a, b) => (b._score || 0) - (a._score || 0));
+    if (matched.length < 3) continue;
+    const faits = matched.slice(0, 6);
+    out[c.id] = {
+      id: c.id, name: c.short || c.name, volume: matched.length,
+      themesDominants: themeMix(faits, methodo),
+      faits: faits.map(it => ({ titre: it.title, source: it._source, cote: it._rating, lien: it.link, theme: it._theme })),
+      lectureStructuree: `${matched.length} signaux recents rattaches a « ${c.short || c.name} », dominante ${themeMix(faits, methodo).join(', ') || 'diverse'}.`,
+      prospective: `A surveiller : evolution de l'intensite, reactions diplomatiques (CEDEAO/UA/ONU), effets sur l'AES.`,
+      confiance: confidence(faits), proseIA: null
+    };
+  }
+  return out;
+}
+function buildAchSuggestions(byConflict) {
+  return Object.values(byConflict).sort((a, b) => b.volume - a.volume).slice(0, 3).map(c => ({
+    conflictId: c.id, name: c.name,
+    hypotheses: [`${c.name} : escalade / aggravation a 3-6 mois`, `${c.name} : statu quo instable`, `${c.name} : desescalade / reglement partiel`],
+    evidence: c.faits.slice(0, 5).map(f => f.titre)
+  }));
+}
+
 // --- Couche IA (optionnelle) : API Claude en HTTP brut ---
 async function llmWrite(system, user, maxTokens = 1200) {
   if (!CONFIG.llmKey) return null;
@@ -295,6 +342,16 @@ async function addAIProse(analysis, methodo) {
       `Zone : ${note.zone}. Thematiques dominantes : ${note.thematiquesDominantes.join(', ')}.\nFAITS COLLECTES (sources et cotes OTAN entre parentheses) :\n${faits}\n\nRedige la note d'analyse (faits -> causes -> consequences pour l'AES). N'utilise que ces faits.`, 1200);
     used++;
   }
+  // Prose IA pour les principaux conflits (budget borne)
+  let usedC = 0;
+  for (const cid of Object.keys(analysis.byConflict || {})) {
+    if (usedC >= CONFIG.llmMaxNotes) break;
+    const c = analysis.byConflict[cid];
+    const faits = c.faits.map(f => `- ${f.titre} (${f.source || '?'}, cote ${f.cote || '?'})`).join('\n');
+    c.proseIA = await llmWrite(LLM_SYSTEM,
+      `Conflit / sujet : ${c.name}. Thematiques dominantes : ${c.themesDominants.join(', ')}.\nFAITS COLLECTES :\n${faits}\n\nRedige l'analyse (faits -> causes -> consequences pour l'AES). N'utilise que ces faits.`, 1100);
+    usedC++;
+  }
   analysis.llmUsed = true;
   analysis.llmModel = CONFIG.llmModel;
 }
@@ -321,6 +378,8 @@ function analysisHtml(a) {
   ${listHtml(a.notesProspectives, n => `<h3>${esc(n.zone)} <small>(confiance ${esc(n.confiance)})</small></h3>${n.proseIA ? `<p>${esc(n.proseIA).replace(/\n/g, '<br>')}</p>` : `<p>${esc(n.hypothese)}</p>`}<p><i>A surveiller :</i> ${esc((n.signauxASurveiller || []).join(' · '))}</p>`)}
   <h2>Etudes thematiques</h2>
   ${listHtml(a.etudesThematiques, e => `<h3>${esc(e.libelle)} (${esc(e.code)}) — ${e.volume} signaux ${dirBadge(e.direction)}</h3>${e.proseIA ? `<p>${esc(e.proseIA).replace(/\n/g, '<br>')}</p>` : ''}<p><i>Acteurs/blocs :</i> ${esc((e.blocs || []).join(', '))}<br><i>Sources :</i> ${esc((e.sources || []).join(', '))}</p><ul>${listHtml(e.faitsSaillants, f => `<li><a href="${esc(f.lien)}">${esc(f.titre)}</a> <small>(${esc(f.source || '')}, ${esc(f.cote || '')})</small></li>`)}</ul>`)}
+  <h2>Analyse par conflit</h2>
+  ${Object.values(a.byConflict || {}).sort((x, y) => y.volume - x.volume).map(c => `<h3>${esc(c.name)} <small>(${c.volume} signaux · confiance ${esc(c.confiance)})</small></h3>${c.proseIA ? `<p>${esc(c.proseIA).replace(/\n/g, '<br>')}</p>` : `<p>${esc(c.lectureStructuree)}</p>`}<ul>${listHtml(c.faits, f => `<li><a href="${esc(f.lien)}">${esc(f.titre)}</a> <small>(${esc(f.source || '')}, ${esc(f.cote || '')})</small></li>`)}</ul>`).join('') || '<p>—</p>'}
   <hr><p style="font-size:.8rem;color:#666">Garde-fou : aucun fait invente. Les analyses s'appuient uniquement sur les depeches collectees et cotees. A rafraichir a chaque cycle.</p>
 </body></html>`;
 }
@@ -333,6 +392,8 @@ async function main() {
     return;
   }
   const methodo = await loadMethodo();
+  const conflicts = await loadConflicts();
+  agentLog('Agent Analyste', `${conflicts.length} conflits charges`);
   const items = news.items;
   ensureTags(items, methodo);
   const win = recent(items, CONFIG.hours);
@@ -353,9 +414,12 @@ async function main() {
     notesParZone: buildNotesParZone(base, snap, methodo),
     notesProspectives: buildNotesProspectives(findings, methodo),
     etudesThematiques: buildEtudesThematiques(base, snap, findings, methodo),
+    byConflict: buildByConflict(base, conflicts, methodo),
     syntheseExecutive: null,
     llmUsed: false
   };
+  analysis.achSuggestions = buildAchSuggestions(analysis.byConflict);
+  agentLog('Agent Analyste', `${Object.keys(analysis.byConflict).length} conflits analyses, ${analysis.achSuggestions.length} suggestions ACH`);
 
   await addAIProse(analysis, methodo);
   agentLog('Agent Analyste', `Productions: ${analysis.notesParZone.length} notes zone, ${analysis.notesProspectives.length} prospectives, ${analysis.etudesThematiques.length} etudes`);

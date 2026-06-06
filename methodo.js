@@ -585,6 +585,70 @@
     return h;
   }
 
+  /* ---------- INJECTION : panneau « Analyse de l'agent (LIVE) » sur les pages existantes ----------
+     Decouple : ne reecrit pas app.js. Un timer place/rafraichit un panneau en tete
+     de la page active (pages analytiques + labo), lu depuis analysis-latest.json. */
+  const AGENT_PAGES = {
+    conflicts: 'conflicts', briefs: 'sel:brief-conflict', scenarios: 'sel:scen-conflict',
+    impact_bf: 'sel:bf-conflict', indicators: 'synth', reconfig: 'synth', analyses: 'synth',
+    ach: 'ach', actors: 'synth', timeline: 'synth', compare: 'synth', referentiels: 'synth'
+  };
+  let AG_CACHE = null, AG_AT = 0;
+  function agentFetch(cb){
+    const now = Date.now();
+    if (AG_CACHE && now - AG_AT < 90000) { cb(AG_CACHE); return; }
+    fetch('data/generated/analysis-latest.json?t=' + now).then(r => r.ok ? r.json() : null)
+      .then(a => { if (a) { AG_CACHE = a; AG_AT = now; } cb(AG_CACHE); }).catch(() => cb(AG_CACHE));
+  }
+  function synthBody(a){
+    let b = '';
+    if (a.syntheseExecutive) b += `<div style="font-size:.82rem;color:${T.dim};white-space:pre-line;margin-bottom:6px">${esc(a.syntheseExecutive)}</div>`;
+    const f = a.findings || {};
+    const t = (f.tendancesLourdes || []).slice(0, 4).map(x => esc(x.libelle) + ' (' + esc(x.direction || '') + ')').join(' · ');
+    if (t) b += `<div style="font-size:.72rem;color:${T.faint}">Tendances : ${t}</div>`;
+    return b || `<div style="font-size:.78rem;color:${T.faint}">Analyse globale en cours de génération.</div>`;
+  }
+  function agentPanelHTML(page, a, sel){
+    const m = AGENT_PAGES[page]; let body = '';
+    if (m && m.indexOf('sel:') === 0){
+      const c = (sel && a.byConflict) ? a.byConflict[sel] : null;
+      if (c) body = `<div style="font-weight:600;color:${T.txt}">${esc(c.name)} <span style="font-size:.66rem;color:${T.faint}">confiance ${esc(c.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(c.proseIA || c.lectureStructuree || '')}</div>${faitsList(c.faits)}`;
+      else body = synthBody(a) + `<div style="font-size:.72rem;color:${T.faint};margin-top:6px">Sélectionne un conflit ci-dessous pour l'analyse dédiée de l'agent.</div>`;
+    } else if (page === 'conflicts'){
+      const arr = a.byConflict ? Object.values(a.byConflict).sort((x, y) => y.volume - x.volume) : [];
+      if (!arr.length) return '';
+      body = arr.slice(0, 8).map(c => `<div style="margin-bottom:6px"><b style="color:${T.txt}">${esc(c.name)}</b> <span style="font-size:.62rem;color:${T.faint}">${c.volume} signaux · conf. ${esc(c.confiance)}</span><div style="font-size:.78rem;color:${T.dim}">${esc((c.proseIA || c.lectureStructuree || '').slice(0, 240))}</div></div>`).join('');
+    } else if (page === 'ach'){
+      const s = a.achSuggestions || []; if (!s.length) return '';
+      body = `<div style="font-size:.8rem;color:${T.dim};margin-bottom:6px">Hypothèses pré-remplies par l'agent (à reporter dans ta matrice ACH) :</div>` + s.map(x => `<div style="margin-bottom:8px"><b style="color:${T.txt}">${esc(x.name)}</b><ul style="margin:2px 0;padding-left:18px;color:${T.dim};font-size:.78rem">${x.hypotheses.map(h => `<li>${esc(h)}</li>`).join('')}</ul><div style="font-size:.66rem;color:${T.faint}">Indices : ${esc(x.evidence.slice(0, 3).join(' · '))}</div></div>`).join('');
+    } else { body = synthBody(a); }
+    if (!body) return '';
+    return `<div class="card" style="border-left:4px solid ${T.purple};margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <i class="fa-solid fa-robot" style="color:${T.purple}"></i>
+        <span style="font-weight:700;color:${T.txt}">Analyse de l'agent (LIVE)</span>
+        <span style="font-size:.6rem;color:${T.faint};margin-left:auto">${esc(a.generatedAt || '')} · ${a.llmUsed ? 'IA' : 'structuré'}</span>
+      </div>${body}</div>`;
+  }
+  function injectAgentPanel(){
+    const sec = document.querySelector('.page.active'); if (!sec) return;
+    const page = sec.dataset.page; if (!(page in AGENT_PAGES)) return;
+    agentFetch(a => {
+      if (!a) return;
+      const m = AGENT_PAGES[page];
+      let sel = '';
+      if (m.indexOf('sel:') === 0){ const el = document.getElementById(m.split(':')[1]); sel = el ? el.value : ''; }
+      const sig = page + '|' + sel + '|' + (a.generatedAt || '');
+      let panel = sec.querySelector('#gw-agent-panel');
+      if (panel && panel.dataset.sig === sig) return;
+      const html = agentPanelHTML(page, a, sel);
+      if (!html){ if (panel) panel.remove(); return; }
+      if (!panel){ panel = document.createElement('div'); panel.id = 'gw-agent-panel'; sec.insertBefore(panel, sec.firstChild); }
+      panel.dataset.sig = sig; panel.innerHTML = html;
+    });
+  }
+  try { setInterval(injectAgentPanel, 1500); } catch (e) {}
+
   /* ---------- API publique ---------- */
   window.GW_METHODO = { THEMES, ZONES, COLS, relevance, tagItem, routeItem, loadDesks, RELEVANCE_ROWS };
 

@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-06-06T08:00:00.000Z",
   "stats": { "analysed": 0, "windowHours": 168, "sources": 0 },
-  "syntheseExecutive": "Exemple illustratif — ce contenu sera remplace au premier passage de l'agent analyste (toutes les 3 h sur GitHub Actions, ou via `node scripts/geowatch-analyst.mjs`). Il montre le format des productions : synthese executive, dynamiques detectees, notes par zone, prospectives et etudes thematiques.",
+  "syntheseExecutive": "Exemple illustratif (remplace au 1er passage de l'agent). Format des productions : synthese executive, dynamiques detectees, notes par zone, prospectives, etudes thematiques et analyse par conflit.",
   "findings": {
     "tendancesLourdes": [
       { "axe": "zone", "cle": 1, "libelle": "1. Sahel & AO franco.", "volume": 0, "base": 0, "direction": "stable" },
@@ -14,6 +14,27 @@
   "notesParZone": [],
   "notesProspectives": [],
   "etudesThematiques": [],
+  "byConflict": {
+    "c_aes": {
+      "id": "c_aes",
+      "name": "Sahel/AES",
+      "volume": 0,
+      "themesDominants": ["Securite & defense"],
+      "faits": [],
+      "lectureStructuree": "Exemple : l'agent rattachera ici les depeches au conflit Sahel/AES et redigera l'analyse (faits, causes, consequences AES).",
+      "prospective": "A surveiller : intensite des attaques, reactions CEDEAO/UA/ONU, corridors.",
+      "confiance": "faible",
+      "proseIA": null
+    }
+  },
+  "achSuggestions": [
+    {
+      "conflictId": "c_aes",
+      "name": "Sahel/AES",
+      "hypotheses": ["Sahel/AES : escalade a 3-6 mois", "Sahel/AES : statu quo instable", "Sahel/AES : desescalade partielle"],
+      "evidence": ["(exemple) les faits collectes apparaitront ici"]
+    }
+  ],
   "llmUsed": false,
-  "_note": "Fichier d'exemple genere par l'assistant ; ecrase au premier passage de l'agent analyste."
+  "_note": "Fichier d'exemple ; ecrase au premier passage de l'agent analyste."
 }
