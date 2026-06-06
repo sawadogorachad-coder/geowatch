@@ -187,6 +187,8 @@ const Router = {
     events:['Chronologie','Tous événements consolidés'],
     matrice:['Matrice de pertinence','Zones × thématiques — ce que l\'on suit (●) ou survole (○)'],
     desks:['Desks / Répartition','Affectation des analystes et routage automatique des dépêches'],
+    methodo:['Méthodologie','La doctrine de veille de la cellule, intégrée et vivante'],
+    cadence:['Cadence / Livrables','Rythme des livrables et bulletin hebdomadaire automatique'],
     admin:['Administration','Gestion des données']
   },
   go(page){
@@ -221,6 +223,8 @@ const Router = {
     else if(page==='referentiels') renderReferentiels();
     else if(page==='matrice') renderMatrice();
     else if(page==='desks') renderDesks();
+    else if(page==='methodo') renderMethodo();
+    else if(page==='cadence') renderCadence();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
     if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial','impact_radar'].includes(page)){

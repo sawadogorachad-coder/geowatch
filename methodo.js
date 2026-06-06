@@ -21,7 +21,7 @@
     {code:'D', label:'Diplomatie & alliances', color:'#a855f7',
      re:/diploma|ambassad|sanction|cedeao|union africaine|sommet|accord bilat|trait[ée]|reconnaissance|expuls|rupture des relations|alliance|coop[ée]ration|m[ée]diation|n[ée]gociation|partenariat strat[ée]gique/gi},
     {code:'E', label:'Économie & ressources', color:'#f59e0b',
-     re:/[ée]conomi|investiss|\bmine|orpaillage|cours de l.or|p[ée]trole|\bgaz\b|dette|\bfmi\b|banque mondiale|inflation|c[ée]r[ée]ale|carburant|export|import|fcfa|franc cfa|budget|croissance|commerce|douane|redevance/gi},
+     re:/[ée]conomi|investiss|\bmine|mini[èe]re|minier|orpaillage|cours de l.or|p[ée]trole|p[ée]trolier|hydrocarbure|\bgaz\b|dette|\bfmi\b|banque mondiale|inflation|c[ée]r[ée]ale|carburant|export|import|fcfa|franc cfa|budget|croissance|commerce|douane|redevance|n[ée]goce|mati[èe]res premi[èe]res|engrais|lithium|uranium/gi},
     {code:'L', label:'Logistique & corridors', color:'#22c55e',
      re:/corridor|\bport\b|\bports\b|fronti[èe]re|fermeture|blocus|blocage|transit|approvisionn|ravitaill|axe routier|a[ée]roport|espace a[ée]rien|logistique|cha[îi]ne d.approvision/gi},
     {code:'H', label:'Humanitaire & social', color:'#38bdf8',
@@ -47,7 +47,7 @@
   /* ---------- 18 ZONES + PIVOTS ---------- */
   const ZONES = [
     {id:1, label:'Sahel & Afrique de l’Ouest francophone', short:'1. Sahel & AO franco.', pivots:'Burkina, Mali, Niger, Tchad',
-     re:/burkina|ouagadougou|bobo[- ]?dioulasso|\bmali\b|bamako|\bniger\b|niamey|tchad|n.?djamena|s[ée]n[ée]gal|dakar|guin[ée]e\b|conakry|c[ôo]te d.ivoire|abidjan|b[ée]nin|cotonou|\btogo\b|lom[ée]|mauritanie|nouakchott|\baes\b|sahel|liptako/gi},
+     re:/burkina|ouagadougou|bobo[- ]?dioulasso|\bmali\b|bamako|\bniger\b|niamey|tchad|n.?djamena|s[ée]n[ée]gal|dakar|guin[ée]e\b|conakry|c[ôo]te d.ivoire|abidjan|b[ée]nin|cotonou|\btogo\b|lom[ée]|mauritanie|nouakchott|\baes\b|sahel|liptako|traor[ée]|go[ïi]ta|tiani|kaya\b|\bdori\b|djibo|\bgao\b|kidal|tombouctou|m[ée]naka|tillab[ée]ri|gourma|s[ée]no/gi},
     {id:2, label:'Afrique de l’Ouest anglophone & côtière', short:'2. AO anglo. & côtière', pivots:'Nigeria, Ghana',
      re:/nigeria|abuja|lagos|\bghana\b|accra|sierra leone|freetown|liberia|monrovia|gambie|banjul/gi},
     {id:3, label:'Afrique centrale', short:'3. Afrique centrale', pivots:'Tchad, Cameroun, RDC',
@@ -383,6 +383,153 @@
   }
   function stat(val, label, color){
     return `<div><div style="font-size:1.3rem;font-weight:800;color:${color}">${val}</div><div style="font-size:.66rem;color:${T.dim}">${esc(label)}</div></div>`;
+  }
+
+  function card(title, icon, color, inner){
+    return `<div class="card" style="margin-bottom:14px"><div class="card-hd"><h2><i class="fa-solid fa-${icon}" style="color:${color}"></i> ${esc(title)}</h2></div>${inner}</div>`;
+  }
+  function goBtn(page, label, color){
+    return `<button class="btn ghost sm" onclick="Router.go('${page}')" style="color:${color||T.blue}"><i class="fa-solid fa-arrow-right"></i> ${esc(label)}</button>`;
+  }
+
+  /* ---------- PAGE : MÉTHODOLOGIE (doctrine vivante) ---------- */
+  window.renderMethodo = function(){
+    const host = g('methodo-content'); if(!host) return;
+    let html = '';
+    html += banner('compass-drafting', T.purple, 'Méthodologie de veille — doctrine de la cellule',
+      'La méthode commune de la cellule SEMDE : comment nous décidons quoi suivre, qui suit quoi, comment nous évaluons l’information et sous quelle forme nous la restituons. Couverture mondiale, lue au prisme Burkina Faso / AES.',
+      ['Veille orientée « client » (impact sur l’AES).', 'Architecture Géographie × Acteurs × Thématique.', 'Cotation systématique des sources, rien sans source ni cote.']);
+
+    html += card('1. Principe directeur : une veille orientée « client »', 'bullseye', T.yellow,
+      `<div style="font-size:.85rem;color:${T.dim}">La première question n’est pas « que se passe-t-il dans le monde ? » mais « de quoi notre commanditaire a-t-il besoin pour décider ? ». Le commanditaire de référence est le <b style="color:${T.txt}">Burkina Faso et l’AES</b> : tout est filtré par l’impact (direct ou indirect) sur sa sécurité, son économie, sa diplomatie et sa stabilité.</div>`);
+
+    html += card('2. Le cycle de veille en 5 temps', 'arrows-spin', T.green,
+      tbl(['Phase','Question clé'], [
+        ['1. Orientation','Que doit-on savoir, et pour quelle décision ?'],
+        ['2. Collecte','Où trouver l’information, de façon licite et traçable ?'],
+        ['3. Traitement & évaluation','L’information est-elle fiable et recoupée ?'],
+        ['4. Analyse','Qu’est-ce que cela signifie pour l’AES ?'],
+        ['5. Diffusion','Qui doit savoir quoi, et pour quoi faire ?']
+      ]));
+
+    html += card('3. Les trois niveaux d’analyse', 'layer-group', T.blue,
+      `<ul style="margin:0;padding-left:18px;color:${T.dim};font-size:.85rem">
+        <li><b style="color:${T.txt}">Descriptif</b> — Que s’est-il passé ? (faits datés et sourcés)</li>
+        <li><b style="color:${T.txt}">Explicatif</b> — Pourquoi est-ce arrivé ? (causes, intentions, contexte)</li>
+        <li><b style="color:${T.txt}">Prospectif</b> — Que va-t-il se passer ? (scénarios, conséquences AES)</li>
+      </ul><div style="font-size:.78rem;color:${T.faint};margin-top:6px">Exigence : atteindre systématiquement l’explicatif, viser le prospectif sur les sujets prioritaires.</div>`);
+
+    html += card('4. Architecture : Géographie × Acteurs × Thématique', 'table-cells', T.purple,
+      `<div style="font-size:.85rem;color:${T.dim};margin-bottom:8px">Chaque objet de veille croise une zone (parmi 18), une famille d’acteurs et une thématique (parmi 12 codées : S, D, E, L, H, I, C, N, M, T, P, J). La <b style="color:${T.txt}">matrice de pertinence</b> dit, pour chaque zone, ce que l’on suit activement (●) ou légèrement (○).</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">${goBtn('matrice','Ouvrir la matrice de pertinence',T.purple)}${goBtn('desks','Voir la répartition (desks)',T.green)}</div>`);
+
+    html += card('5. Fiabiliser : cotation des sources (code OTAN)', 'shield-halved', T.red,
+      `<div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div>${tbl(['Fiabilité source','—'], [['A','Totalement fiable'],['B','Habituellement fiable'],['C','Assez fiable'],['D','Peu fiable'],['E','Non fiable'],['F','Indéterminable']])}</div>
+        <div>${tbl(['Crédibilité info','—'], [['1','Confirmée'],['2','Probablement vraie'],['3','Possiblement vraie'],['4','Douteuse'],['5','Improbable'],['6','Indéterminable']])}</div>
+      </div>
+      <div style="font-size:.78rem;color:${T.faint};margin-top:6px">On note chaque information par une lettre + un chiffre (ex. B2). Règle des deux sources indépendantes pour tout fait sensible. GéoWatch applique déjà ces cotes automatiquement sur les dépêches.</div>`);
+
+    html += card('6. Donner du sens : techniques d’analyse structurée', 'diagram-project', '#c4b5fd',
+      `<div style="font-size:.85rem;color:${T.dim}">Analyse des hypothèses concurrentes (ACH), vérification des hypothèses clés, avocat du diable. On externalise le raisonnement pour qu’il soit discutable, et on ne rejette pas trop vite l’hypothèse gênante.</div>
+      <div style="margin-top:8px">${goBtn('ach','Ouvrir l’outil ACH','#c4b5fd')}</div>`);
+
+    html += card('7. Produire : livrables et cadence', 'file-lines', T.blue,
+      `<div style="font-size:.85rem;color:${T.dim}">Alerte flash (immédiat), bulletin hebdomadaire, note d’analyse, note prospective, fiches pays/acteurs. L’essentiel d’abord (BLUF), toujours sourcer et coter, afficher un niveau de confiance.</div>
+      <div style="margin-top:8px">${goBtn('cadence','Voir la cadence et générer le bulletin',T.blue)}</div>`);
+
+    html += card('8. Gouvernance', 'scale-balanced', T.green,
+      `<ul style="margin:0;padding-left:18px;color:${T.dim};font-size:.85rem">
+        <li>Révision de la matrice de pertinence chaque trimestre.</li>
+        <li>Capitalisation : fiches pays/acteurs, archivage des alertes, journal des décisions.</li>
+        <li>Contrôle qualité : relecture croisée, recoupement et cotation avant diffusion.</li>
+      </ul>`);
+
+    html += `<div style="font-size:.72rem;color:${T.faint};margin-top:4px">Document de référence complet : « SEMDE — Méthodologie de veille géopolitique » (Word, 18 p.). Cette page en est la version vivante intégrée à l’outil.</div>`;
+    host.innerHTML = html;
+  };
+
+  /* ---------- PAGE : CADENCE / LIVRABLES ---------- */
+  window.renderCadence = function(){
+    const host = g('cadence-content'); if(!host) return;
+    let html = '';
+    html += banner('calendar-check', T.blue, 'Cadence & livrables',
+      'À chaque besoin son format et son rythme. Cette page organise les livrables de la cellule et génère automatiquement le bulletin de veille de la semaine, classé par desk.',
+      ['Quotidien : collecte + alertes flash.', 'Hebdomadaire : bulletin de veille.', 'Mensuel : revue des zones légères. Trimestriel : révision de la matrice.']);
+
+    html += `<div class="card" style="margin-bottom:14px"><table style="border-collapse:collapse;width:100%;font-size:.8rem">
+      <thead><tr>${['Rythme','Activité','Livrable','Aller à'].map(h=>`<th style="text-align:left;padding:7px 8px;color:${T.dim};border-bottom:2px solid ${T.border}">${h}</th>`).join('')}</tr></thead><tbody>
+      ${cadenceRow('Quotidien','Collecte zones actives + alertes','Alerte flash · Brief quotidien','bqs','Brief quotidien')}
+      ${cadenceRow('Hebdomadaire','Synthèse des faits marquants','Bulletin de veille','#bulletin','Générer le bulletin')}
+      ${cadenceRow('À la demande','Sujet traité en profondeur','Note d’analyse / prospective','generator','Générateur de livrables')}
+      ${cadenceRow('Mensuel','Revue des zones en veille légère','Revue ◯','matrice','Matrice')}
+      ${cadenceRow('Trimestriel','Révision des priorités','Matrice révisée','matrice','Matrice (mode édition)')}
+    </tbody></table></div>`;
+
+    html += `<div class="card" id="bulletin"><div class="card-hd"><h2><i class="fa-solid fa-newspaper" style="color:${T.green}"></i> Bulletin de veille hebdomadaire (automatique)</h2></div>
+      <div style="font-size:.82rem;color:${T.dim};margin-bottom:10px">Compile les dépêches des 7 derniers jours, classées par desk (zone × thématique), prêtes à relire et diffuser.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+        <button class="btn primary sm" id="bul-gen"><i class="fa-solid fa-wand-magic-sparkles"></i> Générer le bulletin de la semaine</button>
+        <button class="btn ghost sm" id="bul-copy"><i class="fa-solid fa-copy"></i> Copier le texte</button>
+        <button class="btn ghost sm" id="bul-doc"><i class="fa-solid fa-file-word"></i> Exporter (.doc)</button>
+      </div>
+      <div id="cadence-bulletin" style="background:${T.bg};border:1px solid ${T.border};border-radius:8px;padding:14px;min-height:80px;color:${T.txt};font-size:.82rem">Clique « Générer » pour produire le bulletin de la semaine.</div>
+    </div>`;
+    host.innerHTML = html;
+
+    host.querySelectorAll('[data-cad]').forEach(b=>{ b.onclick=()=>{ const tgt=b.dataset.cad; if(tgt.startsWith('#')){ const el=g(tgt.slice(1)); if(el) el.scrollIntoView({behavior:'smooth'}); } else Router.go(tgt); }; });
+    g('bul-gen').onclick = ()=>{ g('cadence-bulletin').innerHTML = buildWeekly(); };
+    g('bul-copy').onclick = ()=>{ const t=g('cadence-bulletin').innerText; try{ navigator.clipboard.writeText(t); if(window.toast) window.toast('Bulletin copié'); }catch(e){ alert('Copie impossible'); } };
+    g('bul-doc').onclick = ()=>{ exportDoc(g('cadence-bulletin').innerHTML); };
+  };
+
+  function cadenceRow(rythme, act, liv, target, btn){
+    return `<tr>
+      <td style="padding:6px 8px;border-bottom:1px solid ${T.border};color:${T.txt};font-weight:600">${esc(rythme)}</td>
+      <td style="padding:6px 8px;border-bottom:1px solid ${T.border};color:${T.dim}">${esc(act)}</td>
+      <td style="padding:6px 8px;border-bottom:1px solid ${T.border};color:${T.dim}">${esc(liv)}</td>
+      <td style="padding:6px 8px;border-bottom:1px solid ${T.border}"><button class="btn ghost sm" data-cad="${esc(target)}">${esc(btn)}</button></td>
+    </tr>`;
+  }
+
+  function buildWeekly(){
+    const cfg = loadDesks();
+    const items = getItems();
+    const now = Date.now();
+    const week = items.filter(it=> it.pubDate && (now-new Date(it.pubDate))/86400000 <= 7);
+    if(!week.length) return `<div style="color:${T.faint}">Aucune dépêche des 7 derniers jours en mémoire. Ouvre le Tableau de bord pour charger les flux RSS, puis reviens générer le bulletin.</div>`;
+    const byDesk = {}; cfg.desks.forEach(d=>byDesk[d.id]=[]);
+    week.forEach(it=>{ const r=routeItem(it,cfg); if(r.deskId&&byDesk[r.deskId]) byDesk[r.deskId].push({it, tag:r.tag}); });
+    let h = `<div style="font-weight:800;font-size:1rem;color:${T.txt};margin-bottom:4px">Bulletin de veille hebdomadaire — ${new Date().toLocaleDateString('fr-FR')}</div>`;
+    h += `<div style="color:${T.dim};margin-bottom:12px">Synthèse automatique de ${week.length} dépêches (7 derniers jours), classées par desk.</div>`;
+    cfg.desks.forEach(d=>{
+      const arr = byDesk[d.id].sort((a,b)=> new Date(b.it.pubDate)-new Date(a.it.pubDate)).slice(0,8);
+      if(!arr.length) return;
+      h += `<div style="font-weight:700;color:${d.transverse?T.purple:T.blue};margin:10px 0 4px">${esc(d.name)} — ${byDesk[d.id].length} sujet(s)</div><ul style="margin:0;padding-left:18px">`;
+      arr.forEach(({it,tag})=>{
+        const z = tag.pz?ZONE_BY[tag.pz].short.replace(/^\d+\.\s*/,''):'—';
+        const code = tag.pt||'—';
+        h += `<li style="margin-bottom:3px"><b style="color:${(THEME_BY[tag.pt]||{}).color||T.faint}">[${esc(z)} · ${esc(code)}]</b> ${esc(it.title||'')} <span style="color:${T.faint}">(${esc(srcName(it))})</span></li>`;
+      });
+      h += `</ul>`;
+    });
+    return h;
+  }
+
+  function exportDoc(innerHtml){
+    const head = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>Bulletin de veille</title></head><body style="font-family:Calibri,Arial,sans-serif">';
+    const blob = new Blob(['﻿', head, innerHtml, '</body></html>'], {type:'application/msword'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href=url; a.download='Bulletin_veille_hebdo.doc'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 1500);
+  }
+
+  function tbl(headers, rows){
+    let h = `<table style="border-collapse:collapse;width:100%;font-size:.8rem"><thead><tr>`;
+    headers.forEach(x=> h+=`<th style="text-align:left;padding:5px 8px;color:${T.dim};border-bottom:1px solid ${T.border}">${esc(x)}</th>`);
+    h += `</tr></thead><tbody>`;
+    rows.forEach(r=>{ h+=`<tr>`; r.forEach((c,i)=> h+=`<td style="padding:5px 8px;border-bottom:1px solid ${T.border};color:${i===0?T.txt:T.dim};${i===0?'font-weight:600;white-space:nowrap':''}">${esc(c)}</td>`); h+=`</tr>`; });
+    return h+`</tbody></table>`;
   }
 
   /* ---------- API publique ---------- */

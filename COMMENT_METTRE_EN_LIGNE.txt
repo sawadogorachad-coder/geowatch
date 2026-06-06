@@ -1,0 +1,65 @@
+=========================================================
+  GÉOWATCH — MISE EN LIGNE DE LA MISE À JOUR « MÉTHODOLOGIE »
+  (Matrice · Desks · Méthodologie · Cadence + Agent automatique)
+=========================================================
+
+CE QUI A CHANGÉ — 4 fichiers à envoyer sur GitHub :
+
+  À LA RACINE du dépôt :
+    1. methodo.js   ← NOUVEAU (toute la logique : zones, thématiques, matrice, desks)
+    2. index.html   ← à REMPLACER (menu + sections + inclusion du script)
+    3. app.js       ← à REMPLACER (aiguillage du routeur + titres)
+
+  DANS LE DOSSIER scripts/ :
+    4. scripts/geowatch-agents.mjs  ← à REMPLACER (l'agent applique désormais la
+                                       méthodologie : étiquetage zone/thématique,
+                                       matrice, routage par desk, brief par desk)
+
+Aucun autre fichier n'est touché.
+
+---------------------------------------------------------
+MÉTHODE A — LA PLUS SIMPLE (depuis github.com)
+---------------------------------------------------------
+ÉTAPE 1 — les 3 fichiers de la racine :
+  1. Ouvre :  https://github.com/sawadogorachad-coder/geowatch
+  2. « Add file » → « Upload files »
+  3. Glisse : methodo.js, index.html, app.js
+  4. Commit message : « Méthodologie : matrice, desks, cadence »
+  5. « Commit changes »
+
+ÉTAPE 2 — le fichier de l'agent (dans son dossier) :
+  6. Sur la page du dépôt, clique le dossier « scripts ».
+  7. « Add file » → « Upload files »
+  8. Glisse : geowatch-agents.mjs  (celui du dossier « scripts » de ce paquet)
+  9. Commit message : « Agent méthodologie-aware (zones/thématiques/desks) »
+  10. « Commit changes »
+
+ÉTAPE 3 — vérifier :
+  11. Onglet « Actions » → un déploiement + un run d'agent se lancent (~2-3 min).
+  12. Ouvre  https://sawadogorachad-coder.github.io/geowatch/  puis Ctrl + F5.
+
+Tu verras 4 nouvelles entrées de menu : Matrice de pertinence · Desks /
+Répartition · Méthodologie · Cadence / Livrables.
+L'agent (toutes les 3 h) classera désormais chaque dépêche par zone + thématique
+et produira un brief organisé par desk.
+
+---------------------------------------------------------
+MÉTHODE B — si tu as un clone local du dépôt (git)
+---------------------------------------------------------
+   git pull
+   (copier methodo.js, index.html, app.js à la racine,
+    et geowatch-agents.mjs dans le dossier scripts/)
+   git add methodo.js index.html app.js scripts/geowatch-agents.mjs
+   git commit -m "Méthodologie + agent méthodologie-aware"
+   git push
+
+---------------------------------------------------------
+NOTES
+---------------------------------------------------------
+• Page blanche après MAJ : Ctrl + F5 (vider le cache).
+• Les réglages (matrice modifiée, répartition des desks) sont sauvegardés dans
+  le navigateur de chaque poste (localStorage), pas en ligne.
+• L'agent fonctionne sans rien configurer ; pour recevoir le brief par e-mail,
+  il faut une clé d'envoi gratuite (Resend/Brevo/SendGrid) dans les Secrets
+  GitHub (voir AGENTS_AUTOMATION.md). On peut le faire ensemble.
+• Retour arrière : ré-uploader l'ancienne version des fichiers.
