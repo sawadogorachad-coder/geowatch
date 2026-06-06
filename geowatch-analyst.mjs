@@ -221,6 +221,19 @@ function themeMix(list, methodo) {
     .map(([code]) => (methodo && (methodo.THEMES.find(t => t.code === code) || {}).label) || code);
 }
 
+// Aplati n'importe quel champ de fiche (string / array / objet imbrique) en texte court.
+function oneLine(x) {
+  if (x == null) return '';
+  if (typeof x === 'string') return x;
+  if (Array.isArray(x)) return x.map(oneLine).filter(Boolean).join(' · ');
+  if (typeof x === 'object') return Object.values(x).map(oneLine).filter(Boolean).join(' : ');
+  return String(x);
+}
+function seedText(field, maxChars = 300) {
+  const s = oneLine(field).replace(/\s+/g, ' ').trim();
+  return s.length > maxChars ? s.slice(0, maxChars) + '…' : s;
+}
+
 function buildNotesParZone(items, snap, methodo) {
   const out = [];
   const zones = Object.entries(snap.byZone).filter(([z, n]) => +z <= 7 && n >= 4)
@@ -286,11 +299,18 @@ function buildByConflict(items, conflicts, methodo) {
     }).sort((a, b) => (b._score || 0) - (a._score || 0));
     if (matched.length < 3) continue;
     const faits = matched.slice(0, 6);
+    const dom = themeMix(faits, methodo).join(', ') || 'diverse';
+    const contexte = seedText(c.cle_historique, 300);
+    const conseq = seedText(c.impact_bf, 280);
     out[c.id] = {
       id: c.id, name: c.short || c.name, volume: matched.length,
       themesDominants: themeMix(faits, methodo),
       faits: faits.map(it => ({ titre: it.title, source: it._source, cote: it._rating, lien: it.link, theme: it._theme })),
-      lectureStructuree: `${matched.length} signaux recents rattaches a « ${c.short || c.name} », dominante ${themeMix(faits, methodo).join(', ') || 'diverse'}.`,
+      contexte, consequencesAES: conseq,
+      lectureStructuree: `Signaux récents : ${matched.length} dépêches rattachées (dominante ${dom}).`
+        + (contexte ? `\nLecture de fond : ${contexte}` : '')
+        + (conseq ? `\nImpact AES : ${conseq}` : '')
+        + `\nÀ surveiller : intensité des incidents, réactions CEDEAO/UA/ONU, corridors logistiques, prix (or, carburant, céréales).`,
       prospective: `A surveiller : evolution de l'intensite, reactions diplomatiques (CEDEAO/UA/ONU), effets sur l'AES.`,
       confiance: confidence(faits), proseIA: null
     };
@@ -379,7 +399,7 @@ function analysisHtml(a) {
   <h2>Etudes thematiques</h2>
   ${listHtml(a.etudesThematiques, e => `<h3>${esc(e.libelle)} (${esc(e.code)}) — ${e.volume} signaux ${dirBadge(e.direction)}</h3>${e.proseIA ? `<p>${esc(e.proseIA).replace(/\n/g, '<br>')}</p>` : ''}<p><i>Acteurs/blocs :</i> ${esc((e.blocs || []).join(', '))}<br><i>Sources :</i> ${esc((e.sources || []).join(', '))}</p><ul>${listHtml(e.faitsSaillants, f => `<li><a href="${esc(f.lien)}">${esc(f.titre)}</a> <small>(${esc(f.source || '')}, ${esc(f.cote || '')})</small></li>`)}</ul>`)}
   <h2>Analyse par conflit</h2>
-  ${Object.values(a.byConflict || {}).sort((x, y) => y.volume - x.volume).map(c => `<h3>${esc(c.name)} <small>(${c.volume} signaux · confiance ${esc(c.confiance)})</small></h3>${c.proseIA ? `<p>${esc(c.proseIA).replace(/\n/g, '<br>')}</p>` : `<p>${esc(c.lectureStructuree)}</p>`}<ul>${listHtml(c.faits, f => `<li><a href="${esc(f.lien)}">${esc(f.titre)}</a> <small>(${esc(f.source || '')}, ${esc(f.cote || '')})</small></li>`)}</ul>`).join('') || '<p>—</p>'}
+  ${Object.values(a.byConflict || {}).sort((x, y) => y.volume - x.volume).map(c => `<h3>${esc(c.name)} <small>(${c.volume} signaux · confiance ${esc(c.confiance)})</small></h3>${c.proseIA ? `<p>${esc(c.proseIA).replace(/\n/g, '<br>')}</p>` : `<p>${esc(c.lectureStructuree).replace(/\n/g, '<br>')}</p>`}<ul>${listHtml(c.faits, f => `<li><a href="${esc(f.lien)}">${esc(f.titre)}</a> <small>(${esc(f.source || '')}, ${esc(f.cote || '')})</small></li>`)}</ul>`).join('') || '<p>—</p>'}
   <hr><p style="font-size:.8rem;color:#666">Garde-fou : aucun fait invente. Les analyses s'appuient uniquement sur les depeches collectees et cotees. A rafraichir a chaque cycle.</p>
 </body></html>`;
 }
