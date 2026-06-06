@@ -1,65 +1,78 @@
 =========================================================
-  GÉOWATCH — MISE EN LIGNE DE LA MISE À JOUR « MÉTHODOLOGIE »
-  (Matrice · Desks · Méthodologie · Cadence + Agent automatique)
+  GÉOWATCH — MISE EN LIGNE (méthodologie + 2 agents autonomes)
 =========================================================
 
-CE QUI A CHANGÉ — 4 fichiers à envoyer sur GitHub :
+CETTE MISE À JOUR AJOUTE :
+  • 5 pages : Matrice de pertinence · Desks/Répartition · Méthodologie ·
+    Cadence/Livrables · Études & Analyses
+  • Agent de collecte « méthodologie-aware » (étiquette zone/thématique,
+    matrice, routage par desk, brief par desk).
+  • Agent ANALYSTE (nouveau) : détecte tendances lourdes, signaux faibles,
+    ruptures, recompositions/bascules ; produit notes d'analyse, prospectives
+    et études thématiques ; alimente la page « Études & Analyses ».
 
-  À LA RACINE du dépôt :
-    1. methodo.js   ← NOUVEAU (toute la logique : zones, thématiques, matrice, desks)
-    2. index.html   ← à REMPLACER (menu + sections + inclusion du script)
-    3. app.js       ← à REMPLACER (aiguillage du routeur + titres)
+-----------------------------------------------------------------
+FICHIERS À ENVOYER (en respectant les dossiers) :
+-----------------------------------------------------------------
+  À LA RACINE :
+    methodo.js          (NOUVEAU)
+    index.html          (remplacer)
+    app.js              (remplacer)
 
-  DANS LE DOSSIER scripts/ :
-    4. scripts/geowatch-agents.mjs  ← à REMPLACER (l'agent applique désormais la
-                                       méthodologie : étiquetage zone/thématique,
-                                       matrice, routage par desk, brief par desk)
+  DANS  scripts/ :
+    geowatch-agents.mjs     (remplacer)
+    geowatch-analyst.mjs    (NOUVEAU)
 
-Aucun autre fichier n'est touché.
+  DANS  .github/workflows/ :
+    geowatch-agents.yml     (remplacer)
 
----------------------------------------------------------
-MÉTHODE A — LA PLUS SIMPLE (depuis github.com)
----------------------------------------------------------
-ÉTAPE 1 — les 3 fichiers de la racine :
-  1. Ouvre :  https://github.com/sawadogorachad-coder/geowatch
-  2. « Add file » → « Upload files »
-  3. Glisse : methodo.js, index.html, app.js
-  4. Commit message : « Méthodologie : matrice, desks, cadence »
-  5. « Commit changes »
+  DANS  data/generated/ :
+    analysis-latest.json    (NOUVEAU — exemple, écrasé au 1er passage de l'agent)
 
-ÉTAPE 2 — le fichier de l'agent (dans son dossier) :
-  6. Sur la page du dépôt, clique le dossier « scripts ».
-  7. « Add file » → « Upload files »
-  8. Glisse : geowatch-agents.mjs  (celui du dossier « scripts » de ce paquet)
-  9. Commit message : « Agent méthodologie-aware (zones/thématiques/desks) »
-  10. « Commit changes »
+-----------------------------------------------------------------
+MÉTHODE A — github.com (glisser-déposer en conservant les dossiers)
+-----------------------------------------------------------------
+1. Dézippe ce paquet : tu obtiens l'arborescence exacte (methodo.js, index.html,
+   app.js, et les dossiers scripts/, .github/, data/).
+2. Ouvre  https://github.com/sawadogorachad-coder/geowatch
+3. « Add file » → « Upload files ».
+4. Glisse TOUT le contenu dézippé d'un coup (GitHub conserve les sous-dossiers).
+5. Message de commit : « Méthodologie + agents (collecte & analyste) »
+6. « Commit changes ».
+7. Onglet « Actions » : déploiement + passage des agents (~2-3 min).
+8. Ouvre  https://sawadogorachad-coder.github.io/geowatch/  puis Ctrl + F5.
 
-ÉTAPE 3 — vérifier :
-  11. Onglet « Actions » → un déploiement + un run d'agent se lancent (~2-3 min).
-  12. Ouvre  https://sawadogorachad-coder.github.io/geowatch/  puis Ctrl + F5.
-
-Tu verras 4 nouvelles entrées de menu : Matrice de pertinence · Desks /
-Répartition · Méthodologie · Cadence / Livrables.
-L'agent (toutes les 3 h) classera désormais chaque dépêche par zone + thématique
-et produira un brief organisé par desk.
-
----------------------------------------------------------
-MÉTHODE B — si tu as un clone local du dépôt (git)
----------------------------------------------------------
+-----------------------------------------------------------------
+MÉTHODE B — clone local (git)
+-----------------------------------------------------------------
    git pull
-   (copier methodo.js, index.html, app.js à la racine,
-    et geowatch-agents.mjs dans le dossier scripts/)
-   git add methodo.js index.html app.js scripts/geowatch-agents.mjs
-   git commit -m "Méthodologie + agent méthodologie-aware"
+   (copier les fichiers ci-dessus aux mêmes emplacements)
+   git add -A
+   git commit -m "Méthodologie + agents (collecte & analyste)"
    git push
 
----------------------------------------------------------
+-----------------------------------------------------------------
+OPTION IA (rédaction d'analyses en prose) — facultatif
+-----------------------------------------------------------------
+Par défaut, l'agent analyste fonctionne SANS IA (synthèses structurées, gratuit).
+Pour activer la rédaction d'analyses par l'IA :
+  1. Crée une clé API sur  https://console.anthropic.com  (quelques centimes/usage).
+  2. Dans GitHub : Settings → Secrets and variables → Actions → New secret
+     Nom :  ANTHROPIC_API_KEY      Valeur : ta clé (sk-ant-...)
+  (Optionnel) Secret  GEOWATCH_LLM_MODEL  pour changer de modèle
+     (ex. claude-haiku-4-5 pour réduire le coût).
+L'agent détecte la clé tout seul et se met à rédiger ; sans clé, il reste gratuit.
+
+-----------------------------------------------------------------
+ENVOI E-MAIL DU BRIEF (déjà prévu) — facultatif
+-----------------------------------------------------------------
+Secrets : EMAIL_TO, EMAIL_FROM + une clé (RESEND_API_KEY / BREVO_API_KEY /
+SENDGRID_API_KEY). Voir AGENTS_AUTOMATION.md.
+
+-----------------------------------------------------------------
 NOTES
----------------------------------------------------------
-• Page blanche après MAJ : Ctrl + F5 (vider le cache).
-• Les réglages (matrice modifiée, répartition des desks) sont sauvegardés dans
-  le navigateur de chaque poste (localStorage), pas en ligne.
-• L'agent fonctionne sans rien configurer ; pour recevoir le brief par e-mail,
-  il faut une clé d'envoi gratuite (Resend/Brevo/SendGrid) dans les Secrets
-  GitHub (voir AGENTS_AUTOMATION.md). On peut le faire ensemble.
+-----------------------------------------------------------------
+• Page blanche après MAJ : Ctrl + F5.
+• Réglages (matrice, répartition des desks) sauvegardés dans le navigateur
+  de chaque poste (localStorage), pas en ligne.
 • Retour arrière : ré-uploader l'ancienne version des fichiers.

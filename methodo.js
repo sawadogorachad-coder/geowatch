@@ -532,6 +532,59 @@
     return h+`</tbody></table>`;
   }
 
+  /* ---------- PAGE : ÉTUDES & ANALYSES (produites par l'agent analyste) ---------- */
+  window.renderEtudes = function(){
+    const host = g('etudes-content'); if(!host) return;
+    let head = banner('flask', T.purple, 'Études & Analyses (agent autonome)',
+      'Productions de l’agent analyste : dynamiques détectées (tendances lourdes, signaux faibles, ruptures, recompositions), notes d’analyse par zone, notes prospectives et études thématiques. Rafraîchi automatiquement par le pipeline GéoWatch.',
+      ['Mode structuré (gratuit) par défaut ; rédaction IA si une clé API est configurée.', 'Aucun fait inventé : tout s’appuie sur les dépêches collectées et cotées.', 'Cliquez « Rafraîchir » après un nouveau passage de l’agent.']);
+    head += `<div style="margin-bottom:12px"><button class="btn ghost sm" id="et-refresh"><i class="fa-solid fa-rotate"></i> Rafraîchir</button></div><div id="etudes-body" style="color:${T.dim}">Chargement…</div>`;
+    host.innerHTML = head;
+    const refresh = ()=> g('et-refresh') && (g('et-refresh').onclick = loadEtudes);
+    refresh();
+    loadEtudes();
+  };
+
+  function loadEtudes(){
+    const body = g('etudes-body'); if(!body) return;
+    body.innerHTML = `<span style="color:${T.dim}">Chargement…</span>`;
+    fetch('data/generated/analysis-latest.json?t=' + Date.now()).then(r=>{ if(!r.ok) throw new Error('not found'); return r.json(); })
+      .then(a => { body.innerHTML = renderAnalysis(a); })
+      .catch(()=>{ body.innerHTML = `<div class="card" style="color:${T.dim}"><b style="color:${T.txt}">Pas encore d’analyse générée.</b><br>L’agent analyste produit <code>data/generated/analysis-latest.json</code> lors de son passage (toutes les 3 h sur GitHub Actions, ou en local via <code>node scripts/geowatch-analyst.mjs</code>). Reviens après le premier passage.</div>`; });
+  }
+
+  function dirChip(d){
+    const col = d==='hausse'?T.red : d==='baisse'?T.green : d==='nouveau'?T.purple : T.faint;
+    return `<span style="font-size:.62rem;color:${col};border:1px solid ${col};border-radius:6px;padding:0 5px;margin-left:4px">${esc(d||'')}</span>`;
+  }
+  function faitsList(arr){
+    return `<ul style="margin:4px 0;padding-left:18px;color:${T.dim};font-size:.78rem">${(arr||[]).map(f=>`<li><a href="${esc(f.lien||'#')}" target="_blank" rel="noopener" style="color:${T.txt};text-decoration:none">${esc(f.titre||'')}</a> <span style="color:${T.faint}">(${esc(f.source||'')}${f.cote?' · '+esc(f.cote):''})</span></li>`).join('')}</ul>`;
+  }
+
+  function renderAnalysis(a){
+    let h = '';
+    h += `<div style="font-size:.72rem;color:${T.faint};margin-bottom:10px">Généré le ${esc(a.generatedAt||'')} · ${a.stats?a.stats.analysed:'?'} articles · IA : ${a.llmUsed?esc(a.llmModel||'oui'):'non (mode structuré)'}</div>`;
+    if(a.syntheseExecutive){ h += card('Synthèse exécutive', 'bullseye', T.yellow, `<div style="font-size:.85rem;color:${T.txt};white-space:pre-line">${esc(a.syntheseExecutive)}</div>`); }
+    const f = a.findings || {};
+    let dyn = '';
+    dyn += `<div style="font-weight:700;color:${T.txt};margin:6px 0 2px">Tendances lourdes</div><ul style="margin:0 0 8px;padding-left:18px;color:${T.dim};font-size:.8rem">${(f.tendancesLourdes||[]).map(t=>`<li>${esc(t.libelle)} — ${t.volume} signaux${dirChip(t.direction)}</li>`).join('')||'<li>—</li>'}</ul>`;
+    dyn += `<div style="font-weight:700;color:${T.txt};margin:6px 0 2px">Signaux faibles</div><ul style="margin:0 0 8px;padding-left:18px;color:${T.dim};font-size:.8rem">${(f.signauxFaibles||[]).map(s=>`<li><b style="color:${T.txt}">${esc(s.zone)} · ${esc(s.thematique)}</b> — ${esc(s.exemple||'')}</li>`).join('')||'<li>—</li>'}</ul>`;
+    dyn += `<div style="font-weight:700;color:${T.txt};margin:6px 0 2px">Ruptures</div><ul style="margin:0 0 8px;padding-left:18px;color:${T.dim};font-size:.8rem">${(f.ruptures||[]).map(r=> r.type==='evenement'?`<li>${esc(r.zone)} · ${esc(r.thematique)} — <a href="${esc(r.lien||'#')}" target="_blank" rel="noopener" style="color:${T.txt}">${esc(r.titre)}</a> <span style="color:${T.faint}">(${esc(r.source||'')}${r.cote?' · '+esc(r.cote):''})</span></li>`:`<li>Pic : ${esc(r.zone)} · ${esc(r.thematique)} (${r.volume} vs ${r.base} moy.)</li>`).join('')||'<li>—</li>'}</ul>`;
+    dyn += `<div style="font-weight:700;color:${T.txt};margin:6px 0 2px">Recompositions / bascules</div><ul style="margin:0;padding-left:18px;color:${T.dim};font-size:.8rem">${(f.recompositions||[]).map(r=>`<li><b style="color:${T.txt}">${esc(r.axe)}</b> ${esc(r.cle)} : ${esc(r.partAnterieure)} → ${esc(r.partActuelle)} (${esc(r.sens)})</li>`).join('')||'<li>—</li>'}</ul>`;
+    h += card('Dynamiques détectées', 'wave-square', T.blue, dyn);
+
+    if((a.notesParZone||[]).length){
+      h += card('Notes d’analyse par zone', 'file-lines', T.green, (a.notesParZone||[]).map(n=>`<div style="margin-bottom:10px"><div style="font-weight:700;color:${T.txt}">${esc(n.zone)} <span style="font-size:.66rem;color:${T.faint}">confiance ${esc(n.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(n.proseIA||n.lectureStructuree||'')}</div>${faitsList(n.faits)}</div>`).join(''));
+    }
+    if((a.notesProspectives||[]).length){
+      h += card('Notes prospectives', 'chess', '#c4b5fd', (a.notesProspectives||[]).map(n=>`<div style="margin-bottom:10px"><div style="font-weight:700;color:${T.txt}">${esc(n.zone)} <span style="font-size:.66rem;color:${T.faint}">confiance ${esc(n.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(n.proseIA||n.hypothese||'')}</div><div style="font-size:.72rem;color:${T.faint};margin-top:3px">À surveiller : ${esc((n.signauxASurveiller||[]).join(' · '))}</div></div>`).join(''));
+    }
+    if((a.etudesThematiques||[]).length){
+      h += card('Études thématiques', 'layer-group', T.orange, (a.etudesThematiques||[]).map(e=>`<div style="margin-bottom:10px"><div style="font-weight:700;color:${T.txt}">${esc(e.libelle)} (${esc(e.code)}) — ${e.volume} signaux${dirChip(e.direction)}</div>${e.proseIA?`<div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(e.proseIA)}</div>`:''}<div style="font-size:.72rem;color:${T.faint};margin:3px 0">Acteurs/blocs : ${esc((e.blocs||[]).join(', '))} · Sources : ${esc((e.sources||[]).join(', '))}</div>${faitsList(e.faitsSaillants)}</div>`).join(''));
+    }
+    return h;
+  }
+
   /* ---------- API publique ---------- */
   window.GW_METHODO = { THEMES, ZONES, COLS, relevance, tagItem, routeItem, loadDesks, RELEVANCE_ROWS };
 

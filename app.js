@@ -189,6 +189,7 @@ const Router = {
     desks:['Desks / Répartition','Affectation des analystes et routage automatique des dépêches'],
     methodo:['Méthodologie','La doctrine de veille de la cellule, intégrée et vivante'],
     cadence:['Cadence / Livrables','Rythme des livrables et bulletin hebdomadaire automatique'],
+    etudes:['Études & Analyses','Productions de l\'agent analyste : dynamiques, notes, études'],
     admin:['Administration','Gestion des données']
   },
   go(page){
@@ -225,6 +226,7 @@ const Router = {
     else if(page==='desks') renderDesks();
     else if(page==='methodo') renderMethodo();
     else if(page==='cadence') renderCadence();
+    else if(page==='etudes') renderEtudes();
     else if(page==='admin') renderAdmin();
     // Refresh RSS automatique si données stales (>5min) sur les pages qui en bénéficient
     if(['news','alerts','dash','sources','conflicts','worldwatch','events','bqs','adversarial','impact_radar'].includes(page)){
