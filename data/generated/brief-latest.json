@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-07T09:30:22.227Z",
+  "generatedAt": "2026-06-07T09:57:21.626Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1935,
+    "ok": 108,
+    "failed": 62,
+    "articles": 1870,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,7 +40,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -48,13 +48,8 @@
         "count": 0
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
+        "id": "rss_netafrique",
+        "name": "Net Afrique (BF)",
         "count": 10
       },
       {
@@ -93,8 +88,8 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -188,11 +183,6 @@
         "count": 10
       },
       {
-        "id": "rss_elwatan",
-        "name": "El Watan (Algérie)",
-        "count": 0
-      },
-      {
         "id": "rss_telquel",
         "name": "TelQuel (Maroc)",
         "count": 30
@@ -228,18 +218,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -303,11 +283,6 @@
         "count": 30
       },
       {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "count": 20
-      },
-      {
         "id": "rss_bbc_afr",
         "name": "BBC Afrique (FR)",
         "count": 30
@@ -346,11 +321,6 @@
         "id": "rss_brookings",
         "name": "Brookings Institution",
         "count": 0
-      },
-      {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
       },
       {
         "id": "rss_carnegie",
@@ -585,13 +555,18 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_netafrique",
-        "name": "Net Afrique (BF)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -625,11 +600,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -638,6 +608,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -677,7 +652,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
@@ -687,7 +662,7 @@
       {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_camer",
@@ -730,6 +705,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_elwatan",
+        "name": "El Watan (Algérie)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_le360",
         "name": "Le360 (Maroc)",
         "error": "HTTP 404"
@@ -740,9 +720,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -760,6 +745,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_friedrich",
         "name": "Friedrich Ebert Stiftung Afrique",
         "error": "HTTP 404"
@@ -773,6 +763,11 @@
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "error": "fetch failed"
       },
       {
         "id": "rss_apa",
@@ -803,6 +798,11 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_crisisgroup",
@@ -863,67 +863,12 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 27,
-    "alerts": 9,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 68
+    "bfAes": 22,
+    "alerts": 10,
+    "criticalAlerts": 3,
+    "sourcesDistinct": 64
   },
   "topDevelopments": [
-    {
-      "title": "États-Unis : Des chirurgiens militaires burkinabè partagent leur expérience avec la Garde nationale de Washington",
-      "link": "https://www.minute.bf/etats-unis-des-chirurgiens-militaires-burkinabe-partagent-leur-experience-avec-la-garde-nationale-de-washington/",
-      "pubDate": "2026-06-07T07:48:42.000Z",
-      "description": "Les 14 et 15 mai, des chirurgiens militaires burkinabè ont partagé leur expertise dans la gestion des soins d'urgence lors d’opérations de combat de grande envergure avec la Garde nationale de Washington D.C. L'information émane de l'ambassade des États-Unis au Burkina Faso. Selon la représentation américaine à Ouagadougou, ce riche échange sur les traumatismes de choc, inscrit dans le cadre du Programme de partenariat d’État (SPP), va bien au-delà de la médecine. Il témoigne d’une collaboration bilatérale forte qui illustre notre engagement commun pour la sécurité, l'apprentissage mutuel et le leadership global. Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115
-    },
-    {
-      "title": "Burkina Faso : Le journaliste-chroniqueur Clément Zongo dédicace trois ouvrages d’un coup",
-      "link": "https://faso7.com/2026/06/06/burkina-faso-le-journaliste-chroniqueur-clement-zongo-dedicace-trois-ouvrages-dun-coup/",
-      "pubDate": "2026-06-06T16:37:36.000Z",
-      "description": "Le journaliste-chroniqueur Clément Zongo a procédé, ce 6 juin 2026 à Ouagadougou, à la dédicace de trois ouvrages intitulés « La fille aux cheveux châtains » , « Les Chroniques de Clément Zongo » et « Juste un coup de plume » . La cérémonie s’est tenue dans la grande salle du CENASA en présence d’acteurs du monde culturel, des médias ainsi que d’amoureux du livre. De son vrai nom Alexis Yaméogo, Clément Zongo est titulaire d’une maîtrise en sciences et techniques de l’information et de la communication. Conseiller des affaires culturelles, il s’est illustré au fil des années à travers plusieurs distinctions obtenues dans le domaine littéraire. Le premier ouvrage, « La fille aux cheveux châtains » , aborde la question de l’albinisme et la perception des personnes atteintes de cette condition par la société. À travers cette œuvre, l’auteur soulève la problématique de l’identité de la personne albinos, souvent confrontée aux préjugés et aux stigmatisations. Par ce roman, Clément Zongo entend contribuer à changer le regard de la société sur les personnes albinos et soutenir les efforts de sensibilisation menés par les communautés et les associations. « La rousse est à moi, pauvre eunuque à la sève fade. Tu ne sèmeras rien en elle qui germera », peut-on lire à la page 61. L’ouvrage a remporté le deuxième prix du Grand Prix national des arts et des lettres, catégorie roman, lors de la Semaine nationale de la culture (SNC) 2023. Le deuxième livre, Les Chroniques de Clément Zongo , est un recueil regroupant plusieurs chroniques publiées dans le quotidien Sidwaya. Ce premier tome traite notamment de l’enfance, de la santé, de la souffrance humaine et d’autres réalités sociales. « J’essaie de me faire le porte-voix, sans prétention, de toutes ces personnes, que dans la société le riche qui a les moyens puisse accourir vers le pauvre. Et que le plus fort sache que sa mission sur terre, c’est de défendre le plus faible » , a expliqué l’auteur. Le troisième ouvrage, « Juste un coup de plume » , est un recueil de poèmes récompensé par le premier prix de la Semaine nationale de la culture en 2014. Destiné principalement aux enfants et aux adolescents, il aborde des thèmes liés au civisme, à la citoyenneté, à la discipline ainsi qu’aux valeurs traditionnelles. « Je n’ai pas eu la chance d’aller à l’école, je n’ai pas eu la veine d’avoir une boussole… À l’école couvent les grands hommes, moi je suis traité comme une bête de somme » , lit-on à la page 25 du poème intitulé Lettre à ma mère . Les ouvrages sont proposés aux prix unitaires de 5 000 FCFA pour La fille aux cheveux châtains , 4 000 FCFA pour Les Chroniques de Clément Zongo et 3 000 FCFA pour Juste un coup de plume . Ils sont disponibles à la Librairie Jeunesse d’Afrique, à la Librairie Mercury ainsi qu’auprès de l’auteur. Éléonore Savadogo Faso7 L’article Burkina Faso : Le journaliste-chroniqueur Clément Zongo dédicace trois ouvrages d'un coup est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 115
-    },
     {
       "title": "Ebola : Le Kenya refuse d’être la « zone de quarantaine » des États-Unis, des manifestations font deux morts",
       "link": "https://burkina24.com/2026/06/07/ebola-le-kenya-refuse-detre-la-zone-de-quarantaine-des-etats-unis-des-manifestations-font-deux-morts/",
@@ -977,33 +922,6 @@
       "_score": 103
     },
     {
-      "title": "Littérature : Le journaliste Clément Zongo dédicace trois nouveaux livres",
-      "link": "https://www.minute.bf/litterature-le-journaliste-clement-zongo-dedicace-trois-nouveaux-livres/",
-      "pubDate": "2026-06-06T19:54:47.000Z",
-      "description": "Le journaliste Clément Zongo a procédé, ce samedi 6 juin 2026 à Ouagadougou, à la dédicace de trois nouveaux livres, renforçant ainsi le marché du livre au Burkina Faso. Il s'agit de « La fille aux cheveux châtains », « Les chroniques de Clément Zongo » et « Juste un coup de plume ». Dans ces ouvrages, l'auteur aborde des questions sociales, éducatives et citoyennes qui lui tiennent particulièrement à cœur. Le journaliste et chroniqueur Clément Zongo a agrandi son patrimoine littéraire avec la dédicace de trois nouveaux livres. À travers cet exercice intellectuel, Clément Zongo plonge sa plume dans les maux qui minent la société burkinabè. La première œuvre, intitulée « La fille aux cheveux châtains », est un roman consacré à la problématique de l'albinisme. Selon l'auteur, ce livre vise à contribuer à changer le regard porté sur les personnes vivant avec l'albinisme . « Les albinos sont simplement des êtres humains comme nous », a-t-il souligné, invitant les lecteurs à une réflexion sur l'acceptation de la diversité et la lutte contre la stigmatisation. L'auteur, Clément Zongo Le second ouvrage, intitulé , « Les chroniques de Clément Zongo », rassemble quarante chroniques précédemment diffusées dans les colonnes du quotidien d'État Sidwaya et sur les antennes de Radio Pulsar 94.8 FM. À travers ces textes, l'auteur Clément Zongo aborde diverses préoccupations sociales liées à la santé, à l'enfance, à la condition féminine ainsi qu'à la situation des personnes vulnérables. L'objectif, selon lui, est de porter la voix des sans-voix et de promouvoir davantage de solidarité dans la société. Quant à « Juste un coup de plume », il s'agit d'un recueil de vingt poèmes destiné principalement aux enfants et aux adolescents. Lauréat du premier prix du Grand Prix national des arts et des lettres (GPNAL) lors de la Semaine nationale de la culture (SNC) de 2014, l'ouvrage traite notamment du civisme, de la citoyenneté, des traditions, du travail, de la discipline et des droits de l'enfant. L'auteur y dénonce également certaines violences faites aux jeunes filles, notamment les mutilations génitales féminines. Revenant sur les raisons de cette triple dédicace, Clément Zongo a expliqué que deux œuvres devaient initialement être présentées au public. Toutefois, grâce à un appui obtenu pour l'édition de «Juste un coup de plume» , il a finalement décidé de réunir les trois publications au cours d'une même cérémonie. Une vue du présidium L'auteur a également rappelé que « La fille aux cheveux châtains» a remporté le deuxième prix du GPNAL dans la catégorie Roman à la SNC 2023. Pour la marraine, Maïmouna Denné, par ailleurs présidente de l'Association des femmes atteintes d'albinisme, « La fille aux cheveux châtains est un livre qui dénonce, qui sensibilise et qui prend à bras-le-corps la problématique des personnes atteintes d'albinisme » . « J'ai accueilli l'œuvre de Clément Zongo avec beaucoup de joie et de satisfaction parce qu'à sa lecture, j'ai eu, dans un premier temps, l'impression qu'il avait échangé avec une fille albinos pour retracer cette réalité que vit la majorité des femmes atteintes d'albinisme. Ce livre nous permet de sensibiliser autrement, notamment dans le milieu de la lecture et auprès de ceux qui aiment lire », a-t-elle déclaré, remerciant l'auteur pour ce choix autocentré sur le sujet de l'albinisme. Concernant les prix de vente, La fille aux cheveux châtains est vendue à 5 000 F CFA, Les chroniques de Clément Zongo à 4 000 F CFA et Juste un coup de plume à 3 000 F CFA. Les presents Les ouvrages sont disponibles à la Librairie Jeunesse d'Afrique, à la Librairie Mercury ainsi qu'auprès de l'auteur lui-même. Ils ont été publiés par les éditions Céprodif et les Éditions Hector Adams. Par cette triple dédicace, Clément Zongo confirme son engagement à utiliser la littérature comme un outil de sensibilisation et d'éveil des consciences sur les grands enjeux sociaux du Burkina Faso. Jean-François SOMÉ Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 103
-    },
-    {
       "title": "Mortalité de poissons au barrage n°3 de Ouagadougou: que révèlent les analyses du laboratoire ?",
       "link": "https://www.wakatsera.com/mortalite-de-poissons-au-barrage-n3-de-ouagadougou-que-revelent-les-analyses-du-laboratoire/",
       "pubDate": "2026-06-06T15:33:46.000Z",
@@ -1029,12 +947,46 @@
       "_score": 103
     },
     {
-      "title": "Mortalité de poissons au barrage n 3 de Ouagadougou : Ce que révèlent les analyses du laboratoire",
-      "link": "https://www.minute.bf/mortalite-de-poissons-au-barrage-n-3-de-ouagadougou-ce-que-revelent-les-analyses-du-laboratoire/",
-      "pubDate": "2026-06-06T15:29:16.000Z",
-      "description": "Le vendredi 5 juin 2026, une importante mortalité de poissons, principalement des tilapias, a été constatée au barrage n 3 de Ouagadougou. Dès la survenue du phénomène, le Ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques a immédiatement déployé des équipes techniques sur le terrain afin d’évaluer la situation, de mettre en œuvre des mesures conservatoires et de procéder à des prélèvements pour analyses. Cette intervention rapide visait à limiter les impacts environnementaux et sanitaires de l’incident tout en identifiant avec précision les causes de cette mortalité inhabituelle. Constats et résultats Les investigations menées par les services techniques ont révélé une mortalité particulièrement importante touchant à la fois les populations de poissons sauvages et les poissons élevés en cages flottantes, essentiellement des tilapias. Les analyses physico-chimiques réalisées dans les laboratoires du ministère ont mis en évidence : Un pH fortement acide de 4,48 Une température de l’eau variant entre 29 et 30 deg C selon la profondeur Un déficit marqué en oxygène dissous aussi bien en surface qu’en profondeur, ayant provoqué une asphyxie massive des poissons Les équipes techniques ont également relevé plusieurs facteurs environnementaux ayant contribué à la dégradation de la qualité de l’eau, notamment : La présence de canaux drainant des eaux usées vers le barrage Les activités hôtelières générant des rejets d’eaux usées dans le plan d’eau Les activités maraîchères pratiquées autour de la retenue avec l’utilisation de produits phytosanitaires Le lessivage des sols consécutif aux premières pluies de la saison, ayant entraîné vers le barrage des matières organiques, des résidus de pesticides et divers autres polluants Au regard des résultats obtenus, la cause principale de cette mortalité est liée à un déséquilibre brutal des paramètres physico-chimiques du milieu aquatique, ayant entraîné une chute critique du taux d’oxygène dissous et, par conséquent, l’asphyxie des poissons. Actions engagées par le ministère Face à cette situation, plusieurs mesures d’urgence ont été immédiatement mises en œuvre : L’enlèvement et la gestion sécurisée des poissons morts La sensibilisation des pêcheurs sur les dangers liés à la commercialisation et à la consommation des poissons morts La sensibilisation des populations riveraines sur les mesures de précaution à observer Le Ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques rassure les populations que toutes les dispositions nécessaires sont prises pour assurer un suivi rigoureux de la situation, protéger la santé publique et préserver durablement l’écosystème du barrage n 3 de Ouagadougou. 𝗗𝗖𝗥𝗣/𝗠𝗔𝗘𝗥𝗔𝗛 Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Atteindre le sommet, le rêve des touristes de tous les continents",
+      "link": "https://lesoleil.sn/international/atteindre-le-sommet-le-reve-des-touristes-de-tous-les-continents/",
+      "pubDate": "2026-06-07T06:10:03.000Z",
+      "description": "Ouvrage faisant partie des sept merveilles du monde, la Grande Muraille de Chine continue de fasciner. Chaque jour, des milliers de touristes se donnent comme objectif de gravir les marches de ce patrimoine qui servait de rempart à la Chine face aux tentatives d’invasion de ses ennemis venant du nord. BEIJING – Le mercredi 3 juin 2026, la capitale chinoise, Beijing, est enveloppée par la chaleur de l’été qui commence à s’installer dans le nord de la Chine. À la périphérie de Beijing, à environ 70 kilomètres de la capitale, loin des gratte-ciel de la ville, la chaîne de montagnes verdoyantes offre un paysage doux défilant devant nos yeux. Ces montagnes surplombent les vallées de la région de Beijing. Un très bon emplacement qui a justifié ce choix pour l’érection de la Grande Muraille de Chine afin de se protéger des incursions des peuples venant du nord, notamment de la Mongolie à l’époque des empires. « À l’époque, toutes les menaces venaient du nord de la Chine. Cette muraille a été construite pour se protéger des menaces d’attaques provenant de la Mongolie, qui se trouve au nord de la Chine », fait savoir le guide officiel chinois qui a comme nom occidental Marco. Cette partie de la Grande Muraille de Chine a été construite par la dynastie Ming sur 800 kilomètres. Elle attire plus de touristes chaque jour que les autres tronçons, car Beijing était la capitale des Ming. Les touristes descendent des bus par groupes et se dirigent vers les premières marches de la Grande Muraille de Chine. Après quelques consignes de sécurité, des photos pour immortaliser l’événement historique — souvent une première pour la majorité d’entre eux — ils se dirigent vers les premières marches de l’ouvrage. La Grande Muraille serpente à travers les montagnes chinoises. Le chemin est escarpé, même si les marches et les rebords permettent aux « alpinistes » de garder un certain équilibre. Tous les visiteurs veulent atteindre le sommet de la Grande Muraille. Mais ce n’est pas une chose facile parce que l’ouvrage est constitué de plusieurs tours, qui étaient à l’époque des miradors de contrôle pour les soldats observant les positions de l’ennemi vers le nord de la Chine. Phobie de la hauteur « La Grande Muraille compte plusieurs tours. Des soldats étaient cantonnés dans les tours inférieures, d’autres surveillaient dans certaines tours supérieures. En haut aussi, ils étaient en position de combat. Chaque fois que les vigies voyaient que l’ennemi s’approchait, elles allumaient un grand feu pour informer les chefs de l’armée qui se trouvaient en amont de la Grande Muraille. Ce feu permettait aux soldats de communiquer avec les officiers, car à l’époque, il n’y avait pas de moyens de communication technologiques », renseigne Marco, notre guide du jour. Les feux allumés sur la Grande Muraille étaient le signal que les combats allaient commencer. Actuellement, c’est un autre combat qui est mené sur les rampes de la Grande Muraille. Le souhait des touristes est de marcher sur les pas des anciens soldats de l’Empire du Milieu et, notamment, d’arriver au sommet, à la dernière tour. Pour cela, des citoyens de différents pays du monde s’encouragent chaque jour sur les marches de la Grande Muraille. Cependant, en cours de chemin, beaucoup abandonnent, à l’image de notre compagnon djiboutien, Mohamed Chakib Saad. À la première tour, il a commencé à avoir des vertiges. Ayant la phobie de la hauteur, il s’arrête et décide de redescendre. D’autres continuent à gravir les marches d’une tour de contrôle à une autre. Mais plus on avance, moins on voit de touristes. Des Africains, des Américains et des Européens s’encouragent et se passent parfois des bouteilles d’eau. Plus on gravit les marches de la Grande Muraille de Chine, plus l’oxygène se raréfie, les genoux deviennent lourds et les corps transpirent abondamment. Un couple de Français vivant en Australie est venu en Chine pour atteindre le sommet. Ils ont réalisé leur objectif alors que notre groupe était sur le point d’atteindre les cimes de la montagne sur laquelle est érigée cette partie de la Grande Muraille. Constatant notre fatigue, le mari, souriant, nous lance : « C’est difficile, mais encore un effort et vous allez atteindre votre objectif. Au sommet, la vue en vaut la peine. Mais gardez aussi de la force pour la descente ». Un Indien, content de prendre des photos avec un compatriote de Sadio Mané, s’est arrêté à l’avant-dernière étape. Un Américain venant de l’Utah, constatant notre fatigue, nous aide à faire une pause, nous propose une photo avant la poursuite de la montée. Face à la fatigue, point de revendication d’une différence, tous sont unis par la magie des lieux construits avec des briques et à la main par le savoir-faire du peuple chinois il y a plus de 2 000 ans. Cependant, seule une infime partie de ceux qui ont démarré l’aventure arrive au sommet. Ces derniers, après beaucoup d’efforts pendant près d’une heure et demie, sont fiers de leur résilience, saluée par les guides. Ils sont les héros. Plus de 10 millions de touristes par an Ils peuvent lire le tableau avec l’inscription du leader chinois Mao Zedong : « Tout héros doit gravir des montagnes ». Abdel Aziz Ibrahim du Niger est l’un d’eux. Il confie : « Nous sommes donc des héros. Gravir la Grande Muraille est une manière de rendre hommage au peuple chinois qui a bâti cet ouvrage magnifique ». Cependant, il lance aussi : « Je ne sens plus mes pieds. Il n’est pas facile d’arriver au sommet car, après chaque tour, on en voit une autre devant soi ». Cette expérience est unique, car la Grande Muraille continue de fasciner les visiteurs par son immensité et par le génie de ses bâtisseurs, plus de 2 000 ans après sa construction durant la période des États combattants. Chaque année, plus de 10 millions de touristes étrangers se rendent en Chine pour découvrir ce monument emblématique. La Grande Muraille de Chine est l’une des sept merveilles du monde médiéval, au même titre que le Colisée et la tour penchée de Pise. Elle a été inscrite au patrimoine culturel mondial de l’Unesco en décembre 1987. Selon les documents officiels, elle s’étend d’est en ouest et du nord au sud du pays sur plus de 21 000 kilomètres. Les vestiges existants sont principalement ceux de la muraille de la dynastie Ming, construite au XIVe siècle. Oumar KANDE (correspondant )",
+      "_source": "Le Soleil (Sénégal)",
+      "_sourceId": "rss_lesoleil",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ],
+      "_bf": false,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 97
+    },
+    {
+      "title": "Recoudre les vies, semer l’espérance : Dans le Guiriko, la dignité reprend racine",
+      "link": "https://burkina24.com/2026/06/07/recoudre-les-vies-semer-lesperance-dans-le-guiriko-la-dignite-reprend-racine/",
+      "pubDate": "2026-06-07T07:03:22.000Z",
+      "description": "À Houndé, Bobo-Dioulasso ou Orodara, des mains réparent ce que la violence et la précarité ont tenté de détruire. Face à l’ampleur des déplacements et des exclusions sociales, la région du Guiriko redéfinit la solidarité en mettant l’autonomie au centre du soin. De l’atelier de couture à la terre cultivée en coopérative, le ministère de … The post Recoudre les vies, semer l'espérance : Dans le Guiriko, la dignité reprend racine appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1048,24 +1000,48 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A1"
+        "rating": "C2"
       },
-      "_rating": "A1",
-      "_score": 103
+      "_rating": "C2",
+      "_score": 95
     },
     {
-      "title": "Lutte contre la fraude : La CNLF saisit des produits frauduleux d’une valeur de plus de 131 millions",
-      "link": "https://www.minute.bf/lutte-contre-la-fraude-la-cnlf-saisit-des-produits-frauduleux-dune-valeur-de-plus-de-131-millions/",
-      "pubDate": "2026-06-06T13:51:12.000Z",
-      "description": "La Coordination Nationale de Lutte contre la Fraude (CNLF) a présenté, ce jeudi, les résultats d’une vaste opération spéciale dénommée « 𝑮𝒏𝒂𝒎𝒊𝒚𝒂𝒏 𝑮𝒏𝒂𝒏𝒂𝒎𝒂𝒏 », qui signifie en langue dioula « 𝒔𝒂𝒊𝒔𝒐𝒏 𝒔𝒂𝒊𝒏𝒆 ». Conduite sur plusieurs axes du territoire national, cette opération a permis la saisie de produits frauduleux et dangereux d’une valeur totale estimée à 𝟏𝟑𝟏 𝟖𝟒𝟎 𝟎𝟎𝟎 𝐅𝐂𝐅𝐀. Face aux hommes de médias, le Coordonnateur national, Dr Mohamadi COMPAORÉ, a souligné que cette opération s’inscrit dans la dynamique de protection de la santé publique, de préservation de l’environnement et de défense de l’économie nationale contre les réseaux de fraude. Parmi les saisies réalisées figure une cargaison de 2 352 𝒑𝒍𝒂𝒒𝒖𝒆𝒕𝒕𝒆𝒔 𝒅’œ𝒖𝒇𝒔 importés frauduleusement, dissimulées sous des régimes de bananes plantains et destinées à la ville de Ouagadougou. D’une valeur estimée à 6 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨, ces œufs ont été déclarés impropres à la consommation humaine après analyses des services compétents. Le même jour, les équipes de la CNLF ont intercepté un camion transportant des 𝒑𝒆𝒔𝒕𝒊𝒄𝒊𝒅𝒆𝒔 𝒅𝒆 𝒄𝒐𝒏𝒕𝒓𝒆𝒃𝒂𝒏𝒅𝒆 évalués à 65 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨. Quelques jours plus tard, une voiture de tourisme a été surprise en train d’acheminer clandestinement 50 𝒄𝒂𝒓𝒕𝒐𝒏𝒔 𝒅𝒆 𝒑𝒆𝒔𝒕𝒊𝒄𝒊𝒅𝒆𝒔 d’une valeur de 2,1 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨 . La traque s’est poursuivie avec la découverte, le 29 mai à Kombissiri, de 345 𝒄𝒂𝒓𝒕𝒐𝒏𝒔 𝒅𝒆 𝒑𝒓𝒐𝒅𝒖𝒊𝒕𝒔 𝒄𝒉𝒊𝒎𝒊𝒒𝒖𝒆𝒔 𝒕𝒐𝒙𝒊𝒒𝒖𝒆𝒔 estimés à 15 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨. Le 2 juin, entre Laba et Boromo, un autre chargement de 241 𝒄𝒂𝒓𝒕𝒐𝒏𝒔 𝒅𝒆 𝒑𝒆𝒔𝒕𝒊𝒄𝒊𝒅𝒆𝒔 évalués à 8,5 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨 a été saisi. Le même jour, à Ipelcé, un camion-citerne contenant 24 000 𝒍𝒊𝒕𝒓𝒆𝒔 𝒅𝒆 𝒄𝒂𝒓𝒃𝒖𝒓𝒂𝒏𝒕 𝒅é𝒕𝒐𝒖𝒓𝒏é 𝒅𝒆 𝒔𝒂 𝒅𝒆𝒔𝒕𝒊𝒏𝒂𝒕𝒊𝒐𝒏 𝒑𝒓𝒊𝒗𝒊𝒍é𝒈𝒊é𝒆, d’une valeur de 33,24 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨 , a également été intercepté. Dans la région de l’Ouest, la Brigade d’Enquêtes et de Recherches de l’Ouest (BERO) a mis la main sur un lot d’ 𝒂𝒎𝒑𝒉é𝒕𝒂𝒎𝒊𝒏𝒆𝒔 𝒆𝒔𝒕𝒊𝒎é à 2 𝒎𝒊𝒍𝒍𝒊𝒐𝒏𝒔 𝑭𝑪𝑭𝑨, empêchant ainsi la mise en circulation de substances psychotropes particulièrement nocives pour la jeunesse. Pour le Coordonnateur national, ces saisies vont bien au-delà des pertes financières infligées aux fraudeurs. « 𝐷𝑒𝑟𝑟𝑖è𝑟𝑒 𝑐ℎ𝑎𝑞𝑢𝑒 𝑏𝑖𝑑𝑜𝑛 𝑑𝑒 𝑝𝑒𝑠𝑡𝑖𝑐𝑖𝑑𝑒 𝑓𝑟𝑎𝑢𝑑𝑢𝑙𝑒𝑢𝑥 𝑠𝑎𝑖𝑠𝑖, 𝑐𝑒 𝑠𝑜𝑛𝑡 𝑑𝑒𝑠 𝑡𝑒𝑟𝑟𝑒𝑠 𝑎𝑔𝑟𝑖𝑐𝑜𝑙𝑒𝑠 𝑠𝑎𝑢𝑣é𝑒𝑠 𝑑𝑒 𝑙𝑎 𝑠𝑡é𝑟𝑖𝑙𝑖𝑡é, 𝑑𝑒𝑠 𝑝𝑟𝑜𝑑𝑢𝑐𝑡𝑒𝑢𝑟𝑠 𝑝𝑟é𝑠𝑒𝑟𝑣é𝑠 𝑑𝑒 𝑚𝑎𝑙𝑎𝑑𝑖𝑒𝑠 𝑔𝑟𝑎𝑣𝑒𝑠 𝑒𝑡 𝑑𝑒𝑠 𝑐𝑜𝑛𝑠𝑜𝑚𝑚𝑎𝑡𝑒𝑢𝑟𝑠 𝑝𝑟𝑜𝑡é𝑔é𝑠 », a-t-il déclaré. Dr Mohamadi COMPAORÉ a également rappelé que les infractions constatées exposent leurs auteurs à de lourdes sanctions prévues par le Code des douanes ainsi que par les lois encadrant la gestion des pesticides et la protection des consommateurs au Burkina Faso. Selon lui, la contrebande, l’importation de produits dangereux, le détournement de produits pétroliers et la commercialisation de pesticides sans agrément constituent des infractions sévèrement réprimées par la législation nationale. Le premier responsable de la CNLF a salué l’engagement des agents déployés sur le terrain qui, malgré les risques, poursuivent sans relâche leur mission de protection de l’économie nationale et de la santé des populations. Il a enfin lancé un appel à la vigilance et à la collaboration de l’ensemble des citoyens afin de renforcer la lutte contre toutes les formes de fraude. Source : Coordination nationale de lutte contre la Fraude Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "« Nous Vaincrons » | Burkina Faso : Salif Komi défend sa théorie selon laquelle le temps s’écoule du futur vers le passé",
+      "link": "https://burkina24.com/2026/06/07/nous-vaincrons-burkina-faso-salif-komi-defend-sa-theorie-selon-laquelle-le-temps-secoule-du-futur-vers-le-passe/",
+      "pubDate": "2026-06-07T07:01:00.000Z",
+      "description": "Peut-on repenser le temps autrement que comme une succession du passé, du présent et du futur ? C’est le défi intellectuel lancé par l’écrivain, enseignant et entrepreneur burkinabè Salif Komi à travers son ouvrage Le temps en théorie conique. Invité de l’émission « Nous vaincrons » sur Burkina 24, l’auteur a exposé les fondements d’une … The post « Nous Vaincrons » | Burkina Faso : Salif Komi défend sa théorie selon laquelle le temps s’écoule du futur vers le passé appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 95
+    },
+    {
+      "title": "Burkina Faso : « 20 ans de service pour 25 000 FCFA par mois », les gérants de dépôts pharmaceutiques exigent un statut",
+      "link": "https://burkina24.com/2026/06/07/burkina-faso-20-ans-de-service-pour-25-000-fcfa-par-mois-les-gerants-de-depots-pharmaceutiques-exigent-un-statut/",
+      "pubDate": "2026-06-07T06:35:03.000Z",
+      "description": "Réunis en sixième assemblée générale ce samedi 6 juin 2026 à Ouagadougou, les membres de l’Union des gérants et caissiers de dépôts pharmaceutiques publics du Burkina Faso ont une nouvelle fois interpellé les autorités sur leurs conditions de travail. Au cœur de leurs revendications, il s’agit de l’adoption d’un statut officiel pour une profession qu’ils … The post Burkina Faso : « 20 ans de service pour 25 000 FCFA par mois », les gérants de dépôts pharmaceutiques exigent un statut appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
         "political"
       ],
       "_majors": [],
@@ -1075,10 +1051,35 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
-      "_score": 103
+      "_rating": "C2",
+      "_score": 95
+    },
+    {
+      "title": "AD-Duha accède à la Ligue 3 après les phases régionales",
+      "link": "https://burkina24.com/2026/06/07/ad-duha-accede-a-la-ligue-3-apres-les-phases-regionales/",
+      "pubDate": "2026-06-07T06:29:54.000Z",
+      "description": "L’équipe Ad-Duha disputera la Ligue 3 la saison prochaine. L’Académie fondée par Boureima Maiga s’est imposée (4-2) face à colombes lors de la finale de la D3 régionale le samedi 6 juin 2026 sur le terrain de l’ENAM. Dans ce match qualificatif pour la Ligue 3 nationale, AD-Duha s’est fait peur en première période. L’équipe … The post AD-Duha accède à la Ligue 3 après les phases régionales appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 95
     }
   ],
   "alerts": [
@@ -1086,7 +1087,7 @@
       "title": "Iran urges UN to stop repeated US violations of ceasefire after attack on radar facilities",
       "link": "https://presstv.ir/Detail/2026/06/06/769951/Iran-US-aggression-Qeshm-",
       "source": "Press TV (Iran)",
-      "date": "2026-06-07T09:30:09.729Z",
+      "date": "2026-06-07T09:57:13.998Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1225,32 +1226,44 @@
           "keyword": "massacre"
         }
       ]
+    },
+    {
+      "title": "Oil tanker owners fear market crash after Iran war drove record profits",
+      "link": "https://www.ft.com/content/786f23d9-876d-4c56-a9e8-67ac5b78cd49",
+      "source": "Financial Times World",
+      "date": "2026-06-06T12:28:02.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "market crash"
+        }
+      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      218
+      234
     ],
     [
       "occident_fr",
-      123
-    ],
-    [
-      "golfe_mo",
-      117
+      142
     ],
     [
       "autre",
-      115
+      118
+    ],
+    [
+      "golfe_mo",
+      102
     ],
     [
       "occident_us",
-      77
-    ],
-    [
-      "russie",
-      50
+      92
     ],
     [
       "turquie",
@@ -1261,59 +1274,59 @@
       30
     ],
     [
+      "russie",
+      23
+    ],
+    [
       "sahel",
-      19
+      14
     ],
     [
       "bf_local",
-      18
+      12
     ]
   ],
   "indicators": [
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-06-07T09:29:29.252Z",
+      "at": "2026-06-07T09:56:43.697Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-07T09:29:29.259Z",
+      "at": "2026-06-07T09:56:43.703Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-07T09:30:19.411Z",
+      "at": "2026-06-07T09:57:19.159Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1935 articles"
+      "message": "108/170 flux OK, 1870 articles"
     },
     {
-      "at": "2026-06-07T09:30:22.224Z",
+      "at": "2026-06-07T09:57:21.624Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-07T09:30:22.227Z",
+      "at": "2026-06-07T09:57:21.627Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 9 alertes"
+      "message": "8 developpements, 10 alertes"
     },
     {
-      "at": "2026-06-07T09:30:22.228Z",
+      "at": "2026-06-07T09:57:21.627Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-06-07T09:30:22.228Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
