@@ -94,6 +94,68 @@ async function loadSiteData() {
   };
 }
 
+// Charge methodo.js (le MEME module que le site) dans un bac a sable Node,
+// pour reutiliser sa taxonomie : 18 zones, 12 thematiques, matrice, routage desks.
+// Ainsi aucune duplication : site et agent partagent exactement la meme logique.
+async function loadMethodo() {
+  try {
+    const code = await fs.readFile(path.join(ROOT, 'methodo.js'), 'utf8');
+    const noop = () => {};
+    const sandbox = {
+      window: {},
+      console: { log: noop, warn: noop, error: noop },
+      localStorage: { getItem: () => null, setItem: noop, removeItem: noop },
+      document: { getElementById: () => null, createElement: () => ({ click: noop }), body: { appendChild: noop, removeChild: noop } },
+      navigator: {},
+      URL: { createObjectURL: () => '', revokeObjectURL: noop },
+      Blob: function () {},
+      setTimeout: noop
+    };
+    vm.createContext(sandbox);
+    vm.runInContext(code, sandbox, { filename: 'methodo.js' });
+    const M = sandbox.window.GW_METHODO;
+    if (!M || typeof M.tagItem !== 'function') throw new Error('GW_METHODO introuvable');
+    return M;
+  } catch (error) {
+    agentLog('Agent Methodo', `methodo.js indisponible: ${error.message}`);
+    return null;
+  }
+}
+
+// Etiquette chaque article : zone (1-18), thematique (S..J), niveau de pertinence
+// (A/L/.) selon la matrice, et desk responsable (routage par zone).
+function tagItemsMethodo(items, methodo, cfg) {
+  if (!methodo) return;
+  for (const it of items) {
+    try {
+      const tag = methodo.tagItem(it);
+      it._zone = tag.pz || null;
+      it._theme = tag.pt || null;
+      it._zoneShort = tag.pz ? ((methodo.ZONES.find(z => z.id === tag.pz) || {}).short || null) : null;
+      it._relevance = (tag.pz && tag.pt) ? methodo.relevance(tag.pz, tag.pt) : '.';
+      const r = methodo.routeItem(it, cfg);
+      it._desk = (r && r.deskId) ? r.deskId : null;
+    } catch (e) {
+      it._zone = null; it._theme = null; it._zoneShort = null; it._relevance = '.'; it._desk = null;
+    }
+  }
+}
+
+// Regroupe les depeches recentes par desk (zone x thematique) pour le brief.
+function buildDeskDigest(items, cfg) {
+  if (!cfg || !cfg.desks) return [];
+  return cfg.desks.map(d => {
+    const arr = items.filter(it => it._desk === d.id).sort((a, b) => b._score - a._score);
+    return {
+      id: d.id, name: d.name, transverse: !!d.transverse, count: arr.length,
+      top: arr.slice(0, 5).map(it => ({
+        title: it.title, link: it.link, source: it._source,
+        zone: it._zoneShort || it._zone, theme: it._theme, relevance: it._relevance, rating: it._rating
+      }))
+    };
+  }).filter(d => d.count > 0);
+}
+
 function sourceProfile(all, defaultActive, profile) {
   if (profile === 'all') return all;
   if (profile === 'verified') return all.filter(s => s.verified === true);
@@ -327,7 +389,7 @@ function sourceHealth(results) {
   };
 }
 
-function buildBrief(items, health) {
+function buildBrief(items, health, deskCfg) {
   const now = Date.now();
   const recent24 = items.filter(it => now - new Date(it.pubDate).getTime() <= CONFIG.hours * 3600000);
   const top = recent24
@@ -372,6 +434,7 @@ function buildBrief(items, health) {
     topDevelopments: top,
     alerts,
     narrativesByBloc: blocks,
+    desks: buildDeskDigest(recent24, deskCfg),
     indicators: buildIndicators(recent24, alerts, health)
   };
 }
@@ -395,11 +458,14 @@ function briefHtml(brief) {
   const rows = brief.topDevelopments.map((it, i) => `
     <tr>
       <td style="padding:8px;border-bottom:1px solid #ddd">${i + 1}</td>
-      <td style="padding:8px;border-bottom:1px solid #ddd"><a href="${htmlEscape(it.link)}">${htmlEscape(it.title)}</a><br><small>${htmlEscape(it._source)} - ${htmlEscape(it._rating)} - ${htmlEscape(it._evidence.label)}</small></td>
+      <td style="padding:8px;border-bottom:1px solid #ddd"><a href="${htmlEscape(it.link)}">${htmlEscape(it.title)}</a><br><small>${htmlEscape(it._source)} - ${htmlEscape(it._rating)} - ${htmlEscape(it._evidence.label)}${it._zone ? ` - ${htmlEscape(String(it._zoneShort || it._zone))} / ${htmlEscape(String(it._theme || '?'))}` : ''}</small></td>
       <td style="padding:8px;border-bottom:1px solid #ddd">${it._bf ? 'BF' : it._aes ? 'AES' : '-'}</td>
     </tr>`).join('');
   const alerts = brief.alerts.map(a => `<li><b>${htmlEscape(a.level)}</b> - <a href="${htmlEscape(a.link)}">${htmlEscape(a.title)}</a> <small>${htmlEscape(a.source)} - ${htmlEscape(a.rating)} - ${htmlEscape(a.evidence)}</small></li>`).join('');
   const indicators = brief.indicators.map(i => `<li>${htmlEscape(i)}</li>`).join('');
+  const desksHtml = (brief.desks || []).map(d => `
+    <h3 style="margin:14px 0 4px">${htmlEscape(d.name)} <small style="color:#666">(${d.count})</small></h3>
+    <ul>${d.top.map(t => `<li><b>[${htmlEscape(String(t.zone || '?'))} &middot; ${htmlEscape(String(t.theme || '?'))}]</b> <a href="${htmlEscape(t.link)}">${htmlEscape(t.title)}</a> <small>${htmlEscape(t.source || '')} - ${htmlEscape(t.rating || '')}</small></li>`).join('')}</ul>`).join('');
   return `<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>GeoWatch Brief</title></head>
 <body style="font-family:Arial,sans-serif;line-height:1.45;color:#111">
@@ -411,6 +477,8 @@ function briefHtml(brief) {
   <table style="border-collapse:collapse;width:100%"><tbody>${rows || '<tr><td>Aucun developpement prioritaire.</td></tr>'}</tbody></table>
   <h2>Alertes</h2>
   <ul>${alerts || '<li>Aucune alerte majeure robuste.</li>'}</ul>
+  <h2>Veille par desk (methodologie SEMDE)</h2>
+  ${desksHtml || '<p>Aucune depeche routee vers un desk sur la periode.</p>'}
   <h2>Indicateurs a surveiller</h2>
   <ul>${indicators}</ul>
   <h2>Sante RSS</h2>
@@ -501,7 +569,12 @@ async function main() {
   const items = enrichItems(rawItems, siteData);
   agentLog('Agent Preuves', `${items.length} articles dedoubles et enrichis`);
 
-  const brief = buildBrief(items, health);
+  const methodo = await loadMethodo();
+  const deskCfg = methodo ? methodo.loadDesks() : null;
+  tagItemsMethodo(items, methodo, deskCfg);
+  agentLog('Agent Methodo', methodo ? 'Etiquetage zone/thematique + routage desks applique' : 'Methodo non chargee (etape ignoree)');
+
+  const brief = buildBrief(items, health, deskCfg);
   const html = briefHtml(brief);
   agentLog('Agent Brief BF/AES', `${brief.topDevelopments.length} developpements, ${brief.alerts.length} alertes`);
 
