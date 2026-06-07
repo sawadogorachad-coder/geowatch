@@ -29,15 +29,22 @@ jobs:
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
       SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Run GeoWatch agents
         run: node scripts/geowatch-agents.mjs --profile "$GEOWATCH_PROFILE"
+
+      - name: Run analyst agent (analyses & etudes)
+        run: node scripts/geowatch-analyst.mjs
+
       - name: Commit generated intelligence
         run: |
           git config user.name "geowatch-agent"
