@@ -241,11 +241,14 @@ function buildNotesParZone(items, snap, methodo) {
   for (const z of zones) {
     const faits = topInZone(items, z, 5);
     const zlabel = (methodo && (methodo.ZONES.find(x => x.id === z) || {}).short) || ('Zone ' + z);
+    const headlines = faits.slice(0, 3).map(it => `« ${it.title} » (${it._source || '?'})`).join(' ; ');
     out.push({
       zone: zlabel,
       thematiquesDominantes: themeMix(faits, methodo),
       faits: faits.map(it => ({ titre: it.title, source: it._source, cote: it._rating, lien: it.link, theme: it._theme })),
-      lectureStructuree: `Sur la periode, ${zlabel} concentre ${snap.byZone[z]} signaux, dominante ${themeMix(faits, methodo).join(', ') || 'diverse'}.`,
+      lectureStructuree: `Faits marquants : ${headlines || '—'}.`
+        + `\nThématiques actives : ${themeMix(faits, methodo).join(', ') || 'diverses'} (${snap.byZone[z]} signaux sur la période).`
+        + `\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).`,
       confiance: confidence(faits),
       proseIA: null
     });
@@ -276,9 +279,11 @@ function buildEtudesThematiques(items, snap, findings, methodo) {
     const trend = findings.tendancesLourdes.find(t => t.axe === 'thematique' && t.cle === code);
     const acteurs = {}; list.forEach(it => { const b = it._sourceBloc || 'autre'; acteurs[b] = (acteurs[b] || 0) + 1; });
     const sources = {}; list.forEach(it => { if (it._source) sources[it._source] = (sources[it._source] || 0) + 1; });
+    const head = list.slice(0, 3).map(it => `« ${it.title} » (${it._source || '?'})`).join(' ; ');
     out.push({
       code, libelle: label, volume: list.length, direction: trend ? trend.direction : 'stable',
       faitsSaillants: list.slice(0, 5).map(it => ({ titre: it.title, source: it._source, cote: it._rating, lien: it.link })),
+      lecture: `${label} : ${list.length} signaux sur la période (tendance ${trend ? trend.direction : 'stable'}). Faits marquants : ${head || '—'}.`,
       blocs: Object.entries(acteurs).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([b, n]) => `${b} (${n})`),
       sources: Object.entries(sources).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([s]) => s),
       proseIA: null
@@ -288,6 +293,7 @@ function buildEtudesThematiques(items, snap, findings, methodo) {
 }
 
 // --- Analyse PAR CONFLIT (rattachement par keywords, comme le site) ---
+function val(x) { return (typeof x === 'string') ? x.trim() : ''; }
 function buildByConflict(items, conflicts, methodo) {
   const out = {};
   for (const c of (conflicts || [])) {
@@ -299,19 +305,32 @@ function buildByConflict(items, conflicts, methodo) {
     }).sort((a, b) => (b._score || 0) - (a._score || 0));
     if (matched.length < 3) continue;
     const faits = matched.slice(0, 6);
-    const dom = themeMix(faits, methodo).join(', ') || 'diverse';
-    const contexte = seedText(c.cle_historique, 300);
-    const conseq = seedText(c.impact_bf, 280);
+    const dom = themeMix(faits, methodo).join(', ') || 'enjeux divers';
+    const as = c.analyse_simple || {};
+    const enjeu = val(as.enjeu_central);
+    const pourquoi = val(as.pourquoi_important) || seedText(c.cle_historique, 340);
+    const conseq = seedText(c.impact_bf, 300);
+    const surveiller = (Array.isArray(as.surveiller) && as.surveiller.length)
+      ? as.surveiller.slice(0, 3).map(val).filter(Boolean).join(' ; ')
+      : 'intensité des incidents, réactions CEDEAO/UA/ONU, corridors logistiques, prix (or, carburant, céréales)';
+    const scen = (Array.isArray(c.scenarios) && c.scenarios.length)
+      ? c.scenarios.slice(0, 2).map(s => `• ${val(s.nom) || 'Scénario'}${s.proba ? ` (${s.proba}%)` : ''} : ${val(s.d)}`).join('\n')
+      : '';
+    const top3 = faits.slice(0, 3).map(f => `« ${f.title} » (${f._source || '?'}, cote ${f._rating || '?'})`).join(' ; ');
+    const note =
+      `SITUATION (live) — ${matched.length} dépêches sur la période, dominante : ${dom}.\nFaits saillants : ${top3 || '—'}.`
+      + (enjeu ? `\n\nENJEU CENTRAL — ${enjeu}` : '')
+      + (pourquoi ? `\n\nPOURQUOI — ${pourquoi}` : '')
+      + (conseq ? `\n\nIMPACT POUR L'AES — ${conseq}` : '')
+      + (scen ? `\n\nSCÉNARIOS —\n${scen}` : '')
+      + `\n\nÀ SURVEILLER — ${surveiller}`;
     out[c.id] = {
       id: c.id, name: c.short || c.name, volume: matched.length,
       themesDominants: themeMix(faits, methodo),
       faits: faits.map(it => ({ titre: it.title, source: it._source, cote: it._rating, lien: it.link, theme: it._theme })),
-      contexte, consequencesAES: conseq,
-      lectureStructuree: `Signaux récents : ${matched.length} dépêches rattachées (dominante ${dom}).`
-        + (contexte ? `\nLecture de fond : ${contexte}` : '')
-        + (conseq ? `\nImpact AES : ${conseq}` : '')
-        + `\nÀ surveiller : intensité des incidents, réactions CEDEAO/UA/ONU, corridors logistiques, prix (or, carburant, céréales).`,
-      prospective: `A surveiller : evolution de l'intensite, reactions diplomatiques (CEDEAO/UA/ONU), effets sur l'AES.`,
+      enjeu, consequencesAES: conseq,
+      lectureStructuree: note,
+      prospective: val(as.horizon_proche) || `A surveiller : intensite, reactions diplomatiques, effets AES.`,
       confiance: confidence(faits), proseIA: null
     };
   }
@@ -323,6 +342,22 @@ function buildAchSuggestions(byConflict) {
     hypotheses: [`${c.name} : escalade / aggravation a 3-6 mois`, `${c.name} : statu quo instable`, `${c.name} : desescalade / reglement partiel`],
     evidence: c.faits.slice(0, 5).map(f => f.titre)
   }));
+}
+
+// Synthese executive REDIGEE en mode gratuit (sans IA), a partir des dynamiques + sujets chauds.
+function buildSyntheseFree(findings, byConflict, snap) {
+  const tz = (findings.tendancesLourdes || []).filter(t => t.axe === 'zone')[0];
+  const topConf = Object.values(byConflict).sort((a, b) => b.volume - a.volume).slice(0, 3);
+  let s = `Sur la période, ${snap.total} dépêches ont été classées et cotées.`;
+  if (tz) s += ` Priorité géographique : ${tz.libelle} (${tz.volume} signaux, tendance ${tz.direction}).`;
+  const rupt = (findings.ruptures || []).slice(0, 2).map(r => r.titre || `${r.zone} · ${r.thematique}`).filter(Boolean);
+  if (rupt.length) s += ` Ruptures repérées : ${rupt.join(' ; ')}.`;
+  const sf = (findings.signauxFaibles || []).slice(0, 3).map(x => `${x.zone} · ${x.thematique}`);
+  if (sf.length) s += ` Signaux faibles émergents à surveiller : ${sf.join(' ; ')}.`;
+  if (topConf.length) {
+    s += `\n\nSujets chauds de la période :\n` + topConf.map(c => `• ${c.name} (${c.volume} signaux)${c.enjeu ? ` — ${c.enjeu}` : ''}`).join('\n');
+  }
+  return s;
 }
 
 // --- Couche IA (optionnelle) : API Claude en HTTP brut ---
@@ -439,6 +474,7 @@ async function main() {
     llmUsed: false
   };
   analysis.achSuggestions = buildAchSuggestions(analysis.byConflict);
+  analysis.syntheseExecutive = buildSyntheseFree(findings, analysis.byConflict, snap);
   agentLog('Agent Analyste', `${Object.keys(analysis.byConflict).length} conflits analyses, ${analysis.achSuggestions.length} suggestions ACH`);
 
   await addAIProse(analysis, methodo);

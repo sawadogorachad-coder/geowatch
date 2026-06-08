@@ -14,6 +14,28 @@
   const g = id => document.getElementById(id);
   const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 
+  /* ---------- THÈME CLAIR / SOMBRE (bascule réversible, défaut = clair) ---------- */
+  (function initTheme(){
+    try{
+      const KEY = 'gw_theme';
+      if(localStorage.getItem(KEY) === null) localStorage.setItem(KEY, 'light'); // défaut : clair
+      const applyTheme = () => document.documentElement.classList.toggle('gw-light', localStorage.getItem(KEY) === 'light');
+      applyTheme();
+      const addBtn = () => {
+        if(!document.body || document.getElementById('gw-theme-btn')) return;
+        const b = document.createElement('button');
+        b.id = 'gw-theme-btn';
+        b.title = 'Basculer thème clair / sombre';
+        b.style.cssText = 'position:fixed;left:12px;bottom:12px;z-index:5000;width:42px;height:42px;border-radius:50%;border:1px solid #94a3b8;background:#ffffff;color:#0f172a;font-size:18px;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.35)';
+        const setIcon = () => { b.textContent = (localStorage.getItem(KEY) === 'light') ? '🌙' : '☀️'; };
+        setIcon();
+        b.onclick = () => { localStorage.setItem(KEY, localStorage.getItem(KEY) === 'light' ? 'dark' : 'light'); applyTheme(); setIcon(); };
+        document.body.appendChild(b);
+      };
+      if(document.body) addBtn(); else window.addEventListener('DOMContentLoaded', addBtn);
+    }catch(e){}
+  })();
+
   /* ---------- 12 THÉMATIQUES CODÉES ---------- */
   const THEMES = [
     {code:'S', label:'Sécurité & défense', color:'#ef4444',

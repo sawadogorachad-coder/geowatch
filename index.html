@@ -286,6 +286,15 @@ body.map-light .map-legend h4{color:#475569}
 /* ===== RESPONSIVE ===== */
 @media(max-width:1100px){.stats,.grid-3{grid-template-columns:repeat(2,1fr)}.grid-2,.grid-2e{grid-template-columns:1fr}}
 @media(max-width:700px){#sidebar{position:absolute;height:100vh}.stats,.grid-4{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.modal-kpi{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== THÈME CLAIR (inversion réversible — bouton ☀/🌙 en bas à gauche) ===== */
+html.gw-light{ filter: invert(1) hue-rotate(180deg); background:#0b0f1a; }
+/* on ré-inverse les médias (cartes, images, iframes, vidéos) pour qu'ils restent normaux */
+html.gw-light img,
+html.gw-light video,
+html.gw-light iframe,
+html.gw-light .leaflet-container,
+html.gw-light #gw-theme-btn{ filter: invert(1) hue-rotate(180deg); }
 </style>
 </head>
 <body>
