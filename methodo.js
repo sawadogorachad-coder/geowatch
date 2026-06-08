@@ -565,6 +565,10 @@
     let h = '';
     h += `<div style="font-size:.72rem;color:${T.faint};margin-bottom:10px">Généré le ${esc(a.generatedAt||'')} · ${a.stats?a.stats.analysed:'?'} articles · IA : ${a.llmUsed?esc(a.llmModel||'oui'):'non (mode structuré)'}</div>`;
     if(a.syntheseExecutive){ h += card('Synthèse exécutive', 'bullseye', T.yellow, `<div style="font-size:.85rem;color:${T.txt};white-space:pre-line">${esc(a.syntheseExecutive)}</div>`); }
+    if(a.byConflict && Object.keys(a.byConflict).length){
+      const arr = Object.values(a.byConflict).sort((x,y)=>y.volume-x.volume);
+      h += card('Analyse par conflit', 'fire', T.red, arr.map(c=>`<div style="margin-bottom:14px;border-left:3px solid ${T.red};padding-left:10px"><div style="font-weight:700;color:${T.txt}">${esc(c.name)} <span style="font-size:.66rem;color:${T.faint}">${c.volume} signaux · confiance ${esc(c.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line;margin:4px 0">${esc(c.proseIA||c.lectureStructuree||'')}</div>${faitsList(c.faits)}</div>`).join(''));
+    }
     const f = a.findings || {};
     let dyn = '';
     dyn += `<div style="font-weight:700;color:${T.txt};margin:6px 0 2px">Tendances lourdes</div><ul style="margin:0 0 8px;padding-left:18px;color:${T.dim};font-size:.8rem">${(f.tendancesLourdes||[]).map(t=>`<li>${esc(t.libelle)} — ${t.volume} signaux${dirChip(t.direction)}</li>`).join('')||'<li>—</li>'}</ul>`;
@@ -580,7 +584,7 @@
       h += card('Notes prospectives', 'chess', '#c4b5fd', (a.notesProspectives||[]).map(n=>`<div style="margin-bottom:10px"><div style="font-weight:700;color:${T.txt}">${esc(n.zone)} <span style="font-size:.66rem;color:${T.faint}">confiance ${esc(n.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(n.proseIA||n.hypothese||'')}</div><div style="font-size:.72rem;color:${T.faint};margin-top:3px">À surveiller : ${esc((n.signauxASurveiller||[]).join(' · '))}</div></div>`).join(''));
     }
     if((a.etudesThematiques||[]).length){
-      h += card('Études thématiques', 'layer-group', T.orange, (a.etudesThematiques||[]).map(e=>`<div style="margin-bottom:10px"><div style="font-weight:700;color:${T.txt}">${esc(e.libelle)} (${esc(e.code)}) — ${e.volume} signaux${dirChip(e.direction)}</div>${e.proseIA?`<div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(e.proseIA)}</div>`:''}<div style="font-size:.72rem;color:${T.faint};margin:3px 0">Acteurs/blocs : ${esc((e.blocs||[]).join(', '))} · Sources : ${esc((e.sources||[]).join(', '))}</div>${faitsList(e.faitsSaillants)}</div>`).join(''));
+      h += card('Études thématiques', 'layer-group', T.orange, (a.etudesThematiques||[]).map(e=>`<div style="margin-bottom:10px"><div style="font-weight:700;color:${T.txt}">${esc(e.libelle)} (${esc(e.code)}) — ${e.volume} signaux${dirChip(e.direction)}</div>${e.proseIA?`<div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(e.proseIA)}</div>`:(e.lecture?`<div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(e.lecture)}</div>`:'')}<div style="font-size:.72rem;color:${T.faint};margin:3px 0">Acteurs/blocs : ${esc((e.blocs||[]).join(', '))} · Sources : ${esc((e.sources||[]).join(', '))}</div>${faitsList(e.faitsSaillants)}</div>`).join(''));
     }
     return h;
   }
