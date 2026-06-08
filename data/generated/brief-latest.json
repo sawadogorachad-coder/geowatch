@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-08T22:44:13.821Z",
+  "generatedAt": "2026-06-08T23:25:47.225Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1929,
+    "ok": 117,
+    "failed": 53,
+    "articles": 1970,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -68,6 +68,11 @@
         "count": 0
       },
       {
+        "id": "rss_malijet",
+        "name": "Malijet",
+        "count": 0
+      },
+      {
         "id": "rss_studio_tam",
         "name": "Studio Tamani (Mali)",
         "count": 10
@@ -95,6 +100,11 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -300,7 +310,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 22
+        "count": 23
       },
       {
         "id": "rss_rfimo",
@@ -498,6 +508,11 @@
         "count": 30
       },
       {
+        "id": "rss_anadolu",
+        "name": "Anadolu Agency (Turquie)",
+        "count": 30
+      },
+      {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
         "count": 30
@@ -600,11 +615,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_malijet",
-        "name": "Malijet",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_essor_mali",
         "name": "L'Essor (Mali)",
         "error": "fetch failed"
@@ -633,11 +643,6 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "error": "HTTP 500"
       },
       {
         "id": "rss_abidjan",
@@ -825,11 +830,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_anadolu",
-        "name": "Anadolu Agency (Turquie)",
-        "error": "HTTP 502"
-      },
-      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -863,9 +863,9 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 44,
+    "bfAes": 45,
     "alerts": 22,
-    "criticalAlerts": 13,
+    "criticalAlerts": 12,
     "sourcesDistinct": 75
   },
   "topDevelopments": [
@@ -1141,13 +1141,45 @@
   ],
   "alerts": [
     {
-      "title": "Iran upended equation of ceasefire on paper, violations in practice: Qalibaf",
-      "link": "https://presstv.ir/Detail/2026/06/08/770088/Iran-disrupted-ceasefire-paper-violations-ground",
+      "title": "Leader’s adviser: Iran will shatter US naval blockade if talks fail",
+      "link": "https://presstv.ir/Detail/2026/06/08/770100/Leader%E2%80%99s-adviser--Iran-will-shatter-US-naval-blockade-on-Hormuz-if-talks-fail",
       "source": "Press TV (Iran)",
-      "date": "2026-06-08T22:44:02.107Z",
+      "date": "2026-06-08T23:25:36.020Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Iran upended equation of ceasefire on paper, violations in practice: Qalibaf",
+      "link": "https://presstv.ir/Detail/2026/06/08/770088/Iran-disrupted-ceasefire-paper-violations-ground",
+      "source": "Press TV (Iran)",
+      "date": "2026-06-08T23:25:36.020Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Iran and Israel say they will pause strikes but warn of retaliation if ceasefire breached again",
+      "link": "https://www.bbc.com/news/articles/cj6ge150z5go?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-06-08T22:47:29.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
       "bf": false,
       "majors": [
         {
@@ -1169,22 +1201,6 @@
         {
           "type": "rupture",
           "keyword": "effondrement"
-        }
-      ]
-    },
-    {
-      "title": "Iran and Israel say they will pause strikes but warn of retaliation if ceasefire breached again",
-      "link": "https://www.bbc.com/news/articles/cj6ge150z5go?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "date": "2026-06-08T21:39:44.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
         }
       ]
     },
@@ -1479,32 +1495,16 @@
           "keyword": "cessez-le-feu"
         }
       ]
-    },
-    {
-      "title": "RDC: ces questions qui demeurent après le verdict en appel sur l'assassinat des experts de l’ONU en 2017",
-      "link": "https://www.rfi.fr/fr/afrique/20260608-rdc-ces-questions-qui-demeurent-apr%C3%A8s-le-verdict-en-appel-sur-les-experts-de-l-onu-tu%C3%A9s-en-2017",
-      "source": "RFI Afrique",
-      "date": "2026-06-08T12:30:01.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      259
+      254
     ],
     [
       "occident_fr",
-      114
+      109
     ],
     [
       "golfe_mo",
@@ -1512,31 +1512,31 @@
     ],
     [
       "occident_us",
-      99
+      93
     ],
     [
       "autre",
-      63
+      58
     ],
     [
       "russie",
-      48
+      47
+    ],
+    [
+      "turquie",
+      46
     ],
     [
       "bf_local",
       45
     ],
     [
-      "chine",
-      26
-    ],
-    [
       "sahel",
       25
     ],
     [
-      "turquie",
-      21
+      "chine",
+      23
     ]
   ],
   "desks": [
@@ -1597,7 +1597,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 57,
+      "count": 61,
       "top": [
         {
           "title": "Nigerians should rethink as leadership is influence, not office — Bishop Kukah",
@@ -1607,6 +1607,15 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Kwankwasiyya movement dismisses reports of Kwankwaso threatening to quit NDC",
+          "link": "https://www.vanguardngr.com/2026/06/kwankwasiyya-movement-dismisses-reports-of-kwankwaso-threatening-to-quit-ndc/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Sweety Aborchie Writes: The Half-Built Staircase, Women, Power, Politics (Issue 4)",
@@ -1634,15 +1643,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "F2"
-        },
-        {
-          "title": "Xenophobia: We’re considering retaliatory measures against South Africans – FG",
-          "link": "https://www.vanguardngr.com/2026/06/xenophobia-were-considering-retaliatory-measures-against-south-africans-fg/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1650,7 +1650,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 41,
+      "count": 39,
       "top": [
         {
           "title": "Mondial 2026: L’arbitre somalien Omar Abdulkadir Artan refoulé à son arrivée aux Etats-Unis",
@@ -1671,15 +1671,6 @@
           "rating": "F2"
         },
         {
-          "title": "RDC: ces questions qui demeurent après le verdict en appel sur l'assassinat des experts de l’ONU en 2017",
-          "link": "https://www.rfi.fr/fr/afrique/20260608-rdc-ces-questions-qui-demeurent-apr%C3%A8s-le-verdict-en-appel-sur-les-experts-de-l-onu-tu%C3%A9s-en-2017",
-          "source": "RFI Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
           "title": "Coupe du monde 2026 : L’arbitre somalien Omar Abdulkadir Artan interdit d’entrée aux Etats-Unis",
           "link": "https://netafrique.net/coupe-du-monde-2026-larbitre-somalien-omar-abdulkadir-artan-interdit-dentree-aux-etats-unis/",
           "source": "Net Afrique (BF)",
@@ -1696,6 +1687,15 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F1"
+        },
+        {
+          "title": "Fin de la deuxième réunion d’évaluation de la crise dans l’est de la RDC : Le médiateur de l’union africaine formule des recommandations",
+          "link": "https://atop.tg/fin-de-la-deuxieme-reunion-devaluation-de-la-crise-dans-lest-de-la-rdc-le-mediateur-de-lunion-africaine-formule-des-recommandations/",
+          "source": "ATOP (Togo)",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1756,7 +1756,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 153,
+      "count": 158,
       "top": [
         {
           "title": "Mondial 2026 : L’Iran obtient ses visas américains in extremis et établit son camp de base au Mexique",
@@ -1809,7 +1809,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 143,
+      "count": 144,
       "top": [
         {
           "title": "Xi Jinping accueilli en grande pompe à Pyongyang pour une visite stratégique en Corée du Nord",
@@ -1871,42 +1871,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-08T22:43:34.902Z",
+      "at": "2026-06-08T23:25:02.713Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-08T22:43:34.909Z",
+      "at": "2026-06-08T23:25:02.720Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-08T22:44:10.321Z",
+      "at": "2026-06-08T23:25:43.787Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1929 articles"
+      "message": "117/170 flux OK, 1970 articles"
     },
     {
-      "at": "2026-06-08T22:44:13.469Z",
+      "at": "2026-06-08T23:25:46.916Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-08T22:44:13.818Z",
+      "at": "2026-06-08T23:25:47.222Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-08T22:44:13.823Z",
+      "at": "2026-06-08T23:25:47.227Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 22 alertes"
     },
     {
-      "at": "2026-06-08T22:44:13.823Z",
+      "at": "2026-06-08T23:25:47.227Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-08T22:44:13.823Z",
+      "at": "2026-06-08T23:25:47.227Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
