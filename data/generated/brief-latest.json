@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-12T10:58:42.123Z",
+  "generatedAt": "2026-06-12T15:34:19.495Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 112,
-    "failed": 58,
-    "articles": 1915,
+    "ok": 118,
+    "failed": 52,
+    "articles": 1986,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -21,6 +21,11 @@
         "id": "rss_sidwaya",
         "name": "Sidwaya",
         "count": 10
+      },
+      {
+        "id": "rss_aib",
+        "name": "AIB — Agence Information BF",
+        "count": 20
       },
       {
         "id": "rss_wakatsera",
@@ -95,6 +100,11 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
+        "count": 10
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -190,7 +200,7 @@
       {
         "id": "rss_news24",
         "name": "News24 (Afrique du Sud)",
-        "count": 16
+        "count": 20
       },
       {
         "id": "rss_tsa",
@@ -290,12 +300,12 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 24
+        "count": 23
       },
       {
         "id": "rss_f24afr",
         "name": "France 24 Afrique",
-        "count": 30
+        "count": 29
       },
       {
         "id": "rss_jeuneafr",
@@ -305,7 +315,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 22
+        "count": 21
       },
       {
         "id": "rss_rfimo",
@@ -385,7 +395,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 6
+        "count": 8
       },
       {
         "id": "rss_fp",
@@ -415,7 +425,7 @@
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 27
+        "count": 30
       },
       {
         "id": "rss_guardian",
@@ -430,7 +440,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -490,7 +500,7 @@
       {
         "id": "rss_ttoi",
         "name": "Times of Israel",
-        "count": 15
+        "count": 13
       },
       {
         "id": "rss_jpost",
@@ -503,8 +513,18 @@
         "count": 30
       },
       {
+        "id": "rss_anadolu",
+        "name": "Anadolu Agency (Turquie)",
+        "count": 29
+      },
+      {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
+        "count": 30
+      },
+      {
+        "id": "rss_tehran",
+        "name": "Tehran Times",
         "count": 30
       },
       {
@@ -545,7 +565,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -569,11 +599,6 @@
       }
     ],
     "failedSources": [
-      {
-        "id": "rss_aib",
-        "name": "AIB — Agence Information BF",
-        "error": "This operation was aborted"
-      },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
@@ -608,11 +633,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -810,16 +830,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_anadolu",
-        "name": "Anadolu Agency (Turquie)",
-        "error": "HTTP 502"
-      },
-      {
-        "id": "rss_tehran",
-        "name": "Tehran Times",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -835,16 +845,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -857,27 +857,94 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 35,
+    "bfAes": 47,
     "alerts": 4,
-    "criticalAlerts": 1,
-    "sourcesDistinct": 72
+    "criticalAlerts": 0,
+    "sourcesDistinct": 78
   },
   "topDevelopments": [
     {
-      "title": "CEDEAO : Dakar sollicite le soutien de Conakry pour porter le général Birame Diop à la tête de la Commission",
-      "link": "https://guineenews.org/2026/06/11/cedeao-dakar-sollicite-le-soutien-de-conakry-pour-porter-le-general-birame-diop-a-la-tete-de-la-commission/",
-      "pubDate": "2026-06-11T22:42:12.000Z",
-      "description": "Le Sénégal poursuit sa campagne diplomatique en vue de l'élection du futur président de la Commission de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO). Dans cette dynamique, une mission spéciale dépêchée par le président sénégalais, Bassirou Diomaye Faye, a été reçue à Conakry, ce jeudi 11 juin, pour transmettre un message officiel à son homologue guinéen, Mamadi Doumbouya, rapporte la RTG. Conduite par le ministre des Affaires Etrangères et des Sénégalais de l'Extérieur, Cheikh Tidiane Niang, la délégation a rencontré le Premier ministre guinéen, Amadou Oury Bah, afin d'échanger sur plusieurs sujets d'intérêt commun, notamment les consultations en cours au sein de la CEDEAO et la candidature sénégalaise à la présidence de la Commission de l'organisation régionale. Selon le chef de la diplomatie sénégalaise, le message transmis vise à formaliser la candidature du général Birame Diop, ancien ministre des Forces armées du Sénégal. Présenté comme une personnalité disposant d'une solide expérience militaire, gouvernementale et académique, le général Diop est considéré par Dakar comme le profil idéal pour conduire l'institution sous-régionale à un moment où celle-ci fait face à d'importants défis sécuritaires et politiques. « Le président Bassirou Diomaye Faye a porté son choix sur le général Birame Diop en raison de son parcours exceptionnel dans les domaines de la paix, de la sécurité, du maintien de la paix et de la gouvernance. Il représente, selon nous, la meilleure offre que le Sénégal puisse présenter à la communauté ouest-africaine », a expliqué Cheikh Tidiane Niang. Le ministre sénégalais a également insisté sur le rôle central de la Guinée dans les grandes orientations de la CEDEAO. Selon lui, la Guinée demeure un membre fondateur dont l'influence reste significative dans les équilibres régionaux. « La place de la Guinée au sein de la CEDEAO est importante. Les grandes décisions concernant l'avenir de l'organisation ne peuvent être envisagées sans son implication et son adhésion », a souligné le ministre, justifiant ainsi l'envoi de cette mission auprès des autorités guinéennes. Au cours de l'audience, le Premier ministre Amadou Oury Bah a reçu le message destiné au chef de l'État guinéen et s'est engagé à le lui transmettre. Il a également rappelé la profondeur des relations historiques entre Conakry et Dakar, mettant en avant les liens de fraternité qui unissent les deux peuples ainsi que l'excellence de la coopération entre les gouvernements des deux pays. Cette démarche diplomatique intervient dans un contexte de recomposition au sein de la CEDEAO. L'organisation régionale est confrontée à de nombreux défis, notamment les questions sécuritaires dans le Sahel, les transitions politiques en cours dans plusieurs Etats membres et les conséquences du retrait annoncé du Burkina Faso, du Mali et du Niger. Dans ce contexte, l'élection du prochain président de la Commission revêt une importance stratégique pour l'avenir de l'intégration ouest-africaine. A travers cette mission, le Sénégal cherche ainsi à consolider les soutiens autour de son candidat tout en réaffirmant sa volonté de préserver l'unité et la stabilité de l'espace communautaire. Pour Dakar, l'appui de Conakry pourrait constituer un atout de poids dans la course à la présidence de la Commission de la CEDEAO, dont le futur dirigeant aura la lourde responsabilité de conduire l'organisation dans une période particulièrement décisive de son histoire.",
-      "_source": "Guineenews",
-      "_sourceId": "rss_guineenews",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
+      "title": "Prix du journalisme pour la paix et la cohésion sociale 2026 : Les Edifions Sidwaya, s’empare des prix de la catégorie presse écrite et du prix spécial Oxfam",
+      "link": "https://www.sidwaya.info/prix-du-journalisme-pour-la-paix-et-la-cohesion-sociale-2026-les-edifions-sidwaya-sempare-des-prix-de-la-categorie-presse-ecrite-et-du-prix-special-oxfam/",
+      "pubDate": "2026-06-12T15:32:42.000Z",
+      "description": "Le comité d’organisation de la commission épiscopale justice et paix a organisé la 5 e édition de la soirée de récompense des lauréats du prix du journalisme pour la paix et la cohésion sociale, jeudi 12 juin 2026, à Ouagadougou. La V e édition du prix du journalisme pour la paix et la cohésion sociale (PJPCS) initié par la commission épiscopale justice et paix (CJP-Burkina) dans la mise en œuvre des activités de l’Initiative paix au sahel/Sahel peace initiative (SPI) a eu lieu au cours d’une soirée de récompense des lauréats, jeudi 12 juin 2026, à Ouagadougou. « Renforcement de la paix et de la cohésion sociale à travers la promotion de la résilience, du dialogue communautaire et la lutte contre l’extrémisme violent et la radicalisation » a été le thème retenu. Aux cours de la soirée de récompense, 21 journalistes ont reçu des prix dont 13 au niveau des prix officiels et 8 prix spéciaux. Les Editions Sidwaya ont remporté les 3 prix officiels dans la catégorie presse écrite et 1 prix spécial. Ainsi le 1 e prix est revenu à Abdel Aziz Nabaloum, pour son œuvre « promotion de la cohésion sociale : La foi au service de la paix ». Le président de la CJP-Burkina et de l’initiative paix au Sahel, Monseigneur Alexandre Bazié (droite) a remis le prix régional transfrontalier au journaliste lauréat Drissa Diallo(milieu) du Mali. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-1024x576.jpeg\" class=\"size-full wp-image-164001\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28.jpeg\" alt=\"\" width=\"1080\" height=\"608\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-300x169.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-1024x576.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-768x432.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-746x420.jpeg 746w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-150x84.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-696x392.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-1068x601.jpeg 1068w\" sizes=\"(max-width: 1080px) 100vw, 1080px\" /> Le président de la CJP-Burkina et de l’initiative paix au Sahel, Monseigneur Alexandre Bazié (droite) a remis le prix régional transfrontalier au journaliste lauréat Drissa Diallo(milieu) du Mali. Il repart avec un trophée, un chèque de 500.000FCFGA, un roman et une attestation. Yacouba Belem remporte le 2 e prix pour son œuvre « commune de Dédougou : La solidarité des populations hôtes redonne espoir aux déplacés internes ». Il repart avec un chèque de 300.000FCFA plus une attestation. Le 3 e prix revient à Djakaridia Siribié pour son œuvre « Exploitation agricole à Matourkou : Des réfugiés passent de l’assistance humanitaire à l’autonomie ». Il repart avec un chèque de 150.000FCFA plus une attestation. Adama Sedgo reçoit le prix spécial du partenaires Oxfam avec un chèque de 200.000 FCA pour son œuvre « Périmètre aménagé du Youtenga dans l’Oubri/les PDI, force motrice de l’offensive agropastorale ». Dans la catégorie télévision, le journaliste de Burkina Info, Abdoul Rahim Tabsoba reçoit le 1 e prix. Fréderic Tensaba de la RTB radio Bobo, le 1 e prix dans la catégorie radio et Jean-Marc Kambou de Refletinfo.net, 1 e prix dans la catégorie presse en ligne. Tous ont reçu un trophée plus un chèque de 500.000FCFA plus un roman sur la paix. L’intégration du prix régional transfrontalier Les journalistes des Editions Sidwaya ont reçu leurs prix. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1024x764.jpeg\" class=\"size-full wp-image-164002\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29.jpeg\" alt=\"\" width=\"1080\" height=\"806\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-300x224.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1024x764.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-768x573.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-563x420.jpeg 563w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-80x60.jpeg 80w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-150x112.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-696x519.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1068x797.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-265x198.jpeg 265w\" sizes=\"(max-width: 1080px) 100vw, 1080px\" /> Les journalistes des Editions Sidwaya ont reçu leurs prix. Cette 5 e édition a connu la participation des pays de la sous-région et le journaliste Drissa Diallo du Mali a remporté le prix régional transfrontalier pour son œuvre « Un vocal qui divise ». La présidente du jury Dominique Marie Nyaméogo a noté avoir réceptionné au total 56 œuvres dans 4 catégories. Il s’agit de 47 œuvres nationales dont 9 en presse écrite, 22 en presse en ligne, 10 en radio et 6 télévision. A cela, s’ajoute 9 œuvres de la sous-région avec la participation, du Mali, de la Cote -d’Ivoire, du Niger et du Ghana. « Le jury s’est basé sur des critères bien défini afin de primer les 3 meilleurs lauréats de chaque catégorie » a-t-elle dit. Le ministre conseiller spécial du président du Faso, Samuel Kalkoumdo (gauche) a salué l’Initiative. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-1024x576.jpeg\" class=\"size-full wp-image-164003\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1.jpeg\" alt=\"\" width=\"1080\" height=\"608\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-300x169.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-1024x576.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-768x432.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-746x420.jpeg 746w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-150x84.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-696x392.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-1068x601.jpeg 1068w\" sizes=\"(max-width: 1080px) 100vw, 1080px\" /> Le ministre conseiller spécial du président du Faso, Samuel Kalkoumdo (gauche) a salué l’Initiative. La présidente du jury a souligné que l’innovation de la V e édition a été l’intégration du prix régional. Le président de la commission épiscopale Justice et paix et de l’initiative paix au Sahel, Monseigneur Alexandre Bazié a soutenu que l’instauration du Prix régional transfrontalier est une initiative de faire prôner et régner la paix partout. « La parole peut construire et détruire. Il revient donc aux habitants du Sahel de favoriser un usage positif et efficace de la parole pour la construction de la paix » a-t-il signifié. 21 journalistes lauréats ont reçu des prix au cours de la soirée de récompense de la 5e édition du PJPCS. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-1024x576.jpeg\" class=\"size-full wp-image-164004\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2.jpeg\" alt=\"\" width=\"1080\" height=\"608\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-300x169.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-1024x576.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-768x432.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-746x420.jpeg 746w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-150x84.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-696x392.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-1068x601.jpeg 1068w\" sizes=\"auto, (max-width: 1080px) 100vw, 1080px\" /> 21 journalistes lauréats ont reçu des prix au cours de la soirée de récompense de la 5e édition du PJPCS. Le ministre conseiller spécial du président du Faso, Samuel Kalkoumdo a salué l’Initiative reconnaissant la valeur des journalistes dans la quête du vivre ensemble et de la cohésion sociale. Le secrétaire général régional de l’initiative paix au sahel, Abbé Herman Ouédraogo, s’est réjouie de l’accomplissement de l’édition. Quant au président du comité d’organisation, Abbé Sié Mohamed Éric Dah, il a remercié et invité les partenaires à se joindre pour les prochaines éditions. Gbetcheni Constantin Bertrand KAMBIRE Collaborateur Crédit photo : Bertrand KAMBIRE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "« The Voice Afrique francophone » : Canal+ dévoile les rouages de la nouvelle saison",
+      "link": "https://journaldumali.com/the-voice-afrique-francophone-canal-devoile-les-rouages-de-la-nouvelle-saison/",
+      "pubDate": "2026-06-12T14:40:35.000Z",
+      "description": "© JDM Diffusée sur Canal+ Magic à partir de ce 12 juin, chaque vendredi à 21 h, la nouvelle saison de « The Voice : Plus qu’une voix » a été présentée le 10 juin 2026 à Bamako à des influenceurs, influenceuses et journalistes réunis au siège de Canal+ Mali. Cette rencontre visait à mettre en lumière les principales articulations du programme et à mobiliser les relais digitaux autour de l’émission. L’événement s’inscrivait dans une présentation simultanée organisée dans plusieurs pays d’Afrique francophone. Des créateurs de contenus venus notamment du Mali, de la Côte d’Ivoire, de la Guinée, de la RDC, du Gabon et encore de Madagascar ont ainsi pu découvrir les contours de cette nouvelle saison du célèbre télé-crochet musical. Adapté dans plus de 75 pays à travers le monde, « The Voice » s’est imposé, au fil des années, comme l’un des formats de divertissement les plus populaires. Cette déclinaison africaine mettra en compétition 50 talents issus de 16 pays francophones : le Bénin, le Burkina Faso, le Burundi, le Cameroun, le Congo, la République démocratique du Congo, la Côte d’Ivoire, le Gabon, la Guinée, Madagascar, le Mali, le Niger, le Rwanda, le Sénégal, le Tchad et le Togo. Une montée en puissance jusqu’à la finale Au cours de la rencontre, les responsables de Canal+ ont détaillé les différentes étapes de la compétition, composée de dix émissions de 90 minutes. L’aventure débute par les auditions à l’aveugle, phase emblématique du programme durant laquelle seuls les talents vocaux sont pris en compte. Les coachs sélectionnent alors les candidats qui composeront leurs équipes respectives. La compétition se poursuit avec les « Battles », des duels opposant des candidats d’une même équipe. À l’issue de chaque confrontation, un seul participant poursuit l’aventure. Les « K.O. » constituent ensuite une étape décisive. Les talents y défendent individuellement leur place afin de révéler pleinement leur identité artistique. Chaque coach retient d’abord deux candidats parmi les cinq encore en lice dans son équipe, avant un ultime affrontement. Au final, un seul représentant par équipe décroche son billet pour la finale. La grande finale, prévue le 14 août, donnera la parole au public, qui votera en direct pour désigner la plus belle voix d’Afrique francophone. L’émission sera présentée par Jean-Michel Onnin et portée par un jury composé de quatre figures reconnues de la scène musicale : la chanteuse ivoirienne Josey, l’artiste gabonaise Emma’a, la légende ivoirienne Meiway et le rappeur franco-congolais d’origine togolaise Franglish. Au-delà de la compétition télévisée, Canal+ mise également sur une forte interaction numérique. Les téléspectateurs pourront suivre les coulisses de l’émission à travers des contenus exclusifs, participer à des sondages et interagir avec les candidats sur les plateformes digitales du groupe. Pour marquer le lancement de cette nouvelle saison, Canal+ Mali organise une soirée spéciale de diffusion du premier numéro ce vendredi à l’hôtel Mæv[a] Palace, à partir de 19 h. Mohamed Kenouvi",
+      "_source": "Journal du Mali",
+      "_sourceId": "rss_journ_mali",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Sud-Ouest/Gouvernance locale: le Conseil régional présente un bilan de plus de 1,3 milliard FCFA d’investissements en trois ans",
+      "link": "https://www.aib.media/sud-ouest-gouvernance-locale-le-conseil-regional-presente-un-bilan-de-plus-de-13-milliard-fcfa-dinvestissements-en-trois-ans/",
+      "pubDate": "2026-06-12T10:46:54.000Z",
+      "description": "Burkina-Conseil-Régional-Sud-Ouest-Redevabilité-Gouvernance-Locale Sud-Ouest/Gouvernance locale: le Conseil régional présente un bilan de plus de 1,3 milliard FCFA d’investissements en trois ans Gaoua, 11 juin 2026 (AIB) – La Délégation spéciale régionale du Sud-Ouest a organisé, ce jeudi à Gaoua, sa journée de redevabilité afin de présenter à la population et aux forces vives de la région le bilan de sa gestion administrative, financière et de ses réalisations enregistrées entre 2022 et 2025. La rencontre, présidée par le président de la Délégation spéciale régionale du Sud-Ouest, Siaka Barro, a réuni les autorités administratives, militaires, coutumières et religieuses ainsi que les représentants de la société civile. Cette journée de redevabilité visait à rendre compte de la gestion de l’institution conformément aux principes de bonne gouvernance locale, de transparence et de participation citoyenne. Selon M. Barro, la Délégation spéciale régionale, installée le 29 juin 2022, a hérité d’une situation financière difficile marquée par un déficit de fonctionnement de plus de 23,9 millions de FCFA. « En 2025, nous sommes à un excédent de fonctionnement de plus de 97 millions de FCFA », a-t-il indiqué. Le premier responsable de l’instance régionale a également fait savoir qu’au cours des trois dernières années, plus de 1,3 milliard de FCFA ont été investis dans plusieurs secteurs prioritaires de développement. Dans le domaine agricole, plus de 95 millions de FCFA ont été mobilisés pour soutenir les producteurs. Les secteurs de l’eau potable et de l’assainissement ont bénéficié de plus de 150 millions de FCFA d’investissements. Le secteur de l’éducation a enregistré des réalisations évaluées à plus de 241 millions de FCFA, tandis que celui de la santé a bénéficié de plus de 215 millions de FCFA. En matière de sécurité, plus de 69 millions de FCFA ont été consacrés à diverses actions d’appui. Pour Siaka Barro, ces investissements traduisent la volonté de la Délégation spéciale régionale d’améliorer durablement les conditions de vie des populations à travers un meilleur accès à l’éducation, aux soins de santé, à l’eau potable et aux opportunités de production. Il a salué l’accompagnement des populations, des forces vives et des membres de la Délégation spéciale, dont l’engagement a contribué à l’atteinte des résultats enregistrés. Le président de la Délégation spéciale régionale a par ailleurs annoncé l’élaboration en cours du Plan régional de développement du Sud-Ouest. Ce document stratégique prendra en compte les orientations nationales définies à travers le Plan de relance ainsi que la vision de la Révolution Progressiste et Populaire. Selon lui, ce plan permettra d’identifier les actions prioritaires à mettre en œuvre afin de renforcer la contribution de la région au développement national. Agence d’Information du Burkina MS/bak",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
@@ -895,26 +962,25 @@
         "rating": "A2"
       },
       "_rating": "A2",
-      "_score": 135,
+      "_score": 123,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Pénurie du ciment au Burkina Faso: la BMCRF dénonce des pratiques frauduleuses",
-      "link": "https://www.sidwaya.info/libertes-religieuses-au-burkina-faso-la-chefferie-coutumiere-et-traditionnelle-salue-linitiative-legislative-2/",
-      "pubDate": "2026-06-11T23:47:35.000Z",
-      "description": "La Brigade mobile de contrôle économique et de la répression des fraudes (BMCRF) a animé une conférence de presse, jeudi 11 juin 2026, à Ouagadougou, pour informer l’opinion publique sur des pratiques commerciales illicites observées sur le marché du ciment. La pénurie du ciment continue en dépit des actions entreprises par le ministère en charge du commerce et des autres acteurs du secteur. A cet égard, la Brigade mobile de contrôle économique et de la répression des fraudes (BMCRF) a animé une conférence de presse pour dénoncer des pratiques commerciales illégales, jeudi 11 juin 2026, à Ouagadougou. Pour résorber la pénurie, de nouvelles mesures sont en vigueur désormais. « A partir du 11 juin 2026, tout camion sorti d’usine ou aperçu en circulation sans les documents nécessaires verra son chargement saisi et confisqué. De plus, les cimenteries, distributeurs, grossistes et tous les acteurs devront, dorénavant, fournir toutes les informations sur les stocks produits et mis dans le circuit de distribution », a annoncé le coordonnateur général de la BMCRF, Sanibè Faho. Il a rappelé que les prix du ciment demeurent inchangés sur le marché. La tonne du CPJ 35 coûte 100 000 FCFA et la tonne du CPA 45 est fixée à 115 000 FCFA. Le coordonnateur général de la BMCRF a confié que les opérations de contrôle et la régulation du marché seront renforcées sur l’ensemble du territoire burkinabè, afin de lutter contre la spéculation des prix, les pratiques frauduleuses et toutes autres formes de concurrence déloyale. Il a également demandé à la population de dénoncer tout acte malveillant qu’elle viendrait à constater. Sanibè Faho a indiqué que la pénurie du ciment serait liée à des facteurs affectant la production nationale et la spéculation sur le prix du ciment par certains distributeurs. Il a mentionné les délestages et la baisse de tension, les lenteurs dans les procédures de formalités douanières aux corridors de la Côte d’Ivoire et du Togo. Il a pointé du doigt également la forte demande des consommateurs burkinabè et la baisse de l’offre liées aux déclassements des camions hors gabarit. Face à cette situation, le coordonnateur de la BMCRF a assuré que d’importantes mesures ont été engagées afin d’améliorer la production nationale et renforçant l’approvisionnement du marché. « Une série de concertations avec les cimenteries du Burkina ont permis d’identifier les difficultés et apporter des solutions appropriées. Des efforts sont déjà constatés, car la production du ciment est passée de 169 531 tonnes en mi-mars 2026 à 185 888,94 tonnes à la fin du mois de mai 2026, soit une hausse de 9, 65% », s’est-il félicité. Le coordonnateur de la BMCRF a ajouté que des améliorations significatives ont été enregistrées au niveau des frontières de la Côte d’Ivoire et du Togo pour l’approvisionnement du clinker, principal intrant utilisé dans la fabrication du ciment. Il a rassuré l’opinion publique que le gouvernement poursuivra le suivi de la production, la distribution et la commercialisation du ciment. « Tous les acteurs impliqués dans le non-respect des mesures seront sanctionnés conformément à la règlementation en vigueur », a-t-il prévenu. Le Burkina Faso compte huit cimenteries dont cinq à Ouagadougou, deux à Bobo Dioulasso et 1 à Ziniaré. Toutes sont fonctionnelles et produisent suffisamment du ciment pour répondre aux besoins de la population burkinabè. Gbetcheni Constantin Bertrand KAMBIRE (Collaborateur)",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Niger: Mariama Djibrine provisoirement déchue de la nationalité nigérienne",
+      "link": "https://www.aib.media/niger-mariama-djibrine-provisoirement-dechue-de-la-nationalite-nigerienne/",
+      "pubDate": "2026-06-12T13:12:29.000Z",
+      "description": "Niger: Mariama Djibrine provisoirement déchue de la nationalité nigérienne Ouagadougou, 12 juin 2026 (AIB) – Le Président de la République du Niger, le Général d’Armée Abdourahamane Tiani a signé, ce jeudi 11 juin 2026, un décret portant déchéance provisoire de la nationalité nigérienne de Mariama Djibrine, connue sous le pseudonyme de Mayra, selon un communiqué du Secrétariat général du gouvernement nigérien. Le communiqué précise que cette mesure est prise conformément aux dispositions de l’ordonnance n°2024-43 du 27 août 2024, modifiée et complétée par l’ordonnance n°2024-46 du 7 octobre 2024, relatives au fichier des personnes, groupes ou entités impliqués dans des actes de terrorisme ou dans des infractions portant atteinte aux intérêts stratégiques et fondamentaux de la Nation, ou susceptibles de troubler gravement la tranquillité et la sécurité publiques. Selon le document officiel, Mariama Djibrine, née le 27 mai 1989 à N’Guigmi, est poursuivie pour diffusion de données de nature à troubler l’ordre public, incitation à la révolte et intelligence avec une puissance étrangère. Agence d’information du Burkina BAK/ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
         "military",
         "political"
       ],
@@ -925,21 +991,52 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
-      "_score": 127,
+      "_rating": "C2",
+      "_score": 119,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Littérature religieuse : Le Pr Élie Kabré publie « Prier par la parole et les promesses », un guide pratique de prière fondé sur les Écritures",
-      "link": "https://lefaso.net/spip.php?article147099",
-      "pubDate": "2026-06-12T10:56:18.000Z",
-      "description": "Le Pr Élie Kabré a procédé, le jeudi 11 juin 2026, au sanctuaire Notre-Dame de Yagma à Ouagadougou, à la dédicace de son premier ouvrage intitulé « Prier par la parole et les promesses ». À travers ce guide de prière inspiré des Saintes Écritures, l'auteur entend accompagner les chrétiens dans l'approfondissement de leur vie spirituelle. Dans cette œuvre de 116 pages, subdivisée en neuf chapitres, le pharmacien et biochimiste s'appuie sur plus de 400 références bibliques. Les différents chapitres abordent, entre autres, les prières liturgiques fondamentales, la proclamation des promesses divines, l'action de grâce, ainsi que les louanges et l'adoration. Les questions relatives à la santé, au mariage, aux enfants, au travail et aux combats spirituels y sont également développées. Par ailleurs enseignant à l'université Joseph-Ki-Zerbo, l'auteur partage dans cet ouvrage des réflexions nourries par son expérience de foi. Pour lui, cette production littéraire constitue le témoignage de sa fidélité à la prière. « C'est un témoignage vivant, une arme spirituelle mise entre les mains de tout chrétien en quête d'une prière plus profonde, plus ancrée et plus efficace », a-t-il confié. Selon lui, l'ouvrage traite d'un sujet qui lui tient particulièrement à cœur. À travers ce livre, il met en exergue la puissance de la parole de Dieu et l'importance d'une prière fondée sur celle-ci. L'auteur, Elie Kabré, affirme que son ouvrage est le témoignage de sa vie de prière L'auteur affirme que sa confiance en Dieu et sa fidélité à la prière lui ont ouvert des portes et redonné de l'espérance à des moments où il pensait que tout allait s'écrouler. Fort de cette expérience, il invite les croyants à se procurer l'ouvrage afin de mieux orienter leur vie de prière dans un monde en perpétuelle mutation. « Nous vivons dans un monde marqué par les incertitudes, les inquiétudes et de nombreuses crises susceptibles d'ébranler notre foi. Plus que jamais, nous avons besoin de revenir aux fondamentaux de notre confiance en Dieu à travers la prière », a-t-il soutenu. Le préfacier de l'ouvrage, le père Jules Pascal Zabré, a salué la contribution intellectuelle de l'auteur. Il a invité les chrétiens à s'approprier ce guide afin de renforcer leur vie de foi. Au-delà de cet appel à la lecture, le préfacier, également recteur du sanctuaire Notre-Dame de Yagma, a souligné la qualité de l'ouvrage ainsi que l'investissement intellectuel consenti par son auteur. Le préfacier, le père Jules Pascal Zabré, a invité les chrétiens à se procurer le livre Le présentateur de l'œuvre, l'abbé Silvère Yaméogo, a lui aussi félicité le Pr Élie Kabré pour cette publication. Il a indiqué que l'ouvrage n'est pas un traité de théologie, mais plutôt un outil pratique destiné à accompagner la prière quotidienne des fidèles. À son tour, il a exhorté les chrétiens à se le procurer. Édité par Avé Dignité Humaine, l'ouvrage est vendu au prix unitaire de 2 000 francs CFA. Il est disponible à la librairie Jeunesse d'Afrique, à la Maison de la Bible ainsi qu'auprès de l'auteur. S.I.K. Lefaso.net",
+      "title": "Coopération Burkina Faso-Allemagne: le ministre Nacanabo et Dr Braune passent en revue les relations bilatérales",
+      "link": "https://www.aib.media/cooperation-burkina-faso-allemagne-le-ministre-nacanabo-et-dr-braune-passent-en-revue-les-relations-bilaterales/",
+      "pubDate": "2026-06-12T14:54:52.000Z",
+      "description": "Coopération Burkina Faso-Allemagne: le ministre Nacanabo et Dr Braune passent en revue les relations bilatérales Ouagadougou, 12 juin 2026 (AIB) – Le ministre de l’Économie et des Finances, Dr Aboubakar Nacanabo, et le chef de la division Sahel au ministère fédéral allemand, Dr Bernhard Braune, ont fait, ce vendredi à Ouagadougou au cours d’une audience, le point sur l’état de la coopération entre les deux pays, un partenariat fondé sur le pragmatisme et le dialogue. Au cours des échanges, le ministre de l’Économie et des Finances a salué l’esprit qui caractérise les relations entre le Burkina Faso et l’Allemagne. Il a également présenté la vision du Burkina Faso en matière de coopération, une approche qui s’inscrit dans les orientations du Manifeste de la Révolution progressiste populaire (RPP) ainsi que dans les objectifs du Plan Relance pour la consolidation du développement économique et social. De son côté, Dr Bernhard Braune a réaffirmé la volonté de l’Allemagne de poursuivre sa collaboration avec le Burkina Faso dans le respect mutuel et de la souveraineté de chaque État. Il a aussi souligné l’engagement de son pays dans plusieurs secteurs au Burkina Faso, notamment l’eau, l’assainissement, l’agriculture et le développement local. Agence d’information du Burkina BAK/ata Source: DCRP",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina/Paix : Ouahigouya accueille un séminaire sur le dialogue interreligieux",
+      "link": "https://lefaso.net/spip.php?article147104",
+      "pubDate": "2026-06-12T13:56:30.000Z",
+      "description": "L'ONG Solidarité développement inclusif (SOLIDEV), avec l'appui financier de CBM Global et en collaboration avec la Fédération burkinabè des associations pour la promotion des personnes handicapées (FEBAH), a organisé, le jeudi 11 juin 2026 à Ouahigouya, un séminaire de dialogue interreligieux placé sous le thème : « Vivre ensemble dans la diversité : le rôle des communautés religieuses dans la prévention des conflits ». Cette rencontre vise à renforcer la paix, le dialogue social et la cohésion intercommunautaire dans la région du Yaadga, en mobilisant les communautés religieuses, les autorités, les femmes, les jeunes et les groupes vulnérables comme acteurs à part entière de la prévention des conflits. La religion doit être un pont et non un mur. C'est dans cette optique que ce séminaire trouve tout son sens : permettre aux communautés religieuses de parler d'une seule voix et de proscrire toute forme de haine et de division face aux menaces des forces obscurantistes. L'organisation de ce séminaire s'inscrit dans le cadre du « Projet d'assistance alimentaire, de fourniture d'articles non alimentaires (NFI) et de soins spécialisés en santé mentale et soutien psychosocial (MHPSS) pour les PDI et les communautés hôtes dans la région du Yaadga, Phase II ». Il a été rendu possible grâce à l'accompagnement technique et financier de CBM Global. Selon le directeur pays de CBM Global Burkina, Ousséini Badini, ce séminaire s'inscrit dans le cadre d'un projet humanitaire mis en œuvre dans la région du Yaadga, dont l'un des axes majeurs est la promotion de la paix, du vivre-ensemble et de l'harmonie sociale. À travers cette initiative, CBM Global entend accompagner les efforts de son partenaire SOLIDEV ainsi que ceux de l'ensemble des acteurs engagés dans la consolidation de la paix dans la région et au Burkina Faso de manière générale. Ousséini Badini a souligné que les personnes handicapées sont doublement affectées lors des crises sécuritaires et humanitaires. Il est donc impératif de les inclure dans les mécanismes de prévention des conflits Pour lui, cette rencontre doit permettre de faire émerger des messages forts en faveur de la cohésion sociale, de l'harmonie et du vivre-ensemble, des valeurs indispensables à tout processus de développement, de relèvement et de relance des communautés affectées par la crise. Le directeur pays de CBM Global Burkina estime que les crises traversées ces dernières années ont fragilisé le tissu social burkinabè, entraînant parfois méfiance et divisions entre des populations qui ont pourtant longtemps vécu ensemble dans la paix et la solidarité. Il considère ainsi ce séminaire comme une contribution concrète au rétablissement de la confiance, de la paix et de l'harmonie au sein des communautés. L'objectif, poursuit-il, est de préserver l'héritage de cohésion légué par les générations précédentes et d'empêcher que les divisions actuelles ne compromettent les acquis sociaux construits au fil des décennies. Lire aussi : Inclusion des personnes handicapées : CBM Global renforce son partenariat avec des acteurs des Hauts-Bassins et des Cascades Mis en œuvre dans les communes de Ouahigouya, Gourcy, Yako et Titao, le « Projet d'assistance alimentaire, de fourniture d'articles non alimentaires (NFI) et de soins spécialisés en santé mentale et soutien psychosocial (MHPSS) pour les PDI et les communautés hôtes dans la région du Yaadga, Phase II » vise à améliorer les conditions de vie et à renforcer la résilience des populations vulnérables affectées par la crise sécuritaire et humanitaire dans la région. Le projet poursuit plusieurs objectifs : assurer la sécurité alimentaire des ménages vulnérables, distribuer des articles non alimentaires aux personnes déplacées internes, garantir un accompagnement en santé mentale et soutien psychosocial, financer des soins médicaux spécialisés tels que les opérations de la cataracte et la rééducation physique, ainsi que soutenir l'autonomisation économique des bénéficiaires à travers des activités génératrices de revenus. Pour Wendyam Michel Vincent Ouédraogo, directeur exécutif de SOLIDEV, ce séminaire interreligieux s'inscrit dans la continuité des actions menées par SOLIDEV, la FEBAH et CBM Global en faveur des populations vulnérables et des personnes handicapées dans la région du Yaadga. Wendyam Michel Vincent Ouédraogo a indiqué que plus de 1 500 personnes ont bénéficié de l'accompagnement de cette deuxième phase du projet, mise en œuvre de janvier à juin 2026 « Dans cette situation de fragilité, nous avons perçu la nécessité d'organiser un séminaire interreligieux afin que les différentes confessions religieuses, les autorités administratives et coutumières puissent s'asseoir autour d'une même table et définir ensemble les règles favorisant une société harmonieuse, conformément à la vision portée par les autorités du Burkina Faso », a-t-il expliqué. Le directeur exécutif de SOLIDEV a également souligné que le projet combine des actions de cohésion sociale, d'autonomisation économique et de santé au profit des bénéficiaires. « Dans cet accompagnement, nous avons assuré le renforcement des capacités et la dotation en matériel afin de permettre aux bénéficiaires de développer des activités génératrices de revenus. Nous avons également intégré la santé, qui constitue un volet essentiel du projet, à travers la prise en charge d'opérations de la cataracte et la correction de cas de pied bot. Toutes ces actions ont contribué à renforcer la visibilité et l'impact du projet dans la région du Yaadga », a ajouté Wendyam Michel Vincent Ouédraogo. Cette rencontre a réuni des représentants des autorités administratives, des communautés religieuses et coutumières, des organisations de la société civile, des partenaires techniques et financiers, ainsi que des personnes déplacées internes (PDI) et des personnes handicapées « La religion doit être un pont qui unit les communautés » L'organisation de ce séminaire a été appréciée par les autorités de la région. Le secrétaire général de la région du Yaadga, Albert Zongo, a félicité les acteurs chargés de la mise en œuvre du projet ainsi que les organisateurs de la rencontre. « Ce séminaire vient à point nommé dans la région du Yaadga. Cela se justifie par le fait que, depuis environ dix ans, cette région connaît une insécurité liée aux actions terroristes. Ce séminaire, qui porte sur la paix, la cohésion sociale et le vivre-ensemble, permettra aux différents acteurs réunis d'acquérir davantage de connaissances sur les valeurs de tolérance, de médiation et de réconciliation afin de mieux gérer les conflits sur le terrain. Je tiens à préciser que le rôle de ces responsables religieux et coutumiers ne se limite pas à être des gardiens de la foi. Ils sont aussi des médiateurs au quotidien et constituent des piliers essentiels de la cohésion sociale. Nous allons également échanger sur le dialogue interreligieux afin que chacun comprenne que la religion doit être un pont qui unit les communautés et non un mur qui les sépare. Nous espérons qu'à l'issue de ce séminaire, une feuille de route concrète sera élaborée et mise à la disposition des comités locaux de paix présents dans les départements et les villages afin de leur permettre de jouer pleinement leur rôle. Car la paix n'est jamais un acquis définitif, que ce soit dans un pays ou dans une localité. Elle doit être entretenue en permanence. Entretenir la paix, c'est adopter des comportements responsables et tenir des discours exempts de haine et de violence. C'est dans cette perspective que j'apprécie l'organisation de ce séminaire », s'est-il réjoui. Albert Zongo a remercié les partenaires techniques et financiers pour leur accompagnement constant en faveur des personnes vulnérables, en particulier celles en situation de handicap L'abbé Alexandre Sawadogo, aumônier diocésain, s'est réjoui de la tenue de ce séminaire qui met en lumière les efforts des différentes communautés religieuses en faveur de la paix et de la cohésion sociale. Selon lui, les communautés musulmane, protestante, catholique et traditionnelle sont satisfaites de voir leurs actions reconnues et valorisées. Il a exprimé sa gratitude à l'endroit des organisateurs ainsi que des partenaires qui ont contribué à la réussite de cette rencontre, estimant que celle-ci offre un cadre d'échanges important autour des questions liées au vivre-ensemble. Pour l'homme d'Église, le thème retenu, « Vivre ensemble dans la diversité : le rôle des communautés religieuses dans la prévention des conflits », est particulièrement pertinent au regard du contexte actuel. Il a souligné que la recherche de la paix demeure une priorité pour les populations et que les communautés religieuses ont un rôle majeur à jouer dans la promotion du dialogue, de la tolérance et de la fraternité entre les citoyens. Samirah Bationo Lefaso.net",
       "_source": "Lefaso.net",
       "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
@@ -949,7 +1046,8 @@
         "economic",
         "diplomatic",
         "military",
-        "humanitarian"
+        "humanitarian",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -963,18 +1061,18 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "H",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Burkina Faso: Les cimentiers confrontés à un problème d’approvisionnement en énergie et en matières premières, notamment le clinker importé",
-      "link": "https://netafrique.net/burkina-faso-les-cimentiers-confrontes-a-un-probleme-dapprovisionnement-en-energie-et-en-matieres-premieres-notamment-le-clinker-importe/",
-      "pubDate": "2026-06-12T00:25:33.000Z",
-      "description": "Le camarade ministre Yacouba Zabré Gouba a reçu le nouveau bureau de l’Association des Cimentiers du Burkina pour discuter des défis énergétiques et des projets d’extension. Le ministre de l’Énergie, des Mines et des Carrières, Yacouba Zabré Gouba, a accordé une audience au nouveau bureau de l’Association des Cimentiers du Burkina (ACB), conduit par son président Claude Kompaoré, directeur général adjoint de Ciments de l’Afrique (CIMAF). Selon l’ACB, la capacité de production nationale est estimée à 7,3 millions de tonnes par an, pour une consommation d’environ 4,5 millions de tonnes. Les cimenteries restent toutefois confrontées à des difficultés liées à l’approvisionnement en énergie et en matières premières, notamment le clinker importé. Claude Kompaoré a salué l’accompagnement du ministère et relevé que les efforts du gouvernement pour améliorer l’offre énergétique ont contribué à réduire les tensions sur le marché. Il a également évoqué les investissements dans le solaire et l’acquisition de groupes électrogènes pour renforcer l’autonomie des industriels. Parmi les projets annoncés figure l’extension de CIMAF Bobo-Dioulasso, qui prévoit de porter sa capacité à 1,5 million de tonnes par an. Le président de l’ACB a souligné que les substances de carrière représentent actuellement 15 à 20 % des intrants utilisés dans la fabrication du ciment, avec un objectif de progression à 35 voire 40 %. Le ministre Gouba a rappelé le rôle stratégique du ciment dans la réalisation des infrastructures et des chantiers de développement, notamment l’initiative Faso Mêbo . Il a annoncé que plusieurs projets énergétiques en cours à Ouagadougou, Komsilga, Pabré, Koudougou, Bobo-Dioulasso et Kaya devraient injecter près de 220 mégawatts supplémentaires dans le réseau national en 2026. Le ministre a réaffirmé sa disponibilité à poursuivre le dialogue avec l’ACB afin d’accompagner le développement de l’industrie cimentière et de consolider son rôle dans la croissance économique du Burkina Faso. L’article Burkina Faso: Les cimentiers confrontés à un problème d’approvisionnement en énergie et en matières premières, notamment le clinker importé est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
+      "title": "Albinisme: briser les stéréotypes !",
+      "link": "https://www.wakatsera.com/albinisme-briser-les-stereotypes/",
+      "pubDate": "2026-06-12T12:18:55.000Z",
+      "description": "À l’occasion de la Journée internationale de sensibilisation à l’albinisme (JISA), célébrée le 13 juin de chaque année, l’Association des Femmes atteintes d'Albinisme du Burkina (AFAB) organise la 8é édition de l’ALBIWEEK 2026 du 10 au 15 juin sous le thème: «Fièrement dans ma peau: briser les stéréotypes pour l’inclusion et la protection des personnes atteintes d’albinisme au Burkina Faso». Dans ce cadre, l’association a réuni, le 11 juin 2026 à Ouagadougou, des journalistes, blogueurs, influenceurs et créateurs de contenus autour d’un atelier de sensibilisation et de formation destiné à promouvoir une communication responsable et inclusive sur l’albinisme. Loin des idées reçues et des croyances qui entourent encore l’albinisme dans plusieurs communautés, l’Association des Femmes atteintes d'Albinisme du Burkina (AFAB) poursuit son combat pour une meilleure compréhension de cette condition génétique et pour le respect des droits des personnes qui en sont atteintes. Journalistes, blogueurs et créateurs de contenus engagés à accompagner l'AFAB dans la promotion des droits des personnes atteintes d'albinisme Placée sous le haut patronage de Sa Majesté le Moogho Naaba Baongo, sous la présidence du Lieutenant-colonel Passowendé Pélagie Kaboré, ministre burkinabè de la Famille et de la Solidarité, et sous le marrainage de Madame Adja Bonkoungou de Zagtouli, cette édition de l’ALBIWEEK se veut un cadre de plaidoyer, d’éducation et de mobilisation sociale. Au cours de l’atelier, plusieurs communications ont permis aux participants d’approfondir leurs connaissances sur les réalités liées à l’albinisme. Les échanges ont porté notamment sur les généralités de l’albinisme, les stéréotypes sociaux, les violences basées sur le genre, les discriminations subies par les personnes atteintes d’albinisme ainsi que les actions menées par l’AFAB en faveur de leur protection et de leur autonomisation. Des personnes atteintes d'albinisme s'engagent à faire entendre leurs voix Pour les responsables de l’association, cette rencontre avec les professionnels de l’information n’est pas anodine. Elle répond à une nécessité de faire des médias des alliés stratégiques dans la lutte contre les préjugés. À travers leurs productions, les journalistes, blogueurs et créateurs de contenus ont en effet le pouvoir d’influencer positivement les perceptions et de contribuer à bâtir une société plus inclusive. Au fil des échanges, un message fort est revenu avec insistance: «l’albinisme n’est ni une malédiction, ni un signe mystique». Il s’agit simplement d’une condition génétique caractérisée par une absence ou une diminution de mélanine dans la peau, les cheveux et les yeux. Maimouna Déné invite à plus d'amour, de respect et d'inclusion envers les personnes atteintes d'albinisme «Nous voulons que chaque Burkinabè comprenne que l’albinisme est une question de santé et de génétique, et non une malédiction. Les personnes atteintes d’albinisme ne sont pas différentes dans leur humanité. Elles ont les mêmes rêves, les mêmes ambitions et les mêmes droits que tous les autres citoyens», a souligné la présidente de l’AFAB, Maïmouna Déné. Selon elle, malgré les avancées enregistrées ces dernières années, la stigmatisation demeure une réalité quotidienne pour de nombreuses personnes atteintes d’albinisme. Pour illustrer ses propos, elle a partagé le témoignage récent d’un membre de l’association qui s’est vu refuser la location d’une maison simplement en raison de son apparence physique. Des partenaires techniques et financiers prêts pour la cause des personnes atteintes d'albinisme «Il y a moins d’un mois, l’un de nos membres cherchait à louer un logement. Le propriétaire a catégoriquement refusé de lui accorder une place dans sa cour parce qu’il était albinos. Cette situation est choquante, mais elle reflète malheureusement une réalité que vivent encore de nombreuses personnes atteintes d’albinisme. Nous ne pouvons pas construire une société juste en laissant prospérer de telles discriminations», a-t-elle regretté. Pour la présidente de l’AFAB, ces actes d’exclusion trouvent souvent leur origine dans l’ignorance et les croyances erronées qui continuent de circuler au sein de certaines communautés. «Notre lutte consiste à faire comprendre que les personnes atteintes d’albinisme ne doivent pas être mises à l’écart. Elles méritent les mêmes opportunités d’éducation, d’emploi, de logement et de participation à la vie sociale. Elles sont nos frères, nos sœurs, nos enfants. Leur couleur de peau ne remet nullement en cause leur valeur humaine», a-t-elle insisté. Des professionnels de médias attentifs aux doléances de l'association AFAB L’association a également dénoncé certaines pratiques particulièrement inquiétantes observées dans la sous-région africaine, où des personnes atteintes d’albinisme continuent d’être victimes de violences, d’agressions et parfois même de crimes rituels. «Dans certaines localités, des personnes atteintes d’albinisme sont encore considérées comme porte-malheur. Certaines sont rejetées par leurs propres familles dès leur naissance. D’autres deviennent les cibles de criminels qui attribuent à certaines parties de leur corps des pouvoirs mystiques. Ces pratiques sont inhumaines et doivent être combattues avec la plus grande fermeté», a alerté Maïmouna Déné. Face à ces réalités, l’AFAB plaide pour un changement profond des mentalités et appelle chaque citoyen à jouer sa partition dans la promotion de la tolérance, du respect et de la solidarité. Des participants à la formation L’association a également exprimé sa profonde reconnaissance à l’endroit des autorités burkinabè pour les efforts consentis en faveur de la protection des personnes vulnérables. Elle a salué l’accompagnement constant de ses partenaires techniques et financiers, notamment le Fonds des Nations unies pour la population (UNFPA), ainsi que l’engagement des personnes ressources qui contribuent à la sensibilisation et à la défense des droits des personnes atteintes d’albinisme. Les responsables de l’AFAB ont, par ailleurs, tenu à remercier chaleureusement les journalistes, blogueurs, influenceurs et créateurs de contenus présents à cette rencontre. Selon eux, leur implication croissante dans le traitement des questions liées à l’albinisme participe à déconstruire les stéréotypes et à donner davantage de visibilité aux défis auxquels sont confrontées les personnes concernées. «Chaque article publié, chaque reportage diffusé, chaque contenu partagé avec responsabilité contribue à sauver des vies, à faire reculer les préjugés et à promouvoir la dignité humaine. Nous sommes reconnaissants envers tous les professionnels des médias qui nous accompagnent dans ce combat», a déclaré la présidente de l’association. Atelier organisé par l’AFAB Au-delà de cette formation, l’AFAB entend poursuivre ses actions à travers des campagnes de sensibilisation, des émissions radiophoniques et télévisées, des activités communautaires et des actions de plaidoyer afin de renforcer l’inclusion sociale des personnes atteintes d’albinisme au Burkina Faso. À travers l’ALBIWEEK 2026, l’Association des Femmes atteintes d'Albinisme du Burkina rappelle une vérité essentielle: l’albinisme est une condition génétique et non une malédiction. En appelant à davantage d’amour, de respect et d’acceptation, l’AFAB invite la société burkinabè à regarder au-delà de la couleur de la peau pour reconnaître ce qui unit tous les êtres humains: leur dignité, leur valeur et leur droit à vivre pleinement, sans discrimination ni exclusion. Par Valentin SOMANDE L’article Albinisme: briser les stéréotypes ! est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -982,70 +1080,7 @@
         "economic",
         "diplomatic",
         "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Énergie et industrie: Les 72 heures du génie électrique pour booster le Burkina de demain",
-      "link": "https://netafrique.net/energie-et-industrie-les-72-heures-du-genie-electrique-pour-booster-le-burkina-de-demain/",
-      "pubDate": "2026-06-12T00:08:39.000Z",
-      "description": "Une photo de famille des officiels à l'issue de l' ouverture des 72 heures du métier génie électrique Du 11 au 13 juin 2026, Ouagadougou est la capitale du génie électrique. L’Association burkinabè des professionnels du génie électrique a lancé 72 heures de réflexion et d’exposition pour booster un secteur jugé vital pour la souveraineté énergétique et l’industrialisation du Burkina Faso. La cérémonie d’ouverture s’est tenue sous le patronage du ministre de l’Énergie, des Mines et des Carrières, Yacouba GOUBA et du ministre de l’Enseignement supérieur, de la Recherche scientifique et de l’Innovation, Adjima THIOMBIANO. Placées sous le thème « Les métiers du génie électrique : l’énergie des compétences, métier du développement durable au Burkina Faso », ces 72 heures réunissent professionnels, universitaires, chercheurs, étudiants et industriels. L’objectif est clair et vise à mutualiser les intelligences, identifier les défis majeurs et tracer une feuille de route pour faire du génie électrique un levier de transformation économique et sociale. Ouverture des 72 heures du génie électrique à Ouagadougou, le 11 juin 2026, en présence des représentants du gouvernement et des professionnels du secteur Représentant le ministre de l’Énergie, des Mines et des Carrières, Ange Hubert Sebogo a salué une initiative qui tombe à point nommé. Le génie électrique est un secteur stratégique qui soutient l’industrialisation dans laquelle le Burkina est résolument engagé, a-t-il rappelé. Il a réaffirmé l’engagement du gouvernement à valoriser le capital humain dans ce domaine clé du développement énergétique. Sans compétences locales fortes, pas de souveraineté énergétique durable. Des panels de haut niveau ont été animés par des universitaires sur le métier du génie électrique Pour le représentant du ministre de l’Enseignement supérieur, de la Recherche scientifique et de l’Innovation, ces 72 heures constituent un tremplin de mutualisation entre les acteurs professionnels, académiques et de la recherche. C’est une opportunité en or pour conjuguer les efforts et booster le secteur. La recherche appliquée, l’innovation technologique et la formation de pointe doivent irriguer les chantiers de l’électrification, de l’efficacité énergétique et des énergies renouvelables. Du côté des organisateurs, la satisfaction est totale. Fabien Nongnogo, chargé de communication de l’Association burkinabè des professionnels du génie électrique, s’est réjoui de la tenue effective de l’événement. Ces 72 heures valorisent le corps de métier et le positionnent pour relever les défis majeurs de l’édification nationale, notamment dans le secteur industriel. Le message est limpide et consiste à reconnaître le génie électrique comme un métier qui sort de l'ombre. Il est au cœur de la lumière qui éclaire les usines, les écoles, les hôpitaux et les foyers pour le bien être des populations. Fabien Nongnogo , le chargé de communication de l'association Burkinabè des professionnels du génie électrique En marge des communications officielles, des panels planchent sur la dynamisation de la filière. Les débats portent sur la formation, la normalisation, l’entrepreneuriat, la maintenance industrielle et l’avenir du secteur face aux enjeux de l’industrialisation. Parallèlement, des expositions mettent en valeur le matériel électrique et électronique made in Burkina. Les stands offrent une vitrine aux innovations locales et aux solutions adaptées aux réalités du terrain. Pendant trois jours, Ouagadougou branche ainsi ses talents sur la même tension qui est celle du développement. Ces 72 heures du génie électrique sonnent comme un appel à renforcer les liens entre l’État, l’université et l’entreprise. L’énergie des compétences est la condition de l’énergie pour tous. Le Burkina qui s’industrialise aura besoin de volts, de watts, mais surtout d’hommes et de femmes qualifiés pour les produire, les transporter et les maîtriser. KISSANGOULÉ L’article Énergie et industrie: Les 72 heures du génie électrique pour booster le Burkina de demain est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Protection des consommateurs : des EPE sensibilisés aux bénéfices de la démarche qualité",
-      "link": "https://www.sidwaya.info/protection-des-consommateurs-des-epe-sensibilises-aux-benefices-de-la-demarche-qualite/",
-      "pubDate": "2026-06-11T23:53:50.000Z",
-      "description": "L’Agence burkinabè de normalisation, de la métrologie et de la qualité a organisé un séminaire à l’intention des responsables et cadres des établissements publics d’Etat, jeudi 11 juin 2026, à Ouagadougou. L’objectif est de les sensibiliser à la démarche qualité. Dans le cadre de ses missions de promotion de la qualité, de protection des consommateurs et de soutien au secteur privé, l’Agence burkinabè de normalisation, de la métrologie et de la qualité (ABNORM) a organisé un séminaire d’information et de sensibilisation à l’intention des responsables et cadres des Etablissements publics d’Etat (EPE), jeudi 11 juin 2026, à Ouagadougou. Le directeur général de l’ABNORM, Habraham Somda, a indiqué que l’activité vise à présenter les enjeux, les principes, les modalités et les bénéfices d’une démarche qualité en vue de favoriser un engagement progressif des bénéficiaires dans la mise en œuvre d'un système de management de la qualité adapté à leur mission. Il a mentionné que des communications porteront sur la présentation de la mission, des attributions et des prestations de l’ABNORM ; la démarche qualité dans les EPE en tant que levier d'amélioration du service public et sur la norme ISO 9001 version 2015, comme cadre pratique pour organiser, piloter et améliorer les services publics. Abraham Somda a soutenu que les EPE occupent une place importante dans la mise en œuvre des politiques publiques. « Par les missions qui leur sont confiées, ils contribuent directement à la satisfaction des besoins des populations, à l'exécution des priorités de l'Etat et au bon fonctionnement du service public. A ce titre, la qualité de leurs organisations, la maîtrise de leurs prestations, la clarté de leurs procédures, la fiabilité de leurs résultats et leurs capacités d'amélioration constituent des enjeux majeurs de leurs performances », a-t-il étayé. Le DG de l’ABNORM a ajouté que les attentes à l'égard des services publics ont évolué. « L'Etat attend une meilleure performance dans l'exécution des missions. Les partenaires, quant à eux, sont de plus en plus attentifs à la qualité de la gouvernance, la maîtrise des risques et la reddition des comptes. Les usagers attendent des services publics fiables et plus efficaces », a-t-il relevé. La qualité, une obligation à respectée Dans un tel contexte, a-t-il poursuivi, la question de la qualité ne peut plus être reléguée au second rang. Elle doit être comprise comme une exigence pour de meilleurs services publics. « C'est dans cet esprit que s'inscrit une résolution prise par la 22 e session de l'Assemblée générale des EPE en juillet 2021 et qui les invitait à mettre en place un système de management de la qualité dans l'optique d'améliorer les services rendus aux usagers », a-t-il rappelé. Selon Abraham Somda, l’ABNORM, en sa qualité de structure nationale de référence en matière de promotion de la qualité, a le devoir d'accompagner cette dynamique. Le représentant du Fonds d'appui au sport et à la presse privée (FASP), Bakary Sidibé, au nom des participants, a salué l’initiative de l’ABNNORM. « La démarche qualité permet d’éviter le tâtonnement dans l’exécution des services publics. Peu importe le domaine dans lequel nous intervenons, la qualité est une obligation qui doit être respectée par tous. Et elle doit permettre à l'Etat d’atteindre ses objectifs en matière de développement », a-t-il avancé. Bakary Sidibé a souhaité que l’ABNORM demeure dans cette lancée, en communiquant toujours avec l'ensemble des acteurs afin qu’ils puissent comprendre réellement les avantages de la démarche qualité. Adama SAWADOGO",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
+        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -1060,52 +1095,20 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Libertés religieuses au Burkina Faso : la FEME soutient le projet gouvernemental et propose des ajustements",
-      "link": "https://www.sidwaya.info/libertes-religieuses-au-burkina-faso-la-feme-soutient-le-projet-gouvernemental-et-propose-des-ajustements/",
-      "pubDate": "2026-06-12T10:30:56.000Z",
-      "description": "La Commission des affaires générales, institutionnelles et des droits humains (CAGIDH) a reçu, le jeudi 11 juin 2026, une délégation de la Fédération des églises et missions évangéliques (FEME), dans le cadre de l'examen du projet de loi portant libertés religieuses au Burkina Faso. Cette consultation s'inscrit dans une démarche inclusive visant à enrichir le texte fondamental avant son adoption. La délégation de la FEME a d’emblée tenu à saluer l'initiative législative, exprimant sa gratitude à la CAGIDH et au Parlement pour l'avoir associée au processus d'élaboration. Pour elle, l'enjeu est de doter le Burkina Faso d'un instrument juridique à la hauteur des défis que pose la coexistence des communautés religieuses dans un pays aux croyances plurielles. La délégation de la FEME a égrainé un chapelet de recommandations touchant à des questions aussi essentielles que les définitions fondamentales du texte, les garanties accordées aux croyants, les interdictions et obligations imposées aux organisations religieuses, ou encore les conditions d'érection et d'ouverture des édifices de culte. La liberté des débats religieux et le financement des structures confessionnelles ont également été mis sur la table, témoignant d'une réflexion approfondie sur les équilibres à trouver. La FEME partage l'avis de la régulation des libertés religieuses par l’Etat, afin de consolider davantage la cohésion sociale et le vivre-ensemble. Cette régulation ne doit pas être conçue comme une contrainte, mais comme une protection et, surtout, comme une prévention des dérives qui menacent la paix sociale dans un pays où la foi demeure un pilier identitaire majeur. Source : DCRP/Assemblée Législative du Peuple (ALP)",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 103,
-      "_zone": 1,
       "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Ouagadougou : Le Palais des sports se dote d’un nouveau plancher moderne et sécurisé",
-      "link": "https://www.minute.bf/ouagadougou-le-palais-des-sports-se-dote-dun-nouveau-plancher-moderne-et-securise/",
-      "pubDate": "2026-06-12T08:35:58.000Z",
-      "description": "Le Palais des Sports Ouaga 2000 dispose désormais d’un nouveau plancher moderne, sécurisé et conforme aux exigences de la pratique sportive de haut niveau. L’ouverture officielle au public de cette infrastructure réhabilitée est intervenue ce jeudi 11 Juin 2026, au cours d’une cérémonie présidée par la camarade Ministre des Sports, de la Jeunesse et de l’Emploi, Annick PICKBOUGOUM/ZINGUE OUATTARA. Cette cérémonie a enregistré la présence de plusieurs personnalités du monde sportif et institutionnel, dont l’Ambassadeur pour le sport burkinabè Charles KABORE, ainsi que des acteurs majeurs engagés dans le développement du sport national. Elle a été marquée par des allocutions, des matchs d’exhibition mettant aux prises de jeunes athlètes des disciplines de sports de main. Ces rencontres ont également réuni d’anciens internationaux et des vétérans du basketball, du volleyball et du handball. Dans son intervention, la Directrice générale du Fonds d’appui au sport et à la presse privée « Wassa Bondo » a réaffirmé l’engagement de son institution à accompagner les initiatives structurantes en faveur du sport burkinabè. Elle a souligné que la réalisation de ce nouveau plancher traduit la volonté du Fonds de contribuer à l’amélioration des infrastructures sportives et à la création de meilleures conditions de pratique pour les athlètes. Prenant part aux différentes rencontres sportives, Madame le Ministre a partagé un moment de proximité avec les acteurs du monde sportif, témoignant ainsi de l’engagement du département à promouvoir une pratique sportive accessible et à valoriser les figures emblématiques du sport burkinabè. La réalisation de ce nouveau plancher constitue un investissement important dans le développement des infrastructures sportives nationales. D’un coût de 211 201 061 francs CFA TTC, les travaux ont été financés par le Fonds d’appui au sport et à la presse privée « Wassa Bondo ». Ils ont permis de doter le Palais des Sports d’une aire de jeu répondant aux standards actuels pour l’accueil des compétitions nationales et internationales. La camarade Ministre a salué la contribution des différents partenaires ayant œuvré à la concrétisation de ce projet, notamment le Fonds « Wassa Bondo » pour son accompagnement financier, ainsi que l’entreprise AFRIK BTP et Logistique pour sa contribution aux travaux complémentaires ayant facilité l’homologation de la salle. À travers cette réhabilitation, le Ministère des Sports, de la Jeunesse et de l’Emploi traduit la volonté du Gouvernement de renforcer les équipements sportifs, d’améliorer les conditions de préparation des athlètes et de créer un environnement favorable à l’éclosion des talents. L’ouverture du nouveau plancher au public marque ainsi une nouvelle dynamique pour le sport burkinabè et confirme l’ambition de faire des infrastructures sportives des espaces de performance, de rassemblement et de cohésion sociale. DCRP/MSJE",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "Romuald Wadagni, un style qui inspire (Par Aly DIOUF)",
+      "link": "https://lesoleil.sn/actualites/politique/romuald-wadagni-un-style-qui-inspire-par-aly-diouf/",
+      "pubDate": "2026-06-12T11:30:55.000Z",
+      "description": "La visite d’amitié et de travail du nouveau Président béninois, Romuald Wadagni, au Sénégal, mardi 9 juin 2026, m’a poussé à m’intéresser davantage à celui qui est désormais le chef de l’État du Bénin (ancien Dahomey). Kossi Mbueke Romuald Wadagni, expert-comptable de formation, est le fils d’un économiste statisticien. Il a travaillé dans de grandes boîtes comme Deloitte où il a abattu un travail extraordinaire pour la structuration du cabinet, notamment en Afrique. Nommé ministre d’État par le Président Patrice Talon, il a géré pendant longtemps les finances du pays. Avant cette seconde tournée qui l’a successivement menée au Sénégal, au Mali et en Guinée-Bissau, Romuald Wadagni s’était, lors d’un premier déplacement, rendu au Nigéria, au Niger, au Burkina et en Côte d’Ivoire. Des tournées qui visent à renforcer le dialogue, la coopération économique et la sécurité régionale. Durant la campagne électorale, le candidat Wadagni, en tenu décontracté, a sillonné le pays en V8, en minibus, en « zémidjan » (moto) pour s’enquérir des problèmes de ses concitoyens. Il a fait montre d’humanité et d’humilité, mais aussi de sincérité et de sérieux dans son engagement politique en faveur des siens. Une démarche originale qui lui a valu très certainement son élection à la tête de son pays. Durant sa campagne électorale, il avait privilégié les rapports personnels, l’écoute des Béninois, la prise de pouls de la société béninoise. Il s’est imprégné des problèmes des couches socio-professionnelles du pays pour trouver des solutions aux problèmes que rencontrent ses compatriotes. Il demande aussi conseil aux personnes qu’il rencontre, des avis pour mieux les servir une fois aux affaires. Très modestement. C’est le cas avec le retraité Aballo. « C’est la loyauté et la disponibilité. Il faudra faire en sorte que la jeunesse se sente concernée. Le développement ne peut pas venir des autres. Nous devons nous sentir impliqués et apporter notre contribution », lui a suggéré le vieux qui se dit apolitique. À Parakou, Romuald Wadagni a rencontré Bonaventure, un enseignant de mathématiques, qui, par ailleurs, élève des lapins à ses heures perdues. Ensemble, ils ont échangé sur les voies et moyens pour rendre l’enseignement beaucoup plus attractif, mais aussi l’importance de repenser la manière d’enseigner et les contenus. À Séraphin, le néo riziculteur, il a exposé la politique de l’État dans le domaine pour atteindre l’autosuffisance en riz. « Étiez-vous au courant que l’État peut vous assister à obtenir des tracteurs pour accroître votre production ?», lui demande-t-il. Et il ajoute : « Nous allons vous assister… ». À Natitingou, dans le nord-ouest du Bénin, Romuald Wadagni a discuté avec la Porto-Novienne Joyïse, étudiante en physique-chimie. Il a essayé de voir, avec elle, les perspectives ainsi que ce l’État peut faire pour améliorer les conditions de vie et d’études pour que des filles, comme elle, puissent allez le plus loin possible dans leurs études. Toujours dans le Septentrion, il a visité un Tata et un site culturel pour voir avec son hôte du jour ce que le pays peut faire pour soutenir le tourisme et par ricochet le développement local. À Cové, Wadagni a rencontré Béatrice, une jeune fille passionnée d’élevage. Elle a fait état à Romuald de ses doléances pour fructifier son activité. « Sa voix compte », a-t-il dit. Il a aussi rencontré la piscicultrice Juvénale avec qui il a parlé de la scène de valeurs pour que les professionnels soient renforcés, mais aussi pour que l’assiette des Béninois soit bien remplie par les Béninois. Romuald Wadagni a été Toffo, à Allada, à Tori, à Ouidah, à Kpomassé, à Pahou, Sakété, à Dangbo, à Avrankou, à Ganvié, à Porto-Novo, à Sèmè-Kpodji, etc. Il a été sous l’arbre à palabres. Il a aussi rencontré Souladjo, le chauffeur de minibus, Abdoulaye qui est dans l’élevage intensif, Madeleine la productrice de beurre de karité, Fousseni le coiffeur, Hermione la commerçante, mère de famille courageuse, etc. Partout où il est passé, il a fait preuve d’engagement franc et sincère dans sa volonté de servir loyalement ses compatriotes. Son pays. aly.diouf@lesoleil.sn",
+      "_source": "Le Soleil (Sénégal)",
+      "_sourceId": "rss_lesoleil",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
@@ -1119,10 +1122,10 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "F2"
       },
-      "_rating": "F1",
-      "_score": 103,
+      "_rating": "F2",
+      "_score": 115,
       "_zone": 1,
       "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -1132,42 +1135,10 @@
   ],
   "alerts": [
     {
-      "title": "Ceasefire deal would end Lebanon fighting and reopen Hormuz, release billions to Iran - report",
-      "link": "https://www.jpost.com/middle-east/iran-news/article-899213",
-      "source": "Jerusalem Post",
-      "date": "2026-06-12T12:08:46.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "À Paris, un sommet pour relancer la perspective d'une solution à deux États",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260612-%C3%A0-paris-un-sommet-pour-relancer-la-perspective-d-une-solution-%C3%A0-deux-%C3%A9tats",
-      "source": "France 24",
-      "date": "2026-06-12T09:12:52.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "US-Iran ceasefire? Not for Indian sailors being killed in Hormuz",
-      "link": "https://www.aljazeera.com/news/2026/6/12/us-iran-ceasefire-not-for-indian-sailors-being-killed-in-hormuz?traffic_source=rss",
+      "title": "‘Dishonorable’: Trump says leaked Iran ceasefire terms fake",
+      "link": "https://www.aljazeera.com/news/2026/6/12/dishonorable-trump-says-leaked-iran-ceasefire-terms-fake?traffic_source=rss",
       "source": "Al Jazeera English",
-      "date": "2026-06-12T07:49:29.000Z",
+      "date": "2026-06-12T14:24:03.000Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1180,18 +1151,50 @@
       ]
     },
     {
-      "title": "L’effondrement du pont Ituri 2 à Mambasa paralyse les échanges et inquiète face à la menace des ADF",
-      "link": "https://www.radiookapi.net/2026/06/12/actualite/societe/leffondrement-du-pont-ituri-2-mambasa-paralyse-les-echanges-et-inquiete",
-      "source": "Radio Okapi (RDC)",
-      "date": "2026-06-12T04:17:49.000Z",
+      "title": "Israel expanding Gaza ‘yellow line’ to derail ceasefire talks, says Hamas",
+      "link": "https://www.aa.com.tr/en/middle-east/israel-expanding-gaza-yellow-line-to-derail-ceasefire-talks-says-hamas/3965331",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-12T13:47:48.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
-      "level": "critical",
+      "level": "high",
       "bf": false,
       "majors": [
         {
-          "type": "rupture",
-          "keyword": "effondrement"
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Iran-US draft deal would release $24B in funds, ensure Lebanon ceasefire: Iranian media",
+      "link": "https://www.al-monitor.com/originals/2026/06/iran-us-draft-deal-would-release-24b-funds-ensure-lebanon-ceasefire-iranian-media",
+      "source": "Al-Monitor",
+      "date": "2026-06-12T13:06:01.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Gaza ceasefire roadmap under threat as Israel expands territorial control, experts warn",
+      "link": "https://www.aa.com.tr/en/middle-east/gaza-ceasefire-roadmap-under-threat-as-israel-expands-territorial-control-experts-warn/3965246",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-12T12:46:20.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
         }
       ]
     }
@@ -1199,43 +1202,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      227
+      242
     ],
     [
       "occident_fr",
-      133
-    ],
-    [
-      "autre",
-      130
+      111
     ],
     [
       "golfe_mo",
-      94
+      96
     ],
     [
       "occident_us",
-      88
+      90
     ],
     [
-      "russie",
-      43
+      "autre",
+      69
+    ],
+    [
+      "turquie",
+      59
     ],
     [
       "bf_local",
-      33
+      44
+    ],
+    [
+      "russie",
+      37
     ],
     [
       "chine",
       30
     ],
     [
-      "turquie",
-      12
-    ],
-    [
       "sahel",
-      10
+      22
     ]
   ],
   "desks": [
@@ -1243,52 +1246,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 70,
+      "count": 98,
       "top": [
         {
-          "title": "CEDEAO : Dakar sollicite le soutien de Conakry pour porter le général Birame Diop à la tête de la Commission",
-          "link": "https://guineenews.org/2026/06/11/cedeao-dakar-sollicite-le-soutien-de-conakry-pour-porter-le-general-birame-diop-a-la-tete-de-la-commission/",
-          "source": "Guineenews",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Pénurie du ciment au Burkina Faso: la BMCRF dénonce des pratiques frauduleuses",
-          "link": "https://www.sidwaya.info/libertes-religieuses-au-burkina-faso-la-chefferie-coutumiere-et-traditionnelle-salue-linitiative-legislative-2/",
+          "title": "Prix du journalisme pour la paix et la cohésion sociale 2026 : Les Edifions Sidwaya, s’empare des prix de la catégorie presse écrite et du prix spécial Oxfam",
+          "link": "https://www.sidwaya.info/prix-du-journalisme-pour-la-paix-et-la-cohesion-sociale-2026-les-edifions-sidwaya-sempare-des-prix-de-la-categorie-presse-ecrite-et-du-prix-special-oxfam/",
           "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "Littérature religieuse : Le Pr Élie Kabré publie « Prier par la parole et les promesses », un guide pratique de prière fondé sur les Écritures",
-          "link": "https://lefaso.net/spip.php?article147099",
-          "source": "Lefaso.net",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "Burkina Faso: Les cimentiers confrontés à un problème d’approvisionnement en énergie et en matières premières, notamment le clinker importé",
-          "link": "https://netafrique.net/burkina-faso-les-cimentiers-confrontes-a-un-probleme-dapprovisionnement-en-energie-et-en-matieres-premieres-notamment-le-clinker-importe/",
-          "source": "Net Afrique (BF)",
+          "title": "« The Voice Afrique francophone » : Canal+ dévoile les rouages de la nouvelle saison",
+          "link": "https://journaldumali.com/the-voice-afrique-francophone-canal-devoile-les-rouages-de-la-nouvelle-saison/",
+          "source": "Journal du Mali",
           "zone": "1. Sahel & AO franco.",
-          "theme": "E",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Énergie et industrie: Les 72 heures du génie électrique pour booster le Burkina de demain",
-          "link": "https://netafrique.net/energie-et-industrie-les-72-heures-du-genie-electrique-pour-booster-le-burkina-de-demain/",
-          "source": "Net Afrique (BF)",
+          "title": "Sud-Ouest/Gouvernance locale: le Conseil régional présente un bilan de plus de 1,3 milliard FCFA d’investissements en trois ans",
+          "link": "https://www.aib.media/sud-ouest-gouvernance-locale-le-conseil-regional-presente-un-bilan-de-plus-de-13-milliard-fcfa-dinvestissements-en-trois-ans/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
+        },
+        {
+          "title": "Niger: Mariama Djibrine provisoirement déchue de la nationalité nigérienne",
+          "link": "https://www.aib.media/niger-mariama-djibrine-provisoirement-dechue-de-la-nationalite-nigerienne/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Coopération Burkina Faso-Allemagne: le ministre Nacanabo et Dr Braune passent en revue les relations bilatérales",
+          "link": "https://www.aib.media/cooperation-burkina-faso-allemagne-le-ministre-nacanabo-et-dr-braune-passent-en-revue-les-relations-bilaterales/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
         }
       ]
     },
@@ -1296,38 +1299,38 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 62,
+      "count": 67,
       "top": [
         {
-          "title": "Nigeria lawmakers advance state police reform to curb insecurity",
-          "link": "https://www.myjoyonline.com/nigeria-lawmakers-advance-state-police-reform-to-curb-insecurity/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "2026 World Cup: Lamentation galore as Nigeria misses out again",
+          "link": "https://www.vanguardngr.com/2026/06/2026-world-cup-lamentation-galore-as-nigeria-misses-out-again/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
-          "title": "Nigerian youths: Stop facebooking and face the book",
-          "link": "https://www.myjoyonline.com/nigerian-youths-stop-facebooking-and-face-the-book/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Plateau will never negotiate with terrorists — Gov Mutfwang",
+          "link": "https://www.vanguardngr.com/2026/06/plateau-will-never-negotiate-with-terrorists-gov-mutfwang/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Insecurity may shape 2027 elections, Adeniran warns",
-          "link": "https://www.vanguardngr.com/2026/06/insecurity-may-shape-2027-elections-adeniran-warns/",
+          "title": "Insecurity and fifth columnists: Highly placed individuals fund kidnap for survival, politics – Rear Admiral Olisemelogor",
+          "link": "https://www.vanguardngr.com/2026/06/insecurity-and-fifth-columnists-highly-placed-individuals-fund-kidnap-for-survival-politics-rear-admiral-olisemelogor/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Banditry, kidnapping threaten democracy, Kalejaye warns Tinubu",
-          "link": "https://www.vanguardngr.com/2026/06/banditry-kidnapping-threaten-democracy-kalejaye-warns-tinubu/",
+          "title": "Photos: Borno reintegrates 720 repentant terrorists, 992 spouses, 2,050 children back to society",
+          "link": "https://www.vanguardngr.com/2026/06/photos-borno-reintegrates-720-repentant-terrorists-992-spouses-2050-children-back-to-society/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "S",
@@ -1335,13 +1338,13 @@
           "rating": "F1"
         },
         {
-          "title": "20 years after Ghana’s Persons with Disability Act, 2006 (Act 715), has Ghana moved from Promises to Inclusion?",
-          "link": "https://www.myjoyonline.com/20-years-after-ghanas-persons-with-disability-act-2006-act-715-has-ghana-moved-from-promises-to-inclusion/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Côte d’Ivoire : Le Ghana rapatrie 327 de ses ressortissants après les démolitions à Port-Bouët",
+          "link": "https://www.minute.bf/cote-divoire-le-ghana-rapatrie-327-de-ses-ressortissants-apres-les-demolitions-a-port-bouet/",
+          "source": "Minute BF",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "L",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         }
       ]
     },
@@ -1349,8 +1352,35 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 30,
+      "count": 36,
       "top": [
+        {
+          "title": "RDC : violents affrontements à Kinshasa lors de la manifestation contre la réforme constitutionnelle",
+          "link": "https://www.jeuneafrique.com/1803690/politique/rdc-violents-affrontements-a-kinshasa-lors-de-la-manifestation-contre-la-reforme-constitutionnelle/",
+          "source": "Jeune Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Sudan Nashra: Seasonal rains threaten to deepen crisis in Blue Nile’s displacement camps | Khartoum orders universities back to war-damaged campuses | RSF-led govt holds 1st secondary school exams | Dozens killed in North Kordofan as military, RSF step up drone strikes | Key bridges destroyed in Kordofan, Darfur, threatening aid routes",
+          "link": "https://www.madamasr.com/en/2026/06/12/news/u/sudan-nashra-seasonal-rains-threaten-to-deepen-crisis-in-blue-niles-displacement-camps-khartoum-orders-universities-back-to-war-damaged-campuses-rsf-led-govt-holds-1st-secondary-school-e/",
+          "source": "Mada Masr (Égypte)",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Supercoupe de l’UEFA 2026: Omar Artan, l’arbitre somalien à l’honneur",
+          "link": "https://www.wakatsera.com/supercoupe-de-luefa-2026-omar-artan-larbitre-somalien-a-lhonneur/",
+          "source": "Wakat Séra",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
         {
           "title": "Cameroun – Aboubakar Ousmane Mey : « Paul Biya existe sur le plan physique mais ne dirige plus »",
           "link": "https://www.jeuneafrique.com/1803410/politique/cameroun-aboubakar-ousmane-mey-paul-biya-existe-sur-le-plan-physique-mais-ne-dirige-plus/",
@@ -1368,33 +1398,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Cameroun : la décision du Conseil constitutionnel attendue sur la prorogation du mandat des conseillers municipaux",
-          "link": "https://fr.journalducameroun.com/cameroun-la-decision-du-conseil-constitutionnel-attendue-sur-la-prorogation-du-mandat-des-conseillers-municipaux/",
-          "source": "Journal du Cameroun",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Cameroun/ Mamadou Mota : ‘’Voici pourquoi ce recours est une arme de destruction massive contre le régime’’",
-          "link": "https://fr.journalducameroun.com/cameroun-mamadou-mota-voici-pourquoi-ce-recours-est-une-arme-de-destruction-massive-contre-le-regime/",
-          "source": "Journal du Cameroun",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Ebola en RDC : MSF intensifie la surveillance épidémiologique",
-          "link": "https://www.radiookapi.net/2026/06/12/actualite/sante/ebola-en-rdc-msf-intensifie-la-surveillance-epidemiologique",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1402,11 +1405,29 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 31,
+      "count": 37,
       "top": [
         {
-          "title": "Sebta : les arrivées de mineurs étrangers non accompagnés attisent la crise des structures d’accueil",
-          "link": "https://fr.hespress.com/477101-sebta-les-arrivees-de-mineurs-etrangers-non-accompagnes-attisent-la-crise-des-structures-daccueil.html",
+          "title": "Pour l’Allemagne, la Tunisie reste une destination d’investissement stratégique",
+          "link": "https://kapitalis.com/tunisie/2026/06/12/pour-lallemagne-la-tunisie-reste-une-destination-dinvestissement-strategique/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Mondial 2026 : le doute s’installe autour de Neymar avant le choc face au Maroc",
+          "link": "https://fr.hespress.com/477239-mondial-2026-le-doute-sinstalle-autour-de-neymar-avant-le-choc-face-au-maroc.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Facebook, Instagram et Messenger touchés par une panne mondiale",
+          "link": "https://fr.hespress.com/477248-facebook-instagram-et-messenger-touches-par-une-panne-mondiale.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
@@ -1430,24 +1451,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Mondial 2026 : Rabat lance la « Rabat Live Arena », une fan zone géante au Complexe Moulay El Hassan",
-          "link": "https://fr.hespress.com/477165-mondial-2026-rabat-lance-la-rabat-live-arena-une-fan-zone-geante-au-complexe-moulay-el-hassan.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Amine El Bahi, le Franco-Algérien qui croyait apprivoiser l’extrême droite",
-          "link": "https://www.tsa-algerie.com/amine-el-bahi-le-franco-algerien-qui-croyait-apprivoiser-lextreme-droite/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1455,32 +1458,23 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 116,
+      "count": 108,
       "top": [
         {
-          "title": "Ceasefire deal would end Lebanon fighting and reopen Hormuz, release billions to Iran - report",
-          "link": "https://www.jpost.com/middle-east/iran-news/article-899213",
-          "source": "Jerusalem Post",
+          "title": "Iran-US draft deal would release $24B in funds, ensure Lebanon ceasefire: Iranian media",
+          "link": "https://www.al-monitor.com/originals/2026/06/iran-us-draft-deal-would-release-24b-funds-ensure-lebanon-ceasefire-iranian-media",
+          "source": "Al-Monitor",
           "zone": "8. Moyen-Orient",
-          "theme": "M",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "World: Global Conflict Systems - Global Peace Index 2026: Special Supplement",
-          "link": "https://reliefweb.int/report/world/global-conflict-systems-global-peace-index-2026-special-supplement",
-          "source": "ReliefWeb",
+          "title": "L’Iran campe sur son droit à l’enrichissement nucléaire pour tout accord avec les Etats-Unis",
+          "link": "https://mediaguinee.com/2026/06/liran-campe-sur-son-droit-a-lenrichissement-nucleaire-pour-tout-accord-avec-les-etats-unis/",
+          "source": "Mediaguinee",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "Téhéran dit ne pas avoir tranché sur un accord brandi par Trump",
-          "link": "https://fr.hespress.com/477159-teheran-dit-ne-pas-avoir-tranche-sur-un-accord-brandi-par-trump.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "N",
           "relevance": "A",
           "rating": "A2"
         },
@@ -1494,13 +1488,22 @@
           "rating": "A2"
         },
         {
-          "title": "Les migrations ont triplé depuis le début du siècle",
-          "link": "https://legrandcontinent.eu/fr/2026/06/12/les-migrations-ont-triple-depuis-le-debut-du-siecle/",
-          "source": "Le Grand Continent",
+          "title": "Israel expanding Gaza ‘yellow line’ to derail ceasefire talks, says Hamas",
+          "link": "https://www.aa.com.tr/en/middle-east/israel-expanding-gaza-yellow-line-to-derail-ceasefire-talks-says-hamas/3965331",
+          "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
-          "theme": "C",
-          "relevance": "L",
-          "rating": "A2"
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Gaza ceasefire roadmap under threat as Israel expands territorial control, experts warn",
+          "link": "https://www.aa.com.tr/en/middle-east/gaza-ceasefire-roadmap-under-threat-as-israel-expands-territorial-control-experts-warn/3965246",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
         }
       ]
     },
@@ -1508,101 +1511,105 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 196,
+      "count": 155,
       "top": [
         {
-          "title": "En Russie, « la vie n’a plus aucune valeur en soi »",
-          "link": "https://legrandcontinent.eu/fr/2026/06/12/economie-de-la-mort/",
-          "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "E",
+          "title": "Afrique du Sud: 268 Nigérians quittent le pays dans un contexte de durcissement migratoire",
+          "link": "https://www.wakatsera.com/afrique-du-sud-268-nigerians-quittent-le-pays-dans-un-contexte-de-durcissement-migratoire/",
+          "source": "Wakat Séra",
+          "zone": "6. Afrique australe",
+          "theme": "L",
+          "relevance": ".",
+          "rating": "A2"
+        },
+        {
+          "title": "Sommet sino-nord-coréen : pourquoi la Chine cherche-t-elle à renforcer son partenariat avec la Corée du Nord ?",
+          "link": "https://www.iris-france.org/sommet-sino-nord-coreen-pourquoi-la-chine-cherche-t-elle-a-renforcer-son-partenariat-avec-la-coree-du-nord/",
+          "source": "IRIS France",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "À Paris, un sommet pour relancer la perspective d'une solution à deux États",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260612-%C3%A0-paris-un-sommet-pour-relancer-la-perspective-d-une-solution-%C3%A0-deux-%C3%A9tats",
-          "source": "France 24",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "EN DIRECT, guerre au Moyen-Orient : Donald Trump annonce un nouvel accord prévoyant la réouverture du détroit d’Ormuz ; l’Iran dévoile les détails des négociations en cours",
-          "link": "https://www.lemonde.fr/international/live/2026/06/12/en-direct-guerre-au-moyen-orient-donald-trump-annonce-un-nouvel-accord-a-venir-prevoyant-la-reouverture-totale-du-detroit-d-ormuz_6701050_3210.html",
+          "title": "EN DIRECT, guerre au Moyen-Orient : Donald Trump dément les termes de l’accord avec Téhéran tels qu’ils ont été rapportés par les médias iraniens",
+          "link": "https://www.lemonde.fr/international/live/2026/06/12/en-direct-guerre-au-moyen-orient-donald-trump-dement-les-termes-de-l-accord-avec-teheran-tels-qu-ils-ont-ete-rapportes-par-les-medias-iraniens_6701050_3210.html",
           "source": "Le Monde International",
           "zone": "16. Amérique du Nord",
-          "theme": "M",
+          "theme": "P",
           "relevance": "L",
           "rating": "B1"
         },
         {
-          "title": "Immigration : filtrage aux frontières, «hubs de retour»… Ce que contient la grande réforme de l’UE qui entre en vigueur",
-          "link": "https://www.liberation.fr/international/europe/immigration-filtrage-aux-frontieres-hubs-de-retour-ce-que-contient-la-grande-reforme-de-lue-qui-entre-en-vigueur-20260612_4JF4VWZSX5DJJDQYDFNPIH3RQE/",
-          "source": "Libération International",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
+          "title": "Au Texas, l’introduction en bourse de SpaceX pourrait rendre plusieurs centaines d’employés millionnaires",
+          "link": "https://legrandcontinent.eu/fr/2026/06/12/au-texas-lintroduction-en-bourse-de-spacex-pourrait-rendre-plusieurs-centaines-demployes-millionnaires/",
+          "source": "Le Grand Continent",
+          "zone": "16. Amérique du Nord",
+          "theme": "E",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "A1"
         },
         {
-          "title": "Guerre au Moyen-Orient : Donald Trump assure qu’un « très bon accord » a été trouvé avec l’Iran, Téhéran dément toute « conclusion définitive »",
-          "link": "https://www.lemonde.fr/international/article/2026/06/12/guerre-au-moyen-orient-donald-trump-assure-qu-un-tres-bon-accord-a-ete-trouve-avec-l-iran-teheran-dement-toute-conclusion-definitive_6701049_3210.html",
-          "source": "Le Monde International",
-          "zone": "16. Amérique du Nord",
+          "title": "Aux confins de la Pologne et de l'Ukraine, l'ombre des minorités effacées",
+          "link": "https://www.monde-diplomatique.fr/2026/06/GOUSSEFF/69610",
+          "source": "Le Monde Diplomatique",
+          "zone": "10. Europe orient. & Balkans",
           "theme": null,
           "relevance": ".",
-          "rating": "B1"
+          "rating": "B2"
         }
       ]
     }
   ],
   "indicators": [
-    "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
     "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-06-12T10:57:49.331Z",
+      "at": "2026-06-12T15:33:42.869Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-12T10:57:49.338Z",
+      "at": "2026-06-12T15:33:42.877Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-12T10:58:38.853Z",
+      "at": "2026-06-12T15:34:16.189Z",
       "agent": "Agent Collecte RSS",
-      "message": "112/170 flux OK, 1915 articles"
+      "message": "118/170 flux OK, 1986 articles"
     },
     {
-      "at": "2026-06-12T10:58:41.787Z",
+      "at": "2026-06-12T15:34:19.153Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-12T10:58:42.120Z",
+      "at": "2026-06-12T15:34:19.492Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-12T10:58:42.125Z",
+      "at": "2026-06-12T15:34:19.497Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 4 alertes"
     },
     {
-      "at": "2026-06-12T10:58:42.126Z",
+      "at": "2026-06-12T15:34:19.497Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-06-12T15:34:19.497Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
