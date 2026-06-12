@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-12T10:27:30.389Z",
+  "generatedAt": "2026-06-12T10:58:42.123Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1942,
+    "ok": 112,
+    "failed": 58,
+    "articles": 1915,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -21,11 +21,6 @@
         "id": "rss_sidwaya",
         "name": "Sidwaya",
         "count": 10
-      },
-      {
-        "id": "rss_aib",
-        "name": "AIB — Agence Information BF",
-        "count": 20
       },
       {
         "id": "rss_wakatsera",
@@ -61,6 +56,11 @@
         "id": "rss_observ_bf",
         "name": "L'Observateur Paalga",
         "count": 0
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "count": 10
       },
       {
         "id": "rss_maliweb",
@@ -158,6 +158,11 @@
         "count": 30
       },
       {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
+      },
+      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -176,6 +181,11 @@
         "id": "rss_standard_ke",
         "name": "The Standard (Kenya)",
         "count": 30
+      },
+      {
+        "id": "rss_dabanga",
+        "name": "Dabanga Sudan",
+        "count": 12
       },
       {
         "id": "rss_news24",
@@ -493,18 +503,8 @@
         "count": 30
       },
       {
-        "id": "rss_anadolu",
-        "name": "Anadolu Agency (Turquie)",
-        "count": 28
-      },
-      {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
-        "count": 30
-      },
-      {
-        "id": "rss_tehran",
-        "name": "Tehran Times",
         "count": 30
       },
       {
@@ -520,7 +520,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 26
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -545,17 +545,7 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 0
-      },
-      {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "count": 0
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_hrw",
@@ -580,13 +570,13 @@
     ],
     "failedSources": [
       {
-        "id": "rss_omega",
-        "name": "Radio Omega Burkina",
-        "error": "fetch failed"
+        "id": "rss_aib",
+        "name": "AIB — Agence Information BF",
+        "error": "This operation was aborted"
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
+        "id": "rss_omega",
+        "name": "Radio Omega Burkina",
         "error": "fetch failed"
       },
       {
@@ -672,7 +662,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
@@ -688,11 +678,6 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -718,11 +703,6 @@
         "id": "rss_sudan_trib",
         "name": "Sudan Tribune",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_dabanga",
-        "name": "Dabanga Sudan",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_dailymav",
@@ -830,6 +810,16 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_anadolu",
+        "name": "Anadolu Agency (Turquie)",
+        "error": "HTTP 502"
+      },
+      {
+        "id": "rss_tehran",
+        "name": "Tehran Times",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -843,6 +833,16 @@
         "id": "rss_folha",
         "name": "Folha de São Paulo (Brésil)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "error": "HTTP 406"
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "error": "HTTP 406"
       },
       {
         "id": "rss_amnesty",
@@ -863,9 +863,9 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 37,
-    "alerts": 5,
-    "criticalAlerts": 2,
+    "bfAes": 35,
+    "alerts": 4,
+    "criticalAlerts": 1,
     "sourcesDistinct": 72
   },
   "topDevelopments": [
@@ -931,6 +931,39 @@
       "_score": 127,
       "_zone": 1,
       "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Littérature religieuse : Le Pr Élie Kabré publie « Prier par la parole et les promesses », un guide pratique de prière fondé sur les Écritures",
+      "link": "https://lefaso.net/spip.php?article147099",
+      "pubDate": "2026-06-12T10:56:18.000Z",
+      "description": "Le Pr Élie Kabré a procédé, le jeudi 11 juin 2026, au sanctuaire Notre-Dame de Yagma à Ouagadougou, à la dédicace de son premier ouvrage intitulé « Prier par la parole et les promesses ». À travers ce guide de prière inspiré des Saintes Écritures, l'auteur entend accompagner les chrétiens dans l'approfondissement de leur vie spirituelle. Dans cette œuvre de 116 pages, subdivisée en neuf chapitres, le pharmacien et biochimiste s'appuie sur plus de 400 références bibliques. Les différents chapitres abordent, entre autres, les prières liturgiques fondamentales, la proclamation des promesses divines, l'action de grâce, ainsi que les louanges et l'adoration. Les questions relatives à la santé, au mariage, aux enfants, au travail et aux combats spirituels y sont également développées. Par ailleurs enseignant à l'université Joseph-Ki-Zerbo, l'auteur partage dans cet ouvrage des réflexions nourries par son expérience de foi. Pour lui, cette production littéraire constitue le témoignage de sa fidélité à la prière. « C'est un témoignage vivant, une arme spirituelle mise entre les mains de tout chrétien en quête d'une prière plus profonde, plus ancrée et plus efficace », a-t-il confié. Selon lui, l'ouvrage traite d'un sujet qui lui tient particulièrement à cœur. À travers ce livre, il met en exergue la puissance de la parole de Dieu et l'importance d'une prière fondée sur celle-ci. L'auteur, Elie Kabré, affirme que son ouvrage est le témoignage de sa vie de prière L'auteur affirme que sa confiance en Dieu et sa fidélité à la prière lui ont ouvert des portes et redonné de l'espérance à des moments où il pensait que tout allait s'écrouler. Fort de cette expérience, il invite les croyants à se procurer l'ouvrage afin de mieux orienter leur vie de prière dans un monde en perpétuelle mutation. « Nous vivons dans un monde marqué par les incertitudes, les inquiétudes et de nombreuses crises susceptibles d'ébranler notre foi. Plus que jamais, nous avons besoin de revenir aux fondamentaux de notre confiance en Dieu à travers la prière », a-t-il soutenu. Le préfacier de l'ouvrage, le père Jules Pascal Zabré, a salué la contribution intellectuelle de l'auteur. Il a invité les chrétiens à s'approprier ce guide afin de renforcer leur vie de foi. Au-delà de cet appel à la lecture, le préfacier, également recteur du sanctuaire Notre-Dame de Yagma, a souligné la qualité de l'ouvrage ainsi que l'investissement intellectuel consenti par son auteur. Le préfacier, le père Jules Pascal Zabré, a invité les chrétiens à se procurer le livre Le présentateur de l'œuvre, l'abbé Silvère Yaméogo, a lui aussi félicité le Pr Élie Kabré pour cette publication. Il a indiqué que l'ouvrage n'est pas un traité de théologie, mais plutôt un outil pratique destiné à accompagner la prière quotidienne des fidèles. À son tour, il a exhorté les chrétiens à se le procurer. Édité par Avé Dignité Humaine, l'ouvrage est vendu au prix unitaire de 2 000 francs CFA. Il est disponible à la librairie Jeunesse d'Afrique, à la Maison de la Bible ainsi qu'auprès de l'auteur. S.I.K. Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1033,81 +1066,15 @@
       "_desk": "A1"
     },
     {
-      "title": "Retour des déplacés dans le Nakambé: la ministre Pélagie Kabré réconforte les populations réinstallées",
-      "link": "https://www.sidwaya.info/retour-des-deplaces-dans-le-nakambe-la-ministre-pelagie-kabre-reconforte-les-populations-reinstallees/",
-      "pubDate": "2026-06-11T23:40:16.000Z",
-      "description": "La ministre de la Famille et de la Solidarité, le lieutenant-colonel, Pélagie Kabré a échangé, les 10 et 11 juin 2026, dans la région du Nakambé, avec plusieurs populations retournées dans leurs localités d’origine après avoir été déguerpies par des groupes armés terroristes. La vie a repris ses droits dans plusieurs localités affectées par le terrorisme dans la région du Nakambé. C’est le cas de deux villages, au Sud de la province du Koulpélogo où les populations, forcées de quitter leurs terres, il y a quelques années, ont retrouvé le sourire. Là-bas, depuis 2023-2024, elles ont commencé à retrouver le goût à la vie, grâce aux efforts des forces de défense et de sécurité dans la reconquête du territoire. Parmi elles, une Brigade d’intervention rapide (BIR), installée à cheval entre les deux localités, appuyée par les Volontaires pour la défense de la patrie (VDP), continue de veiller au grain. Le mercredi 10 juin 2026, c’est aux cris de joie ‘’IB’’,’’IB’’, en référence au Président du Faso, le capitaine Ibrahim Traoré, que les populations retournées ont accueilli le ministre de la Famille et de la Solidarité, le lieutenant-colonel, Pélagie Kabré, porteuse d’un message d’espoir et de résilience à l’endroit de ces deux villages qui avaient vu leur vie basculer du jour au lendemain par des hordes terroristes. F.B. est l’une des femmes retournées. Elle a exprimé sa joie de retrouver sa concession après plus d’une année d’errance. Elle s’est dit d’autant plus contente que la ministre ne soit pas venue les mains vides. En effet, le chef du département de la famille y a apporté des vivres composés de riz, de pâtes alimentaires, de sel, de l’huile, de sucre mais aussi des filtres à eau individuels, des lampes torches solaires, de l’engrais, des moulins diésel, pour ne citer que ceux-là. « Nous avons quitté le village en 2023 et nous sommes revenus en 2024. Ça n’a pas été facile. Mais le gouvernement nous a aidés à retrouver nos domiciles avec joie », s’est-elle exclamée. Profitant de la présence du ministre de la Famille, la quadragénaire a égrené plusieurs difficultés allant de l’absence d’eau potable au manque d’infrastructures sociales (école, centre de santé), en passant par l’absence de perspectives en saison sèche afin de permettre aux femmes de mener des activités génératrices de revenus. « Nous n’avons pas de centre de santé. En cas de maladie notamment la nuit, c’est la croix et la bannière pour rejoindre un centre de santé », a-t-elle déploré. Elle a plaidé pour un appui du gouvernement afin de permettre aux femmes de son village de développer des activités génératrices de revenus. Dans un autre village, situé à 3 km du premier, le chef de la localité a confié que le retour n’a pas été facile car tout était à refaire. Mais la main sur le cœur, il a promis que lui et ses administrés sont déterminés à faire face à l’adversité pour rester sur leurs terres. « Nous n’avons d’autres lieux où aller. Nous allons nous battre pour y rester, même si cela doit nous couter la vie », a-t-il promis. Le choix de résister La représentante des femmes de ce village, A.Z, a expliqué que la présence de la ministre est un symbole fort de la proximité du gouvernement avec la population des zones confrontées aux défis sécuritaires. Selon elle, c’est la preuve que la population de son village n’est ni oubliée ni abandonnée. « En acceptant venir jusqu’à nous, vous avez accepté partager nos peines et nos espoirs », a-t-elle lancé. Pour elle, la population de sa bourgade, qui est restée courageuse malgré les épreuves, refuse de céder au découragement. « Votre visite constitue pour nous un message de solidarité, de compassion et d’espoir », a-t-elle insisté. A.Z. a reconnu que l’insécurité qu’a subie le village depuis plusieurs années a bouleversé des habitudes de vies, affecté les activités économiques, limité l’accès à certains services sociaux de base et fragilisé certaines familles. « Les champs, autrefois prospères, sont difficilement accessibles, des AGR ont été ralenties, les familles vivent dans l’inquiétude permanente. Des veuves, des orphelins, des personnes âgées font face à des défis considérables », a-t-elle énuméré. Toutefois, elle a souligné que les populations continuent de croire en l’avenir, de cultiver ses terres lorsque la situation le permet. « Les populations ont fait le choix de résister à la peur et au découragement », a-t-elle martelé. Pour elle, quitter leurs terres reviendrait à abandonner une partie de leur histoire, de leur identité et de leur patrimoine. Le président de la délégation spéciale de la commune, M.C. a vu en la visite du ministre l’expression de la solidarité nationale. C’est la preuve, selon lui, que le gouvernement reste engagé aux côtés des populations là où le besoin se fait sentir. « Ces vivres constituent les véritables socles sur lesquels les populations vont s’appuyer pour mener leurs activités économiques et aborder la campagne agricole qui s’annonce », a-t-il déclaré. Deuxième jour, même exercice dans la province du Boulgou dans deux autres villages, situés au Sud de la province : échanges avec les chefs coutumiers et les populations, et remise de vivres. La première localité, déguerpie, pendant quatre mois, en 2023 a repris ses activités. Le chef dudit village a expliqué qu’à son retour dans sa concession, tout avait été détruit. Mais, il a confié que ce sont les forces de défense et de sécurité qui ont remis sa maison en état d’habiter. C’est pourquoi, il a exprimé sa reconnaissance aux FDS et aux VDP. En dépit de l’accalmie retrouvée depuis trois ans, le vieillard a dit toujours avoir la peur au ventre. 30 000 ménages retournés en deux mois Dans une autre bourgade, située à quelques jets de pierre de la frontière avec le Ghana, la représentante des femmes, P.S., a confié que dans leur fuite pour s’échapper aux forces du mal, tout a été abandonné. A leur retour, elle ajouté que c’est avec amertume que les populations ont constaté que le bétail et les vivres avaient été pillés. Comme d’autres localités, elle a plaidé pour un appui en équipements afin de permettre aux femmes de développer des activités génératrices de revenus. Elle a aussi demandé la réalisation de forages pour consolider leur réinstallation. Informée du taux élevé d’abandon scolaire des filles au profit des mariages précoces, Pélagie Kabré a soutenu qu’il n’y a pas de santé sans personnel de santé, encore moins un avenir sans école. Elle a appelé les leaders coutumiers à encourager la scolarisation des enfants. La ministre Kabré a rendu un hommage aux FDS et aux VDP grâce à qui, certaines localités, jadis déguerpies par les terroristes, sont habitées. Elle a expliqué que la tournée s’inscrit dans le cadre général des visites dans les localités de retour. Pour elle, les forces combattantes ont une avancée dans la reconquête du territoire national. Elle en veut pour preuve, le retour progressif des populations dans leurs localités respectives. « Ces deux derniers mois, nous avons accompagné 30 000 ménages à retourner dans leurs localités d’origine dans l’ensemble du territoire », a-t-elle confié. Ce qui est, à son avis, une preuve que la sécurisation du territoire n’est pas que des chiffres mais une réalité tangible sur le terrain. Le lieutenant-colonel Kabré a aussi justifié sa présence par la volonté de transmettre un message de solidarité du gouvernement et d’encouragement aux populations qui ont accepté braver la peur pour repartir dans leur localité d’origines. « Nous avons constaté une population résiliente qui vaque tranquillement à ses occupations, qui a des préoccupations », a-t-il relevé. Pélagie Kabré a dit avoir pris note des doléances à elles soumises qui, pour la plupart, concernent les services sociaux de base et entend les examiner une fois de retour à Ouagadougou, avec d’autres membres du gouvernement. En outre, elle a laissé entendre que cette tournée est bénéfique à plus d’un titre parce qu’elle lui a permis de marquer la présence du gouvernement, aux côtés de ses populations. « Cela aussi nous a permis de toucher du doigt leurs réalités ; ce qui va nous permettre de corriger le tir lorsque nous aurons des interventions à leur endroit », a-t-elle dit. Avant quitter ses hôtes, la ministre de la Famille a appelé les déplacés internes sur l’ensemble du territoire à la solidarité, à suivre les mots d’ordre et l’exemple des populations qui, jadis déplacées comme elles, ont accepté repartir dans leurs localités d’origine. Elle a précisé que les services déconcentrés de son département sont disponibles pour enregistrer les déplacés désireux de retourner dans leur terroir en vue de les accompagner. Anselme KAMBIRE",
+      "title": "Libertés religieuses au Burkina Faso : la FEME soutient le projet gouvernemental et propose des ajustements",
+      "link": "https://www.sidwaya.info/libertes-religieuses-au-burkina-faso-la-feme-soutient-le-projet-gouvernemental-et-propose-des-ajustements/",
+      "pubDate": "2026-06-12T10:30:56.000Z",
+      "description": "La Commission des affaires générales, institutionnelles et des droits humains (CAGIDH) a reçu, le jeudi 11 juin 2026, une délégation de la Fédération des églises et missions évangéliques (FEME), dans le cadre de l'examen du projet de loi portant libertés religieuses au Burkina Faso. Cette consultation s'inscrit dans une démarche inclusive visant à enrichir le texte fondamental avant son adoption. La délégation de la FEME a d’emblée tenu à saluer l'initiative législative, exprimant sa gratitude à la CAGIDH et au Parlement pour l'avoir associée au processus d'élaboration. Pour elle, l'enjeu est de doter le Burkina Faso d'un instrument juridique à la hauteur des défis que pose la coexistence des communautés religieuses dans un pays aux croyances plurielles. La délégation de la FEME a égrainé un chapelet de recommandations touchant à des questions aussi essentielles que les définitions fondamentales du texte, les garanties accordées aux croyants, les interdictions et obligations imposées aux organisations religieuses, ou encore les conditions d'érection et d'ouverture des édifices de culte. La liberté des débats religieux et le financement des structures confessionnelles ont également été mis sur la table, témoignant d'une réflexion approfondie sur les équilibres à trouver. La FEME partage l'avis de la régulation des libertés religieuses par l’Etat, afin de consolider davantage la cohésion sociale et le vivre-ensemble. Cette régulation ne doit pas être conçue comme une contrainte, mais comme une protection et, surtout, comme une prévention des dérives qui menacent la paix sociale dans un pays où la foi demeure un pilier identitaire majeur. Source : DCRP/Assemblée Législative du Peuple (ALP)",
       "_source": "Sidwaya",
       "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Mory Condé est-il passé de Ministre à Simbo ? (Par Souleymane Doumbouya)",
-      "link": "https://mediaguinee.com/2026/06/mory-conde-est-il-passe-de-ministre-a-simbo-par-souleymane-doumbouya/",
-      "pubDate": "2026-06-11T21:44:37.000Z",
-      "description": "L'une des plus grandes consecrations et révélations au grand public (car déjà suffisamment connu dans le domaine du développement local et la société civile à travers son ONG AGIL) de l'avènement du CNRD, Monsieur le Ministre Mory Condé, polarise aujourd'hui, toutes les attentions. Elle se fait de par sa tenue d'apparat lors de la conférence annuelle de l'Organisation Internationale du Travail (OIT) en Suisse. En effet, au-delà du port du textile typiquement manding ( dont la capitale de l'Empire est Niani, sise en Guinée), c'est l'expression du goût effréné de vendre l'image d'un continent dont les codes vestimentaires ont été totalement dillués dans ce que les colons Arabo-musulmans et judeo-chretiens ont de pire, c'est-à-dire, cette énorme faculté de substitution et d'assimilation culturelle. Ainsi, face à nos croyances endogènes, traitées de paganisme, il a été imposé le monothéisme abrahamique, nos tisserands ont été stoppés net par les tissus en provenance de la nouvelle industrie naissante suite à la Révolution industrielle développée par l'usage de la machine à vapeur. Que dire de notre technologie alimentaire avec ses multiples procédés, en brasserie ou autres moyens de conservation et de notre médecine dite traditionnelles etc. ? Tous cloués au pilori et décriés ! Pourtant, revenir de temps à autre à ce qui peut-être revalorisé et adapté à ce jour, ceci, en puisant dans notre riche patrimoine historico-culturel, n'est que noblesse de l'âme. Voilà pourquoi de l'Arabie saoudite, en passant par l'Inde, le Japon, le Pakistan et aujourd'hui, voire même en Afrique, le Nigeria, le Ghana sans parler du Burkina Faso pour ne citer que ceux-là, ce reflexe est partout perceptible. Loin de l'exhibitionnisme, c'est une envie manifeste d'apporter son petit grain d'identité dans ce que prématurément le Président Leopold Sedar Senghor appelait insidieusement : « LA CIVILISATION DE L'UNIVERSEL ». Enfin, je dirais qu'à côté du poutho, du lepi, des tissus dits « forêt sacrée », ce bel ensemble de la tenue « du Simbo » ou » Maître Chasseur ou Mage » autrement dit la plus grande distinction des hommes forts du manding que l'Empereur Soundjata lui-même porta avec humilité et fierté. Il est composé du pantalon, de la tunique et du bonnet. Il vient désormais (bien qu'il existe depuis belle lurette) à point nommé, enrichir l'offre cultrelle vestimentaire guinéenne que les stylistes-artistes de la haute couture pourraient encore embellir, car, l'oeuvre humaine reste perfectible à l'infini. Félicitations à Monsieur le Ministre Mory Condé pour nous avoir gratifiés de cette belle tenue typiquement manding. Souleymane DOUMBOUYA L’article Mory Condé est-il passé de Ministre à Simbo ? (Par Souleymane Doumbouya) est apparu en premier sur Mediaguinee.com .",
-      "_source": "Mediaguinee",
-      "_sourceId": "rss_mediaguinee",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Province du Sandbondtenga : Un employé de commerce remporte plus de 31 millions de francs CFA au PMU'B à Kaya",
-      "link": "https://lefaso.net/spip.php?article147097",
-      "pubDate": "2026-06-12T10:05:00.000Z",
-      "description": "La chance a souri à Adama Sawadogo. Cet employé de commerce est devenu millionnaire après avoir remporté la somme de 31 088 000 francs CFA à la Loterie nationale burkinabè (LONAB). La remise officielle du chèque est intervenue le jeudi 11 juin 2026, à Kaya, en présence des autorités locales et des responsables de la société nationale de loterie. Selon les informations communiquées lors de la cérémonie, le gagnant a décroché ce jackpot en misant 16 800 FCFA au jeu du « 4+1 » du 22 mai 2026. Un pari qui lui a permis d'empocher une importante cagnotte et de rejoindre le cercle des grands gagnants de la LONAB. À l'occasion de la remise du chèque, Mahamady Dembega, chef du service commercial de l'agence provinciale de Ouagadougou, a adressé ses félicitations au bénéficiaire tout en l'exhortant à faire preuve de prudence dans la gestion de cette somme. « Je lui souhaite de faire bon usage de ce gain. Peut-être qu'il n'a pas encore eu le temps de bien réfléchir. Il faut qu'il prenne le temps nécessaire afin que cet argent lui profite, ainsi qu'à sa famille et à son entourage », a-t-il déclaré. Même message de responsabilité du côté de Solange Kiema/Minoungou, présidente de la délégation spéciale de la commune de Kaya. Présente à la cérémonie, elle a salué la chance du lauréat et l'a invité à investir judicieusement cette somme. « Je lui transmets toutes mes vives félicitations et je l'encourage à faire bon usage de cet argent », a-t-elle indiqué. Elle a également lancé un appel aux autres parieurs à continuer de faire confiance à la LONAB, rappelant que chacun peut espérer connaître un jour la même réussite. Très ému, le nouveau millionnaire n'a pas caché sa joie. Déclarant manquer de mots pour exprimer son ressenti, Adama Sawadogo a assuré vouloir utiliser ce gain de manière responsable. « Je suis vraiment content d'avoir obtenu ce lot. Je vais investir dans mon commerce afin de faire fructifier cet argent », a-t-il confié. Grâce à cette manne financière, le gagnant entend renforcer ses activités commerciales et concrétiser de nouveaux projets, ouvrant ainsi une nouvelle page de sa vie. Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
       "_tags": [
         "economic",
         "diplomatic",
@@ -1123,6 +1090,38 @@
         "rating": "C1"
       },
       "_rating": "C1",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Ouagadougou : Le Palais des sports se dote d’un nouveau plancher moderne et sécurisé",
+      "link": "https://www.minute.bf/ouagadougou-le-palais-des-sports-se-dote-dun-nouveau-plancher-moderne-et-securise/",
+      "pubDate": "2026-06-12T08:35:58.000Z",
+      "description": "Le Palais des Sports Ouaga 2000 dispose désormais d’un nouveau plancher moderne, sécurisé et conforme aux exigences de la pratique sportive de haut niveau. L’ouverture officielle au public de cette infrastructure réhabilitée est intervenue ce jeudi 11 Juin 2026, au cours d’une cérémonie présidée par la camarade Ministre des Sports, de la Jeunesse et de l’Emploi, Annick PICKBOUGOUM/ZINGUE OUATTARA. Cette cérémonie a enregistré la présence de plusieurs personnalités du monde sportif et institutionnel, dont l’Ambassadeur pour le sport burkinabè Charles KABORE, ainsi que des acteurs majeurs engagés dans le développement du sport national. Elle a été marquée par des allocutions, des matchs d’exhibition mettant aux prises de jeunes athlètes des disciplines de sports de main. Ces rencontres ont également réuni d’anciens internationaux et des vétérans du basketball, du volleyball et du handball. Dans son intervention, la Directrice générale du Fonds d’appui au sport et à la presse privée « Wassa Bondo » a réaffirmé l’engagement de son institution à accompagner les initiatives structurantes en faveur du sport burkinabè. Elle a souligné que la réalisation de ce nouveau plancher traduit la volonté du Fonds de contribuer à l’amélioration des infrastructures sportives et à la création de meilleures conditions de pratique pour les athlètes. Prenant part aux différentes rencontres sportives, Madame le Ministre a partagé un moment de proximité avec les acteurs du monde sportif, témoignant ainsi de l’engagement du département à promouvoir une pratique sportive accessible et à valoriser les figures emblématiques du sport burkinabè. La réalisation de ce nouveau plancher constitue un investissement important dans le développement des infrastructures sportives nationales. D’un coût de 211 201 061 francs CFA TTC, les travaux ont été financés par le Fonds d’appui au sport et à la presse privée « Wassa Bondo ». Ils ont permis de doter le Palais des Sports d’une aire de jeu répondant aux standards actuels pour l’accueil des compétitions nationales et internationales. La camarade Ministre a salué la contribution des différents partenaires ayant œuvré à la concrétisation de ce projet, notamment le Fonds « Wassa Bondo » pour son accompagnement financier, ainsi que l’entreprise AFRIK BTP et Logistique pour sa contribution aux travaux complémentaires ayant facilité l’homologation de la salle. À travers cette réhabilitation, le Ministère des Sports, de la Jeunesse et de l’Emploi traduit la volonté du Gouvernement de renforcer les équipements sportifs, d’améliorer les conditions de préparation des athlètes et de créer un environnement favorable à l’éclosion des talents. L’ouverture du nouveau plancher au public marque ainsi une nouvelle dynamique pour le sport burkinabè et confirme l’ambition de faire des infrastructures sportives des espaces de performance, de rassemblement et de cohésion sociale. DCRP/MSJE",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
       "_score": 103,
       "_zone": 1,
       "_theme": "E",
@@ -1195,60 +1194,44 @@
           "keyword": "effondrement"
         }
       ]
-    },
-    {
-      "title": "Don’t wait for a disaster to develop strong US counter-drone capabilities",
-      "link": "https://www.atlanticcouncil.org/dispatches/dont-wait-for-a-disaster-to-develop-strong-us-counter-drone-capabilities/",
-      "source": "Atlantic Council",
-      "date": "2026-06-11T21:43:12.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      220
+      227
     ],
     [
       "occident_fr",
-      130
+      133
     ],
     [
       "autre",
-      109
+      130
     ],
     [
       "golfe_mo",
-      96
+      94
     ],
     [
       "occident_us",
-      89
-    ],
-    [
-      "bf_local",
-      39
-    ],
-    [
-      "turquie",
-      39
+      88
     ],
     [
       "russie",
-      38
+      43
+    ],
+    [
+      "bf_local",
+      33
     ],
     [
       "chine",
       30
+    ],
+    [
+      "turquie",
+      12
     ],
     [
       "sahel",
@@ -1260,7 +1243,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 76,
+      "count": 70,
       "top": [
         {
           "title": "CEDEAO : Dakar sollicite le soutien de Conakry pour porter le général Birame Diop à la tête de la Commission",
@@ -1281,6 +1264,15 @@
           "rating": "C1"
         },
         {
+          "title": "Littérature religieuse : Le Pr Élie Kabré publie « Prier par la parole et les promesses », un guide pratique de prière fondé sur les Écritures",
+          "link": "https://lefaso.net/spip.php?article147099",
+          "source": "Lefaso.net",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
           "title": "Burkina Faso: Les cimentiers confrontés à un problème d’approvisionnement en énergie et en matières premières, notamment le clinker importé",
           "link": "https://netafrique.net/burkina-faso-les-cimentiers-confrontes-a-un-probleme-dapprovisionnement-en-energie-et-en-matieres-premieres-notamment-le-clinker-importe/",
           "source": "Net Afrique (BF)",
@@ -1297,15 +1289,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Protection des consommateurs : des EPE sensibilisés aux bénéfices de la démarche qualité",
-          "link": "https://www.sidwaya.info/protection-des-consommateurs-des-epe-sensibilises-aux-benefices-de-la-demarche-qualite/",
-          "source": "Sidwaya",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1313,7 +1296,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 58,
+      "count": 62,
       "top": [
         {
           "title": "Nigeria lawmakers advance state police reform to curb insecurity",
@@ -1366,7 +1349,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 21,
+      "count": 30,
       "top": [
         {
           "title": "Cameroun – Aboubakar Ousmane Mey : « Paul Biya existe sur le plan physique mais ne dirige plus »",
@@ -1378,6 +1361,33 @@
           "rating": "B2"
         },
         {
+          "title": "CEEAC–AUDA-NEPAD : un front africain pour accélérer les infrastructures énergétiques",
+          "link": "https://fr.journalducameroun.com/ceeac-auda-nepad-un-front-africain-pour-accelerer-les-infrastructures-energetiques/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Cameroun : la décision du Conseil constitutionnel attendue sur la prorogation du mandat des conseillers municipaux",
+          "link": "https://fr.journalducameroun.com/cameroun-la-decision-du-conseil-constitutionnel-attendue-sur-la-prorogation-du-mandat-des-conseillers-municipaux/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Cameroun/ Mamadou Mota : ‘’Voici pourquoi ce recours est une arme de destruction massive contre le régime’’",
+          "link": "https://fr.journalducameroun.com/cameroun-mamadou-mota-voici-pourquoi-ce-recours-est-une-arme-de-destruction-massive-contre-le-regime/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Ebola en RDC : MSF intensifie la surveillance épidémiologique",
           "link": "https://www.radiookapi.net/2026/06/12/actualite/sante/ebola-en-rdc-msf-intensifie-la-surveillance-epidemiologique",
           "source": "Radio Okapi (RDC)",
@@ -1385,33 +1395,6 @@
           "theme": "H",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Au Soudan, les civils toujours principales victimes de frappes de drones des belligérants",
-          "link": "https://www.rfi.fr/fr/afrique/20260612-au-soudan-les-civils-toujours-principales-victimes-de-frappes-de-drones-des-bellig%C3%A9rants",
-          "source": "RFI Afrique",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Arbitre refoulé vers la Somalie, rupture Faye-Sonko au Sénégal, frappes au Soudan : l'hebdo Afrique",
-          "link": "https://www.france24.com/fr/afrique/20260612-arbitre-refoul%C3%A9-vers-la-somalie-rupture-faye-sonko-au-s%C3%A9n%C3%A9gal-frappes-au-soudan-l-hebdo-afrique",
-          "source": "France 24",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Est de la RDC: Al-Sissi réaffirme le soutien de l’Égypte à la souveraineté du pays et aux efforts internationaux pour un règlement pacifique",
-          "link": "https://actualite.cd/2026/06/12/est-de-la-rdc-al-sissi-reaffirme-le-soutien-de-legypte-la-souverainete-du-pays-et-aux",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     },
@@ -1419,7 +1402,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 28,
+      "count": 31,
       "top": [
         {
           "title": "Sebta : les arrivées de mineurs étrangers non accompagnés attisent la crise des structures d’accueil",
@@ -1472,7 +1455,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 119,
+      "count": 116,
       "top": [
         {
           "title": "Ceasefire deal would end Lebanon fighting and reopen Hormuz, release billions to Iran - report",
@@ -1482,6 +1465,15 @@
           "theme": "M",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "World: Global Conflict Systems - Global Peace Index 2026: Special Supplement",
+          "link": "https://reliefweb.int/report/world/global-conflict-systems-global-peace-index-2026-special-supplement",
+          "source": "ReliefWeb",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F1"
         },
         {
           "title": "Téhéran dit ne pas avoir tranché sur un accord brandi par Trump",
@@ -1509,15 +1501,6 @@
           "theme": "C",
           "relevance": "L",
           "rating": "A2"
-        },
-        {
-          "title": "EN DIRECT - Guerre au Moyen-Orient : pour le média iranien Mehr, l’accord avec les Etats-Unis entraînerait une «cessation permanente et immédiate des hostilités»",
-          "link": "https://www.liberation.fr/international/moyen-orient/en-direct-guerre-au-moyen-orient-liran-na-pas-encore-de-conclusion-definitive-sur-laccord-annonce-par-trump-20260612_IMUVVNVYIRDUVCPBTWIVXXZPN4/",
-          "source": "Libération International",
-          "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C1"
         }
       ]
     },
@@ -1525,7 +1508,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 200,
+      "count": 196,
       "top": [
         {
           "title": "En Russie, « la vie n’a plus aucune valeur en soi »",
@@ -1583,48 +1566,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-06-12T10:26:48.247Z",
+      "at": "2026-06-12T10:57:49.331Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-12T10:26:48.255Z",
+      "at": "2026-06-12T10:57:49.338Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-12T10:27:26.982Z",
+      "at": "2026-06-12T10:58:38.853Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1942 articles"
+      "message": "112/170 flux OK, 1915 articles"
     },
     {
-      "at": "2026-06-12T10:27:30.054Z",
+      "at": "2026-06-12T10:58:41.787Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-12T10:27:30.386Z",
+      "at": "2026-06-12T10:58:42.120Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-12T10:27:30.391Z",
+      "at": "2026-06-12T10:58:42.125Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 5 alertes"
+      "message": "8 developpements, 4 alertes"
     },
     {
-      "at": "2026-06-12T10:27:30.391Z",
+      "at": "2026-06-12T10:58:42.126Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-06-12T10:27:30.391Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
