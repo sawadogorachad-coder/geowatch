@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-12T22:43:09.808Z",
+  "generatedAt": "2026-06-13T04:41:37.806Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 116,
-    "failed": 54,
-    "articles": 2000,
+    "ok": 109,
+    "failed": 61,
+    "articles": 1899,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -26,11 +26,6 @@
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "count": 20
-      },
-      {
-        "id": "rss_wakatsera",
-        "name": "Wakat Séra",
-        "count": 10
       },
       {
         "id": "rss_lepays_bf",
@@ -63,11 +58,6 @@
         "count": 0
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "count": 10
-      },
-      {
         "id": "rss_maliweb",
         "name": "Maliweb",
         "count": 0
@@ -93,18 +83,8 @@
         "count": 10
       },
       {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
-        "count": 10
-      },
-      {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -148,14 +128,9 @@
         "count": 30
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
-      },
-      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
-        "count": 15
+        "count": 0
       },
       {
         "id": "rss_vanguard",
@@ -166,11 +141,6 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -323,11 +293,6 @@
         "count": 30
       },
       {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "count": 20
-      },
-      {
         "id": "rss_bbc_afr",
         "name": "BBC Afrique (FR)",
         "count": 30
@@ -395,7 +360,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 9
+        "count": 8
       },
       {
         "id": "rss_fp",
@@ -500,7 +465,7 @@
       {
         "id": "rss_ttoi",
         "name": "Times of Israel",
-        "count": 13
+        "count": 15
       },
       {
         "id": "rss_jpost",
@@ -515,7 +480,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 27
+        "count": 28
       },
       {
         "id": "rss_pressTV",
@@ -540,7 +505,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -590,8 +555,18 @@
     ],
     "failedSources": [
       {
+        "id": "rss_wakatsera",
+        "name": "Wakat Séra",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -620,9 +595,19 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -667,17 +652,22 @@
       {
         "id": "rss_ghanaweb",
         "name": "GhanaWeb",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_saharang",
@@ -688,6 +678,11 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -763,6 +758,11 @@
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "error": "fetch failed"
       },
       {
         "id": "rss_apa",
@@ -863,45 +863,12 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 53,
-    "alerts": 1,
-    "criticalAlerts": 0,
-    "sourcesDistinct": 83
+    "bfAes": 40,
+    "alerts": 4,
+    "criticalAlerts": 1,
+    "sourcesDistinct": 71
   },
   "topDevelopments": [
-    {
-      "title": "PJPCS 2026 : 21 prix décernés aux meilleures œuvres journalistiques sur la paix",
-      "link": "https://www.minute.bf/pjpcs-2026-21-prix-decernes-aux-meilleures-oeuvres-journalistiques-sur-la-paix/",
-      "pubDate": "2026-06-12T17:08:39.000Z",
-      "description": "La commission épiscopale Justice et Paix a procédé dans la nuit du jeudi 11 juin 2026, a la remise des prix de la 5e édition du Prix du Journalisme pour la Paix et la Cohésion Sociale (PJPCS). Cette activité organisée dans le cadre de l'initiative du Sahel pour la paix (SPI) a permis de récompenser les meilleures productions journalistiques réalisées sur la paix et la cohésion sociale au Burkina Faso. Pour cette édition, neuf prix spéciaux et douze prix officiels ont été décernés aux lauréats dans les catégories presse en ligne, presse écrite, télévision et radio. En presse en ligne, le premier prix officiel a été remporté par Jean-Marc Kambou de refletinfo.net. Dans la catégorie presse écrite, le premier prix est revenu à Abdel Aziz Nabaloum des Éditions Sidwaya. Une vue du public Au niveau de la télévision, Abdoul Rahim Tapsoba a remporté non seulement le premier prix officiel, mais aussi le prix spécial Oxfam. Enfin, dans la catégorie radio, le graal est revenu à Frederic Tensaba de la RTB Bobo. Le prix de chaque lauréat est composé d'un trophée, d'un livre, d'une attestation et d'un chèque de 500 000 F CFA. Les deuxièmes et les troisièmes ont respectivement gagné des chèques de 300 000 F CFA et 200 000 F CFA, ainsi que des attestations et des livres. La 5e édition du PJPCS a introduit cette année une innovation en instituant le prix régional. Cette distinction a été décernée à Drissa Diallo, journaliste à la Radio Yeelen au Mali, pour son œuvre « Un vocal qui divise ». Son prix est composé d'une attestation, d'un trophée et d'un chèque de 500 000 F CFA. Dans son intervention, Mgr Alexandre Bazié, Président de la Conférence épiscopale Burkina-Niger chargé de la Commission Justice et Paix, a insisté sur la puissance de la parole dans les sociétés africaines. Selon lui, celle-ci constitue un instrument capable aussi bien de construire que de détruire. Face aux défis sécuritaires auxquels est confrontée la région sahélienne, il a appelé à une utilisation positive et responsable de la parole afin de favoriser la cohésion sociale et une paix durable. L'une des principales satisfactions exprimées par le responsable religieux concerne l'évolution du Prix qui, cette année, a intégré une dimension sous-régionale. Cette extension couvre désormais cinq pays de l'espace d'intervention du SPI : le Burkina Faso, le Niger, le Mali, la Côte d'Ivoire et le Ghana.« Notre joie, c'est que cette année, le prix est devenu un prix régional. Il s'est étendu à l'ensemble de la région parce que, naturellement, le SPI s'étend sur ces cinq pays », a-t-il déclaré. Mgr Alexandre Bazié, Président de la Conférence épiscopale Burkina-Niger Pour Mgr Bazié, cette régionalisation constitue une étape importante dans la promotion de la paix et dans l'enracinement de convictions fortes au sein des populations sahéliennes. Cette 5e édition a enregistré 56 candidatures de journalistes du Burkina Faso, de la Côte d'Ivoire, du Ghana, du Mali et du Niger. Quarante-sept productions proviennent du Burkina Faso et neuf des autres pays. À l'issue des examens, sept œuvres ont été déclassées pour confusion de genres, non-conformité aux règles et non-respect du format. Pour rappel, c'est en 2019 que l'Église catholique et son partenaire Catholic Relief Services (CRS) se sont engagés à renforcer la paix et la cohésion sociale dans la sous-région à travers la promotion de la résilience des communautés et la prévention des conflits. Dans ce sens, depuis 2022, à travers l'Initiative Paix au Sahel (SPI), ils organisent le PJPCS avec le double objectif d'encourager et de valoriser les professionnels des médias qui œuvrent pour la paix et la cohésion sociale, ainsi que de susciter une mobilisation toujours plus grande autour de ces idéaux. Jean-François SOMÉ Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
     {
       "title": "Prix du journalisme pour la paix et la cohésion sociale 2026 : Les Edifions Sidwaya, s’empare des prix de la catégorie presse écrite et du prix spécial Oxfam",
       "link": "https://www.sidwaya.info/prix-du-journalisme-pour-la-paix-et-la-cohesion-sociale-2026-les-edifions-sidwaya-sempare-des-prix-de-la-categorie-presse-ecrite-et-du-prix-special-oxfam/",
@@ -970,18 +937,53 @@
       "_desk": "A1"
     },
     {
-      "title": "Niger: Mariama Djibrine provisoirement déchue de la nationalité nigérienne",
-      "link": "https://www.aib.media/niger-mariama-djibrine-provisoirement-dechue-de-la-nationalite-nigerienne/",
-      "pubDate": "2026-06-12T13:12:29.000Z",
-      "description": "Niger: Mariama Djibrine provisoirement déchue de la nationalité nigérienne Ouagadougou, 12 juin 2026 (AIB) – Le Président de la République du Niger, le Général d’Armée Abdourahamane Tiani a signé, ce jeudi 11 juin 2026, un décret portant déchéance provisoire de la nationalité nigérienne de Mariama Djibrine, connue sous le pseudonyme de Mayra, selon un communiqué du Secrétariat général du gouvernement nigérien. Le communiqué précise que cette mesure est prise conformément aux dispositions de l’ordonnance n°2024-43 du 27 août 2024, modifiée et complétée par l’ordonnance n°2024-46 du 7 octobre 2024, relatives au fichier des personnes, groupes ou entités impliqués dans des actes de terrorisme ou dans des infractions portant atteinte aux intérêts stratégiques et fondamentaux de la Nation, ou susceptibles de troubler gravement la tranquillité et la sécurité publiques. Selon le document officiel, Mariama Djibrine, née le 27 mai 1989 à N’Guigmi, est poursuivie pour diffusion de données de nature à troubler l’ordre public, incitation à la révolte et intelligence avec une puissance étrangère. Agence d’information du Burkina BAK/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Prévisions saisonnières pour la campagne agricole 2026: De fortes vagues de chaleur attendues au Burkina Faso",
+      "link": "https://netafrique.net/previsions-saisonnieres-pour-la-campagne-agricole-2026-de-fortes-vagues-de-chaleur-attendues-au-burkina-faso/",
+      "pubDate": "2026-06-12T23:53:11.000Z",
+      "description": "Face à l’intensification des phénomènes météorologiques extrêmes, l’Agence Nationale de la Météorologie (ANAM) muscle sa stratégie de riposte. Ce vendredi 12 juin 2026, l’institution a réuni experts de la santé, gestionnaires de catastrophes et volontaires de la Croix-Rouge pour une mise à jour cruciale des prévisions saisonnières de l’année. Au cœur des échanges : l’anticipation des risques liés à la campagne agricole 2026 et une sensibilisation accrue sur les dangers sanitaires des vagues de chaleur. Pour l’ANAM, l’heure est à la diffusion d’une information climatique fiable, véritable boussole pour les décideurs et bouclier pour les citoyens face aux dérèglements climatiques. Le climat change, et avec lui, les impératifs de sécurité nationale. Ce vendredi, l’atelier organisé par l’Agence Nationale de la Météorologie (ANAM) a sonné comme un rappel à l’ordre face aux caprices du ciel. Dans un contexte où les événements extrêmes ne sont plus l’exception mais la règle, l’agence a choisi la transparence et l’anticipation comme lignes de défense,. L’enjeu principal de cette rencontre était la présentation des données actualisées pour la campagne agricole 2026. Pour les agriculteurs et les décideurs économiques, ces informations sont vitales. La Directrice Générale de l’ANAM, le Dr Mariam Tidiga, a été on ne peut plus claire : l’information météorologique doit être mise au service de la « prise de décision éclairée » pour limiter l’impact sur les secteurs socio-économiques. En analysant les phénomènes en cours de développement, l’ANAM permet d'ajuster les calendriers culturaux et de prévenir les pertes. Au-delà de l'agriculture, l'atelier a mis l’accent sur un risque souvent sous-estimé : les fortes chaleurs. Les participants ont décortiqué les effets dévastateurs des canicules sur la santé humaine. En partenariat avec la Croix-Rouge Burkinabè et les acteurs de la santé, l’ANAM a élaboré des mesures de prévention et d’adaptation pour protéger les plus vulnérables,. L’objectif est simple : transformer une donnée technique en un conseil pratique et accessible à tous. La force de cette initiative réside dans son caractère multisectoriel. En réunissant les acteurs de la gestion des risques et des catastrophes autour de la même table, l’ANAM favorise une réponse coordonnée. Cette approche collaborative souligne l’importance des services météo dans le développement durable du pays. « Produire et diffuser des informations fiables, utiles et accessibles » : tel est le credo réaffirmé par l’ANAM. Dans un Burkina Faso confronté aux défis climatiques, cette mission de service public apparaît plus que jamais comme un pilier indispensable de la protection des populations et de la résilience nationale. L’article Prévisions saisonnières pour la campagne agricole 2026: De fortes vagues de chaleur attendues au Burkina Faso est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
+        "diplomatic",
         "military",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "C",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Construire la paix par la diversité : Le pari du dialogue interreligieux à Ouahigouya",
+      "link": "https://lefaso.net/spip.php?article147104",
+      "pubDate": "2026-06-12T23:30:00.000Z",
+      "description": "L'ONG Solidarité développement inclusif (SOLIDEV), avec l'appui financier de CBM Global et en collaboration avec la Fédération burkinabè des associations pour la promotion des personnes handicapées (FEBAH), a organisé, le jeudi 11 juin 2026 à Ouahigouya, un séminaire de dialogue interreligieux placé sous le thème : « Vivre ensemble dans la diversité : le rôle des communautés religieuses dans la prévention des conflits ». Cette rencontre vise à renforcer la paix, le dialogue social et la cohésion intercommunautaire dans la région du Yaadga, en mobilisant les communautés religieuses, les autorités, les femmes, les jeunes et les groupes vulnérables comme acteurs à part entière de la prévention des conflits. La religion doit être un pont et non un mur. C'est dans cette optique que ce séminaire trouve tout son sens : permettre aux communautés religieuses de parler d'une seule voix et de proscrire toute forme de haine et de division face aux menaces des forces obscurantistes. L'organisation de ce séminaire s'inscrit dans le cadre du « Projet d'assistance alimentaire, de fourniture d'articles non alimentaires (NFI) et de soins spécialisés en santé mentale et soutien psychosocial (MHPSS) pour les PDI et les communautés hôtes dans la région du Yaadga, Phase II ». Il a été rendu possible grâce à l'accompagnement technique et financier de CBM Global. Selon le directeur pays de CBM Global Burkina, Ousséini Badini, ce séminaire s'inscrit dans le cadre d'un projet humanitaire mis en œuvre dans la région du Yaadga, dont l'un des axes majeurs est la promotion de la paix, du vivre-ensemble et de l'harmonie sociale. À travers cette initiative, CBM Global entend accompagner les efforts de son partenaire SOLIDEV ainsi que ceux de l'ensemble des acteurs engagés dans la consolidation de la paix dans la région et au Burkina Faso de manière générale. Ousséini Badini a souligné que les personnes handicapées sont doublement affectées lors des crises sécuritaires et humanitaires. Il est donc impératif de les inclure dans les mécanismes de prévention des conflits Pour lui, cette rencontre doit permettre de faire émerger des messages forts en faveur de la cohésion sociale, de l'harmonie et du vivre-ensemble, des valeurs indispensables à tout processus de développement, de relèvement et de relance des communautés affectées par la crise. Le directeur pays de CBM Global Burkina estime que les crises traversées ces dernières années ont fragilisé le tissu social burkinabè, entraînant parfois méfiance et divisions entre des populations qui ont pourtant longtemps vécu ensemble dans la paix et la solidarité. Il considère ainsi ce séminaire comme une contribution concrète au rétablissement de la confiance, de la paix et de l'harmonie au sein des communautés. L'objectif, poursuit-il, est de préserver l'héritage de cohésion légué par les générations précédentes et d'empêcher que les divisions actuelles ne compromettent les acquis sociaux construits au fil des décennies. Lire aussi : Inclusion des personnes handicapées : CBM Global renforce son partenariat avec des acteurs des Hauts-Bassins et des Cascades Mis en œuvre dans les communes de Ouahigouya, Gourcy, Yako et Titao, le « Projet d'assistance alimentaire, de fourniture d'articles non alimentaires (NFI) et de soins spécialisés en santé mentale et soutien psychosocial (MHPSS) pour les PDI et les communautés hôtes dans la région du Yaadga, Phase II » vise à améliorer les conditions de vie et à renforcer la résilience des populations vulnérables affectées par la crise sécuritaire et humanitaire dans la région. Le projet poursuit plusieurs objectifs : assurer la sécurité alimentaire des ménages vulnérables, distribuer des articles non alimentaires aux personnes déplacées internes, garantir un accompagnement en santé mentale et soutien psychosocial, financer des soins médicaux spécialisés tels que les opérations de la cataracte et la rééducation physique, ainsi que soutenir l'autonomisation économique des bénéficiaires à travers des activités génératrices de revenus. Pour Wendyam Michel Vincent Ouédraogo, directeur exécutif de SOLIDEV, ce séminaire interreligieux s'inscrit dans la continuité des actions menées par SOLIDEV, la FEBAH et CBM Global en faveur des populations vulnérables et des personnes handicapées dans la région du Yaadga. Wendyam Michel Vincent Ouédraogo a indiqué que plus de 1 500 personnes ont bénéficié de l'accompagnement de cette deuxième phase du projet, mise en œuvre de janvier à juin 2026 « Dans cette situation de fragilité, nous avons perçu la nécessité d'organiser un séminaire interreligieux afin que les différentes confessions religieuses, les autorités administratives et coutumières puissent s'asseoir autour d'une même table et définir ensemble les règles favorisant une société harmonieuse, conformément à la vision portée par les autorités du Burkina Faso », a-t-il expliqué. Le directeur exécutif de SOLIDEV a également souligné que le projet combine des actions de cohésion sociale, d'autonomisation économique et de santé au profit des bénéficiaires. « Dans cet accompagnement, nous avons assuré le renforcement des capacités et la dotation en matériel afin de permettre aux bénéficiaires de développer des activités génératrices de revenus. Nous avons également intégré la santé, qui constitue un volet essentiel du projet, à travers la prise en charge d'opérations de la cataracte et la correction de cas de pied bot. Toutes ces actions ont contribué à renforcer la visibilité et l'impact du projet dans la région du Yaadga », a ajouté Wendyam Michel Vincent Ouédraogo. Cette rencontre a réuni des représentants des autorités administratives, des communautés religieuses et coutumières, des organisations de la société civile, des partenaires techniques et financiers, ainsi que des personnes déplacées internes (PDI) et des personnes handicapées « La religion doit être un pont qui unit les communautés » L'organisation de ce séminaire a été appréciée par les autorités de la région. Le secrétaire général de la région du Yaadga, Albert Zongo, a félicité les acteurs chargés de la mise en œuvre du projet ainsi que les organisateurs de la rencontre. « Ce séminaire vient à point nommé dans la région du Yaadga. Cela se justifie par le fait que, depuis environ dix ans, cette région connaît une insécurité liée aux actions terroristes. Ce séminaire, qui porte sur la paix, la cohésion sociale et le vivre-ensemble, permettra aux différents acteurs réunis d'acquérir davantage de connaissances sur les valeurs de tolérance, de médiation et de réconciliation afin de mieux gérer les conflits sur le terrain. Je tiens à préciser que le rôle de ces responsables religieux et coutumiers ne se limite pas à être des gardiens de la foi. Ils sont aussi des médiateurs au quotidien et constituent des piliers essentiels de la cohésion sociale. Nous allons également échanger sur le dialogue interreligieux afin que chacun comprenne que la religion doit être un pont qui unit les communautés et non un mur qui les sépare. Nous espérons qu'à l'issue de ce séminaire, une feuille de route concrète sera élaborée et mise à la disposition des comités locaux de paix présents dans les départements et les villages afin de leur permettre de jouer pleinement leur rôle. Car la paix n'est jamais un acquis définitif, que ce soit dans un pays ou dans une localité. Elle doit être entretenue en permanence. Entretenir la paix, c'est adopter des comportements responsables et tenir des discours exempts de haine et de violence. C'est dans cette perspective que j'apprécie l'organisation de ce séminaire », s'est-il réjoui. Albert Zongo a remercié les partenaires techniques et financiers pour leur accompagnement constant en faveur des personnes vulnérables, en particulier celles en situation de handicap L'abbé Alexandre Sawadogo, aumônier diocésain, s'est réjoui de la tenue de ce séminaire qui met en lumière les efforts des différentes communautés religieuses en faveur de la paix et de la cohésion sociale. Selon lui, les communautés musulmane, protestante, catholique et traditionnelle sont satisfaites de voir leurs actions reconnues et valorisées. Il a exprimé sa gratitude à l'endroit des organisateurs ainsi que des partenaires qui ont contribué à la réussite de cette rencontre, estimant que celle-ci offre un cadre d'échanges important autour des questions liées au vivre-ensemble. Pour l'homme d'Église, le thème retenu, « Vivre ensemble dans la diversité : le rôle des communautés religieuses dans la prévention des conflits », est particulièrement pertinent au regard du contexte actuel. Il a souligné que la recherche de la paix demeure une priorité pour les populations et que les communautés religieuses ont un rôle majeur à jouer dans la promotion du dialogue, de la tolérance et de la fraternité entre les citoyens. Samirah Bationo Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -994,9 +996,9 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 119,
+      "_score": 115,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "H",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1097,18 +1099,18 @@
       "_desk": "A1"
     },
     {
-      "title": "Le Club Afrique Développement d’Attijariwafa bank lance JamSalam au service du progrès commun",
-      "link": "https://fr.hespress.com/477272-le-club-afrique-developpement-dattijariwafa-bank-lance-jamsalam-au-service-du-progres-commun.html",
-      "pubDate": "2026-06-12T18:32:47.000Z",
-      "description": "Le Club Afrique Développement du groupe Attijariwafa bank lance, en collaboration avec les filiales bancaires en Afrique du Groupe et la Fondation Attijariwafa bank, l’initiative JamSalam, une plateforme continentale pensée autour du dialogue interculturel, au service du progrès commun. Pour l’édition 2026, JamSalam réunira à Tahannaout (région de Marrakech), Maroc, du 15 au 30 juillet 2026, 15 jeunes talents âgés entre 20 et 35 ans dans le cadre d’une résidence artistique placée sous le thème : « Au nom de Toumaï, espoir de vie ». Sa vocation est de transformer nos diversités en un socle commun, tourné vers l’avenir, et de véhiculer un message de progrès. Cet hommage prend tout son sens à travers la figure de Toumaï, considéré le plus ancien représentant de la lignée humaine, découvert dans le désert du Djourab au Tchad par la mission paléontologique dirigée par Michel Brunet en 2001. Les 15 artistes participants à JamSalam sont : Pays Candidat Discipline Bénin Mme OGOUN Falhone Kèmi Arts plastiques Burkina Faso M. Ali DRABO Arts multimédias Cameroun Mme Tong Grâce Dorothée Arts plastiques Congo M. TANTSIBA MIGNON Arts plastiques Côte d’Ivoire M. Kouamé François-Xavier OUACABESSAY Arts plastiques Égypte Mme DOAA FAKHER Arts plastiques Gabon Mme MVIE Julie Arts multimédias Mali Mme MAÏMOUNA TOURE Arts plastiques Maroc M. Yassine CHRAIBI Arts plastiques Mauritanie M. Sidi Mohamed Sow Photographie Niger M. Ibrahim Harouna Ousmane Arts plastiques Sénégal Mme NDEYE MARIÉME FALL Arts plastiques Tchad M. Emmanuel KOUKTA Photographie Togo Mme AKOGONYA AFI Arts plastiques Tunisie Mme Sabra Ben Fradj Arts plastiques Une exposition, une vente aux enchères et un impact concret Le fruit de cette création commune sera exposé à la prochaine édition du Forum International Afrique Développement, organisée par le Club Afrique Développement d’Attijariwafa bank. Une vente aux enchères de ces œuvres est également prévue et l’intégralité des fonds récoltés sera reversée à une communauté en difficulté, illustrant ainsi l’impact positif et direct du dialogue intra africain. Les artistes participants représentent d’ores et déjà l’alliance JamSalam 2026, intégrée de manière structurelle à la communauté du Club Afrique Développement d’Attijariwafa bank. Un processus de sélection exigeant et un Grand Jury prestigieux Un processus de présélection s’est déroulé dans 15 pays, conduit par des jurys nationaux de haute facture. La sélection finale a été arrêtée le 8 juin 2026 par un Grand Jury, composé de personnalités de référence issues de la scène artistique et culturelle africaine : -Président du Jury : M. Ousseynou Wade, expert culturel et artistique sur la scène africaine, parmi les membres fondateurs de l’initiative JamSalam en 2012 – Sénégal -M. Mohamed Mourabiti, artiste peintre, fondateur de la Résidence Al Maqam et membre fondateur de l’initiative JamSalam en 2012 – Maroc -Princesse Marilyn Douala Manga Bell , actrice culturelle de référence sur la scène africaine (Doual’art, Salon Urbain de Douala), conservatrice de musée et curatrice – Cameroun -Mme Marème Malong , actrice culturelle de référence sur la scène africaine (Galerie MAM, Fabrique de Suza), présidente de la Fondation MAM-Cameroun -Mme Ghita Triki, Responsable du Pôle Arts et Culture de la Fondation Attijariwafa bank *JamSalam est née en 2012 sur les rives du Fleuves Sénégal, à Saint-Louis du Sénégal avec l’appui d’Attijariwafa bank et de la CBAO. « Jam » et « Salam » signifient « Paix » en Wolof et en Arabe. The post Le Club Afrique Développement d’Attijariwafa bank lance JamSalam au service du progrès commun appeared first on Hespress Français - Actualités du Maroc .",
-      "_source": "Hespress (Maroc, FR)",
-      "_sourceId": "rss_hespress",
-      "_sourceCat": "maghreb",
-      "_sourceBloc": "afrique",
+      "title": "Bobo-Dioulasso : Le bar Tamani fermé, les boutiques alentours démolis",
+      "link": "https://netafrique.net/bobo-dioulasso-le-bar-tamani-ferme-les-boutiques-alentours-demolis/",
+      "pubDate": "2026-06-12T23:15:56.000Z",
+      "description": "Une page se tourne brutalement dans le paysage urbain de Bobo-Dioulasso. Ce vendredi 12 juin 2026, une décision de justice a conduit à la fermeture définitive du célèbre bar Tamani, situé stratégiquement en face de la Maison de la culture Anselme Titiama Sanou. Sous la protection d'un impressionnant dispositif de la police municipale, une opération de démolition a réduit en poussière les magasins et boutiques qui ceinturaient l'établissement. Entre stupeur des commerçants et rigueur de la loi, ce déguerpissement musclé marque un tournant pour ce secteur névralgique de la ville de Sya. L’ambiance était électrique ce vendredi matin aux abords de la Maison de la culture Anselme Titiama Sanou. Ce n'était ni pour un festival, ni pour une répétition artistique, mais pour l'exécution d'une sentence judiciaire sans appel visant l'un des lieux de rencontre les plus connus du secteur : le bar Tamani. Dès les premières heures de la journée, le périmètre a été bouclé. Pour garantir le bon déroulement de l'opération, les autorités n'ont pas lésiné sur les moyens : des éléments de la police municipale, « armés jusqu'aux dents », ont pris position pour sécuriser les lieux et prévenir tout débordement. C'est dans ce climat de haute surveillance qu'un huissier de justice, agissant en tant qu'auxiliaire de la loi, a ordonné le début des travaux de démolition. Si le bar Tamani a vu ses portes définitivement closes, le sort des structures environnantes a été plus radical. Les employés de l'huissier ont procédé à la destruction systématique des magasins et des boutiques installés aux alentours du débit de boisson. En quelques heures, des échoppes qui animaient la vie économique du quartier ont été transformées en un amas de béton et de ferraille, sous le regard impuissant des passants. Cette intervention musclée est l'aboutissement d'une procédure légale dont les détails n'ont pas été totalement révélés sur place, mais dont l'exécution ne laisse place à aucune ambiguïté. Pour les riverains, ce changement soudain de décor pose la question de la réaffectation de cet espace situé dans un emplacement de premier choix au cœur de Bobo-Dioulasso. Selon les informations rapportées par Libération Burkina, cette opération marque la fin d'une époque pour le bar Tamani, mais souligne surtout la volonté des autorités de faire appliquer les décisions de justice en matière d'occupation urbaine, quel qu'en soit le coût social ou commercial. Pour les exploitants des boutiques détruites, l'heure est désormais au bilan et, sans doute, à la recherche de nouveaux horizons. L’article Bobo-Dioulasso : Le bar Tamani fermé, les boutiques alentours démolis est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1120,15 +1122,63 @@
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 107,
+      "_score": 103,
       "_zone": 1,
-      "_theme": "P",
+      "_theme": "J",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "West Asia War updates: Abbas Araghchi says draft U.S. deal includes ending naval blockade, Hormuz arrangements",
+      "link": "https://www.thehindu.com/news/international/us-israel-iran-war-live-updates-bandar-abbas-strikes-strait-of-hormuz-mojtaba-khamenei-donald-trump-tehran-deal-june-12-2026/article71092034.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-13T02:58:09.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Iran MOU would cap self-defeating ceasefire for Trump, marks huge problem for Israel",
+      "link": "https://www.timesofisrael.com/iran-mou-would-cap-self-defeating-ceasefire-for-trump-marks-huge-problem-for-israel/",
+      "source": "Times of Israel",
+      "date": "2026-06-12T23:44:46.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "U.S. and Iran close to signing ceasefire deal, officials say",
+      "link": "https://www.washingtonpost.com/world/2026/06/12/pakistan-prime-minister-says-us-iran-deal-text-finalized/",
+      "source": "Washington Post World",
+      "date": "2026-06-12T22:48:07.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
     {
       "title": "UAE to unlock frozen Iranian funds amid US ceasefire push: Sources",
       "link": "https://www.aljazeera.com/news/2026/6/12/uae-to-unlock-frozen-iranian-funds-amid-us-ceasefire-push?traffic_source=rss",
@@ -1149,43 +1199,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      245
+      191
     ],
     [
       "occident_fr",
-      110
+      127
     ],
     [
       "occident_us",
-      110
+      111
     ],
     [
       "golfe_mo",
-      98
+      103
     ],
     [
       "autre",
-      69
+      87
     ],
     [
       "russie",
-      43
-    ],
-    [
-      "bf_local",
-      39
-    ],
-    [
-      "sahel",
-      34
-    ],
-    [
-      "turquie",
-      33
+      49
     ],
     [
       "chine",
-      19
+      40
+    ],
+    [
+      "turquie",
+      32
+    ],
+    [
+      "sahel",
+      32
+    ],
+    [
+      "bf_local",
+      28
     ]
   ],
   "desks": [
@@ -1193,17 +1243,8 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 105,
+      "count": 82,
       "top": [
-        {
-          "title": "PJPCS 2026 : 21 prix décernés aux meilleures œuvres journalistiques sur la paix",
-          "link": "https://www.minute.bf/pjpcs-2026-21-prix-decernes-aux-meilleures-oeuvres-journalistiques-sur-la-paix/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Prix du journalisme pour la paix et la cohésion sociale 2026 : Les Edifions Sidwaya, s’empare des prix de la catégorie presse écrite et du prix spécial Oxfam",
           "link": "https://www.sidwaya.info/prix-du-journalisme-pour-la-paix-et-la-cohesion-sociale-2026-les-edifions-sidwaya-sempare-des-prix-de-la-categorie-presse-ecrite-et-du-prix-special-oxfam/",
@@ -1223,11 +1264,20 @@
           "rating": "F2"
         },
         {
-          "title": "Niger: Mariama Djibrine provisoirement déchue de la nationalité nigérienne",
-          "link": "https://www.aib.media/niger-mariama-djibrine-provisoirement-dechue-de-la-nationalite-nigerienne/",
-          "source": "AIB — Agence Information BF",
+          "title": "Prévisions saisonnières pour la campagne agricole 2026: De fortes vagues de chaleur attendues au Burkina Faso",
+          "link": "https://netafrique.net/previsions-saisonnieres-pour-la-campagne-agricole-2026-de-fortes-vagues-de-chaleur-attendues-au-burkina-faso/",
+          "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Construire la paix par la diversité : Le pari du dialogue interreligieux à Ouahigouya",
+          "link": "https://lefaso.net/spip.php?article147104",
+          "source": "Lefaso.net",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "H",
           "relevance": "A",
           "rating": "C2"
         },
@@ -1246,17 +1296,8 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 69,
+      "count": 53,
       "top": [
-        {
-          "title": "Nigeria killed more than 13,000 ‘terrorists’ in past year, President Tinubu says",
-          "link": "https://www.myjoyonline.com/nigeria-killed-more-than-13000-terrorists-in-past-year-president-tinubu-says/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Democracy Day: Adebayo calls for defence of democracy",
           "link": "https://www.vanguardngr.com/2026/06/democracy-day-adebayo-calls-for-defence-of-democracy/",
@@ -1276,13 +1317,22 @@
           "rating": "F2"
         },
         {
-          "title": "Côte d’Ivoire : Le Ghana rapatrie 327 de ses ressortissants après les démolitions à Port-Bouët",
-          "link": "https://www.minute.bf/cote-divoire-le-ghana-rapatrie-327-de-ses-ressortissants-apres-les-demolitions-a-port-bouet/",
-          "source": "Minute BF",
+          "title": "Nigeria: à l'approche de la présidentielle, le président Bola Tinubu se félicite de son bilan sécuritaire",
+          "link": "https://www.rfi.fr/fr/afrique/20260612-nigeria-%C3%A0-l-approche-de-la-pr%C3%A9sidentielle-le-pr%C3%A9sident-bola-tinubu-se-f%C3%A9licite-de-son-bilan-s%C3%A9curitaire",
+          "source": "RFI Afrique",
           "zone": "2. AO anglo. & côtière",
-          "theme": "L",
+          "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "C2"
+        },
+        {
+          "title": "Un homme marié met enceinte la voisine de sa maîtresse, âgée de 14 ans",
+          "link": "https://netafrique.net/un-homme-marie-met-enceinte-la-voisine-de-sa-maitresse-agee-de-14-ans/",
+          "source": "Net Afrique (BF)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "NNPC Probe: I’m not a burden, I’m committed to Tinubu’s government — Oshiomhole",
@@ -1299,8 +1349,17 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 37,
+      "count": 26,
       "top": [
+        {
+          "title": "Sit in à Kinshasa : L’opposition défie le pouvoir contre un 3e mandat, Martin Fayulu blessé",
+          "link": "https://netafrique.net/sit-in-a-kinshasa-lopposition-defie-le-pouvoir-contre-un-3e-mandat-martin-fayulu-blesse/",
+          "source": "Net Afrique (BF)",
+          "zone": "4. Grands Lacs",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
         {
           "title": "RD Congo: Martin Fayulu blessé dans des affrontements au sit-in contre la réforme constitutionnelle",
           "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260612-rd-congo-martin-fayulu-bless%C3%A9-dans-des-affrontements-au-sit-in-contre-la-r%C3%A9forme-constitutionnelle",
@@ -1311,9 +1370,9 @@
           "rating": "A1"
         },
         {
-          "title": "Foncier : le Gabon franchit le cap des 20 857 décisions de cession en moins de six mois",
-          "link": "https://www.gabonreview.com/foncier-le-gabon-franchit-le-cap-des-20-857-decisions-de-cession-en-moins-de-six-mois/",
-          "source": "Gabon Review",
+          "title": "Les USA envisagent d’expulser des Iraniens vers la Centrafrique",
+          "link": "https://netafrique.net/les-usa-envisagent-dexpulser-des-iraniens-vers-la-centrafrique/",
+          "source": "Net Afrique (BF)",
           "zone": "3. Afrique centrale",
           "theme": "D",
           "relevance": "A",
@@ -1336,15 +1395,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Supercoupe de l’UEFA 2026: Omar Artan, l’arbitre somalien à l’honneur",
-          "link": "https://www.wakatsera.com/supercoupe-de-luefa-2026-omar-artan-larbitre-somalien-a-lhonneur/",
-          "source": "Wakat Séra",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1352,8 +1402,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 23,
+      "count": 21,
       "top": [
+        {
+          "title": "Achraf Hakimi : « Nous voulons faire quelque chose de grand lors de ce Mondial »",
+          "link": "https://fr.hespress.com/477296-achraf-hakimi-nous-voulons-faire-quelque-chose-de-grand-lors-de-ce-mondial.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "A2"
+        },
         {
           "title": "France – Algérie : Abdelaziz Rahabi charge Macron et Retailleau",
           "link": "https://www.tsa-algerie.com/france-algerie-abdelaziz-rahabi-charge-macron-et-retailleau/",
@@ -1373,27 +1432,18 @@
           "rating": "A2"
         },
         {
-          "title": "Abdelaziz Rahabi : \"La mémoire, pas un frein dans les relations entre Paris et Alger\"",
-          "link": "https://www.france24.com/fr/%C3%A9missions/en-t%C3%AAte-%C3%A0-t%C3%AAte/20260612-abdelaziz-rahabi-la-m%C3%A9moire-n-est-pas-un-frein-aux-relations-entre-paris-et-alger",
-          "source": "France 24 Afrique",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "Le Maroc intensifie la lutte contre le travail des enfants à travers une campagne nationale de sensibilisation",
-          "link": "https://fr.hespress.com/477255-le-maroc-intensifie-la-lutte-contre-le-travail-des-enfants-a-travers-une-campagne-nationale-de-sensibilisation.html",
+          "title": "Mondial 2026 : Carlo Ancelotti s’attend à un duel relevé face à un Maroc \"très fort\"",
+          "link": "https://fr.hespress.com/477304-mondial-2026-carlo-ancelotti-sattend-a-un-duel-releve-face-a-un-maroc-tres-fort.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
-          "title": "La Fédération internationale des journalistes solidaire avec Khaoula Boukrim",
-          "link": "https://kapitalis.com/tunisie/2026/06/12/la-federation-internationale-des-journalistes-solidaire-avec-khaoula-boukrim/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Pour l’USFP, la bataille électorale passe d’abord par la reconquête de la confiance citoyenne",
+          "link": "https://fr.hespress.com/477292-pour-lusfp-la-bataille-electorale-passe-dabord-par-la-reconquete-de-la-confiance-citoyenne.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "J",
           "relevance": "L",
@@ -1405,8 +1455,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 127,
+      "count": 139,
       "top": [
+        {
+          "title": "U.S. and Iran close to signing ceasefire deal, officials say",
+          "link": "https://www.washingtonpost.com/world/2026/06/12/pakistan-prime-minister-says-us-iran-deal-text-finalized/",
+          "source": "Washington Post World",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
         {
           "title": "Guerre en Iran, affaire Lyhanna et une Coupe du Monde controversée",
           "link": "https://www.france24.com/fr/%C3%A9missions/une-semaine-dans-le-monde/20260612-guerre-en-iran-affaire-lyhanna-et-une-coupe-du-monde-controvers%C3%A9e",
@@ -1417,40 +1476,31 @@
           "rating": "A2"
         },
         {
-          "title": "EN DIRECT, guerre au Moyen-Orient : le chef de la diplomatie iranienne estime qu’Israël cherche à faire échouer un éventuel accord avec Washington",
-          "link": "https://www.lemonde.fr/international/live/2026/06/12/en-direct-guerre-au-moyen-orient-la-diplomatie-iranienne-confirme-etre-dans-les-dernieres-etapes-de-finalisation-du-texte-du-protocole-d-accord_6701050_3210.html",
-          "source": "Le Monde International",
+          "title": "Conflicting claims emerge over proposed US-Iran memorandum",
+          "link": "https://news.cgtn.com/news/2026-06-12/Conflicting-claims-emerge-over-proposed-US-Iran-memorandum-1NVg7yOzvKo/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
+          "source": "CGTN (Chine, EN)",
           "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "L’Iran campe sur son droit à l’enrichissement nucléaire pour tout accord avec les Etats-Unis",
-          "link": "https://mediaguinee.com/2026/06/liran-campe-sur-son-droit-a-lenrichissement-nucleaire-pour-tout-accord-avec-les-etats-unis/",
-          "source": "Mediaguinee",
-          "zone": "8. Moyen-Orient",
-          "theme": "N",
+          "theme": "M",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Iran's foreign minister details proposed memorandum with US, says war would end across all fronts",
-          "link": "https://www.aa.com.tr/en/us-israel-iran-war/irans-foreign-minister-details-proposed-memorandum-with-us-says-war-would-end-across-all-fronts/3965675",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "West Asia War updates: Abbas Araghchi says draft U.S. deal includes ending naval blockade, Hormuz arrangements",
+          "link": "https://www.thehindu.com/news/international/us-israel-iran-war-live-updates-bandar-abbas-strikes-strait-of-hormuz-mojtaba-khamenei-donald-trump-tehran-deal-june-12-2026/article71092034.ece",
+          "source": "The Hindu (Inde)",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
+          "theme": "M",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
-          "title": "Netanyahu’s Reelection Could Hinge on Outcome of Iran War",
-          "link": "https://foreignpolicy.com/2026/06/12/netanyahu-election-iran-war-outcome-us-trump/",
-          "source": "Foreign Policy",
+          "title": "Iran MOU would cap self-defeating ceasefire for Trump, marks huge problem for Israel",
+          "link": "https://www.timesofisrael.com/iran-mou-would-cap-self-defeating-ceasefire-for-trump-marks-huge-problem-for-israel/",
+          "source": "Times of Israel",
           "zone": "8. Moyen-Orient",
           "theme": "P",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         }
       ]
     },
@@ -1458,34 +1508,34 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 168,
+      "count": 197,
       "top": [
         {
-          "title": "Afrique du Sud: 268 Nigérians quittent le pays dans un contexte de durcissement migratoire",
-          "link": "https://www.wakatsera.com/afrique-du-sud-268-nigerians-quittent-le-pays-dans-un-contexte-de-durcissement-migratoire/",
-          "source": "Wakat Séra",
-          "zone": "6. Afrique australe",
-          "theme": "L",
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "Sommet sino-nord-coréen : pourquoi la Chine cherche-t-elle à renforcer son partenariat avec la Corée du Nord ?",
-          "link": "https://www.iris-france.org/sommet-sino-nord-coreen-pourquoi-la-chine-cherche-t-elle-a-renforcer-son-partenariat-avec-la-coree-du-nord/",
-          "source": "IRIS France",
+          "title": "Pour gagner la guerre en 2060, la Chine imagine un porte-avions capable de s’envoler à la frontière de l’espace",
+          "link": "https://legrandcontinent.eu/fr/2026/06/13/pour-gagner-la-guerre-en-2060-la-chine-imagine-un-porte-avions-capable-de-senvoler-a-la-frontiere-de-lespace/",
+          "source": "Le Grand Continent",
           "zone": "14. Extrême-Orient",
-          "theme": "D",
-          "relevance": "A",
+          "theme": "S",
+          "relevance": "L",
           "rating": "A2"
         },
         {
-          "title": "EN DIRECT, guerre en Ukraine : l’UE va reprendre lundi les négociations sur l’adhésion de Kiev",
-          "link": "https://www.lemonde.fr/international/live/2026/06/12/en-direct-guerre-en-ukraine-l-ue-va-reprendre-lundi-les-negociations-sur-l-adhesion-de-kiev_6698620_3210.html",
+          "title": "La révolution contre Trump a commencé en Albanie",
+          "link": "https://legrandcontinent.eu/fr/2026/06/13/albanie-contre-trump/",
+          "source": "Le Grand Continent",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A2"
+        },
+        {
+          "title": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky se félicite de la reprise des négociations sur l’adhésion de Kiev à l’UE",
+          "link": "https://www.lemonde.fr/international/live/2026/06/13/en-direct-guerre-en-ukraine-volodymyr-zelensky-se-felicite-de-la-reprise-des-negociations-sur-l-adhesion-de-kiev-a-l-ue_6698620_3210.html",
           "source": "Le Monde International",
           "zone": "10. Europe orient. & Balkans",
           "theme": "D",
           "relevance": "A",
-          "rating": "B1"
+          "rating": "B2"
         },
         {
           "title": "L’intelligence artificielle pose un problème exponentiel à l’humanité",
@@ -1497,21 +1547,23 @@
           "rating": "A2"
         },
         {
-          "title": "Mondial 2026: cérémonie d'ouverture grandiose à Toronto avec en toile de fond le pouvoir unificateur du football",
-          "link": "https://fr.hespress.com/477289-mondial-2026-avec-en-toile-de-fond-le-pouvoir-unificateur-du-football.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "EN DIRECT - Moyen-Orient: les États-Unis disent avoir abattu des drones iraniens, malgré l'optimisme affiché pour un accord",
+          "link": "https://www.rfi.fr/fr/moyen-orient/20260613-en-direct-moyen-orient-les-%C3%A9tats-unis-disent-avoir-abattu-des-drones-iraniens-malgr%C3%A9-l-optimisme-affich%C3%A9-pour-un-accord",
+          "source": "RFI Moyen-Orient",
           "zone": "16. Amérique du Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
+          "theme": "M",
+          "relevance": "L",
+          "rating": "C1"
         }
       ]
     }
   ],
   "indicators": [
+    "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1519,42 +1571,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-12T22:42:27.416Z",
+      "at": "2026-06-13T04:40:50.943Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-12T22:42:27.424Z",
+      "at": "2026-06-13T04:40:50.950Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-12T22:43:06.489Z",
+      "at": "2026-06-13T04:41:34.472Z",
       "agent": "Agent Collecte RSS",
-      "message": "116/170 flux OK, 2000 articles"
+      "message": "109/170 flux OK, 1899 articles"
     },
     {
-      "at": "2026-06-12T22:43:09.443Z",
+      "at": "2026-06-13T04:41:37.446Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-12T22:43:09.805Z",
+      "at": "2026-06-13T04:41:37.803Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-12T22:43:09.810Z",
+      "at": "2026-06-13T04:41:37.808Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 1 alertes"
+      "message": "8 developpements, 4 alertes"
     },
     {
-      "at": "2026-06-12T22:43:09.811Z",
+      "at": "2026-06-13T04:41:37.809Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-12T22:43:09.811Z",
+      "at": "2026-06-13T04:41:37.809Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
