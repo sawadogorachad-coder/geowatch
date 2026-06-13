@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-13T04:41:37.806Z",
+  "generatedAt": "2026-06-13T09:29:37.122Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 109,
-    "failed": 61,
-    "articles": 1899,
+    "ok": 116,
+    "failed": 54,
+    "articles": 1963,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -26,6 +26,11 @@
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "count": 20
+      },
+      {
+        "id": "rss_wakatsera",
+        "name": "Wakat Séra",
+        "count": 10
       },
       {
         "id": "rss_lepays_bf",
@@ -58,6 +63,11 @@
         "count": 0
       },
       {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "count": 10
+      },
+      {
         "id": "rss_maliweb",
         "name": "Maliweb",
         "count": 0
@@ -80,6 +90,11 @@
       {
         "id": "rss_kalangou",
         "name": "Studio Kalangou (Niger)",
+        "count": 10
+      },
+      {
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
         "count": 10
       },
       {
@@ -128,9 +143,14 @@
         "count": 30
       },
       {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "count": 20
+      },
+      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
-        "count": 0
+        "count": 15
       },
       {
         "id": "rss_vanguard",
@@ -293,6 +313,11 @@
         "count": 30
       },
       {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "count": 20
+      },
+      {
         "id": "rss_bbc_afr",
         "name": "BBC Afrique (FR)",
         "count": 30
@@ -385,7 +410,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 23
+        "count": 22
       },
       {
         "id": "rss_bbc_africa",
@@ -405,7 +430,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 11
+        "count": 13
       },
       {
         "id": "rss_tass",
@@ -505,7 +530,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -530,7 +555,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -555,18 +590,8 @@
     ],
     "failedSources": [
       {
-        "id": "rss_wakatsera",
-        "name": "Wakat Séra",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
-        "error": "fetch failed"
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -593,11 +618,6 @@
         "id": "rss_anip_niger",
         "name": "ANIP — Agence Nigérienne de Presse",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
-        "error": "HTTP 403"
       },
       {
         "id": "rss_alwihda",
@@ -652,22 +672,17 @@
       {
         "id": "rss_ghanaweb",
         "name": "GhanaWeb",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
-      },
-      {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "error": "HTTP 403"
       },
       {
         "id": "rss_saharang",
@@ -760,11 +775,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_apa",
         "name": "APA News Afrique",
         "error": "HTTP 403"
@@ -835,16 +845,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -863,19 +863,19 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 40,
-    "alerts": 4,
+    "bfAes": 32,
+    "alerts": 6,
     "criticalAlerts": 1,
-    "sourcesDistinct": 71
+    "sourcesDistinct": 73
   },
   "topDevelopments": [
     {
-      "title": "Prix du journalisme pour la paix et la cohésion sociale 2026 : Les Edifions Sidwaya, s’empare des prix de la catégorie presse écrite et du prix spécial Oxfam",
-      "link": "https://www.sidwaya.info/prix-du-journalisme-pour-la-paix-et-la-cohesion-sociale-2026-les-edifions-sidwaya-sempare-des-prix-de-la-categorie-presse-ecrite-et-du-prix-special-oxfam/",
-      "pubDate": "2026-06-12T15:32:42.000Z",
-      "description": "Le comité d’organisation de la commission épiscopale justice et paix a organisé la 5 e édition de la soirée de récompense des lauréats du prix du journalisme pour la paix et la cohésion sociale, jeudi 12 juin 2026, à Ouagadougou. La V e édition du prix du journalisme pour la paix et la cohésion sociale (PJPCS) initié par la commission épiscopale justice et paix (CJP-Burkina) dans la mise en œuvre des activités de l’Initiative paix au sahel/Sahel peace initiative (SPI) a eu lieu au cours d’une soirée de récompense des lauréats, jeudi 12 juin 2026, à Ouagadougou. « Renforcement de la paix et de la cohésion sociale à travers la promotion de la résilience, du dialogue communautaire et la lutte contre l’extrémisme violent et la radicalisation » a été le thème retenu. Aux cours de la soirée de récompense, 21 journalistes ont reçu des prix dont 13 au niveau des prix officiels et 8 prix spéciaux. Les Editions Sidwaya ont remporté les 3 prix officiels dans la catégorie presse écrite et 1 prix spécial. Ainsi le 1 e prix est revenu à Abdel Aziz Nabaloum, pour son œuvre « promotion de la cohésion sociale : La foi au service de la paix ». Le président de la CJP-Burkina et de l’initiative paix au Sahel, Monseigneur Alexandre Bazié (droite) a remis le prix régional transfrontalier au journaliste lauréat Drissa Diallo(milieu) du Mali. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-1024x576.jpeg\" class=\"size-full wp-image-164001\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28.jpeg\" alt=\"\" width=\"1080\" height=\"608\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-300x169.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-1024x576.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-768x432.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-746x420.jpeg 746w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-150x84.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-696x392.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.28-1068x601.jpeg 1068w\" sizes=\"auto, (max-width: 1080px) 100vw, 1080px\" /> Le président de la CJP-Burkina et de l’initiative paix au Sahel, Monseigneur Alexandre Bazié (droite) a remis le prix régional transfrontalier au journaliste lauréat Drissa Diallo(milieu) du Mali. Il repart avec un trophée, un chèque de 500.000FCFGA, un roman et une attestation. Yacouba Belem remporte le 2 e prix pour son œuvre « commune de Dédougou : La solidarité des populations hôtes redonne espoir aux déplacés internes ». Il repart avec un chèque de 300.000FCFA plus une attestation. Le 3 e prix revient à Djakaridia Siribié pour son œuvre « Exploitation agricole à Matourkou : Des réfugiés passent de l’assistance humanitaire à l’autonomie ». Il repart avec un chèque de 150.000FCFA plus une attestation. Adama Sedgo reçoit le prix spécial du partenaires Oxfam avec un chèque de 200.000 FCA pour son œuvre « Périmètre aménagé du Youtenga dans l’Oubri/les PDI, force motrice de l’offensive agropastorale ». Dans la catégorie télévision, le journaliste de Burkina Info, Abdoul Rahim Tabsoba reçoit le 1 e prix. Fréderic Tensaba de la RTB radio Bobo, le 1 e prix dans la catégorie radio et Jean-Marc Kambou de Refletinfo.net, 1 e prix dans la catégorie presse en ligne. Tous ont reçu un trophée plus un chèque de 500.000FCFA plus un roman sur la paix. L’intégration du prix régional transfrontalier Les journalistes des Editions Sidwaya ont reçu leurs prix. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1024x764.jpeg\" class=\"size-full wp-image-164002\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29.jpeg\" alt=\"\" width=\"1080\" height=\"806\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-300x224.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1024x764.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-768x573.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-563x420.jpeg 563w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-80x60.jpeg 80w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-150x112.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-696x519.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1068x797.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-265x198.jpeg 265w\" sizes=\"auto, (max-width: 1080px) 100vw, 1080px\" /> Les journalistes des Editions Sidwaya ont reçu leurs prix. Cette 5 e édition a connu la participation des pays de la sous-région et le journaliste Drissa Diallo du Mali a remporté le prix régional transfrontalier pour son œuvre « Un vocal qui divise ». La présidente du jury Dominique Marie Nyaméogo a noté avoir réceptionné au total 56 œuvres dans 4 catégories. Il s’agit de 47 œuvres nationales dont 9 en presse écrite, 22 en presse en ligne, 10 en radio et 6 télévision. A cela, s’ajoute 9 œuvres de la sous-région avec la participation, du Mali, de la Cote -d’Ivoire, du Niger et du Ghana. « Le jury s’est basé sur des critères bien défini afin de primer les 3 meilleurs lauréats de chaque catégorie » a-t-elle dit. Le ministre conseiller spécial du président du Faso, Samuel Kalkoumdo (gauche) a salué l’Initiative. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-1024x576.jpeg\" class=\"size-full wp-image-164003\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1.jpeg\" alt=\"\" width=\"1080\" height=\"608\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-300x169.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-1024x576.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-768x432.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-746x420.jpeg 746w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-150x84.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-696x392.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-1-1068x601.jpeg 1068w\" sizes=\"auto, (max-width: 1080px) 100vw, 1080px\" /> Le ministre conseiller spécial du président du Faso, Samuel Kalkoumdo (gauche) a salué l’Initiative. La présidente du jury a souligné que l’innovation de la V e édition a été l’intégration du prix régional. Le président de la commission épiscopale Justice et paix et de l’initiative paix au Sahel, Monseigneur Alexandre Bazié a soutenu que l’instauration du Prix régional transfrontalier est une initiative de faire prôner et régner la paix partout. « La parole peut construire et détruire. Il revient donc aux habitants du Sahel de favoriser un usage positif et efficace de la parole pour la construction de la paix » a-t-il signifié. 21 journalistes lauréats ont reçu des prix au cours de la soirée de récompense de la 5e édition du PJPCS. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-1024x576.jpeg\" class=\"size-full wp-image-164004\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2.jpeg\" alt=\"\" width=\"1080\" height=\"608\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2.jpeg 1080w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-300x169.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-1024x576.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-768x432.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-746x420.jpeg 746w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-150x84.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-696x392.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-15.16.29-2-1068x601.jpeg 1068w\" sizes=\"auto, (max-width: 1080px) 100vw, 1080px\" /> 21 journalistes lauréats ont reçu des prix au cours de la soirée de récompense de la 5e édition du PJPCS. Le ministre conseiller spécial du président du Faso, Samuel Kalkoumdo a salué l’Initiative reconnaissant la valeur des journalistes dans la quête du vivre ensemble et de la cohésion sociale. Le secrétaire général régional de l’initiative paix au sahel, Abbé Herman Ouédraogo, s’est réjouie de l’accomplissement de l’édition. Quant au président du comité d’organisation, Abbé Sié Mohamed Éric Dah, il a remercié et invité les partenaires à se joindre pour les prochaines éditions. Gbetcheni Constantin Bertrand KAMBIRE Collaborateur Crédit photo : Bertrand KAMBIRE",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Le camarade Abdoulaye Bassinga, gouverneur de la région du Kadiogo, élu président de l’Union des collectivités territoriales de l’AES (UCT-AES)",
+      "link": "https://www.aib.media/le-camarade-abdoulaye-bassinga-gouverneur-de-la-region-du-kadiogo-elu-president-de-lunion-des-collectivites-territoriales-de-laes-uct-aes/",
+      "pubDate": "2026-06-13T09:28:30.000Z",
+      "description": "Le camarade Abdoulaye Bassinga, gouverneur de la région du Kadiogo, élu président de l’Union des collectivités territoriales de l’AES (UCT-AES) Ouagadougou, 12 juin 2026 (AIB) – Les représentants des collectivités territoriales des trois pays de l’Alliance des États du Sahel (AES) ont tenu, le jeudi 11 juin à Niamey, une assemblée générale ayant abouti à la création de l’Union des collectivités territoriales de l’AES (UCT-AES). À l’issue de cette rencontre, le gouverneur de la région du Kadiogo, le camarade Abdoulaye Bassinga, a été élu président de cette nouvelle organisation pour un mandat d’un an. Le camarade Abdoulaye Bassinga sera assisté d’Abdoulaye Garba Maïga, de l’Association des régions du Mali, en qualité de premier vice-président chargé des questions de coopération entre les collectivités territoriales et des relations avec les institutions des États, ainsi que du colonel Boubacar Soumana Garanke, de l’Association des municipalités du Niger, élu deuxième vice-président chargé des questions de paix, de sécurité et de développement. Cette rencontre des associations nationales des collectivités territoriales des trois États membres de l’Alliance des États du Sahel s’inscrit dans la volonté des plus hautes autorités de la Confédération de l’AES de renforcer l’intégration des peuples à travers une coopération de proximité portée par les territoires, les communes et les régions. Elle a officiellement posé les fondements d’un nouvel espace de coopération entre les collectivités territoriales du Burkina Faso, du Mali et du Niger. L’Union des collectivités territoriales de l’AES, qui vient d’être créée, constitue ainsi un cadre permanent de dialogue, de concertation, de mutualisation des expériences et de promotion d’initiatives communes dans les domaines du développement local, de la gouvernance territoriale, de la paix, de la sécurité, de la résilience communautaire et du développement économique. Au cours de ces travaux, les participants ont procédé à l’adoption des statuts et du règlement intérieur de l’organisation, consacrant ainsi la naissance officielle de cette nouvelle institution au service des collectivités territoriales de l’espace AES. Cette nouvelle organisation des collectivités territoriales du Burkina Faso, du Mali et du Niger réaffirme leur détermination à contribuer activement à la construction d’un espace sahélien plus intégré, plus solidaire et davantage orienté vers la satisfaction des aspirations des populations. Notons que cette rencontre a enregistré la présence de membres du gouvernement ainsi que de plusieurs personnalités civiles et militaires. Agence d'information du Burkina BAK/ata Source: Agence nigérienne de Presse (ANP)",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -883,7 +883,6 @@
         "economic",
         "diplomatic",
         "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -904,14 +903,14 @@
       "_desk": "A1"
     },
     {
-      "title": "« The Voice Afrique francophone » : Canal+ dévoile les rouages de la nouvelle saison",
-      "link": "https://journaldumali.com/the-voice-afrique-francophone-canal-devoile-les-rouages-de-la-nouvelle-saison/",
-      "pubDate": "2026-06-12T14:40:35.000Z",
-      "description": "© JDM Diffusée sur Canal+ Magic à partir de ce 12 juin, chaque vendredi à 21 h, la nouvelle saison de « The Voice : Plus qu’une voix » a été présentée le 10 juin 2026 à Bamako à des influenceurs, influenceuses et journalistes réunis au siège de Canal+ Mali. Cette rencontre visait à mettre en lumière les principales articulations du programme et à mobiliser les relais digitaux autour de l’émission. L’événement s’inscrivait dans une présentation simultanée organisée dans plusieurs pays d’Afrique francophone. Des créateurs de contenus venus notamment du Mali, de la Côte d’Ivoire, de la Guinée, de la RDC, du Gabon et encore de Madagascar ont ainsi pu découvrir les contours de cette nouvelle saison du célèbre télé-crochet musical. Adapté dans plus de 75 pays à travers le monde, « The Voice » s’est imposé, au fil des années, comme l’un des formats de divertissement les plus populaires. Cette déclinaison africaine mettra en compétition 50 talents issus de 16 pays francophones : le Bénin, le Burkina Faso, le Burundi, le Cameroun, le Congo, la République démocratique du Congo, la Côte d’Ivoire, le Gabon, la Guinée, Madagascar, le Mali, le Niger, le Rwanda, le Sénégal, le Tchad et le Togo. Une montée en puissance jusqu’à la finale Au cours de la rencontre, les responsables de Canal+ ont détaillé les différentes étapes de la compétition, composée de dix émissions de 90 minutes. L’aventure débute par les auditions à l’aveugle, phase emblématique du programme durant laquelle seuls les talents vocaux sont pris en compte. Les coachs sélectionnent alors les candidats qui composeront leurs équipes respectives. La compétition se poursuit avec les « Battles », des duels opposant des candidats d’une même équipe. À l’issue de chaque confrontation, un seul participant poursuit l’aventure. Les « K.O. » constituent ensuite une étape décisive. Les talents y défendent individuellement leur place afin de révéler pleinement leur identité artistique. Chaque coach retient d’abord deux candidats parmi les cinq encore en lice dans son équipe, avant un ultime affrontement. Au final, un seul représentant par équipe décroche son billet pour la finale. La grande finale, prévue le 14 août, donnera la parole au public, qui votera en direct pour désigner la plus belle voix d’Afrique francophone. L’émission sera présentée par Jean-Michel Onnin et portée par un jury composé de quatre figures reconnues de la scène musicale : la chanteuse ivoirienne Josey, l’artiste gabonaise Emma’a, la légende ivoirienne Meiway et le rappeur franco-congolais d’origine togolaise Franglish. Au-delà de la compétition télévisée, Canal+ mise également sur une forte interaction numérique. Les téléspectateurs pourront suivre les coulisses de l’émission à travers des contenus exclusifs, participer à des sondages et interagir avec les candidats sur les plateformes digitales du groupe. Pour marquer le lancement de cette nouvelle saison, Canal+ Mali organise une soirée spéciale de diffusion du premier numéro ce vendredi à l’hôtel Mæv[a] Palace, à partir de 19 h. Mohamed Kenouvi",
-      "_source": "Journal du Mali",
-      "_sourceId": "rss_journ_mali",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
+      "title": "PJPCS 2026 : 21 prix décernés aux meilleures œuvres journalistiques sur la paix",
+      "link": "https://www.minute.bf/pjpcs-2026-21-prix-decernes-aux-meilleures-oeuvres-journalistiques-sur-la-paix/",
+      "pubDate": "2026-06-12T17:08:39.000Z",
+      "description": "La commission épiscopale Justice et Paix a procédé dans la nuit du jeudi 11 juin 2026, a la remise des prix de la 5e édition du Prix du Journalisme pour la Paix et la Cohésion Sociale (PJPCS). Cette activité organisée dans le cadre de l'initiative du Sahel pour la paix (SPI) a permis de récompenser les meilleures productions journalistiques réalisées sur la paix et la cohésion sociale au Burkina Faso. Pour cette édition, neuf prix spéciaux et douze prix officiels ont été décernés aux lauréats dans les catégories presse en ligne, presse écrite, télévision et radio. En presse en ligne, le premier prix officiel a été remporté par Jean-Marc Kambou de refletinfo.net. Dans la catégorie presse écrite, le premier prix est revenu à Abdel Aziz Nabaloum des Éditions Sidwaya. Une vue du public Au niveau de la télévision, Abdoul Rahim Tapsoba a remporté non seulement le premier prix officiel, mais aussi le prix spécial Oxfam. Enfin, dans la catégorie radio, le graal est revenu à Frederic Tensaba de la RTB Bobo. Le prix de chaque lauréat est composé d'un trophée, d'un livre, d'une attestation et d'un chèque de 500 000 F CFA. Les deuxièmes et les troisièmes ont respectivement gagné des chèques de 300 000 F CFA et 200 000 F CFA, ainsi que des attestations et des livres. La 5e édition du PJPCS a introduit cette année une innovation en instituant le prix régional. Cette distinction a été décernée à Drissa Diallo, journaliste à la Radio Yeelen au Mali, pour son œuvre « Un vocal qui divise ». Son prix est composé d'une attestation, d'un trophée et d'un chèque de 500 000 F CFA. Dans son intervention, Mgr Alexandre Bazié, Président de la Conférence épiscopale Burkina-Niger chargé de la Commission Justice et Paix, a insisté sur la puissance de la parole dans les sociétés africaines. Selon lui, celle-ci constitue un instrument capable aussi bien de construire que de détruire. Face aux défis sécuritaires auxquels est confrontée la région sahélienne, il a appelé à une utilisation positive et responsable de la parole afin de favoriser la cohésion sociale et une paix durable. L'une des principales satisfactions exprimées par le responsable religieux concerne l'évolution du Prix qui, cette année, a intégré une dimension sous-régionale. Cette extension couvre désormais cinq pays de l'espace d'intervention du SPI : le Burkina Faso, le Niger, le Mali, la Côte d'Ivoire et le Ghana.« Notre joie, c'est que cette année, le prix est devenu un prix régional. Il s'est étendu à l'ensemble de la région parce que, naturellement, le SPI s'étend sur ces cinq pays », a-t-il déclaré. Mgr Alexandre Bazié, Président de la Conférence épiscopale Burkina-Niger Pour Mgr Bazié, cette régionalisation constitue une étape importante dans la promotion de la paix et dans l'enracinement de convictions fortes au sein des populations sahéliennes. Cette 5e édition a enregistré 56 candidatures de journalistes du Burkina Faso, de la Côte d'Ivoire, du Ghana, du Mali et du Niger. Quarante-sept productions proviennent du Burkina Faso et neuf des autres pays. À l'issue des examens, sept œuvres ont été déclassées pour confusion de genres, non-conformité aux règles et non-respect du format. Pour rappel, c'est en 2019 que l'Église catholique et son partenaire Catholic Relief Services (CRS) se sont engagés à renforcer la paix et la cohésion sociale dans la sous-région à travers la promotion de la résilience des communautés et la prévention des conflits. Dans ce sens, depuis 2022, à travers l'Initiative Paix au Sahel (SPI), ils organisent le PJPCS avec le double objectif d'encourager et de valoriser les professionnels des médias qui œuvrent pour la paix et la cohésion sociale, ainsi que de susciter une mobilisation toujours plus grande autour de ces idéaux. Jean-François SOMÉ Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
@@ -931,7 +930,39 @@
       "_rating": "F2",
       "_score": 127,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Conakry : la Banque Islamique parmi les sponsors de la première édition de l’Africa Fight League de MMA",
+      "link": "https://guineenews.org/2026/06/13/conakry-la-banque-islamique-parmi-les-sponsors-de-la-premiere-edition-de-lafrica-fight-league-de-mma/",
+      "pubDate": "2026-06-13T05:20:22.000Z",
+      "description": "La Guinée s'apprête à écrire une nouvelle page de son histoire sportive avec l'organisation du tout premier gala international de MMA sur son sol. Prévu ce samedi 13 juin au Chapiteau, l'événement réunira des combattants professionnels venus de plusieurs pays africains, notamment du Sénégal, du Mali, de la Côte d'Ivoire, du Burkina Faso, ainsi que de la Guinée. Cette première édition de l'Africa Fight League est co-organisée par la Fédération guinéenne de MMA, dirigée par Ibrahima Kalil Touré, avec l'appui de plusieurs partenaires dont la Banque Islamique, l'un des principaux sponsors de ce rendez-vous inédit des sports de combat. Lors de la conférence de presse et de la pesée officielle organisées ce vendredi à Conakry, le promoteur de l'événement, Oumar Diallo, a souligné l'importance de cette initiative pour la jeunesse guinéenne. « C'est une grande fierté de réunir autant d'athlètes en Guinée. Au-delà du sport, nous voulons montrer aux jeunes qu'il est possible de réussir à travers le travail, la discipline et le combat », a-t-il déclaré. Au programme, c'est plus de 7 combats dont deux finales du championnat national de MMA. Le public assistera également à un combat féminin très attendu mettant aux prises la Guinéenne Fatima Kourouma, surnommée « La Guerrière 224 », et une adversaire tunisienne. Le président de la Fédération guinéenne de MMA a salué l'accompagnement des partenaires, notamment celui de la Banque Islamique, dont le soutien a contribué à la concrétisation de ce projet ambitieux. Avec cette première édition, Conakry se positionne désormais comme une nouvelle terre d'accueil des grands événements de sports de combat en Afrique.",
+      "_source": "Guineenews",
+      "_sourceId": "rss_guineenews",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 119,
+      "_zone": 1,
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1004,76 +1035,12 @@
       "_desk": "A1"
     },
     {
-      "title": "VDP du Zoundwéogo :Une centaine de motos offertes pour améliorer la mobilité",
-      "link": "https://www.sidwaya.info/vdp-du-zoundweogo-une-centaine-de-motos-offertes-pour-ameliorer-la-mobilite/",
-      "pubDate": "2026-06-12T16:13:34.000Z",
-      "description": "Une centaine de motos ont été officiellement remises, dans l’après-midi du jeudi 11 juin 2026, à Manga, aux Volontaires pour la défense de la patrie (VDP) du Zoundwéogo, dans la région du Nazinon. La dotation, d’une valeur de plus de 75 millions F CFA, s’inscrit dans le cadre de l’initiative : « Un village, au moins une moto pour les VDP ». Les Volontaires pour la défense de la patrie (VDP) relevant du Zoundwéogo, dans la région du Nazinon, disposent désormais de nouveaux moyens roulants pour accomplir leur mission. Ils ont reçu des populations de la province, d’une centaine de motos dont la remise officielle a eu lieu, au cours d’une cérémonie tenue, dans l’après-midi du jeudi 11 juin 2026, à Manga . La dotation, d’une valeur de plus de 75 millions F CFA, s’inscrit dans le cadre de l’initiative : « Un village, au moins une moto pour les VDP ». Le coordonnateur régional des VDP du Nazinon, le chef de bataillon, Patrick Anicet Bado, a témoigné sa reconnaissance aux populations du Zoundwéogo qui ont répondu à l’appel du gouverneur de la région du Nazinon. Selon lui, les moyens roulants mobilisés dans le cadre de l’initiative vont accroitre considérablement la mobilité des VDP. « Ces dons nous engagent et nous les recevons avec beaucoup d’humilité », a-t-il souligné. Le président de la cérémonie, Jacques Sosthène Dingara, ministre chargé de l’enseignement de base (à droite), a officiellement remis les motos. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2.png\" class=\"size-full wp-image-164008\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2.png\" alt=\"\" width=\"800\" height=\"533\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/2.png 800w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-300x200.png 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-768x512.png 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-630x420.png 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-150x100.png 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/2-696x464.png 696w\" sizes=\"(max-width: 800px) 100vw, 800px\" /> Le président de la cérémonie, Jacques Sosthène Dingara, ministre chargé de l’enseignement de base (à droite), a officiellement remis les motos. Pour M. Bado, cette remise est la preuve que le sacrifice des VDP est reconnu par les populations. Ce qui oblige, d’après lui, ces forces combattantes à aller au-delà de leur limite. Le coordonnateur régional des VDP du Nazinon a également promis de bien entretenir ces moyens roulants et de s’engager plus sur le terrain afin de maintenir le calme dans la région. Le haut-commissaire du Zoundwéogo, Julien Ouédraogo, a indiqué qu’au total 109 motos ont été acquises sur les 173 villages et secteurs de sa circonscription administrative. Ce qui traduit, à son avis, non seulement l’attachement des populations à la cause nationale, mais aussi leur détermination à contribuer activement à la sécurisation de la province. M. Pour le coordonnateur régional des VDP du Nazinon, le chef de bataillon, Patrick Anicet Bado, cette remise est la preuve que le sacrifice des VDP est reconnu par les populations. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3.png\" class=\"size-full wp-image-164009\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3.png\" alt=\"\" width=\"800\" height=\"533\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3.png 800w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-300x200.png 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-768x512.png 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-630x420.png 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-150x100.png 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-696x464.png 696w\" sizes=\"(max-width: 800px) 100vw, 800px\" /> Pour le coordonnateur régional des VDP du Nazinon, le chef de bataillon, Patrick Anicet Bado, cette remise est la preuve que le sacrifice des VDP est reconnu par les populations. Ouédraogo a noté que dans la marche victorieuse de la Révolution progressiste populaire (RPP), le peuple a compris que la défense de la Patrie est une responsabilité collective qui interpelle chaque citoyen, chaque village et chaque communauté. D’après lui, l’initiative : « Un village, au moins une moto pour les VDP » , a suscité un formidable élan de solidarité et de patriotisme en vue de renforcer la mobilité des VDP. « Les filles et fils de la province ont démontré que lorsque le peuple est conscient de sa responsabilité historique, aucune difficulté n’est insurmontable », a signifié le haut-commissaire du Zoundwéogo. « Pleine de symboles pour la RPP » Le premier responsable de la province a fait savoir que la remise de ce jour constitue une nouvelle étape dans la dynamique de mobilisation populaire pour la défense de la Patrie. C’est pourquoi, il a invité l’ensemble des populations de son ressort territorial à demeurer mobilisées, vigilantes et résolument engagées dans la co-production de la sécurité. Pour le président de la cérémonie, Jacques Sosthène Dingara, ministre de l’Enseignement de base, de l’Alphabétisation et de la Promotion des langues nationales, cette solennité consacrée à la remise de moto aux VDP, est pleine de symboles pour la RPP. Le haut-commissaire du Zoundwéogo, Julien Ouédraogo, a noté que dans la marche victorieuse de la RPP, le peuple a compris que la défense de la Patrie est une responsabilité collective. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4.png\" class=\"size-full wp-image-164010\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4.png\" alt=\"\" width=\"800\" height=\"533\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4.png 800w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-300x200.png 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-768x512.png 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-630x420.png 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-150x100.png 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-696x464.png 696w\" sizes=\"(max-width: 800px) 100vw, 800px\" /> Le haut-commissaire du Zoundwéogo, Julien Ouédraogo, a noté que dans la marche victorieuse de la RPP, le peuple a compris que la défense de la Patrie est une responsabilité collective. Car, selon lui, la Révolution consiste à faire les choses autrement et à contribuer au développement de son pays. « Être révolutionnaire, c’est savoir prendre soi-même la responsabilité de conduire son développement et de créer le bien-être pour toute la communauté », expliqué le ministre Dingara. A l’écouter, cette action de mobilisation de motos pour les VDP est une illustration parfaite du sens que les premières autorités du pays voudraient donner à la contribution communautaire. Le président de la cérémonie a précisé que les communautés, en prenant en charge leur sécurité, est le gage que l’on puisse procéder à un développement paisible dans la région et par ricochet le Burkina Faso. Jacques Sosthène Dingara a espéré que l’initiative : « Un village, au moins une moto pour les VDP » , va faire tache d’huile dans le Zoundwéogo. Il a, de ce fait, exhorté les populations à encore doubler de force. Noufou Sawadogo",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Coopération Burkina Faso-Allemagne: le ministre Nacanabo et Dr Braune passent en revue les relations bilatérales",
-      "link": "https://www.aib.media/cooperation-burkina-faso-allemagne-le-ministre-nacanabo-et-dr-braune-passent-en-revue-les-relations-bilaterales/",
-      "pubDate": "2026-06-12T14:54:52.000Z",
-      "description": "Coopération Burkina Faso-Allemagne: le ministre Nacanabo et Dr Braune passent en revue les relations bilatérales Ouagadougou, 12 juin 2026 (AIB) – Le ministre de l’Économie et des Finances, Dr Aboubakar Nacanabo, et le chef de la division Sahel au ministère fédéral allemand, Dr Bernhard Braune, ont fait, ce vendredi à Ouagadougou au cours d’une audience, le point sur l’état de la coopération entre les deux pays, un partenariat fondé sur le pragmatisme et le dialogue. Au cours des échanges, le ministre de l’Économie et des Finances a salué l’esprit qui caractérise les relations entre le Burkina Faso et l’Allemagne. Il a également présenté la vision du Burkina Faso en matière de coopération, une approche qui s’inscrit dans les orientations du Manifeste de la Révolution progressiste populaire (RPP) ainsi que dans les objectifs du Plan Relance pour la consolidation du développement économique et social. De son côté, Dr Bernhard Braune a réaffirmé la volonté de l’Allemagne de poursuivre sa collaboration avec le Burkina Faso dans le respect mutuel et de la souveraineté de chaque État. Il a aussi souligné l’engagement de son pays dans plusieurs secteurs au Burkina Faso, notamment l’eau, l’assainissement, l’agriculture et le développement local. Agence d’information du Burkina BAK/ata Source: DCRP",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Kénédougou : Le Haut-commissaire s’enquiert de la production des plants forestiers pour le reboisement 2026",
-      "link": "https://www.aib.media/kenedougou-le-haut-commissaire-senquiert-de-la-production-des-plants-forestiers-pour-le-reboisement-2026/",
-      "pubDate": "2026-06-12T14:59:05.000Z",
-      "description": "Kénédougou : Le Haut-commissaire s'enquiert de la production des plants forestiers pour le reboisement 2026 Orodara, 12 juin 2026 (AIB) – Le Haut-commissaire de la province du Kénédougou, Saïdou Sakira, a effectué ce vendredi une visite à la Direction provinciale des Eaux et Forêts afin de s'enquérir de l'état d'avancement de la production des plants destinés à la campagne nationale de reboisement 2026. Cette visite a permis à l'autorité provinciale de constater les efforts consentis par les services forestiers dans le cadre de la préparation de cette importante campagne environnementale. Selon les responsables de la direction provinciale des eaux et forêts, environ 26 000 plants de diverses espèces ont déjà été produits pour contribuer au reboisement et à la restauration du couvert végétal dans la province. Au terme de la visite, le Haut-commissaire Saïdou Sakira a salué l'engagement et le professionnalisme des agents des Eaux et Forêts. Il les a encouragés à poursuivre leurs efforts afin d'atteindre les objectifs fixés pour la campagne de reboisement 2026. Il a par ailleurs souligné l'importance de la préservation des ressources naturelles et de la lutte contre la dégradation de l'environnement, appelant à une mobilisation accrue de l'ensemble des acteurs concernés. Le Directeur provincial des Eaux et Forêts Idrissa Sanou a exprimé sa reconnaissance aux autorités administratives pour leur accompagnement. Il a également sollicité le renforcement de l'appui des partenaires techniques et financiers afin d'accroître les capacités de production de plants et d'améliorer les résultats des futures campagnes de reboisement. Agence d’information du Burkina AK/wis",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Ouagadougou : La 4e édition du FESIME s’ouvre sous le signe de la renaissance verte et de la protection de l’environnement",
+      "link": "https://www.minute.bf/ouagadougou-la-4e-edition-du-fesime-souvre-sous-le-signe-de-la-renaissance-verte-et-de-la-protection-de-lenvironnement/",
+      "pubDate": "2026-06-13T09:19:45.000Z",
+      "description": "La 4e édition du Festival international de musique pour l’environnement (FESIME) a débuté ce vendredi 12 juin 2026 à Ouagadougou. Placée sous le thème « Renaissance verte : agissons tous ensemble pour un demain meilleur », l’événement se tient du 12 au 14 juin 2026. Le Festival international de musique pour l’environnement (FESIME) est un rendez-vous culturel qui utilise l’art et la musique comme outils de sensibilisation à la protection de l’environnement et à la lutte contre les effets du changement climatique. Pour cette édition, les organisateurs entendent renforcer l’engagement citoyen en faveur de la préservation des ressources naturelles. Le promoteur du FESIME invitant les jeunes à la protection de l'environnement et au reboisement Selon le promoteur du festival, Ibrahim Simporé, plus connu sous le nom de Ras Simporé, la thématique retenue cette année traduit l’urgence d’une mobilisation collective pour la sauvegarde de l’environnement. « La question de l’environnement concerne toute l’humanité. Le FESIME constitue un trait d’union entre la culture et l’environnement », a-t-il indiqué. Le promoteur du FESIME a souligné que le festival ne se limite pas aux prestations artistiques. Il offre également un cadre de réflexion à travers des panels animés par des spécialistes des questions environnementales. « Nous sommes convaincus qu’à travers la culture, nous pouvons atteindre nos objectifs, car les artistes sont très suivis par les populations », a-t-il expliqué. Une prestation d'artiste Malgré son importance, l’organisation du festival fait face à d’importantes difficultés financières. Ras Simporé a lancé un appel aux autorités et aux partenaires engagés dans la défense de l’environnement afin qu’ils accompagnent davantage l’initiative. Représentant le ministre de la Communication, de la Culture, des Arts et du Tourisme, le conseiller technique Amidou Belem a salué l’initiative et réaffirmé l’engagement de son département à accompagner le festival. « Depuis l’année dernière, nous avons décidé d’accompagner le FESIME parce qu’il s’inscrit dans la dynamique nationale de reforestation. Nous avons notamment vu l'opération de plantation de 5 000 arbres en une heure le 21 juin l'année dernière. Un tel événement mérite d’être encouragé », a-t-il déclaré. La cérémonie d’ouverture a également été marquée par un panel d’échanges sur plusieurs thématiques liées à l’environnement. Parmi les intervenants figurait Dorinta Moukailiou, directeur du Génie et des Infrastructures forestières, qui a développé le thème : « Reboisement et restauration des écosystèmes dégradés ». À cette occasion, il a invité les populations à faire du reboisement une activité prioritaire pendant la saison des pluies. « Notre planète souffre de la dégradation de ses ressources naturelles. Les arbres profitent aux animaux comme aux êtres humains. La solution réside dans le reboisement et la restauration des écosystèmes dégradés afin de permettre à la nature de retrouver son équilibre et de nous offrir le meilleur d’elle-même », a-t-il soutenu. Pour montrer l'exemple, le FESIME a mis en terre des plants Cette cérémonie d’ouverture a été marquée par une séance de plantation d’arbres ainsi que par la remise de poubelles aux populations et au lycée Nourenne. Durant les trois jours du festival, plusieurs artistes offriront des prestations musicales axées sur la sensibilisation à la protection de l’environnement et à la promotion des comportements écocitoyens. Lire aussi : Environnement : Le FESIME 2025 mise sur les élèves pour lutter contre le changement climatique Sakinatou ZOUNDI Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1094,6 +1061,38 @@
       "_score": 111,
       "_zone": 1,
       "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "L’ambassadrice Cyrille Ganou salue les efforts de ses concitoyens pour la promotion de la culture burkinabè en Italie",
+      "link": "https://www.aib.media/lambassadrice-cyrille-ganou-salue-les-efforts-de-ses-concitoyens-pour-la-promotion-de-la-culture-burkinabe-en-italie/",
+      "pubDate": "2026-06-13T09:04:12.000Z",
+      "description": "L'ambassadrice Cyrille Ganou salue les efforts de ses concitoyens pour la promotion de la culture burkinabè en Italie Rome, 3 juin 2026 (AIB)- L'ambassadrice du Burkina Faso en Italie, Camarade Cyrille Ganou Badolo, a salué, mercredi 10 juin, les efforts de la communauté burkinabè pour la promotion de la culture nationale en Italie, tout en annonçant des démarches visant à faciliter l'obtention des visas italiens pour les Burkinabè. Elle s'exprimait au cours d'un entretien accordé à l'AIB. En poste en Italie depuis le 5 novembre 2024, date de son arrivée à Rome, et après la présentation de ses lettres de créance au président italien Sergio Mattarella le 5 décembre 2024, la diplomate a dressé un bilan positif de son action à la tête de la représentation diplomatique burkinabè. « Beaucoup apprécient le travail qui est fait. C'est avant tout une question de management et de travail d'équipe », a-t-elle déclaré, félicitant l'ensemble de ses collaborateurs pour leur engagement au service du Burkina Faso. L'ambassadrice a particulièrement rendu hommage aux Burkinabè vivant en Italie pour leur contribution à la valorisation de l'identité culturelle nationale. Selon elle, le Burkina Faso est aujourd'hui reconnu en Italie comme « une grande nation de culture », grâce notamment aux nombreuses manifestations organisées par la diaspora. « Les Italiens apprécient notre gastronomie, nos tenues traditionnelles et connaissent même l'origine régionale de certaines de nos tenues », a-t-elle expliqué, soulignant que les activités culturelles organisées par les compatriotes constituent un important vecteur de rayonnement du pays. Elle a assuré que l'ambassade continuera d'accompagner ces initiatives malgré certaines contraintes logistiques liées à l'étendue du territoire italien et à l'éloignement de certaines localités où résident les communautés burkinabè. Abordant la question des visas, l'ambassadrice a reconnu les difficultés rencontrées par les Burkinabè souhaitant se rendre en Italie. Actuellement, les demandeurs de visa doivent effectuer leurs démarches auprès du service consulaire de l'ambassade d'Italie en Côte d'Ivoire, une situation qui engendre des coûts supplémentaires et des contraintes importantes. « Pour effectuer un voyage en Italie, il faut pratiquement effectuer deux voyages », a-t-elle regretté. Face à cette situation, elle a indiqué avoir engagé des discussions avec les autorités compétentes afin d'obtenir l'ouverture d'un service consulaire italien à Ouagadougou. À défaut d'une ouverture immédiate, la diplomate a proposé qu'un agent consulaire puisse se rendre périodiquement dans la capitale burkinabè afin de traiter les demandes de visa sur place. Elle a toutefois salué les avancées enregistrées dans le domaine diplomatique, rappelant que les détenteurs de passeports diplomatiques et de service bénéficient désormais d'une exemption de visa pour les séjours de moins de 90 jours, dans le cadre du principe de réciprocité appliqué entre les deux pays. L'ambassadrice a également mis en avant les efforts de rationalisation des dépenses engagés par la mission diplomatique. Selon elle, le choix de locaux moins coûteux a permis de réaliser des économies substantielles, facilitant l'acquisition d'un immeuble de dix étages. À partir du 1er juillet, les diplomates devraient intégrer ce nouveau bâtiment, qui comprendra à la fois des bureaux et des logements. « Nous avons choisi de vivre dans la modestie pour permettre au pays de réaliser des économies », a-t-elle affirmé. Cette réorganisation devrait, selon elle, réduire les dépenses liées aux déplacements et améliorer les conditions de travail du personnel diplomatique. Au cours de l'entretien, l'ambassadrice a également salué le travail de l'Agence d'information du Burkina. Elle a expliqué avoir tenu à visiter le stand de l'AIB lors de la Semaine nationale de la culture à Bobo-Dioulasso afin d'encourager ses agents. « Ils abattent un excellent travail. Les articles publiés sont bien fouillés et réalisés avec professionnalisme », a-t-elle déclaré, félicitant le directeur général de l'agence ainsi que l'ensemble de son personnel. En conclusion, la diplomate a invité les Burkinabè, de toutes confessions religieuses et sensibilités, à soutenir les autorités nationales ainsi que les efforts engagés pour le développement et la souveraineté du pays. Elle a particulièrement appelé les compatriotes à accompagner les actions du président du Faso, le Camarade capitaine Ibrahim Traoré. « Nous n'avons qu'un seul pays et chacun doit donner le meilleur de lui-même », a-t-elle soutenu, estimant que les avancées enregistrées par le Burkina Faso renforcent aujourd'hui son image au sein des institutions internationales. Agence d'information du Burkina JPB/ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1132,6 +1131,70 @@
   ],
   "alerts": [
     {
+      "title": "À La Réunion, la réduction drastique des contrats aidés pourrait causer un séisme social",
+      "link": "https://www.mediapart.fr/journal/france/130626/la-reunion-la-reduction-drastique-des-contrats-aides-pourrait-causer-un-seisme-social",
+      "source": "Mediapart International",
+      "date": "2026-06-13T09:20:03.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "U.S. and Iran close to signing ceasefire deal, officials say",
+      "link": "https://www.washingtonpost.com/world/2026/06/12/pakistan-prime-minister-says-us-iran-deal-text-finalized/",
+      "source": "Washington Post World",
+      "date": "2026-06-13T07:44:21.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "A Goma, James Swan réaffirme l'engagement de la MONUSCO en faveur du cessez-le-feu au Nord-Kivu",
+      "link": "https://www.radiookapi.net/2026/06/13/actualite/securite/goma-james-swan-reaffirme-lengagement-de-la-monusco-en-faveur-du",
+      "source": "Radio Okapi (RDC)",
+      "date": "2026-06-13T06:13:44.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Why Ebola came back — and a warning for the next pandemic",
+      "link": "https://www.ft.com/content/e6e31057-aded-4109-9f5e-6808c7737b0d",
+      "source": "Financial Times World",
+      "date": "2026-06-13T04:00:22.000Z",
+      "rating": "B3",
+      "evidence": "Source fiable unique",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "pandemic"
+        }
+      ]
+    },
+    {
       "title": "West Asia War updates: Abbas Araghchi says draft U.S. deal includes ending naval blockade, Hormuz arrangements",
       "link": "https://www.thehindu.com/news/international/us-israel-iran-war-live-updates-bandar-abbas-strikes-strait-of-hormuz-mojtaba-khamenei-donald-trump-tehran-deal-june-12-2026/article71092034.ece",
       "source": "The Hindu (Inde)",
@@ -1162,80 +1225,48 @@
           "keyword": "ceasefire"
         }
       ]
-    },
-    {
-      "title": "U.S. and Iran close to signing ceasefire deal, officials say",
-      "link": "https://www.washingtonpost.com/world/2026/06/12/pakistan-prime-minister-says-us-iran-deal-text-finalized/",
-      "source": "Washington Post World",
-      "date": "2026-06-12T22:48:07.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "UAE to unlock frozen Iranian funds amid US ceasefire push: Sources",
-      "link": "https://www.aljazeera.com/news/2026/6/12/uae-to-unlock-frozen-iranian-funds-amid-us-ceasefire-push?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "date": "2026-06-12T20:58:41.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      191
+      210
     ],
     [
       "occident_fr",
-      127
+      133
     ],
     [
       "occident_us",
-      111
+      101
     ],
     [
       "golfe_mo",
-      103
+      100
     ],
     [
       "autre",
-      87
+      95
     ],
     [
       "russie",
-      49
+      47
     ],
     [
       "chine",
-      40
+      34
     ],
     [
       "turquie",
-      32
-    ],
-    [
-      "sahel",
-      32
+      30
     ],
     [
       "bf_local",
-      28
+      29
+    ],
+    [
+      "sahel",
+      21
     ]
   ],
   "desks": [
@@ -1243,23 +1274,32 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 82,
+      "count": 74,
       "top": [
         {
-          "title": "Prix du journalisme pour la paix et la cohésion sociale 2026 : Les Edifions Sidwaya, s’empare des prix de la catégorie presse écrite et du prix spécial Oxfam",
-          "link": "https://www.sidwaya.info/prix-du-journalisme-pour-la-paix-et-la-cohesion-sociale-2026-les-edifions-sidwaya-sempare-des-prix-de-la-categorie-presse-ecrite-et-du-prix-special-oxfam/",
-          "source": "Sidwaya",
+          "title": "Le camarade Abdoulaye Bassinga, gouverneur de la région du Kadiogo, élu président de l’Union des collectivités territoriales de l’AES (UCT-AES)",
+          "link": "https://www.aib.media/le-camarade-abdoulaye-bassinga-gouverneur-de-la-region-du-kadiogo-elu-president-de-lunion-des-collectivites-territoriales-de-laes-uct-aes/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "« The Voice Afrique francophone » : Canal+ dévoile les rouages de la nouvelle saison",
-          "link": "https://journaldumali.com/the-voice-afrique-francophone-canal-devoile-les-rouages-de-la-nouvelle-saison/",
-          "source": "Journal du Mali",
+          "title": "PJPCS 2026 : 21 prix décernés aux meilleures œuvres journalistiques sur la paix",
+          "link": "https://www.minute.bf/pjpcs-2026-21-prix-decernes-aux-meilleures-oeuvres-journalistiques-sur-la-paix/",
+          "source": "Minute BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Conakry : la Banque Islamique parmi les sponsors de la première édition de l’Africa Fight League de MMA",
+          "link": "https://guineenews.org/2026/06/13/conakry-la-banque-islamique-parmi-les-sponsors-de-la-premiere-edition-de-lafrica-fight-league-de-mma/",
+          "source": "Guineenews",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1280,15 +1320,6 @@
           "theme": "H",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "VDP du Zoundwéogo :Une centaine de motos offertes pour améliorer la mobilité",
-          "link": "https://www.sidwaya.info/vdp-du-zoundweogo-une-centaine-de-motos-offertes-pour-ameliorer-la-mobilite/",
-          "source": "Sidwaya",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1296,11 +1327,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 53,
+      "count": 61,
       "top": [
         {
-          "title": "Democracy Day: Adebayo calls for defence of democracy",
-          "link": "https://www.vanguardngr.com/2026/06/democracy-day-adebayo-calls-for-defence-of-democracy/",
+          "title": "June 12: Afenifere, Obi, Otti, Alia, Okpebholo others demand unity, security in Nigeria",
+          "link": "https://www.vanguardngr.com/2026/06/june-12-afenifere-obi-otti-alia-okpebholo-others-demand-unity-security-in-nigeria/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1308,8 +1339,8 @@
           "rating": "F2"
         },
         {
-          "title": "‘Tinubu Should Resign,’ Melaye blasts Democracy Day address",
-          "link": "https://www.vanguardngr.com/2026/06/tinubu-should-resign-melaye-blasts-democracy-day-address/",
+          "title": "Three women standing for 2027 Presidency: ‘Why we want to succeed Tinubu’ – Okereke, Zugwai-Chukwu, Fredrick",
+          "link": "https://www.vanguardngr.com/2026/06/three-women-standing-for-2027-presidency-why-we-want-to-succeed-tinubu-okereke-zugwai-chukwu-fredrick/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1317,26 +1348,26 @@
           "rating": "F2"
         },
         {
-          "title": "Nigeria: à l'approche de la présidentielle, le président Bola Tinubu se félicite de son bilan sécuritaire",
-          "link": "https://www.rfi.fr/fr/afrique/20260612-nigeria-%C3%A0-l-approche-de-la-pr%C3%A9sidentielle-le-pr%C3%A9sident-bola-tinubu-se-f%C3%A9licite-de-son-bilan-s%C3%A9curitaire",
-          "source": "RFI Afrique",
+          "title": "State police now or risk deeper insecurity, Shagari warns NASS",
+          "link": "https://www.vanguardngr.com/2026/06/state-police-now-or-risk-deeper-insecurity-shagari-warns-nass/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "S",
           "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Un homme marié met enceinte la voisine de sa maîtresse, âgée de 14 ans",
-          "link": "https://netafrique.net/un-homme-marie-met-enceinte-la-voisine-de-sa-maitresse-agee-de-14-ans/",
-          "source": "Net Afrique (BF)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
-          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "NNPC Probe: I’m not a burden, I’m committed to Tinubu’s government — Oshiomhole",
-          "link": "https://www.vanguardngr.com/2026/06/nnpc-probe-im-not-a-burden-im-committed-to-tinubus-government-oshiomhole/",
+          "title": "IMF, economists disagree over Nigeria’s economic prescriptions",
+          "link": "https://www.vanguardngr.com/2026/06/imf-economists-disagree-over-nigerias-economic-prescriptions/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "‘I have no godfather’ – Blessing Fubara distances self from brother’s battles",
+          "link": "https://www.vanguardngr.com/2026/06/i-have-no-godfather-blessing-fubara-distances-self-from-brothers-battles/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1349,8 +1380,35 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 26,
+      "count": 32,
       "top": [
+        {
+          "title": "A Goma, James Swan réaffirme l'engagement de la MONUSCO en faveur du cessez-le-feu au Nord-Kivu",
+          "link": "https://www.radiookapi.net/2026/06/13/actualite/securite/goma-james-swan-reaffirme-lengagement-de-la-monusco-en-faveur-du",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "La Turquie, puissant parrain de la Somalie en crise",
+          "link": "https://www.lemonde.fr/afrique/article/2026/06/13/la-turquie-puissant-parrain-de-la-somalie-en-crise_6701561_3212.html",
+          "source": "Le Monde International",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Why Ebola came back — and a warning for the next pandemic",
+          "link": "https://www.ft.com/content/e6e31057-aded-4109-9f5e-6808c7737b0d",
+          "source": "Financial Times World",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "B3"
+        },
         {
           "title": "Sit in à Kinshasa : L’opposition défie le pouvoir contre un 3e mandat, Martin Fayulu blessé",
           "link": "https://netafrique.net/sit-in-a-kinshasa-lopposition-defie-le-pouvoir-contre-un-3e-mandat-martin-fayulu-blesse/",
@@ -1368,33 +1426,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "A1"
-        },
-        {
-          "title": "Les USA envisagent d’expulser des Iraniens vers la Centrafrique",
-          "link": "https://netafrique.net/les-usa-envisagent-dexpulser-des-iraniens-vers-la-centrafrique/",
-          "source": "Net Afrique (BF)",
-          "zone": "3. Afrique centrale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "RDC : violents affrontements à Kinshasa lors de la manifestation contre la réforme constitutionnelle",
-          "link": "https://www.jeuneafrique.com/1803690/politique/rdc-violents-affrontements-a-kinshasa-lors-de-la-manifestation-contre-la-reforme-constitutionnelle/",
-          "source": "Jeune Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "B1"
-        },
-        {
-          "title": "Sudan Nashra: Seasonal rains threaten to deepen crisis in Blue Nile’s displacement camps | Khartoum orders universities back to war-damaged campuses | RSF-led govt holds 1st secondary school exams | Dozens killed in North Kordofan as military, RSF step up drone strikes | Key bridges destroyed in Kordofan, Darfur, threatening aid routes",
-          "link": "https://www.madamasr.com/en/2026/06/12/news/u/sudan-nashra-seasonal-rains-threaten-to-deepen-crisis-in-blue-niles-displacement-camps-khartoum-orders-universities-back-to-war-damaged-campuses-rsf-led-govt-holds-1st-secondary-school-e/",
-          "source": "Mada Masr (Égypte)",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1402,16 +1433,25 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 21,
+      "count": 27,
       "top": [
         {
-          "title": "Achraf Hakimi : « Nous voulons faire quelque chose de grand lors de ce Mondial »",
-          "link": "https://fr.hespress.com/477296-achraf-hakimi-nous-voulons-faire-quelque-chose-de-grand-lors-de-ce-mondial.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Vers un marketing territorial pour l’investissement à Bizerte",
+          "link": "https://kapitalis.com/tunisie/2026/06/13/vers-un-marketing-territorial-pour-linvestissement-a-bizerte/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "C",
+          "theme": "E",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Mondial 2026 : quand et où suivre le choc Maroc-Brésil",
+          "link": "https://fr.hespress.com/477194-mondial-2026-quand-et-ou-suivre-le-choc-maroc-bresil.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "France – Algérie : Abdelaziz Rahabi charge Macron et Retailleau",
@@ -1423,6 +1463,15 @@
           "rating": "F2"
         },
         {
+          "title": "Grand Musée de Rabat : le chantier à 900 MDH rattrapé par une facture contestée",
+          "link": "https://medias24.com/2026/06/13/grand-musee-de-rabat-le-chantier-a-900-mdh-rattrape-par-une-facture-contestee-1698951/",
+          "source": "Médias 24 (Maroc)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
           "title": "RDC–Égypte : Félix Tshisekedi et Abdel Fattah Al-Sissi renforcent l’axe de coopération entre Kinshasa et le Caire avec la signature de quatre accords et mémorandums d’entente",
           "link": "https://actualite.cd/2026/06/12/rdc-egypte-felix-tshisekedi-et-abdel-fattah-al-sissi-renforcent-laxe-de-cooperation",
           "source": "ActualitéCD (RDC)",
@@ -1430,24 +1479,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "Mondial 2026 : Carlo Ancelotti s’attend à un duel relevé face à un Maroc \"très fort\"",
-          "link": "https://fr.hespress.com/477304-mondial-2026-carlo-ancelotti-sattend-a-un-duel-releve-face-a-un-maroc-tres-fort.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Pour l’USFP, la bataille électorale passe d’abord par la reconquête de la confiance citoyenne",
-          "link": "https://fr.hespress.com/477292-pour-lusfp-la-bataille-electorale-passe-dabord-par-la-reconquete-de-la-confiance-citoyenne.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     },
@@ -1455,7 +1486,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 139,
+      "count": 128,
       "top": [
         {
           "title": "U.S. and Iran close to signing ceasefire deal, officials say",
@@ -1476,15 +1507,6 @@
           "rating": "A2"
         },
         {
-          "title": "Conflicting claims emerge over proposed US-Iran memorandum",
-          "link": "https://news.cgtn.com/news/2026-06-12/Conflicting-claims-emerge-over-proposed-US-Iran-memorandum-1NVg7yOzvKo/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "source": "CGTN (Chine, EN)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
           "title": "West Asia War updates: Abbas Araghchi says draft U.S. deal includes ending naval blockade, Hormuz arrangements",
           "link": "https://www.thehindu.com/news/international/us-israel-iran-war-live-updates-bandar-abbas-strikes-strait-of-hormuz-mojtaba-khamenei-donald-trump-tehran-deal-june-12-2026/article71092034.ece",
           "source": "The Hindu (Inde)",
@@ -1501,6 +1523,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "US says downed multiple Iran drones as both insist deal closer",
+          "link": "https://www.vanguardngr.com/2026/06/us-says-downed-multiple-iran-drones-as-both-insist-deal-closer/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "8. Moyen-Orient",
+          "theme": "M",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1508,8 +1539,26 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 197,
+      "count": 183,
       "top": [
+        {
+          "title": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky attendu au Conseil européen la semaine prochaine, les négociations sur l’adhésion de Kiev à l’UE vont reprendre",
+          "link": "https://www.lemonde.fr/international/live/2026/06/13/en-direct-guerre-en-ukraine-volodymyr-zelensky-attendu-au-conseil-europeen-la-semaine-prochaine-les-negociations-sur-l-adhesion-de-kiev-a-l-ue-vont-reprendre_6698620_3210.html",
+          "source": "Le Monde International",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "La Maison-Blanche force Anthropic à couper ses derniers modèles aux étrangers",
+          "link": "https://legrandcontinent.eu/fr/2026/06/13/la-maison-blanche-force-anthropic-a-couper-ses-derniers-modeles-aux-etrangers/",
+          "source": "Le Grand Continent",
+          "zone": "9. Europe occidentale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
         {
           "title": "Pour gagner la guerre en 2060, la Chine imagine un porte-avions capable de s’envoler à la frontière de l’espace",
           "link": "https://legrandcontinent.eu/fr/2026/06/13/pour-gagner-la-guerre-en-2060-la-chine-imagine-un-porte-avions-capable-de-senvoler-a-la-frontiere-de-lespace/",
@@ -1529,15 +1578,6 @@
           "rating": "A2"
         },
         {
-          "title": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky se félicite de la reprise des négociations sur l’adhésion de Kiev à l’UE",
-          "link": "https://www.lemonde.fr/international/live/2026/06/13/en-direct-guerre-en-ukraine-volodymyr-zelensky-se-felicite-de-la-reprise-des-negociations-sur-l-adhesion-de-kiev-a-l-ue_6698620_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
           "title": "L’intelligence artificielle pose un problème exponentiel à l’humanité",
           "link": "https://legrandcontinent.eu/fr/2026/06/12/dario-amodei-anthropic-intelligence-artificielle-pose-probleme-exponentiel/",
           "source": "Le Grand Continent",
@@ -1545,15 +1585,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "EN DIRECT - Moyen-Orient: les États-Unis disent avoir abattu des drones iraniens, malgré l'optimisme affiché pour un accord",
-          "link": "https://www.rfi.fr/fr/moyen-orient/20260613-en-direct-moyen-orient-les-%C3%A9tats-unis-disent-avoir-abattu-des-drones-iraniens-malgr%C3%A9-l-optimisme-affich%C3%A9-pour-un-accord",
-          "source": "RFI Moyen-Orient",
-          "zone": "16. Amérique du Nord",
-          "theme": "M",
-          "relevance": "L",
-          "rating": "C1"
         }
       ]
     }
@@ -1562,8 +1593,7 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
-    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
@@ -1571,42 +1601,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-13T04:40:50.943Z",
+      "at": "2026-06-13T09:28:36.391Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-13T04:40:50.950Z",
+      "at": "2026-06-13T09:28:36.398Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-13T04:41:34.472Z",
+      "at": "2026-06-13T09:29:33.736Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1899 articles"
+      "message": "116/170 flux OK, 1963 articles"
     },
     {
-      "at": "2026-06-13T04:41:37.446Z",
+      "at": "2026-06-13T09:29:36.754Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-13T04:41:37.803Z",
+      "at": "2026-06-13T09:29:37.119Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-13T04:41:37.808Z",
+      "at": "2026-06-13T09:29:37.124Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 4 alertes"
+      "message": "8 developpements, 6 alertes"
     },
     {
-      "at": "2026-06-13T04:41:37.809Z",
+      "at": "2026-06-13T09:29:37.124Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-13T04:41:37.809Z",
+      "at": "2026-06-13T09:29:37.124Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
