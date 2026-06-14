@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-14T09:51:06.480Z",
+  "generatedAt": "2026-06-14T10:21:50.332Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 117,
-    "failed": 53,
-    "articles": 1948,
+    "ok": 106,
+    "failed": 64,
+    "articles": 1863,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -28,11 +28,6 @@
         "count": 20
       },
       {
-        "id": "rss_wakatsera",
-        "name": "Wakat Séra",
-        "count": 10
-      },
-      {
         "id": "rss_lepays_bf",
         "name": "Le Pays (BF)",
         "count": 12
@@ -45,7 +40,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -55,16 +50,6 @@
       {
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
-        "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
         "count": 10
       },
       {
@@ -93,11 +78,6 @@
         "count": 10
       },
       {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
-        "count": 10
-      },
-      {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
         "count": 10
@@ -105,11 +85,6 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -128,11 +103,6 @@
         "count": 30
       },
       {
-        "id": "rss_citi",
-        "name": "Citi Newsroom (Ghana)",
-        "count": 0
-      },
-      {
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
         "count": 20
@@ -146,11 +116,6 @@
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
-      },
-      {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
       },
       {
         "id": "rss_premiumng",
@@ -203,11 +168,6 @@
         "count": 10
       },
       {
-        "id": "rss_elwatan",
-        "name": "El Watan (Algérie)",
-        "count": 0
-      },
-      {
         "id": "rss_telquel",
         "name": "TelQuel (Maroc)",
         "count": 30
@@ -243,18 +203,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -361,11 +311,6 @@
         "id": "rss_brookings",
         "name": "Brookings Institution",
         "count": 0
-      },
-      {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
       },
       {
         "id": "rss_carnegie",
@@ -595,8 +540,23 @@
     ],
     "failedSources": [
       {
+        "id": "rss_wakatsera",
+        "name": "Wakat Séra",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -625,6 +585,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
@@ -638,6 +603,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -675,14 +645,24 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_citi",
+        "name": "Citi Newsroom (Ghana)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_saharang",
@@ -730,6 +710,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_elwatan",
+        "name": "El Watan (Algérie)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_le360",
         "name": "Le360 (Maroc)",
         "error": "HTTP 404"
@@ -740,9 +725,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -758,6 +748,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -803,6 +798,11 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_crisisgroup",
@@ -857,25 +857,25 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 44,
+    "bfAes": 43,
     "alerts": 5,
     "criticalAlerts": 2,
-    "sourcesDistinct": 66
+    "sourcesDistinct": 64
   },
   "topDevelopments": [
     {
-      "title": "Burkina : La Coalition des délégués élus des Universités lance les 72h de l’étudiant sous le signe de l’engagement national",
-      "link": "https://www.minute.bf/burkina-la-coalition-des-delegues-elus-des-universites-lance-les-72h-de-letudiant-sous-le-signe-de-lengagement-national/",
-      "pubDate": "2026-06-13T17:21:55.000Z",
-      "description": "La Coalition des délégués élus de promotion des Universités (CODEP-Uni) a donné, ce samedi 13 juin 2026 à l’Université Joseph Ki-Zerbo (UJKZ), le coup d’envoi des 72 heures de l’étudiant. Cette initiative vise à promouvoir l’excellence académique et à renforcer la cohésion sociale au sein du monde universitaire. Elle est placée sous le patronage du Pr Moumouni Zoungrana, ministre de l’Enseignement secondaire, de la Formation professionnelle et technique. Rendez-vous annuel mettant à l’honneur la créativité, le dynamisme et l’engagement de la communauté estudiantine, les 72 heures de l’étudiant se déroulent cette année sous le thème : « La responsabilité estudiantine dans un contexte de crise sécuritaire au Burkina Faso ». Pendant trois jours, étudiants, enseignants, personnels administratifs et partenaires se retrouvent autour d’un programme riche en activités académiques, culturelles, sportives et citoyennes. Le SG de l'UJKZ, représentant le Pr Moumouni Zoungrana se réjouissant de constater que ces 72 heures ne se limitent pas à des activités festives Pour le Secrétaire général de l'Université Joseph Ki-Zerbo Ali Ouédraogo, représentant le Pr Moumouni Zoungrana, patron de la cérémonie, ces 72 heures constituent bien plus qu’un simple moment de célébration. « Je me réjouis de constater que ces 72 heures ne se limitent pas à des activités festives, mais offrent également des cadres d’échanges scientifiques, culturels, sportifs et citoyens. Elles participent ainsi à la formation intégrale de l’étudiant burkinabè », a-t-il déclaré. Évoquant les défis sécuritaires et sociaux auxquels le Burkina Faso est confronté, M. Ouédraogo a rappelé que les étudiants ont un rôle fondamental à jouer dans la promotion de la paix, du vivre-ensemble et de la cohésion sociale. « L’université doit demeurer un espace de dialogue, d’analyse critique et de propositions constructives au service de la Nation », a-t-il affirmé. Adama Siguiré insistant sur le rôle de l’étudiant comme acteur de la souveraineté et de la résilience nationale Tout en exhortant les participants à tirer le meilleur parti de ces moments d’échanges pour consolider leur engagement patriotique, il leur a adressé ce message : « L’avenir de notre pays se construit aujourd’hui dans vos amphithéâtres, vos bibliothèques, vos laboratoires, mais aussi dans votre capacité à développer l’esprit d’initiative, le sens des responsabilités et la quête permanente de l’excellence ». À l’issue de la cérémonie d’ouverture, deux grands thèmes ont été développés par des panélistes. Il s'agit de Adama Siguiré, vice-président chargé des questions de développement à la Commission nationale de la Confédération des États du Sahel (AES) ; le Dr Boukary Nebié, chargé de mission au ministère de l’Enseignement secondaire, de la Formation professionnelle et technique (MESFPT), représenté pour l’occasion par le Dr Ido Kouama, consultant en stratégie de gestion des crises sociopolitiques ; ainsi que Justin Ouédraogo, business developer et formateur au cabinet FIDALLI. Le premier thème, intitulé « Le rôle de l’étudiant dans la construction d’une nation souveraine et résiliente », a été développé par Adama Siguiré et le Dr Ido Kouama. Dr Ido Kouama rappelant aux étudiants que les amphithéâtres doivent constituer des leviers de renforcement de la cohésion sociale Adama Siguiré a insisté sur le rôle de l’étudiant comme acteur de la souveraineté et de la résilience nationale. Selon lui, la souveraineté repose avant tout sur la volonté d’un peuple de s’assumer, de définir ses propres politiques de développement et de compter sur ses ressources. « C’est une démarche qui ne constitue ni un repli sur soi ni un rejet des autres, mais plutôt une exigence de dignité et d’honneur », a-t-il souligné. Dans un contexte marqué par la lutte contre le terrorisme, monsieur Siguiré a rappelé que la résilience consiste à refuser la fatalité, à maintenir l’espoir et à poursuivre les efforts de développement malgré les difficultés. « Vous occupez une place stratégique dans ce processus, car l’université forme les futurs cadres et décideurs du pays. Vous devez comprendre les enjeux politiques et sociaux actuels, vous engager activement dans la construction nationale et contribuer, chacun à votre niveau, à la recherche de solutions aux défis du Burkina Faso », a expliqué le vice-président de la commission nationale de l'AES. Selon Adama Siguiré, la jeunesse doit faire preuve de responsabilité, de patriotisme et d’esprit de sacrifice afin d’accompagner la révolution progressiste populaire et de participer à l’édification d’un Burkina Faso souverain, résilient et prospère. Pour sa part, le Dr Ido Kouama a abordé la question de la maîtrise du savoir au service de la révolution et du développement. Il a rappelé que le Burkina Faso évolue dans un contexte marqué par des défis sécuritaires, géopolitiques et idéologiques qui exigent la mobilisation de toutes les forces vives de la Nation. « L’université est un espace privilégié de formation intellectuelle où se construisent les compétences nécessaires au développement du pays. Vous êtes une composante essentielle de la réussite du processus de transformation sociale et politique en cours. Votre principale contribution réside dans l’acquisition et la maîtrise approfondie des connaissances scientifiques et techniques pour les mettre au service de la société », a-t-il soutenu. Le Dr Kouama a également insisté sur la nécessité pour les étudiants de cultiver l’amour de la patrie, de développer un esprit critique et de promouvoir une communication responsable, notamment sur les réseaux sociaux. Le second thème, « Comment tirer profit de sa vie étudiante malgré les transformations sociales et développer son réseau professionnel », a été développé par Justin Ouédraogo. Selon lui, les étudiants évoluent aujourd’hui dans un environnement où l’essor des nouvelles technologies, notamment l’intelligence artificielle, transforme les métiers et crée de nouvelles opportunités professionnelles. Le télétravail, les formations en ligne et la digitalisation des activités ouvrent désormais de nouvelles perspectives de carrière. Plusieurs étudiants ont pris part au lancement des 72h des activités Face à ces mutations, M. Ouédraogo a recommandé aux étudiants de développer leur réseau professionnel : « Les relations professionnelles se construisent progressivement à travers les camarades de classe, les aînés, les enseignants, les professionnels rencontrés lors des stages, des conférences ou sur les réseaux sociaux. Le réseautage est un outil essentiel pour favoriser l’insertion professionnelle. Pour construire un réseau solide, il ne faut pas attendre la fin des études ». Il a poursuivi en expliquant qu’un bon réseautage repose sur la confiance, la régularité et la réciprocité. « Il ne s’agit pas seulement de solliciter de l’aide lorsqu’on en a besoin, mais aussi d’apporter sa contribution et d’entretenir les relations dans la durée », a insisté Justin Ouédraogo. S’adressant aux personnes timides, monsieur Ouédraogo les a encouragées à utiliser les plateformes professionnelles pour se faire connaître en partageant des idées pertinentes et en interagissant de manière constructive avec les professionnels. « Pour réussir votre insertion professionnelle, vous devez développer à la fois des compétences techniques acquises à l’université et des compétences comportementales telles que la communication, le leadership, le travail en équipe et la prise de parole en public. L’objectif est de construire dès maintenant le profil recherché par les recruteurs et d’être prêt à saisir les opportunités », a-t-il déclaré aux participants. Un aperçu de la salle En conclusion, il a souligné que « l’étudiant d’aujourd’hui doit être capable de s’adapter aux changements, de développer continuellement ses compétences et de bâtir un réseau solide afin de mieux préparer son avenir professionnel ». Les 72 heures de l’Étudiant se poursuivront avec diverses activités festives ainsi que des échanges scientifiques, culturels, sportifs et citoyens. Lire aussi : Burkina : Les délégués de promotion « condamnent les prises de position » de l’UGEB et appellent à la responsabilité estudiantine Nadège KINDA Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Entreprenariat : L’expert Bili Édouard Tieno évoque « Les 8 erreurs qui freinent la croissance de votre PME »",
+      "link": "https://faso7.com/2026/06/13/entreprenariat-lexpert-bili-edouard-tieno-evoque-les-8-erreurs-qui-freinent-la-croissance-de-votre-pme/",
+      "pubDate": "2026-06-13T21:45:24.000Z",
+      "description": "Bili Édouard Tieno, expert en stratégie, marketing et développement commercial, a animé une formation intitulée « Les 8 erreurs qui freinent la croissance de votre PME », le 13 juin 2026. Dans ce cadre, il a fourni des conseils sur les fondamentaux du pilotage d'entreprise et de la structuration commerciale. D'entrée de jeu, Bili Édouard Tieno a expliqué le contexte qui a motivé l'organisation de cette masterclass. « Nous sommes dans un contexte où la mortalité des PME se fait de plus en plus croissante, dans un environnement économique particulièrement tendu au Burkina Faso et en Afrique de l'Ouest. Il a été important de faire une pause pour identifier les leviers de l'insuccès de ces PME et apporter des réponses correctives » , a-t-il déclaré. Le premier enseignement du formateur a porté sur l'analyse SWOT comme cadre de diagnostic stratégique. Il conseil aux entrepreneurs d'évaluer honnêtement leurs forces et faiblesses internes, ressources humaines, techniques et financières ainsi que les opportunités et menaces liées à leurs environnements concurrentiels, avant de définir leurs stratégies de différenciation. Le formateur a aussi fait cas de la distinction entre l'agitation et le pilotage. Pour Bili Édouard Tieno, beaucoup de promoteurs confondent activité et performance. Ils courent après chaque opportunité sans cap défini, dispersant leurs ressources sans résultats durables. Ensuite, il a insisté sur la nécessité de définir clairement son segment de marché. Selon lui, vouloir s'adresser à tout le monde revient à ne s'adresser à personne. Il a pris l'exemple concret d'une entreprise de peinture de luxe qui sait exactement quel type de client elle cible et dans quel type de logement elle intervient, lui permettant de concentrer son énergie et ses ressources sur les bons prospects. Ce positionnement clair évite l'agitation inutile et permet de construire une offre de valeur cohérente, selon le formateur. Bili Édouard Tieno a par la suite rappelé qu'un objectif sans plan d'action défini, sans budget alloué et sans responsable identifié ne vaut rien. « Si tu veux faire 160 millions en fin 2026 mais que tu n'as pas défini comment y aller, c'est du dessin animé » , a-t-il lancé. Il a également souligné l'importance d’embarquer ses équipes sur ces objectifs pour en assurer la mise en œuvre collective. Les indicateurs de performance comme boussole Le module a également abordé les indicateurs de performance comme outil de pilotage au quotidien. Le formateur conseille d'évaluer les résultats obtenus, d'identifier les écarts par rapport aux objectifs fixés et d'y apporter des corrections. « On n'améliore que ce que l'on mesure » , a-t-il rappelé. En outre, le Bili Édouard Tieno a précisé que les huit solutions proposées portent notamment sur la segmentation du marché, la structuration de l'appareil commercial, le pilotage par indicateurs de performance et la délégation efficace. « L'objectif est que les promoteurs sortent suffisamment outillés pour organiser, structurer et faire croître leurs activités. Car derrière chaque PME, il y a des salariés, des familles et de la recette fiscale pour la nation » , a-t-il ajouté. Jean Thierry Somda, l'un des participants, a salué la pertinence de l'initiative avec le contexte actuel. « C'est une masterclass qui a du sens parce qu'actuellement, les entreprises ont des problèmes alors que nos économies ont besoin de PME. Il y a d'autres PME qui viennent et qui sont mieux structurées, mieux organisées, mieux armées. C'est une belle occasion pour les promoteurs d'aiguiser leur manière de faire » , a-t-il déclaré. Josué TIENDREBEOGO Faso7 L’article Entreprenariat : L'expert Bili Édouard Tieno évoque « Les 8 erreurs qui freinent la croissance de votre PME » est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -883,7 +883,6 @@
         "economic",
         "diplomatic",
         "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -893,12 +892,12 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "A2"
       },
-      "_rating": "F2",
-      "_score": 127,
+      "_rating": "A2",
+      "_score": 123,
       "_zone": 1,
-      "_theme": "J",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -969,6 +968,38 @@
       "_desk": "A1"
     },
     {
+      "title": "Réunion des ministres de l’Industrie et du Commerce de l’AES : Les experts évaluent les documents préparatoires",
+      "link": "https://faso7.com/2026/06/13/reunion-des-ministres-de-lindustrie-et-du-commerce-de-laes-les-experts-evaluent-les-documents-preparatoires/",
+      "pubDate": "2026-06-13T16:40:41.000Z",
+      "description": "En prélude à la quatrième rencontre des ministres de l’industrie et du commerce et du secteur privé de l’Alliance des États du Sahel (AES), prévue le 15 juin 2026 à Ouagadougou, les experts de la Confédération se sont réunis pour préparer les documents nécessaires qui seront soumis à l’appréciation des ministres. La cérémonie d’ouverture des travaux s’est tenue ce 13 juin 2026, à Ouagadougou. Au cours de cette rencontre, il s’agira pour les experts venus du Burkina Faso, du Mali et du Niger d’accélérer l’intégration économique et commerciale de la Confédération en élaborant et validant des documents de travail destinés aux ministres. L'examen portera également sur l'identification d'actions prioritaires à fort impact et sur l'analyse des obstacles à la libre circulation afin d'y apporter des solutions appropriées au profit de la population. De plus, la mobilisation de mécanismes de financement adaptés aux secteurs stratégiques sera étudiée pour favoriser la création d'une véritable zone de libre-échange. Par ailleurs, les experts dresseront le bilan des avancées et définiront les prochaines étapes afin d’identifier les actions prioritaires en matière d’intégration et de mettre en place des dispositifs de financement pour le secteur privé. Selon Alassane Ouédraogo, secrétaire général du ministère en charge du commerce du Burkina Faso, ces actions visent à renforcer les liens et la synergie d’actions entre les secteurs privés des trois États. Pour ce faire, il a exhorté les experts à faire preuve d'audace et à proposer des solutions, assorties de calendriers et de mécanismes de suivi efficaces pour assurer le développement économique des populations de l'AES. Rencontre des ministres de l’industrie et du commerce l’AES : Les experts évaluent les documents des préparatifs -©Faso7 « C'est à ce prix que nous pourrons faire avancer de manière tangible le projet de la Confédération des États du Sahel et bâtir un avenir économique solide pour nos populations » , a-t-il indiqué. A noter que la quatrième rencontre des ministres de l’industrie, du commerce et du secteur privé de l’AES se tiendra le 15 juin 2026 à Ouagadougou, sous la présidence du Premier ministre du Faso, Rimtalba Jean Emmanuel Ouédraogo. Ce sera l’occasion pour les trois pays de la Confédération de définir une feuille de route économique et commerciale de cet espace commun, tout en renforçant leurs relations au sein de l’Alliance. Lazard KOLA Faso7 L’article Réunion des ministres de l’Industrie et du Commerce de l’AES : Les experts évaluent les documents préparatoires est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Révolution progressiste populaire : La veille citoyenne des Koulsé manifeste son soutien sans condition",
       "link": "https://www.sidwaya.info/revolution-progressiste-populaire-la-veille-citoyenne-des-koulse-manifeste-son-soutien-sans-condition/",
       "pubDate": "2026-06-13T16:28:37.000Z",
@@ -1002,19 +1033,49 @@
       "_desk": "A1"
     },
     {
-      "title": "Chambre des Mines du Burkina: Souleymane Boly prend les commandes",
-      "link": "https://www.wakatsera.com/chambre-des-mines-du-burkina-souleymane-boly-prend-les-commandes/",
-      "pubDate": "2026-06-13T15:31:02.000Z",
-      "description": "Le nouveau bureau de la Chambre des Mines du Burkina (CMB) a été officiellement installé, le vendredi 12 juin 2026, à Ouagadougou, au cours d’une cérémonie. Fort de 29 membres, le nouveau bureau de la CMB, présidé par le Directeur pays d'Endeavour Mining, Souleymane Boly, a reçu ses attributs de fonction des mains du ministre délégué chargé des Ressources animales, Dr Amadou Dicko, qui a représenté son homologue des Mines, patron de la cérémonie. La nouvelle équipe s’est fixée quatre priorités, entre autres, de travailler à renforcer le dialogue entre les acteurs, de promouvoir le secteur, de développer le capital humain et l'encadrement l’artisanat minier. La Chambre des Mines du Burkina (CMB) a une nouvelle équipe à sa tête. Dans la soirée du vendredi 12 juin 2026, dans un hôtel huppé de la capitale burkinabè, les autorités politiques, ont procédé, à l’installation du nouveau bureau de l’institution dont les membres, au nombre de 29, ont été élus, le 30 avril dernier, à la 12 e Assemblée générale (AG) tenue à Ouagadougou. Souleymane Boly, Directeur pays d'Endeavour Mining, succède à Ousséni Derra qui a passé trois ans à la tête de la CMB, dont le bilan a été salué. Le ministre délégué aux Ressources animales, Dr Amadou Dicko (1er à droite) remettant les attributs de fonction au nouveau président de la CMB Discours, présentation du nouveau bureau suivi de l’installation des élus du jour qui s’est matérialisé par le port d’écharpes et remise d’attributs de fonction aux nouveaux membres, ainsi que des photos de famille et une collation, ont été les temps forts de cette activité à laquelle plusieurs personnalités, des dirigeants d’institutions étatiques et privées, partenaires de la CMB et des acteurs miniers de premier rang, ont assisté. Tour à tour les 29 membres dont certains étaient absents pour des contraintes d’agenda, sont passé sous une présentation complète de la directrice exécutive de la CMB, Priscilla Zongo. Dans le discours du ministre en charges des Mines, Yacouba Zabré Gouba, lu par son collègue Dr Amadou Dicko, le gouvernement a salué les actions du bureau sortant qui a travaillé pour un dialogue constructif entre les acteurs du secteur pour promouvoir les intérêts d'une industrie minière et accompagner les efforts de l'État. «Camarades, mon Département apprécie à sa juste valeur cette contribution qui a permis de consolider la place du secteur minier comme un pilier important de l'économie nationale», ajoutant que le secteur minier demeure un des leviers stratégiques pour le développement économique et social du Burkina Faso. Le nouveau président de la CMB, Souleymane Boly remettant un présent à son prédécesseur, Ousséni Derra Dans cette dynamique, la collaboration entre les pouvoirs publics et les acteurs miniers reste essentielle pour relever les défis auxquels le pays est confronté, a poursuivi M. Dicko qui a lancé qu’«ensemble, nous devrons continuer à œuvrer pour une industrie minière performante, résiliente, créatrice de valeurs et d'avantages de bénéfices au profit des populations burkinabè». Il a formulé le vœu que sous la conduite du nouveau président, la CMB poursuive son rôle de force de propositions et de partenaire privilégié de l'État dans la mise en œuvre de sa vision pour le développement du secteur minier. Le nouveau président de la CMB, Souleymane Boly, dans son mot après son installation, a appelé tous les parties prenantes à bâtir un secteur minier plus performant, plus inclusif et plus créateur de l’emploi, affirmant qu’en acceptant cette responsabilité, lui et son équipe s’inscrivent résolument dans une dynamique de proximité mais également d’ouverture, d'innovation et de transformation. «Notre ambition est claire: faire du secteur minier un levier encore plus puissant pour le développement du Burkina Faso», a déclaré M. Boly. Le nouveau président de la Chambre des Mines du Burkina (CMB), Souleymane Boly Pour cela, a avancé le président de la CMB, son équipe devra alors articuler ses actions à venir autour de quelques priorités stratégiques. Il a cité premièrement la promotion du secteur minier pour poursuivre le renforcement de la collaboration étroite de son institution avec le ministère des Mines afin de valoriser davantage les potentiels miniers du pays tant sur le plan national qu’international. «L'objectif étant de renforcer l’attractivité des patronats comme destination minière de premier plan, de stimuler les investissements et de mettre en lumière de nombreuses opportunités qu’offre notre pays. A cet égard, la huitième édition de la Semaine des activités minières d'Afrique de l’Ouest (SAMAO) à venir en septembre constituera un rendez-vous majeur», a soutenu Souleymane Boly. Deuxièmement le développement du capital humain. La qualité du capital humain est demeure l’un des principaux déterminants de la performance et de la compétitivité de notre industrie. Les femmes et les hommes qui oeuvrent chaque jour pour conduire les opérations minières constituent la première richesse des mines. Il invite donc l'ensemble des acteurs à engager une réflexion holistique afin de mieux coordonner et capitaliser les initiatives en matière de formation, de renforcement des capacités et de transfert des compétences. Une vue des membres du bureau à l'installation officielle «Au-delà des programmes déjà développés par certaines entreprises minières, nous devons impulser une dynamique commune autour des projets structurants capables de renforcer l'expertise nationale et d'offrir davantage de perspectives aux jeunes burkinabè. C'est pourquoi nous portons l'ambition de créer une école de métiers des mines en partenariat avec les autorités politiques et les sociétés minières. Notre objectif sera de contribuer à la formation d'une nouvelle génération de techniciens, d'opérateurs et de professionnels qualifiés, capables d'accompagner durablement le développement de notre domaine», a dit Souleymane Boly. Troisièmement, il a évoqué l'arrimage des investissements aux priorités nationales. «Le secteur minier industriel est souvent perçu comme une entité à part. Cette perception desserre le milieu. Elle crée des malentendus. Elle prive les décideurs publics d’outils qu’ils pourraient mobiliser davantage. Il nous appartient donc de créer une meilleure cohérence entre les initiatives du secteur minier et les orientations stratégiques», a-t-il dit. Une vue des invités d'honneur Les sociétés minières investissent déjà dans le programme de formation et du développement local au sein de leurs communautés hôtes. «Que ce soit à travers les infrastructures, l'accès à l'eau, à la santé, à la promotion agricole, l'activité générative de revenus, l'information, toutes ces contributions sont réelles. Elles sont souvent méconnues parce qu'elles ne sont pas suffisamment documentées, agrégées ou présentées dans une logique d'utilité politique», a soutenu celui qui a une solide expérience dans le domaine minier. Il s’est également arrêté sur le contenu local qui pour lui est souvent réduit à sa dimension réglementaire. «La vision que nous défendons veut faire du contenu local une stratégie d'entreprise, pas une occupation légale». Une vue rapprochée du présent et ses collaborateurs Au quatrième point, il a parlé de l'accompagnement de son organisation pour le secteur et l'encadrement de l’artisanat minier que son équipe soutiendra. «La cohabitation entre secteurs miniers industriels et artisanats miniers est un défi réel et quotidien pour nombre de nos membres. L'exploitation minière artisanale demeure une composante essentielle de notre secteur. Elle constitue une source importante de revenus pour de nombreuses communautés, des centaines de milliers, voire des millions de burkinabè», a-t-il fait savoir, ajoutant que l’exploitation artisanale des mines contribue également à la création de revenus. Le nouveau bureau de la Chambre des Mines du Burkina (CMB) «Il ne s'agit donc pas d'un phénomène résiduel mais d'une réalité économique et sociale permanente avec laquelle le secteur industriel doit apprendre à coexister. Nous avons donc la responsabilité d'accompagner la dynamique engagée de structuration et d'encadrement des artisanats miniers par les autorités», a-t-il dit, invitant les membres de la CMB à coordonner leurs actions afin de soutenir les initiatives du ministère en charge des Mines visant à organiser les artisans miniers en coopérative. Une vue du public La CMB doit également «contribuer activement» au cadre du dialogue et concertations mis en place pour favoriser le partage d'expériences et la diffusion des meilleures pratiques afin de «promouvoir une exploitation artisanale plus productive, plus sûre et d'avantage conforme aux standards internationaux», a ajouté Souleymane Boly. Selon M. Boly, le mandat qui s’ouvre sera placé sous le signe du «dialogue, de la responsabilité partagée et de l'action collective». Il a dit pouvoir compter sur l'engagement de tous les membres de la CMB, le soutien de l'autorité publique, ainsi que l'accompagnement de l'ensemble des partenaires de l’organisation. Photo de famille avec les officiels et le nouveau bureau de la CMB Il a exprimé sa reconnaissance et sa gratitude au bureau sortant et les précédents qui ont fait preuve d'engagements, de responsabilité et d'un sens constant du dialogue malgré les nombreux défis auxquels ils ont fait face. Grâce à leurs actions, la CMB s’est affirmée comme un «interlocuteur crédible, une force de proposition reconnue et un partenaire fiable» auprès des pouvoirs politiques et de l'ensemble des parties de prenantes. Par Bernard BOUGOUM L’article Chambre des Mines du Burkina: Souleymane Boly prend les commandes est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
+      "title": "Burkina Faso : Le centre culturel et artistique « Yaoléem-Nééré » ouvre ses portes pour reconstruire les blessés de guerre par l’art",
+      "link": "https://faso7.com/2026/06/13/faso7-burkina-faso-le-centre-culturel-et-artistique-yaoleem-neere-ouvre-ses-portes-pour-reconstruire-les-blesses-de-guerre-par-lart/",
+      "pubDate": "2026-06-13T14:06:29.000Z",
+      "description": "L’association Africculture a procédé, ce 12 juin 2026 à Ouagadougou, à l’ouverture officielle du Centre culturel et artistique Yaoléem-Nééré, qui signifie « un lendemain meilleur ». Dédié à la formation, à la création et à la promotion des arts plastiques et visuels, ce nouvel espace se veut un cadre d’expression et d’épanouissement pour les jeunes, les artistes et les passionnés de culture. La cérémonie a réuni des représentants de plusieurs corps des Forces de défense et de sécurité (FDS), des acteurs culturels, des partenaires ainsi que des invités venus découvrir ce nouveau temple de l’art. À travers cette initiative, les promoteurs entendent mettre la création au service de la résilience et de la reconstruction des combattants blessés au front, tout en offrant un espace accessible à tous. Prenant la parole à l’occasion de cette inauguration, le directeur du centre, l’adjudant Abdoul Rasmané Ouédraogo, est revenu sur la genèse du projet. « L’idée de mettre en place ce centre est née de notre volonté, en tant qu'artistes plasticiens, civils et FDS, unis au sein d’une même association. Notre objectif est de promouvoir l’art et la culture, et de contribuer, à travers notre savoir-faire, à la résilience et à la reconstruction de nos camarades » , a-t-il déclaré. Pour lui, le Centre culturel et artistique Yaoléem-Nééré se veut un lieu de partage, d’apprentissage et de création où les blessés de guerre pourront exprimer leur potentiel artistique et reprendre confiance en eux. Représentant le ministre d’État, en charge de la guerre, le colonel-major Norbert Koudougou a salué une initiative salvatrice, qu’il considère comme une opportunité d’accompagnement et de valorisation des combattants ayant servi la Nation. « C’est vraiment une belle initiative car, au-delà du combat sur le terrain, c’est une occasion de soutenir nos combattants qui ont, d’une manière ou d’une autre, contribué à la défense du territoire et qui se retrouvent aujourd’hui dans des situations difficiles du fait de leurs blessures », a-t-il soutenu. L'art au service du développement personnel L’ouverture du centre a été marquée par la vente aux enchères d’un tableau réalisé par l’un des artistes. L’œuvre a été acquise à hauteur de 300 000 F CFA. La cérémonie s’est poursuivie par une visite des locaux, la présentation des œuvres exposées ainsi que le vernissage officiel des tableaux réalisés par les officiels. Le Centre culturel et artistique Yaoléem-Nééré propose plusieurs services, notamment un espace de lecture et une bibliothèque, des formations professionnelles et artistiques, ainsi que diverses activités culturelles. Le centre accueille également les adultes à travers des sessions de peinture organisées les week-ends, en groupe ou en individuel, dans un cadre propice à l’inspiration et à l’échange. À travers cette initiative, les promoteurs ambitionnent de faire de Yaoléem-Nééré un lieu de référence où l’art contribue à la valorisation de la culture, à l’épanouissement des talents et à la réhabilitation des héros tombés pour la patrie. Silvyane Bazié (stagiaire) Faso7 L’article Burkina Faso : Le centre culturel et artistique « Yaoléem-Nééré » ouvre ses portes pour reconstruire les blessés de guerre par l'art est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": null,
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": ".",
+      "_desk": "A1"
+    },
+    {
+      "title": "Ganzourgou : La gendarmerie nationale prend le relais de la police dans la commune de Zoungou",
+      "link": "https://www.aib.media/ganzourgou-la-gendarmerie-nationale-prend-le-relais-de-la-police-dans-la-commune-de-zoungou/",
+      "pubDate": "2026-06-14T10:03:52.000Z",
+      "description": "Burkina-Ganzourgou-Sécurité-Zoungou Ganzourgou : La gendarmerie nationale prend le relais de la police dans la commune de Zoungou Zoungou, 12 juin 2026 (AIB) – Après treize années de présence dans la commune de Zoungou, la police nationale a officiellement cédé, vendredi, ses compétences à la gendarmerie nationale. La cérémonie de passation de service, présidée par le président de la délégation spéciale communale, Mahamoudou Consigui, a réuni autorités administratives, coutumières et religieuses, forces de défense et de sécurité, Volontaires pour la défense de la patrie (VDP) et populations. Cette réorganisation s’inscrit dans la politique nationale de redéploiement des forces de sécurité afin d’assurer un meilleur maillage du territoire national. La cérémonie a été marquée par des allocutions et une remise d’attestations de reconnaissance à plusieurs acteurs ayant contribué au renforcement de la sécurité dans la commune. Le délégué des VDP de Zoungou a salué la bonne collaboration entretenue avec la police depuis 2023, année de leur mobilisation. Il a réaffirmé l’engagement des VDP à poursuivre le même accompagnement aux côtés de la gendarmerie pour la protection des personnes et de leurs biens. Installé comme premier commandant de la Brigade territoriale de gendarmerie de Zoungou, l’adjudant-chef Lassané Ouédraogo, a invité les populations à une collaboration étroite avec les forces de sécurité. Selon lui, le partage d’informations demeure un élément essentiel dans la lutte contre l’insécurité et la reconquête du territoire national. « Sans la population, la sécurité seule n’est rien. La population doit être l’œil et l’oreille de la brigade », a-t-il déclaré, tout en rendant hommage aux policiers sortants pour le travail accompli. Le commissaire de police sortant, le lieutenant de police Gansonré Serges Rodrigues, a indiqué garder de bons souvenirs de son séjour à Zoungou. Il a salué l’accompagnement des autorités administratives, coutumières, religieuses ainsi que celui des populations, avant d’exhorter ces dernières à soutenir la gendarmerie dans sa mission. Il a rappelé que les principaux défis sécuritaires de la commune demeurent les conflits fonciers et les problèmes liés à l’orpaillage, appelant la nouvelle équipe à y veiller. Prenant la parole, le président de la délégation spéciale communale de Zoungou, Mahamoudou Consigui a souligné que cette passation intervient dans un contexte marqué par des défis sécuritaires importants. Il a exprimé la gratitude des populations à la Police nationale pour les services rendus et souhaité plein succès à la Gendarmerie nationale dans l’accomplissement de ses missions. « La lutte contre l’insécurité est l’affaire de tous. Aucune force, aussi compétente soit-elle, ne peut réussir seule », a-t-il affirmé. La directrice provinciale de la Police nationale du Ganzourgou, Bintou Ouédraogo, a expliqué que cette réorganisation découle d’une décision des autorités visant à mieux répartir les forces de sécurité sur l’ensemble du territoire national. Selon elle, la réforme prévoit la présence de la gendarmerie dans les communes rurales et des commissariats de police dans les communes urbaines. Elle a précisé que plusieurs localités du Ganzourgou ont déjà connu cette réorganisation, notamment Boudry, Zorgho et Mogtédo. Le commandant de la compagnie de gendarmerie de Ziniaré, Adama Benon, a pour sa part assurée que la brigade territoriale de Zoungou exercera ses missions avec professionnalisme, impartialité et proximité, tout en comptant sur l’accompagnement des autorités et des populations. Cette passation marque ainsi une nouvelle étape dans l’organisation du dispositif sécuritaire de la province du Ganzourgou, avec pour objectif de renforcer la présence de l’État et la sécurité des populations. Agence d’information du Burkina MS-DNK",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
         "political"
       ],
       "_majors": [],
@@ -1027,41 +1088,9 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Communauté musulmane du Burkina : Les réformes institutionnelles au centre du 14e Congrès ordinaire",
-      "link": "https://www.minute.bf/communaute-musulmane-du-burkina-les-reformes-institutionnelles-au-centre-du-14e-congres-ordinaire/",
-      "pubDate": "2026-06-14T09:32:07.000Z",
-      "description": "Le Ministre d’Etat, Ministre de l’Administration territoriale et de la Mobilité, le Camarade Emile ZERBO, a présidé, le samedi 13 juin 2026, à Ouagadougou, la cérémonie d’ouverture du 14e Congrès ordinaire de la Communauté musulmane du Burkina (CMB), placé sous le thème : « Réformes institutionnelles : enjeux et perspectives ». Dans son allocution, le Ministre d’Etat, Ministre de l’Administration territoriale et de la Mobilité, le Camarade Emile ZERBO, a situé la tenue de ce congrès dans le contexte de la refondation de l’Etat burkinabè engagée sous l’impulsion de la Révolution progressiste populaire (RPP). Il a indiqué que cette dynamique vise à renforcer la souveraineté nationale, à améliorer la gouvernance publique et à promouvoir un développement fondé sur les aspirations légitimes du peuple burkinabè. Abordant les réformes institutionnelles en cours, le Ministre d’Etat, le Camarade Emile ZERBO a rappelé l’adoption, en juillet 2025, de la loi n°011-2025/ALT portant liberté d’association. Il a souligné que cette réforme introduit des innovations majeures destinées à moderniser le cadre juridique des associations et à renforcer leur contribution au développement national. A cet effet, le Ministre d’Etat, le Camarade Emile ZERBO a invité les congressistes à approfondir leurs réflexions autour du thème retenu. Il a souhaité que les conclusions des travaux contribuent à améliorer la gouvernance de la Communauté musulmane du Burkina et à consolider davantage son rôle au service des fidèles et de la Nation, tout en l’encourageant à poursuivre ses efforts dans la promotion des valeurs authentiques de l’Islam. Le patron de la cérémonie, le Président de l’Assemblée législative du Peuple (ALP), le Camarade Dr Ousmane BOUGOUMA, a exprimé le souhait que les assises aboutissent à une mise en conformité des textes de la Communauté musulmane du Burkina (CMB) avec les dispositions de la loi portant liberté d’association. Il a également appelé au renforcement de l’institution afin qu’elle continue de fédérer l’ensemble des musulmans du Burkina Faso autour des idéaux de paix, de cohésion sociale et de développement. Pour sa part, le Président du Conseil des Grands Oulémas du Burkina Faso, Cheikh Dr Aboubacar Abdallah DOUCOURE, a souligné la nécessité de réviser les textes de la CMB afin de les adapter à l’évolution du cadre juridique national relatif aux associations, tout en respectant les dispositions internes prévoyant le renouvellement des instances dirigeantes tous les cinq (05) ans. Evoquant le contexte sécuritaire national, Cheikh Dr Aboubacar Abdallah DOUCOURE, a invité les leaders religieux à renforcer leur engagement moral, intellectuel et spirituel en faveur de la paix, de la cohésion sociale et du vivre-ensemble. Il a particulièrement exhorté la jeunesse à s’éloigner des discours de haine, des propos incendiaires et de toute forme d’intolérance religieuse susceptible de fragiliser l’unité nationale. Venus des différentes provinces du Burkina Faso, les 259 congressistes sont composés des présidents, secrétaires et trésoriers des Comités exécutifs provinciaux de la Communauté musulmane du Burkina (CMB). Prévu sur deux (02) jours, le congrès se tient les 13 et 14 juin 2026 et constitue un cadre privilégié de réflexion sur l’avenir institutionnel de l’organisation. DCRP/MATM",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
       "_score": 103,
       "_zone": 1,
-      "_theme": "P",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1096,38 +1125,6 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": ".",
       "_desk": "A1"
-    },
-    {
-      "title": "Kénédougou : la CEB de Samorogouan affiche un taux de réussite de 97,75 % au CEP 2026",
-      "link": "https://www.aib.media/kenedougou-la-ceb-de-samorogouan-affiche-un-taux-de-reussite-de-9775-au-cep-2026-2/",
-      "pubDate": "2026-06-14T08:51:09.000Z",
-      "description": "Kénédougou : la CEB de Samorogouan affiche un taux de réussite de 97,75 % au CEP 2026 Samorogouan, 13 juin 2026 (AIB) – La Circonscription d’Éducation de Base (CEB) de Samorogouan a enregistré un taux de réussite de 97,75 % au Certificat d’Études Primaires (CEP), session de 2026, avec 739 admis sur 756 candidats présentés. Les résultats ont été proclamés ce samedi 13 juin 2026 dans la salle des fêtes de la mairie de Samorogouan, en présence des autorités locales, des responsables éducatifs, des enseignants, des parents d’élèves et de nombreux candidats. Le centre de Kongolikoro « A » a enregistré 100 %, celui de Samorogouan « B », 98,62 %, celui de Samorogouan « C », 99,50 % et celui de Sikorla « D » 92,35 %. Avec cette performance, la CEB de Samorogouan dépasse largement l’objectif qu’elle s’était fixé, à savoir franchir la barre des 95 % de réussite au CEP 2026. Le Président de la Délégation spéciale (PDS) de la commune, Kongnan Zoumana Traoré, a salué les performances enregistrées par la CEB. Il a félicité les encadreurs pédagogiques, les enseignants, les parents d’élèves ainsi que les candidats pour les efforts consentis tout au long de l’année scolaire. L’Inspecteur chef de la Circonscription d’Éducation de Base de Samorogouan, Alaye Ouédraogo a exprimé sa reconnaissance à l’ensemble des acteurs du système éducatif pour leur engagement et les sacrifices consentis, qui ont permis d’atteindre ce résultat jugé satisfaisant. Agence d’information du Burkina OP/AK/wis",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 103,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
@@ -1135,7 +1132,7 @@
       "title": "US use of AI in Iran school massacre did not breach Anthropic’s ‘red lines’: CEO",
       "link": "https://presstv.ir/Detail/2026/06/14/770407/Anthropic-CEO--AI-aided-school-strike-during-US-Israeli-aggression-on-Iran-breached-no-%E2%80%98red-lines%E2%80%99",
       "source": "Press TV (Iran)",
-      "date": "2026-06-14T09:50:58.396Z",
+      "date": "2026-06-14T10:21:39.303Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1215,11 +1212,11 @@
   "narrativesByBloc": [
     [
       "afrique",
-      226
+      219
     ],
     [
       "occident_fr",
-      133
+      137
     ],
     [
       "autre",
@@ -1227,11 +1224,11 @@
     ],
     [
       "golfe_mo",
-      96
+      95
     ],
     [
       "occident_us",
-      77
+      80
     ],
     [
       "russie",
@@ -1239,7 +1236,7 @@
     ],
     [
       "bf_local",
-      36
+      35
     ],
     [
       "chine",
@@ -1247,7 +1244,7 @@
     ],
     [
       "turquie",
-      29
+      31
     ],
     [
       "sahel",
@@ -1259,16 +1256,16 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 81,
+      "count": 77,
       "top": [
         {
-          "title": "Burkina : La Coalition des délégués élus des Universités lance les 72h de l’étudiant sous le signe de l’engagement national",
-          "link": "https://www.minute.bf/burkina-la-coalition-des-delegues-elus-des-universites-lance-les-72h-de-letudiant-sous-le-signe-de-lengagement-national/",
-          "source": "Minute BF",
+          "title": "Entreprenariat : L’expert Bili Édouard Tieno évoque « Les 8 erreurs qui freinent la croissance de votre PME »",
+          "link": "https://faso7.com/2026/06/13/entreprenariat-lexpert-bili-edouard-tieno-evoque-les-8-erreurs-qui-freinent-la-croissance-de-votre-pme/",
+          "source": "Faso7",
           "zone": "1. Sahel & AO franco.",
-          "theme": "J",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
           "title": "« L’expérience de la Russie est une source d’inspiration pour le Burkina Faso », selon la ministre Kabré/Kaboré",
@@ -1289,20 +1286,20 @@
           "rating": "C2"
         },
         {
+          "title": "Réunion des ministres de l’Industrie et du Commerce de l’AES : Les experts évaluent les documents préparatoires",
+          "link": "https://faso7.com/2026/06/13/reunion-des-ministres-de-lindustrie-et-du-commerce-de-laes-les-experts-evaluent-les-documents-preparatoires/",
+          "source": "Faso7",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Révolution progressiste populaire : La veille citoyenne des Koulsé manifeste son soutien sans condition",
           "link": "https://www.sidwaya.info/revolution-progressiste-populaire-la-veille-citoyenne-des-koulse-manifeste-son-soutien-sans-condition/",
           "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Chambre des Mines du Burkina: Souleymane Boly prend les commandes",
-          "link": "https://www.wakatsera.com/chambre-des-mines-du-burkina-souleymane-boly-prend-les-commandes/",
-          "source": "Wakat Séra",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
           "relevance": "A",
           "rating": "C2"
         }
@@ -1312,7 +1309,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 54,
+      "count": 55,
       "top": [
         {
           "title": "Nigeria clinches $10,000 grand prize as 4th ECOWAS Regional Cybersecurity Hackathon 2026 ends in Accra",
@@ -1365,7 +1362,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 25,
+      "count": 28,
       "top": [
         {
           "title": "L'épidémie d'Ebola en RD Congo ravive des souvenirs chez le Dr libérien Jerry Brown",
@@ -1418,7 +1415,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 43,
+      "count": 41,
       "top": [
         {
           "title": "Coupe du monde 2026 : Le Maroc et le Brésil se quittent sur le score de 1 but partout",
@@ -1471,7 +1468,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 140,
+      "count": 139,
       "top": [
         {
           "title": "How Iran used US ceasefire to replenish its depleted missile stockpiles",
@@ -1510,13 +1507,13 @@
           "rating": "B1"
         },
         {
-          "title": "EN DIRECT - Guerre au Moyen-Orient : Donald Trump assure qu’un accord sera signé ce dimanche, Téhéran «n’a pas encore pris de décision finale»",
-          "link": "https://www.liberation.fr/international/moyen-orient/en-direct-guerre-au-moyen-orient-donald-trump-assure-quun-accord-sera-signe-ce-dimanche-avec-liran-jour-de-son-anniversaire-20260614_GH5F2EVEKBHQ7C3C2ML4A6ER2Q/",
-          "source": "Libération International",
+          "title": "«C'est comme un petit rêve»: à Gaza, cette famille a reconstruit sa maison en bois",
+          "link": "https://www.rfi.fr/fr/moyen-orient/20260614-c-est-comme-un-petit-r%C3%AAve-%C3%A0-gaza-cette-famille-a-reconstruit-sa-maison-en-bois",
+          "source": "RFI Moyen-Orient",
           "zone": "8. Moyen-Orient",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "C2"
         }
       ]
     },
@@ -1524,7 +1521,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 201,
+      "count": 196,
       "top": [
         {
           "title": "Les amputés de la guerre en Ukraine se relèvent grâce à l’escalade : « L’adrénaline me fait un bien fou »",
@@ -1578,52 +1575,48 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-06-14T09:50:29.815Z",
+      "at": "2026-06-14T10:21:06.068Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-14T09:50:29.822Z",
+      "at": "2026-06-14T10:21:06.075Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-14T09:51:03.144Z",
+      "at": "2026-06-14T10:21:47.272Z",
       "agent": "Agent Collecte RSS",
-      "message": "117/170 flux OK, 1948 articles"
+      "message": "106/170 flux OK, 1863 articles"
     },
     {
-      "at": "2026-06-14T09:51:06.104Z",
+      "at": "2026-06-14T10:21:50.011Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-14T09:51:06.477Z",
+      "at": "2026-06-14T10:21:50.329Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-14T09:51:06.482Z",
+      "at": "2026-06-14T10:21:50.334Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-06-14T09:51:06.482Z",
+      "at": "2026-06-14T10:21:50.334Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-06-14T09:51:06.482Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
