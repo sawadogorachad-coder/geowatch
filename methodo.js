@@ -580,7 +580,10 @@
     const listSec = (label, arr) => (arr && arr.length) ? `<div style="margin:6px 0"><div style="font-weight:700;color:${T.txt}">${label}</div><ul style="margin:2px 0;padding-left:18px;color:${T.dim};font-size:.82rem">${arr.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
     return `<div style="font-weight:800;color:${T.txt};font-size:.95rem">${esc(d.titre || d.name)}</div>`
       + `<div style="font-size:.66rem;color:${T.faint};margin-bottom:6px">${esc(d.name)} · confiance ${esc(d.confiance || '—')}</div>`
-      + sec('Situation', d.situation) + sec('Causes', d.causes) + sec('Conséquences AES', d.consequencesAES)
+      + (d.enjeu ? `<div style="margin:6px 0;padding:6px 10px;background:rgba(245,158,11,.12);border-left:3px solid ${T.yellow};border-radius:0 6px 6px 0;font-size:.84rem;color:${T.txt}"><b>Enjeu central — </b>${esc(d.enjeu)}</div>` : '')
+      + sec('Situation', d.situation) + sec('Causes', d.causes)
+      + listSec('Acteurs (qui contre qui)', d.acteurs)
+      + sec('Conséquences AES', d.consequencesAES)
       + listSec('Scénarios', d.scenarios) + listSec('À surveiller', d.surveiller)
       + ((d.sources && d.sources.length) ? `<div style="font-size:.68rem;color:${T.faint};margin-top:4px">Sources : ${esc(d.sources.join(' · '))}</div>` : '');
   }
