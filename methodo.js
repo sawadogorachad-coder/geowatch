@@ -567,12 +567,38 @@
     loadEtudes();
   };
 
+  // Dossiers d'analyse RÉDIGÉS (par l'analyste) — fichier statique, non écrasé par l'agent auto.
+  let DOSS_CACHE = null, DOSS_AT = 0;
+  function dossiersFetch(cb){
+    const now = Date.now();
+    if (DOSS_CACHE && now - DOSS_AT < 90000) { cb(DOSS_CACHE); return; }
+    fetch('data/generated/dossiers.json?t=' + now).then(r => r.ok ? r.json() : null)
+      .then(d => { if (d) { DOSS_CACHE = d; DOSS_AT = now; } cb(DOSS_CACHE); }).catch(() => cb(DOSS_CACHE));
+  }
+  function dossierHTML(d){
+    const sec = (label, txt) => txt ? `<div style="margin:6px 0"><span style="font-weight:700;color:${T.txt}">${label} — </span><span style="font-size:.85rem;color:${T.dim}">${esc(txt)}</span></div>` : '';
+    const listSec = (label, arr) => (arr && arr.length) ? `<div style="margin:6px 0"><div style="font-weight:700;color:${T.txt}">${label}</div><ul style="margin:2px 0;padding-left:18px;color:${T.dim};font-size:.82rem">${arr.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
+    return `<div style="font-weight:800;color:${T.txt};font-size:.95rem">${esc(d.titre || d.name)}</div>`
+      + `<div style="font-size:.66rem;color:${T.faint};margin-bottom:6px">${esc(d.name)} · confiance ${esc(d.confiance || '—')}</div>`
+      + sec('Situation', d.situation) + sec('Causes', d.causes) + sec('Conséquences AES', d.consequencesAES)
+      + listSec('Scénarios', d.scenarios) + listSec('À surveiller', d.surveiller)
+      + ((d.sources && d.sources.length) ? `<div style="font-size:.68rem;color:${T.faint};margin-top:4px">Sources : ${esc(d.sources.join(' · '))}</div>` : '');
+  }
   function loadEtudes(){
     const body = g('etudes-body'); if(!body) return;
     body.innerHTML = `<span style="color:${T.dim}">Chargement…</span>`;
-    fetch('data/generated/analysis-latest.json?t=' + Date.now()).then(r=>{ if(!r.ok) throw new Error('not found'); return r.json(); })
-      .then(a => { body.innerHTML = renderAnalysis(a); })
-      .catch(()=>{ body.innerHTML = `<div class="card" style="color:${T.dim}"><b style="color:${T.txt}">Pas encore d’analyse générée.</b><br>L’agent analyste produit <code>data/generated/analysis-latest.json</code> lors de son passage (toutes les 3 h sur GitHub Actions, ou en local via <code>node scripts/geowatch-analyst.mjs</code>). Reviens après le premier passage.</div>`; });
+    dossiersFetch(d => {
+      let html = '';
+      if (d) {
+        if (d.syntheseExecutive) html += card('Synthèse exécutive (rédigée par l\'analyste)', 'bullseye', T.yellow, `<div style="font-size:.85rem;color:${T.txt};white-space:pre-line">${esc(d.syntheseExecutive)}</div>`);
+        const arr = d.byConflict ? Object.values(d.byConflict) : [];
+        if (arr.length) html += card('Dossiers d\'analyse de fond (rédigés)', 'fire', T.red, arr.map(x => `<div style="margin-bottom:16px;border-left:3px solid ${T.red};padding-left:10px">${dossierHTML(x)}</div>`).join(''));
+      }
+      fetch('data/generated/analysis-latest.json?t=' + Date.now()).then(r => r.ok ? r.json() : null).then(a => {
+        if (a) html += `<div style="font-size:.7rem;color:${T.faint};margin:16px 0 6px;text-transform:uppercase;letter-spacing:.5px">Veille automatique (signaux live)</div>` + renderAnalysis(a);
+        body.innerHTML = html || `<div class="card" style="color:${T.dim}"><b style="color:${T.txt}">Pas encore de contenu.</b><br>Les dossiers rédigés (<code>dossiers.json</code>) et/ou la veille auto (<code>analysis-latest.json</code>) apparaîtront ici.</div>`;
+      }).catch(() => { body.innerHTML = html || `<div class="card" style="color:${T.dim}">Pas encore de contenu généré.</div>`; });
+    });
   }
 
   function dirChip(d){
@@ -634,12 +660,16 @@
     if (t) b += `<div style="font-size:.72rem;color:${T.faint}">Tendances : ${t}</div>`;
     return b || `<div style="font-size:.78rem;color:${T.faint}">Analyse globale en cours de génération.</div>`;
   }
-  function agentPanelHTML(page, a, sel){
+  function agentPanelHTML(page, a, sel, d){
     const m = AGENT_PAGES[page]; let body = '';
     if (m && m.indexOf('sel:') === 0){
-      const c = (sel && a.byConflict) ? a.byConflict[sel] : null;
-      if (c) body = `<div style="font-weight:600;color:${T.txt}">${esc(c.name)} <span style="font-size:.66rem;color:${T.faint}">confiance ${esc(c.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(c.proseIA || c.lectureStructuree || '')}</div>${faitsList(c.faits)}`;
-      else body = synthBody(a) + `<div style="font-size:.72rem;color:${T.faint};margin-top:6px">Sélectionne un conflit ci-dessous pour l'analyse dédiée de l'agent.</div>`;
+      const dd = (d && d.byConflict && sel) ? d.byConflict[sel] : null;
+      if (dd) body = dossierHTML(dd) + `<div style="font-size:.62rem;color:${T.faint};margin-top:4px">Dossier rédigé par l'analyste</div>`;
+      else {
+        const c = (sel && a.byConflict) ? a.byConflict[sel] : null;
+        if (c) body = `<div style="font-weight:600;color:${T.txt}">${esc(c.name)} <span style="font-size:.66rem;color:${T.faint}">confiance ${esc(c.confiance)}</span></div><div style="font-size:.82rem;color:${T.dim};white-space:pre-line">${esc(c.proseIA || c.lectureStructuree || '')}</div>${faitsList(c.faits)}`;
+        else body = synthBody(a) + `<div style="font-size:.72rem;color:${T.faint};margin-top:6px">Sélectionne un conflit ci-dessous pour l'analyse dédiée.</div>`;
+      }
     } else if (page === 'conflicts'){
       const arr = a.byConflict ? Object.values(a.byConflict).sort((x, y) => y.volume - x.volume) : [];
       if (!arr.length) return '';
@@ -659,19 +689,19 @@
   function injectAgentPanel(){
     const sec = document.querySelector('.page.active'); if (!sec) return;
     const page = sec.dataset.page; if (!(page in AGENT_PAGES)) return;
-    agentFetch(a => {
-      if (!a) return;
+    dossiersFetch(d => { agentFetch(a => {
+      if (!a && !d) return;
       const m = AGENT_PAGES[page];
       let sel = '';
       if (m.indexOf('sel:') === 0){ const el = document.getElementById(m.split(':')[1]); sel = el ? el.value : ''; }
-      const sig = page + '|' + sel + '|' + (a.generatedAt || '');
+      const sig = page + '|' + sel + '|' + ((a && a.generatedAt) || '') + '|' + ((d && d.generatedAt) || '');
       let panel = sec.querySelector('#gw-agent-panel');
       if (panel && panel.dataset.sig === sig) return;
-      const html = agentPanelHTML(page, a, sel);
+      const html = agentPanelHTML(page, a || {}, sel, d);
       if (!html){ if (panel) panel.remove(); return; }
       if (!panel){ panel = document.createElement('div'); panel.id = 'gw-agent-panel'; sec.insertBefore(panel, sec.firstChild); }
       panel.dataset.sig = sig; panel.innerHTML = html;
-    });
+    }); });
   }
   try { setInterval(injectAgentPanel, 1500); } catch (e) {}
 
