@@ -12,7 +12,7 @@ const CONFLITS = [
     region:'Afrique de l\'Ouest', priority:1, status:'escalating', intensity:8, start_year:2012,
     countries:['BF','ML','NE'], lat:14.5, lng:-1.0,
     pays_clefs:'Burkina Faso, Mali, Niger',
-    actors_etat:['Junte BF (Traoré)','Junte Mali (Goïta)','Junte Niger (Tiani)','Wagner/Africa Corps','France (retrait)','CEDEAO','UE'],
+    actors_etat:['Transition BF (Traoré)','Transition Mali (Goïta)','Transition Niger (Tiani)','Wagner/Africa Corps','France (retrait)','CEDEAO','UE'],
     actors_non_etat:['JNIM (al-Qaïda Sahel)','EIGS (État islamique Sahel)','Mouvements touaregs (CSP/CMA)','Communautés peules'],
     keywords:['sahel','mali','burkina','niger','jnim','eigs','aes','wagner','traoré','goïta','tiani','bamako','ouagadougou','niamey','aqmi','aqim'],
 
@@ -21,7 +21,7 @@ const CONFLITS = [
       {p:'2011 — chute de Kadhafi', f:'Retour massif d\'armes et de combattants touaregs de Libye. Déclencheur de la rébellion MNLA au nord-Mali (jan. 2012).'},
       {p:'2012-2013', f:'Effondrement État malien au nord. Coup d\'État Bamako. Intervention française Serval (jan. 2013) puis Barkhane.'},
       {p:'2013-2020', f:'Échec de la stabilisation. Diffusion vers le centre-Mali, le nord-Burkina, l\'ouest-Niger. JNIM (2017) regroupe AQMI/Ansar Dine/MUJAO.'},
-      {p:'2020-2023 — séquence des coups', f:'Mali (août 2020 + mai 2021), Burkina (jan. + sept. 2022), Niger (juil. 2023). Triple junte sahélienne.'},
+      {p:'2020-2023 — séquence des coups', f:'Mali (août 2020 + mai 2021), Burkina (jan. + sept. 2022), Niger (juil. 2023). Triple transition sahélienne.'},
       {p:'2023-2024 — basculement', f:'Retrait MINUSMA (juin 2023), retrait forces françaises et US, arrivée Wagner/Africa Corps. AES créée (sept. 2023), retrait CEDEAO (jan. 2024).'},
       {p:'2024-2026', f:'Confédération AES (juil. 2024). Tensions monnaie (sortie F CFA annoncée). Échec relatif militaire malgré moyens russes. JNIM atteint banlieues Bamako (déc. 2024 - 2025).'}
     ],
@@ -46,14 +46,14 @@ const CONFLITS = [
     causes_ideologiques: [
       {a:'Souverainisme militaire', d:'Doctrine de la « refondation » et du panafricanisme révolutionnaire (Sankara revisité, Traoré). Rejet de la « Françafrique ». Légitimation populaire forte mais fragile.'},
       {a:'Jihadisme salafiste', d:'JNIM = wilayah AQMI revendiquée, légitimité religieuse via Iyad Ag Ghaly. EIGS = territorialisation de Daesh, plus brutal, en rivalité avec JNIM.'},
-      {a:'Islam confrérique', d:'Tijaniyya, Qadiriyya — historiquement modérateurs, marginalisés par le salafisme et par les juntes (suspicion de proximité avec l\'ancien régime).'},
+      {a:'Islam confrérique', d:'Tijaniyya, Qadiriyya — historiquement modérateurs, marginalisés par le salafisme et par les transitions (suspicion de proximité avec l\'ancien régime).'},
       {a:'Récit anti-impérialiste russe', d:'Réseau RT/Sputnik en français, influenceurs locaux. Vise à légitimer Wagner et délégitimer présence occidentale.'}
     ],
 
     perceptions_croisees: [
-      {a:'Juntes AES voient Occident comme', b:'Acteur néocolonial, allié objectif des jihadistes (théorie complotiste largement diffusée), responsable de l\'échec sécuritaire 2013-2022.'},
+      {a:'Transitions AES voient Occident comme', b:'Acteur néocolonial, allié objectif des jihadistes (théorie complotiste largement diffusée), responsable de l\'échec sécuritaire 2013-2022.'},
       {a:'Occident (France/UE/US) voit AES comme', b:'Régimes putschistes alignés sur Moscou, mauvais payeurs, instrumentalisant le sentiment anti-français pour se maintenir.'},
-      {a:'Populations urbaines sahéliennes voient les juntes comme', b:'Rupture nécessaire et incarnation d\'une dignité retrouvée. Soutien massif à Traoré (>80 % en 2024 selon sondages partiaux).'},
+      {a:'Populations urbaines sahéliennes voient les transitions comme', b:'Rupture nécessaire et incarnation d\'une dignité retrouvée. Soutien massif à Traoré (>80 % en 2024 selon sondages partiaux).'},
       {a:'Populations rurales voient l\'État comme', b:'Absent ou prédateur. Souvent acceptation tacite de la gouvernance jihadiste là où JNIM apporte sécurité minimale + justice expéditive.'}
     ],
 
@@ -75,7 +75,7 @@ const CONFLITS = [
       {d:'2022-01-24', e:'Coup d\'État Burkina (Damiba)', sev:7, rupture:false},
       {d:'2022-09-30', e:'Contre-coup Burkina — Traoré au pouvoir', sev:7, rupture:true, note:'Bascule géopolitique : pivot Russie immédiat'},
       {d:'2023-06-30', e:'Retrait MINUSMA validé par Mali', sev:8, rupture:true, note:'Fin de la présence ONU au Sahel'},
-      {d:'2023-07-26', e:'Coup d\'État Niger (Tiani)', sev:8, rupture:true, note:'Triple junte AES'},
+      {d:'2023-07-26', e:'Coup d\'État Niger (Tiani)', sev:8, rupture:true, note:'Triple transition AES'},
       {d:'2023-09-16', e:'Création Alliance des États du Sahel', sev:7, rupture:true},
       {d:'2024-01-28', e:'Retrait CEDEAO Mali/BF/Niger', sev:8, rupture:true, note:'Rupture institutionnelle ouest-africaine'},
       {d:'2024-07-06', e:'Confédération AES officialisée', sev:6, rupture:false},
@@ -86,9 +86,9 @@ const CONFLITS = [
     ],
 
     lecture_causale:{
-      premiere:'Effondrement de l\'ordre sécuritaire post-Serval. La France a délégué la stabilisation sans transférer les capacités, créant un vide que les juntes ont occupé politiquement et que Wagner occupe militairement.',
+      premiere:'Effondrement de l\'ordre sécuritaire post-Serval. La France a délégué la stabilisation sans transférer les capacités, créant un vide que les transitions ont occupé politiquement et que Wagner occupe militairement.',
       structurante:'La géographie sahélienne rend toute solution militaire seule impossible. Sans réintégration politique des marges et sans assèchement économique du jihad, l\'expansion territoriale continuera.',
-      paradoxe:'Plus les juntes s\'appuient sur Wagner et la verticalité militaire, plus elles renforcent la légitimité jihadiste comme alternative locale (justice, sécurité minimale, respect identitaire). La force seule produit son propre adversaire.',
+      paradoxe:'Plus les transitions s\'appuient sur Wagner et la verticalité militaire, plus elles renforcent la légitimité jihadiste comme alternative locale (justice, sécurité minimale, respect identitaire). La force seule produit son propre adversaire.',
       signal:'L\'extension côtière (Bénin, Togo, Côte d\'Ivoire) — si confirmée — marquera la mutation de la crise sahélienne en crise ouest-africaine. Surveiller : attaques nord-Bénin/nord-Togo, posture ivoirienne.'
     },
 
@@ -100,16 +100,16 @@ const CONFLITS = [
       'La sortie du F CFA annoncée transforme la crise sécuritaire en crise économique systémique régionale.'
     ],
     brief_analyste:{
-      faits:'Trois juntes coordonnées politiquement (AES) mais militairement en difficulté. Wagner subit sa pire défaite (Tinzaouaten 07/2024). JNIM contrôle ou influence ~40 % du territoire BF, ~30 % Mali, en progression Niger. Attaques mensuelles en hausse de ~25 % en glissement annuel.',
+      faits:'Trois transitions coordonnées politiquement (AES) mais militairement en difficulté. Wagner subit sa pire défaite (Tinzaouaten 07/2024). JNIM contrôle ou influence ~40 % du territoire BF, ~30 % Mali, en progression Niger. Attaques mensuelles en hausse de ~25 % en glissement annuel.',
       incertitudes:'Solidité réelle de la confédération AES (rivalités personnelles Traoré/Goïta/Tiani ?). Implication Iran/Corée du Nord (rumeurs, pas de preuve open source). Capacité ukrainienne à appuyer rebelles touaregs durablement.',
-      hypotheses:'H1 (la plus probable, ~55%) : statu quo dégradé — territoire perdu, juntes maintenues, dépendance Wagner croissante. H2 (~25%) : effondrement d\'un État (Burkina ou Mali) — chute capitale, gouvernement de transition jihadiste. H3 (~15%) : recomposition régionale — réintégration partielle CEDEAO via négociation, retour ordre constitutionnel d\'ici 2028. H4 (~5%) : militarisation US/UE renouvelée si menace européenne directe (terrorisme, migrations).',
+      hypotheses:'H1 (la plus probable, ~55%) : statu quo dégradé — territoire perdu, transitions maintenues, dépendance Wagner croissante. H2 (~25%) : effondrement d\'un État (Burkina ou Mali) — chute capitale, gouvernement de transition jihadiste. H3 (~15%) : recomposition régionale — réintégration partielle CEDEAO via négociation, retour ordre constitutionnel d\'ici 2028. H4 (~5%) : militarisation US/UE renouvelée si menace européenne directe (terrorisme, migrations).',
       indicateurs_24_72h:'Attaques sur Kati ou Ouagadougou centre. Mouvements troupes Bénin/CI. Communiqués CGRI Iran/Pasdaran sur Sahel. Annonce Africa Corps (relève Wagner). Trafic armes vers Tinzaouaten.',
       indicateurs_7_30j:'Statistiques ACLED mensuelles. Décisions sommet AES. Position Trump (US) sur Africa Corps. Évolution cours or et opérations minières. Décision Bénin sur état d\'urgence nord.',
       implications_7_30j:'Risque accru attentat capitale ouest-africaine. Pression migratoire vers littoral et Méditerranée. Renforcement narratif anti-occidental médias panafricains.'
     },
 
     scenarios: [
-      {nom:'Tendanciel — érosion lente', proba:55, impact:7, h:'12-24 mois', d:'Les juntes tiennent par la force et la popularité urbaine, mais perdent du territoire rural. Wagner reste mais ne stabilise pas. JNIM consolide ses émirats. Attaques sur capitales sans les prendre. Sortie partielle F CFA, instabilité monétaire gérée.'},
+      {nom:'Tendanciel — érosion lente', proba:55, impact:7, h:'12-24 mois', d:'Les transitions tiennent par la force et la popularité urbaine, mais perdent du territoire rural. Wagner reste mais ne stabilise pas. JNIM consolide ses émirats. Attaques sur capitales sans les prendre. Sortie partielle F CFA, instabilité monétaire gérée.'},
       {nom:'Rupture — chute d\'un État', proba:25, impact:9, h:'6-18 mois', d:'Un État (probablement BF ou Mali) bascule : prise de capitale ou effondrement militaire complet. Gouvernement transitionnel forcé d\'inclure jihadistes. Onde de choc régionale, exode massif, intervention extérieure non-occidentale possible (Égypte, Algérie).'},
       {nom:'Recomposition — pacte régional', proba:15, impact:6, h:'24-48 mois', d:'Médiation (Algérie, Maroc, Turquie ou Vatican). Cessez-le-feu local négocié JNIM/État. Réintégration CEDEAO partielle via formule hybride. Calendrier électoral réactivé 2027-2028.'},
       {nom:'Wild card — front uni jihadiste', proba:5, impact:10, h:'inconnue', d:'Réconciliation JNIM/EIGS sous pression saoudienne ou émirienne. Ou alliance offensive avec Boko Haram. Bascule régionale en quelques semaines.'}
@@ -240,7 +240,7 @@ const CONFLITS = [
     brief_analyste:{
       faits:'Détroit d\'Ormuz fermé depuis 28 fév. 2026. Khamenei tué. Successeur officieux : Mojtaba Khamenei (fils) ou Conseil de discernement. Soulèvement iranien : 7 000+ morts. Rial en chute libre (-80 % en 6 mois). Pas de révolution constituée à ce stade.',
       incertitudes:'Doctrine de réponse iranienne post-Khamenei (continuité ou rupture ?). Posture chinoise sur Ormuz (volonté/capacité d\'intervenir ?). État réel des sites Fordo/Natanz post-frappes (capacité résiduelle d\'enrichissement ?).',
-      hypotheses:'H1 (~40%) : continuité régime affaiblie, retrait tactique, course nucléaire clandestine accélérée. H2 (~25%) : transition Pasdaran (junte militaire), durcissement, sortie TNP. H3 (~20%) : effondrement régime, État défaillant nucléaire — pire scénario. H4 (~10%) : ouverture vers Occident sous pression économique. H5 (~5%) : guerre civile prolongée.',
+      hypotheses:'H1 (~40%) : continuité régime affaiblie, retrait tactique, course nucléaire clandestine accélérée. H2 (~25%) : transition Pasdaran (transition militaire), durcissement, sortie TNP. H3 (~20%) : effondrement régime, État défaillant nucléaire — pire scénario. H4 (~10%) : ouverture vers Occident sous pression économique. H5 (~5%) : guerre civile prolongée.',
       indicateurs_24_72h:'Annonce successeur Guide. Mouvements navals US/Chine Golfe. Prix du Brent. Communiqués CGRI/Pasdaran. État sites Fordo/Natanz (imagerie satellite). Position Russie.',
       indicateurs_7_30j:'Cours pétrole maintenu >120$/baril. Mouvements troupes US au Moyen-Orient. Décisions Conseil sécurité ONU. Niveau enrichissement uranium déclaré ou détecté. Fuite cadres scientifiques iraniens.',
       implications_7_30j:'Choc pétrolier durable → inflation mondiale +2-3 pts. Recomposition arabe (Saoudiens en pivot). Risque attentats lieux civils par cellules dormantes Hezbollah en Europe/Amérique latine.'
@@ -248,7 +248,7 @@ const CONFLITS = [
 
     scenarios: [
       {nom:'Tendanciel — Iran affaibli, ordre US-saoudien', proba:40, impact:7, h:'12-36 mois', d:'Régime iranien survit mais affaibli. Reconstruction proxies lente. Saoudiens dominent OPEC+ et arbitrent Levant. Israël intègre normalisation arabe (extension Abraham). Sahel et Russie reviennent par défaut.'},
-      {nom:'Rupture — junte Pasdaran nucléaire', proba:25, impact:9, h:'6-12 mois', d:'CGRI prend le pouvoir, sortie TNP, accélération bombe. Sanctions totales mais marché chinois maintenu. Course aux armements régionale (Saoudite, Turquie). Risque frappes israéliennes répétées.'},
+      {nom:'Rupture — transition Pasdaran nucléaire', proba:25, impact:9, h:'6-12 mois', d:'CGRI prend le pouvoir, sortie TNP, accélération bombe. Sanctions totales mais marché chinois maintenu. Course aux armements régionale (Saoudite, Turquie). Risque frappes israéliennes répétées.'},
       {nom:'Effondrement — Iran État défaillant', proba:20, impact:10, h:'inconnue', d:'Guerre civile ou désintégration territoriale (Kurdes, Azéris, Baloutches). Stocks d\'uranium dispersés. Risque prolifération non-étatique. Catastrophe humanitaire ~80 M habitants.'},
       {nom:'Ouverture — transition négociée', proba:10, impact:6, h:'24-48 mois', d:'Pression économique force ouverture. Réformistes ou pragmatiques (type Pezeshkian) prennent ascendant. Accord nucléaire reformulé. Réintégration progressive. Difficile mais pas impossible.'},
       {nom:'Wild card — frappe nucléaire iranienne', proba:5, impact:10, h:'inconnue', d:'Course-à-l\'abîme : Iran teste ou utilise une arme rudimentaire avant que Fordo ne soit définitivement neutralisé. Réponse israélienne dévastatrice. Catastrophe régionale.'}
@@ -547,9 +547,9 @@ function buildEvents(){
 
 /* -------------------- COUNTRIES (avec FSI-like) -------------------- */
 const COUNTRIES = [
-  {code:'BF',name:'Burkina Faso',region:'Afrique de l\'Ouest',lat:12.24,lng:-1.56,fsi:9,gov:3,sec:9,eco:7,soc:7,note:'Junte Traoré (sept. 2022). Membre AES. JNIM contrôle ou influence ~40 % du territoire. Économie d\'or sous pression.'},
-  {code:'ML',name:'Mali',region:'Afrique de l\'Ouest',lat:17.57,lng:-3.99,fsi:9,gov:3,sec:9,eco:6,soc:7,note:'Junte Goïta. AES. Wagner/Africa Corps. Tinzaouaten (juil. 2024). JNIM atteint banlieues Bamako.'},
-  {code:'NE',name:'Niger',region:'Afrique de l\'Ouest',lat:17.6,lng:8.08,fsi:8,gov:3,sec:8,eco:7,soc:8,note:'Junte Tiani (juil. 2023). Uranium = levier. Retrait France/USA effectif.'},
+  {code:'BF',name:'Burkina Faso',region:'Afrique de l\'Ouest',lat:12.24,lng:-1.56,fsi:9,gov:3,sec:9,eco:7,soc:7,note:'Transition Traoré (sept. 2022). Membre AES. JNIM contrôle ou influence ~40 % du territoire. Économie d\'or sous pression.'},
+  {code:'ML',name:'Mali',region:'Afrique de l\'Ouest',lat:17.57,lng:-3.99,fsi:9,gov:3,sec:9,eco:6,soc:7,note:'Transition Goïta. AES. Wagner/Africa Corps. Tinzaouaten (juil. 2024). JNIM atteint banlieues Bamako.'},
+  {code:'NE',name:'Niger',region:'Afrique de l\'Ouest',lat:17.6,lng:8.08,fsi:8,gov:3,sec:8,eco:7,soc:8,note:'Transition Tiani (juil. 2023). Uranium = levier. Retrait France/USA effectif.'},
   {code:'BJ',name:'Bénin',region:'Afrique de l\'Ouest',lat:9.31,lng:2.32,fsi:6,gov:5,sec:7,eco:5,soc:6,note:'Sous pression jihadiste nord (Pendjari). Risque de littoralisation crise sahélienne.'},
   {code:'CI',name:'Côte d\'Ivoire',region:'Afrique de l\'Ouest',lat:7.54,lng:-5.55,fsi:5,gov:5,sec:6,eco:4,soc:6,note:'Pression nord (frontières BF/Mali). Élection 2025 sensible. Posture pro-CEDEAO.'},
   {code:'TG',name:'Togo',region:'Afrique de l\'Ouest',lat:8.62,lng:0.83,fsi:6,gov:6,sec:7,eco:5,soc:6,note:'Attaques jihadistes Savanes (2021-). État d\'urgence. Pivot vers AES en discussion.'},

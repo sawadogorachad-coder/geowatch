@@ -59,7 +59,7 @@
     {code:'T', label:'Technologie & cyber', color:'#818cf8',
      re:/\bcyber|num[ée]rique|semi-conducteur|t[ée]l[ée]communicat|satellite|intelligence artificielle|piratage informatique|hacking|fuite de donn[ée]es|starlink|fibre optique/gi},
     {code:'P', label:'Politique interne & gouvernance', color:'#f97316',
-     re:/[ée]lection|r[ée]f[ée]rendum|transition|junte|gouvernement|constitution|manifestation|opposition|pr[ée]sident|remaniement|l[ée]gitimit[ée]|prise de pouvoir|dissolution/gi},
+     re:/[ée]lection|r[ée]f[ée]rendum|transition|transition|gouvernement|constitution|manifestation|opposition|pr[ée]sident|remaniement|l[ée]gitimit[ée]|prise de pouvoir|dissolution/gi},
     {code:'J', label:'Justice & droit international', color:'#c4b5fd',
      re:/\bcpi\b|cour p[ée]nale|\bjustice\b|proc[èe]s|tribunal|enqu[êe]te|crime de guerre|condamn|mandat d.arr[êe]t|poursuites|inculp/gi}
   ];
@@ -674,9 +674,14 @@
         else body = synthBody(a) + `<div style="font-size:.72rem;color:${T.faint};margin-top:6px">Sélectionne un conflit ci-dessous pour l'analyse dédiée.</div>`;
       }
     } else if (page === 'conflicts'){
-      const arr = a.byConflict ? Object.values(a.byConflict).sort((x, y) => y.volume - x.volume) : [];
-      if (!arr.length) return '';
-      body = arr.slice(0, 8).map(c => `<div style="margin-bottom:6px"><b style="color:${T.txt}">${esc(c.name)}</b> <span style="font-size:.62rem;color:${T.faint}">${c.volume} signaux · conf. ${esc(c.confiance)}</span><div style="font-size:.78rem;color:${T.dim}">${esc((c.proseIA || c.lectureStructuree || '').slice(0, 240))}</div></div>`).join('');
+      const dl = (d && d.byConflict) ? Object.values(d.byConflict) : [];
+      if (dl.length){
+        body = dl.map(x => `<div style="margin-bottom:16px;border-left:3px solid ${T.red};padding-left:10px">${dossierHTML(x)}</div>`).join('');
+      } else {
+        const arr = a.byConflict ? Object.values(a.byConflict).sort((x, y) => y.volume - x.volume) : [];
+        if (!arr.length) return '';
+        body = arr.slice(0, 8).map(c => `<div style="margin-bottom:6px"><b style="color:${T.txt}">${esc(c.name)}</b> <span style="font-size:.62rem;color:${T.faint}">${c.volume} signaux · conf. ${esc(c.confiance)}</span><div style="font-size:.78rem;color:${T.dim}">${esc((c.proseIA || c.lectureStructuree || '').slice(0, 240))}</div></div>`).join('');
+      }
     } else if (page === 'ach'){
       const s = a.achSuggestions || []; if (!s.length) return '';
       body = `<div style="font-size:.8rem;color:${T.dim};margin-bottom:6px">Hypothèses pré-remplies par l'agent (à reporter dans ta matrice ACH) :</div>` + s.map(x => `<div style="margin-bottom:8px"><b style="color:${T.txt}">${esc(x.name)}</b><ul style="margin:2px 0;padding-left:18px;color:${T.dim};font-size:.78rem">${x.hypotheses.map(h => `<li>${esc(h)}</li>`).join('')}</ul><div style="font-size:.66rem;color:${T.faint}">Indices : ${esc(x.evidence.slice(0, 3).join(' · '))}</div></div>`).join('');
@@ -704,6 +709,10 @@
       if (!html){ if (panel) panel.remove(); return; }
       if (!panel){ panel = document.createElement('div'); panel.id = 'gw-agent-panel'; sec.insertBefore(panel, sec.firstChild); }
       panel.dataset.sig = sig; panel.innerHTML = html;
+      // Sur la page Fiches conflits : masquer les fiches FIGÉES pour ne montrer que les dossiers frais.
+      if (page === 'conflicts' && d && d.byConflict && Object.keys(d.byConflict).length){
+        sec.querySelectorAll('.conflict-card').forEach(el => { el.style.display = 'none'; });
+      }
     }); });
   }
   try { setInterval(injectAgentPanel, 1500); } catch (e) {}

@@ -253,7 +253,7 @@ const AES_CONTEXT = {
   // Dirigeants actuels
   leaders: ['Traoré', 'Goïta', 'Tiani'],
   // Regex globale pour détecter tout contenu AES
-  regex: /\b(aes|sahel|alliance.{0,3}sahel|burkina|mali|niger|niger[ie]n|ouagadougou|bamako|niamey|traor[éeè]|goita|goïta|gou[ïi]ta|tiani|tchiani|fama|fan[ie]|vdp|junte|fcfa|f cfa|franc cfa|banque centrale.{0,40}sahel|cedeao|ecowas)\b/i,
+  regex: /\b(aes|sahel|alliance.{0,3}sahel|burkina|mali|niger|niger[ie]n|ouagadougou|bamako|niamey|traor[éeè]|goita|goïta|gou[ïi]ta|tiani|tchiani|fama|fan[ie]|vdp|transition|fcfa|f cfa|franc cfa|banque centrale.{0,40}sahel|cedeao|ecowas)\b/i,
   // Mots-clés par dimension (élargis BF→AES)
   keywords: {
     security: /attaque|attentat|frappe|embuscade|ied|vbiéd|jnim|eigs|aqim|aqmi|daesh|jihadiste|terroriste|fama|vdp|fani|wagner|africa corps|tué.{0,20}(sahel|burkina|mali|niger)/i,
@@ -263,7 +263,7 @@ const AES_CONTEXT = {
     regional: /\b(côte.{0,2}d.ivoire|ivoire|ghana|bénin|benin|togo|sénégal|senegal|cedeao|ecowas|tchad|chad)\b/i
   },
   // Pour la veille adversariale spécifiquement AES
-  subjectMatch: /\b(burkina|ouagadougou|traor[éeè]|aes|sahel|mali|niger|bamako|niamey|jnim|wagner|africa corps|junte)\b/i
+  subjectMatch: /\b(burkina|ouagadougou|traor[éeè]|aes|sahel|mali|niger|bamako|niamey|jnim|wagner|africa corps|transition)\b/i
 };
 
 /* ============================================================
@@ -903,7 +903,7 @@ const GW_INTEL = (()=>{
     const week = items.filter(it=>it.pubDate && (Date.now()-new Date(it.pubDate))/86400000 < 7);
 
     // Filtrage : articles parlant du Burkina/AES/Sahel
-    const subjectKw = /burkina|ouagadougou|traoré|aes|sahel|mali|niger|jnim|wagner|africa corps|junte/i;
+    const subjectKw = /burkina|ouagadougou|traoré|aes|sahel|mali|niger|jnim|wagner|africa corps|transition/i;
     const focused = week.filter(it=>{
       const txt = (it.title||'')+' '+(it.description||'');
       return subjectKw.test(txt);
@@ -922,7 +922,7 @@ const GW_INTEL = (()=>{
     // Détection narratives par mots-clés ciblés
     const narrPatterns = [
       {key:'pro_aes', label:'Pro-AES / pro-Traoré', color:'#22c55e', kw:['souveraineté','panafricanisme','indépendance','traoré héros','révolutionnaire','anti-impérialiste']},
-      {key:'anti_aes', label:'Anti-junte / pro-CEDEAO', color:'#ef4444', kw:['junte','régime militaire','putsch','dictature','isolement','sanction']},
+      {key:'anti_aes', label:'Anti-transition / pro-CEDEAO', color:'#ef4444', kw:['transition','régime militaire','putsch','dictature','isolement','sanction']},
       {key:'pro_russia', label:'Pro-Russie / Wagner', color:'#dc2626', kw:['wagner partenaire','africa corps efficace','russie alliée','aide russe']},
       {key:'anti_russia', label:'Anti-Russie / Wagner', color:'#3b82f6', kw:['wagner mercenaires','exactions wagner','crimes de guerre','manipulation russe']},
       {key:'pro_france', label:'Pro-France / pro-occident', color:'#60a5fa', kw:['france soutient','aide française','partenariat européen','retour france']},
@@ -1044,7 +1044,7 @@ const GW_INTEL = (()=>{
      questions:['Quel arbitrage AES entre Chine et Russie ?','Risque de dépendance dette ?']},
     {id:'gulf_powers', cat:'diplo', label:'Golfe & Turquie en Afrique', icon:'🕌', color:'#a855f7', level:'proximité',
      patterns:[/(émirats|emirats|uae|abu dhabi|qatar|arabie saoudite|saudi|turquie|turkey|erdogan|erdoğan|iran).{0,30}(afrique|africa|sahel|burkina|mali)/i],
-     themes:['EAU comme financier des juntes via or','Turquie : drones, mosquées, formation','Iran : uranium, drones, axe Sahel'],
+     themes:['EAU comme financier des transitions via or','Turquie : drones, mosquées, formation','Iran : uranium, drones, axe Sahel'],
      questions:['Quelle architecture multipolaire émerge au Sahel ?','Concurrence ou complémentarité Golfe/Russie ?']},
     {id:'usa_africom', cat:'diplo', label:'USA & AFRICOM', icon:'🇺🇸', color:'#3b82f6', level:'proximité',
      patterns:[/états-unis|united states|américain|american|biden|trump|africom|pentagone|state department|cia/i],
@@ -1086,10 +1086,10 @@ const GW_INTEL = (()=>{
      questions:['Trou budgétaire BF post-suspensions UE ?','Quelle dépendance aide réelle ?']},
 
     /* ═══ SOCIO-POLITIQUE ═══ */
-    {id:'coups_juntas_global', cat:'socio', label:'Coups d\'État & juntes globales', icon:'⚓', color:'#dc2626', level:'systémique',
-     patterns:[/coup d'état|coup détat|coup d'etat|putsch|junta|junte/i, /(gabon|guinée|guinee|tchad|chad|venezuela|myanmar|honduras)/i],
-     themes:['Doctrine de la "vague des juntes" (2020-2024)','Apprentissage entre régimes militaires','Réception internationale comparée'],
-     questions:['Le BF est-il modèle ou exception ?','Quelle stabilisation civile post-junte ?']},
+    {id:'coups_juntas_global', cat:'socio', label:'Coups d\'État & transitions globales', icon:'⚓', color:'#dc2626', level:'systémique',
+     patterns:[/coup d'état|coup détat|coup d'etat|putsch|junta|transition/i, /(gabon|guinée|guinee|tchad|chad|venezuela|myanmar|honduras)/i],
+     themes:['Doctrine de la "vague des transitions" (2020-2024)','Apprentissage entre régimes militaires','Réception internationale comparée'],
+     questions:['Le BF est-il modèle ou exception ?','Quelle stabilisation civile post-transition ?']},
     {id:'democracy_setback', cat:'socio', label:'Recul démocratique', icon:'📉', color:'#a855f7', level:'systémique',
      patterns:[/(démocratie|democracy|autoritarisme|authoritarian|régime hybride|backsliding|recul démocratique|freedom house|v-dem)/i],
      themes:['Indices V-Dem & Freedom House appliqués au BF','Légitimité plébiscitaire vs procédurale','Modèles asiatiques (Singapour, Vietnam)'],
@@ -3786,7 +3786,7 @@ function _scoreArticleForAlert(it, now){
       'guerre','combat','affrontement','soldats','militaire','djihadi','jihadi','jnim','daesh','isgs','aqim','wagner','africa corps','mercenaire',
       'crise','famine','réfugié','déplacé','exode','épidémie','choléra','catastrophe','urgence',
       'sanction','expulsion','rupture','sommet','médiation','négociation','accord ','traité','résolution',
-      'coup d\'état','putsch','junte','transition','manifestation','protest',
+      'coup d\'état','putsch','transition','transition','manifestation','protest',
       'terroris','escalad','menace','ultimatum','blocus','embargo',
       'nucléaire','iaea','aiea',
       'évacuation','déploiement','rapatri',

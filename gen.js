@@ -24,7 +24,7 @@
     { key:'diplo', label:'Dynamiques diplomatiques', test:(t,it)=> (it._tags||[]).includes('diplomatic') || /sommet|accord|trait[ée]|sanction|ambassad|cedeao|ecowas|onu|union africaine|m[ée]diation|n[ée]gociation|coop[ée]ration|partenariat|visite officielle|r[ée]solution/i.test(t) },
     { key:'eco', label:'Enjeux économiques & ressources', test:(t,it)=> (it._tags||[]).includes('economic') || /\b(p[ée]trole|or\b|gold|aurif[èe]re|coton|fcfa|franc cfa|dette|inflation|commerce|corridor|mine|uranium|gaz|[ée]nergie|budget|march[ée])\b/i.test(t) },
     { key:'huma', label:'Situation humanitaire', test:(t,it)=> (it._tags||[]).includes('humanitarian') || /famine|d[ée]plac[ée]|r[ée]fugi[ée]|humanitaire|cholera|chol[ée]ra|[ée]pid[ée]mie|catastrophe|crise alimentaire|ipc|exode|victimes civiles/i.test(t) },
-    { key:'socio', label:'Dynamiques sociopolitiques', test:(t,it)=> (it._tags||[]).includes('political') || /[ée]lection|manifestation|junte|putsch|coup d.?[ée]tat|transition|opposition|r[ée]f[ée]rendum|gouvernement|parlement|constitution|grève/i.test(t) }
+    { key:'socio', label:'Dynamiques sociopolitiques', test:(t,it)=> (it._tags||[]).includes('political') || /[ée]lection|manifestation|transition|putsch|coup d.?[ée]tat|transition|opposition|r[ée]f[ée]rendum|gouvernement|parlement|constitution|grève/i.test(t) }
   ];
 
   function activeItems(){ return (window.NEWS_STATE && NEWS_STATE.items) || []; }

@@ -26,7 +26,7 @@ const ANALYSES_SIMPLES = {
     en_une_phrase:'Trois États sahéliens (Burkina, Mali, Niger) ont basculé hors de l\'orbite occidentale pour former une confédération militaire alignée sur la Russie, tout en perdant du terrain face aux groupes jihadistes.',
     pourquoi_important:'C\'est la rupture géopolitique africaine la plus profonde depuis les indépendances. Elle redistribue les cartes de l\'influence en Afrique de l\'Ouest, fragilise la CEDEAO, ouvre la voie à de nouveaux partenaires (Russie, Chine, Iran, Turquie, Émirats), et pose la question de la viabilité du modèle militaro-plébiscitaire face à une menace jihadiste qui continue de progresser.',
     qui_contre_qui:[
-      {a:'Junte militaire AES (Traoré, Goïta, Tiani)',position:'défend la souveraineté contre la « Françafrique » et les jihadistes'},
+      {a:'Transition militaire AES (Traoré, Goïta, Tiani)',position:'défend la souveraineté contre la « Françafrique » et les jihadistes'},
       {a:'JNIM (al-Qaïda) + EIGS (État islamique)',position:'contestent l\'État, contrôlent ~40% du territoire BF'},
       {a:'France / UE / CEDEAO',position:'ont perdu le bras de fer politique, retraités militairement'},
       {a:'Russie (Africa Corps) + Turquie + Iran + EAU',position:'remplissent le vide, intérêts miniers et stratégiques'}
@@ -62,7 +62,7 @@ const ANALYSES_SIMPLES = {
     ],
     analogie:'Pensez à Iran-Israël comme à deux duellistes qui se sont battus pendant 45 ans à coups de boxeurs interposés. En 2024-2026, ils ont retiré leurs gants et se sont frappés directement. L\'un des deux est tombé. La question est : se relèvera-t-il ? Et avec qui ?',
     horizon_proche:'6-12 mois : crise économique aiguë en Iran, possible accélération nucléaire clandestine.',
-    horizon_long:'5-10 ans : soit Iran réformé/ouvert, soit Iran junte nucléaire, soit Iran défaillant — chaque scénario reconfigure tout.',
+    horizon_long:'5-10 ans : soit Iran réformé/ouvert, soit Iran transition nucléaire, soit Iran défaillant — chaque scénario reconfigure tout.',
     date_analyse:'2026-04-29',
     source_reference:'ICG, IRIS France, BBC World, Al Jazeera — avril 2026 — ⚠️ Contient des éléments prospectifs à vérifier'
   },
