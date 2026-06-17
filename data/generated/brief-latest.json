@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-17T15:56:52.790Z",
+  "generatedAt": "2026-06-17T20:26:45.979Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 113,
-    "failed": 57,
-    "articles": 1884,
+    "ok": 116,
+    "failed": 54,
+    "articles": 1942,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -63,6 +63,11 @@
         "count": 0
       },
       {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "count": 10
+      },
+      {
         "id": "rss_maliweb",
         "name": "Maliweb",
         "count": 0
@@ -95,11 +100,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -153,6 +153,11 @@
         "count": 15
       },
       {
+        "id": "rss_vanguard",
+        "name": "Vanguard (Nigeria)",
+        "count": 20
+      },
+      {
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
@@ -171,6 +176,11 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -295,12 +305,17 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 22
       },
       {
         "id": "rss_rfimo",
         "name": "RFI Moyen-Orient",
         "count": 30
+      },
+      {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "count": 20
       },
       {
         "id": "rss_bbc_afr",
@@ -395,12 +410,12 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 25
+        "count": 30
       },
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 29
+        "count": 26
       },
       {
         "id": "rss_guardian",
@@ -475,7 +490,7 @@
       {
         "id": "rss_ttoi",
         "name": "Times of Israel",
-        "count": 12
+        "count": 15
       },
       {
         "id": "rss_jpost",
@@ -490,7 +505,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 28
+        "count": 30
       },
       {
         "id": "rss_pressTV",
@@ -515,7 +530,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 23
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -580,11 +595,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -613,6 +623,11 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -662,12 +677,12 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
-        "error": "fetch failed"
+        "error": "HTTP 500"
       },
       {
         "id": "rss_saharang",
@@ -675,19 +690,9 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_vanguard",
-        "name": "Vanguard (Nigeria)",
-        "error": "HTTP 500"
-      },
-      {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
-        "error": "HTTP 404"
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "error": "This operation was aborted"
+        "error": "fetch failed"
       },
       {
         "id": "rss_7sur7",
@@ -770,11 +775,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_apa",
         "name": "APA News Afrique",
         "error": "HTTP 403"
@@ -847,7 +847,7 @@
       {
         "id": "rss_amnesty",
         "name": "Amnesty International",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_msf",
@@ -857,14 +857,14 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 46,
-    "alerts": 12,
+    "bfAes": 58,
+    "alerts": 13,
     "criticalAlerts": 5,
     "sourcesDistinct": 69
   },
@@ -892,9 +892,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C2"
+        "rating": "C1"
       },
-      "_rating": "C2",
+      "_rating": "C1",
       "_score": 127,
       "_zone": 1,
       "_theme": "S",
@@ -903,14 +903,145 @@
       "_desk": "A1"
     },
     {
-      "title": "Téné Birahima Ouattara affirme que la Côte d’Ivoire est prête à reprendre une coopération sécuritaire avec le Mali et le Burkina Faso",
-      "link": "https://www.jeuneafrique.com/1804848/politique/tene-birahima-ouattara-affirme-que-la-cote-divoire-est-prete-a-reprendre-une-cooperation-securitaire-avec-le-mali-et-le-burkina-faso/",
-      "pubDate": "2026-06-17T11:49:26.000Z",
-      "description": "En marge d’un déplacement en France où il participe au salon Eurosatory consacré aux industries de la défense, le vice-Premier ministre affirme qu’Abidjan est prête à reprendre sa collaboration sécuritaire avec Bamako et Ouagadougou.",
-      "_source": "Jeune Afrique",
-      "_sourceId": "rss_jeuneafr",
-      "_sourceCat": "africa",
-      "_sourceBloc": "occident_fr",
+      "title": "Ouagadougou : La Suisse s’intéresse aux évolutions sécuritaires et politiques de l’AES",
+      "link": "https://burkina24.com/2026/06/17/ouagadougou-la-suisse-sinteresse-aux-evolutions-securitaires-et-politiques-de-laes/",
+      "pubDate": "2026-06-17T17:37:37.000Z",
+      "description": "Le ministre des Affaires étrangères, de la Coopération régionale et des Burkinabè de l’extérieur, Karamoko Jean Marie Traoré, a reçu en audience, ce mercredi 17 juin 2026 à Ouagadougou, l’envoyée spéciale de la Confédération suisse pour le Sahel, Cédrine Berney. Cette rencontre a permis aux deux parties d’échanger sur l’évolution de la situation sécuritaire dans … The post Ouagadougou : La Suisse s’intéresse aux évolutions sécuritaires et politiques de l’AES appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 123,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mondial 2026: «Les Sénégalais vont regretter amèrement les occasions ratées» face à la France",
+      "link": "https://www.wakatsera.com/mondial-2026-les-senegalais-vont-regretter-amerement-les-occasions-ratees-face-a-la-france/",
+      "pubDate": "2026-06-17T19:29:29.000Z",
+      "description": "La France a joué contre le Sénégal dans le Groupe I dans la soirée du mardi 16 juin 2026. A Ouagadougou, des supporters qui soutenaient le Sénégal disent avoir suivi un «beau football» comptant pour les phase de poule du mondial 2026. Pour eux, malgré la défaite des Lions de la Téranga sur le score de 3 à 1, le Sénégal a toujours sa chance pour la suite de la compétition. Face au micro de Wakat Séra, ils suggèrent à l’entraineur Pape Thiaw de revoir au niveau de l’attaque et la défense qui ont pêché face aux Bleus mardi au MetLife Stadium de New Jersey. Il y avait du beau monde à l’espace de la Femme à Ouagadougou entre 18H30 à 21H00 le mardi 16 juin 2026. Des supporters de l’équipe nationale du Sénégal sont venus apporter leur soutien aux Lions de la Téranga qui croisaient les crampons contre ceux des Bleus. Au terme de la rencontre, l’équipe de la France a battu (3-1) les garçons de Pape Thiaw. Et les analyses et commentaires se sont emparés des supporters en lieu et place du match âprement disputé. Justin Ouédraogo demande aux attaquants de se revoir car ils ont manqué trop d'occasions de buts «Ils se sont déconcentrés à un moment donné». Justin Ouédraogo a suivi le match comme plusieurs dizaines de fans du Ballon rond à l’espace de la Femme de la capitale burkinabè. A défaut de la victoire pour le représentant africain, ce supporter dit se contenter du beau jeu des Lions de la Téranga. «C’est vrai que le match ne nous a pas satisfait vraiment, mais les Sénégalais ont bien joué. Seulement, on n’a pas eu la victoire comme on le voulait. Mais, tout compte fait, on a eu le beau jeu, un très bon match. La prestation des Sénégalais pour moi, est bien appréciable», déclare-t-il, espérant que les Lions vont faire l’effort pour se rattraper lors des autres matchs. Pour lui, ce qui n’a pas marché, c’est surtout le manque de concentration que les Sénégalais ont fait montre à la deuxième mi-temps. «Ils se sont déconcentrés à un moment donné. Même le troisième but, vous avez vu, dès qu’ils ont marqué, ils se sont satisfaits de ce but et le troisième but français est subitement venu. C’est trop brusque», dit Justin Ouédraogo. Les Sénégalais auraient dû «conserver au moins l’écart et même chercher à égaliser pour avoir un nul de (2-2)», soutient-il. «Mais nous les encourageons car ils ont bien joué comme je l’ai dit tantôt. Vous avez vu que la première mi-temps était intéressant, c’est à la deuxième mi-temps qu’ils ont baissé la garde et encaissé», poursuit M. Ouédraogo. Selon lui, pour les prochaines fois, les joueurs doivent «soutenir le gardien pour qu’il puisse faire face à moins d’hostilités». «Vous voyez qu’au début, c’est lui qui a sauvé beaucoup de buts», fait-il observer. «Les attaquants aussi doivent se revoir car ils ont manqué des occasions phares où on pouvait quand même avoir l’avance. Il suffit de marquer premièrement et vous les déstabiliser pour la suite», affirme-t-il dans un français approximatif. Amidou Sawadogo estime que le Sénégal a offert au public un très bon match «Les Sénégalais n’ont pas démérité. Ils ont seulement croisé plus coriace qu’eux» Amidou Sawadogo (nom d’emprunt) a laissé entendre que depuis qu’il supporte le Sénégal, il ne les a jamais vu jouer comme aujourd’hui. «Les Sénégalais n’ont pas démérité. Ils ont seulement croisé plus coriace qu’eux sur tous les plans. Bon! à part le gardien Edouard Mendy qui est de loin meilleur que le portier français (Mike Maignan)», avance ce supporter. Pour lui, Les Lions de la Téranga ont hérité d’un groupe très difficile. «C’est leur poule seulement qui est très difficile, une poule de mort sinon ils nous ont offert un très bon match et tout porte à croire qu’ils vont avancer», soutient-il. Selon ce supporter, les Sénégalais ont péché au niveau de l’attaque. Ils ont eu beaucoup d’occasion de but, mais ils ont manqué de réalisme pour mettre les ballons au fond du filet. «S’ils avaient été efficaces devant les buts, à la première mi-temps, ils devaient avoir au moins deux buts. Et s’ils devançaient en marquant ces deux buts, le match allait être plié puisque la France n’allait plus pouvoir revenir au score», indique-t-il. Il dit comprendre ceux qui accusent la défense mais pour lui, vu le jeu déroulé par les Français, la défense a cédé face aux actions offensives qui traversaient le milieu facilement. «J’aimerais que prochainement, le coach mette tout pour avoir une attaque efficace à la hauteur des enjeux. Que si un joueur ne donne pas, qu’on ait le courage de le remplacer. Ce soir par exemple, Sadio Mané n’a pas donné mais on l’a conservé jusqu’à la fin du match», dit-il. Dieudonné Kaboré, a suivi le match avec beaucoup de passion et d’attention «Les Sénégalais vont regretter amèrement les occasions qu’ils ont ratées» «J’ai suivi avec beaucoup de passion et d’attention le match France vs Sénégal et donc je dirais que dans l’ensemble, ça été un très bon match. Les Sénégalais se sont donnés, seulement ils ont rencontré plus fort qu’eux», déclare Dieudonné Kaboré, l’air fairplay avec le léger sourire qu’il arborait. Selon M. kaboré, dans l’ensemble les deux équipes ont bien joué. «J’ai apprécié la façon de jouer des Sénégalais. Ils n’ont pas démérité. Pour moi, ils peuvent encore se relancer avec les matchs qui suivent, mais ils doivent corriger au niveau de l’attaque et de la défense où ils ont pêché», avance-t-il, rappelant qu’en football, quand une équipe domine et n’arrive pas à marquer, elle le paie cache. «C’est une réalité implacable que le Sénégal a vécu ce soir. Les moindres occasions que les Français ont eues, ils ont pu les concrétiser. Le beau jeu, c’est intéressant mais la finalité c’est la victoire et les Sénégalais vont regretter amèrement les occasions qu’ils ont ratées», s’exprime-t-il. «En tout cas, c’est une leçon apprise pour la suite de la compétition. Et vu les adversaires qu’ils ont devant eux, ils (Lions) ont la chance de se rattraper», conclut-il. Par Bernard BOUGOUM L’article Mondial 2026: «Les Sénégalais vont regretter amèrement les occasions ratées» face à la France est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mondial 2026: à Ouaga, les supporters sénégalais découragés",
+      "link": "https://www.wakatsera.com/mondial-2026-a-ouaga-les-supporters-senegalais-decourages/",
+      "pubDate": "2026-06-17T16:42:55.000Z",
+      "description": "A Ouagadougou, l’enthousiasme des supporters de l’équipe sénégalaise qui jouait contre les Bleus dans le Groupe I pour les phases de poule de la Coupe du Monde, a été douché. Dans la soirée du mardi 16 juin 2026, à l’Espace de la Femme, plusieurs dizaines d’admirateurs des Lions de la Téranga sont repartis découragés. Après une première période de jeu âprement disputée, Kylian Mbappé et ses coéquipiers ont calmé l’euphorie des soutiens des Lions dans la deuxième partie du match. Le représentant africain s'est incliné (3-1) face à la France au MetLife Stadium au New Jersey. La Coupe du monde se déroule conjointement entre trois pays: les Etats-Unis d'Amérique (USA), le Canada et le Mexique du 11 juin au 19 juillet. La capitale burkinabè vibre au rythme de certains matchs de la coupe du monde très attendus par le public. C’est le cas de la rencontre qui opposait la France au Sénégal dans la soirée du mardi 16 juin 2026. Pour vivre l’ambiance du match, une équipe de Wakat Séra a fait un tour à l’Espace de la Femme situé dans la partie est de Ouagadougou. Dès le parking, on constate des motos à perte de vue. Plusieurs colonnes de chaises et tables ont été disposées face à l'écran géant dressé en plein air pour accueillir les supporters. On entendait plus la voix des supporters des Lions de la Téranga. Les soutiens de l'équipe sénégalaise venaient avec la ferme intention de voir les Lions de la Téranga battre le coq français. La condition pour assister au match est de consommer la boisson. Autour de leurs verres, les fans des Lions, par des applaudissements et des cris, montraient toute leur admiration aux joueurs sénégalais à chaque moment chaud. Le premier but de Kylian Mbappé «Ce soir, le Burkina Faso et l’AES soutiennent le Sénégal car c’est l’Afrique qui gagne», a lancé un supporter, , fortement ovationné. Des Burkinabè espéraient revivre à travers cette rencontre, un remake de l'affrontement entre la France et le Sénégal qui s'était soldé par une victoire (1-0) des Lions de la Téranga, le 31 mai 2002. Cette idée, selon certains supporters sénégalais au début de la rencontre, se confortait surtout par la victoire (2-1) de la Côte d’Ivoire sur les Bleus, à Paris, le 4 juin dernier, lors de la fenêtre FIFA. Pour eux, cette France était n'était pas une foudre de guerre. Selon ces supporters, vu la prestation des Sénégalais à la première période de jeu, l’espoir est encore permis. En effet, à la première partie du jeu, plusieurs actions des Lions de la Téranga ont soulevé la foule même si de part et d’autres, chaque équipes a eu des occasions franches pour «tuer» le match comme on le dit dans le jargon. Une vue aérienne du MetLife Stadium à New Jersey plein qui accueilli le match France vs Sénégal Les Lions ont eu plus de dix occasions nettes de buts. Des joueurs comme Ibrahim Mbaye, Ismaïla Sarr, Pape Gueye et Nicolas Jackson ont donné des frissons aux supporters. Les attaquants sénégalais ont particulièrement manqué de réussite. D'entrée de jeu, les finalistes de la 35 e CAN ont mis du rythme. Ils se sont frayés plusieurs fois le chemin des buts. Juste avant la pause fraîcheur, sur une transition rapide, le joueur de Chelsea, Nicolas Jackson, a décoché dans la surface de réparation, une frappe qui s’écrasait sur le poteau droit du portier français, Mike Maignan, à la 25e minute. Trois minutes après cette action, une autre grosse occasion de but, la frappe croisée de Pape Gueye, a caressé le poteau, poussant de nouveau les supporters sénégalais à laisser entendre de la voie mais ces cris se terminaient par le désespoir. Ils se rasseyaient découragés, les mains sur leur tête. La dernière action de jeu qui a encore soulevé la foule a été celle d’Ismaïla Sarr qui est intervenue tout juste avant le coup de sifflet final de la première partie du jeu. Sur un retrait de Sadio Mané, Nicolas Jackson a vu sa reprise s'envoler au-dessus de la barre transversale. La discipline tactique des Sénégalais a été payante face une équipe française qui bien qu’en forme, a péché techniquement à la première mi-temps. En deuxième mi-temps, deux interventions millimétrées du gardien sénégalais Édouard Mendy a sauvé de justesse les Lions Téranga. Ces assauts répétés des Bleus commençaient à calmer les ardeurs des soutiens des Lions de la Téranga. Leur espoir va commencer à se perdre à partir de la 65 e minute de jeu. Sur une passe lumineuse de Michaël Olisé, l’attaquant français Kylian Mbappé va glacer l’Espace de la Femme. La concentration de certains supporters qui s’étaient éloignés de leurs portables pour être bien concentrés, s’effritait peu à peu. Ibrahim Mbaye, buteur sénégalais face à la France Mais, deux minutes après, des cris des supporters redonnèrent vie à l’espace. Une action menée par Nicolas Jackson que la plupart des supporters n’ont pas vu venir à cause du choc du but français, s’est terminée dans les filets de Mike Maignan. Mais l’arbitre de touche a signalé un hors-jeu. Peut de temps après Bradley Barcola, le remplaçant de Ousmane Dembélé, a douché les fans du Sénégal à la 82 e minute. L'attaquant parisien a marquant le deuxième but français, éteignant les espoirs du public pour qui l’air devenait lourd. Et c'est en ce moment que les quelques rares supporters des Bleus se sont signalés dans la place. Entré en jeu à la 75e minute, c'est Ibrahim Mbaye, ailier du Paris Saint-Germain qui a fait vibré le public comme jamais. Après avoir éliminé le défenseur français, Lucas Hernandez, il a trompé le portier français d'une frappe puissante dans le temps additionnel, soit à la 95 e minute de jeu. Mais cette joie du 12 e joueur sénégalais qui vivait en extase ce match depuis Ouagadougou, sera de très courte durée. Un Kylian Mbappé très étincelant dans ce match, va fusiller Edouard Mendy d’une frappe puissante, une minute après, soit à la 96 e minute. Sur ce coup, les supporters ont commencé à quitter les lieux. Une vue lointaine de l'écran géant à l'espace de la Femme Très découragés, certains supporters ruminaient leur colère et frustration. Une certaine catégorie des fans des Lions digéraient très mal cette défaite. Ils nous confient avoir parié de grosses mises sur la victoire du Sénégal tandis que les plus réalistes admettent la supériorité technique et tactique de Didier Deschamps et ses poulains. Ces derniers disent même avoir sous-estimé les Bleus dont la jeunesse donnait une certaine fraîcheur à l'équipe alors qu'au même moment une grosse fatigue se constatait sur les joueurs sénégalais. Cela apportait une différence nette dans les actions du jeu. La 23 e édition de la grand-messe de football rassemble dans un format XXL 48 équipes. Ces équipes sont réparties en 12 groupes de quatre pour un total record de 104 matchs. Dans ce même groupe I, on retrouve le Sénégal, la France, la Norvège et l’Irak. Les Lions joueront leur prochain match contre la Norvège de Erling Haaland, le mardi prochain. Par Bernard BOUGOUM L’article Mondial 2026: à Ouaga, les supporters sénégalais découragés est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Journée mondiale de l’Enfant africain : UBA Burkina s’engage en faveur du droit à l’eau à travers une initiative solidaire",
+      "link": "https://www.minute.bf/journee-mondiale-de-lenfant-africain-uba-burkina-sengage-en-faveur-du-droit-a-leau-a-travers-une-initiative-solidaire/",
+      "pubDate": "2026-06-17T13:09:25.000Z",
+      "description": "Ouagadougou, le 16 juin 2026 À l’occasion de la Journée mondiale de l’Enfant africain, célébrée chaque année le 16 juin, United Bank for Africa (UBA) Burkina a une nouvelle fois réaffirmé son engagement en faveur des communautés. Fidèle à sa politique de responsabilité sociétale, la banque a mené une action solidaire visant à faciliter l’accès à l’eau potable au profit d’enfants dans plusieurs communautés des localités où elle est implantée. Instituée en mémoire du soulèvement des élèves de Soweto en 1976 en Afrique du Sud, la Journée mondiale de l’Enfant africain constitue aujourd’hui un moment important de sensibilisation aux défis auxquels sont confrontés les enfants du continent, notamment en matière d’éducation, de santé, de protection et d’accès aux services essentiels. Au Burkina Faso, ces enjeux demeurent particulièrement importants dans un contexte où de nombreux enfants font encore face à des difficultés d’accès à certains services essentiels à leur épanouissement et à leur bien-être. Cette journée est ainsi l’occasion de rappeler l’importance de garantir à chaque enfant un environnement favorable à son développement et à la réalisation de son potentiel. S’exprimant sur cette initiative, la Directrice Générale de UBA Burkina a souligné la portée humaine de cette action : « À UBA Burkina, nous croyons que chaque enfant mérite dignité, protection et accès aux ressources essentielles. L’eau est un droit fondamental et, à travers cette action, nous souhaitons non seulement répondre à un besoin immédiat, mais également rappeler notre responsabilité collective envers le bien-être des enfants et des communautés. » Elle a également réaffirmé la volonté de l’institution de poursuivre ses engagements sociaux au bénéfice des populations. UBA œuvre pour le bien-être des enfants Dans cet esprit, UBA Burkina a choisi de poser un acte simple mais essentiel en contribuant à faciliter l’accès à l’eau potable au sein des communautés bénéficiaires. À travers une mobilisation de ses équipes dans les différentes agences du pays, la banque a organisé des distributions d’eau dans plusieurs localités. De Ouagadougou à Bobo-Dioulasso, en passant par Koudougou et d’autres villes couvertes par son réseau, les collaborateurs de UBA se sont mobilisés au sein de plusieurs communautés afin de partager un moment de solidarité avec les enfants et de rappeler l’importance de leurs droits à l’eau potable, à l’éducation et à un environnement sain. Par cette initiative, UBA Burkina souligne l’importance de garantir ce droit fondamental à tous les enfants, indépendamment de leur situation sociale. L’eau n’est pas seulement une ressource indispensable à la vie ; elle représente également un facteur essentiel de santé, de bien-être et de dignité. Cette action s’inscrit dans la vision globale de United Bank for Africa, qui place l’humain au cœur de ses priorités. À travers UBA Foundation, le groupe mène depuis plusieurs années des initiatives en faveur de l’éducation, de la santé et de l’autonomisation des jeunes africains. Au Burkina Faso, cette vision se traduit par des actions concrètes et régulières visant à contribuer au bien-être des communautés et au développement durable du pays. L’initiative a également été marquée par l’engagement volontaire des employés de la banque, qui ont activement participé à sa mise en œuvre. Cette mobilisation illustre une culture d’entreprise fondée sur la solidarité, le partage et la création d’un impact positif au sein des communautés. Pour UBA Burkina, il ne s’agit pas uniquement d’une action ponctuelle, mais d’un engagement continu en faveur du développement humain et du bien-être des générations futures. À travers cette initiative, UBA Burkina lance également un appel à l’ensemble des acteurs publics, privés et à la société civile afin de renforcer les actions en faveur des enfants et de leur accès aux services essentiels. Car bâtir un avenir meilleur pour l’enfant africain nécessite une mobilisation collective, durable et inclusive. En célébrant la Journée mondiale de l’Enfant africain par une action concrète et porteuse de sens, UBA Burkina démontre que les entreprises peuvent jouer un rôle important dans le progrès social. À travers cette initiative, c’est un message d’espoir, de dignité et de solidarité qui est adressé aux enfants africains, dont le bien-être et l’épanouissement constituent une priorité pour l’avenir du continent. UBA Burkina : ensemble, contribuons à bâtir un avenir où chaque enfant peut s’épanouir et réaliser son potentiel. Lire aussi : Afrique : Le président de UBA, Tony Elumelu plaide pour un partenariat collectif stratégique pour stimuler l’économie",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina: Un émissaire du Président mauritanien porteur d’un message au Capitaine Ibrahim Traoré",
+      "link": "https://www.aib.media/burkina-un-emissaire-du-president-mauritanien-porteur-dun-message-au-capitaine-ibrahim-traore/",
+      "pubDate": "2026-06-17T16:16:50.000Z",
+      "description": "Burkina: Un émissaire du Président mauritanien porteur d’un message au Capitaine Ibrahim Traoré Ouagadougou, 17 juin 2026 (AIB) – Le Président du Faso, Chef de l’État, le Camarade Capitaine Ibrahim, a accordé, ce mercredi, une audience au ministre mauritanien de la Défense, des Affaires des retraités et des Enfants de martyrs, Hanana Ould Sidi. Celui-ci était porteur d’un message du Président Mohamed Ould Cheikh El Ghazouani à son homologue burkinabè. Dans son message, le Président de la République islamique de Mauritanie adresse « ses vœux sincères de paix, de stabilité, de prospérité et de progrès pour le Peuple burkinabè », souligne le visiteur à sa sortie d’audience. Selon l’émissaire mauritanien, l’entretien avec le Chef de l’État, le Capitaine Ibrahim Traoré, a été également une occasion de saluer l’excellence des relations d’amitié, de coopération et de solidarité qui unissent les deux pays. Les deux pays ont réaffirmé leur volonté de renforcer davantage les échanges et les concertations sur les questions d’intérêt commun portant sur la souveraineté, la sécurité, l’intégration régionale et le développement. Agence d’information du Burkina Source : Direction de la Communication de la Présidence du Faso",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
@@ -924,12 +1055,44 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "B2"
+        "rating": "A1"
       },
-      "_rating": "B2",
-      "_score": 123,
+      "_rating": "A1",
+      "_score": 111,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Coopération : Un émissaire du Président mauritanien chez le Capitaine Ibrahim Traoré",
+      "link": "https://www.minute.bf/cooperation-un-emissaire-du-president-mauritanien-chez-le-capitaine-ibrahim-traore/",
+      "pubDate": "2026-06-17T15:01:50.000Z",
+      "description": "(Ouagadougou, 17 juin 2026). Le Président du Faso, Chef de l’État, le Camarade Capitaine Ibrahim TRAORÉ, a accordé, ce mercredi dans la matinée, une audience au Ministre de la Défense, des Affaires des retraités et des enfants de martyrs de la Mauritanie, Hanana OULD SIDI. Le Ministre mauritanien était porteur d’un message du Président Mohamed Ould Cheikh El GHAZOUANI à son homologue burkinabè. Dans son message, le Président de la République islamique de Mauritanie adresse « ses vœux sincères de paix, de stabilité, de prospérité et de progrès pour le Peuple burkinabè », souligne le visiteur à sa sortie d’audience. Selon l’émissaire mauritanien, l’entretien avec le Chef de l’État, le Capitaine Ibrahim TRAORÉ, a été également une occasion de saluer l’excellence des relations d’amitié, de coopération et de solidarité qui unissent les deux pays. Les deux pays ont réaffirmé leur volonté de renforcer davantage les échanges et les concertations sur les questions d’intérêt commun portant sur la souveraineté, la sécurité, l’intégration régionale et le développement. Direction de la communication de la Présidence du Faso Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A1"
+      },
+      "_rating": "A1",
+      "_score": 111,
+      "_zone": 1,
+      "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -965,164 +1128,6 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Audience du Président du Faso : Un émissaire du Président mauritanien chez le Capitaine Ibrahim TRAORÉ",
-      "link": "https://www.sidwaya.info/audience-du-president-du-faso-un-emissaire-du-president-mauritanien-chez-le-capitaine-ibrahim-traore/",
-      "pubDate": "2026-06-17T13:45:30.000Z",
-      "description": "Le Président du Faso, Chef de l’État, le Camarade Capitaine Ibrahim TRAORÉ, a accordé, dans la matinée du mercredi 17 juin 2026, une audience au Ministre de la Défense, des Affaires des retraités et des enfants de martyrs de la Mauritanie, Hanana OULD SIDI. M. Hanana OULD SIDI a salué l’excellence des relations d’amitié, de coopération et de solidarité qui unissent la Mauritanie et le Burkina Faso. Le Ministre mauritanien était porteur d’un message du Président Mohamed Ould Cheikh El GHAZOUANI à son homologue burkinabè. Dans son message, le Président de la République islamique de Mauritanie adresse « ses vœux sincères de paix, de stabilité, de prospérité et de progrès pour le Peuple burkinabè », souligne le visiteur à sa sortie d’audience. Selon l’émissaire mauritanien, l’entretien avec le Chef de l’État, le Capitaine Ibrahim TRAORÉ, a été également une occasion de saluer l’excellence des relations d’amitié, de coopération et de solidarité qui unissent les deux pays. Les deux pays ont réaffirmé leur volonté de renforcer davantage les échanges et les concertations sur les questions d’intérêt commun portant sur la souveraineté, la sécurité, l’intégration régionale et le développement. Direction de la communication de la Présidence du Faso",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A1"
-      },
-      "_rating": "A1",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Zoundwéogo/BEPC 2026: Avec 61,55 % de taux de réussite, la province se hisse au premier rang de la région du Nariño",
-      "link": "https://www.aib.media/zoundweogo-bepc-2026-avec-6155-de-taux-de-reussite-la-province-se-hisse-au-premier-rang-de-la-region-du-narino/",
-      "pubDate": "2026-06-17T12:57:16.000Z",
-      "description": "Zoundwéogo/BEPC 2026: Avec 61,55 % de taux de réussite, la province se hisse au premier rang de la région du Nazinon Manga, 16 juin 2026 (AIB) – La province du Zoundwéogo s’est hissée au sommet de la région Nazinon au Brevet d’études du premier cycle (BEPC), session de 2026, en enregistrant un taux global de réussite de 61,55 %, une performance que la directrice provinciale de l’Enseignement secondaire, de la Formation professionnelle et technique (DPESFPT), Georgette Nikièma, attribue à l’engagement de l’ensemble des acteurs du système éducatif. À l’issue des proclamations, le Zoundwéogo a enregistré 1 695 admis sur 2821 candidats ayant effectivement pris part aux épreuves. Parmi eux figurent 590 garçons et 1 105 filles. Les taux de réussite sont de 70,74 % chez les garçons et 57,55 % chez les filles, pour un taux global provincial de 61,55 %. Pour la DPESFPT, ce résultat est d’autant plus satisfaisant qu’il couronne une année marquée par une forte mobilisation des acteurs de l’éducation. « Les examens se sont globalement bien déroulés. L’ensemble des acteurs impliqués a donné le meilleur de lui-même afin que nous puissions aboutir à des résultats très appréciables », a-t-elle déclaré. La responsable provinciale a tenu à saluer le dévouement des enseignants, des chefs d’établissement, des encadreurs pédagogiques, des parents d’élèves et de tous les partenaires de l’éducation qui ont contribué à la réussite de cette session. Selon elle, cette performance est avant tout le résultat d’un travail collectif. Elle a notamment mis en avant le rôle des enseignants qui se sont fortement investis dans l’exécution des programmes, ainsi que celui des services d’encadrement qui ont assuré un suivi pédagogique de proximité tout au long de l’année scolaire. « Les encadreurs pédagogiques ont sillonné les établissements afin d’accompagner les enseignants, de leur apporter des conseils et d’assurer un encadrement régulier », a-t-elle expliqué. Malgré cette réussite, la DPESFPT reconnaît que l’organisation des examens n’a pas été exempte de difficultés. Les contraintes logistiques liées aux déplacements du personnel et du matériel dans plusieurs localités, particulièrement en période hivernale, ainsi que l’insuffisance d’encadreurs pédagogiques dans certaines disciplines, notamment en mathématiques et en français, demeurent des défis majeurs. Toutefois, grâce à l’appui des services centraux et à la mobilisation des équipes locales, ces contraintes n’ont pas affecté le bon déroulement des opérations. La directrice provinciale a exprimé sa gratitude à l’ensemble de ses collaborateurs et partenaires avant de lancer un appel à la poursuite des efforts. « Il ne suffit pas d’occuper la première place ; il faut être capable de s’y maintenir. Nous devons redoubler d’efforts afin de préserver ces acquis et améliorer davantage nos performances », a-t-elle insisté. Elle a aussi invité tous les acteurs à maintenir la dynamique de travail et de solidarité afin de continuer à offrir aux jeunes du Zoundwéogo une éducation de qualité, gage du développement de la province et du Burkina Faso. Agence d’Information du Burkina BGB/bak",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Oubri : Issaka Zoungrana désigné délégué régional de l’APEC",
-      "link": "https://www.aib.media/oubri-issaka-zoungrana-designe-delegue-regional-de-lapec/",
-      "pubDate": "2026-06-17T12:48:48.000Z",
-      "description": "Oubri : Issaka Zoungrana désigné délégué régional de l’APEC Ziniaré, 15 juin 2026 (AIB)-Les souscripteurs de la région de l’Oubri ont élu, lundi à Ziniaré, Issaka Zoungrana comme délégué régional de l’APEC, à l’issue de leur assemblée générale tenue dans la salle polyvalente. La rencontre, organisée par la SCOOP APEC, s’est déroulée sous la présidence d’Assetou Sy Barry, gouverneure de la région de l’Oubri. Elle avait pour objectif de permettre aux souscripteurs de désigner leur représentant régional au sein de la coopérative. À l’issue du scrutin, Issaka Zoungrana a obtenu 52 voix contre 18 pour Mouni Zongo, tandis que 36 souscripteurs se sont abstenus. Mouni Zongo a été désigné délégué régional adjoint. Selon les organisateurs, cette élection vise à renforcer la participation des souscripteurs à la gouvernance de la coopérative. Le nouveau délégué régional a indiqué que son engagement s’inscrirait dans la dynamique de promotion de l’actionnariat populaire, du développement endogène et de la mobilisation des populations de la région de l’Oubri. L’assemblée a également connu la présence du directeur général de la structure. Issaka Zoungrana a, par ailleurs, annoncé son intention d’œuvrer à l’augmentation du nombre de souscripteurs dans la région. Agence d’information du Burkina LC/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Sissili/CEP 2026 : Un résultat record jamais égalé depuis 2012 avec huit écoles à 100% de réussite à Nébiélianayou",
-      "link": "https://www.aib.media/sissili-cep-2026-un-resultat-record-jamais-egale-depuis-2012-avec-huit-ecoles-a-100-de-reussite-a-nebielianayou-2/",
-      "pubDate": "2026-06-17T12:11:27.000Z",
-      "description": "Sissili/CEP 2026 : Un résultat record jamais égalé depuis 2012 avec huit écoles à 100% de réussite à Nébiélianayou Nébiélianayou, 13 juin 2026 (AIB) – La Circonscription d’éducation de base (CEB) de Nébiélianayou a proclamé, ce samedi 13 juin 2026, les résultats de l’examen du Certificat d’études primaires (CEP), session de 2026. La commune enregistre un taux de réussite historique de 97,64%, marquant une progression de 5 points par rapport à l’année précédente. La délibération et la proclamation officielle des résultats se sont déroulées au sein de l’école primaire publique de Nébiélianayou. L’événement s’est tenu sous la direction du président du jury, le camarade Kalizoumé Sana, et en présence du coordonnateur de l’examen, le camarade Nongma Zongo, par ailleurs chef de la Circonscription d’éducation de base (CEB) de Nébiélianayou. Des membres du secrétariat, des directeurs d’écoles, des enseignants et de nombreux élèves étaient également mobilisés pour ce dénouement qui couronne neuf mois de travaux scolaires, débutés le 2 juin dernier pour la phase des épreuves. Sur un effectif total de 339 candidats ayant composé dans les deux centres de la commune, la CEB a enregistré 331 admis, soit 174 garçons admis et 157 filles d’où le taux global de réussite 97,64%. Ce résultat de 97,64% est en nette hausse par rapport à la session de 2025, qui affichait un taux de 92,93%. Selon les données locales, cette performance constitue le record absolu jamais égalé par la CEB depuis sa création en 2012. Le dynamisme des établissements s’est particulièrement illustré à travers les performances par structure : sur les douze (12) écoles présentant des classes de CM2, huit (08) d’entre elles ont réalisé un carton plein avec un taux de réussite de 100%. Le camarade Kalizoumé Sana, président du jury, « Nous procédons aujourd’hui à la délibération et à la proclamation officielle des résultats du CEP, session de 2026, pour la commune de Nébiélianayou. Les chiffres consolidés traduisent les efforts consentis par l’ensemble des acteurs tout au long de cette session qui s’est déroulée dans le strict respect des textes en vigueur. » Pour le camarade Nongma Zongo, chef de la CEB de Nébiélianayou, « Ce taux global de 97,64% est une fierté pour notre circonscription. C’est le résultat d’un dur labeur de neuf mois mené par les élèves et leurs maîtres. Atteindre un tel sommet, du jamais vu depuis la création de la CEB en 2012, avec en prime huit écoles sur douze qui affichent un taux de 100%, témoigne du dévouement du corps enseignant et de la résilience de notre système éducatif local. » L’annonce des résultats a plongé l’école primaire publique de Nébiélianayou dans une euphorie totale, rythmée par les cris de joie et les sauts des nouveaux diplômés. Agence d’information du Burkina MY/ban/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Koulsé/Examens scolaires 2026: la région enregistre des taux de réussite de 96,33 % au CEP et de 53,55 % au BEPC",
-      "link": "https://www.aib.media/koulse-examens-scolaires-2026-la-region-enregistre-des-taux-de-reussite-de-9633-au-cep-et-de-5355-au-bepc/",
-      "pubDate": "2026-06-17T13:08:09.000Z",
-      "description": "Koulsé/Examens scolaires 2026: la région enregistre des taux de réussite de 96,33 % au CEP et de 53,55 % au BEPC Kaya, 16 juin 2026 (AIB) – La région des Koulsé a enregistré des taux de réussite de 96,33 % au Certificat d’études primaires (CEP) et de 53,55 % au Brevet d’études du premier cycle (BEPC), session 2026. Des taux appréciés par les acteurs de l’éducation de la région. Au CEP, sur 16 561 candidats présentés, dont 9 712 filles, 15 954 ont été admis, soit un taux de succès de 96,33 %. Au classement provincial, le Sandbondtenga arrive en tête avec 98,06 % pour 10 661 candidats présentés, suivi du Namentenga (97,52 % pour 1 732 candidats) et du Bam (91,37 % pour 3 768 candidats présentés). Au BEPC, à l’issue des deux tours de composition, la région enregistre un taux de réussite de 53,55 %, avec 4 301 admis sur 8 031 candidats présentés. Selon le directeur régional de l’Enseignement post-primaire, secondaire et de la formation technique et professionnelle des Koulsé, Guingri Kaboré, « la barre des 50 % est franchie pour la première fois dans la région ». Par province, le Sandbondtenga se distingue avec 57,27 %, devant le Bam (49,06 %) et le Namentenga (44,93 %). Le directeur régional de l’Éducation préscolaire, primaire et non formelle des Koulsé, Moussa Ouédraogo, a salué cette prouesse. « La résilience était de mise dans notre région. Les enseignants travaillent sous des tirs dans certaines localités. Même à l’intérieur d’autres communes qui ne sont pas sous blocus, les attaques surviennent de façon répétée. Mais juste après, les enseignants reprennent le travail », a-t-il témoigné. Selon lui, de tels résultats « n’avaient jamais été connus depuis plusieurs années » dans la région. M. Ouédraogo a rendu hommage aux Forces de défense et de sécurité (FDS) et aux Volontaires pour la défense de la patrie (VDP), dont la mobilisation dans les zones à défi sécuritaire a permis la poursuite des activités éducatives. Les deux responsables de l’Éducation ont, d’une même voix, appelé l’ensemble des acteurs à « garder le cap » et à redoubler d’efforts pour les prochaines échéances, notamment le baccalauréat prévu dès le 23 juin, suivi du CQP, du BQP et du BTS jusqu’en septembre 2026. Agence d’information du Burkina AIO/bak",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
@@ -1130,7 +1135,7 @@
       "title": "Coal prices soar on Indonesia export controls, China mine disaster",
       "link": "https://asia.nikkei.com/business/energy/coal-prices-soar-on-indonesia-export-controls-china-mine-disaster",
       "source": "Nikkei Asia",
-      "date": "2026-06-17T15:56:41.447Z",
+      "date": "2026-06-17T20:26:26.172Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1143,26 +1148,10 @@
       ]
     },
     {
-      "title": "Iran warns of ‘harsh response’ as Israel violates ceasefire 84 times in Lebanon",
-      "link": "https://presstv.ir/Detail/2026/06/16/770583/Iran-warns-harsh-response-Israel-violates-ceasefire-Lebanon",
+      "title": "Exclusive: 11 Iranian vessels have broken through US naval blockade since MoU finalization",
+      "link": "https://presstv.ir/Detail/2026/06/17/770635/11-Iranian-vessels-US-naval-blockade",
       "source": "Press TV (Iran)",
-      "date": "2026-06-17T15:56:41.065Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "June 15: Iran-US MoU to end imposed war is widely welcomed as US lifts naval blockade",
-      "link": "https://presstv.ir/Detail/2026/06/15/770519/June-15--Iran-finalizes-MoU-as-tankers-and-cargo-ships-clear-US-naval-blockade",
-      "source": "Press TV (Iran)",
-      "date": "2026-06-17T15:56:41.065Z",
+      "date": "2026-06-17T20:26:25.552Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
@@ -1175,11 +1164,27 @@
       ]
     },
     {
-      "title": "Middle East crisis live: Trump warns US will ‘go back to shooting’ if Iran ‘don’t behave’, as G7 leaders call for Lebanon ceasefire",
-      "link": "https://www.theguardian.com/world/live/2026/jun/17/middle-east-war-iran-israel-us-donald-trump-hezbollah-lebanon-peace-deal-netanyahu-latest-news-updated",
-      "source": "The Guardian World",
-      "date": "2026-06-17T15:45:27.000Z",
-      "rating": "F2",
+      "title": "June 15: Iran-US MoU to end imposed war is widely welcomed as US lifts naval blockade",
+      "link": "https://presstv.ir/Detail/2026/06/15/770519/June-15--Iran-finalizes-MoU-as-tankers-and-cargo-ships-clear-US-naval-blockade",
+      "source": "Press TV (Iran)",
+      "date": "2026-06-17T20:26:25.552Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Read the US account of unreleased 14-point Iran ceasefire memorandum",
+      "link": "https://www.aljazeera.com/news/2026/6/17/read-the-us-account-of-unreleased-14-point-iran-ceasefire-memorandum?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-06-17T20:05:45.000Z",
+      "rating": "A2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1191,27 +1196,11 @@
       ]
     },
     {
-      "title": "Lebanon ceasefire lifts veil on scale of destruction and trauma",
-      "link": "https://www.al-monitor.com/originals/2026/06/lebanon-ceasefire-lifts-veil-scale-destruction-and-trauma",
-      "source": "Al-Monitor",
-      "date": "2026-06-17T14:36:47.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Au sommet du G7, à Evian, les dirigeants appellent les entreprises de la tech à garantir la sécurité des mineurs en ligne",
-      "link": "https://www.lemonde.fr/international/article/2026/06/17/au-g7-les-dirigeants-appellent-la-tech-a-garantir-la-securite-des-mineurs-en-ligne_6704245_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-17T14:02:57.000Z",
-      "rating": "B2",
+      "title": "Dans les coulisses du G7 d’Evian : Trump et Macron se sont envolés vers Versailles, le sommet s’achève",
+      "link": "https://www.liberation.fr/international/europe/g7-devian-plongez-dans-le-bain-grace-a-lenvoye-special-de-libe-20260614_UMALM3CSYBGHPNEIR3ZDSA57YY/",
+      "source": "Libération International",
+      "date": "2026-06-17T19:25:20.000Z",
+      "rating": "C2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1219,6 +1208,102 @@
         {
           "type": "diplo_majeur",
           "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "US, Iran could sign ceasefire deal as soon as tonight to open Strait of Hormuz - Axios",
+      "link": "https://www.jpost.com/middle-east/iran-news/article-899733",
+      "source": "Jerusalem Post",
+      "date": "2026-06-17T19:16:59.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Titan sub: design flaws and company groupthink central to catastrophe, report finds",
+      "link": "https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report",
+      "source": "The Guardian World",
+      "date": "2026-06-17T18:24:06.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "catastrophe"
+        }
+      ]
+    },
+    {
+      "title": "«Ce G7 est objectivement un succès» : Emmanuel Macron essaie de sauver le bilan de son dernier grand sommet",
+      "link": "https://www.liberation.fr/international/europe/ce-g7-est-objectivement-un-succes-emmanuel-macron-essaie-de-sauver-le-bilan-de-son-dernier-grand-sommet-20260617_M3RUVZJ2ZRAJRPXWAFMLEETSM4/",
+      "source": "Libération International",
+      "date": "2026-06-17T17:44:34.000Z",
+      "rating": "A1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Donald Trump défend l'accord de cessez-le-feu avec l'Iran au sommet du G7",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260617-donald-trump-d%C3%A9fend-l-accord-de-cessez-le-feu-avec-l-iran-au-sommet-du-g7",
+      "source": "France 24",
+      "date": "2026-06-17T17:18:42.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Death toll in Gaza since ‘ceasefire’ with Israel goes past 1,000",
+      "link": "https://www.aljazeera.com/news/2026/6/17/death-toll-in-gaza-since-ceasefire-with-israel-goes-past-1000?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-06-17T17:14:31.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "EN DIRECT, guerre au Moyen-Orient | Levée du blocus d’Ormuz, nucléaire, reconstruction de l’Iran : les premiers détails du « projet de mémorandum » entre les Etats-Unis et l’Iran dévoilés",
+      "link": "https://www.lemonde.fr/international/live/2026/06/17/en-direct-guerre-au-moyen-orient-le-vice-president-americain-j-d-vance-repete-que-le-texte-de-l-accord-avec-l-iran-sera-rendu-public-au-plus-tard-le-19-juin-jour-de-sa-signature_6701050_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-06-17T15:54:21.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
         }
       ]
     },
@@ -1239,38 +1324,6 @@
       ]
     },
     {
-      "title": "Dernier jour du sommet du G7 : opération séduction de Donald Trump ?",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260617-dernier-jour-du-sommet-du-g7-op%C3%A9ration-s%C3%A9duction-de-donald-trump",
-      "source": "France 24",
-      "date": "2026-06-17T13:27:07.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Dernière journée du sommet du G7 dédiée à l'IA et au numérique",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260617-derni%C3%A8re-journ%C3%A9e-du-sommet-du-g7-d%C3%A9di%C3%A9e-%C3%A0-l-ia-et-au-num%C3%A9rique",
-      "source": "France 24",
-      "date": "2026-06-17T13:26:30.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
       "title": "“Je ne remettrai pas les clés à quelqu’un qui n’exporte pas” : avant le scrutin de l'ASMEX, Hassan Sentissi fixe sa ligne rouge",
       "link": "https://medias24.com/2026/06/17/asmex-sentissi-defend-sa-ligne-jusquau-bout-1701527/",
       "source": "Médias 24 (Maroc)",
@@ -1285,80 +1338,48 @@
           "keyword": "ligne rouge"
         }
       ]
-    },
-    {
-      "title": "« C’est terrible, mais ce n’est pas un génocide » : les propos de l’écrivain Erri De Luca sur Gaza et Israël choquent en Italie",
-      "link": "https://www.lemonde.fr/livres/article/2026/06/17/en-italie-l-ecrivain-erri-de-luca-cree-la-polemique-avec-ses-propos-sur-gaza-et-israel_6704227_3260.html",
-      "source": "Le Monde International",
-      "date": "2026-06-17T12:07:36.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "Des affrontements entre gangs de « shegués » provoquent panique et déplacements de population à Kolwezi",
-      "link": "https://www.radiookapi.net/2026/06/17/actualite/societe/des-affrontements-entre-gangs-de-shegues-provoquent-panique-et",
-      "source": "Radio Okapi (RDC)",
-      "date": "2026-06-17T08:13:52.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "panique"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      178
-    ],
-    [
-      "occident_fr",
-      130
+      208
     ],
     [
       "golfe_mo",
-      120
+      132
+    ],
+    [
+      "occident_fr",
+      131
     ],
     [
       "occident_us",
-      101
+      93
     ],
     [
       "autre",
-      71
-    ],
-    [
-      "turquie",
-      58
+      59
     ],
     [
       "russie",
-      50
+      48
+    ],
+    [
+      "turquie",
+      47
     ],
     [
       "bf_local",
-      38
-    ],
-    [
-      "chine",
-      30
+      45
     ],
     [
       "sahel",
       24
+    ],
+    [
+      "chine",
+      13
     ]
   ],
   "desks": [
@@ -1366,7 +1387,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 105,
+      "count": 117,
       "top": [
         {
           "title": "Burkina : l’organe de régulation des médias inflige une amende de 50 millions de FCFA à Canal+ International",
@@ -1375,43 +1396,43 @@
           "zone": "1. Sahel & AO franco.",
           "theme": "S",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "C1"
         },
         {
-          "title": "Téné Birahima Ouattara affirme que la Côte d’Ivoire est prête à reprendre une coopération sécuritaire avec le Mali et le Burkina Faso",
-          "link": "https://www.jeuneafrique.com/1804848/politique/tene-birahima-ouattara-affirme-que-la-cote-divoire-est-prete-a-reprendre-une-cooperation-securitaire-avec-le-mali-et-le-burkina-faso/",
-          "source": "Jeune Afrique",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Un émissaire du Président mauritanien chez le Capitaine Ibrahim Traoré",
-          "link": "https://www.wakatsera.com/un-emissaire-du-president-mauritanien-chez-le-capitaine-ibrahim-traore/",
-          "source": "Wakat Séra",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Audience du Président du Faso : Un émissaire du Président mauritanien chez le Capitaine Ibrahim TRAORÉ",
-          "link": "https://www.sidwaya.info/audience-du-president-du-faso-un-emissaire-du-president-mauritanien-chez-le-capitaine-ibrahim-traore/",
-          "source": "Sidwaya",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Zoundwéogo/BEPC 2026: Avec 61,55 % de taux de réussite, la province se hisse au premier rang de la région du Nariño",
-          "link": "https://www.aib.media/zoundweogo-bepc-2026-avec-6155-de-taux-de-reussite-la-province-se-hisse-au-premier-rang-de-la-region-du-narino/",
-          "source": "AIB — Agence Information BF",
+          "title": "Ouagadougou : La Suisse s’intéresse aux évolutions sécuritaires et politiques de l’AES",
+          "link": "https://burkina24.com/2026/06/17/ouagadougou-la-suisse-sinteresse-aux-evolutions-securitaires-et-politiques-de-laes/",
+          "source": "Burkina24",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Mondial 2026: «Les Sénégalais vont regretter amèrement les occasions ratées» face à la France",
+          "link": "https://www.wakatsera.com/mondial-2026-les-senegalais-vont-regretter-amerement-les-occasions-ratees-face-a-la-france/",
+          "source": "Wakat Séra",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Mondial 2026: à Ouaga, les supporters sénégalais découragés",
+          "link": "https://www.wakatsera.com/mondial-2026-a-ouaga-les-supporters-senegalais-decourages/",
+          "source": "Wakat Séra",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Journée mondiale de l’Enfant africain : UBA Burkina s’engage en faveur du droit à l’eau à travers une initiative solidaire",
+          "link": "https://www.minute.bf/journee-mondiale-de-lenfant-africain-uba-burkina-sengage-en-faveur-du-droit-a-leau-a-travers-une-initiative-solidaire/",
+          "source": "Minute BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1419,8 +1440,35 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 46,
+      "count": 60,
       "top": [
+        {
+          "title": "Nigerian man jailed after storing over 50 bags of human faeces outside home",
+          "link": "https://www.vanguardngr.com/2026/06/nigerian-man-jailed-after-storing-over-50-bags-of-human-faeces-outside-home/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "Secondus accuses ruling party of fearing 2027 polls, seeking ‘Coronation’",
+          "link": "https://www.vanguardngr.com/2026/06/secondus-accuses-ruling-party-of-fearing-2027-polls-seeking-coronation/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "One killed, two injured as MACBAN alleges attack on Fulani travellers in Benue",
+          "link": "https://www.vanguardngr.com/2026/06/one-killed-two-injured-as-macban-alleges-attack-on-fulani-travellers-in-benue/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Énergie : plus de 50 millions d’Africains raccordés grâce à l’initiative Mission 300",
           "link": "https://lesoleil.sn/actualites/societe-fait-divers/energie-plus-de-50-millions-dafricains-raccordes-grace-a-linitiative-mission-300/",
@@ -1431,39 +1479,12 @@
           "rating": "A2"
         },
         {
-          "title": "EU backs local nutrition production in Nigeria",
-          "link": "https://punchng.com/eu-backs-local-nutrition-production-in-nigeria/?utm_source=rss.punchng.com&utm_medium=web",
+          "title": "Experts validate toolkits to combat ethnic stereotyping in Nigeria",
+          "link": "https://punchng.com/experts-validate-toolkits-to-combat-ethnic-stereotyping-in-nigeria/?utm_source=rss.punchng.com&utm_medium=web",
           "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Nigerian Army rotates more soldiers fighting Boko Haram, withdraws 174",
-          "link": "https://www.premiumtimesng.com/news/top-news/888403-nigerian-army-rotates-more-soldiers-fighting-boko-haram-withdraws-174.html",
-          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "Soldiers rescue five kidnapped victims in Kogi, terrorists flee",
-          "link": "https://punchng.com/soldiers-rescue-five-kidnapped-victims-in-kogi-terrorists-flee/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Zoomlion, NADMO and Dredge Masters intensify flood prevention efforts across Accra",
-          "link": "https://www.myjoyonline.com/zoomlion-nadmo-and-dredge-masters-intensify-flood-prevention-efforts-across-accra/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
           "rating": "F2"
         }
       ]
@@ -1472,7 +1493,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 30,
+      "count": 54,
       "top": [
         {
           "title": "Cameroun–Nigéria : Yaoundé et Abuja renforcent leur coopération militaire",
@@ -1484,40 +1505,40 @@
           "rating": "F2"
         },
         {
-          "title": "Cameroun : le SDF introduit cinq propositions de loi à l’Assemblée nationale",
-          "link": "https://fr.journalducameroun.com/cameroun-le-sdf-introduit-cinq-propositions-de-loi-a-lassemblee-nationale/",
-          "source": "Journal du Cameroun",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "RDC: l’opposition prépare une riposte contre l’adoption d’un projet de réforme constitutionnelle",
-          "link": "https://www.wakatsera.com/rdc-lopposition-prepare-une-riposte-contre-ladoption-dun-projet-de-reforme-constitutionnelle/",
+          "title": "Mondial 2026: privé de visa «Lumumba Vea» manque le rendez-vous historique des Léopards",
+          "link": "https://www.wakatsera.com/mondial-2026-prive-de-visa-lumumba-vea-manque-le-rendez-vous-historique-des-leopards/",
           "source": "Wakat Séra",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Centrafrique: ouverture du procès contre François Bozizé, jugé par contumace",
-          "link": "https://www.rfi.fr/fr/afrique/20260617-centrafrique-ouverture-du-proc%C3%A8s-contre-fran%C3%A7ois-boziz%C3%A9-jug%C3%A9-par-contumace",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Ebola en RDC: à Bunia (Ituri), « chaque jour, on court derrière l’épidémie »",
-          "link": "https://www.rfi.fr/fr/afrique/20260617-ebola-en-rdc-en-ituri-quinze-jours-apr%C3%A8s-leur-ouverture-les-centres-de-traitement-d%C3%A9j%C3%A0-satur%C3%A9s",
-          "source": "RFI Afrique",
           "zone": "4. Grands Lacs",
           "theme": "H",
           "relevance": "A",
           "rating": "C2"
+        },
+        {
+          "title": "« Fier de toute la douleur et de toute la souffrance que je vais infliger » : le fils du président ougandais se vante d’avoir enlevé un avocat",
+          "link": "https://www.lemonde.fr/afrique/article/2026/06/17/fier-de-toute-la-douleur-et-de-toute-la-souffrance-que-je-vais-infliger-le-fils-du-president-ougandais-se-vante-d-avoir-enleve-un-avocat_6704283_3212.html",
+          "source": "Le Monde International",
+          "zone": "4. Grands Lacs",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Ronaldo fires blank as DR Congo hold Portugal in World Cup opener",
+          "link": "https://www.premiumtimesng.com/sports/football/888509-ronaldo-fires-blank-as-dr-congo-hold-portugal-in-world-cup-opener.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "3. Afrique centrale",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "5 talking points as DR Congo frustrate Portugal in historic World Cup draw",
+          "link": "https://www.vanguardngr.com/2026/06/5-talking-points-as-dr-congo-frustrate-portugal-in-historic-world-cup-draw/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "3. Afrique centrale",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
         }
       ]
     },
@@ -1525,32 +1546,32 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 25,
+      "count": 15,
       "top": [
         {
-          "title": "Mondial | Tunisie : Hervé Renard appelé en urgence après la gifle suédoise",
-          "link": "https://burkina24.com/2026/06/17/mondial-tunisie-herve-renard-appele-en-urgence-apres-la-gifle-suedoise/",
-          "source": "Burkina24",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Mondial 2026 : Messi et Mbappé au coude-à-coude pour entrer dans la légende",
-          "link": "https://fr.hespress.com/477892-mondial-2026-messi-et-mbappe-au-coude-a-coude-pour-entrer-dans-la-legende.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Mondial 2026 : Lionel Messi s’empare de l’histoire",
+          "link": "https://lesoleil.sn/actualites/sports/mondial-2026/mondial-2026-lionel-messi-sempare-de-lhistoire/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Législatives 2026 : Talbi Alami vise la victoire et n'exclut pas une alliance avec le PJD",
-          "link": "https://fr.hespress.com/477866-legislatives-2026-talbi-alami-vise-la-victoire-et-nexclut-pas-une-alliance-avec-le-pjd.html",
+          "title": "Cafés : le Conseil de la concurrence s'apprête à passer le secteur au crible",
+          "link": "https://fr.hespress.com/477890-cafes-le-conseil-de-la-concurrence-sapprete-a-passer-le-secteur-au-crible.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Sahara : l’Algérie s’accroche à une stratégie de blocage calculée",
+          "link": "https://fr.hespress.com/477900-sahara-lalgerie-saccroche-a-une-strategie-de-blocage-calculee.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1561,14 +1582,14 @@
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "H",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
-          "title": "Coupe du monde 2026 : l’Argentine domine l’Algérie grâce à un triplé de Messi",
-          "link": "https://mediaguinee.com/2026/06/coupe-du-monde-2026-largentine-domine-lalgerie-grace-a-un-triple-de-messi/",
-          "source": "Mediaguinee",
+          "title": "Kayouh : Le Maroc œuvre pour l’intégration aérienne africaine",
+          "link": "https://fr.hespress.com/477905-kayouh-le-maroc-oeuvre-pour-lintegration-aerienne-africaine.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1578,52 +1599,52 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 158,
+      "count": 175,
       "top": [
         {
-          "title": "Lebanon ceasefire lifts veil on scale of destruction and trauma",
-          "link": "https://www.al-monitor.com/originals/2026/06/lebanon-ceasefire-lifts-veil-scale-destruction-and-trauma",
-          "source": "Al-Monitor",
+          "title": "L’Europe après la guerre en Iran : un bilan à chaud",
+          "link": "https://legrandcontinent.eu/fr/2026/06/17/leurope-apres-la-guerre-en-iran/",
+          "source": "Le Grand Continent",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A3"
         },
         {
-          "title": "EN DIRECT, guerre au Moyen-Orient : le vice-président américain J. D. Vance répète que le texte de l’accord avec l’Iran sera rendu public « au plus tard » le 19 juin, jour de sa signature",
-          "link": "https://www.lemonde.fr/international/live/2026/06/17/en-direct-guerre-au-moyen-orient-donald-trump-menace-de-bombarder-a-nouveau-l-iran-si-teheran-ne-se-comporte-pas-bien-a-deux-jours-de-la-signature-du-protocole-d-accord_6701050_3210.html",
+          "title": "EN DIRECT, guerre au Moyen-Orient | Levée du blocus d’Ormuz, nucléaire, reconstruction de l’Iran : les premiers détails du « projet de mémorandum » entre les Etats-Unis et l’Iran dévoilés",
+          "link": "https://www.lemonde.fr/international/live/2026/06/17/en-direct-guerre-au-moyen-orient-le-vice-president-americain-j-d-vance-repete-que-le-texte-de-l-accord-avec-l-iran-sera-rendu-public-au-plus-tard-le-19-juin-jour-de-sa-signature_6701050_3210.html",
           "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
-          "theme": "P",
+          "theme": "M",
           "relevance": "A",
-          "rating": "B1"
-        },
-        {
-          "title": "Middle East crisis live: Trump warns US will ‘go back to shooting’ if Iran ‘don’t behave’, as G7 leaders call for Lebanon ceasefire",
-          "link": "https://www.theguardian.com/world/live/2026/jun/17/middle-east-war-iran-israel-us-donald-trump-hezbollah-lebanon-peace-deal-netanyahu-latest-news-updated",
-          "source": "The Guardian World",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "Iran sends tankers loaded with oil past US military blockade",
-          "link": "https://www.bbc.com/news/articles/cpq37yxexd9o?at_medium=RSS&at_campaign=rss",
-          "source": "BBC World",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
           "rating": "B2"
         },
         {
-          "title": "US: Clinton says Netanyahu is 'obsessed' with Iran, Saudi normalization",
-          "link": "https://www.aa.com.tr/en/americas/us-clinton-says-netanyahu-is-obsessed-with-iran-saudi-normalization/3969813",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "«Ce G7 est objectivement un succès» : Emmanuel Macron essaie de sauver le bilan de son dernier grand sommet",
+          "link": "https://www.liberation.fr/international/europe/ce-g7-est-objectivement-un-succes-emmanuel-macron-essaie-de-sauver-le-bilan-de-son-dernier-grand-sommet-20260617_M3RUVZJ2ZRAJRPXWAFMLEETSM4/",
+          "source": "Libération International",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A1"
+        },
+        {
+          "title": "Read the US account of unreleased 14-point Iran ceasefire memorandum",
+          "link": "https://www.aljazeera.com/news/2026/6/17/read-the-us-account-of-unreleased-14-point-iran-ceasefire-memorandum?traffic_source=rss",
+          "source": "Al Jazeera English",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
+          "rating": "A2"
+        },
+        {
+          "title": "Guerre au Moyen-Orient : ce que contient le protocole d’accord entre l’Iran et les Etats-Unis dévoilé par les autorités américaines",
+          "link": "https://www.lemonde.fr/international/article/2026/06/17/ce-que-contient-le-protocole-d-accord-entre-l-iran-et-les-etats-unis-devoile-par-les-autorites-americaines_6704299_3210.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B1"
         }
       ]
     },
@@ -1631,7 +1652,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 166,
+      "count": 159,
       "top": [
         {
           "title": "« Trois quarts des Africains doivent obtenir un visa pour voyager dans leur continent »",
@@ -1641,24 +1662,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Sécheresse, chaleur, canicule : l’enfance sous pression",
-          "link": "https://www.wakatsera.com/secheresse-chaleur-canicule-lenfance-sous-pression/",
-          "source": "Wakat Séra",
-          "zone": "12. Asie du Sud",
-          "theme": "C",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "Au sommet du G7, à Evian, les dirigeants appellent les entreprises de la tech à garantir la sécurité des mineurs en ligne",
-          "link": "https://www.lemonde.fr/international/article/2026/06/17/au-g7-les-dirigeants-appellent-la-tech-a-garantir-la-securite-des-mineurs-en-ligne_6704245_3210.html",
-          "source": "Le Monde International",
-          "zone": "14. Extrême-Orient",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "B2"
         },
         {
           "title": "The art of the swarm: Systemic rivalry with China on European terms",
@@ -1677,6 +1680,24 @@
           "theme": "D",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Donald Trump défend l'accord de cessez-le-feu avec l'Iran au sommet du G7",
+          "link": "https://www.france24.com/fr/vid%C3%A9o/20260617-donald-trump-d%C3%A9fend-l-accord-de-cessez-le-feu-avec-l-iran-au-sommet-du-g7",
+          "source": "France 24",
+          "zone": "16. Amérique du Nord",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Dialog : dans les coulisses d'un rassemblement où une soi-disant «élite» discute de l'avenir sans témoins",
+          "link": "https://francais.rt.com/international/135257-dialog-dans-coulisses-rassemblement-ou-soi-disant-elite-discute-avenir-sans-temoins",
+          "source": "RT en français",
+          "zone": "16. Amérique du Nord",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "A2"
         }
       ]
     }
@@ -1693,42 +1714,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-17T15:56:09.852Z",
+      "at": "2026-06-17T20:25:53.113Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-17T15:56:09.859Z",
+      "at": "2026-06-17T20:25:53.120Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-17T15:56:49.357Z",
+      "at": "2026-06-17T20:26:42.699Z",
       "agent": "Agent Collecte RSS",
-      "message": "113/170 flux OK, 1884 articles"
+      "message": "116/170 flux OK, 1942 articles"
     },
     {
-      "at": "2026-06-17T15:56:52.443Z",
+      "at": "2026-06-17T20:26:45.610Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-17T15:56:52.787Z",
+      "at": "2026-06-17T20:26:45.976Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-17T15:56:52.792Z",
+      "at": "2026-06-17T20:26:45.981Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 12 alertes"
+      "message": "8 developpements, 13 alertes"
     },
     {
-      "at": "2026-06-17T15:56:52.792Z",
+      "at": "2026-06-17T20:26:45.981Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-17T15:56:52.792Z",
+      "at": "2026-06-17T20:26:45.981Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
