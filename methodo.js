@@ -717,6 +717,42 @@
   }
   try { setInterval(injectAgentPanel, 1500); } catch (e) {}
 
+  /* ---------- VERROU ADMINISTRATION (réservé à l'administrateur) ---------- */
+  (function adminLock(){
+    const ADMIN_HASH = '3853286131044cf68ad152010f89a959a17219d8dac4841816d2c6d8cb2474f5'; // empreinte SHA-256 du mot de passe administrateur
+    const KEY = 'gw_admin_ok';
+    const unlocked = () => localStorage.getItem(KEY) === '1';
+    async function sha256(s){ const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2, '0')).join(''); }
+    function tick(){
+      try{
+        document.querySelectorAll('a[data-page="admin"]').forEach(a => { a.style.display = unlocked() ? '' : 'none'; });
+        const sec = document.querySelector('.page.active[data-page="admin"]');
+        if (sec && !unlocked()){
+          if (!document.getElementById('gw-admin-lock')){
+            sec.innerHTML = `<div id="gw-admin-lock" class="card" style="max-width:440px;margin:48px auto;text-align:center;border:1px solid ${T.border}">
+              <div style="font-size:1.7rem;color:${T.purple};margin-bottom:6px"><i class="fa-solid fa-lock"></i></div>
+              <div style="font-weight:700;color:${T.txt};font-size:1.05rem">Administration réservée</div>
+              <div style="color:${T.dim};font-size:.84rem;margin:6px 0 12px">Accès réservé à l'administrateur du site.</div>
+              <input id="gw-admin-pw" type="password" placeholder="Mot de passe" style="width:88%;padding:9px 11px;border-radius:8px;border:1px solid ${T.border};background:${T.bg};color:${T.txt};font-size:.9rem">
+              <div><button id="gw-admin-go" class="btn primary sm" style="margin-top:10px"><i class="fa-solid fa-unlock"></i> Déverrouiller</button></div>
+              <div id="gw-admin-msg" style="color:#ef4444;font-size:.8rem;margin-top:8px;min-height:16px"></div>
+            </div>`;
+            const go = async () => {
+              const pw = (document.getElementById('gw-admin-pw') || {}).value || '';
+              const h = await sha256(pw);
+              if (h === ADMIN_HASH){ localStorage.setItem(KEY, '1'); location.reload(); }
+              else { const m = document.getElementById('gw-admin-msg'); if (m) m.textContent = 'Mot de passe incorrect.'; }
+            };
+            const btn = document.getElementById('gw-admin-go'); if (btn) btn.onclick = go;
+            const inp = document.getElementById('gw-admin-pw'); if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+          }
+        }
+      }catch(e){}
+    }
+    try { setInterval(tick, 700); tick(); } catch(e){}
+    window.gwAdminLock = () => { localStorage.removeItem(KEY); location.reload(); }; // re-verrouiller
+  })();
+
   /* ---------- API publique ---------- */
   window.GW_METHODO = { THEMES, ZONES, COLS, relevance, tagItem, routeItem, loadDesks, RELEVANCE_ROWS };
 
