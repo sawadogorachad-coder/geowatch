@@ -725,7 +725,6 @@
     async function sha256(s){ const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2, '0')).join(''); }
     function tick(){
       try{
-        document.querySelectorAll('a[data-page="admin"]').forEach(a => { a.style.display = unlocked() ? '' : 'none'; });
         const sec = document.querySelector('.page.active[data-page="admin"]');
         if (sec && !unlocked()){
           if (!document.getElementById('gw-admin-lock')){
