@@ -745,6 +745,14 @@
             const btn = document.getElementById('gw-admin-go'); if (btn) btn.onclick = go;
             const inp = document.getElementById('gw-admin-pw'); if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
           }
+        } else if (sec && unlocked()){
+          if (!document.getElementById('gw-admin-relock')){
+            const b = document.createElement('button');
+            b.id = 'gw-admin-relock'; b.className = 'btn ghost sm'; b.style.cssText = 'margin:0 0 12px';
+            b.innerHTML = '<i class="fa-solid fa-lock"></i> Verrouiller l\'admin';
+            b.onclick = () => { localStorage.removeItem(KEY); location.reload(); };
+            sec.insertBefore(b, sec.firstChild);
+          }
         }
       }catch(e){}
     }
