@@ -46,9 +46,14 @@ jobs:
         run: node scripts/geowatch-agents.mjs --profile "$GEOWATCH_PROFILE"
 
       - name: Run analyst agent (analyses & etudes)
+        # Filet de securite : tourne MEME si la collecte a echoue (sur la derniere
+        # veille en date) — l'analyse et le site se mettent a jour quoi qu'il arrive.
+        if: ${{ !cancelled() }}
         run: node scripts/geowatch-analyst.mjs
 
       - name: Commit generated intelligence
+        # Publie ce qui a pu etre produit, meme si une etape precedente a hoquete.
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "geowatch-agent"
           git config user.email "geowatch-agent@users.noreply.github.com"
