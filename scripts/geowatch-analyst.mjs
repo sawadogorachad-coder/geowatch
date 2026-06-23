@@ -155,14 +155,20 @@ function detect(items, snap, history, methodo) {
   });
 
   // 2. Signaux faibles : croisements emergents (faible volume, quasi absents avant)
+  //    FILTRE DE PERTINENCE : on ne retient que les cases REELLEMENT SUIVIES dans la
+  //    matrice AES (● veille active = 'A', ○ veille legere = 'L'). Les cases hors veille
+  //    ('.') sont du bruit (faits divers, examens, vie locale hors prisme) -> ignorees.
+  const relOf = (z, c) => (methodo && typeof methodo.relevance === 'function') ? methodo.relevance(+z, c) : 'A';
   const signauxFaibles = [];
   Object.entries(snap.byCell).forEach(([k, n]) => {
     if (n < 1 || n > 3) return;
+    const [z, c] = k.split('|');
+    const rel = relOf(z, c);
+    if (rel !== 'A' && rel !== 'L') return; // hors matrice de veille -> bruit ecarte
     const base = baselineAvg(history, s => (s.byCell || {})[k]);
     if (base < 0.5) {
-      const [z, c] = k.split('|');
       const sample = items.find(it => it._zone === +z && it._theme === c);
-      signauxFaibles.push({ zone: zoneLabel(+z), thematique: themeLabel(c), code: c, volume: n, exemple: sample ? sample.title : '' });
+      signauxFaibles.push({ zone: zoneLabel(+z), thematique: themeLabel(c), code: c, volume: n, pertinence: rel === 'A' ? '●' : '○', exemple: sample ? sample.title : '' });
     }
   });
   signauxFaibles.sort((a, b) => b.volume - a.volume);
@@ -181,6 +187,7 @@ function detect(items, snap, history, methodo) {
     const base = baselineAvg(history, s => (s.byCell || {})[k]);
     if (n >= Math.max(5, base * 2.5) && base > 0) {
       const [z, c] = k.split('|');
+      if (relOf(z, c) === '.') return; // pic dans une case hors matrice de veille -> bruit ecarte
       ruptures.push({ type: 'pic', zone: zoneLabel(+z), thematique: themeLabel(c), volume: n, base: Math.round(base * 10) / 10 });
     }
   });
@@ -424,7 +431,7 @@ function analysisHtml(a) {
   ${a.syntheseExecutive ? `<h2>Synthese executive</h2><p>${esc(a.syntheseExecutive).replace(/\n/g, '<br>')}</p>` : ''}
   <h2>Dynamiques detectees</h2>
   <h3>Tendances lourdes</h3><ul>${listHtml(a.findings.tendancesLourdes, t => `<li>${esc(t.libelle)} — ${t.volume} signaux ${dirBadge(t.direction)}</li>`) || '<li>—</li>'}</ul>
-  <h3>Signaux faibles</h3><ul>${listHtml(a.findings.signauxFaibles, s => `<li><b>${esc(s.zone)} · ${esc(s.thematique)}</b> : ${esc(s.exemple || '')}</li>`) || '<li>—</li>'}</ul>
+  <h3>Signaux faibles</h3><ul>${listHtml(a.findings.signauxFaibles, s => `<li>${s.pertinence ? esc(s.pertinence) + ' ' : ''}<b>${esc(s.zone)} · ${esc(s.thematique)}</b> : ${esc(s.exemple || '')}</li>`) || '<li>—</li>'}</ul>
   <h3>Ruptures</h3><ul>${listHtml(a.findings.ruptures, r => r.type === 'evenement' ? `<li>${esc(r.zone)} · ${esc(r.thematique)} — <a href="${esc(r.lien)}">${esc(r.titre)}</a> <small>(${esc(r.source || '')}, ${esc(r.cote || '')})</small></li>` : `<li>Pic : ${esc(r.zone)} · ${esc(r.thematique)} (${r.volume} vs ${r.base} moy.)</li>`) || '<li>—</li>'}</ul>
   <h3>Recompositions / reconfigurations / bascules</h3><ul>${listHtml(a.findings.recompositions, r => `<li><b>${esc(r.axe)}</b> ${esc(r.cle)} : ${esc(r.partAnterieure)} → ${esc(r.partActuelle)} (${esc(r.sens)})</li>`) || '<li>—</li>'}</ul>
   <h2>Notes d'analyse par zone</h2>

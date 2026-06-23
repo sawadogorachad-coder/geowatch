@@ -12,8 +12,11 @@ on:
         required: false
         default: "false"
   schedule:
-    - cron: "0 */3 * * *"
-    - cron: "0 7 * * *"
+    # Minutes volontairement DECALEES de l'heure pile (:00) : sur le tier gratuit,
+    # GitHub Actions sature et SAUTE le plus de passages a l'heure ronde. Un horaire
+    # "creux" (:17, :08) est honore beaucoup plus regulierement.
+    - cron: "17 */3 * * *"
+    - cron: "8 7 * * *"
 
 permissions:
   contents: write
@@ -23,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GEOWATCH_PROFILE: ${{ github.event.inputs.profile || 'broad' }}
-      SEND_EMAIL: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 7 * * *') || github.event.inputs.send_email == 'true' }}
+      SEND_EMAIL: ${{ (github.event_name == 'schedule' && github.event.schedule == '8 7 * * *') || github.event.inputs.send_email == 'true' }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
       EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
