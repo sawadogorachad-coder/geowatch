@@ -335,8 +335,18 @@ function dedupe(items) {
   });
 }
 
+// Date robuste : un flux RSS peut renvoyer une date illisible ("lundi 23 juin", format
+// exotique, champ vide...). On ne laisse JAMAIS `.toISOString()` lever
+// "RangeError: Invalid time value" — c'etait la cause des plantages intermittents qui
+// arretaient TOUTE la collecte des qu'un seul article avait une date pourrie.
+function safeDate(v) {
+  const t = (v !== undefined && v !== null && v !== '') ? new Date(v).getTime() : NaN;
+  return new Date(Number.isNaN(t) ? Date.now() : t);
+}
+function safeISO(v) { return safeDate(v).toISOString(); }
+
 function enrichItems(rawItems, siteData) {
-  const sorted = dedupe(rawItems).sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate)).slice(0, CONFIG.maxArticles);
+  const sorted = dedupe(rawItems).sort((a,b) => safeDate(b.pubDate) - safeDate(a.pubDate)).slice(0, CONFIG.maxArticles);
   return sorted.map(it => {
     const flags = bfAesFlags(it);
     const tags = categorize(it, siteData.categories);
@@ -344,7 +354,7 @@ function enrichItems(rawItems, siteData) {
     return {
       title: it.title,
       link: it.link,
-      pubDate: new Date(it.pubDate || Date.now()).toISOString(),
+      pubDate: safeISO(it.pubDate),
       description: it.description || '',
       _source: it.sourceName,
       _sourceId: it.sourceId,
@@ -391,7 +401,7 @@ function sourceHealth(results) {
 
 function buildBrief(items, health, deskCfg) {
   const now = Date.now();
-  const recent24 = items.filter(it => now - new Date(it.pubDate).getTime() <= CONFIG.hours * 3600000);
+  const recent24 = items.filter(it => now - safeDate(it.pubDate).getTime() <= CONFIG.hours * 3600000);
   const top = recent24
     .filter(it => (it._bf || it._aes || it._majors.length) && it._score >= 18 && !(/^D|^E/.test(it._rating) && !/1|2$/.test(it._rating)))
     .sort((a,b) => b._score - a._score)
