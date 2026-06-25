@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-25T20:23:15.107Z",
+  "generatedAt": "2026-06-25T22:46:35.114Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 117,
-    "failed": 53,
-    "articles": 1967,
+    "ok": 112,
+    "failed": 58,
+    "articles": 1919,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -16,11 +16,6 @@
         "id": "rss_burkina24",
         "name": "Burkina24",
         "count": 6
-      },
-      {
-        "id": "rss_sidwaya",
-        "name": "Sidwaya",
-        "count": 10
       },
       {
         "id": "rss_aib",
@@ -45,7 +40,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -68,23 +63,18 @@
         "count": 10
       },
       {
+        "id": "rss_maliweb",
+        "name": "Maliweb",
+        "count": 0
+      },
+      {
         "id": "rss_malijet",
         "name": "Malijet",
         "count": 0
       },
       {
-        "id": "rss_studio_tam",
-        "name": "Studio Tamani (Mali)",
-        "count": 10
-      },
-      {
         "id": "rss_journ_mali",
         "name": "Journal du Mali",
-        "count": 10
-      },
-      {
-        "id": "rss_kalangou",
-        "name": "Studio Kalangou (Niger)",
         "count": 10
       },
       {
@@ -95,11 +85,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -163,11 +148,6 @@
         "count": 30
       },
       {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
-      },
-      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -176,11 +156,6 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -305,7 +280,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 25
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -415,7 +390,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_bbc_africa",
@@ -510,7 +485,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 29
+        "count": 30
       },
       {
         "id": "rss_pressTV",
@@ -595,6 +570,11 @@
     ],
     "failedSources": [
       {
+        "id": "rss_sidwaya",
+        "name": "Sidwaya",
+        "error": "HTTP 503"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
@@ -610,9 +590,9 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_maliweb",
-        "name": "Maliweb",
-        "error": "This operation was aborted"
+        "id": "rss_studio_tam",
+        "name": "Studio Tamani (Mali)",
+        "error": "fetch failed"
       },
       {
         "id": "rss_essor_mali",
@@ -630,9 +610,19 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_kalangou",
+        "name": "Studio Kalangou (Niger)",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "fetch failed"
       },
       {
         "id": "rss_cridem",
@@ -687,7 +677,7 @@
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
-        "error": "fetch failed"
+        "error": "HTTP 500"
       },
       {
         "id": "rss_saharang",
@@ -698,6 +688,16 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -857,18 +857,52 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 62,
-    "alerts": 15,
-    "criticalAlerts": 9,
-    "sourcesDistinct": 77
+    "bfAes": 56,
+    "alerts": 11,
+    "criticalAlerts": 7,
+    "sourcesDistinct": 74
   },
   "topDevelopments": [
+    {
+      "title": "Burkina: compte rendu du Conseil des ministres du jeudi 25 avril 2026",
+      "link": "https://www.wakatsera.com/burkina-compte-rendu-du-conseil-des-ministres-du-jeudi-25-avril-2026/",
+      "pubDate": "2026-06-25T20:29:46.000Z",
+      "description": "Le Conseil des ministres s’est tenu à Ouagadougou, le jeudi 25 juin 2026, en séance ordinaire, de 09 H 00 mn à 13 H 34 mn, sous la présidence du Camarade Capitaine Ibrahim TRAORE, Président du Faso, Président du Conseil des ministres. Il a délibéré sur les dossiers inscrits à son ordre du jour, entendu des communications orales, procédé à des nominations et autorisé des missions à l’étranger. I. DELIBERATIONS I.1. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES Le Conseil a adopté deux (02) décrets. Le premier décret porte déclaration d’utilité publique urgente, l’implantation de la société Textile des Forces du Burkina Faso (TEXFORCES-BF). La mise en œuvre optimale et sécurisée du complexe industriel TEXFORCES-BF requiert la délimitation et la sécurisation de deux terrains contigus complémentaires, indispensables notamment pour la protection des installations industrielles et des équipements stratégiques, l’implantation des ouvrages techniques connexes et la constitution de réserves foncières en vue d’extensions futures du site. Ces deux terrains sont situés à Logofourousso, commune urbaine de Bobo-Dioulasso. Ils couvrent une superficie de 5 hectares 69 ares 90 centiares. Le présent décret vise à sécuriser durablement l’environnement foncier du complexe industriel TEXFORCES-BF, au regard de son intérêt économique, industriel et social pour le Burkina Faso. L’adoption de ce décret permet de déclarer d’utilité publique urgente, l’implantation de la société Textile des Forces du Burkina Faso afin d’engager la procédure d’expropriation des terrains concernés. Le second décret porte modification du décret n°2024-0174/PRES-TRANS/PM/MEFP du 04 mars 2024 portant gestion des comptes de dépôts de fonds au Trésor public. Cette modification vise à corriger les insuffisances relevées dans l’application dudit décret. En effet, les dispositions des articles 6, 7 et 8 du décret ne précisent pas les catégories de structures administratives habilitées à ouvrir un compte de dépôts au Trésor public. En outre, l’absence de distinction claire entre les personnes morales de droit privé et les structures publiques dépourvues de la personnalité juridique crée des confusions dans les procédures d’ouverture de comptes. Les innovations du décret portent notamment sur : – la clarification des catégories de structures pouvant ouvrir un compte de dépôts de fonds, en établissant une distinction nette entre les personnes physiques ou morales de droit privé et les structures publiques selon qu’elles sont dotées ou non de la personnalité juridique ; – la reconnaissance expresse des régies d’avances, des initiatives sectorielles de développement bénéficiant de financements extérieurs, ainsi que des entités militaires désignées par le ministre chargé de la Défense comme structures spécifiques pouvant bénéficier de l’ouverture de comptes de dépôts de fonds, sans autorisation préalable du ministre chargé des Finances ; – la définition du profil des agents habilités à gérer les comptes de dépôts de fonds ; – la précision des modalités d’octroi de découvert. L’adoption de ce décret permet de clarifier les modalités d’ouverture de comptes de dépôts de fonds au Trésor public pour une gestion efficace des deniers publics. I.2. AU TITRE DU MINISTERE DE LA COMMUNICATION, DE LA CULTURE, DES ARTS ET DU TOURISME Le Conseil a adopté deux (02) rapports. Le premier rapport est relatif à un projet de décret portant organisation du ministère de la Communication, de la culture, des arts et du tourisme. Ce décret vise la révision de l’organisation du ministère de la Communication, de la culture, des arts et du tourisme, conformément au décret n°2025-1545/PF/PRIM du 1er décembre 2025 portant organisation-type des départements ministériels et aux changements institutionnels introduits au sein dudit ministère. Ces changements concernent : – le rattachement de la Société burkinabè de télédiffusion (SBT) au ministère de la Transition digitale, des postes et des communications électroniques ; – la réforme des fonds de financements initialement rattachés au ministère en l’occurrence le Fonds d’appui à la presse privée (FAPP) et le Fonds de développement culturel et touristique (FDCT) fusionnés respectivement au Fonds d’appui au sport et à la presse privée (Wassa Bondo) et au Fonds burkinabè de développement économique et social (FBDES Tõogo) ; – la déconcentration administrative du département par la création de Directions régionales et provinciales conformément au nouveau découpage territorial. L’adoption de ce décret permet au ministère de la Communication, de la culture, des arts et du tourisme de disposer d’un nouvel organigramme en vue d’accomplir efficacement ses missions. Le second rapport est relatif aux projets spécifiques du ministère de la Communication, de la culture, des arts et du tourisme. Ces projets spécifiques concernent : – la construction d’un auditorium, d’un bloc de magasin et de toilettes sur le site du Mémorial Isidore Noël Thomas SANKARA ; – le suivi-contrôle des travaux de construction de l’auditorium, du bloc de magasin et de toilettes ; – la réalisation d’une étude de faisabilité technico-économique du téléphérique ; – la poursuite de la mise œuvre des actions de communication du Plan de travail annuel (PTA) 2026 de la Stratégie de communication de guerre ; – la poursuite de la mise en œuvre du plan de communication 2026 du Fonds de soutien patriotique. Le coût global de ces projets s’élève à neuf cent quatre-vingt-dix-sept millions cinq cent quarante-huit mille sept cent quatre-vingt-dix-huit (997 548 798) F CFA TTC. Le financement est assuré par le budget de l’Etat, exercice 2026. I.3. AU TITRE DU MINISTERE DE LA JUSTICE Le Conseil a adopté deux (02) rapports. Le premier rapport est relatif à un projet de loi portant fixation des règles d’application des lois, ordonnances et actes règlementaires ainsi que des actes administratifs à caractère individuel. Ce projet de loi est une révision de l’ordonnance n°75-23/PRES du 06 mai 1975 fixant les règles d’application des lois, ordonnances, décrets et arrêtés ministériels ainsi que les actes administratifs à caractère individuel. Après un demi-siècle d’application, cet instrument juridique n’est plus en adéquation avec les exigences de la gouvernance administrative, les évolutions institutionnelles, technologiques et les mutations du cadre juridique national et international. Les principales innovations du projet de loi sont : – la réduction à 03 jours du délai d’entrée en vigueur de la loi, de l’ordonnance et de l’acte règlementaire au lieu de 08 jours après leur publication au Journal Officiel du Faso ; – la possibilité de publier un texte législatif ou administratif au moyen des Technologies de l’information et de la communication ; – la possibilité de notifier un acte administratif à caractère individuel par voie électronique. Ce projet de loi permettra de moderniser le cadre juridique régissant l’application, la diffusion et l’entrée en vigueur des actes législatifs et règlementaires. Le Conseil a marqué son accord pour la transmission dudit projet de loi à l’Assemblée législative du Peuple. Le second rapport est relatif à un projet de loi portant administration du Travail d’intérêt général. Ce projet de loi vise la relecture de la loi n°035-2024/ALT du 08 novembre 2024 portant administration du Travail d’intérêt général (TIG) au Burkina Faso. Au-delà de son objectif de réduction de la surpopulation carcérale et d’adaptation de la réponse pénale à la gravité des infractions, le Travail d’intérêt général se distingue par sa contribution significative à la production pénitentiaire et à la réalisation d’actions de développement. Cependant, l’application de la loi a révélé des difficultés qui réduisent sa portée et son efficacité. En effet, cette loi n’a pas permis de faire du Travail d’intérêt général une véritable peine de référence pour les infractions mineures. En laissant au juge une marge d’appréciation quant à son prononcé, elle n’a pas favorisé un recours systématique à cette peine, laquelle demeure marginale dans la pratique judiciaire. Les principales innovations du projet de loi sont : – le prononcé d’office de la peine de Travail d’intérêt général pour certaines infractions mineures ; – la prise en compte des prestations intellectuelles ; – l’exclusion explicite des infractions en lien avec le terrorisme et certains crimes ; – l’introduction d’un régime permanent de commutation de la peine d’emprisonnement en peine de Travail d’intérêt général en remplacement du régime transitoire. Ce projet de loi permettra de renforcer l’effectivité, la cohérence et la crédibilité du régime de l’administration du Travail d’intérêt général au Burkina Faso. Le Conseil a marqué son accord pour la transmission dudit projet de loi à l’Assemblée législative du Peuple. I.4. AU TITRE DU MINISTERE DE L’INDUSTRIE, DU COMMERCE ET DE L’ARTISANAT Le Conseil a adopté un rapport relatif au bilan de la campagne cotonnière 2025-2026 et les prévisions de la campagne 2026-2027. Le bilan fait ressortir 391 407 ha de superficies emblavées pendant la campagne cotonnière 2025-2026 contre 346 778 ha pour la campagne écoulée, soit une hausse de 13%. Ces superficies ont permis d’obtenir un volume définitif de 314 293 tonnes de production de coton graine (conventionnel et biologique) pour la campagne 2025-2026 contre 294 507 tonnes de la campagne précédente. Les prévisions de la campagne 2026-2027 sont fixées à 532 000 tonnes de production de coton graine conventionnel et à 2 250 tonnes pour le coton biologique. La situation globale des quantités d’engrais disponibles fait ressortir 110 085 tonnes pour le NPK-SB et 38 013 tonnes pour l’Urée. Pour la campagne cotonnière 2026-2027, les prix planchers d’achat du coton conventionnel ont été fixés à 310 F CFA/Kg pour le premier choix et à 285 F CFA/Kg pour le deuxième choix. S’agissant du coton graine biologique, son prix d’achat est de 375 F CFA/Kg. Les prix de cession à crédit des engrais (NPK-SB et Urée) sont fixés à 17 500 F CFA par sac de 50 Kg. Ce prix est garanti par une subvention dont la prise en charge par les sociétés cotonnières a été décidée par le Conseil des ministres. Le Conseil a instruit les ministres chargés du dossier de prendre les dispositions idoines pour un bon déroulement de la campagne cotonnière 2026-2027. I.5. AU TITRE DU MINISTERE DE L’ENSEIGNEMENT SUPERIEUR, DE LA RECHERCHE ET DE L’INNOVATION Le Conseil a adopté un décret portant régime des bourses d’études de l’enseignement supérieur et de la recherche. Ce décret est une relecture du décret n°2021-1263/PRES/PM/MAECIABE/MINEFID/MESRSI/MFPTPS/MJPEE du 09 décembre 2021 portant définition des divers régimes d’aides, de bourses d’études, de bourses de stages et fixation de leurs modalités de contingentement. La relecture du décret vise à établir un cadre juridique harmonieux pour la gestion des bourses d’études afin de favoriser une meilleure gestion des sources de financement et de prendre en compte les filières prioritaires dans l’attribution des bourses d’études. Les innovations majeures de ce décret sont : – la prise en compte des bourses spécifiques pour les pupilles de la Nation ; – le transfert de l’Aide (jadis octroyée aux étudiants) au Fonds de soutien à l’éducation et la recherche (FOSER) Bângr Baoobo ; – l’intégration d’une nouvelle catégorie de bourses intitulée « Bourse patriotique », accordée par des personnes physiques ou morales en guise d’engagement patriotique pour le soutien à l’éducation et à la recherche ; – l’annualité du contingent des bourses ; – la redéfinition et la hiérarchisation des critères d’attribution des bourses (prise en compte du mérite, des filières prioritaires, de la série du Baccalauréat) ; – la possibilité de mise en place d’une commission ad’hoc chargée de statuer sur l’attribution de bourses à des étudiants dans des circonstances jugées exceptionnelles. L’adoption de ce décret permet de doter le ministère de l’Enseignement supérieur, de la recherche et de l’innovation d’un nouveau texte juridique pour une meilleure gestion des bourses d’études de l’enseignement supérieur et de la recherche. II. COMMUNICATIONS ORALES II.1. Le ministre de la Communication, de la culture, des arts et du tourisme a fait au Conseil une communication relative à la tenue de la première édition du concours « Zama d’Or ». Le concours « Zama d’Or » est une compétition destinée à reconnaître le mérite et célébrer l’excellence des femmes et des hommes exerçant dans les métiers de la communication, du marketing, des relations publiques et de la publicité. L’organisation de ce concours vise l’émulation des acteurs du domaine de la communication et traduit la volonté du Gouvernement, de bâtir une communication forte, responsable et innovante, tirant ses sources dans nos réalités culturelles et sociales. L’apothéose de cette activité dénommée « Nuit du Communicateur » verra la proclamation du palmarès officiel. II.2. Le ministre des Sports, de la jeunesse et de l’emploi a fait au Conseil une communication relative à la participation du Burkina Faso à la 5e cohorte du programme « A l’école de la citoyenneté », tenue du 17 avril au 02 mai 2026, à Bamako en République du Mali. Ce programme mis en place par les autorités maliennes vise à former des citoyens responsables, résilients et engagés, capables d’incarner et de promouvoir les valeurs républicaines telles que le patriotisme, l’intégrité et le vivre-ensemble, tout en agissant comme médiateurs au sein de leurs communautés. Cette cohorte s’inscrit dans une dynamique régionale de construction d’une souveraineté collective, où la jeunesse devient un levier stratégique pour l’avenir du Sahel. A cet effet, l’édition 2026 a été élargie aux jeunes du Burkina Faso et du Niger dans le cadre de la consolidation de la Confédération des Etats du Sahel (AES). La participation du Burkina Faso à ce programme a permis de renforcer l’intégration régionale au sein de la Confédération de l’AES, de consolider les liens de solidarité et de partage d’expériences avec les pays frères du Mali et du Niger. III. NOMINATIONS III.1. NOMINATIONS DANS LES FONCTIONS INDIVIDUELLES A. AU TITRE DU MINISTERE DE L’ECONOMIE ET DES FINANCES – Le camarade Evariste MILLOGO, Mle 216 141 H, Administrateur des services financiers, 2e classe, 2e échelon, est nommé Directeur du contrôle des marchés publics et des engagements financiers de l’Agence burkinabè pour l’emploi ; – Le camarade Ismaël dit Soumaïla LAMOUKRI, Mle 91 667 V, Administrateur des services financiers, 2e classe, 2e échelon, est nommé Directeur du contrôle des marchés publics et des engagements financiers de l’Ecole nationale des Gardes de sécurité pénitentiaire ; – Le camarade Mohamadi KAGAMBEGA, Mle 235 878 F, Administrateur des services financiers, 2e classe, 2e échelon, est nommé Directeur du contrôle des marchés publics et des engagements financiers de l’Université Faustin Sié SIB ; – Le camarade Boubié Jean IDO, Mle 294 300 Z, Administrateur des services financiers, 1ère classe, 5e échelon, est nommé Directeur provincial du contrôle des marchés publics et des engagements financiers de la Bougouriba ; – Le camarade Bewendtaoré David YAMEOGO, Mle 334 261 F, Administrateur des services financiers, 1ère classe, 4e échelon, est nommé Directeur provincial du contrôle des marchés publics et des engagements financiers de l’Oudalan. B. AU TITRE DU MINISTERE DES AFFAIRES ETRANGERES – Le camarade Emmanuel COMPAORE, Mle 118 852 C, Conseiller des affaires étrangères, 2e classe, 4e échelon, est nommé Ministre Conseiller près l’Ambassade du Burkina Faso à Copenhague (Royaume du Danemark) ; – Le camarade Philippe SANDWIDI, Mle 97 442 E, Conseiller des affaires étrangères, 2eclasse, 6e échelon, est nommé Ambassadeur, Directeur général de l’Institut des hautes études internationales (INHEI). C. AU TITRE DU MINISTERE DE L’INDUSTRIE, DU COMMERCE ET DE L’ARTISANAT – Le camarade Patrice FOROGO, Cadre de banque, est nommé Directeur général de la Société nationale burkinabè d’hydrocarbures (SONABHY). III.2. NOMINATIONS DANS LES CONSEILS D’ADMINISTRATION Le Conseil a procédé à la nomination d’Administrateurs aux Conseils d’administration : – de l’Agence Faso Mêbo au titre de la Présidence du Faso ; – de l’Institut national de formation en travail social (INFTS) au titre du ministère de la Famille et de la solidarité ; – de la Société nationale d’électricité du Burkina (SONABEL) au titre du ministère de l’Energie, des mines et des carrières. A. PRESIDENCE DU FASO Le Conseil a adopté un décret portant nomination du camarade Ibrahim OUEDRAOGO, Officier, Administrateur représentant l’Etat, au titre du ministère de la Guerre et de la défense patriotique au Conseil d’administration de l’Agence Faso Mêbo pour un premier mandat de trois (03) ans. B. MINISTERE DE LA FAMILLE ET DE LA SOLIDARITE Le Conseil a adopté un décret portant nomination des personnes ci-après, Administrateurs au Conseil d’administration de l’Institut national de formation en travail social (INFTS) pour un premier mandat de trois (03) ans. ADMINISTRATEUR REPRESENTANT LE PERSONNEL DE L’INSTITUT NATIONAL DE FORMATION EN TRAVAIL SOCIAL (INFTS) – Le camarade Idrissou NACRO, Mle 47 730 K, Inspecteur d’éducation de jeunes enfants. ADMINISTRATEUR REPRESENTANT LES ELEVES DE L’INSTITUT NATIONAL DE FORMATION EN TRAVAIL SOCIAL (INFTS) – Le camarade Paul Ibrahim DJERMA, Mle 286 652 C, Elève Conseiller en éducation sociale, pour la durée de son mandat de Délégué général. C. MINISTERE DE L’ENERGIE, DES MINES ET DES CARRIERES Le Conseil a adopté un décret portant nomination du camarade Eugène ZONGO, Mle 85 84 T, Cadre-comptable, Administrateur représentant le personnel, au Conseil d’administration de la Société nationale d’électricité du Burkina (SONABEL) pour un premier mandat de trois (03) ans, en remplacement de la camarade Poudiba Aline BAZIEMO/YAMEOGO. Le Porte-parole du Gouvernement, Pingdwendé Gilbert OUEDRAOGO Officier de l’Ordre de l’Etalon L’article Burkina: compte rendu du Conseil des ministres du jeudi 25 avril 2026 est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
     {
       "title": "Compte rendu du Conseil des ministres du jeudi 25 juin 2026",
       "link": "https://netafrique.net/compte-rendu-du-conseil-des-ministres-du-jeudi-25-juin-2026/",
@@ -896,40 +930,6 @@
         "rating": "F1"
       },
       "_rating": "F1",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina Faso : Compte rendu du Conseil des ministres du 25 juin 2026",
-      "link": "https://lefaso.net/spip.php?article147401",
-      "pubDate": "2026-06-25T19:42:05.000Z",
-      "description": "Le Conseil des ministres s'est tenu à Ouagadougou, le jeudi 25 juin 2026, en séance ordinaire, de 09 H 00 mn à 13 H 34 mn, sous la présidence du Camarade Capitaine Ibrahim TRAORE, Président du Faso, Président du Conseil des ministres. Il a délibéré sur les dossiers inscrits à son ordre du jour, entendu des communications orales, procédé à des nominations et autorisé des missions à l'étranger. I. DELIBERATIONS I.1. AU TITRE DU MINISTERE DE L'ECONOMIE ET DES FINANCES Le Conseil a adopté deux (02) décrets. Le premier décret porte déclaration d'utilité publique urgente, l'implantation de la société Textile des Forces du Burkina Faso (TEXFORCES-BF). La mise en œuvre optimale et sécurisée du complexe industriel TEXFORCES-BF requiert la délimitation et la sécurisation de deux terrains contigus complémentaires, indispensables notamment pour la protection des installations industrielles et des équipements stratégiques, l'implantation des ouvrages techniques connexes et la constitution de réserves foncières en vue d'extensions futures du site. Ces deux terrains sont situés à Logofourousso, commune urbaine de Bobo-Dioulasso. Ils couvrent une superficie de 5 hectares 69 ares 90 centiares. Le présent décret vise à sécuriser durablement l'environnement foncier du complexe industriel TEXFORCES-BF, au regard de son intérêt économique, industriel et social pour le Burkina Faso. L'adoption de ce décret permet de déclarer d'utilité publique urgente, l'implantation de la société Textile des Forces du Burkina Faso afin d'engager la procédure d'expropriation des terrains concernés. Le second décret porte modification du décret n°2024-0174/PRES-TRANS/PM/MEFP du 04 mars 2024 portant gestion des comptes de dépôts de fonds au Trésor public. Cette modification vise à corriger les insuffisances relevées dans l'application dudit décret. En effet, les dispositions des articles 6, 7 et 8 du décret ne précisent pas les catégories de structures administratives habilitées à ouvrir un compte de dépôts au Trésor public. En outre, l'absence de distinction claire entre les personnes morales de droit privé et les structures publiques dépourvues de la personnalité juridique crée des confusions dans les procédures d'ouverture de comptes. Les innovations du décret portent notamment sur : – la clarification des catégories de structures pouvant ouvrir un compte de dépôts de fonds, en établissant une distinction nette entre les personnes physiques ou morales de droit privé et les structures publiques selon qu'elles sont dotées ou non de la personnalité juridique ; – la reconnaissance expresse des régies d'avances, des initiatives sectorielles de développement bénéficiant de financements extérieurs, ainsi que des entités militaires désignées par le ministre chargé de la Défense comme structures spécifiques pouvant bénéficier de l'ouverture de comptes de dépôts de fonds, sans autorisation préalable du ministre chargé des Finances ; – la définition du profil des agents habilités à gérer les comptes de dépôts de fonds ; – la précision des modalités d'octroi de découvert. L'adoption de ce décret permet de clarifier les modalités d'ouverture de comptes de dépôts de fonds au Trésor public pour une gestion efficace des deniers publics. I.2. AU TITRE DU MINISTERE DE LA COMMUNICATION, DE LA CULTURE, DES ARTS ET DU TOURISME Le Conseil a adopté deux (02) rapports. Le premier rapport est relatif à un projet de décret portant organisation du ministère de la Communication, de la culture, des arts et du tourisme. Ce décret vise la révision de l'organisation du ministère de la Communication, de la culture, des arts et du tourisme, conformément au décret n°2025-1545/PF/PRIM du 1er décembre 2025 portant organisation-type des départements ministériels et aux changements institutionnels introduits au sein dudit ministère. Ces changements concernent : – le rattachement de la Société burkinabè de télédiffusion (SBT) au ministère de la Transition digitale, des postes et des communications électroniques ; – la réforme des fonds de financements initialement rattachés au ministère en l'occurrence le Fonds d'appui à la presse privée (FAPP) et le Fonds de développement culturel et touristique (FDCT) fusionnés respectivement au Fonds d'appui au sport et à la presse privée (Wassa Bondo) et au Fonds burkinabè de développement économique et social (FBDES Tõogo) ; – la déconcentration administrative du département par la création de Directions régionales et provinciales conformément au nouveau découpage territorial. L'adoption de ce décret permet au ministère de la Communication, de la culture, des arts et du tourisme de disposer d'un nouvel organigramme en vue d'accomplir efficacement ses missions. Le second rapport est relatif aux projets spécifiques du ministère de la Communication, de la culture, des arts et du tourisme. Ces projets spécifiques concernent : – la construction d'un auditorium, d'un bloc de magasin et de toilettes sur le site du Mémorial Isidore Noël Thomas SANKARA ; – le suivi-contrôle des travaux de construction de l'auditorium, du bloc de magasin et de toilettes ; – la réalisation d'une étude de faisabilité technico-économique du téléphérique ; – la poursuite de la mise œuvre des actions de communication du Plan de travail annuel (PTA) 2026 de la Stratégie de communication de guerre ; – la poursuite de la mise en œuvre du plan de communication 2026 du Fonds de soutien patriotique. Le coût global de ces projets s'élève à neuf cent quatre-vingt-dix-sept millions cinq cent quarante-huit mille sept cent quatre-vingt-dix-huit (997 548 798) F CFA TTC. Le financement est assuré par le budget de l'Etat, exercice 2026. I.3. AU TITRE DU MINISTERE DE LA JUSTICE Le Conseil a adopté deux (02) rapports. Le premier rapport est relatif à un projet de loi portant fixation des règles d'application des lois, ordonnances et actes règlementaires ainsi que des actes administratifs à caractère individuel. Ce projet de loi est une révision de l'ordonnance n°75-23/PRES du 06 mai 1975 fixant les règles d'application des lois, ordonnances, décrets et arrêtés ministériels ainsi que les actes administratifs à caractère individuel. Après un demi-siècle d'application, cet instrument juridique n'est plus en adéquation avec les exigences de la gouvernance administrative, les évolutions institutionnelles, technologiques et les mutations du cadre juridique national et international. Les principales innovations du projet de loi sont : – la réduction à 03 jours du délai d'entrée en vigueur de la loi, de l'ordonnance et de l'acte règlementaire au lieu de 08 jours après leur publication au Journal Officiel du Faso ; – la possibilité de publier un texte législatif ou administratif au moyen des Technologies de l'information et de la communication ; – la possibilité de notifier un acte administratif à caractère individuel par voie électronique. Ce projet de loi permettra de moderniser le cadre juridique régissant l'application, la diffusion et l'entrée en vigueur des actes législatifs et règlementaires. Le Conseil a marqué son accord pour la transmission dudit projet de loi à l'Assemblée législative du Peuple. Le second rapport est relatif à un projet de loi portant administration du Travail d'intérêt général. Ce projet de loi vise la relecture de la loi n°035-2024/ALT du 08 novembre 2024 portant administration du Travail d'intérêt général (TIG) au Burkina Faso. Au-delà de son objectif de réduction de la surpopulation carcérale et d'adaptation de la réponse pénale à la gravité des infractions, le Travail d'intérêt général se distingue par sa contribution significative à la production pénitentiaire et à la réalisation d'actions de développement. Cependant, l'application de la loi a révélé des difficultés qui réduisent sa portée et son efficacité. En effet, cette loi n'a pas permis de faire du Travail d'intérêt général une véritable peine de référence pour les infractions mineures. En laissant au juge une marge d'appréciation quant à son prononcé, elle n'a pas favorisé un recours systématique à cette peine, laquelle demeure marginale dans la pratique judiciaire. Les principales innovations du projet de loi sont : – le prononcé d'office de la peine de Travail d'intérêt général pour certaines infractions mineures ; – la prise en compte des prestations intellectuelles ; – l'exclusion explicite des infractions en lien avec le terrorisme et certains crimes ; – l'introduction d'un régime permanent de commutation de la peine d'emprisonnement en peine de Travail d'intérêt général en remplacement du régime transitoire. Ce projet de loi permettra de renforcer l'effectivité, la cohérence et la crédibilité du régime de l'administration du Travail d'intérêt général au Burkina Faso. Le Conseil a marqué son accord pour la transmission dudit projet de loi à l'Assemblée législative du Peuple. I.4. AU TITRE DU MINISTERE DE L'INDUSTRIE, DU COMMERCE ET DE L'ARTISANAT Le Conseil a adopté un rapport relatif au bilan de la campagne cotonnière 2025-2026 et les prévisions de la campagne 2026-2027. Le bilan fait ressortir 391 407 ha de superficies emblavées pendant la campagne cotonnière 2025-2026 contre 346 778 ha pour la campagne écoulée, soit une hausse de 13%. Ces superficies ont permis d'obtenir un volume définitif de 314 293 tonnes de production de coton graine (conventionnel et biologique) pour la campagne 2025-2026 contre 294 507 tonnes de la campagne précédente. Les prévisions de la campagne 2026-2027 sont fixées à 532 000 tonnes de production de coton graine conventionnel et à 2 250 tonnes pour le coton biologique. La situation globale des quantités d'engrais disponibles fait ressortir 110 085 tonnes pour le NPK-SB et 38 013 tonnes pour l'Urée. Pour la campagne cotonnière 2026-2027, les prix planchers d'achat du coton conventionnel ont été fixés à 310 F CFA/Kg pour le premier choix et à 285 F CFA/Kg pour le deuxième choix. S'agissant du coton graine biologique, son prix d'achat est de 375 F CFA/Kg. Les prix de cession à crédit des engrais (NPK-SB et Urée) sont fixés à 17 500 F CFA par sac de 50 Kg. Ce prix est garanti par une subvention dont la prise en charge par les sociétés cotonnières a été décidée par le Conseil des ministres. Le Conseil a instruit les ministres chargés du dossier de prendre les dispositions idoines pour un bon déroulement de la campagne cotonnière 2026-2027. I.5. AU TITRE DU MINISTERE DE L'ENSEIGNEMENT SUPERIEUR, DE LA RECHERCHE ET DE L'INNOVATION Le Conseil a adopté un décret portant régime des bourses d'études de l'enseignement supérieur et de la recherche. Ce décret est une relecture du décret n°2021-1263/PRES/PM/MAECIABE/MINEFID/MESRSI/MFPTPS/MJPEE du 09 décembre 2021 portant définition des divers régimes d'aides, de bourses d'études, de bourses de stages et fixation de leurs modalités de contingentement. La relecture du décret vise à établir un cadre juridique harmonieux pour la gestion des bourses d'études afin de favoriser une meilleure gestion des sources de financement et de prendre en compte les filières prioritaires dans l'attribution des bourses d'études. Les innovations majeures de ce décret sont : – la prise en compte des bourses spécifiques pour les pupilles de la Nation ; – le transfert de l'Aide (jadis octroyée aux étudiants) au Fonds de soutien à l'éducation et la recherche (FOSER) Bângr Baoobo ; – l'intégration d'une nouvelle catégorie de bourses intitulée « Bourse patriotique », accordée par des personnes physiques ou morales en guise d'engagement patriotique pour le soutien à l'éducation et à la recherche ; – l'annualité du contingent des bourses ; – la redéfinition et la hiérarchisation des critères d'attribution des bourses (prise en compte du mérite, des filières prioritaires, de la série du Baccalauréat) ; – la possibilité de mise en place d'une commission ad'hoc chargée de statuer sur l'attribution de bourses à des étudiants dans des circonstances jugées exceptionnelles. L'adoption de ce décret permet de doter le ministère de l'Enseignement supérieur, de la recherche et de l'innovation d'un nouveau texte juridique pour une meilleure gestion des bourses d'études de l'enseignement supérieur et de la recherche. II. COMMUNICATIONS ORALES II.1. Le ministre de la Communication, de la culture, des arts et du tourisme a fait au Conseil une communication relative à la tenue de la première édition du concours « Zama d'Or ». Le concours « Zama d'Or » est une compétition destinée à reconnaître le mérite et célébrer l'excellence des femmes et des hommes exerçant dans les métiers de la communication, du marketing, des relations publiques et de la publicité. L'organisation de ce concours vise l'émulation des acteurs du domaine de la communication et traduit la volonté du Gouvernement, de bâtir une communication forte, responsable et innovante, tirant ses sources dans nos réalités culturelles et sociales. L'apothéose de cette activité dénommée « Nuit du Communicateur » verra la proclamation du palmarès officiel. II.2. Le ministre des Sports, de la jeunesse et de l'emploi a fait au Conseil une communication relative à la participation du Burkina Faso à la 5e cohorte du programme « A l'école de la citoyenneté », tenue du 17 avril au 02 mai 2026, à Bamako en République du Mali. Ce programme mis en place par les autorités maliennes vise à former des citoyens responsables, résilients et engagés, capables d'incarner et de promouvoir les valeurs républicaines telles que le patriotisme, l'intégrité et le vivre-ensemble, tout en agissant comme médiateurs au sein de leurs communautés. Cette cohorte s'inscrit dans une dynamique régionale de construction d'une souveraineté collective, où la jeunesse devient un levier stratégique pour l'avenir du Sahel. A cet effet, l'édition 2026 a été élargie aux jeunes du Burkina Faso et du Niger dans le cadre de la consolidation de la Confédération des Etats du Sahel (AES). La participation du Burkina Faso à ce programme a permis de renforcer l'intégration régionale au sein de la Confédération de l'AES, de consolider les liens de solidarité et de partage d'expériences avec les pays frères du Mali et du Niger. III. NOMINATIONS III.1. NOMINATIONS DANS LES FONCTIONS INDIVIDUELLES A. AU TITRE DU MINISTERE DE L'ECONOMIE ET DES FINANCES – Le camarade Evariste MILLOGO, Mle 216 141 H, Administrateur des services financiers, 2e classe, 2e échelon, est nommé Directeur du contrôle des marchés publics et des engagements financiers de l'Agence burkinabè pour l'emploi ; – Le camarade Ismaël dit Soumaïla LAMOUKRI, Mle 91 667 V, Administrateur des services financiers, 2e classe, 2e échelon, est nommé Directeur du contrôle des marchés publics et des engagements financiers de l'Ecole nationale des Gardes de sécurité pénitentiaire ; – Le camarade Mohamadi KAGAMBEGA, Mle 235 878 F, Administrateur des services financiers, 2e classe, 2e échelon, est nommé Directeur du contrôle des marchés publics et des engagements financiers de l'Université Faustin Sié SIB ; – Le camarade Boubié Jean IDO, Mle 294 300 Z, Administrateur des services financiers, 1ère classe, 5e échelon, est nommé Directeur provincial du contrôle des marchés publics et des engagements financiers de la Bougouriba ; – Le camarade Bewendtaoré David YAMEOGO, Mle 334 261 F, Administrateur des services financiers, 1ère classe, 4e échelon, est nommé Directeur provincial du contrôle des marchés publics et des engagements financiers de l'Oudalan. B. AU TITRE DU MINISTERE DES AFFAIRES ETRANGERES – Le camarade Emmanuel COMPAORE, Mle 118 852 C, Conseiller des affaires étrangères, 2e classe, 4e échelon, est nommé Ministre Conseiller près l'Ambassade du Burkina Faso à Copenhague (Royaume du Danemark) ; – Le camarade Philippe SANDWIDI, Mle 97 442 E, Conseiller des affaires étrangères, 2eclasse, 6e échelon, est nommé Ambassadeur, Directeur général de l'Institut des hautes études internationales (INHEI). C. AU TITRE DU MINISTERE DE L'INDUSTRIE, DU COMMERCE ET DE L'ARTISANAT – Le camarade Patrice FOROGO, Cadre de banque, est nommé Directeur général de la Société nationale burkinabè d'hydrocarbures (SONABHY). III.2. NOMINATIONS DANS LES CONSEILS D'ADMINISTRATION Le Conseil a procédé à la nomination d'Administrateurs aux Conseils d'administration : – de l'Agence Faso Mêbo au titre de la Présidence du Faso ; – de l'Institut national de formation en travail social (INFTS) au titre du ministère de la Famille et de la solidarité ; – de la Société nationale d'électricité du Burkina (SONABEL) au titre du ministère de l'Energie, des mines et des carrières. A. PRESIDENCE DU FASO Le Conseil a adopté un décret portant nomination du camarade Ibrahim OUEDRAOGO, Officier, Administrateur représentant l'Etat, au titre du ministère de la Guerre et de la défense patriotique au Conseil d'administration de l'Agence Faso Mêbo pour un premier mandat de trois (03) ans. B. MINISTERE DE LA FAMILLE ET DE LA SOLIDARITE Le Conseil a adopté un décret portant nomination des personnes ci-après, Administrateurs au Conseil d'administration de l'Institut national de formation en travail social (INFTS) pour un premier mandat de trois (03) ans. ADMINISTRATEUR REPRESENTANT LE PERSONNEL DE L'INSTITUT NATIONAL DE FORMATION EN TRAVAIL SOCIAL (INFTS) – Le camarade Idrissou NACRO, Mle 47 730 K, Inspecteur d'éducation de jeunes enfants. ADMINISTRATEUR REPRESENTANT LES ELEVES DE L'INSTITUT NATIONAL DE FORMATION EN TRAVAIL SOCIAL (INFTS) – Le camarade Paul Ibrahim DJERMA, Mle 286 652 C, Elève Conseiller en éducation sociale, pour la durée de son mandat de Délégué général. C. MINISTERE DE L'ENERGIE, DES MINES ET DES CARRIERES Le Conseil a adopté un décret portant nomination du camarade Eugène ZONGO, Mle 85 84 T, Cadre-comptable, Administrateur représentant le personnel, au Conseil d'administration de la Société nationale d'électricité du Burkina (SONABEL) pour un premier mandat de trois (03) ans, en remplacement de la camarade Poudiba Aline BAZIEMO/YAMEOGO. Le Porte-parole du Gouvernement, Pingdwendé Gilbert OUEDRAOGO Officier de l'Ordre de l'Etalon",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
       "_score": 127,
       "_zone": 1,
       "_theme": "E",
@@ -1038,19 +1038,18 @@
       "_desk": "A1"
     },
     {
-      "title": "Koro : 124 nouveaux réfugiés arrivent du Burkina Faso",
-      "link": "https://www.studiotamani.org/204373-koro-124-nouveaux-refugies-arrivent-du-burkina-faso",
-      "pubDate": "2026-06-25T13:47:01.000Z",
-      "description": "Une nouvelle vague de deplaces a ete enregistree ce mercredi 24 juin a Koro. Au total, 124 personnes en provenance du Burkina Faso sont arrivees dans la localite. Il s'agit majoritairement de femmes et d'enfants fuyant l'insecurite dans les zones frontalieres. Cette arrivee intervient alors que les capacites d'accueil de la localite sont deja fortement sollicitees. L’article Koro : 124 nouveaux réfugiés arrivent du Burkina Faso est apparu en premier sur Studio Tamani - Informations, débats, magazines : toute l’actualité du Mali, en 5 langues .",
-      "_source": "Studio Tamani (Mali)",
-      "_sourceId": "rss_studio_tam",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
+      "title": "Reconcile with Niger, Mali, Burkina Faso- Sanusi tells ECOWAS",
+      "link": "https://www.premiumtimesng.com/news/top-news/890794-reconcile-with-niger-mali-burkina-faso-sanusi-tells-ecowas.html",
+      "pubDate": "2026-06-25T20:41:41.000Z",
+      "description": "Mr Sanusi said the withdrawal of the three Sahel countries had weakened regional integration, security cooperation, and economic opportunities across West Africa. The post Reconcile with Niger, Mali, Burkina Faso- Sanusi tells ECOWAS appeared first on Premium Times Nigeria .",
+      "_source": "Premium Times (Nigeria)",
+      "_sourceId": "rss_premiumng",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "military",
-        "humanitarian"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1062,9 +1061,42 @@
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 119,
+      "_score": 115,
       "_zone": 1,
-      "_theme": "H",
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina Faso : Des jeunes couturiers créent l’AJC-EPN pour habiller les FDS et valoriser la mode locale",
+      "link": "https://faso7.com/2026/06/25/burkina-faso-des-jeunes-couturiers-creent-lajc-epn-pour-habiller-les-fds-et-valoriser-la-mode-locale/",
+      "pubDate": "2026-06-25T16:37:35.000Z",
+      "description": "Une nouvelle association a officiellement vu le jour au Burkina Faso ce jeudi 25 juin 2026 à Ouagadougou. Il s’agit de l’Association des jeunes couturiers engagés pour la nation (AJC-EPN). Elle se veut un espace de promotion de la mode locale, d’autonomisation des jeunes couturiers et de valorisation du savoir-faire national. Cette structure entend s’inscrire dans une dynamique de développement socio-économique en mettant en avant la créativité, l’innovation et l’engagement citoyen des jeunes acteurs de ce secteur. Fort d’une population majoritairement jeune et dans un contexte de reconquête totale de son territoire, le Burkina Faso a lancé un appel au développement d’initiatives locales. Cet élan a été adopté dans tous les secteurs et, ce 25 juin 2026, c’est au tour du monde de la couture et de la mode d’entrer dans la danse. À peine présentée, l’AJC-EPN s’est donné pour ambition de redynamiser ce milieu tout en offrant aux jeunes artisans l’opportunité de mieux s’outiller pour faire face aux défis actuels. L’idée, selon Mahamadi Zongo, président de l’association, est de faire du jeune couturier un levier de développement à travers la valorisation de l’identité culturelle du pays. ​« Notre association est née d’une conviction forte : celle que la jeunesse, lorsqu’elle est organisée, formée et engagée, constitue un levier puissant de transformation sociale et économique. En tant que jeunes couturiers, nous ne sommes pas seulement des artisans de la mode ; nous sommes également des acteurs du développement, des créateurs de valeur et des ambassadeurs de notre identité culturelle » , a-t-il expliqué. En somme, l’objectif est de renforcer leurs capacités techniques et entrepreneuriales, d’encourager l’innovation et de contribuer à l’effort national, comme l’a souhaité le président du Faso, le capitaine Ibrahim Traoré. À cet effet, certains membres de l’association s’activent déjà dans la confection de tenues pour les Forces de défense et de sécurité (FDS). Mahamadi Zongo, président de l’Association des Jeunes Couturiers Engagés Pour la Nation (AJC-EPN). Pour Aziz Ouédraogo, membre de l’association, cette activité se fait en parfaite conformité avec les directives des autorités, uniquement sur commande. Il n’y a donc aucune inquiétude à avoir sur le plan sécuritaire. « Nous avons l’agrément. Pour produire pour les FDS, il faut savoir qu’il faut faire une demande d’autorisation auprès du ministère. Pour la vente, c’est l’État-major qui exprime son besoin et nous produisons en fonction de cela », a-t-il rassuré. ​Bien que lancée officiellement ce jeudi 25 juin 2026, l’association a été créée en décembre 2025. À son actif, elle compte déjà des remises de dons dans le cadre de l’initiative présidentielle Faso Mêbo ainsi que dans un camp militaire de la capitale. Le président de l’AJC-EPN a d’ailleurs précisé qu’il exerçait dans la confection d’équipements de sécurité depuis plus de dix ans. Le siège de la structure est situé au quartier Paglayiri de Ouagadougou et reste joignable au +226 78 08 30 10. Saydou Ismaël GANAME Faso7 L’article Burkina Faso : Des jeunes couturiers créent l’AJC-EPN pour habiller les FDS et valoriser la mode locale est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1101,48 +1133,31 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Séno: le gouverneur du Liptako instruit les PDS de la région à acquérir des motoculteurs au profit des VDP agricoles",
-      "link": "https://www.aib.media/seno-le-gouverneur-du-liptako-instruit-les-pds-de-la-region-a-acquerir-des-motoculteurs-au-profit-des-vdp-agricoles/",
-      "pubDate": "2026-06-25T13:56:07.000Z",
-      "description": "Burkina–Liptako–Sortie– VDP–Agricoles Séno: le gouverneur du Liptako instruit les PDS de la région à acquérir des motoculteurs au profit des VDP agricoles Dori, 24 juin 2026 (AIB) – Le gouverneur de la région du Liptako, Abdoul Karim Zongo, a instruit, mercredi à Dori, les présidents des délégations spéciales (PDS) des communes de Bani, Dori, Gorom-Gorom, Markoye et Seytenga d’inscrire à leurs budgets de 2027 l’acquisition de trois motoculteurs par commune au profit des Volontaires pour la défense de la patrie (VDP) agricoles. L'instruction a été donnée lors de la cérémonie de sortie de la première cohorte de 125 VDP agricoles, formés dans le cadre de l’Initiative présidentielle pour la production agricole et l’autosuffisance alimentaire. Selon le gouverneur Abdoul Karim Zongo, cette mesure vise à accroître les capacités de production des nouveaux entrepreneurs agricoles et à faire de cette première promotion un exemple de réussite pour la jeunesse de la région. Il a également annoncé plusieurs mesures d’accompagnement destinées à favoriser l’installation et la réussite des bénéficiaires. Celles-ci concernent notamment la mise à disposition de terres cultivables, le labour des superficies attribuées, la dotation en intrants agricoles ainsi que la formation de deux tractoristes par commune. Pour les autorités régionales, cet ensemble d’actions permettra aux jeunes de disposer des moyens nécessaires pour contribuer efficacement à l’atteinte de la souveraineté alimentaire nationale. Au nom des 125 VDP agricoles, Amadou Maïga a exprimé la détermination de ses camarades à devenir des producteurs modèles et des citoyens exemplaires au service du développement du Burkina Faso. Il a indiqué que les bénéficiaires s’engagent à travailler en étroite collaboration avec les autres entrepreneurs agricoles du pays afin de constituer un réseau solide de producteurs capables de relever le défi de l’autosuffisance alimentaire. « Notre combat est celui de la production, notre champ de bataille est la terre fertile du Burkina Faso, et notre victoire sera l’autosuffisance alimentaire », a-t-il déclaré. M. Maïga a également exprimé la reconnaissance de sa promotion au Président du Faso, le capitaine Ibrahim Traoré, aux autorités administratives régionales ainsi qu’aux formateurs civils et militaires pour leur accompagnement. Le commandant de la 4e région militaire, le chef de bataillon Amadou Sanou, a salué le choix des jeunes de s’engager dans la production agricole au service de la Nation. Selon lui, ces jeunes ont choisi la houe, la charrue et la semence comme instruments de développement, démontrant ainsi leur patriotisme et leur volonté de contribuer à la transformation économique du pays. Il a estimé que cette dynamique permettra de renforcer l’indépendance économique du Burkina Faso et de briser les chaînes de la dépendance alimentaire. Le chargé de mission à la Présidence du Faso pour le Liptako et le Soum, par ailleurs coordonnateur de l’Initiative présidentielle pour la production agricole et l’autosuffisance alimentaire, Ali Bocoum, s’est félicité de la concrétisation de cette activité dans la région. Il a reconnu que la mise en œuvre du programme a connu plusieurs difficultés au départ, mais a souligné que la détermination des autorités administratives régionales a permis de surmonter les obstacles et d’aboutir à des résultats encourageants. M. Bocoum a réaffirmé l’engagement des responsables du programme à poursuivre leurs efforts afin d’accompagner durablement les jeunes producteurs agricoles. La sortie de cette première cohorte de 125 VDP agricoles marque une étape importante dans la mise en œuvre de l’Initiative présidentielle pour la production agricole et l’autosuffisance alimentaire dans la région du Liptako et du Soum. Agence d'information du Burkina AMM/bak",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "In Gaza, nowhere is safe despite ceasefire",
-      "link": "https://www.npr.org/2026/06/25/nx-s1-5863187/in-gaza-nowhere-is-safe-despite-ceasefire",
-      "source": "NPR World",
-      "date": "2026-06-25T20:15:17.000Z",
-      "rating": "C2",
+      "title": "Venezuela reels from earthquake disaster as rescuers race to find survivors",
+      "link": "https://www.jpost.com/international/article-900586",
+      "source": "Jerusalem Post",
+      "date": "2026-06-25T23:09:08.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Israeli army says its forces killed 6 people in southern Lebanon amid ceasefire violations",
+      "link": "https://www.aa.com.tr/en/middle-east/israeli-army-says-its-forces-killed-6-people-in-southern-lebanon-amid-ceasefire-violations/3978325",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-25T21:10:48.000Z",
+      "rating": "F1",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1150,6 +1165,22 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "« Je pensais mourir » : au Venezuela, un double séisme plonge le pays dans le chaos",
+      "link": "https://www.lefigaro.fr/international/je-pensais-mourir-au-venezuela-un-double-seisme-plonge-le-pays-dans-le-chaos-20260625",
+      "source": "Le Figaro International",
+      "date": "2026-06-25T20:27:05.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
         }
       ]
     },
@@ -1186,38 +1217,6 @@
       ]
     },
     {
-      "title": "« Je pensais mourir » : au Venezuela, un double séisme plonge le pays dans le chaos",
-      "link": "https://www.lefigaro.fr/international/je-pensais-mourir-au-venezuela-un-double-seisme-plonge-le-pays-dans-le-chaos-20260625",
-      "source": "Le Figaro International",
-      "date": "2026-06-25T18:00:41.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Fresh dispute emerges over Strait of Hormuz transit routes despite ceasefire",
-      "link": "https://www.thehindu.com/news/international/fresh-dispute-emerges-over-strait-of-hormuz-transit-routes-despite-ceasefire/article71147492.ece",
-      "source": "The Hindu (Inde)",
-      "date": "2026-06-25T17:28:02.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Dans les prisons françaises, la canicule aggrave une \"catastrophe pénitentiaire\"",
       "link": "https://www.france24.com/fr/france/20260625-dans-les-prisons-fran%C3%A7aises-la-canicule-aggrave-une-catastrophe-p%C3%A9nitentiaire",
       "source": "France 24",
@@ -1238,7 +1237,7 @@
       "link": "https://www.radiookapi.net/2026/06/25/actualite/securite/reunis-londres-kinshasa-et-kigali-sengagent-desamorcer-les-tensions-et",
       "source": "Radio Okapi (RDC)",
       "date": "2026-06-25T16:59:17.000Z",
-      "rating": "F1",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1312,88 +1311,24 @@
           "keyword": "reconnaissance"
         }
       ]
-    },
-    {
-      "title": "Canicule: une catastrophe agricole",
-      "link": "https://www.france24.com/fr/%C3%A9missions/%C3%A9l%C3%A9ment-terre-la-quotidienne/20260625-canicule-une-catastrophe-agricole",
-      "source": "France 24",
-      "date": "2026-06-25T14:39:42.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "catastrophe"
-        }
-      ]
-    },
-    {
-      "title": "Venezuela: au moins 164 morts et près de 1 000 blessés après un double séisme",
-      "link": "https://www.wakatsera.com/venezuela-au-moins-164-morts-et-pres-de-1-000-blesses-apres-un-double-seisme/",
-      "source": "Wakat Séra",
-      "date": "2026-06-25T13:56:23.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "As Strip stagnates, Gazans plan first large anti-Hamas protest since ceasefire",
-      "link": "https://www.timesofisrael.com/as-strip-stagnates-gazans-plan-first-large-anti-hamas-protest-since-ceasefire/",
-      "source": "Times of Israel",
-      "date": "2026-06-25T13:37:53.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Séisme d'Al Haouz, inondations, catastrophes naturelles... des milliards mobilisés et une gestion opaque",
-      "link": "https://telquel.ma/2026/06/25/seisme-dal-haouz-inondations-catastrophes-naturelles-des-milliards-mobilises-et-une-gestion-opaque_1995860",
-      "source": "TelQuel (Maroc)",
-      "date": "2026-06-25T13:13:44.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      215
+      206
     ],
     [
       "occident_fr",
-      124
+      123
     ],
     [
       "occident_us",
-      105
+      115
     ],
     [
       "golfe_mo",
-      97
+      98
     ],
     [
       "autre",
@@ -1401,7 +1336,7 @@
     ],
     [
       "bf_local",
-      53
+      55
     ],
     [
       "russie",
@@ -1409,15 +1344,15 @@
     ],
     [
       "turquie",
-      41
-    ],
-    [
-      "sahel",
-      25
+      46
     ],
     [
       "chine",
-      20
+      21
+    ],
+    [
+      "sahel",
+      16
     ]
   ],
   "desks": [
@@ -1425,8 +1360,17 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 124,
+      "count": 125,
       "top": [
+        {
+          "title": "Burkina: compte rendu du Conseil des ministres du jeudi 25 avril 2026",
+          "link": "https://www.wakatsera.com/burkina-compte-rendu-du-conseil-des-ministres-du-jeudi-25-avril-2026/",
+          "source": "Wakat Séra",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "C1"
+        },
         {
           "title": "Compte rendu du Conseil des ministres du jeudi 25 juin 2026",
           "link": "https://netafrique.net/compte-rendu-du-conseil-des-ministres-du-jeudi-25-juin-2026/",
@@ -1435,15 +1379,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F1"
-        },
-        {
-          "title": "Burkina Faso : Compte rendu du Conseil des ministres du 25 juin 2026",
-          "link": "https://lefaso.net/spip.php?article147401",
-          "source": "Lefaso.net",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C1"
         },
         {
           "title": "Burkina : Compte-rendu du Conseil des ministres N°21 du 25 juin 2026",
@@ -1478,8 +1413,26 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 67,
+      "count": 61,
       "top": [
+        {
+          "title": "VAST Ghana calls for stronger excise tax regime to combat rising NCD burden",
+          "link": "https://www.myjoyonline.com/vast-ghana-calls-for-stronger-excise-tax-regime-to-combat-rising-ncd-burden/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Tinubu showed courage, statesmanship on state police – Metuh",
+          "link": "https://www.vanguardngr.com/2026/06/tinubu-showed-courage-statesmanship-on-state-police-metuh/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Mushin blast caused by mechanical failure, not bomb – CP Fatai",
           "link": "https://www.vanguardngr.com/2026/06/mushin-blast-caused-by-mechanical-failure-not-bomb-cp-fatai/",
@@ -1506,24 +1459,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Oluremi Tinubu decorated as grand matron of Nigerian Red Cross",
-          "link": "https://www.vanguardngr.com/2026/06/oluremi-tinubu-decorated-as-grand-matron-of-nigerian-red-cross/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "FG reassures Oyo, South-West on security, promises safe return of Oriire kidnap victims",
-          "link": "https://www.vanguardngr.com/2026/06/fg-reassures-oyo-south-west-on-security-promises-safe-return-of-oriire-kidnap-victims/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1531,7 +1466,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 22,
+      "count": 12,
       "top": [
         {
           "title": "Réunis à Londres, Kinshasa et Kigali s'engagent à désamorcer les tensions et à respecter le cessez-le-feu dans l’Est",
@@ -1540,7 +1475,7 @@
           "zone": "4. Grands Lacs",
           "theme": "D",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
           "title": "What is behind the Egyptian military operations in the southeastern desert?",
@@ -1552,29 +1487,29 @@
           "rating": "F2"
         },
         {
+          "title": "Somalie: quand les femmes deviennent cheffes d'entreprises et bousculent les traditions",
+          "link": "https://www.rfi.fr/fr/podcasts/afrique-%C3%A9conomie/20260625-somalie-quand-les-femmes-deviennent-cheffes-d-entreprises-et-bousculent-les-traditions",
+          "source": "RFI Afrique",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "US sanctions networks for allegedly 'smuggling conflict minerals' in eastern DR Congo",
+          "link": "https://www.aa.com.tr/en/americas/us-sanctions-networks-for-allegedly-smuggling-conflict-minerals-in-eastern-dr-congo/3978311",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "3. Afrique centrale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "La RDC exige de la Belgique le retour de plus de 500 crânes de ses ancêtres",
           "link": "https://netafrique.net/__trashed-3/",
           "source": "Net Afrique (BF)",
           "zone": "4. Grands Lacs",
           "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Ebola en RDC : un premier vol marocain achemine 9 tonnes de matériel à la MONUSCO",
-          "link": "https://medias24.com/2026/06/25/ebola-en-rdc-un-premier-vol-marocain-achemine-9-tonnes-de-materiel-a-la-monusco-1708765/",
-          "source": "Médias 24 (Maroc)",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Minerais : Washington sanctionne une raffinerie d'or rwandaise et un réseau lié à l'AFC/M23",
-          "link": "https://actualite.cd/2026/06/25/minerais-washington-sanctionne-une-raffinerie-dor-rwandaise-et-un-reseau-lie-lafcm23",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1584,7 +1519,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 25,
+      "count": 28,
       "top": [
         {
           "title": "Le BCIJ déjoue un projet terroriste et interpelle un partisan de Daech",
@@ -1614,15 +1549,6 @@
           "rating": "A2"
         },
         {
-          "title": "Grand oral de Akhannouch devant les Conseillers le 30 juin autour de la sécurité alimentaire",
-          "link": "https://telquel.ma/instant-t/2026/06/25/grand-oral-de-akhannouch-devant-les-conseillers-le-30-juin-autour-de-la-securite-alimentaire_1996000/",
-          "source": "TelQuel (Maroc)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
           "title": "Le Maroc entre encore un peu plus dans l'histoire de la Coupe du monde",
           "link": "https://fr.hespress.com/478833-le-maroc-entre-encore-un-peu-plus-dans-lhistoire-de-la-coupe-du-monde.html",
           "source": "Hespress (Maroc, FR)",
@@ -1630,6 +1556,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F6"
+        },
+        {
+          "title": "Chery TIGGO 7 PRO PHEV : l’hybride rechargeable qui redéfinit les standards du SUV moderne",
+          "link": "https://fr.hespress.com/478890-chery-tiggo-7-pro-phev-lhybride-rechargeable-qui-redefinit-les-standards-du-suv-moderne.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1649,31 +1584,22 @@
           "rating": "C2"
         },
         {
-          "title": "In Gaza, nowhere is safe despite ceasefire",
-          "link": "https://www.npr.org/2026/06/25/nx-s1-5863187/in-gaza-nowhere-is-safe-despite-ceasefire",
-          "source": "NPR World",
+          "title": "Le Maroc envoie son armée à Gaza : la dernière compromission de Rabat",
+          "link": "https://www.tsa-algerie.com/le-maroc-envoie-son-armee-a-gaza-la-derniere-compromission-de-rabat/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "C2"
-        },
-        {
-          "title": "Fresh dispute emerges over Strait of Hormuz transit routes despite ceasefire",
-          "link": "https://www.thehindu.com/news/international/fresh-dispute-emerges-over-strait-of-hormuz-transit-routes-despite-ceasefire/article71147492.ece",
-          "source": "The Hindu (Inde)",
-          "zone": "8. Moyen-Orient",
-          "theme": "L",
+          "theme": "S",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A2"
         },
         {
-          "title": "As Strip stagnates, Gazans plan first large anti-Hamas protest since ceasefire",
-          "link": "https://www.timesofisrael.com/as-strip-stagnates-gazans-plan-first-large-anti-hamas-protest-since-ceasefire/",
-          "source": "Times of Israel",
+          "title": "Israeli army says its forces killed 6 people in southern Lebanon amid ceasefire violations",
+          "link": "https://www.aa.com.tr/en/middle-east/israeli-army-says-its-forces-killed-6-people-in-southern-lebanon-amid-ceasefire-violations/3978325",
+          "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "Mission unaccomplished – Part I: America failed to achieve every war objective against Iran",
@@ -1683,6 +1609,15 @@
           "theme": "D",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Iran Strikes Ship in Strait of Hormuz, Undermining Efforts to Restore Traffic",
+          "link": "https://www.nytimes.com/2026/06/25/world/middleeast/iran-strait-of-hormuz-threat-rubio-bahrain.html",
+          "source": "NYT World",
+          "zone": "8. Moyen-Orient",
+          "theme": "M",
+          "relevance": "A",
+          "rating": "B2"
         }
       ]
     },
@@ -1690,7 +1625,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 187,
+      "count": 194,
       "top": [
         {
           "title": "US shifts South China Sea reconnaissance towards drones and Philippines: think tank",
@@ -1711,15 +1646,6 @@
           "rating": "C2"
         },
         {
-          "title": "Hier, il a fait plus chaud en France que dans presque un tiers du désert du Sahara (carte inédite)",
-          "link": "https://legrandcontinent.eu/fr/2026/06/25/mercredi-il-faisait-plus-chaud-en-france-que-dans-presque-un-tiers-du-desert-du-sahara/",
-          "source": "Le Grand Continent",
-          "zone": "9. Europe occidentale",
-          "theme": "H",
-          "relevance": "L",
-          "rating": "A2"
-        },
-        {
           "title": "Dans les prisons françaises, la canicule aggrave une \"catastrophe pénitentiaire\"",
           "link": "https://www.france24.com/fr/france/20260625-dans-les-prisons-fran%C3%A7aises-la-canicule-aggrave-une-catastrophe-p%C3%A9nitentiaire",
           "source": "France 24",
@@ -1736,6 +1662,15 @@
           "theme": "P",
           "relevance": "L",
           "rating": "F2"
+        },
+        {
+          "title": "Pourquoi les Chinois ne dépensent pas ?",
+          "link": "https://legrandcontinent.eu/fr/2026/06/25/pourquoi-les-chinois-ne-depensent-pas/",
+          "source": "Le Grand Continent",
+          "zone": "14. Extrême-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     }
@@ -1752,42 +1687,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-25T20:22:35.639Z",
+      "at": "2026-06-25T22:45:50.419Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-25T20:22:35.647Z",
+      "at": "2026-06-25T22:45:50.427Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-25T20:23:11.813Z",
+      "at": "2026-06-25T22:46:31.841Z",
       "agent": "Agent Collecte RSS",
-      "message": "117/170 flux OK, 1967 articles"
+      "message": "112/170 flux OK, 1919 articles"
     },
     {
-      "at": "2026-06-25T20:23:14.779Z",
+      "at": "2026-06-25T22:46:34.801Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-25T20:23:15.103Z",
+      "at": "2026-06-25T22:46:35.111Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-25T20:23:15.109Z",
+      "at": "2026-06-25T22:46:35.116Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 15 alertes"
+      "message": "8 developpements, 11 alertes"
     },
     {
-      "at": "2026-06-25T20:23:15.109Z",
+      "at": "2026-06-25T22:46:35.117Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-25T20:23:15.109Z",
+      "at": "2026-06-25T22:46:35.117Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
