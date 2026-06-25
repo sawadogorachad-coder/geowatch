@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-24T22:40:41.120Z",
+  "generatedAt": "2026-06-25T04:34:53.708Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1951,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1906,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -53,14 +53,14 @@
         "count": 0
       },
       {
+        "id": "rss_netafrique",
+        "name": "Net Afrique (BF)",
+        "count": 10
+      },
+      {
         "id": "rss_observ_bf",
         "name": "L'Observateur Paalga",
         "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "count": 10
       },
       {
         "id": "rss_maliweb",
@@ -88,18 +88,8 @@
         "count": 10
       },
       {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
-        "count": 10
-      },
-      {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -143,11 +133,6 @@
         "count": 30
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
-      },
-      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
@@ -161,11 +146,6 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -305,17 +285,12 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 26
+        "count": 23
       },
       {
         "id": "rss_rfimo",
         "name": "RFI Moyen-Orient",
         "count": 30
-      },
-      {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "count": 20
       },
       {
         "id": "rss_bbc_afr",
@@ -420,7 +395,7 @@
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 28
+        "count": 27
       },
       {
         "id": "rss_guardian",
@@ -510,7 +485,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 21
+        "count": 29
       },
       {
         "id": "rss_pressTV",
@@ -535,7 +510,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -563,6 +538,11 @@
         "count": 20
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "count": 20
+      },
+      {
         "id": "rss_imf",
         "name": "FMI — World Economic Outlook",
         "count": 0
@@ -580,13 +560,13 @@
     ],
     "failedSources": [
       {
-        "id": "rss_netafrique",
-        "name": "Net Afrique (BF)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -615,14 +595,24 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_alakhbar",
@@ -667,12 +657,17 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "fetch failed"
       },
       {
         "id": "rss_saharang",
@@ -685,6 +680,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_7sur7",
         "name": "7sur7.cd (RDC)",
         "error": "HTTP 404"
@@ -692,7 +692,7 @@
       {
         "id": "rss_adiac",
         "name": "ADIAC — Dépêches Brazzaville",
-        "error": "HTTP 502"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_dailynation",
@@ -763,6 +763,11 @@
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "error": "fetch failed"
       },
       {
         "id": "rss_apa",
@@ -840,11 +845,6 @@
         "error": "HTTP 406"
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -857,25 +857,25 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 43,
+    "bfAes": 39,
     "alerts": 6,
-    "criticalAlerts": 5,
-    "sourcesDistinct": 76
+    "criticalAlerts": 4,
+    "sourcesDistinct": 74
   },
   "topDevelopments": [
     {
-      "title": "Résolution du Parlement européen sur le Burkina : « Nulle et de nul effet », selon le gouvernement burkinabè",
-      "link": "https://www.minute.bf/resolution-du-parlement-europeen-sur-le-burkina-nulle-et-de-nul-effet-selon-le-gouvernement-burkinabe/",
-      "pubDate": "2026-06-24T14:51:45.000Z",
-      "description": "Ceci est un message au gouvernement burkinabè adressé aux institutions de l'Union européenne après la résolution adoptée par le Parlement européen le 18 juin 2026, intitulée: Persistance de la répression de l'espace civique et des libertés fondamentales au Burkina Faso ». Lisez-plutôt ! Le Ministère des Affaires étrangères du Burkina Faso présente ses compliments à la Délégation de l'Union européenne à Ouagadougou et a l'honneur de porter à sa connaissance ce qui suit: Le Gouvernement du Burkina Faso a pris connaissance avec une vive indignation et une grande déception de la résolution adoptée par le Parlement européen le 18 juin 2026, intitulée: Persistance de la répression de l'espace civique et des libertés fondamentales au Burkina Faso ». Le Gouvernement voudrait d’emblée rappeler au parlement européen que cette résolution manifestement adossée à des desseins néocoloniaux et inspirée par des réseaux obscurs à la solde de la France, constitue une ingérence inacceptable dans les affaires intérieures d'un État souverain, en contradiction avec les principes consacrés par la Charte des Nations Unies, notamment ceux relatifs à l'égalité souveraine des États et à la non-ingérence dans leurs affaires internes. Le Gouvernement relève avec gravité que certains parlementaires européens persistent à développer une approche paternaliste des relations internationales, fondée davantage sur des préjugés idéologiques que sur une compréhension objective des réalités du terrain. Le Gouvernement du Burkina Faso s'étonne particulièrement que le Parlement européen ait choisi de s'appuyer sur des chiffres aussi erronés sur la situation nationale, pour adopter une telle résolution au moment même où le peuple burkinabè mène avec courage, détermination et dignité, une lutte existentielle contre le terrorisme et ses sponsors étatiques. Le Gouvernement rejette avec la plus grande fermeté cette résolution dont les appréciations partiales, les allégations infondées ainsi que les jugements péremptoires traduisent un refus manifeste de ses initiateurs, de voir les progrès engrangés par le Burkina Faso depuis 2022 dans la reconquête du territoire national et dans la consolidation de son économie. Le Gouvernement du Burkina Faso relève par ailleurs avec étonnement que le Parlement européen ait cru devoir s'ériger en juge des politiques internes d'un État souverain dont il ne maîtrise ni les réalités historiques, ni les contraintes sécuritaires, ni les défis spécifiques, alors même que de nombreuses crises humanitaires, violations graves des droits humains, phénomènes de discrimination, de radicalisation et de restriction des libertés continuent de susciter de profondes préoccupations au sein même de l'espace européen et dans son voisinage immédiat. Le Gouvernement rappelle que la crise sécuritaire qui affecte aujourd'hui le Burkina Faso et plusieurs pays du Sahel, est la conséquence directe de la déstabilisation de la Libye à la suite de l'intervention militaire irréfléchie de l'Organisation du Traité de l'Atlantique Nord (OTAN) en 2011. Cette intervention, dont les effets dévastateurs continuent dans toute la région sahélienne, a favorisé le terrorisme, la prolifération et la circulation des armes de guerre ainsi que l'expansion de réseaux criminels transnationaux qui menacent la paix et la stabilité de toute l'Afrique de l'Ouest. Le Gouvernement regrette profondément que le Parlement européen ait choisi d'ignorer cette réalité historique pourtant largement documentée et reconnue par de nombreux observateurs internationaux. A l'évidence, ceux-là mêmes dont les décisions ont largement contribué à la dégradation de la situation sécuritaire dans le Sahel s'arrogent aujourd'hui le droit de porter des jugements hâtifs sur les mesures souveraines prises par les États de la région pour protéger leurs populations et préserver leur intégrité territoriale. Pour la gouverne du parlement européen, le Gouvernement du Burkina Faso rappelle que grâce aux efforts conjugués des Forces de Défense et de Sécurité, des Volontaires pour la Défense de la Patrie et de l'ensemble du peuple burkinabè, des avancées significatives ont été enregistrées tant dans la lutte contre le terrorisme et la reconquête du territoire, que dans le développement durable. Le Burkina Faso demeure attaché à un dialogue franc, respectueux et mutuellement bénéfique avec l'Union européenne ainsi qu'avec l'ensemble de ses partenaires. Toutefois, ce dialogue ne saurait prospérer dans un climat marqué par la condescendance, les injonctions, les procès d'intention ou les tentatives de remise en cause des choix souverains librement assumés par le peuple burkinabè. En tout état de cause, cette résolution est nulle et de nul effet. Le Gouvernement du Burkina Faso réaffirme sa détermination inébranlable à poursuivre la mise en œuvre de ses politiques de reconquête territoriale, de refondation de l'État et de préservation de ses intérêts fondamentaux, conformément aux aspirations légitimes du peuple burkinabè. Le Ministère saurait gré à la Délégation de l'Union européenne de bien vouloir porter le contenu de la présente Note Verbale à la connaissance des institutions compétentes de l'Union européenne. Le Ministère des Affaires étrangères du Burkina Faso saisit cette occasion pour renouveler à la Délégation de l'Union européenne à Ouagadougou les assurances de sa considération distinguée. Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Transformation numérique, inclusion financière et financement des PME: le bilan d’un projet structurant au Burkina Faso",
+      "link": "https://www.sidwaya.info/transformation-numerique-inclusion-financiere-et-financement-des-pme-le-bilan-dun-projet-structurant-au-burkina-faso/",
+      "pubDate": "2026-06-24T23:51:06.000Z",
+      "description": "Kientega Kaongo Wilfried Séraphin est le coordonnateur du Projet d’Appui à l’Inclusion Financière et à l’Accès au Financement des PME (PAIF-PME). Dans cette interview, il nous fait le bilan des 7 années de mise en œuvre du projet. Pouvez-vous vous présenter à nos lecteurs ? Merci pour l’occasion que vous m’offrez à travers vos colonnes pour un faire un point sur les sept années de mise en œuvre du projet. Je suis Kientega Kaongo Wilfried Séraphin, Coordonnateur du PAIF-PME. Après sept années de mise en œuvre, quel regard global portez-vous sur le Projet d’Appui à l’Inclusion Financière et à l’Accès au Financement des PME (PAIF-PME) ? Pour répondre à votre question, il est important de rappeler le contexte dans lequel le projet a été mis en œuvre. Le PAIF-PME est né de la volonté du Gouvernement en 2019, avec l’appui financier de la Banque mondiale, d’un montant de cent-dix (110) millions de dollars, pour une durée initiale de six ans. Sa mise en œuvre s’est déroulée dans un environnement marqué par plusieurs défis, notamment des crises sécuritaires, socio-politiques et sanitaires (la COVID19). Le projet a également connu deux restructurations pour s’adapter à ces évolutions. Malgré ce contexte exigeant, les résultats obtenus sont particulièrement encourageants. De manière globale, le bilan est très positif. Le PAIF-PME s’est progressivement imposé comme un projet structurant dans la transformation du secteur financier au Burkina Faso. Sur le plan des performances, 81 % des indicateurs globaux ont atteint ou dépassé leurs cibles, et l’ensemble des indicateurs liés à l’objectif de développement du projet ont été réalisés, voire dépassés, y compris après leur révision à la hausse lors de la revue à mi-parcours. Ces résultats traduisent non seulement une exécution satisfaisante du projet, mais surtout un impact concret et mesurable au bénéfice des populations, des institutions et des acteurs économiques. En définitive, le PAIF-PME apparaît aujourd’hui comme une expérience réussie, qui a contribué à poser des bases solides pour le développement de l’inclusion financière et l’amélioration de l’accès au financement des PME. L’un des axes majeurs du projet est la digitalisation des paiements publics. Quels changements concrets cela a-t-il apporté ? La transformation engagée est profonde et touche directement les paiements publics au quotidien, notamment le règlement des pensions, des droits de douane, ainsi que des impôts et taxes dus à l’État. Avant l’intervention du projet, ces paiements reposaient essentiellement sur l’usage du numéraire, le cash comme on dit, avec des contraintes importantes en termes de sécurité, de délais de traitement et de traçabilité des opérations. En effet, parallèlement aux projets de numérisation, le Projet a appuyé un diagnostic approfondi afin de répertorier les flux Gouvernement et élaboré un plan d'action en vue de passer à un portail de paiements Gouvernementaux pleinement intégré. Il était donc attendu en termes d’actions prioritaires dans ce volet les points suivants : a chat de logiciels et de matériel informatique pour la mise en œuvre du portail de paiement de la CNSS, de la CARFO et de la DGD, assistance technique et formation pour la création, l'utilisation et la gestion de portail, frais de transaction facturés par les prestataires pour effectuer les paiements (réduction progressive pendant la durée du Projet), campagnes de sensibilisation à l'intention des bénéficiaires de la CNSS et de la CARFO et des entreprises La Banque des dépôts du Trésor a été inaugurée par le camarade Ibrahim Traoré, Président du Faso, chef de l'Etat. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-1024x552.jpeg\" class=\"size-medium wp-image-164648\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-300x162.jpeg\" alt=\"\" width=\"300\" height=\"162\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-300x162.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-1024x552.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-768x414.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-779x420.jpeg 779w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-150x81.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-696x375.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15-1068x580.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/3-15.jpeg 1280w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> La Banque des dépôts du Trésor a été inaugurée par le camarade Ibrahim Traoré, Président du Faso, chef de l'Etat. et particuliers opérant dans l'import/export, renforcement des capacités du personnel de la CNSS, de la CARFO et de la DGD, diagnostic approfondi pour répertorier tous les flux de paiement du Gouvernement et élaboration d’un plan d'action pour passer à un portail de paiement du Gouvernement entièrement intégré. Aujourd’hui, grâce au PAIF-PME, des avancées concrètes sont observées : plus de 16 000 retraités de la CARFO et de la CNSS perçoivent désormais leurs pensions à travers des canaux digitaux, la plateforme e-Douanes est en phase de test avancée, avec une mise en production imminente, la biométrie de CARFO est opérationnelle et l’enrôlement des pensionnés se poursuit quotidiennement, de manière globale, près de 17 858 usagers utilisent aujourd’hui des comptes de transaction, dépassant largement la cible initiale fixée à 9 300 bénéficiaires. Au-delà de ces résultats chiffrés, le changement le plus significatif reste d’ordre qualitatif. Les services sont désormais plus rapides, plus transparents, plus sécurisés, avec une réduction notable des risques de fraude, et surtout plus accessibles et confortables pour les usagers. En définitive, le projet a contribué à moderniser la relation entre l’État et les citoyens, en la rendant plus fluide, plus fiable et davantage orientée vers la qualité du service public. Le Trésor public semble avoir connu une transformation majeure. Pouvez-vous nous en dire plus ? Le Trésor public est, en effet, l’un des principaux bénéficiaires du PAIF-PME. Le projet a accompagné une transformation en profondeur de ses systèmes d’informations et de ses modes de fonctionnement, à travers des réformes structurantes et audacieuses depuis 2019. Il faut juste rappeler que les résultats attendus de l’intervention du projet au profit de la Direction générale du Trésor et de la comptabilité publique (DGTCP) étaient les suivants : a ppui à l’installation de scanners de chèques et de la connexion réseau à la chambre de compensation automatisée (CCA) de la BCEAO, activation des virements électroniques de faible valeur, établissement d’une connexion SWIFT pour permettre des paiements de montants élevés, plateforme nationale pour le Trésor (système bancaire fondamental). Concrètement en ce qui concerne les réformes majeures soutenues par le PAIF-PME, cette modernisation s’est traduite par plusieurs avancées significatives sur le terrain: la connexion du Trésor public aux systèmes de paiement régionaux, notamment STAR-UEMOA et SICA-UEMOA, GIM-UEMOA renforçant ainsi l’intégration financière, la révision générale du SI bancaire, le SGDF, pour le mettre aux standards en la matière, l’émission et l’acquisition des cartes de débit pour la clientèle disposant de compte, avec l’embarquement dans le portefeuille de la Banque de la clientèle privé particulier, notamment les travailleurs du public, la mise en place de plateformes digitales telles que eProcedures (lan@ya) et eBanking, qui facilitent et sécurisent les opérations ; ces deux innovations majeures constituent pour la DGTCP un pas décisif vers un service public plus accessible, plus transparent et plus performant et un service bancaire public qui gagne en Kientéga Kaongo Wilfried Séraphin a coordonné le PAIF-PME durant tout le processus. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-1024x701.jpeg\" class=\"size-medium wp-image-164649\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-300x205.jpeg\" alt=\"\" width=\"300\" height=\"205\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-300x205.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-1024x701.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-768x526.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-1536x1051.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-614x420.jpeg 614w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-150x103.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-218x150.jpeg 218w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-696x476.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8-1068x731.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/4-8.jpeg 1600w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Kientéga Kaongo Wilfried Séraphin a coordonné le PAIF-PME durant tout le processus. fluidité, en rapidité et en efficacité, l’opérationnalisation de la Banque de Dépôt du Trésor (BDT) lancée officiellement le 2 août 2024 à Ouagadougou, par le Président du Faso, son Excellence, le Capitaine Ibrahim TRAORE, l’opérationnalisation de la plateforme nationale de paiement FASO ARZEKA dont le lancement officiel par son Excellence Monsieur le Premier Ministre est intervenu le jeudi 30 janvier 2025 par l a fourniture conséquente en équipements et matériels à la DGCTP, le renforcement des infrastructures, notamment avec l’acquisition d’équipements techniques, de solutions de sécurité, entre autres, et de moyens modernes de paiement, ainsi qu’un engagement dans une démarche qualité conforme à la norme ISO 9001, entre autres. A ces investissements s’ajoute un important effort de renforcement sans précédent des capacités du personnel. En effet, les agents ont bénéficié de formations en cybersécurité, en architecture des systèmes, ainsi qu’en qualité de service, avec un accent particulier sur la maîtrise des nouveaux outils numériques. Les résultats obtenus par le projet au niveau de la Direction générale du Trésor et de la Comptabilité Publique (DGTCP) sont très significatifs. À titre illustratif, plus de 9,5 millions de transactions sont été traitées via les systèmes de paiement régionaux, dépassant largement l’objectif initial fixé à 6,5 millions. Ce niveau de performance s’explique par plusieurs facteurs : des investissements massifs soutenus dans les équipements et infrastructures, une accélération de la digitalisation des services, un renforcement continu des compétences des agents pour un service rendu aux clients (usagers du service publics notamment de la Direction générale du Trésor et de la Comptabilité Publique), un contexte économique et politique relativement favorable aux réformes et surtout, l’engagement et l’accompagnement constants des autorités du Ministère de l’Économie et des Finances pour la mise en œuvre de toutes ces réformes. Aujourd’hui, la Direction Générale du Trésor et de la Comptabilité Publique se positionne comme une administration moderne, plus performante, plus sécurisée et pleinement alignée sur les standards internationaux. Avec l’opérationnalisation de la BDT, la plateforme ARZEKA, la connexion aux système régionaux de paiement SICA st STAR-UEMOA, GIM-UEMOA, e-BDT et lan@ya , c’est autant de réformes audacieuses qui vont sans nul doute améliorer significativement les résultats en terme de recouvrement des recettes pour l’Etat, la réduction des délais de traitements, la transparence des opérations et la confiance des clients de l’administration, et c’est là un impact sans commune mesure sur le changement de comportement, d’habitudes dans les opérations et relations avec les services de l’administration financière. Nous assistons donc à une vraie transformation plus profonde en vue de rendre le service public aux clients de la DGTCP (usagers des services offerts par la DGTCP). Qu’en est-il du secteur de la microfinance, souvent considéré comme fragile ? Le secteur de la microfinance, souvent perçu comme fragile, a constitué un axe important de l’intervention du projet. À ce niveau, le PAIF-PME a apporté une contribution significative à la consolidation et à la modernisation du secteur, en accompagnant plusieurs acteurs clés. Il s’agit notamment de la Direction de la Surveillance et du Contrôle des Systèmes Financiers Décentralisés (DSC-SFD), du Fonds d’Appui aux Activités Rémunératrices des Femmes (FAARF) et de l’Agence Nationale de Promotion de la Finance Inclusive (ANPFI). Les résultats attendus étaient respectivement pour ces trois structures de mise en œuvre étaient de : renforcer la solidité et la durabilité du secteur de la microfinance (3,0 millions USD). Supervision et renforcement du secteur de la microfinance, renforcer la capacité du FAARF à faciliter la transition de la clientèle vers le secteur financier formel, Inciter les femmes rurales à intégrer le secteur financier formel, mettre en place un Observatoire des services financiers de qualité : Afin de renforcer la confiance dans les services financiers, Campagnes d'éducation financière : La sensibilisation pour l’utilisation des moyens numériques est cruciale pour l’adoption des services financiers numériques. Cette intervention vise à accroître la compréhension, la confiance et l'utilisation adéquate de la finance numérique par les clients. Les campagnes d'éducation financière s'appuieront notamment sur les technologies mobiles pour assurer que celles-ci sont largement diffusées auprès des particuliers et des entreprises. Concrètement, plusieurs outils structurants ont été mis en place et des résultats obtenus : un système d’information mutualisé au profit des Systèmes Financiers Décentralisés, pour améliorer la gestion et le suivi de leurs activités ; un dispositif de supervision digitalisée, basé sur les risques, permettant un contrôle plus efficace et plus réactif du secteur ; une interconnexion avec les solutions de mobile money, facilitant l’accès aux services financiers numériques pour les populations ; un système d’information de gestion performant au profit du FAARF, 72865 clientes du FAARF utilisent des comptes bancaires ou de mobile money dans leurs opérations avec l'institution sur un objectif de 23 577 juste avant le changement institutionnel ; 81 991 clientes du FAARF ont leurs transactions traitées dans le SIG sur une cible de 117 886 (données avant le changement institutionnel) , la mise en place de la plateforme de l’Observatoire de la Qualité des Services Financiers (OQSF) pour suivre la qualité des services offerts aux usagers ; une plateforme de gestion des plaintes (SATIS), renforçant la protection des clients ; une plateforme intégrée d’éducation financière, WARICALAN, destinée à améliorer les connaissances financières des populations ; ainsi que l’acquisition d’infrastructures techniques, notamment des serveurs, pour assurer l’hébergement et la sécurisation de ces différents outils. 280 000 personnes ont bénéficié d’une éducation financière à travers le digital. Des campagnes de sensibilisation des populations en éducation financière ont été assurées á travers le processus suivant : Recrutement d'un cabinet pour la numérisation de modules d'éducation financière, recrutement d'un cabinet pour la diffusion de ces modules sous formes de capsules interactives dans les canaux digitaux (pages Facebook, sites web, Whatsaps etc.). Deux campagnes ont été organisées et ont permis l'atteinte de la cible initiale fixée à 275 000. En complément, le projet a mobilisé une assistance technique spécialisée, ainsi que des expertises en maîtrise d’ouvrage, afin de garantir la qualité et la durabilité des solutions mises en œuvre. Dans l’ensemble, toutes ces actions facilitées par le projet ont permis de rendre le secteur de la microfinance plus structuré, plus transparent et mieux outillé, tout en facilitant l’accès des populations, notamment les plus vulnérables, à des services financiers modernes et sécurisés. Le troisième pilier concerne les PME. Quels impacts concrets peut-on retenir ? Le Premier ministre a procédé au lancement de Faso Arzeka. Le troisième pilier du projet, consacré aux PME, constitue en effet l’un des volets les plus structurants de notre intervention. Il s’est caractérisé par une approche équilibrée, agissant à la fois sur l’offre de financement et sur la demande, afin de répondre de manière plus efficace aux besoins du secteur. Concrètement, deux mécanismes complémentaires ont été mis en place par le Gouvernement : Le premier mécanisme est le Fonds de Garantie Partielle de Portefeuille (GPP), mis en œuvre à travers une convention de gestion entre l’Etat et la SOFIGIB pour accompagner le secteur financier. Ce nouveau mécanisme de financement dans le paysage financier national a permis de réduire le risque pour les institutions financières et de faciliter l’octroi de crédits à des acteurs souvent jugés risqués. En termes de performances obtenues grâce à cet outil de financement, nous pouvons relever quelles sont particulièrement significatives. En effet, la GPP a permis à 13 604 bénéficiaires sur une cible de 12 000 soit un taux de réalisation de 113,37%, (dont de nombreux exploitants agricoles, PME et femmes entrepreneures) parmi lesquels 5 921 entreprises dirigées par des femmes sur une cible de 4000, soit un taux de réalisation de 148,03% au 28/02/2026. Le volume total des financements mobilisés atteint 142 869 941 599 FCFA sur objectif révisé fixé à 82 500 000 000 F CFA en fin de projet soit un taux de réalisation de 173,18% au 28/02/2026. Il est important de souligner que, sans ce mécanisme de garantie, une grande partie de ces bénéficiaires n’aurait pas pu accéder à ces financements dans de telles proportions. Ces performances s’expliquent par plusieurs facteurs clés : une forte disponibilité et un accompagnement rapproché de l’équipe de gestion du mécanisme au sein de la SOFIGIB, un suivi rigoureux des engagements des institutions financières participantes, avec des actions de relance ciblées ; une gestion optimisée des ressources, permettant de réallouer les fonds vers les acteurs les plus performants ; et enfin, la confiance progressive des institutions financières, qui se sont pleinement approprié le dispositif. Quant au second mécanisme, il repose sur un accompagnement direct des PME et un renforcement de leurs capacités. Au titre des appuis directs, 162 lauréats sur un objectif de 150 ont été sélectionnés ont bénéficié d’une subvention de 2,6 milliards de FCFA, d’un appui technique, notamment à travers l’organisation de deux éditions de la Compétition des Plans d’Affaires (CPA, ainsi que des actions de renforcement des capacités pour produire des projets solides et bancables. En relation avec le renforcement des capacités des PME, il convient de noter que le projet a procédé d’abord à une é valuation des besoins pour adapter et prioriser son appui en services de développement des entreprises (SDE) : Une étude a été réalisée sur les besoins de renforcement des capacités des MPME au Burkina Faso . Ensuite, le projet a apporté une Assistance Technique et des équipements pour les prestataires SDE dont deux ont été sélectionnés par un appel à projet : Formation, assistance technique et fourniture d’équipements à la MEBF et à l’AFP-PME. L’ensemble des actions réalisé améliore les compétences opérationnelles des deux structures sélectionnées en vue d’un meilleur accompagnement des entreprises. Les actions de formations prioritaires menées en faveur des femmes entrepreneurs et des PME se résument ainsi qu’il suit : Formations ciblées pour les femmes entrepreneurs, f ormation de 700 femmes déplacées internes des régions du Centre Nord et de l’Est en entrepreneuriat et gestion des Activités Génératrices de Revenus (AGR), formation de 200 femmes déplacées internes de la région du Centre-Est sur les bonnes pratiques de transformation agroalimentaire, formation de 494 femmes du Centre, Hauts-Bassins et Centre Nord et Boucle de Mouhoun et Centre Est en Gestion d'entreprise et relation bancaire, formation de 200 femmes des régions de la Boucle de Mouhoun, Hauts-Bassins et Centre Nord sur les itinéraires techniques de production, transformation et commercialisation du riz, f ormation de 200 femmes entrepreneurs du FAARF de la région du Centre et des Hauts- Bassins sur l'Initiative Personnelles (IP), formation de 200 femmes de la région du Centre Est, centre-Ouest et Sud-Ouest sur les bonnes pratiques de transformation en agroalimentaire, formation de 575 femmes PDI de la région du Centre-Nord et de l’Est sur les techniques de production de savon. Le renforcement des capacités pour les PME sélectionnées : 400 promoteurs des régions du Nord et des Cascades, Centre Sud et du Plateau Central ont été formés aux meilleures pratiques agricoles et céréalières, 300 PME ont bénéficié de formation d'entrepreneur agricole/ entrepreneuriat agricole (FBS) à Ouahigouya, 300 promoteurs agricoles ont été formés sur les techniques de cultures hors sol/sous serre et à Ouagadougou, 300 autres entrepreneurs agropasteurs en techniques d’embouche des ruminants (bovine/ovine) et la biosécurité à Ouahigouya et Ziniaré. De notre point de vue, au regard des résultats ci-dessus évoqué, on peut noter que ce pilier a permis de poser les bases d’un écosystème de financement des PME plus inclusif, plus structuré et plus dynamique, au bénéfice du développement économique et de la création d’opportunités. Justement, pourquoi la CPA est-elle considérée comme une innovation majeure ? Le Coordonnateur du Projet est reconnaissant à tous les partenaires de mise en œuvre. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-1024x682.jpeg\" class=\"size-medium wp-image-164650\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-300x200.jpeg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-300x200.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-1024x682.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-768x512.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-1536x1023.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-630x420.jpeg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-150x100.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-696x464.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1-1068x712.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/5-1.jpeg 1600w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Le Coordonnateur du Projet est reconnaissant à tous les partenaires de mise en œuvre. La Compétition des Plans d’Affaires (CPA) est considérée comme une innovation majeure parce qu’elle intervient à un niveau déterminant, là où de nombreux dispositifs rencontrent des limites : elle est placée en amont du financement . Plutôt que de se concentrer uniquement sur l’octroi de crédits, la CPA agit sur la qualité même des projets. Elle permet de transformer des idées souvent informelles en projets structurés, crédibles et bancables. Concrètement, la CPA contribue à : accompagner les entrepreneurs dans la formalisation et la maturation de leurs initiatives, rapprocher les PME des institutions financières, en facilitant le dialogue et la compréhension mutuelle, intégrer des dimensions essentielles telles que le genre et l’innovation, afin de promouvoir une croissance plus inclusive et durable. Vu sous cet angle, la CPA joue un rôle de passerelle. Elle constitue un véritable pont entre l’économie informelle et le financement formel, en levant progressivement les barrières qui empêchent de nombreuses PME d’accéder aux opportunités de financement. C’est cette capacité à structurer la demande et à préparer efficacement les entreprises qui fait de la CPA un levier particulièrement innovant et à fort impact. Quels ont été les principaux défis rencontrés ? Les défis rencontrés au cours de la mise en œuvre du projet ont été de plusieurs ordres, ce qui est tout à fait normal pour une réforme de cette envergure. Nous avons d’abord été confrontés à une résistance au changement, notamment dans le cadre de la digitalisation des services, où l’adoption des nouveaux outils a parfois nécessité du temps et de l’accompagnement. À cela s’ajoute une maturité numérique encore limitée chez certains acteurs, ainsi que des contraintes en ressources humaines, en particulier en matière de compétences techniques spécialisées. Le contexte sécuritaire, la pandémie de la covid 19, les changements institutionnels en cours de mise en œuvre, a également représenté un défi, en impactant par moments le déploiement des activités sur le terrain. Cependant, ces difficultés ont été progressivement surmontées grâce à une approche adaptée. Le Projet a mis l’accent sur : le renforcement des capacités, à travers des formations ciblées, un accompagnement de proximité des acteurs et surtout, une forte coordination entre les différentes institutions impliquées, une adaptation progressive et permanente aux différentes évolutions qui ont caractérisé ou marqué toute la période de mise en œuvre du PAIF-PME. C’est cette combinaison d’efforts qui a permis de maintenir la dynamique du projet et d’atteindre les résultats enregistrés aujourd’hui. Quels enseignements majeurs tirez-vous de cette expérience ? De cette expérience, nous tirons plusieurs enseignements majeurs, dont trois apparaissent particulièrement déterminants. Premièrement, la transformation numérique constitue un levier puissant de modernisation et d’inclusion financière. Toutefois, elle ne peut produire pleinement ses effets que si elle est accompagnée sur le plan humain, notamment à travers la formation, la sensibilisation et l’appropriation par les utilisateurs. Deuxièmement, la coordination entre les différents acteurs est essentielle. Les résultats obtenus sont le fruit d’une collaboration étroite entre les institutions publiques, les partenaires techniques et financiers, ainsi que les acteurs du secteur privé. Sans cette synergie, les réformes auraient été plus difficiles à mettre en œuvre. Enfin, nous retenons que l’efficacité des interventions repose sur une approche intégrée . Il ne suffit pas de faciliter l’accès au financement ; il faut également renforcer les capacités des bénéficiaires et leur offrir un accompagnement adapté. C’est cette combinaison entre financement, renforcement des compétences et appui technique qui garantit des résultats durables, un suivi permanent sur le terrain pour s’assurer que toute ressource publique dépensée, investie dans ces circonstances va contribuer à améliorer la vie des bénéficiaires de ces appuis. Ce qui est plus que jamais recherché c’est ce qui contribue à changer, améliorer, faciliter la vie, le quotidien, réduire la souffrance des populations, ce qui impacte positivement en terme qualitatif ou qualitatif. Ces enseignements constituent aujourd’hui des bases solides pour orienter les futures interventions dans le domaine de l’inclusion financière et du développement des PME. Une seconde phase est évoquée. Quelles perspectives cela ouvre-t-elle ? Effectivement, une seconde phase du projet est actuellement en réflexion, dans le cadre d’un nouveau cycle de financement. Cette perspective ouvre des opportunités importantes pour capitaliser sur les acquis et aller encore plus loin. Elle permettra, en premier lieu, de consolider les résultats déjà obtenus, en assurant la pérennité des réformes engagées, notamment dans la digitalisation des services financiers et la modernisation des institutions. Ensuite, cette nouvelle phase offrira la possibilité d’étendre les solutions digitales, en les rendant plus accessibles à un plus grand nombre d’usagers, y compris dans les zones encore peu desservies. Enfin, elle contribuera à amplifier l’impact en faveur des PME, en renforçant les mécanismes de financement, d’accompagnement et d’innovation. Le potentiel est particulièrement important aujourd’hui, avec le développement rapide des fintechs, qui ouvrent de nouvelles perspectives pour rendre les services financiers plus inclusifs, plus innovants et mieux adaptés aux besoins des populations et des entreprises. Et plus concrètement et au regard des grandes réformes déjà engagées ou en cours grâce à la première phase, des priorités actuelles du gouvernement et des enjeux tant dans le secteur public que privé un accent particulier pourrait être mis sur la consolidation et le renforcement des grands chantiers ouverts parmi lesquels, sans être exhaustif, on pourrait utilement retenir entre autres : une consolidation de la digitalisation en capitalisant sur le succès de la numérisation des paiements public du gouvernement en l'étendant à d'autres secteurs pour accroître la transparence, la qualité du service offert aux clients (usagers) et réduire les coûts de transaction, un renforcement des infrastructures techniques et structurelles de la Banque de dépôts du Trésor qui emporte avec elle sur les sept (7) dernières années les plus importantes réformes audacieuses transformationnelles entreprises en matière de paiement dans le secteur public, un renforcement sans précédent du secteur de la microfinance et la sécurisation des dépôts des épargnants, l’ouverture d’une ligne de crédit à long terme pour le financement des PME et des entreprises, une extension de l'éducation financière par une généralisation des campagnes d'éducation financière via le mobile qui a montré une grande efficacité pour toucher les populations rurales et les femmes. En conclusion, que retenez-vous du PAIF-PME ? Le PAIF-PME a accompagné des promoteurs d'entreprises qui avaient des projets structurants dans le cadre du Concours des plans d'affaires. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-1024x682.jpeg\" class=\"size-medium wp-image-164651\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-300x200.jpeg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-300x200.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-1024x682.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-768x512.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-1536x1023.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-630x420.jpeg 630w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-150x100.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-696x464.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1-1068x712.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/06/6-1.jpeg 1600w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Le PAIF-PME a accompagné des promoteurs d'entreprises qui avaient des projets structurants dans le cadre du Concours des plans d'affaires. Ça été une mission, une expérience vécue. Des hommes et des femmes se sont mobilisés, de l’expertise a été mobilisée au plan national et au-delà des frontières nationales. C’est un engagement pris, des responsabilités assumées pour répondre, pour conduire une mission combien importante et exaltante confiées par les autorités du ministère de l’économie et des finances. En conclusion, le PAIF-PME démontre qu’un projet bien conçu et bien mis en œuvre peut produire à des transformations structurelles durables. Au cours de sa mise en œuvre, le Projet a enregistré des avancées significatives. Le projet a notamment : contribué à la modernisation des procédures de paiements publics à travers le numérique, en les rendant plus rapides, plus sécurisés et plus transparents, contribué au renforcement du secteur de la microfinance, en le rendant plus structuré et plus résilient, contribué à l’éducation financière et à la protection des consommateurs par la mise en place des outils appropriés (plateforme d’éducation financière, l’éducation financière à travers le digital) et amélioré de manière concrète l’accès des PME au financement, grâce à des mécanismes adaptés et innovants (Garantie partielle de portefeuille, CPA). Mais au-delà de ces résultats, l’apport le plus important du projet réside dans les bases qu’il a permis de poser. Il a contribué à construire un écosystème financier plus inclusif, davantage digitalisé et globalement plus performant, au bénéfice des citoyens, des entreprises et de l’économie nationale. C’est cette dynamique durable qui constitue aujourd’hui la véritable valeur ajoutée du PAIF-PME. Votre dernier mot ? Je voudrais saluer le leadership des autorités du Ministère de l’économie et des finances (MEF) qui nous ont accompagné et apporté toutes les orientations nécessaires ayant permis d’atteindre ces résultats. Je voudrais également traduire ma gratitude aux membres du Comité de pilotage pour leur accompagnement constant, dire merci à toute l’équipe du l’UGP, les partenaires de mise en œuvre qui ont mouillé le maillot comme on dit, l’expertise mobilisée autour du projet, la Banque mondiale pour sa grande flexibilité durant la mise en œuvre, les services techniques du MEF pour leur sollicitude durant ces sept années passées ensemble. A vous tous pour avoir été à nos côtés, recevez notre profonde gratitude. Ce niveau de résultat satisfaisant est le vôtre, il est collectif. Enfin, je voudrais avoir une pensée pieuse à la Secrétaire de Direction du projet qui, malheureusement, nous a quitté le 20 février 2025. Puisse le Seigneur Tout-puissant et miséricordieux lui accorder le repos éternel. Arouna KABORE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -893,12 +893,77 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
+      "_rating": "C2",
       "_score": 127,
       "_zone": 1,
-      "_theme": "P",
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina/Diplomatie : « Les femmes diplomates utilisent leurs réseaux pour attirer des ressources au profit de l'économie », Wendegoudi Jacqueline Ouédraogo",
+      "link": "https://lefaso.net/spip.php?article147371",
+      "pubDate": "2026-06-24T23:49:00.000Z",
+      "description": "La Journée internationale des femmes dans la diplomatie est célébrée tous les 24 juin. À cette occasion, la conseillère des affaires étrangères et directrice de la promotion économique et des investissements de la diaspora au ministère des Affaires étrangères, Wendegoudi Jacqueline Ouédraogo s'exprime. Elle revient sur les enjeux de la participation féminine dans les relations internationales. Entre avancées significatives, obstacles persistants et perspectives prometteuses, elle met en lumière le rôle stratégique des femmes diplomates dans la promotion de la paix, du développement économique et de l'autonomisation des femmes, y compris au sein de la diaspora. Une analyse qui invite à mieux comprendre comment la diplomatie féminine contribue aujourd'hui à transformer les dynamiques internationales et nationales. Lefaso.net : Le 24 juin marque la Journée internationale des femmes dans la diplomatie. Pouvez-vous nous rappeler le contexte de l'institution de cette journée et expliquer en quoi elle constitue une opportunité pour promouvoir la place et le leadership des femmes dans les relations internationales ? Wendegoudi Jacqueline Ouédraogo : Je voudrais, avant tout propos, exprimer ma profonde gratitude aux premières autorités du ministère des Affaires étrangères, qui ont bien voulu confier à ma modeste personne ce poste de responsabilité. Mes remerciements vont également à l'ensemble de mes supérieurs hiérarchiques pour l'accompagnement constant dont j'ai bénéficié depuis le début de ma carrière au sein du Ministère. Merci à tous. Instituée par la résolution 76/269 adoptée par l'Assemblée générale des Nations Unies en juin 2022, la Journée internationale des femmes dans la diplomatie, célébrée chaque 24 juin, vise à promouvoir la participation pleine et égale des femmes à tous les niveaux de la diplomatie. L'édition 2026, placée sous le thème « Leadership, égalité, promotion et quête de la paix », s'inscrit pleinement dans l'Objectif de développement durable n°5 relatif à l'égalité entre les sexes. Cette journée est l'occasion de reconnaître la contribution des femmes à la paix et à la sécurité internationales, de même qu'au développement dans le monde, tout en mettant en lumière celles qui ont œuvré au rayonnement international de leurs pays. En valorisant les parcours des femmes diplomates, cette journée permet également d'inspirer les jeunes filles à s'orienter vers les métiers de la diplomatie et des relations internationales. Dans un contexte où, selon ONU Femmes, il faudrait encore près de 130 ans pour atteindre la parité absolue dans les sphères du pouvoir politique et diplomatique de haut niveau, cette célébration rappelle l'urgence de poursuivre les efforts en faveur d'une représentation plus inclusive. En tant que femme occupant un poste de responsabilité dans la promotion économique et les investissements de la diaspora, quel regard portez-vous sur l'évolution de la place des femmes dans la diplomatie et les relations internationales au Burkina Faso ? Nous constatons une évolution positive. Historiquement, la diplomatie et les relations internationales ont été des domaines majoritairement occupés par les hommes. La présence remarquée des femmes dans ces métiers étant relativement récente, leur représentativité demeure encore en deçà des attentes, notamment aux plus hauts niveaux de responsabilité. Au Burkina Faso, les avancées sont notables. En effet, la reconnaissance des compétences et du leadership des femmes se traduit par leur présence à tous les niveaux de responsabilité au sein du ministère en charge des Affaires étrangères où les femmes ont occupé de hautes fonctions, y compris de ministre, de ministre délégué, de secrétaire générale, d'ambassadeur, de représentante permanente, de consule générale, de conseiller technique, de chargée de mission, de directrice générale et bien d'autres postes stratégiques. Cette évolution est le fruit de la vision et de l'engagement constants des plus hautes autorités y compris du ministère des Affaires étrangères, qui œuvrent à renforcer la place des femmes au sein des instances décisionnelles à travers des politiques de recrutement, de formation et de promotion des compétences féminines. Les perspectives sont encourageantes. Au regard des progrès enregistrés, nous pouvons espérer une présence féminine encore plus accrue dans les métiers de la diplomatie et des relations internationales. Je tiens ici à saluer les efforts du Gouvernement qui permet aux femmes d'exercer pleinement leur leadership et formule le vœu que cette dynamique positive se poursuive et se consolide davantage. La diplomatie économique est aujourd'hui un levier majeur de développement. Comment les femmes diplomates peuvent-elles contribuer davantage à attirer les investissements et à renforcer les partenariats économiques au profit de leur pays ? Oui, les femmes diplomates jouent un rôle important dans la promotion économique de leurs pays et contribuent pleinement à leur développement. Grâce à leurs compétences, leurs réseaux professionnels, leur leadership et leur capacité d'influence, elles peuvent faciliter la mobilisation de ressources, participer à la recherche de financements innovants, attirer des investisseurs, créer des opportunités de partenariats économiques, et contribuer à la négociation d'accords économiques et commerciaux, tant au niveau bilatéral que multilatéral. Les femmes diplomates contribuent également à la réflexion stratégique sur la diplomatie économique à travers leur participation à la conception de politiques étrangères de leurs pays, à des groupes de réflexion, de travail et aux rencontres d'experts, entre autres. La diaspora burkinabè représente un potentiel important pour l'économie nationale. Quelles sont les principales initiatives mises en œuvre par votre direction pour encourager les investissements de nos compatriotes vivant à l'étranger ? La diaspora burkinabè constitue un acteur stratégique du développement national. Au-delà des envois de fonds, elle contribue également à l'investissement productif, à l'entrepreneuriat, ainsi qu'au transfert de compétences, de technologies et de savoir-faire, participant ainsi à la création de richesses et d'emplois, et à l'édification d'une économie endogène forte résolument orientée vers le développement humain durable. Conscient de ce potentiel, le ministère met en œuvre plusieurs actions concrètes pour structurer et renforcer la contribution de la diaspora. Parmi celles-ci, il convient de relever l'adoption de la Stratégie nationale de gestion de la diaspora, la création récente du Guichet unique de la diaspora, destiné à faciliter l'investissement des Burkinabè de l'extérieur au Burkina Faso et les actions de sensibilisation en faveur d'un engagement accru de la diaspora dans le développement endogène du pays. Par ailleurs, le ministère mène directement et à travers ses missions diplomatiques et postes consulaires, des actions d'information et de sensibilisation de la diaspora sur les opportunités d'investissement, en particulier dans les secteurs porteurs de l'économie nationale, afin d'orienter efficacement ses choix vers des projets structurants et des investissements productifs. Sur ce point, il faut souligner que nous travaillons en synergie avec les structures et ministères concernés pour un meilleur accompagnement des initiatives portées par les Burkinabè de l'extérieur. Au cours de votre carrière, avez-vous été confrontée à des défis spécifiques liés à votre statut de femme dans des espaces traditionnellement dominés par les hommes ? Comment les avez-vous surmontés ? Je voudrais souligner que les défis rencontrés ne sont peut-être pas forcément liés au statut de femme. Il me souvient un cas impliquant un usager, convaincu que notre structure pouvait répondre à une requête qui ne relevait pourtant pas de ses compétences. Face à l'incompréhension de cette personne qui commençait à tenir des propos désobligeants, j'ai dû solliciter l'appui d'un collègue afin de faciliter la communication pour un dénouement heureux de cette situation. Adoptant une approche participative, mon collègue et moi nous sommes attelés à expliquer calmement à cet usager les limites de nos attributions et les raisons pour lesquelles sa demande ne pouvait être satisfaite. Cette démarche concertée a permis de désamorcer le problème et de maintenir un climat d'écoute et de respect. C'est pour moi l'occasion de saluer la bonne collaboration qui existe avec les collègues. Selon vous, quels sont aujourd'hui les principaux obstacles qui freinent l'accès des femmes aux postes de décision dans les domaines de la diplomatie économique et de la coopération internationale ? Les obstacles à l'accès des femmes aux postes de décision dans la diplomatie et la coopération internationale découlent pour la plupart de facteurs structurels, institutionnels, sociaux et culturels qui sont dans certains cas profondément enracinés. À l'échelle mondiale, les données récentes de l'indice « Women in Diplomacy » montrent qu'en 2025, les femmes occupaient seulement 22,5% de postes d'ambassadeurs et de représentantes permanentes. Très peu de pays atteignent la parité dans les hautes fonctions diplomatiques, ce qui illustre la persistance des inégalités de représentation à travers le monde. Parmi les principaux obstacles, on note en premier lieu les normes sociales liées au rôle traditionnel assigné aux femmes, qui très souvent sont considérées comme principales responsables des tâches familiales et domestiques. Cette réalité rend parfois difficile la conciliation entre vie professionnelle et vie familiale, d'autant plus que les carrières diplomatiques exigent une forte mobilité et une grande disponibilité aux postes de responsabilité. Deuxièmement, à cela s'ajoutent les stéréotypes de genre, qui limitent la reconnaissance des compétences féminines et l'accès des femmes aux fonctions de leadership, les confinant ainsi à des rôles et fonctions secondaires. Troisièmement, dans certains contextes, on note l'insuffisance de dispositifs de mentorat et de coaching permettant d'accompagner les jeunes femmes diplomates et de valoriser les parcours des pionnières. Face à ces défis, des efforts sont consentis à plusieurs niveaux. Au plan international, des entités onusiennes comme la Commission de la condition de la femme (CSW), le Conseil des droits de l'homme (CDH) et ONU-Femmes œuvrent à la réduction des inégalités de représentation et pour une meilleure inclusion des femmes et des filles. Au niveau national, le ministère des Affaires étrangères veille à promouvoir la participation des femmes à travers leur placement et leur nomination à des postes de responsabilité, notamment par une politique de promotion de l'égalité de chance et la mise en œuvre d'une diplomatie sensible au genre. Comment la diplomatie économique peut-elle être mise à contribution pour promouvoir davantage l'entrepreneuriat féminin et l'autonomisation économique des femmes burkinabè, y compris celles de la diaspora ? La diplomatie économique est particulièrement importante car elle contribue à transformer l'économie locale, à favoriser l'inclusion et à réduire la pauvreté. Dans ce contexte, elle sert de levier pour promouvoir l'entrepreneuriat féminin et renforcer l'autonomisation des femmes burkinabè, y compris celles de la diaspora. Elle permet notamment de négocier et faciliter l'accès des femmes aux marchés et aux financements internationaux, d'encourager l'intégration des entreprises créées et/ou gérées par des femmes dans les chaînes de valeur mondiales, de soutenir des réformes commerciales et juridiques sensibles au genre et de mener des actions de renforcement des capacités des femmes entrepreneures. De plus, l'inclusion des femmes entrepreneures dans les délégations des missions économiques permet de renforcer leur visibilité, de développer leurs réseaux et de favoriser les opportunités. Enfin, un accent particulier est mis sur le plaidoyer pour lever les obstacles structurels à leur autonomisation économique, notamment en matière d'accès aux ressources productives, et d'accompagnement à la formalisation des entreprises créées par les femmes. Dans ce sens, de nombreux organismes internationaux et régionaux disposent de programmes destinés à accompagner les femmes. À l'occasion de cette Journée internationale des femmes dans la diplomatie, quel message souhaitez-vous adresser aux jeunes filles et aux jeunes femmes qui aspirent à faire carrière dans la diplomatie, les relations internationales ou la promotion des investissements ? Aux femmes et jeunes filles qui aspirent à mener une carrière dans la diplomatie, métier exaltant quoi que exigeant, je les invite à s'investir tout d'abord dans une formation initiale de qualité et ensuite dans la formation continue et régulière. Il est également important de s'appuyer sur des valeurs personnelles fortes telles que l'intégrité, la loyauté, le sens du devoir et le patriotisme, car le diplomate a pour mission première de défendre les intérêts de son pays. Au-delà des compétences techniques, la réussite d'une carrière dans les métiers de la diplomatie repose sur le travail bien fait, la rigueur, la persévérance et la résilience, de même que le renforcement de l'intelligence émotionnelle, indispensable pour gérer au mieux les situations complexes et les interactions humaines inhérentes à la pratique diplomatique. Aussi, un développement personnel intégral et équilibré est nécessaire afin de concilier vie professionnelle, familiale et sociale. En ce sens, les femmes disposent d'atouts naturels, parmi lesquels une capacité d'anticipation, d'adaptation et un sens élevé de l'organisation. Pour terminer, je voudrais encourager les femmes et les filles à s'intéresser davantage aux métiers de la diplomatie et des relations internationales et à s'y engager pour celles qui le désirent afin d'apporter leur pierre à l'œuvre de construction de notre nation et au rayonnement international de notre pays. Hamed Nanema Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Promotion de la résilience au sein de l’AES: des pièces de théâtre remises à des radiodiffusions",
+      "link": "https://www.sidwaya.info/promotion-de-la-resilience-au-sein-de-laes-des-pieces-de-theatre-remises-a-des-radiodiffusions/",
+      "pubDate": "2026-06-24T23:35:57.000Z",
+      "description": "La compagnie Danthemuz a remis des pièces de théâtre radiophoniques aux radios partenaires du projet « La guerre, les femmes et la paix », vendredi 19 juin 2026, à Ouagadougou. Le projet « La guerre, les femmes et la paix », initié par la compagnie Danthemuz met en lumière des textes d’auteures africaines traduits en trois langues nationales notamment en mooré, dioula et fulfuldé. Il vise à diffuser des messages de résilience et de cohésion sociale à travers les pays membres de la Confédération de l’alliance des Etats du sahel (AES). La compagnie Danthemuz, porteur du projet a remis symboliquement les pièces de théâtre radiophoniques aux radios partenaires pour diffusion sur les antennes locales et communautaires du Burkina Faso, du Mali et du Niger. Elles ont été écrites par trois auteures qui apportent ainsi leur vision de la situation que traverse l’Alliance des Etats du Sahel (AES) depuis plus d’une décennie à travers des sketches radiophoniques, il s’agit de Habibatou Diarra du Mali avec la pièce « Le rêve qui voulait naître », Natyra Ibrahim du Niger avec « Enfin l’aube » et Rihanata Ilboudo du Burkina Faso avec « Parlons-nous ». Selon le secrétaire général de La compagnie Danthemuz, Vincent Bazié, le projet « La guerre, les femmes et la paix », est né de la nécessité de poursuivre les actions de sensibilisation, malgré les contraintes sécuritaires qui limitent les représentations théâtrales dans certaines localités. « Nous avons donc réfléchi à un projet capable de toucher les populations autrement, tout en mettant en lumière le rôle des femmes dans les dynamiques de paix », a-t-il poursuivi. Pour lui, cette diffusion régionale permettra de toucher un public diversifié, notamment les populations vivant dans les zones rurales et vulnérables. Le projet a été soutenu par la coopération suisse et financé à hauteur de 7, 97 millions FCFA par le Ministère de la Communication, de la Culture, des Arts et du Tourisme , à travers le Fonds de développement culturel et touristique (FDCT). Lancé en décembre 2025, le projet « La guerre, les femmes et la paix », a franchi une étape importante en février 2026 et a permis d’harmoniser les informations et d’engager un travail de lecture et d’adaptation autour de trois œuvres. Le représentant du FBDES-Toogo (Fonds burkinabè de développement économique et social), Sayba Naon, a salué la pertinence de l’initiative et a exprimé sa satisfaction quant aux résultats obtenus. Pour lui, ce travail, en plus de contribuer au des bénéficiaires, motive les partenaires. « Avec des messages d’espoir, de vivre-ensemble et de solidarité, le projet entend ainsi garder la flamme d’un avenir meilleur des peuples des trois pays de l’AES », a conclu la réalisatrice du projet Laure Guiré. Valentin KABORE (Collaborateur)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -935,141 +1000,12 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina: Le CEMGA lance la 3e édition du camp vacances sport au profit des pupilles de la Nation",
-      "link": "https://www.aib.media/burkina-le-cemga-lance-la-3e-edition-du-camp-vacances-sport-au-profit-des-pupilles-de-la-nation/",
-      "pubDate": "2026-06-24T18:07:25.000Z",
-      "description": "Burkina-Sport-Civisme-Camp-Pupilles-Nation Burkina: Le CEMGA lance la 3e édition du camp vacances sport au profit des pupilles de la Nation Ouagadougou, 24 juin 2026 (AIB)-Le Chef d’Etat-Major général des Armées (CEMGA), le Général de brigade Moussa Diallo, a lancé mercredi à Ouagadougou la 3e édition du camp vacances sport, civisme, cuisine et secourisme, destiné à offrir un cadre d’épanouissement, d’apprentissage et de développement personnel aux pupilles de la Nation. Organisé par l’Union sportive des Forces armées (USFA), le camp vacances sport vise à offrir aux enfants des héros de la Nation un cadre d’épanouissement d’apprentissage et développement personnel à travers le sport, le civisme et les diverses activités éducatives. Il se déroule du 22 juin au 17 juillet et prévoit plusieurs innovations, dont un atelier de cuisine, l’extension des activités à la garnison de Kaya et une attention particulière accordée aux jeunes filles et est placé sous le thème « Par le sport et le civisme : honorer la mémoire et bâtir l’avenir ». Dans son discours, le Général de brigade Moussa Diallo a rendu hommage aux « héros » qui ont consenti le sacrifice suprême pour le Burkina Faso, soulignant que cette activité traduit la solidarité de l’institution militaire envers leurs familles, en particulier leurs enfants. Selon lui, ce cadre d’apprentissage et d’épanouissement permet de transmettre aux jeunes les valeurs de patriotisme, de civisme, de solidarité, de respect mutuel et d’assistance. Le premier responsable des armées s’est félicité de la pérennisation de ce projet dont les prémices remontent à 2011 avec la première édition tenue en 2024 après plusieurs années de maturation. Il a également salué les innovations introduites cette année, notamment l’extension des activités à la garnison de Kaya ainsi que l’intégration progressive de l’approche genre avec la présence de 35 filles. S’adressant aux campeurs, il les a invités à faire preuve de discipline, de curiosité et d’entraide afin de tirer pleinement profit des activités prévues, notamment le sport, le civisme, le secourisme et d’autres formations pratiques. Le parrain de l’édition 2026, Simon Tiemtoré, par ailleurs président de Vista Group, a salué une action qui met le sport au service de l’éducation, de la cohésion sociale et de l’accompagnement des familles. « Cette activité accorde une attention particulière aux enfants de militaires tombés en opération. Une orientation qui lui donne une portée humaine et symbolique très forte », a-t-il déclaré. Le président de Vista Group a souligné que les résultats scolaires enregistrés par les bénéficiaires des précédentes éditions constituent une source de satisfaction et justifient la poursuite de son accompagnement. Il a annoncé le renouvellement de son appui financier de 15 millions de FCFA pour l’organisation de l’édition 2026 ainsi que la reconduction de la prise en charge de la scolarité des bénéficiaires du programme. « L’investissement dans l’éducation et l’encadrement de notre jeunesse constitue l’un des plus beaux hommages que nous puissions rendre à ceux qui ont consenti le sacrifice suprême pour la Nation », a affirmé M. Tiemtoré. Agence d’information du Burkina NAK/yos",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina : Ouagadougou accueille le Forum africain sur la santé et la sécurité sociale du 2 au 4 juillet 2026",
-      "link": "https://www.minute.bf/burkina-ouagadougou-accueille-le-forum-africain-sur-la-sante-et-la-securite-sociale-du-2-au-4-juillet-2026/",
-      "pubDate": "2026-06-24T18:01:48.000Z",
-      "description": "En prélude à la première édition du Forum africain sur la santé, la sécurité et le bien-être au travail (AFRISST), Sahelors Consulting, en partenariat avec Arobase Communication, a organisé une conférence de presse le mercredi 24 juin 2026 à Ouagadougou. Prévu du 2 au 4 juillet 2026 dans la capitale burkinabè, l’AFRISST réunira des acteurs institutionnels, des experts, des entreprises et des partenaires engagés dans la promotion de la santé et de la sécurité au travail en Afrique. Cette première édition se tiendra sous le thème : « Innovations technologiques en santé-sécurité au travail : défis et perspectives pour un développement durable en Afrique ». Dr Sounkalo Djibo expliquant les avantages du Forum Selon le Co-Promoteur, Dr Sounkalo Djibo, les accidents du travail et les maladies professionnelles touchent particulièrement les secteurs primaires et les industries extractives. L’agriculture, l’exploitation forestière et les activités minières figurent parmi les plus dangereuses. Les risques professionnels restent une préoccupation majeure sur le continent. L’AFRISST entend offrir un cadre d’échanges et de réflexion pour apporter des réponses à ces défis. Dr Djibo ambitionne de faire de ce forum le carrefour africain de référence pour la promotion de la santé et de la sécurité au travail, ainsi que pour la valorisation des innovations technologiques dans ce domaine. L’objectif est aussi de sensibiliser les entreprises, les administrations, les organisations, les professionnels et le grand public à l’importance stratégique de la prévention. Il a invité les institutions publiques, les entreprises, les organisations professionnelles, les partenaires techniques et financiers, les universités, les centres de recherche et les médias à rejoindre cette dynamique. « Nous sommes convaincus que l’Afrique dispose des talents, des compétences et des innovations nécessaires pour devenir une référence mondiale en matière de santé, de sécurité et de bien-être au travail », a-t-il conclu. Plus de 300 participants sont attendus pour cette première édition, avec la participation de plusieurs pays africains : la République démocratique du Congo, le Bénin, le Mali, le Niger et la France. Pendant trois jours, les participants assisteront à des expositions technologiques, des conférences, des panels de discussion, des démonstrations de solutions innovantes en santé et sécurité au travail, ainsi qu’à des rencontres B2B entre fournisseurs et entreprises. À travers cette initiative, les organisateurs souhaitent contribuer à l’amélioration des conditions de travail en Afrique en favorisant l’adoption de solutions innovantes et adaptées aux réalités du continent. Lire aussi : Burkina : Le cadre sectoriel de dialogue « Travail, emploi et protection sociale » affiche un taux de réalisation de 85,64% en 2025 Sidziguin Irène Corinne SAWADOGO (Stagiaire) Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Coupe du monde 2026 : « Nous avons été meilleurs que l’Angleterre dans le combat »",
-      "link": "https://burkina24.com/2026/06/24/coupe-du-monde-2026-nous-avons-ete-meilleurs-que-langleterre-dans-le-combat/",
-      "pubDate": "2026-06-24T17:55:59.000Z",
-      "description": "Le Ghana a arraché un nul (1-1), synonyme de qualification en 16e de finale de la Coupe du Monde face à l’Angleterre. Le sélectionneur du Ghana Carlos Queiroz estime que son équipe a joué avec beaucoup de courage. Selon Carlos Queiroz, il y a eu deux temps dans la rencontre face à l’Angleterre. D’abord en … The post Coupe du monde 2026 : « Nous avons été meilleurs que l’Angleterre dans le combat » appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Relations Confédération AES – CEDEAO : Des experts de l’AES réunis pour l’élaboration d’un document-cadre de dialogue",
-      "link": "https://www.minute.bf/relations-confederation-aes-cedeao-des-experts-de-laes-reunis-pour-lelaboration-dun-document-cadre-de-dialogue/",
-      "pubDate": "2026-06-24T16:22:19.000Z",
-      "description": "Des experts du Mali, du Burkina Faso et du Niger sont réunis, depuis ce mardi 23 juin 2026 à Ouagadougou en vue de l’élaboration d’un document-cadre stratégique devant définir les futures consultations entre la Confédération AES et la Communauté économique des Etats de l’Afrique de l’Ouest (.CEDEAO). Cette rencontre s’inscrit dans la dynamique d’ouverture au dialogue prônée par la Confédération l’AES vis-à-vis de la Communauté sous régionale et répond également au souci de préserver les intérêts supérieurs des populations ouest africaines, une volonté réaffirmée par les trois Chefs d’Etats du Mali du Burkina Faso et du Niger. Réunis en atelier, les délégations des trois pays se concertent pour produire un document-cadre stratégique consolidé servant de référence et garantissant une approche harmonisée des futures négociations. L’ouverture officielle de l’atelier a été présidée par le Camarade Secrétaire général du ministère des Affaires étrangères, l’Ambassadeur Hermann Yirigouin TOE, chef de la délégation burkinabè. Souhaitant la bienvenue aux délégations sœurs du Mali et du Niger, le Camarade Secrétaire général a indiqué qu’il s’agit d’un rendez-vous stratégique pour définir la doctrine de négociations et éclairer les décisions des autorités de l’AES dans leurs futures concertations. « Notre Confédération poursuit sa consolidation institutionnelle, mais cette évolution institutionnelle n’est ni un repli, ni une rupture avec l’idéal panafricain. Elle constitue, au contraire, une réponse politique stratégique et historique aux aspirations profondes de nos peuples », a déclaré l’Ambassadeur Hermann Yirigouin TOE. Il a réaffirmé l’ouverture et la disposition des trois Chefs d’Etats en vue de maintenir la concertation et le dialogue avec la CEDEAO. « Si nos Etats ont exercé leur droit souverain de redéfinir leur trajectoire, ils n’ont jamais cessé de privilégier le dialogue, car la souveraineté n’est pas synonyme d’isolement. Et l’affirmation de soi ne saurait être incompatible avec la recherche de solutions concertées », a renchéri le Chef de la délégation burkinabè. Prenant la parole, le chef de la délégation malienne Monsieur Mahamane Amadou MAÏGA a salué la tenue de cette rencontre des experts visant à formaliser les cadres des relations AES -CEDEAO. « La préservation des intérêts des populations est un souci partagé entre l’AES et la CEDEAO, ce qui fait appelle à la coopération et à la préservation des liens séculaires de l’espace commun ouest africain », a indiqué le Chef de la délégation malienne. Saluant également l’initiative commune, le chef de la délégation du Niger Monsieur Al Assane OUSMANE a, pour sa part, félicité la délégation burkinabè pour la qualité du document initial soumis à leur appréciation. Pendant trois jours, les experts des trois pays devront travailler pour produire un document consensuel, destiné à orienter et à encadrer les futures concertations entre les deux entités. A l'issue de la cérémonie d’ouverture de la rencontre, les experts de l’AES ont été reçus en audience par le Camarade ministre des Affaires étrangères S.E Karamoko Jean Marie TRAORE. Celui-ci les a encouragés à travailler dans le sens de mettre à la disposition des premières autorités de la Confédération AES, un document qui prenne en compte les priorités et les intérêts des peuples de l'espace confédéral. DCRP/MAE Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina: la première édition des Journées scientifiques de la Police place la science et l’innovation au service de la sécurité",
-      "link": "https://www.aib.media/burkina-la-premiere-edition-des-journees-scientifiques-de-la-police-place-la-science-et-linnovation-au-service-de-la-securite/",
-      "pubDate": "2026-06-24T16:01:16.000Z",
-      "description": "Burkina: la première édition des Journées scientifiques de la Police place la science et l’innovation au service de la sécurité Ouagadougou, 24 juin 2026 (AIB) – Le ministre de la Sécurité, Mahamadou Sana, a officiellement lancé mercredi la première édition des Journées scientifiques de la Police nationale, une initiative qui vise à faire de la science, de la recherche et de l’innovation des leviers stratégiques pour une police plus moderne, efficace et adaptée aux défis sécuritaires actuels. Cette première édition se tient du 24 au 26 juin 2026 et est placée sous le thème : « Sciences, innovations et souveraineté technologique : quels leviers pour une police moderne et plus efficace ? ». À l’ouverture de la cérémonie, le ministre de la Sécurité, Mahamadou Sana a d’abord rendu hommage aux forces combattantes engagées dans la défense du territoire national, notamment à celles qui ont consenti le sacrifice suprême. Il a indiqué que les menaces sécuritaires actuelles, telles que le terrorisme, la criminalité organisée et les nouvelles formes de délinquance, imposent un renforcement des méthodes d’intervention à travers des approches fondées sur les connaissances scientifiques et les avancées technologiques. Selon Mahamadou Sana, l’exploitation des données, l’intelligence artificielle, la police scientifique et technique, les systèmes d’information sécurisés ainsi que les outils numériques constituent des atouts majeurs pour bâtir une sécurité souveraine, intelligente et performante. Il a souhaité que les travaux débouchent sur des recommandations concrètes et des partenariats durables entre la Police nationale, les universités et les structures de recherche et d’innovation. Le Directeur général de la Police nationale, Thierry Dofizouho Tuina, a affirmé que cette première édition des Journées scientifiques constitue une étape importante dans la transformation de l’institution policière. Il a expliqué que cette rencontre vise à rapprocher les forces de sécurité du monde scientifique afin de révéler les talents et de favoriser la conception de solutions locales adaptées aux besoins opérationnels de la Police nationale. Le premier responsable de la Police nationale a également invité les chercheurs, les universitaires, les experts et les policiers à mettre leur créativité au service de la souveraineté technologique en développant des outils, des équipements et des solutions numériques « Made in Burkina Faso », capables de renforcer l’autonomie stratégique du pays dans le domaine de la sécurité. Le ministre de l’Enseignement supérieur, de la Recherche et de l’Innovation, parrain de la cérémonie, Adjima Thombiano, a pour sa part salué une initiative qui contribuera à renforcer le lien entre la recherche scientifique et les besoins opérationnels des forces de défense et de sécurité. Il a estimé que la science n’a de véritable valeur que lorsqu’elle apporte des solutions concrètes aux préoccupations de la société. À cet effet, il a appelé les chercheurs, les universités, les centres de recherche, les startups et les jeunes développeurs burkinabè à unir leurs efforts afin de mettre les innovations nationales au service de la sécurité et de la souveraineté technologique. Agence d’information du Burkina Nat/yos",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Journées scientifiques de la Police nationale: des réflexions pour renforcer les potentialités technologiques",
+      "link": "https://www.sidwaya.info/journees-scientifiques-de-la-police-nationale-des-reflexions-pour-renforcer-les-potentialites-technologiques/",
+      "pubDate": "2026-06-25T00:18:47.000Z",
+      "description": "La première édition des journées scientifiques de la Police nationale se tient du 24 au 26 juin 2026 à Ouagadougou. L’objectif est de réfléchir à des solutions endogènes pour renforcer l’efficacité des forces de sécurité face au terrorisme et à la criminalité organisée. Pour faire face à la menace terroriste et la criminalité liée aux nouvelles formes de délinquance, les méthodes classiques d’intervention doivent être renforcées par des approches fondées sur la science et la technologie. Fort de cette vision, le ministère de la Sécurité organise les journées scientifiques de la police nationale pour la première fois, du 24 au 26 juin 2026 à, Ouagadougou. Placé sur le thème : « Sciences, innovation et souveraineté technologique : quels leviers pour une police moderne et plus efficace ?» L’événement se veut un cadre de mutualisation des intelligences pour des actions de police plus efficientes. Au cours des journées scientifiques de la police nationale, plusieurs communications vont être présentées. L’une d’elles va porter sur « la valorisation des résultats de la recherche scientifique au profit de la sécurité des personnes et des biens : articulation entre universités, centres de recherche et forces de sécurité » et une autre sur « l’innovation technologique endogène : Comment les startups et les industries locales peuvent-elles réinventer les équipements de terrain et la logistique des forces de sécurité ? ». Selon le ministre de la Sécurité, Mahamoudou Sana, la police scientifique doit désormais occuper une place centrale dans cette nouvelle dynamique. « Elle ne saurait être un simple service d’appui. Elle doit devenir un maillon vivant et déterminant de l’action policière, capable de soutenir l’enquête, d’orienter la décision opérationnelle et de renforcer l’efficacité de la réponse sécuritaire », a-t-il déclaré. En outre, de l’avis du ministre de la Sécurité, l’exploitation des données, l’intelligence artificielle, les systèmes d’information sécurisés, les technologies de surveillance et les outils numériques constituent des atouts pour une police moderne. Il a ajouté que leur maîtrise participe directement à la réalisation de l’ambition de construire une sécurité souveraine, intelligente et visionnaire du Burkina Faso. « Cette ambition rejoint les objectifs de la réforme de la police de proximité qui vise à améliorer durablement la qualité du service public de sécurité, renforcer la confiance de la population et accroître la performance opérationnelle de nos forces », a renchéri Mahamoudou Sabna. Répondre efficacement aux défis sécuritaires Le ministre de la Sécurité a également fait savoir que la souveraineté technologique se construit par l’investissement dans le capital humain, la recherche appliquée, l’innovation locale et le développement de partenariats solides entre les acteurs de la sécurité et le monde académique. Pour le parrain de ces journées scientifiques, le ministre de l’Enseignement supérieur, de la Recherche et de l’Innovation, Adjima Thiombiano, cette activité représente une réelle opportunité pour que la science chemine à côté de la sécurité afin de répondre aux aspirations profondes de la société. « Il est plus que temps que les chercheurs, les enseignants-chercheurs et tous les autres acteurs, puissent travailler main dans la main avec la sécurité pour relever les nouveaux défis du moment », a-t-il déclaré. Adjima Thiombiano a invité tout le monde de la recherche scientifique, de l’innovation et de la technologie à faire le déplacement de l’École nationale de police pour comprendre les défis sécuritaires du moment, mais surtout mesurer leur apport pour pouvoir véritablement permettre au peuple burkinabè de retrouver la paix et la sécurité. Le directeur général de la Police nationale, Thierry Dofizouho Tuina, a salué ces la tenue de ces journées, parce que l’institution doit s’arrimer à la révolution scientifique et technologique afin d’en tirer des moyens pour répondre efficacement aux défis sécuritaires. Il a déclaré que les recommandations issues des journées scientifiques de la Police nationale serviront de feuille de route pour la modernisation technologique de l’institution policière, face à l’urgence d’adapter les réponses opérationnelles aux évolutions de la menace. Evariste YODA",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1090,18 +1026,51 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "T",
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
+      "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Burkina : Les Experts des ministères en charge des sports, de la jeunesse et de l’emploie de l’AES examinent les dossiers structurants de l’espace confédéral",
-      "link": "https://www.aib.media/burkina-les-experts-des-ministeres-en-charge-des-sports-de-la-jeunesse-et-de-lemploie-de-laes-examinent-les-dossiers-structurants-de-lespace-confederal/",
-      "pubDate": "2026-06-24T14:46:58.000Z",
-      "description": "BURKINA-MALI-NIGER-SPORT-RENCONTRE-EXPERTS-AES Burkina : Les Experts des ministères en charge des sports, de la jeunesse et de l’emploie de l’AES examinent les dossiers structurants de l’espace confédéral Ouagadougou, 24 juin 2026 (AIB)-Les experts des ministères en charge des sports, de la jeunesse et de l’emploie de l’Alliance des Etats du Sahel (AES) se sont retrouvés mercredi à Ouagadougou pour examiner et amender les documents techniques relatifs aux activités de l’espace confédéral, qui seront validés par leurs ministres de tutelle, a constaté l’AIB. Dans la dynamique de la rupture stratégique fondamentale pour la souveraineté des Etats de l’AES, le Burkina Faso, en sa qualité de Président en exercice de la Confédération, conduit des activités structurantes dans les domaines des sports, de la jeunesse et de l’emploi, secteurs reconnus comme leviers essentiels de cohésion sociale, d'intégration des peuples et de souveraineté économique de l'espace sahélien. L'objectif de cette rencontre des experts est d'examiner, d'amender et de valider les documents techniques relatifs aux activités AES, conduites par les ministères en charge des sports, de la jeunesse et de l’emploi, en vue de leur adoption formelle par les Ministres des États membres. Deux jours durant, les experts se pencheront sur plusieurs points, notamment les Jeux de l’AES ; le Forum Confédéral de la Jeunesse et du Volontariat de l’AES ; le Salon Confédéral de l’Emploi de l’AES ; la création d’une infrastructure confédérale de Jeunesse et des Sports de l’AES etc. La rencontre permettra également de renforcer les fondements d’une approche commune, concertée et consensuelle, ainsi que d’harmoniser les pratiques des pays de la Confédération dans l’organisation des activités confédérales en matière de sport, de jeunesse et d’emploi. Selon le Secrétaire général du ministère burkinabè des sports, de la jeunesse et de l’emploi, Colette Ouédraogo qui a ouvert les travaux, «les Chefs d’État de la Confédération de l’AES ont placé l’intégration des peuples au cœur de la vision confédérale, comme l’illustre notre devise : « un espace, un peuple, un destin ». Ils ont affirmé et réaffirmé, à plusieurs reprises, leur volonté de faire de l’intégration dans tous les domaines, un pilier de notre destin commun, qui se construit par le dialogue, la coopération et la mise en œuvre d’actions concrètes et concertées ». Les experts poseront donc les bases d’une harmonisation des initiatives en matière de sport, de jeunesse et d’emploi. Cela permettra d’apporter des réponses communes aux défis communs : le chômage, l’employabilité des jeunes et la nécessité d’offrir des cadres d’épanouissement à travers le sport, l’emploi et le volontariat. Les experts sortiront des travaux avec des programmes alignés, des calendriers communs et des indicateurs partagés permettant de mesurer les progrès. Agence d’information du Burkina as/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Un conditionnement de l’opinion publique internationale",
+      "link": "https://www.sidwaya.info/un-conditionnement-de-lopinion-publique-internationale/",
+      "pubDate": "2026-06-25T00:14:32.000Z",
+      "description": "En présentant, par la bouche d’un député européen, le Burkina Faso comme un « État failli » au plan sécuritaire sous le joug d’un « régime autocratique » où les « sanctuaires terroristes disposant d’armes de toutes natures prolifèrent », l’Union européenne prépare des interventions militaires musclées contre nos Etats sous le couvert de la « légitime défense ». En effet, sous le vocable d’armes de toutes natures, les « experts militaires occidentaux » en sont venus à y inclure, les missiles balistiques de longue portée, capables de porter des coups meurtriers aux capitales européennes, à partir de l’un quelconque de nos pays. C’est ainsi qu’il est de plus en plus courant d’entendre les éditorialistes français évoquer cette hypothèse et la nécessité d’y mettre fin à titre « préventif ». A l’instar de la technique usitée par le Président américain George Bush Junior pour détruire l’Irak de Saddam Hussein qui commençait à devenir une vraie menace pour l’État hébreu. Il s’agit de trouver un alibi bâti sur la légitime défense pour attaquer nos pays. Derrière ces prétextes, se cachent comme à l’accoutumée le désir de nous maintenir sous leur joug séculaire et de tirer tous les profits découlant de cet assujettissement. La volonté souverainiste enclenchée par nos pays, ne dessert pas uniquement la France, mais l’Europe entière dont l’équilibre énergétique dépend en grande partie de l’uranium nigérien et qui a besoin de nos ressources en or et minéraux précieux pour faire face aux autres grandes puissances à savoir la Russie, la Chine et les États-Unis qui la considère désormais comme un boulet au pied . Derrière les diatribes verbales récurrentes se cache une campagne de conditionnement de l’opinion publique internationale pour justifier cette forfaiture en gestation. Après les organismes prétendument défenseurs des droits de l’homme, place est faite donc aux politiques pour donner plus de « respectabilité » à ces thèses saugrenues et tirées par les cheveux. Et , comme c’est une question de survie,il faut aller chercher le diable partout, même dans un bénitier. Impératif de survie,car, la France pour ne citer qu’elle est en passe de rejoindre le rang des pays pauvres très endettés selon les standards même des institutions de notation occidentales . Le taux de suicide qui atteint des proportions inquiétantes dans le pays est illustratif de sa déliquescence économique et sociale. Le monde agricole est la principale cible de cette pauvreté surtout depuis la signature des accords du Mercosur qui a acté son acte de décès futur . Le secteur industriel n’est pas mieux loti avec la concurrence des produits chinois qui dictent leur loi sur le marché. Et, comme Trump a porté le coup de grâce au secteur des sirupeux et des produits de luxe avec des droits de douane exorbitants,seules les guerres de prédation peuvent redonner vie au coq gaulois. D’où ces manœuvres terrestres, aériennes et navales observées à nos frontières respectives et que les autorités nigériennes viennent de dénoncer récemment. Il faudrait cependant aller au-delà des condamnations de principe pour se préparer à tous les niveaux afin de faire face à cette guerre impérialiste que le Président du Faso, Ibrahim Traoré, a si bien nommée l’hiver noir. L’heure n’est plus à la tergiversation et la mobilisation doit être maximale car l’honneur,la dignité et la survie de nos Etats est à ce prix. Quand l’homme refuse, il dit non ! Boubakar SY",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 9,
+      "_theme": "S",
+      "_zoneShort": "9. Europe occidentale",
+      "_relevance": "L",
+      "_desk": "A6"
+    },
+    {
+      "title": "Métier de pépiniériste: une activité qui nourrit son homme mais aux défis immenses",
+      "link": "https://www.sidwaya.info/metier-de-pepinieriste-une-activite-qui-nourrit-son-homme-mais-aux-defis-immenses/",
+      "pubDate": "2026-06-24T23:56:30.000Z",
+      "description": "A Ouagadougou, le long des barrages ou dans les bas-fonds sont souvent exposés soigneusement dans des contenants en plastique, des milliers de jeunes plants. Ils sont arrosés avec minutie par des hommes et des femmes aux gestes précis et à l’abri des regards. Ce sont des pépiniéristes dont le métier reste largement méconnu du grand public. Le président du conseil d’administration de la faitière des sociétés coopératives des pépiniéristes et paysagistes du Burkina Faso, Tasséré Amos Tièmtoré, fait un décryptage des défis à relever et des opportunités à saisir. Chaque matin, avant même le lever du soleil, ils sont déjà à l’œuvre à Ouagadougou. Arrosoir à la main, ils veillent sur des milliers de jeunes plants à travers la capitale avec l’espoir qu’ils devien-dront un jour des manguiers, des flamboyants, des neems ou encore des bougainvilliers. Ces hommes et ces femmes, appelés pépiniéristes, exercent un métier noble mais souvent méconnu. Tasséré Amos Tièmtoré est le président du conseil d’administration de la faîtière des sociétés coopératives des pépiniéristes et paysagistes du Burkina Faso. Il confie que son métier consiste à produire des plants et à les vendre au public. En plus des arbres fruitiers, les pépiniéristes produisent également des fleurs et des plantes ornementales qui contribuent à l’embellissement des maisons. Installés généralement à proximité des points d’eau, ils jouent un rôle essentiel dans le verdissement des espaces urbains. Tasséré Amos Tièmtoré relève qu’à Ouagadougou, on dénombre près de 20 sociétés coopératives regroupant environ 1 500 pépiniéristes, tandis que leur effectif est estimé à près de 5 000 sur l’ensemble du territoire national. Il avise que l’activité est lucrative. « C’est un métier qui nourrit son homme. Les recettes tirées de la vente des plants permettent aux producteurs de prendre en charge les besoins de leurs familles, notamment l’alimentation, les soins et la scolarisation des enfants », se réjouit-il. Si ce métier permet à des milliers de familles de subvenir à leurs besoins, il traverse néanmoins aujourd’hui une période difficile marquée par les réaménagements urbains et le déplacement de nombreux sites de production. En effet, ces pépiniéristes exercent dans des conditions souvent précaires, installés sur des sites provisoires, sans véritable sécurité foncière et exposés aux aléas des aménagements urbains. A Ouagadougou, où plusieurs chantiers de réhabilitation ont entraîné le déplacement de nombreuses pépinières, ces acteurs de l’économie verte tentent de préserver leur activité, entre résilience, solidarité et espoir de lendemains meilleurs. Selon Tasséré Amos Tièmtoré, l’année en cours restera particulièrement éprouvante pour les pépiniéristes. « Les travaux d’aménagement du canal de Ouagadougou ainsi que les interventions au niveau des barrages de Boulmiougou et de Tanghin ont contraint de nombreux pépiniéristes à quitter leurs sites de production.», déplore-t-il. Puis de préciser que de nombreux plants sont morts lors du déménagement.A ceux-ci s’ajoutent d’autres professionnels qui ne savent plus où déposer leurs sacs à planter. Un statut pour encadrer le métier Les pépiniéristes sont souvent installés sur des sites provisoires, sans véritable sécurité foncière et exposés aux aléas des aménagements urbains. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/06/aqaz.jpg\" class=\"size-medium wp-image-164657\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/06/aqaz-300x181.jpg\" alt=\"\" width=\"300\" height=\"181\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/06/aqaz-300x181.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/06/aqaz-150x91.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/06/aqaz.jpg 571w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Les pépiniéristes sont souvent installés sur des sites provisoires, sans véritable sécurité foncière et exposés aux aléas des aménagements urbains. Même si le président du conseil d’administration de la faîtière des sociétés coopératives des pépiniéristes et paysagistes du Burkina Faso reconnaît que ces travaux sont nécessaires pour le développement de la ville, il note que les pertes enregistrées fragilisent les producteurs. Face à cette situation, la faitière lance un appel aux autorités. Un cri du cœur qui semble être entendu. Pour Tasséré Amos Tièmtoré, un site est en cours d’identification du côté de la bande verte de Ouagadougou afin de permettre aux producteurs de reprendre leurs activités dans de meilleures conditions. « Les échanges engagés avec les autorités devraient aussi permettre d’accorder un véritable statut au pépiniériste et d’assainir davantage la profession », assure-t-il. Le président du conseil d’administration de la faitière des sociétés coopératives des pépiniéristes et paysagistes du Burkina Faso soutient que l’objectif est de mieux protéger les producteurs et de garantir la qualité des plants mis sur le marché. « Les actions de renforcement des capacités se poursuivent également. Des formations de formateurs ont déjà été organisées afin d’améliorer les techniques de production conformément aux normes du secteur », confié-t-il. Il salue également l’accompagnement de la Chambre de commerce et d’industrie du Burkina Faso, qui a facilité la formalisation d’une centaine d’entreprises de pépiniéristes et permis à plusieurs d’entre elles d’accéder à des financements pour développer leurs activités. Malgré les difficultés actuelles, les pépiniéristes restent convaincus que leur secteur connaîtra des jours meilleurs. Entre professionnalisation, struc-turation des coopératives et accompagnement institu-tionnel, ils espèrent continuer à contribuer durablement au reboisement, à l’embellisse-ment des villes et à la préservation de l’environne-ment au Burkina Faso. Ahmed Abdoul Aziz HEBIE (Collaborateur)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1122,6 +1091,37 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Sports, jeunesse et emploi : L’AES harmonise ses initiatives régionales à Ouagadougou",
+      "link": "https://netafrique.net/sports-jeunesse-et-emploi-laes-harmonise-ses-initiatives-regionales-a-ouagadougou/",
+      "pubDate": "2026-06-24T20:38:46.000Z",
+      "description": "Réunis à Ouagadougou, les experts de la Confédération des États du Sahel examinent et valident les projets phares destinés à renforcer la coopération dans les secteurs de la jeunesse, du sport et de l’emploi. Les travaux des experts de la Confédération des États du Sahel (AES) dans les domaines du sport, de la jeunesse et de l’emploi ont débuté ce mercredi 24 juin 2026 à Ouagadougou. Cette session technique de trois jours précède la réunion ministérielle prévue le 26 juin et vise à harmoniser les activités des ministères sectoriels à l’échelle confédérale. La cérémonie d’ouverture a été présidée par Colette Ouédraogo, Secrétaire générale du ministère burkinabè des Sports, de la Jeunesse et de l’Emploi. Dans son allocution, elle a rappelé que cette rencontre traduit la vision des Chefs d’État de l’AES : bâtir une approche concertée, mutualiser les initiatives et renforcer la coopération pour répondre efficacement aux défis du Sahel. Durant les travaux, les experts se penchent sur quatre projets structurants notamment le Centre de Développement de la Jeunesse et des Sports (CDJS-AES), le Forum Confédéral de la Jeunesse et du Volontariat, les Jeux de l’AES (JAES) et le Salon Confédéral de l’Emploi (SCE-AES) Les conclusions de cette session technique seront soumises à l’adoption des ministres en charge des secteurs concernés lors de leur réunion du vendredi 26 juin 2026. L’article Sports, jeunesse et emploi : L’AES harmonise ses initiatives régionales à Ouagadougou est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
       "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
@@ -1130,18 +1130,82 @@
   ],
   "alerts": [
     {
-      "title": "Attacks on Lebanon 'red line'; Iran to respond to Israeli violations: Senior diplomat",
-      "link": "https://presstv.ir/Detail/2026/06/23/770988/Iran-Lebanon-Israel-United-States-memorandum",
-      "source": "Press TV (Iran)",
-      "date": "2026-06-24T22:40:32.326Z",
-      "rating": "A2",
+      "title": "Rome airports warn of summer ‘disaster’ unless EU border controls suspended",
+      "link": "https://www.ft.com/content/808143bc-74e0-4423-998f-7e2c7faeeb3c",
+      "source": "Financial Times World",
+      "date": "2026-06-25T04:00:30.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "No tsunami warning after magnitude 6.9 quake strikes Japan's northeast",
+      "link": "https://www.thehindu.com/news/international/japan-earthquake-damage-toll-updates-on-june-25-2026/article71143775.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-25T01:15:14.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "tsunami"
+        }
+      ]
+    },
+    {
+      "title": "Au Mali, le blocus jihadiste levé sur la route menant à Mourdiah et Nara",
+      "link": "https://www.rfi.fr/fr/afrique/20260625-au-mali-le-blocus-jihadiste-lev%C3%A9-sur-la-route-menant-%C3%A0-mourdiah-et-nara",
+      "source": "RFI Afrique",
+      "date": "2026-06-25T01:03:58.000Z",
+      "rating": "C2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
       "majors": [
         {
           "type": "rupture",
-          "keyword": "red line"
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
+      "title": "Au Liban, le Hezbollah accuse Israël d’avoir violé deux fois le cessez-le-feu « en moins de quarante-huit heures »",
+      "link": "https://www.lemonde.fr/international/article/2026/06/25/au-liban-le-hezbollah-accuse-israel-d-avoir-viole-deux-fois-le-cessez-le-feu-en-moins-de-quarante-huit-heures_6713237_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-06-24T23:14:38.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Hezbollah says Israeli strike on civilians a ‘flagrant’ ceasefire violation despite its own commitment to truce",
+      "link": "https://www.aa.com.tr/en/middle-east/hezbollah-says-israeli-strike-on-civilians-a-flagrant-ceasefire-violation-despite-its-own-commitment-to-truce/3977224",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-24T22:53:15.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
         }
       ]
     },
@@ -1160,112 +1224,48 @@
           "keyword": "génocide"
         }
       ]
-    },
-    {
-      "title": "Soudan : El-Obeid au bord de la catastrophe humanitaire selon l'ONU",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260624-soudan-el-obeid-au-bord-de-la-catastrophe-humanitaire-selon-l-onu",
-      "source": "France 24 Afrique",
-      "date": "2026-06-24T15:29:04.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "catastrophe"
-        }
-      ]
-    },
-    {
-      "title": "Une commission d'enquête de l'ONU déclare qu'Israël a commis un génocide à Gaza en ciblant délibérément des enfants",
-      "link": "https://www.bbc.com/afrique/articles/cn945e9ywzxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Afrique (FR)",
-      "date": "2026-06-24T14:25:52.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "Israël : une commission de l’ONU dénonce la poursuite d’un « génocide » dans la bande de Gaza",
-      "link": "https://www.lemonde.fr/international/video/2026/06/24/israel-une-commission-de-l-onu-denonce-la-poursuite-d-un-genocide-dans-la-bande-de-gaza_6713183_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-24T14:18:57.000Z",
-      "rating": "A1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "«Marine au pouvoir, les Arabes à l’abattoir!»: de l’Ardèche à l’Aveyron, la contagion d’un slogan raciste",
-      "link": "https://www.mediapart.fr/journal/france/240626/marine-au-pouvoir-les-arabes-l-abattoir-de-l-ardeche-l-aveyron-la-contagion-d-un-slogan-raciste",
-      "source": "Mediapart International",
-      "date": "2026-06-24T14:05:59.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "contagion"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      232
-    ],
-    [
-      "occident_fr",
-      118
-    ],
-    [
-      "occident_us",
-      107
-    ],
-    [
-      "golfe_mo",
-      98
+      184
     ],
     [
       "autre",
-      91
+      134
     ],
     [
-      "russie",
-      45
+      "occident_fr",
+      126
+    ],
+    [
+      "golfe_mo",
+      100
+    ],
+    [
+      "occident_us",
+      93
     ],
     [
       "bf_local",
-      40
+      43
     ],
     [
       "turquie",
-      37
-    ],
-    [
-      "sahel",
-      18
+      40
     ],
     [
       "chine",
-      14
+      35
+    ],
+    [
+      "russie",
+      33
+    ],
+    [
+      "sahel",
+      12
     ]
   ],
   "desks": [
@@ -1273,16 +1273,34 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 118,
+      "count": 86,
       "top": [
         {
-          "title": "Résolution du Parlement européen sur le Burkina : « Nulle et de nul effet », selon le gouvernement burkinabè",
-          "link": "https://www.minute.bf/resolution-du-parlement-europeen-sur-le-burkina-nulle-et-de-nul-effet-selon-le-gouvernement-burkinabe/",
-          "source": "Minute BF",
+          "title": "Transformation numérique, inclusion financière et financement des PME: le bilan d’un projet structurant au Burkina Faso",
+          "link": "https://www.sidwaya.info/transformation-numerique-inclusion-financiere-et-financement-des-pme-le-bilan-dun-projet-structurant-au-burkina-faso/",
+          "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
-          "theme": "P",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "C2"
+        },
+        {
+          "title": "Burkina/Diplomatie : « Les femmes diplomates utilisent leurs réseaux pour attirer des ressources au profit de l'économie », Wendegoudi Jacqueline Ouédraogo",
+          "link": "https://lefaso.net/spip.php?article147371",
+          "source": "Lefaso.net",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Promotion de la résilience au sein de l’AES: des pièces de théâtre remises à des radiodiffusions",
+          "link": "https://www.sidwaya.info/promotion-de-la-resilience-au-sein-de-laes-des-pieces-de-theatre-remises-a-des-radiodiffusions/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
         },
         {
           "title": "Burkina Faso: deux ans après l’enlèvement du journaliste Atiana Serge Oulon, un site d'info publie ses enquêtes",
@@ -1294,29 +1312,11 @@
           "rating": "C2"
         },
         {
-          "title": "Burkina: Le CEMGA lance la 3e édition du camp vacances sport au profit des pupilles de la Nation",
-          "link": "https://www.aib.media/burkina-le-cemga-lance-la-3e-edition-du-camp-vacances-sport-au-profit-des-pupilles-de-la-nation/",
-          "source": "AIB — Agence Information BF",
+          "title": "Journées scientifiques de la Police nationale: des réflexions pour renforcer les potentialités technologiques",
+          "link": "https://www.sidwaya.info/journees-scientifiques-de-la-police-nationale-des-reflexions-pour-renforcer-les-potentialites-technologiques/",
+          "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
           "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Burkina : Ouagadougou accueille le Forum africain sur la santé et la sécurité sociale du 2 au 4 juillet 2026",
-          "link": "https://www.minute.bf/burkina-ouagadougou-accueille-le-forum-africain-sur-la-sante-et-la-securite-sociale-du-2-au-4-juillet-2026/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Coupe du monde 2026 : « Nous avons été meilleurs que l’Angleterre dans le combat »",
-          "link": "https://burkina24.com/2026/06/24/coupe-du-monde-2026-nous-avons-ete-meilleurs-que-langleterre-dans-le-combat/",
-          "source": "Burkina24",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
           "relevance": "A",
           "rating": "C2"
         }
@@ -1326,29 +1326,38 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 58,
+      "count": 56,
       "top": [
         {
-          "title": "Viral video: Police dismisses false bandits narrative in Katsina",
-          "link": "https://www.vanguardngr.com/2026/06/viral-video-police-dismisses-false-bandits-narrative/",
+          "title": "FG orders banks, others to freeze assets of terrorism financiers",
+          "link": "https://www.vanguardngr.com/2026/06/fg-orders-banks-others-to-freeze-assets-of-terrorism-financiers/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
-          "title": "Northern communities need urgent investment in health, education — Shettima",
-          "link": "https://www.vanguardngr.com/2026/06/northern-communities-need-urgent-investment-in-health-education-shettima/",
+          "title": "2027: Why Seriake Dickson’s NDC can’t be a viable ruling party",
+          "link": "https://www.vanguardngr.com/2026/06/2027-why-seriake-dicksons-ndc-cant-be-a-viable-ruling-party/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
-          "title": "No nation can finance its development on external dependence alone — FG",
-          "link": "https://www.vanguardngr.com/2026/06/no-nation-can-finance-its-development-on-external-dependence-alone-fg/",
+          "title": "Bokkos Attack: IGP assures Gov Mutfwang perpetrators will face justice",
+          "link": "https://www.vanguardngr.com/2026/06/bokkos-attack-igp-assures-gov-mutfwang-perpetrators-will-face-justice/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "AFNIS 2026: Tinubu pushes for united African front on solid minerals development",
+          "link": "https://www.vanguardngr.com/2026/06/afnis-2026-tinubu-pushes-for-united-african-front-on-solid-minerals-development/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
@@ -1356,22 +1365,13 @@
           "rating": "F2"
         },
         {
-          "title": "IGP raises alarm over rising killings of police officers nationwide",
-          "link": "https://www.vanguardngr.com/2026/06/igp-raises-alarm-over-rising-killings-of-police-officers-nationwide-2/",
+          "title": "NDLEA dismantles industrial-scale meth lab in Oyo Forest",
+          "link": "https://www.vanguardngr.com/2026/06/ndlea-dismantles-industrial-scale-meth-lab-in-oyo-forest/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "IGP raises alarm over rising killings of police officers nationwide",
-          "link": "https://www.vanguardngr.com/2026/06/igp-raises-alarm-over-rising-killings-of-police-officers-nationwide/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         }
       ]
     },
@@ -1379,7 +1379,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 40,
+      "count": 28,
       "top": [
         {
           "title": "Coupe du Monde 2026 : « On a joué avec nos valeurs » (Sébastien Desabre, entraîneur de la RD Congo)",
@@ -1388,15 +1388,6 @@
           "zone": "3. Afrique centrale",
           "theme": null,
           "relevance": ".",
-          "rating": "C2"
-        },
-        {
-          "title": "Soudan : El-Obeid au bord de la catastrophe humanitaire selon l'ONU",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260624-soudan-el-obeid-au-bord-de-la-catastrophe-humanitaire-selon-l-onu",
-          "source": "France 24 Afrique",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "H",
-          "relevance": "A",
           "rating": "C2"
         },
         {
@@ -1409,20 +1400,29 @@
           "rating": "C2"
         },
         {
+          "title": "Après El Fasher, le risque de nouveaux massacres commis par les FSR pèse sur El Obeid",
+          "link": "https://legrandcontinent.eu/fr/2026/06/25/apres-el-fasher-le-risque-de-nouveaux-massacres-commis-par-les-fsr-pese-sur-el-obeid/",
+          "source": "Le Grand Continent",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "DR Congo: Lutte contre Ebola : le Royaume du Maroc renforce les capacités de la MONUSCO en Ituri avec un don de neuf tonnes de matériel et équipements médicaux",
+          "link": "https://reliefweb.int/report/democratic-republic-congo/lutte-contre-ebola-le-royaume-du-maroc-renforce-les-capacites-de-la-monusco-en-ituri-avec-un-don-de-neuf-tonnes-de-materiel-et-equipements-medicaux",
+          "source": "ReliefWeb",
+          "zone": "3. Afrique centrale",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Soudan : le Conseil de sécurité de l’ONU alerte du danger d’atrocités de masse à El-Obeid",
           "link": "https://tchadinfos.com/2026/06/24/soudan-le-conseil-de-securite-de-lonu-alerte-du-danger-datrocites-de-masse-a-el-obeid/",
           "source": "Tchadinfos",
           "zone": "5. Corne de l’Afrique",
           "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Violences faites aux femmes : le gouvernement camerounais accusé d’avoir failli à ses engagements",
-          "link": "https://fr.journalducameroun.com/violences-faites-aux-femmes-le-gouvernement-camerounais-accuse-davoir-failli-a-ses-engagements/",
-          "source": "Journal du Cameroun",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1432,7 +1432,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 30,
+      "count": 24,
       "top": [
         {
           "title": "« Soussou » : l’influenceur jordanien raillé après Algérie-Jordanie au Mondial 2026",
@@ -1441,7 +1441,7 @@
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "I",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
           "title": "Luca Zidane ciblé par une intox avant le choc Algérie-Autriche",
@@ -1453,31 +1453,31 @@
           "rating": "F2"
         },
         {
-          "title": "Mondial 2026 : une violente bagarre éclate entre supporters algériens et jordaniens au Qatar",
-          "link": "https://fr.hespress.com/478760-mondial-2026-une-violente-bagarre-eclate-entre-supporters-algeriens-et-jordaniens-au-qatar.html",
+          "title": "Mondial 2026 : Casablanca multiplie les fan zones pour le plus grand bonheur des supporters",
+          "link": "https://fr.hespress.com/478700-mondial-2026-casablanca-multiplie-les-fan-zones-pour-le-plus-grand-bonheur-des-supporters.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Mondial 2026 : Les équipes africaines entre deux rives",
+          "link": "https://lesoleil.sn/actualites/sports/mondial-2026/mondial-2026-les-equipes-africaines-entre-deux-rives/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "L",
           "relevance": "A",
           "rating": "F1"
         },
         {
-          "title": "Mondial 2026: Les titans du football mondial en quête du Soulier d’or",
-          "link": "https://fr.hespress.com/478744-mondial-2026-les-titans-du-football-mondial-en-quete-du-soulier-dor.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Hervé Renard quittera la sélection tunisienne après la Coupe du monde 2026",
+          "link": "https://www.wakatsera.com/herve-renard-quittera-la-selection-tunisienne-apres-la-coupe-du-monde-2026/",
+          "source": "Wakat Séra",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "À Mawazine, Hatim Ammor entre musique et passion du football",
-          "link": "https://fr.hespress.com/478728-a-mawazine-hatim-ammor-entre-musique-et-passion-du-football.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "F2"
+          "rating": "C2"
         }
       ]
     },
@@ -1485,34 +1485,16 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 146,
+      "count": 139,
       "top": [
         {
-          "title": "Une commission d'enquête de l'ONU déclare qu'Israël a commis un génocide à Gaza en ciblant délibérément des enfants",
-          "link": "https://www.bbc.com/afrique/articles/cn945e9ywzxo?at_medium=RSS&at_campaign=rss",
-          "source": "BBC Afrique (FR)",
-          "zone": "8. Moyen-Orient",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "B1"
-        },
-        {
-          "title": "Israël : une commission de l’ONU dénonce la poursuite d’un « génocide » dans la bande de Gaza",
-          "link": "https://www.lemonde.fr/international/video/2026/06/24/israel-une-commission-de-l-onu-denonce-la-poursuite-d-un-genocide-dans-la-bande-de-gaza_6713183_3210.html",
+          "title": "Au Liban, le Hezbollah accuse Israël d’avoir violé deux fois le cessez-le-feu « en moins de quarante-huit heures »",
+          "link": "https://www.lemonde.fr/international/article/2026/06/25/au-liban-le-hezbollah-accuse-israel-d-avoir-viole-deux-fois-le-cessez-le-feu-en-moins-de-quarante-huit-heures_6713237_3210.html",
           "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A1"
-        },
-        {
-          "title": "Attacks on Lebanon 'red line'; Iran to respond to Israeli violations: Senior diplomat",
-          "link": "https://presstv.ir/Detail/2026/06/23/770988/Iran-Lebanon-Israel-United-States-memorandum",
-          "source": "Press TV (Iran)",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
+          "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "B2"
         },
         {
           "title": "US-Iran deal may leave Israel's Netanyahu as biggest casualty",
@@ -1524,9 +1506,27 @@
           "rating": "F2"
         },
         {
+          "title": "Hezbollah says Israeli strike on civilians a ‘flagrant’ ceasefire violation despite its own commitment to truce",
+          "link": "https://www.aa.com.tr/en/middle-east/hezbollah-says-israeli-strike-on-civilians-a-flagrant-ceasefire-violation-despite-its-own-commitment-to-truce/3977224",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
           "title": "Le sud du Liban, pièce occupée du grand marchandage régional",
           "link": "https://www.liberation.fr/international/moyen-orient/le-sud-du-liban-piece-occupee-du-grand-marchandage-regional-20260624_RVQ6FTAX6VBCLDCTU4AHLL7SAM/",
           "source": "Libération International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Géopolitique des pillages culturels. Avec Saphia Azzeddine",
+          "link": "https://www.iris-france.org/geopolitique-des-pillages-culturels-avec-saphia-azzeddine/",
+          "source": "IRIS France",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
@@ -1538,8 +1538,35 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 163,
+      "count": 209,
       "top": [
+        {
+          "title": "Un conditionnement de l’opinion publique internationale",
+          "link": "https://www.sidwaya.info/un-conditionnement-de-lopinion-publique-internationale/",
+          "source": "Sidwaya",
+          "zone": "9. Europe occidentale",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "C2"
+        },
+        {
+          "title": "Rome airports warn of summer ‘disaster’ unless EU border controls suspended",
+          "link": "https://www.ft.com/content/808143bc-74e0-4423-998f-7e2c7faeeb3c",
+          "source": "Financial Times World",
+          "zone": "9. Europe occidentale",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Mondial 2026 : le Maroc renverse Haïti à l'issue d'un match plein de suspens",
+          "link": "https://fr.hespress.com/478787-mondial-2026-le-maroc-renverse-haiti-a-lissue-dun-match-plein-de-suspens.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "17. Amérique C. & Caraïbes",
+          "theme": "P",
+          "relevance": ".",
+          "rating": "A2"
+        },
         {
           "title": "Mondial 2026 : la Suisse domine le Canada et s’empare de la première place, la Bosnie se rapproche des 16es",
           "link": "https://fr.hespress.com/478781-mondial-2026-la-suisse-domine-le-canada-et-sempare-de-la-premiere-place-la-bosnie-se-rapproche-des-16es.html",
@@ -1550,15 +1577,6 @@
           "rating": "A1"
         },
         {
-          "title": "Le grand football entre dans la phase décisive de la phase de groupes : 1xBet présente les affiches phares de la troisième journée du Tournoi planétaire",
-          "link": "https://journaldutchad.com/le-grand-football-entre-dans-la-phase-decisive-de-la-phase-de-groupes-1xbet-presente-les-affiches-phares-de-la-troisieme-journee-du-tournoi-planetaire/",
-          "source": "Journal du Tchad",
-          "zone": "9. Europe occidentale",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "A2"
-        },
-        {
           "title": "Économie russe : le marché boursier est à son niveau le plus faible depuis mars 2023",
           "link": "https://legrandcontinent.eu/fr/2026/06/24/economie-russe-le-marche-boursier-est-a-son-niveau-le-plus-faible-depuis-mars-2023/",
           "source": "Le Grand Continent",
@@ -1566,24 +1584,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "Cristiano Ronaldo marque l’histoire, alors que Haïti fait ses adieux à la Coupe du monde",
-          "link": "https://legrandcontinent.eu/fr/2026/06/24/cristiano-ronaldo-marque-lhistoire-alors-que-haiti-fait-ses-adieux-a-la-coupe-du-monde/",
-          "source": "Le Grand Continent",
-          "zone": "17. Amérique C. & Caraïbes",
-          "theme": "P",
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "En Azerbaïdjan, les conditions carcérales se dégradent pour les opposants",
-          "link": "https://www.lemonde.fr/international/article/2026/06/25/en-azerbaidjan-les-conditions-carcerales-se-degradent-pour-les-opposants_6713236_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B2"
         }
       ]
     }
@@ -1592,7 +1592,8 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1600,42 +1601,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-24T22:40:03.352Z",
+      "at": "2026-06-25T04:34:08.066Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-24T22:40:03.360Z",
+      "at": "2026-06-25T04:34:08.074Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-24T22:40:37.848Z",
+      "at": "2026-06-25T04:34:50.566Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1951 articles"
+      "message": "110/170 flux OK, 1906 articles"
     },
     {
-      "at": "2026-06-24T22:40:40.811Z",
+      "at": "2026-06-25T04:34:53.415Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-24T22:40:41.118Z",
+      "at": "2026-06-25T04:34:53.705Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-24T22:40:41.122Z",
+      "at": "2026-06-25T04:34:53.710Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 6 alertes"
     },
     {
-      "at": "2026-06-24T22:40:41.123Z",
+      "at": "2026-06-25T04:34:53.710Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-24T22:40:41.123Z",
+      "at": "2026-06-25T04:34:53.710Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
