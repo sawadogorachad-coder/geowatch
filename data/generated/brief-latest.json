@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-25T04:34:53.708Z",
+  "generatedAt": "2026-06-25T09:45:21.216Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1906,
+    "ok": 114,
+    "failed": 56,
+    "articles": 1946,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -88,8 +88,18 @@
         "count": 10
       },
       {
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
+        "count": 10
+      },
+      {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
+        "count": 10
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -133,6 +143,11 @@
         "count": 30
       },
       {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "count": 20
+      },
+      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
@@ -146,6 +161,11 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -293,6 +313,11 @@
         "count": 30
       },
       {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "count": 20
+      },
+      {
         "id": "rss_bbc_afr",
         "name": "BBC Afrique (FR)",
         "count": 30
@@ -390,7 +415,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 25
+        "count": 21
       },
       {
         "id": "rss_bbc_africa",
@@ -485,7 +510,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 29
+        "count": 25
       },
       {
         "id": "rss_pressTV",
@@ -510,7 +535,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -535,11 +560,6 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
-      },
-      {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
         "count": 20
       },
       {
@@ -595,19 +615,9 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "fetch failed"
       },
       {
         "id": "rss_cridem",
@@ -665,11 +675,6 @@
         "error": "HTTP 500"
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -678,11 +683,6 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -727,7 +727,7 @@
       {
         "id": "rss_libya_obs",
         "name": "Libya Observer",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_acled",
@@ -763,11 +763,6 @@
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "error": "fetch failed"
       },
       {
         "id": "rss_apa",
@@ -845,6 +840,11 @@
         "error": "HTTP 406"
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -857,16 +857,16 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 39,
-    "alerts": 6,
-    "criticalAlerts": 4,
-    "sourcesDistinct": 74
+    "bfAes": 26,
+    "alerts": 12,
+    "criticalAlerts": 9,
+    "sourcesDistinct": 71
   },
   "topDevelopments": [
     {
@@ -969,18 +969,50 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina Faso: deux ans après l’enlèvement du journaliste Atiana Serge Oulon, un site d'info publie ses enquêtes",
-      "link": "https://www.rfi.fr/fr/afrique/20260624-burkina-faso-deux-ans-apr%C3%A8s-l-enl%C3%A8vement-du-journaliste-atiana-serge-oulon-un-site-d-info-publie-ses-enqu%C3%AAtes",
-      "pubDate": "2026-06-24T17:39:01.000Z",
-      "description": "Deux ans jour pour jour après que le journaliste Atiana Serge Oulon a été enlevé à son domicile de Ouagadougou, le site d’information Sahel Horizon rend hommage au journaliste burkinabè jeudi 24 juin en publiant des messages de soutien, ainsi que ses enquêtes. Alors que les autorités affirment l’avoir envoyé au front anti-jihadistes, Reporters sans frontières a révélé qu’il a été séquestré, torturé et est depuis maintenu en détention.",
-      "_source": "RFI Afrique",
-      "_sourceId": "rss_rfiafr",
-      "_sourceCat": "africa",
-      "_sourceBloc": "occident_fr",
+      "title": "Mali/Communication, Economie numérique et Modernisation de l’Administration: les grandes réalisations et les perspectives",
+      "link": "https://www.aib.media/mali-communication-economie-numerique-et-modernisation-de-ladministration-les-grandes-realisations-et-les-perspectives/",
+      "pubDate": "2026-06-25T09:17:26.000Z",
+      "description": "Mali/Communication, Economie numérique et Modernisation de l’Administration: les grandes réalisations et les perspectives Bamako, 24 juin 2026 (AMAP)-Le ministre Alhamdou Ag Ilyène a présenté le bilan des actions réalisées par son département pendant les cinq dernières années. Il a également évoqué les grands chantiers dans le cadre de l’AES plusieurs avancées ont été citées, notamment la digitalisation du casier judiciaire, l’introduction des paiements électroniques pour certains services publics et le lancement progressif du Guichet unique administratif. A la faveur de toutes ces avancées, le ministre a révélé que plusieurs milliers d’incidents réseau ont été résolus et cela va se consolider avec le déploiement d’autres solutions numériques destinées à améliorer la performance de l’administration publique. Concernant les perspectives, Alhamdou Ag Ilyène a fait savoir que son département entend poursuivre les réformes engagées. Parmi les priorités annoncées figurent la finalisation de la Tour de l’ORTM, le lancement de nouvelles chaînes régionales, la généralisation de la signature électronique, le renforcement de la cybersécurité et l’extension des infrastructures numériques. Le ministre a également annoncé la poursuite de la modernisation de La Poste avec la perspective de sa transformation en société d’État, ainsi que le développement de nouveaux services comme Post’Express et la Banque Postale. La communication au sein de la Confédération des États du Sahel (AES) figure également parmi les perspectives. A cet égard, le ministre a rappelé la convention de partenariat entre les médias publics du Mali, du Burkina Faso et du Niger, consacrant la création du portail de la Web TV AES, de la TV AES, de la Radio AES et de l’Agence de presse AES. Toutes choses qui traduisent, selon lui, la volonté des Chefs d’Etat de développer des plateformes communes de communication entre les États de l’AES. Agence Malienne de Presse LA/KM",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "military"
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 123,
+      "_zone": 1,
+      "_theme": "T",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "L",
+      "_desk": "A1"
+    },
+    {
+      "title": "Niger: le Premier ministre reçoit les ministres en charge des Finances et des Mines du Mali et du Burkina Faso",
+      "link": "https://www.aib.media/niger-le-premier-ministre-recoit-les-ministres-en-charge-des-finances-et-des-mines-du-mali-et-du-burkina-faso/",
+      "pubDate": "2026-06-25T09:22:23.000Z",
+      "description": "Niger: le Premier ministre reçoit les ministres en charge des Finances et des Mines du Mali et du Burkina Faso Ouagadougou, 24 juin (AIB) – Le Premier ministre de la République du Niger, Ali Mahamane Lamine Zeine, a reçu, ce mercredi 24 juin 2026 à Niamey, les ministres en charge des Finances et des Mines du Burkina Faso et du Mali, en compagnie de leurs homologues nigériens chargés des Affaires étrangères et du Pétrole . Il s’agit du Dr Aboubakar Nacanabo, ministre de l’Économie et des Finances du Burkina Faso, de Yacouba Zabré Gouba, ministre de l’Énergie, des Mines et des Carrières du Burkina Faso, de Alousseini Sanou, ministre d’État, ministre de l’Économie et des Finances du Mali et du Pr Amadou Keïta, ministre des Mines du Mali. Notons que le Burkina Faso, le Mali et le Niger forment la Confédération des États du Sahel (AES). Ces États entendent unir leurs efforts afin de promouvoir un développement intégré de l’espace communautaire. Agence d’information du Burkina Source : Agence nigérienne de presse",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -992,9 +1024,9 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 119,
+      "_score": 115,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1095,40 +1127,137 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Sports, jeunesse et emploi : L’AES harmonise ses initiatives régionales à Ouagadougou",
-      "link": "https://netafrique.net/sports-jeunesse-et-emploi-laes-harmonise-ses-initiatives-regionales-a-ouagadougou/",
-      "pubDate": "2026-06-24T20:38:46.000Z",
-      "description": "Réunis à Ouagadougou, les experts de la Confédération des États du Sahel examinent et valident les projets phares destinés à renforcer la coopération dans les secteurs de la jeunesse, du sport et de l’emploi. Les travaux des experts de la Confédération des États du Sahel (AES) dans les domaines du sport, de la jeunesse et de l’emploi ont débuté ce mercredi 24 juin 2026 à Ouagadougou. Cette session technique de trois jours précède la réunion ministérielle prévue le 26 juin et vise à harmoniser les activités des ministères sectoriels à l’échelle confédérale. La cérémonie d’ouverture a été présidée par Colette Ouédraogo, Secrétaire générale du ministère burkinabè des Sports, de la Jeunesse et de l’Emploi. Dans son allocution, elle a rappelé que cette rencontre traduit la vision des Chefs d’État de l’AES : bâtir une approche concertée, mutualiser les initiatives et renforcer la coopération pour répondre efficacement aux défis du Sahel. Durant les travaux, les experts se penchent sur quatre projets structurants notamment le Centre de Développement de la Jeunesse et des Sports (CDJS-AES), le Forum Confédéral de la Jeunesse et du Volontariat, les Jeux de l’AES (JAES) et le Salon Confédéral de l’Emploi (SCE-AES) Les conclusions de cette session technique seront soumises à l’adoption des ministres en charge des secteurs concernés lors de leur réunion du vendredi 26 juin 2026. L’article Sports, jeunesse et emploi : L’AES harmonise ses initiatives régionales à Ouagadougou est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Double séisme au Venezuela, au moins 32 morts et plus de 700 blessés",
+      "link": "https://telquel.ma/instant-t/2026/06/25/double-seisme-au-venezuela-au-moins-32-morts-et-plus-de-700-blesses_1995910/",
+      "source": "TelQuel (Maroc)",
+      "date": "2026-06-25T09:27:50.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "West Asia war LIVE: As IRGC issue warning, Rubio says Hormuz tolls could 'spread like contagion' to other waterways",
+      "link": "https://www.thehindu.com/news/international/west-asia-war-iran-usa-israel-conflict-washington-tehran-peace-deal-donald-trump-strait-of-hormuz-live-updates-june-25-2026/article71144582.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-25T08:55:47.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "contagion"
+        }
+      ]
+    },
+    {
+      "title": "Israeli army fire kills Palestinian in northern Gaza in latest ceasefire violation",
+      "link": "https://www.aa.com.tr/en/middle-east/israeli-army-fire-kills-palestinian-in-northern-gaza-in-latest-ceasefire-violation/3977431",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-06-25T07:37:42.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Le Venezuela frappé par un double séisme meurtrier",
+      "link": "https://www.mediapart.fr/journal/international/250626/le-venezuela-frappe-par-un-double-seisme-meurtrier",
+      "source": "Mediapart International",
+      "date": "2026-06-25T06:58:39.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Centrafrique: des épreuves du bac dans un lycée de Bangui un an après un mouvement de panique mortel",
+      "link": "https://www.rfi.fr/fr/afrique/20260625-centrafrique-des-%C3%A9preuves-du-bac-dans-un-lyc%C3%A9e-de-bangui-un-an-apr%C3%A8s-un-mouvement-de-panique-mortel",
+      "source": "RFI Afrique",
+      "date": "2026-06-25T06:57:43.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "panique"
+        }
+      ]
+    },
+    {
+      "title": "Le Venezuela sous le choc après un double séisme meurtrier, le plus violent depuis 126 ans",
+      "link": "https://www.lemonde.fr/planete/article/2026/06/25/le-venezuela-sous-le-choc-apres-un-double-seisme-le-plus-violent-depuis-126-ans-on-a-eu-l-impression-que-la-terre-n-allait-jamais-s-arreter-de-trembler_6713377_3244.html",
+      "source": "Le Monde International",
+      "date": "2026-06-25T06:35:43.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Venezuela earthquakes: At least 32 dead, 700 injured; La Guaria a disaster zone, says Delcy Rodriguez",
+      "link": "https://www.thehindu.com/news/international/venezuela-twin-earthquakes-death-toll-delcy-rodriques-updates-june-25-2026/article71144968.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-06-25T06:17:19.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Trump Dodges Responsibility for Minab School Massacre",
+      "link": "https://sputnikglobe.com/20260625/trump-dodges-responsibility-for-minab-school-massacre-1124355540.html",
+      "source": "RIA Novosti (EN)",
+      "date": "2026-06-25T04:50:46.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "massacre"
+        }
+      ]
+    },
     {
       "title": "Rome airports warn of summer ‘disaster’ unless EU border controls suspended",
       "link": "https://www.ft.com/content/808143bc-74e0-4423-998f-7e2c7faeeb3c",
@@ -1150,7 +1279,7 @@
       "link": "https://www.thehindu.com/news/international/japan-earthquake-damage-toll-updates-on-june-25-2026/article71143775.ece",
       "source": "The Hindu (Inde)",
       "date": "2026-06-25T01:15:14.000Z",
-      "rating": "F1",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1178,38 +1307,6 @@
       ]
     },
     {
-      "title": "Au Liban, le Hezbollah accuse Israël d’avoir violé deux fois le cessez-le-feu « en moins de quarante-huit heures »",
-      "link": "https://www.lemonde.fr/international/article/2026/06/25/au-liban-le-hezbollah-accuse-israel-d-avoir-viole-deux-fois-le-cessez-le-feu-en-moins-de-quarante-huit-heures_6713237_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-06-24T23:14:38.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Hezbollah says Israeli strike on civilians a ‘flagrant’ ceasefire violation despite its own commitment to truce",
-      "link": "https://www.aa.com.tr/en/middle-east/hezbollah-says-israeli-strike-on-civilians-a-flagrant-ceasefire-violation-despite-its-own-commitment-to-truce/3977224",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-06-24T22:53:15.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Le cinéma rwandais face au génocide [4/5]",
       "link": "https://www.rfi.fr/fr/podcasts/reportage-afrique/20260624-le-cin%C3%A9ma-rwandais-face-au-g%C3%A9nocide-4-5",
       "source": "RFI Afrique",
@@ -1229,43 +1326,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      184
+      183
     ],
     [
       "autre",
-      134
+      144
     ],
     [
       "occident_fr",
-      126
+      123
     ],
     [
       "golfe_mo",
-      100
+      99
     ],
     [
       "occident_us",
       93
     ],
     [
-      "bf_local",
+      "turquie",
       43
     ],
     [
-      "turquie",
-      40
+      "russie",
+      42
     ],
     [
       "chine",
       35
     ],
     [
-      "russie",
-      33
+      "bf_local",
+      25
     ],
     [
       "sahel",
-      12
+      13
     ]
   ],
   "desks": [
@@ -1273,7 +1370,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 86,
+      "count": 67,
       "top": [
         {
           "title": "Transformation numérique, inclusion financière et financement des PME: le bilan d’un projet structurant au Burkina Faso",
@@ -1303,20 +1400,20 @@
           "rating": "C2"
         },
         {
-          "title": "Burkina Faso: deux ans après l’enlèvement du journaliste Atiana Serge Oulon, un site d'info publie ses enquêtes",
-          "link": "https://www.rfi.fr/fr/afrique/20260624-burkina-faso-deux-ans-apr%C3%A8s-l-enl%C3%A8vement-du-journaliste-atiana-serge-oulon-un-site-d-info-publie-ses-enqu%C3%AAtes",
-          "source": "RFI Afrique",
+          "title": "Mali/Communication, Economie numérique et Modernisation de l’Administration: les grandes réalisations et les perspectives",
+          "link": "https://www.aib.media/mali-communication-economie-numerique-et-modernisation-de-ladministration-les-grandes-realisations-et-les-perspectives/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
+          "theme": "T",
+          "relevance": "L",
+          "rating": "A2"
         },
         {
-          "title": "Journées scientifiques de la Police nationale: des réflexions pour renforcer les potentialités technologiques",
-          "link": "https://www.sidwaya.info/journees-scientifiques-de-la-police-nationale-des-reflexions-pour-renforcer-les-potentialites-technologiques/",
-          "source": "Sidwaya",
+          "title": "Niger: le Premier ministre reçoit les ministres en charge des Finances et des Mines du Mali et du Burkina Faso",
+          "link": "https://www.aib.media/niger-le-premier-ministre-recoit-les-ministres-en-charge-des-finances-et-des-mines-du-mali-et-du-burkina-faso/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "E",
           "relevance": "A",
           "rating": "C2"
         }
@@ -1326,20 +1423,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 56,
+      "count": 62,
       "top": [
         {
-          "title": "FG orders banks, others to freeze assets of terrorism financiers",
-          "link": "https://www.vanguardngr.com/2026/06/fg-orders-banks-others-to-freeze-assets-of-terrorism-financiers/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "2027: Why Seriake Dickson’s NDC can’t be a viable ruling party",
-          "link": "https://www.vanguardngr.com/2026/06/2027-why-seriake-dicksons-ndc-cant-be-a-viable-ruling-party/",
+          "title": "Senate’s passage of state police bill historic, says Sanwo-Olu",
+          "link": "https://www.vanguardngr.com/2026/06/senates-passage-of-state-police-bill-historic-says-sanwo-olu/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1347,29 +1435,38 @@
           "rating": "F2"
         },
         {
-          "title": "Bokkos Attack: IGP assures Gov Mutfwang perpetrators will face justice",
-          "link": "https://www.vanguardngr.com/2026/06/bokkos-attack-igp-assures-gov-mutfwang-perpetrators-will-face-justice/",
+          "title": "OOUTH resident doctors suspend 10-day warning strike",
+          "link": "https://www.vanguardngr.com/2026/06/oouth-resident-doctors-suspend-10-day-warning-strike/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "Standard Chartered eyes sale of Retail Business in Ghana, to retain corporate and investment banking",
+          "link": "https://www.myjoyonline.com/standard-chartered-eyes-sale-of-retail-business-in-ghana-to-retain-corporate-and-investment-banking/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "L",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "AFNIS 2026: Tinubu pushes for united African front on solid minerals development",
-          "link": "https://www.vanguardngr.com/2026/06/afnis-2026-tinubu-pushes-for-united-african-front-on-solid-minerals-development/",
+          "title": "Photos: Second batch of Nigerians evacuated from South Africa arrive Lagos",
+          "link": "https://www.vanguardngr.com/2026/06/second-batch-of-nigerians-evacuated-from-south-africa-arrive-lagos/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "NDLEA dismantles industrial-scale meth lab in Oyo Forest",
-          "link": "https://www.vanguardngr.com/2026/06/ndlea-dismantles-industrial-scale-meth-lab-in-oyo-forest/",
+          "title": "2026 NBA Elections: 35 candidates cleared to contest as 3 SANs eye presidency",
+          "link": "https://www.vanguardngr.com/2026/06/2026-nba-elections-35-candidates-cleared-to-contest-as-3-sans-eye-presidency/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1379,17 +1476,8 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 28,
+      "count": 31,
       "top": [
-        {
-          "title": "Coupe du Monde 2026 : « On a joué avec nos valeurs » (Sébastien Desabre, entraîneur de la RD Congo)",
-          "link": "https://burkina24.com/2026/06/24/coupe-du-monde-2026-on-a-joue-avec-nos-valeurs-sebastien-desabre-entraineur-de-la-rd-congo/",
-          "source": "Burkina24",
-          "zone": "3. Afrique centrale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "C2"
-        },
         {
           "title": "Le cinéma rwandais face au génocide [4/5]",
           "link": "https://www.rfi.fr/fr/podcasts/reportage-afrique/20260624-le-cin%C3%A9ma-rwandais-face-au-g%C3%A9nocide-4-5",
@@ -1409,20 +1497,29 @@
           "rating": "A2"
         },
         {
-          "title": "DR Congo: Lutte contre Ebola : le Royaume du Maroc renforce les capacités de la MONUSCO en Ituri avec un don de neuf tonnes de matériel et équipements médicaux",
-          "link": "https://reliefweb.int/report/democratic-republic-congo/lutte-contre-ebola-le-royaume-du-maroc-renforce-les-capacites-de-la-monusco-en-ituri-avec-un-don-de-neuf-tonnes-de-materiel-et-equipements-medicaux",
-          "source": "ReliefWeb",
+          "title": "Centrafrique: des épreuves du bac dans un lycée de Bangui un an après un mouvement de panique mortel",
+          "link": "https://www.rfi.fr/fr/afrique/20260625-centrafrique-des-%C3%A9preuves-du-bac-dans-un-lyc%C3%A9e-de-bangui-un-an-apr%C3%A8s-un-mouvement-de-panique-mortel",
+          "source": "RFI Afrique",
           "zone": "3. Afrique centrale",
-          "theme": "H",
+          "theme": null,
+          "relevance": ".",
+          "rating": "C2"
+        },
+        {
+          "title": "« Pourquoi refuser aux Congolais ce que les Français et les Américains se sont accordé ? » : Sylvain Mutombo défend pied à pied le changement constitutionnel en RDC",
+          "link": "https://actualite.cd/2026/06/25/pourquoi-refuser-aux-congolais-ce-que-les-francais-et-les-americains-se-sont-accorde",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Soudan : le Conseil de sécurité de l’ONU alerte du danger d’atrocités de masse à El-Obeid",
-          "link": "https://tchadinfos.com/2026/06/24/soudan-le-conseil-de-securite-de-lonu-alerte-du-danger-datrocites-de-masse-a-el-obeid/",
-          "source": "Tchadinfos",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
+          "title": "DR Congo: DRC: Authorities must end support for armed group suspected of war crimes",
+          "link": "https://reliefweb.int/report/democratic-republic-congo/drc-authorities-must-end-support-armed-group-suspected-war-crimes",
+          "source": "ReliefWeb",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1432,34 +1529,43 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 24,
+      "count": 21,
       "top": [
         {
-          "title": "« Soussou » : l’influenceur jordanien raillé après Algérie-Jordanie au Mondial 2026",
-          "link": "https://www.tsa-algerie.com/soussou-linfluenceur-jordanien-raille-apres-algerie-jordanie-au-mondial-2026/",
-          "source": "TSA — Tout sur l'Algérie",
+          "title": "70e anniversaire de l’armée tunisienne | Neutralité politique et loyauté à l’Etat",
+          "link": "https://kapitalis.com/tunisie/2026/06/25/70e-anniversaire-de-larmee-tunisienne-neutralite-politique-et-loyaute-a-letat/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "I",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Luca Zidane ciblé par une intox avant le choc Algérie-Autriche",
-          "link": "https://www.tsa-algerie.com/luca-zidane-cible-par-une-intox-avant-le-choc-algerie-autriche/",
+          "title": "Mondial 2026 : l’Algérie attend l’Autriche, 5 infos à retenir",
+          "link": "https://www.tsa-algerie.com/mondial-2026-lalgerie-attend-lautriche-5-infos-a-retenir/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "H",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
-          "title": "Mondial 2026 : Casablanca multiplie les fan zones pour le plus grand bonheur des supporters",
-          "link": "https://fr.hespress.com/478700-mondial-2026-casablanca-multiplie-les-fan-zones-pour-le-plus-grand-bonheur-des-supporters.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Mondial 2026, Algérie-Autriche : « Lakhdar Belloumi » revient pour se venger de 1982",
+          "link": "https://www.tsa-algerie.com/mondial-2026-algerie-autriche-lakhdar-belloumi-revient-pour-se-venger-de-1982/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
+          "theme": "L",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F1"
+        },
+        {
+          "title": "Mondial 2026 : l'heure des comptes pour la Tunisie après un naufrage en mondiovision",
+          "link": "https://www.france24.com/fr/sports/20260625-mondial-2026-naufrage-tunisie-renard-elimination-pays-bas-bilan-football",
+          "source": "France 24",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "C2"
         },
         {
           "title": "Mondial 2026 : Les équipes africaines entre deux rives",
@@ -1469,15 +1575,6 @@
           "theme": "L",
           "relevance": "A",
           "rating": "F1"
-        },
-        {
-          "title": "Hervé Renard quittera la sélection tunisienne après la Coupe du monde 2026",
-          "link": "https://www.wakatsera.com/herve-renard-quittera-la-selection-tunisienne-apres-la-coupe-du-monde-2026/",
-          "source": "Wakat Séra",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1485,29 +1582,38 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 139,
+      "count": 104,
       "top": [
         {
-          "title": "Au Liban, le Hezbollah accuse Israël d’avoir violé deux fois le cessez-le-feu « en moins de quarante-huit heures »",
-          "link": "https://www.lemonde.fr/international/article/2026/06/25/au-liban-le-hezbollah-accuse-israel-d-avoir-viole-deux-fois-le-cessez-le-feu-en-moins-de-quarante-huit-heures_6713237_3210.html",
-          "source": "Le Monde International",
+          "title": "Galian 2026: la Fondation Internationale Babou Paulin Bamouni soutient l’excellence journalistique",
+          "link": "https://www.wakatsera.com/galian-2026-la-fondation-internationale-babou-paulin-bamouni-soutient-lexcellence-journalistique/",
+          "source": "Wakat Séra",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "C2"
         },
         {
-          "title": "US-Iran deal may leave Israel's Netanyahu as biggest casualty",
-          "link": "https://www.dawn.com/news/2010572/us-iran-deal-may-leave-israels-netanyahu-as-biggest-casualty",
+          "title": "'Missiles were flying all over': Trump says it may never be known who was at fault for strike on girls' school in Iran",
+          "link": "https://www.dawn.com/news/2010749/missiles-were-flying-all-over-trump-says-it-may-never-be-known-who-was-at-fault-for-strike-on-girls-school-in-iran",
           "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
           "theme": "P",
           "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "West Asia war LIVE: As IRGC issue warning, Rubio says Hormuz tolls could 'spread like contagion' to other waterways",
+          "link": "https://www.thehindu.com/news/international/west-asia-war-iran-usa-israel-conflict-washington-tehran-peace-deal-donald-trump-strait-of-hormuz-live-updates-june-25-2026/article71144582.ece",
+          "source": "The Hindu (Inde)",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Hezbollah says Israeli strike on civilians a ‘flagrant’ ceasefire violation despite its own commitment to truce",
-          "link": "https://www.aa.com.tr/en/middle-east/hezbollah-says-israeli-strike-on-civilians-a-flagrant-ceasefire-violation-despite-its-own-commitment-to-truce/3977224",
+          "title": "Israeli army fire kills Palestinian in northern Gaza in latest ceasefire violation",
+          "link": "https://www.aa.com.tr/en/middle-east/israeli-army-fire-kills-palestinian-in-northern-gaza-in-latest-ceasefire-violation/3977431",
           "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
           "theme": null,
@@ -1515,20 +1621,11 @@
           "rating": "F2"
         },
         {
-          "title": "Le sud du Liban, pièce occupée du grand marchandage régional",
-          "link": "https://www.liberation.fr/international/moyen-orient/le-sud-du-liban-piece-occupee-du-grand-marchandage-regional-20260624_RVQ6FTAX6VBCLDCTU4AHLL7SAM/",
-          "source": "Libération International",
+          "title": "Mission unaccomplished – Part I: America failed to achieve every war objective against Iran",
+          "link": "https://presstv.ir/Detail/2026/06/25/771046/mission-unaccomplished-partone-america-failed-war-objectives-against-iran",
+          "source": "Press TV (Iran)",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Géopolitique des pillages culturels. Avec Saphia Azzeddine",
-          "link": "https://www.iris-france.org/geopolitique-des-pillages-culturels-avec-saphia-azzeddine/",
-          "source": "IRIS France",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "D",
           "relevance": "A",
           "rating": "A2"
         }
@@ -1538,7 +1635,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 209,
+      "count": 239,
       "top": [
         {
           "title": "Un conditionnement de l’opinion publique internationale",
@@ -1548,6 +1645,15 @@
           "theme": "S",
           "relevance": "L",
           "rating": "C2"
+        },
+        {
+          "title": "Le Venezuela sous le choc après un double séisme meurtrier, le plus violent depuis 126 ans",
+          "link": "https://www.lemonde.fr/planete/article/2026/06/25/le-venezuela-sous-le-choc-apres-un-double-seisme-le-plus-violent-depuis-126-ans-on-a-eu-l-impression-que-la-terre-n-allait-jamais-s-arreter-de-trembler_6713377_3244.html",
+          "source": "Le Monde International",
+          "zone": "18. Amérique du Sud",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B1"
         },
         {
           "title": "Rome airports warn of summer ‘disaster’ unless EU border controls suspended",
@@ -1568,22 +1674,13 @@
           "rating": "A2"
         },
         {
-          "title": "Mondial 2026 : la Suisse domine le Canada et s’empare de la première place, la Bosnie se rapproche des 16es",
-          "link": "https://fr.hespress.com/478781-mondial-2026-la-suisse-domine-le-canada-et-sempare-de-la-premiere-place-la-bosnie-se-rapproche-des-16es.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "9. Europe occidentale",
-          "theme": "H",
-          "relevance": "L",
-          "rating": "A1"
-        },
-        {
-          "title": "Économie russe : le marché boursier est à son niveau le plus faible depuis mars 2023",
-          "link": "https://legrandcontinent.eu/fr/2026/06/24/economie-russe-le-marche-boursier-est-a-son-niveau-le-plus-faible-depuis-mars-2023/",
-          "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
+          "title": "Double séisme au Venezuela, au moins 32 morts et plus de 700 blessés",
+          "link": "https://telquel.ma/instant-t/2026/06/25/double-seisme-au-venezuela-au-moins-32-morts-et-plus-de-700-blesses_1995910/",
+          "source": "TelQuel (Maroc)",
+          "zone": "18. Amérique du Sud",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F1"
         }
       ]
     }
@@ -1592,8 +1689,7 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
-    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
@@ -1601,42 +1697,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-06-25T04:34:08.066Z",
+      "at": "2026-06-25T09:44:42.402Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-06-25T04:34:08.074Z",
+      "at": "2026-06-25T09:44:42.409Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-06-25T04:34:50.566Z",
+      "at": "2026-06-25T09:45:18.125Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1906 articles"
+      "message": "114/170 flux OK, 1946 articles"
     },
     {
-      "at": "2026-06-25T04:34:53.415Z",
+      "at": "2026-06-25T09:45:20.944Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-06-25T04:34:53.705Z",
+      "at": "2026-06-25T09:45:21.213Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-06-25T04:34:53.710Z",
+      "at": "2026-06-25T09:45:21.218Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 6 alertes"
+      "message": "8 developpements, 12 alertes"
     },
     {
-      "at": "2026-06-25T04:34:53.710Z",
+      "at": "2026-06-25T09:45:21.218Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-06-25T04:34:53.710Z",
+      "at": "2026-06-25T09:45:21.218Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
