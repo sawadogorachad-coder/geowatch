@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-03T09:35:28.795Z",
+  "generatedAt": "2026-07-03T10:10:15.258Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1936,
+    "ok": 117,
+    "failed": 53,
+    "articles": 1966,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -103,6 +103,11 @@
         "count": 10
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -141,6 +146,11 @@
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "count": 20
       },
       {
         "id": "rss_premiumng",
@@ -211,6 +221,11 @@
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
+      },
+      {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "count": 0
       },
       {
         "id": "rss_madamasr",
@@ -405,7 +420,7 @@
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 26
+        "count": 27
       },
       {
         "id": "rss_guardian",
@@ -485,7 +500,7 @@
       {
         "id": "rss_jpost",
         "name": "Jerusalem Post",
-        "count": 26
+        "count": 25
       },
       {
         "id": "rss_dailysabah",
@@ -615,11 +630,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -675,11 +685,6 @@
         "error": "HTTP 503"
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -692,7 +697,7 @@
       {
         "id": "rss_journ_cam",
         "name": "Journal du Cameroun",
-        "error": "fetch failed"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -735,11 +740,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_libya_obs",
         "name": "Libya Observer",
         "error": "HTTP 404"
@@ -762,7 +762,7 @@
       {
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_friedrich",
@@ -866,7 +866,7 @@
     "bfAes": 46,
     "alerts": 9,
     "criticalAlerts": 6,
-    "sourcesDistinct": 72
+    "sourcesDistinct": 73
   },
   "topDevelopments": [
     {
@@ -1135,6 +1135,22 @@
   ],
   "alerts": [
     {
+      "title": "CDF Munir arrives in Tehran for funeral of assassinated supreme leader Khamenei",
+      "link": "https://www.dawn.com/news/2012668/cdf-munir-arrives-in-tehran-for-funeral-of-assassinated-supreme-leader-khamenei",
+      "source": "Dawn (Pakistan)",
+      "date": "2026-07-03T10:04:53.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinated"
+        }
+      ]
+    },
+    {
       "title": "Disaster averted as gas tanker leaks on Lagos road",
       "link": "https://punchng.com/disaster-averted-as-gas-tanker-leaks-on-lagos-road/?utm_source=rss.punchng.com&utm_medium=web",
       "source": "Punch (Nigeria)",
@@ -1151,6 +1167,22 @@
       ]
     },
     {
+      "title": "Human rights catastrophe unfolding in Sudan's al-Obeid, says UN's Turk",
+      "link": "https://www.al-monitor.com/originals/2026/07/human-rights-catastrophe-unfolding-sudans-al-obeid-says-uns-turk",
+      "source": "Al-Monitor",
+      "date": "2026-07-03T09:36:32.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "catastrophe"
+        }
+      ]
+    },
+    {
       "title": "Est de la RDC: « nous sommes prêts à appuyer les missions sur les sites identifiés pour le monitoring du cessez-le-feu \" (James Swan)",
       "link": "https://actualite.cd/2026/07/03/est-de-la-rdc-nous-sommes-prets-appuyer-les-missions-sur-les-sites-identifies-pour-le",
       "source": "ActualitéCD (RDC)",
@@ -1163,22 +1195,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "PM Shehbaz departs for Iran to attend funeral of assassinated supreme leader Khamenei",
-      "link": "https://www.dawn.com/news/2012668/pm-shehbaz-departs-for-iran-to-attend-funeral-of-assassinated-supreme-leader-khamenei",
-      "source": "Dawn (Pakistan)",
-      "date": "2026-07-03T08:21:35.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinated"
         }
       ]
     },
@@ -1261,52 +1277,36 @@
           "keyword": "séisme"
         }
       ]
-    },
-    {
-      "title": "Tentative d’assassinat à Monaco : un suspect identifié, un mandat d’arrêt émis",
-      "link": "https://www.lemonde.fr/societe/article/2026/07/02/tentative-d-assassinat-a-monaco-un-suspect-identifie-mandat-d-arret-emis_6718234_3224.html",
-      "source": "Le Monde International",
-      "date": "2026-07-02T21:01:03.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      191
+      199
     ],
     [
       "autre",
-      123
+      124
     ],
     [
       "occident_fr",
-      120
-    ],
-    [
-      "occident_us",
-      99
+      118
     ],
     [
       "golfe_mo",
-      96
+      99
     ],
     [
-      "turquie",
-      44
+      "occident_us",
+      94
     ],
     [
       "russie",
-      40
+      46
+    ],
+    [
+      "turquie",
+      42
     ],
     [
       "bf_local",
@@ -1314,11 +1314,11 @@
     ],
     [
       "chine",
-      35
+      33
     ],
     [
       "sahel",
-      13
+      6
     ]
   ],
   "desks": [
@@ -1326,7 +1326,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 82,
+      "count": 86,
       "top": [
         {
           "title": "Compte-rendu du Conseil des ministres du jeudi 02 juillet 2026",
@@ -1379,7 +1379,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 66,
+      "count": 63,
       "top": [
         {
           "title": "Or : Le Ghana oblige les compagnies minières à céder 30 % de leur production à l’État",
@@ -1418,12 +1418,12 @@
           "rating": "F2"
         },
         {
-          "title": "50 days after Orire kidnap saga: Hope of rescue beckons amidst fears of uncertainty",
-          "link": "https://www.vanguardngr.com/2026/07/50-days-after-orire-kidnap-saga-hope-of-rescue-beckons-amidst-fears-of-uncertainty/",
-          "source": "Vanguard (Nigeria)",
+          "title": "Disaster averted as gas tanker leaks on Lagos road",
+          "link": "https://punchng.com/disaster-averted-as-gas-tanker-leaks-on-lagos-road/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         }
       ]
@@ -1471,13 +1471,13 @@
           "rating": "C2"
         },
         {
-          "title": "RDC : quel rôle Joseph Kabila joue-t-il auprès de l’AFC/M23?",
-          "link": "https://www.rfi.fr/fr/podcasts/appels-sur-l-actualit%C3%A9/20260703-rdc-quel-r%C3%B4le-joseph-kabila-joue-t-il-aupr%C3%A8s-de-l-afc-m23",
-          "source": "RFI Moyen-Orient",
-          "zone": "4. Grands Lacs",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "C2"
+          "title": "Redevabilité et performance : la CNSS s’engage sur des objectifs mesurables avec l’État",
+          "link": "https://www.gabonreview.com/redevabilite-et-performance-la-cnss-sengage-sur-des-objectifs-mesurables-avec-letat/",
+          "source": "Gabon Review",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1485,8 +1485,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 27,
+      "count": 26,
       "top": [
+        {
+          "title": "La Libye, base arrière des FSR de Hemedti Dagalo",
+          "link": "https://kapitalis.com/tunisie/2026/07/03/la-libye-base-arriere-des-fsr-de-hemedti-dagalo/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Revue de presse de ce vendredi 3 juillet 2026",
           "link": "https://fr.hespress.com/479205-revue-de-presse-de-ce-vendredi-3-juillet-2026.html",
@@ -1522,15 +1531,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "B1"
-        },
-        {
-          "title": "Commission nationale des investissements : 29 conventions approuvées pour 42 MMDH et 9.800 emplois",
-          "link": "https://medias24.com/2026/07/03/commission-nationale-des-investissements-29-conventions-approuvees-pour-42-mmdh-et-9-800-emplois-1715061/",
-          "source": "Médias 24 (Maroc)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A1"
         }
       ]
     },
@@ -1538,7 +1538,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 105,
+      "count": 109,
       "top": [
         {
           "title": "Cérémonial militaire : « Thomas Sankara demeure une lumière pour notre avenir », le ministre Aboubakar Nacanabo",
@@ -1550,8 +1550,8 @@
           "rating": "C2"
         },
         {
-          "title": "PM Shehbaz departs for Iran to attend funeral of assassinated supreme leader Khamenei",
-          "link": "https://www.dawn.com/news/2012668/pm-shehbaz-departs-for-iran-to-attend-funeral-of-assassinated-supreme-leader-khamenei",
+          "title": "CDF Munir arrives in Tehran for funeral of assassinated supreme leader Khamenei",
+          "link": "https://www.dawn.com/news/2012668/cdf-munir-arrives-in-tehran-for-funeral-of-assassinated-supreme-leader-khamenei",
           "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
           "theme": "S",
@@ -1591,8 +1591,17 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 172,
+      "count": 167,
       "top": [
+        {
+          "title": "Un siècle de marche ouvre une nouvelle voie, la coopération sino-burkinabè écrit un nouveau chapitre",
+          "link": "https://leconomistedufaso.com/2026/07/03/un-siecle-de-marche-ouvre-une-nouvelle-voie-la-cooperation-sino-burkinabe-ecrit-un-nouveau-chapitre/",
+          "source": "L'Économiste du Faso",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "B2"
+        },
         {
           "title": "Guerre en Ukraine : Le conflit dépasse le seuil des deux millions de victimes militaires",
           "link": "https://burkina24.com/2026/07/03/guerre-en-ukraine-le-conflit-depasse-le-seuil-des-deux-millions-de-victimes-militaires/",
@@ -1628,15 +1637,6 @@
           "theme": "S",
           "relevance": "L",
           "rating": "A1"
-        },
-        {
-          "title": "Venezuela : après le séisme, un nouveau bilan s’élève à 2 595 morts tandis que continuent les recherches de survivants",
-          "link": "https://www.liberation.fr/international/amerique/venezuela-apres-le-seisme-un-nouveau-bilan-seleve-a-2-595-morts-tandis-que-continuent-les-recherches-de-survivants-20260703_FDUX2ETWRVFE3CEDSQIZI5WJIA/",
-          "source": "Libération International",
-          "zone": "18. Amérique du Sud",
-          "theme": "P",
-          "relevance": ".",
-          "rating": "C2"
         }
       ]
     }
@@ -1649,48 +1649,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-07-03T09:34:48.786Z",
+      "at": "2026-07-03T10:09:38.118Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-03T09:34:48.792Z",
+      "at": "2026-07-03T10:09:38.126Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-03T09:35:26.192Z",
+      "at": "2026-07-03T10:10:11.855Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1936 articles"
+      "message": "117/170 flux OK, 1966 articles"
     },
     {
-      "at": "2026-07-03T09:35:28.541Z",
+      "at": "2026-07-03T10:10:14.927Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-03T09:35:28.793Z",
+      "at": "2026-07-03T10:10:15.255Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-03T09:35:28.797Z",
+      "at": "2026-07-03T10:10:15.260Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-07-03T09:35:28.797Z",
+      "at": "2026-07-03T10:10:15.260Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-07-03T09:35:28.797Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
