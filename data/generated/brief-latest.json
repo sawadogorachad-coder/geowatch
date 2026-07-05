@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-05T09:23:15.956Z",
+  "generatedAt": "2026-07-05T09:46:13.301Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1958,
+    "ok": 107,
+    "failed": 63,
+    "articles": 1903,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -58,11 +58,6 @@
         "count": 10
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
         "id": "rss_minute_bf",
         "name": "Minute BF",
         "count": 10
@@ -100,11 +95,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -193,11 +183,6 @@
         "count": 10
       },
       {
-        "id": "rss_elwatan",
-        "name": "El Watan (Algérie)",
-        "count": 0
-      },
-      {
         "id": "rss_telquel",
         "name": "TelQuel (Maroc)",
         "count": 30
@@ -233,18 +218,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -353,11 +328,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -366,11 +336,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -585,6 +550,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -630,6 +600,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -672,7 +647,7 @@
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
-        "error": "fetch failed"
+        "error": "HTTP 500"
       },
       {
         "id": "rss_mediaguinee",
@@ -725,6 +700,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_elwatan",
+        "name": "El Watan (Algérie)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_le360",
         "name": "Le360 (Maroc)",
         "error": "HTTP 404"
@@ -735,9 +715,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -753,6 +738,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -798,6 +788,16 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -857,13 +857,13 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 47,
+    "bfAes": 46,
     "alerts": 13,
     "criticalAlerts": 9,
     "sourcesDistinct": 69
@@ -940,6 +940,38 @@
       "_desk": "A1"
     },
     {
+      "title": "Kénédougou : Le tribunal de grande instance de Orodara tient une audience foraine criminelle à N’Dorola",
+      "link": "https://www.aib.media/kenedougou-le-tribunal-de-grande-instance-de-orodara-tient-une-audience-foraine-criminelle-a-ndorola/",
+      "pubDate": "2026-07-05T09:26:37.000Z",
+      "description": "Kénédougou : Le tribunal de grande instance de Orodara tient une audience foraine criminelle à N'Dorola N'Dorola, 4 juil. 2026 (AIB) – Le Tribunal de grande instance (TGI) de Orodara a organisé, le vendredi 3 juillet 2026 dans la salle des fêtes de la mairie, une audience foraine en matière criminelle visant à rapprocher la justice des populations et à renforcer leur accès aux services judiciaires. Au cours de cette audience, six dossiers criminels ont été examinés. Ils portaient notamment sur des faits de coups mortels, de destruction de biens par incendie aggravé, de tentative d'infanticide, d'assassinat et tentative d'assassinat, ainsi que d'enlèvement, de séquestration et de coups et blessures volontaires. À l'issue des débats, le ministère public a requis la constatation de la prescription de l'action publique dans certaines affaires de coups mortels et de coups et blessures volontaires. Dans le dossier de tentative d'infanticide, l'accusé, T.S. a été condamné à une peine de cinq ans d’emprisonnement avec sursis. Concernant l'affaire de destruction de biens privés par incendie aggravé, la partie civile a sollicité l'abandon des poursuites. Le tribunal a mis l'affaire en délibéré pour le 30 juillet 2026 à Orodara. S'agissant du dossier relatif à l'enlèvement, à la séquestration et aux coups et blessures volontaires, le ministère public a requis, pour certains accusés, une peine de quinze (15) ans d’emprisonnement dont trois ans ferme, assortie d'une amende de cinq millions de francs CFA dont trois millions ferme. Pour d'autres, il a requis quinze (15) ans d’emprisonnement avec sursis. La partie civile a, quant à elle, sollicité le paiement de huit millions cinq cent mille francs CFA à titre de dommages et intérêts. Selon le substitut du procureur du Faso près le Tribunal de grande instance de Orodara, Rabemkanewendé Risse Zoundi, cette audience foraine s'inscrit dans la volonté des autorités judiciaires de rendre la justice plus accessible aux populations. « Le ressort du Tribunal de grande instance de Orodara couvre un vaste territoire et certaines localités, comme N'Dorola, sont éloignées de plus d'une centaine de kilomètres du siège du tribunal. À travers ces audiences foraines, nous rapprochons l'institution judiciaire des citoyens afin de leur permettre de mieux connaître leurs droits et de bénéficier plus aisément des services de la justice », a-t-il expliqué. Le substitut du procureur a également invité les populations au respect des lois et règlements en vigueur, tout en les exhortant à privilégier les voies légales pour le règlement des différends. « La justice est un instrument de paix sociale. Chaque citoyen a le devoir de respecter les textes en vigueur et de s'abstenir de se rendre justice lui-même. C'est dans le respect de la loi, de la cohésion sociale et du vivre-ensemble que nous pourrons bâtir un Burkina Faso stable et prospère », a-t-il souligné. Agence d'Information du Burkina NT/AK/wis",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A1"
+      },
+      "_rating": "A1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "J",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "FESTI-KIDS 2026 : Les enfants au cœur de la transmission des valeurs africaines",
       "link": "https://burkina24.com/2026/07/05/festi-kids-2026-les-enfants-au-coeur-de-la-transmission-des-valeurs-africaines/",
       "pubDate": "2026-07-05T07:27:40.000Z",
@@ -968,38 +1000,6 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": ".",
       "_desk": "A1"
-    },
-    {
-      "title": "FG demands probe, compensation over death of Nigerian in Ivorian prison",
-      "link": "https://www.vanguardngr.com/2026/07/fg-demands-probe-compensation-over-death-of-nigerian-in-ivorian-prison/",
-      "pubDate": "2026-07-05T06:24:23.000Z",
-      "description": "By Nkiruka Nnorom The Federal Government has demanded a thorough investigation and compensation for the family of Usama Murtala, a Nigerian trader who died shortly after his release from detention in Côte d’Ivoire. Minister of Foreign Affairs, Amb. Bianca Odumegwu-Ojukwu, made this known in an update on her X Handle after meeting with Côte d’Ivoire’s Ambassador to Nigeria, H.E. Kalilou Traore. Odumegwu-Ojukwu had earlier in the week raised the issue of Usama Murtala and five other Nigerian youths, all in their 20s, who were arrested and detained in Abidjan without charge or trial. One of them, Usama Murtala, died days after his release from MACA prison following an unattended illness in detention. The remaining five were later released following diplomatic interventions by the Ministry of Foreign Affairs and the Nigerian Embassy in Abidjan. In the X post, the Minister, who summoned Côte d’Ivoire’s envoy, demanded an explanation for the Ivorian authorities’ failure to notify the Nigerian Embassy of the arrests. She argued that early intervention would have saved Usama’s life. “We requested to know why the Nigerian Embassy in Côte d’Ivoire was not informed of their arrest and detention, which delayed the necessary diplomatic intervention that might have saved the life of the deceased,” she stated. She added that the traders were on a trading trip, could not communicate due to language barriers, and had no access to legal representation in the French-speaking country. “We called for a full-scale investigation and transparent probe by the Ivorian government into this matter. We are also demanding compensation for the family of Usama Murtala, who died shortly after his release due to the harsh prison conditions and inadequate healthcare whilst in custody,” she stated. The FG also demanded the return of seized phones, money and other property not returned after release and an undertaking that Ivorian authorities would promptly notify the Nigerian Embassy of any future arrest of Nigerians. She assured the government would continue to push for justice in the matter for the families concerned. Ambassador Traore, according to the Minister, expressed “most profound apologies and condolences to the family of the deceased Nigerian and to the Federal Republic of Nigeria for this unfortunate incident,” describing it as “indeed regrettable.” He pledged to convey Nigeria’s concerns and demands to authorities in Abidjan “as soon as possible.” The post FG demands probe, compensation over death of Nigerian in Ivorian prison appeared first on Vanguard News .",
-      "_source": "Vanguard (Nigeria)",
-      "_sourceId": "rss_vanguard",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 2,
-      "_theme": "D",
-      "_zoneShort": "2. AO anglo. & côtière",
-      "_relevance": "A",
-      "_desk": "A2"
     },
     {
       "title": "Burkina/Religion : La Fédération des associations islamiques tient son 3e congrès ordinaire, les 4 et 5 juillet 2026",
@@ -1344,23 +1344,23 @@
   "narrativesByBloc": [
     [
       "afrique",
-      202
-    ],
-    [
-      "golfe_mo",
-      116
+      204
     ],
     [
       "occident_fr",
-      116
+      118
     ],
     [
       "autre",
-      116
+      118
+    ],
+    [
+      "golfe_mo",
+      117
     ],
     [
       "occident_us",
-      82
+      72
     ],
     [
       "russie",
@@ -1368,15 +1368,15 @@
     ],
     [
       "bf_local",
+      36
+    ],
+    [
+      "turquie",
       34
     ],
     [
       "chine",
       34
-    ],
-    [
-      "turquie",
-      33
     ],
     [
       "sahel",
@@ -1388,7 +1388,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 88,
+      "count": 90,
       "top": [
         {
           "title": "Abel Hamed Nikiema s’offre la ceinture WBA Africa et met le cap sur le sommet mondial",
@@ -1409,6 +1409,15 @@
           "rating": "C2"
         },
         {
+          "title": "Kénédougou : Le tribunal de grande instance de Orodara tient une audience foraine criminelle à N’Dorola",
+          "link": "https://www.aib.media/kenedougou-le-tribunal-de-grande-instance-de-orodara-tient-une-audience-foraine-criminelle-a-ndorola/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "A1"
+        },
+        {
           "title": "FESTI-KIDS 2026 : Les enfants au cœur de la transmission des valeurs africaines",
           "link": "https://burkina24.com/2026/07/05/festi-kids-2026-les-enfants-au-coeur-de-la-transmission-des-valeurs-africaines/",
           "source": "Burkina24",
@@ -1425,15 +1434,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "FESTI-KIDS 2026 : La 5e édition ouvre ses portes sous le signe de l’identité africaine",
-          "link": "https://www.minute.bf/festi-kids-2026-la-5e-edition-ouvre-ses-portes-sous-le-signe-de-lidentite-africaine/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1441,17 +1441,8 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 62,
+      "count": 61,
       "top": [
-        {
-          "title": "FG demands probe, compensation over death of Nigerian in Ivorian prison",
-          "link": "https://www.vanguardngr.com/2026/07/fg-demands-probe-compensation-over-death-of-nigerian-in-ivorian-prison/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Abducted Oyo pupils: Rescue operation ongoing – Army Chief",
           "link": "https://www.vanguardngr.com/2026/07/abducted-oyo-pupils-rescue-operation-ongoing-army-chief/",
@@ -1485,6 +1476,15 @@
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "J",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Taraba CJ backs Tinubu’s push for state police",
+          "link": "https://punchng.com/taraba-cj-backs-tinubus-push-for-state-police/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1547,8 +1547,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 42,
+      "count": 43,
       "top": [
+        {
+          "title": "« On n’a peur de personne » : au Maroc, une nuit de fête avant d’affronter les Bleus en quarts de finale de la Coupe du monde 2026",
+          "link": "https://www.lemonde.fr/sport/article/2026/07/05/on-n-a-peur-de-personne-au-maroc-une-nuit-de-fete-avant-d-affronter-les-bleus-en-quarts-de-finale-de-la-coupe-du-monde-2026_6720855_3242.html",
+          "source": "Le Monde Afrique",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
         {
           "title": "L'ONU alerte sur une IA qui échappe de plus en plus au contrôle",
           "link": "https://fr.hespress.com/480043-lonu-alerte-sur-une-ia-qui-echappe-de-plus-en-plus-au-controle.html",
@@ -1584,15 +1593,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F1"
-        },
-        {
-          "title": "Ferroviaire : l’Italie en mission à Casablanca, dans le sillage des grands chantiers marocains.",
-          "link": "https://medias24.com/2026/07/05/ferroviaire-litalie-en-mission-a-casablanca-dans-le-sillage-des-grands-chantiers-marocains-1716161/",
-          "source": "Médias 24 (Maroc)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     },
@@ -1600,7 +1600,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 107,
+      "count": 108,
       "top": [
         {
           "title": "In Tehran, huge throngs mourn assassinated supreme leader Ali Khamenei",
@@ -1653,7 +1653,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 210,
+      "count": 214,
       "top": [
         {
           "title": "Ukraine en direct : Zelensky et Poutine s'entretiennent avec Trump avant un sommet de l'Otan",
@@ -1707,52 +1707,48 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-07-05T09:22:36.175Z",
+      "at": "2026-07-05T09:45:28.092Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-05T09:22:36.182Z",
+      "at": "2026-07-05T09:45:28.099Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-05T09:23:12.898Z",
+      "at": "2026-07-05T09:46:10.230Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1958 articles"
+      "message": "107/170 flux OK, 1903 articles"
     },
     {
-      "at": "2026-07-05T09:23:15.666Z",
+      "at": "2026-07-05T09:46:13.007Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-05T09:23:15.954Z",
+      "at": "2026-07-05T09:46:13.298Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-05T09:23:15.958Z",
+      "at": "2026-07-05T09:46:13.303Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 13 alertes"
     },
     {
-      "at": "2026-07-05T09:23:15.958Z",
+      "at": "2026-07-05T09:46:13.304Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-07-05T09:23:15.958Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
