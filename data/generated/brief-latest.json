@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-06T22:38:22.213Z",
+  "generatedAt": "2026-07-07T04:17:13.950Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 116,
-    "failed": 54,
-    "articles": 1993,
+    "ok": 115,
+    "failed": 55,
+    "articles": 1936,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -148,11 +148,6 @@
         "count": 30
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
-      },
-      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
@@ -168,11 +163,6 @@
         "count": 30
       },
       {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
-      },
-      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -181,11 +171,6 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -425,7 +410,7 @@
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 28
+        "count": 27
       },
       {
         "id": "rss_guardian",
@@ -500,7 +485,7 @@
       {
         "id": "rss_ttoi",
         "name": "Times of Israel",
-        "count": 13
+        "count": 15
       },
       {
         "id": "rss_jpost",
@@ -540,7 +525,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -565,7 +550,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -680,6 +675,11 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -688,6 +688,16 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "This operation was aborted"
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -835,16 +845,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -857,20 +857,20 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 80,
+    "bfAes": 69,
     "alerts": 7,
     "criticalAlerts": 3,
-    "sourcesDistinct": 79
+    "sourcesDistinct": 71
   },
   "topDevelopments": [
     {
-      "title": "An 2 de la Confédération de l'AES : Ibrahim Traoré salue les acquis et appelle à l'unité",
+      "title": "An 2 de la Confédération de l'AES : Le président Ibrahim Traoré Traoré salue les acquis et appelle à l'unité",
       "link": "https://lefaso.net/spip.php?article147632",
       "pubDate": "2026-07-06T22:35:00.000Z",
       "description": "À l'occasion du deuxième anniversaire de la Confédération des États du Sahel (AES), le capitaine Ibrahim Traoré a rendu hommage aux peuples du Burkina Faso, du Mali et du Niger, ainsi qu'aux Forces combattantes engagées contre le terrorisme. Il a salué les progrès réalisés depuis la création de la Confédération tout en appelant à renforcer l'unité, la souveraineté et le développement de l'espace confédéral.",
@@ -882,7 +882,8 @@
       "_tags": [
         "economic",
         "diplomatic",
-        "military"
+        "military",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -1067,10 +1068,10 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina/Armée: les nouveaux promus reçoivent leurs attributs",
-      "link": "https://www.wakatsera.com/burkina-armee-les-nouveaux-promus-recoivent-leurs-attributs/",
+      "title": "Burkina/Armée: les nouveaux généraux reçoivent leurs attributs",
+      "link": "https://www.wakatsera.com/burkina-armee-les-nouveaux-generaux-recoivent-leurs-attributs/",
       "pubDate": "2026-07-06T17:15:35.000Z",
-      "description": "(Ouagadougou, 6 juillet 2026). Le Président du Faso, Chef de l’État, Chef suprême des Forces armées nationales, le Camarade Capitaine Ibrahim TRAORÉ, a procédé, ce lundi au cours d’une cérémonie solennelle au palais de Koulouba, à la remise officielle des attributs de Général à trois officiers généraux des Forces armées nationales. Le port des épaulettes, symbole de commandement et de responsabilité, traduit la volonté du Chef de l’État de consolider la chaîne hiérarchique et de renforcer l’autorité des Forces armées dans un contexte sécuritaire exigeant. Les nouveaux promus, le Général de Division Moussa DIALLO, le Général de Brigade Théophile NIKIEMA et le Général de Brigade Ismaël Kiswendsida Souampa DIAOUARI ont reçu leurs insignes des mains du Président du Faso. Prenant la parole, chacun des nouveaux généraux a rappelé que cette distinction dépasse le simple grade pour incarner une mission de loyauté et de service envers la Nation. Pour le Général de Division Moussa DIALLO, Chef d’État-major Général des Armées, « le grade de général est avant tout un engagement envers la Patrie, un serment silencieux de guider les Hommes avec courage et discernement, même dans les situations les plus difficiles ». Le nouveau Général de Division, Moussa Diallo, avant sa fonction actuelle, a occupé plusieurs autres dont celles de Gouverneur de la Région des Hauts-Bassins (Guiriko), Chef d’État-Major Général des Armées Adjoint, Commandant du Commandement des Opérations du Théâtre National, Commandant de la Brigade d’Intervention Rapide. Le Général de Brigade Théophile NIKIEMA, Chef d’Etat-Major Général Adjoint des Armées et Commandant du Commandement des Opérations du Théâtre National a, lui, dédié sa promotion à ses frères d’armes tombés sur le champ d’honneur. Il a souligné que cette élévation est le fruit d’un travail collectif et la mémoire vivante de ceux qui ont sacrifié leur vie pour la Nation. Le Général de Brigade Théophile NIKIEMA a occupé, antérieurement, les fonctions de Commandant de la Brigade Spéciale et d’Intervention Rapide, Chef d’État-Major de l’Armée de Terre, Membre du Conseil d’Administration de l’Office National de Sécurisation des Sites Miniers (ONASSIM). Le Général de Brigade Ismaël Kiswendsida Souampa DIAOUARI, Chef d’État-major particulier de la Présidence du Faso (CEMP-PF), a réaffirmé sa conviction que « le Burkina Faso remportera cette guerre grâce à la bravoure de ses forces combattantes et à l’unité de son peuple ». Il a salué le leadership du Président du Faso, le Camarade Capitaine Ibrahim TRAORÉ, comme un facteur déterminant de la résilience nationale. Le Général de Brigade DIAOUARI a, avant d’occuper la fonction de CEMP-PF, exercé plusieurs fonctions stratégiques, notamment Chef J3 du Centre des Opérations Interarmées, Conseiller Sécurité du Président de la Commission de la CEDEAO, Président de la Commission chargée de la lutte contre le terrorisme et de la restauration de l’intégrité territoriale. Au-delà de la symbolique, cette remise d’attributs a servi de tribune pour réaffirmer l’engagement des officiers généraux à demeurer loyaux, efficaces et fidèles aux valeurs cardinales de l’armée. La Direction de la communication de la Présidence du Faso Des images de la cérémonie L’article Burkina/Armée: les nouveaux promus reçoivent leurs attributs est apparu en premier sur Wakat Séra .",
+      "description": "(Ouagadougou, 6 juillet 2026). Le Président du Faso, Chef de l’État, Chef suprême des Forces armées nationales, le Camarade Capitaine Ibrahim TRAORÉ, a procédé, ce lundi au cours d’une cérémonie solennelle au palais de Koulouba, à la remise officielle des attributs de Général à trois officiers généraux des Forces armées nationales. Le port des épaulettes, symbole de commandement et de responsabilité, traduit la volonté du Chef de l’État de consolider la chaîne hiérarchique et de renforcer l’autorité des Forces armées dans un contexte sécuritaire exigeant. Les nouveaux promus, le Général de Division Moussa DIALLO, le Général de Brigade Théophile NIKIEMA et le Général de Brigade Ismaël Kiswendsida Souampa DIAOUARI ont reçu leurs insignes des mains du Président du Faso. Prenant la parole, chacun des nouveaux généraux a rappelé que cette distinction dépasse le simple grade pour incarner une mission de loyauté et de service envers la Nation. Pour le Général de Division Moussa DIALLO, Chef d’État-major Général des Armées, « le grade de général est avant tout un engagement envers la Patrie, un serment silencieux de guider les Hommes avec courage et discernement, même dans les situations les plus difficiles ». Le nouveau Général de Division, Moussa Diallo, avant sa fonction actuelle, a occupé plusieurs autres dont celles de Gouverneur de la Région des Hauts-Bassins (Guiriko), Chef d’État-Major Général des Armées Adjoint, Commandant du Commandement des Opérations du Théâtre National, Commandant de la Brigade d’Intervention Rapide. Le Général de Brigade Théophile NIKIEMA, Chef d’Etat-Major Général Adjoint des Armées et Commandant du Commandement des Opérations du Théâtre National a, lui, dédié sa promotion à ses frères d’armes tombés sur le champ d’honneur. Il a souligné que cette élévation est le fruit d’un travail collectif et la mémoire vivante de ceux qui ont sacrifié leur vie pour la Nation. Le Général de Brigade Théophile NIKIEMA a occupé, antérieurement, les fonctions de Commandant de la Brigade Spéciale et d’Intervention Rapide, Chef d’État-Major de l’Armée de Terre, Membre du Conseil d’Administration de l’Office National de Sécurisation des Sites Miniers (ONASSIM). Le Général de Brigade Ismaël Kiswendsida Souampa DIAOUARI, Chef d’État-major particulier de la Présidence du Faso (CEMP-PF), a réaffirmé sa conviction que « le Burkina Faso remportera cette guerre grâce à la bravoure de ses forces combattantes et à l’unité de son peuple ». Il a salué le leadership du Président du Faso, le Camarade Capitaine Ibrahim TRAORÉ, comme un facteur déterminant de la résilience nationale. Le Général de Brigade DIAOUARI a, avant d’occuper la fonction de CEMP-PF, exercé plusieurs fonctions stratégiques, notamment Chef J3 du Centre des Opérations Interarmées, Conseiller Sécurité du Président de la Commission de la CEDEAO, Président de la Commission chargée de la lutte contre le terrorisme et de la restauration de l’intégrité territoriale. Au-delà de la symbolique, cette remise d’attributs a servi de tribune pour réaffirmer l’engagement des officiers généraux à demeurer loyaux, efficaces et fidèles aux valeurs cardinales de l’armée. La Direction de la communication de la Présidence du Faso Des images de la cérémonie L’article Burkina/Armée: les nouveaux généraux reçoivent leurs attributs est apparu en premier sur Wakat Séra .",
       "_source": "Wakat Séra",
       "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
@@ -1100,19 +1101,18 @@
       "_desk": "A1"
     },
     {
-      "title": "Forces armées nationales : Le Camarade Capitaine Ibrahim TRAORÉ remet les attributs de Général aux nouveaux promus",
-      "link": "https://www.sidwaya.info/forces-armees-nationales-le-camarade-capitaine-ibrahim-traore-remet-les-attributs-de-general-aux-nouveaux-promus/",
-      "pubDate": "2026-07-06T16:33:10.000Z",
-      "description": "Le Président du Faso, Chef de l’État, Chef suprême des Forces armées nationales, le Camarade Capitaine Ibrahim TRAORÉ, a procédé, ce lundi 6 juillet 2026, au cours d’une cérémonie solennelle au palais de Koulouba, à la remise officielle des attributs de Général à trois officiers généraux des Forces armées nationales. Le port des épaulettes, symbole de commandement et de responsabilité, traduit la volonté du Chef de l’État de consolider la chaîne hiérarchique et de renforcer l’autorité des Forces armées dans un contexte sécuritaire exigeant. Les nouveaux promus, le Général de Division Moussa DIALLO, le Général de Brigade Théophile NIKIEMA et le Général de Brigade Ismaël Kiswendsida Souampa DIAOUARI ont reçu leurs insignes des mains du Président du Faso. Cette remise d’attributs aux nouveaux Généraux par le Président du Faso, le Camarade Capitaine Ibrahim TRAORÉ sonne comme un appel à plus d’engagement au-delà des responsabilités Prenant la parole, chacun des nouveaux généraux a rappelé que cette distinction dépasse le simple grade pour incarner une mission de loyauté et de service envers la Nation. Pour le Général de Division Moussa DIALLO, Chef d’État-major Général des Armées, « le grade de général est avant tout un engagement envers la Patrie, un serment silencieux de guider les Hommes avec courage et discernement, même dans les situations les plus difficiles ». Le nouveau Général de Division, Moussa Diallo, avant sa fonction actuelle, a occupé plusieurs autres dont celles de Gouverneur de la Région des Hauts-Bassins (Guiriko), Chef d’État-Major Général des Armées Adjoint, Commandant du Commandement des Opérations du Théâtre National, Commandant de la Brigade d’Intervention Rapide. Le Général de Brigade Théophile NIKIEMA, Chef d’Etat-Major Général Adjoint des Armées et Commandant du Commandement des Opérations du Théâtre National a, lui, dédié sa promotion à ses frères d’armes tombés sur le champ d’honneur. Il a souligné que cette élévation est le fruit d’un travail collectif et la mémoire vivante de ceux qui ont sacrifié leur vie pour la Nation. Le Général de Brigade Théophile NIKIEMA a occupé, antérieurement, les fonctions de Commandant de la Brigade Spéciale et d’Intervention Rapide, Chef d’État-Major de l’Armée de Terre, Membre du Conseil d’Administration de l’Office National de Sécurisation des Sites Miniers (ONASSIM). Le Général de Brigade Ismaël Kiswendsida Souampa DIAOUARI, Chef d’État-major particulier de la Présidence du Faso (CEMP-PF), a réaffirmé sa conviction que « le Burkina Faso remportera cette guerre grâce à la bravoure de ses forces combattantes et à l’unité de son peuple ». Il a salué le leadership du Président du Faso, le Camarade Capitaine Ibrahim TRAORÉ, comme un facteur déterminant de la résilience nationale. Le Général de Brigade DIAOUARI a, avant d’occuper la fonction de CEMP-PF, exercé plusieurs fonctions stratégiques, notamment Chef J3 du Centre des Opérations Interarmées, Conseiller Sécurité du Président de la Commission de la CEDEAO, Président de la Commission chargée de la lutte contre le terrorisme et de la restauration de l’intégrité territoriale. Au-delà de la symbolique, cette remise d’attributs a servi de tribune pour réaffirmer l’engagement des officiers généraux à demeurer loyaux, efficaces et fidèles aux valeurs cardinales de l’armée. La Direction de la communication de la Présidence du Faso",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Burkina : Le Gouvernement débloque 85 milliards FCFA issus du Diaspora Bond pour soutenir plusieurs sociétés",
+      "link": "https://www.minute.bf/burkina-le-gouvernement-debloque-85-milliards-fcfa-issus-du-diaspora-bond-pour-soutenir-plusieurs-societes/",
+      "pubDate": "2026-07-06T17:37:04.000Z",
+      "description": "Un mois après son lancement officiel, organisé du 6 mai au 6 juin 2026, l'opération Diaspora Bond change de cap. Elle quitte la phase de mobilisation des ressources pour entrer dans celle de leur orientation vers l'investissement productif, au profit de l'État burkinabè et des populations. Ce lundi 6 juillet 2026 à Ouagadougou, le ministre de l'Économie et des Finances, Dr Aboubakar Nacanabo, a signé des accords de rétrocession des fonds collectés. Ces conventions concernent quatre entreprises burkinabè. Le ministre de l'économie expliquant l'objectif des financements Selon le ministre Dr Aboubakar Nacanabo, ces financements s'inscrivent pleinement dans la mise en œuvre du pilier 4 du Plan RELANCE, qui porte sur le développement des infrastructures et la transformation de l'économie. Une première convention de 15 milliards de FCFA a été signée avec CIM SAHEL. Une deuxième, d'un montant de 30 milliards de FCFA, a été conclue avec SN BRAFASO. Elle vise la construction d'une nouvelle unité industrielle à Bobo-Dioulasso. Signature des paraphés L'État a également signé deux conventions avec la Société de participation minière du Burkina (SOPAMIB). La première, de 20 milliards de FCFA, est destinée à la remise en exploitation de la mine de Perkoa. La seconde, du même montant, concerne la relance de l'exploitation de la mine de Taparko. D'après le ministre Aboubakar Nacanabo, produire davantage au Burkina Faso, c'est mieux répondre aux besoins du marché, sécuriser les approvisionnements, créer de la valeur localement et soutenir l'ambition de transformation économique. « Le financement de ces projets présente des avantages décisifs. Il permet d'abord de mobiliser des ressources pour des projets structurants sans dépendre exclusivement des financements extérieurs, ensuite de transformer l'épargne en capacités de production, en emplois et en richesses. Il renforce également l'autonomie économique, réduit certaines importations, développe la valeur ajoutée locale et élargit l'assiette fiscale. Enfin, il crée un effet d'entraînement sur les PME, la sous-traitance, les transports, les services et les territoires », a-t-il précisé. Des bénéficiaires déterminés Pour le directeur général de la SOPAMIB, Lamissa Barro, ce financement permettra de redonner vie aux mines et garantira la préservation des emplois menacés. Échange de paraphé entre le Ministre de l'économie et le DG de la SN BRAFASO À cet effet, il a rassuré le MEF quant à l'atteinte des résultats. « Les équipes sont sur place, Monsieur le ministre, je peux vous rassurer, et nous travaillons d'arrache-pied pour une reprise rapide de la production. Ce financement permettra d'accélérer le processus. Je peux vous assurer que ces ressources seront bien utilisées et que les retombées seront réelles », a-t-il assuré. De son côté, le DG de la SN BRAFASO, Alain Sankara, a ajouté que cette deuxième unité viendra renforcer les capacités de production de l'entreprise. « Je vous rassure que toutes les mesures seront prises pour une bonne utilisation de ces ressources, afin d'atteindre les objectifs fixés », a-t-il dit, exprimant sa gratitude à l'État burkinabè pour sa vision du développement industriel. Échange de convention entre le ministre de l'économie et le DG de la SOPAMIB Dans son mot de clôture, le Dr Aboubakar Nacanabo a souligné que cette rétrocession n'est que le début de plusieurs autres projets. « Cette opération de Diaspora Bonds n'est qu'une première phase. Une deuxième phase viendra pour financer d'autres projets importants. J'invite également les porteurs de projets présents à continuer à proposer des initiatives. Nous travaillerons à mobiliser davantage de ressources pour les soutenir », a-t-il conclu. Lire aussi : Diaspora Bonds : Le Burkina lance un « emprunt patriotique » pour mobiliser 240 milliards FCFA Jean-François SOMÉ Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
         "political"
       ],
       "_majors": [],
@@ -1122,12 +1122,12 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "A2"
       },
-      "_rating": "C1",
-      "_score": 127,
+      "_rating": "A2",
+      "_score": 123,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1138,7 +1138,7 @@
       "title": "Japan weighs AI-powered disaster relief distribution",
       "link": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-weighs-ai-powered-disaster-relief-distribution",
       "source": "Nikkei Asia",
-      "date": "2026-07-06T22:38:14.415Z",
+      "date": "2026-07-07T04:17:04.925Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1147,6 +1147,70 @@
         {
           "type": "crise",
           "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "A Ankara, un sommet de l’Otan express pour raffermir l’Europe de la défense",
+      "link": "https://www.liberation.fr/international/europe/a-ankara-un-sommet-de-lotan-express-pour-raffermir-leurope-de-la-defense-20260707_DMAVOLZ2ZVCX7CV66W34U5JKSA/",
+      "source": "Libération International",
+      "date": "2026-07-07T04:00:01.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Ukraine en direct : plus de 430 drones ukrainiens lancés vers Moscou, avant le sommet de l'Otan",
+      "link": "https://www.france24.com/fr/europe/20260707-ukraine-en-direct-attaque-ukrainienne-un-mort-dans-region-belgorod-otan-volodymyr-zelensky-poutine-vladimir-ankara-donald-trump-frappes",
+      "source": "France 24",
+      "date": "2026-07-07T03:29:12.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Cuba, sous blocus pétrolier américain, s’efforce de rétablir son réseau électrique après une nouvelle panne générale",
+      "link": "https://www.lemonde.fr/international/article/2026/07/07/cuba-sous-blocus-petrolier-americain-s-efforce-de-retablir-son-reseau-electrique-apres-une-nouvelle-panne-generale_6721252_3211.html",
+      "source": "Le Monde International",
+      "date": "2026-07-07T01:50:53.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
+      "title": "Le référendum constitutionnel au Sénégal ravive les tensions au sommet de l’État",
+      "link": "https://beninwebtv.com/le-referendum-constitutionnel-au-senegal-ravive-les-tensions-au-sommet-de-letat/",
+      "source": "Bénin Web TV",
+      "date": "2026-07-06T22:30:06.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
         }
       ]
     },
@@ -1167,22 +1231,6 @@
       ]
     },
     {
-      "title": "Nouvelle panne électrique générale à Cuba, sous blocus pétrolier des Etats-Unis",
-      "link": "https://www.lemonde.fr/international/article/2026/07/06/nouvelle-panne-electrique-generale-a-cuba-sous-blocus-petrolier-des-etats-unis_6721252_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-07-06T19:36:01.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blocus"
-        }
-      ]
-    },
-    {
       "title": "En Turquie, les plaidoiries dans le procès du maire d’Istanbul débutent dans l’ombre du sommet de l’OTAN",
       "link": "https://www.lemonde.fr/international/article/2026/07/06/en-turquie-les-plaidoiries-dans-le-proces-du-maire-d-istanbul-debutent-dans-l-ombre-du-sommet-de-l-otan_6721249_3210.html",
       "source": "Le Monde International",
@@ -1197,96 +1245,48 @@
           "keyword": "sommet"
         }
       ]
-    },
-    {
-      "title": "Ghana Battalion 14 completes reconnaissance mission ahead of UN peacekeeping deployment in South Sudan",
-      "link": "https://www.myjoyonline.com/ghana-battalion-14-completes-reconnaissance-mission-ahead-of-un-peacekeeping-deployment-in-south-sudan/",
-      "source": "MyJoyOnline (Ghana)",
-      "date": "2026-07-06T18:03:23.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "reconnaissance"
-        }
-      ]
-    },
-    {
-      "title": "Sommet de l’Otan : les Européens veulent conjurer le danger de l’abandon américain",
-      "link": "https://www.lefigaro.fr/international/sommet-de-l-otan-les-europeens-veulent-conjurer-le-danger-de-l-abandon-americain-20260706",
-      "source": "Le Figaro International",
-      "date": "2026-07-06T15:51:02.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Pr Meïssa Diakhaté, l’expertise juridique au sommet de l’État",
-      "link": "https://lesoleil.sn/actualites/politique/pr-meissa-diakhate-lexpertise-juridique-au-sommet-de-letat/",
-      "source": "Le Soleil (Sénégal)",
-      "date": "2026-07-06T14:55:07.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      233
-    ],
-    [
-      "golfe_mo",
-      111
+      187
     ],
     [
       "occident_fr",
-      108
+      113
     ],
     [
-      "occident_us",
-      102
+      "golfe_mo",
+      110
     ],
     [
       "autre",
-      68
+      110
+    ],
+    [
+      "occident_us",
+      104
     ],
     [
       "bf_local",
-      64
+      57
     ],
     [
       "russie",
-      45
-    ],
-    [
-      "turquie",
-      34
-    ],
-    [
-      "sahel",
-      22
+      39
     ],
     [
       "chine",
-      13
+      36
+    ],
+    [
+      "turquie",
+      32
+    ],
+    [
+      "sahel",
+      12
     ]
   ],
   "desks": [
@@ -1294,10 +1294,10 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 125,
+      "count": 99,
       "top": [
         {
-          "title": "An 2 de la Confédération de l'AES : Ibrahim Traoré salue les acquis et appelle à l'unité",
+          "title": "An 2 de la Confédération de l'AES : Le président Ibrahim Traoré Traoré salue les acquis et appelle à l'unité",
           "link": "https://lefaso.net/spip.php?article147632",
           "source": "Lefaso.net",
           "zone": "1. Sahel & AO franco.",
@@ -1347,17 +1347,8 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 60,
+      "count": 52,
       "top": [
-        {
-          "title": "HAWA Project Manager calls for climate-responsive humanitarian systems as extreme weather intensifies",
-          "link": "https://www.myjoyonline.com/hawa-project-manager-calls-for-climate-responsive-humanitarian-systems-as-extreme-weather-intensifies/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "C",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "IA en Afrique : Google s’installe au Ghana",
           "link": "https://burkina24.com/2026/07/06/ia-en-afrique-google-sinstalle-au-ghana/",
@@ -1368,22 +1359,22 @@
           "rating": "C2"
         },
         {
-          "title": "KAIPTC opens HAWA 2026, calls for stronger regional cooperation to tackle West Africa’s humanitarian crises",
-          "link": "https://www.myjoyonline.com/kaiptc-opens-hawa-2026-calls-for-stronger-regional-cooperation-to-tackle-west-africas-humanitarian-crises/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Nigeria leads ECOWAS food fortification drive against hidden hunger",
+          "link": "https://punchng.com/nigeria-leads-ecowas-food-fortification-drive-against-hidden-hunger/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "C",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Ghana Battalion 14 completes reconnaissance mission ahead of UN peacekeeping deployment in South Sudan",
-          "link": "https://www.myjoyonline.com/ghana-battalion-14-completes-reconnaissance-mission-ahead-of-un-peacekeeping-deployment-in-south-sudan/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Pharmacists, policymakers converge on healthcare access at ACPN’s Unity 2026",
+          "link": "https://www.vanguardngr.com/2026/07/pharmacists-policymakers-converge-on-healthcare-access-at-acpns-unity-2026/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
           "title": "CSOs raise alarm over revocation of civilian firearm licences, warn of administrative gaps in implementation",
@@ -1393,6 +1384,15 @@
           "theme": "J",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "GhIE congratulates Ing Rev. Prof. Charles Anum Adams on election as WAFEO president-elect",
+          "link": "https://www.myjoyonline.com/ghie-congratulates-ing-rev-prof-charles-anum-adams-on-election-as-wafeo-president-elect/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1400,7 +1400,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 29,
+      "count": 15,
       "top": [
         {
           "title": "Au Soudan, 15 mineurs meurent dans l’effondrement d’une mine d’or dans le nord du pays",
@@ -1421,6 +1421,15 @@
           "rating": "F2"
         },
         {
+          "title": "Goma : défis du programme de réadaptation physique du CICR",
+          "link": "https://www.radiookapi.net/2026/07/06/actualite/securite/goma-defis-du-programme-de-readaptation-physique-du-cicr",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
           "title": "Analyse du nouveau rapport des experts de l’ONU sur la situation dans l’Est de la RDC",
           "link": "https://www.radiookapi.net/2026/07/06/emissions/dialogue-entre-congolais/analyse-du-nouveau-rapport-des-experts-de-lonu-sur-la",
           "source": "Radio Okapi (RDC)",
@@ -1437,15 +1446,6 @@
           "theme": "H",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Au Gabon, «la fidélité est devenue une denrée rare», selon Ali Bongo",
-          "link": "https://www.gabonreview.com/au-gabon-la-fidelite-est-devenue-une-denree-rare-selon-ali-bongo/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1453,23 +1453,32 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 35,
+      "count": 27,
       "top": [
         {
-          "title": "Maroc : démantèlement d’une cellule terroriste affiliée à Daech après des perquisitions effectuées dans plusieurs villes du royaume",
-          "link": "https://fr.saharamedias.net/maroc-demantelement-dune-cellule-terroriste-affiliee-a-daech-apres-des-perquisitions-effectuees-dans-plusieurs-villes-du-royaume/",
-          "source": "Sahara Médias",
+          "title": "Soutenances de mémoires: Daouda Sina, double diplômé burkinabè en ingénierie d’Etat et architecture urbaine",
+          "link": "https://www.sidwaya.info/soutenances-de-memoires-daouda-sina-double-diplome-burkinabe-en-ingenierie-detat-et-architecture-urbaine/",
+          "source": "Sidwaya",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
+          "theme": "L",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Dr Hamdi : la \"victimisation\" sur les réseaux sociaux masque l'image réelle du Maroc",
+          "link": "https://fr.hespress.com/479908-dr-hamdi-la-victimisation-sur-les-reseaux-sociaux-masque-limage-reelle-du-maroc.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "I",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Saisonnières marocaines : Sekkouri annonce plus de 15.000 bénéficiaires et un renforcement des garanties",
-          "link": "https://fr.hespress.com/480374-saisonnieres-marocaines-sekkouri-annonce-plus-de-15-000-beneficiaires-et-un-renforcement-des-garanties.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Cinéma | Tunisie : Taoufik Behi tire sa révérence",
+          "link": "https://kapitalis.com/tunisie/2026/07/06/cinema-tunisie-taoufik-behi-tire-sa-reverence/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1490,15 +1499,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Législatives en Algérie : le FLN et le MSP reculent, percée du RND",
-          "link": "https://www.tsa-algerie.com/legislatives-en-algerie-le-fln-et-le-msp-reculent-percee-du-rnd/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1506,17 +1506,8 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 102,
+      "count": 120,
       "top": [
-        {
-          "title": "World: Attacks on Health Care Bi-Monthly News Brief, 10-23 June 2026",
-          "link": "https://reliefweb.int/report/world/attacks-health-care-bi-monthly-news-brief-10-23-june-2026",
-          "source": "ReliefWeb",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "En Turquie, les plaidoiries dans le procès du maire d’Istanbul débutent dans l’ombre du sommet de l’OTAN",
           "link": "https://www.lemonde.fr/international/article/2026/07/06/en-turquie-les-plaidoiries-dans-le-proces-du-maire-d-istanbul-debutent-dans-l-ombre-du-sommet-de-l-otan_6721249_3210.html",
@@ -1525,6 +1516,15 @@
           "theme": "D",
           "relevance": "A",
           "rating": "B2"
+        },
+        {
+          "title": "A Ankara, un sommet de l’Otan express pour raffermir l’Europe de la défense",
+          "link": "https://www.liberation.fr/international/europe/a-ankara-un-sommet-de-lotan-express-pour-raffermir-leurope-de-la-defense-20260707_DMAVOLZ2ZVCX7CV66W34U5JKSA/",
+          "source": "Libération International",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
         },
         {
           "title": "Ce que révèle la mise en scène des funérailles du Khamenei",
@@ -1536,22 +1536,22 @@
           "rating": "A2"
         },
         {
-          "title": "France-Syrie : une visite stratégique ?",
-          "link": "https://www.france24.com/fr/%C3%A9missions/questions-directes/20260706-france-syrie-une-visite-strat%C3%A9gique",
-          "source": "France 24",
+          "title": "Iran fires missiles at commercial ships in Strait of Hormuz, Axios reports",
+          "link": "https://www.al-monitor.com/originals/2026/07/iran-fires-missiles-commercial-ships-strait-hormuz-axios-reports",
+          "source": "Al-Monitor",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "M",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "A1"
         },
         {
-          "title": "Syrie : lent rebond de l'économie après la levée des sanctions internationales",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260706-syrie-lent-rebond-de-l-%C3%A9conomie-apr%C3%A8s-la-lev%C3%A9e-des-sanctions-internationales",
-          "source": "France 24",
+          "title": "Iran reportedly fires missiles at commercial ships in Strait of Hormuz",
+          "link": "https://www.japantimes.co.jp/news/2026/07/07/world/iran-missiles-ships-hormuz/",
+          "source": "The Japan Times",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
+          "theme": "M",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "A1"
         }
       ]
     },
@@ -1559,7 +1559,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 183,
+      "count": 192,
       "top": [
         {
           "title": "Coupe du monde 2026 : Donald Trump reconnaît avoir demandé à la FIFA de réexaminer le carton rouge de Folarin Balogun",
@@ -1571,8 +1571,17 @@
           "rating": "C1"
         },
         {
-          "title": "Nouvelle panne électrique générale à Cuba, sous blocus pétrolier des Etats-Unis",
-          "link": "https://www.lemonde.fr/international/article/2026/07/06/nouvelle-panne-electrique-generale-a-cuba-sous-blocus-petrolier-des-etats-unis_6721252_3210.html",
+          "title": "Ukraine en direct : plus de 430 drones ukrainiens lancés vers Moscou, avant le sommet de l'Otan",
+          "link": "https://www.france24.com/fr/europe/20260707-ukraine-en-direct-attaque-ukrainienne-un-mort-dans-region-belgorod-otan-volodymyr-zelensky-poutine-vladimir-ankara-donald-trump-frappes",
+          "source": "France 24",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "Cuba, sous blocus pétrolier américain, s’efforce de rétablir son réseau électrique après une nouvelle panne générale",
+          "link": "https://www.lemonde.fr/international/article/2026/07/07/cuba-sous-blocus-petrolier-americain-s-efforce-de-retablir-son-reseau-electrique-apres-une-nouvelle-panne-generale_6721252_3211.html",
           "source": "Le Monde International",
           "zone": "17. Amérique C. & Caraïbes",
           "theme": "D",
@@ -1580,22 +1589,13 @@
           "rating": "B2"
         },
         {
-          "title": "Sommet de l’Otan : les Européens veulent conjurer le danger de l’abandon américain",
-          "link": "https://www.lefigaro.fr/international/sommet-de-l-otan-les-europeens-veulent-conjurer-le-danger-de-l-abandon-americain-20260706",
-          "source": "Le Figaro International",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "NAB takes possession of Karachi's Bahria Icon Tower amid investigation against property tycoon Malik Riaz",
-          "link": "https://www.dawn.com/news/2013398/nab-takes-possession-of-karachis-bahria-icon-tower-amid-investigation-against-property-tycoon-malik-riaz",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "title": "Face au désengagement américain de l’OTAN, les armées des pays européens gagnent en puissance de façon dispersée",
+          "link": "https://www.lemonde.fr/international/article/2026/07/07/face-au-desengagement-americain-de-l-otan-les-armees-des-pays-europeens-gagnent-en-puissance-de-facon-dispersee_6721403_3210.html",
+          "source": "Le Monde International",
+          "zone": "16. Amérique du Nord",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "A2"
         },
         {
           "title": "À Erfurt, Alice Weidel renforce son pouvoir lors du congrès de l’AfD",
@@ -1621,42 +1621,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-07-06T22:37:46.808Z",
+      "at": "2026-07-07T04:16:36.684Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-06T22:37:46.815Z",
+      "at": "2026-07-07T04:16:36.691Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-06T22:38:18.763Z",
+      "at": "2026-07-07T04:17:10.865Z",
       "agent": "Agent Collecte RSS",
-      "message": "116/170 flux OK, 1993 articles"
+      "message": "115/170 flux OK, 1936 articles"
     },
     {
-      "at": "2026-07-06T22:38:21.873Z",
+      "at": "2026-07-07T04:17:13.643Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-06T22:38:22.210Z",
+      "at": "2026-07-07T04:17:13.947Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-06T22:38:22.215Z",
+      "at": "2026-07-07T04:17:13.952Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 7 alertes"
     },
     {
-      "at": "2026-07-06T22:38:22.215Z",
+      "at": "2026-07-07T04:17:13.952Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-07-06T22:38:22.215Z",
+      "at": "2026-07-07T04:17:13.952Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
