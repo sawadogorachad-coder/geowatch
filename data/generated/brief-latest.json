@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-07T15:15:09.630Z",
+  "generatedAt": "2026-07-07T17:27:10.237Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 113,
-    "failed": 57,
-    "articles": 1951,
+    "ok": 117,
+    "failed": 53,
+    "articles": 1952,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -138,11 +138,6 @@
         "count": 20
       },
       {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "count": 12
-      },
-      {
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
@@ -166,6 +161,11 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -235,6 +235,11 @@
       {
         "id": "rss_iss_africa",
         "name": "ISS Africa — Institute Security Studies",
+        "count": 0
+      },
+      {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
         "count": 0
       },
       {
@@ -410,12 +415,12 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 25
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 28
+        "count": 27
       },
       {
         "id": "rss_guardian",
@@ -430,7 +435,12 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 11
+      },
+      {
+        "id": "rss_tass",
+        "name": "TASS (Russie, EN)",
+        "count": 30
       },
       {
         "id": "rss_rt_fr",
@@ -485,7 +495,7 @@
       {
         "id": "rss_ttoi",
         "name": "Times of Israel",
-        "count": 12
+        "count": 14
       },
       {
         "id": "rss_jpost",
@@ -500,7 +510,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 26
+        "count": 16
       },
       {
         "id": "rss_pressTV",
@@ -525,7 +535,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 25
+        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -550,7 +560,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -612,7 +632,7 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_alakhbar",
@@ -665,6 +685,11 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -673,11 +698,6 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -723,11 +743,6 @@
         "id": "rss_libya_obs",
         "name": "Libya Observer",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_acled",
@@ -795,11 +810,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_tass",
-        "name": "TASS (Russie, EN)",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
         "error": "HTTP 403"
@@ -835,16 +845,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 51,
+    "bfAes": 56,
     "alerts": 10,
-    "criticalAlerts": 4,
-    "sourcesDistinct": 73
+    "criticalAlerts": 2,
+    "sourcesDistinct": 79
   },
   "topDevelopments": [
     {
@@ -899,6 +899,38 @@
       "_score": 135,
       "_zone": 1,
       "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "AES : deux ans après, des avancées affichées mais des défis toujours majeurs",
+      "link": "https://www.studiotamani.org/204841-aes-deux-ans-apres-des-avancees-affichees-mais-des-defis-toujours-majeurs",
+      "pubDate": "2026-07-07T16:47:31.000Z",
+      "description": "Creee le 6 juillet 2024 par le Mali, le Burkina Faso et le Niger, Confederation des etats du Sahel celebre son deuxieme anniversaire. Si la Confederation met en avant des progres sur les plans politique, diplomatique et securitaire, plusieurs observateurs estiment que d'importants defis demeurent, notamment en matiere de securite, d'economie et de developpement social. Deux ans apres sa creation, Confederation des etats du Sahel poursuit son processus d'integration. Pour le specialiste des relations internationales, Dr Hossene Ben Bamba , plusieurs acquis sont a mettre a l'actif de la Confederation. Il cite notamment la mise en place progressive d'institutions communes, le renforcement de la coordination diplomatique entre les trois etats et l'adoption de positions communes sur plusieurs dossiers internationaux. Selon lui, la volonte de construire une union economique se traduit egalement par des initiatives destinees a renforcer l'integration regionale. Sur le plan securitaire, l'analyste releve plusieurs evolutions. Il evoque la creation de la force unifiee de l'AES, l'intensification des operations militaires conjointes ainsi qu'un meilleur partage du renseignement entre le Mali, le Burkina Faso et le Niger. La coordination entre les etats-majors des trois pays s'est egalement renforcee, avec la poursuite d'operations transfrontalieres contre les groupes armes. Des defis encore nombreux Malgre ces avancees, le bilan reste contraste. Pour Dr Hossene Ben Bamba, la menace terroriste demeure elevee dans plusieurs zones de l'espace confederal. Au-dela des questions securitaires, il estime que l'integration economique, la creation d'opportunites pour les populations et le developpement social constituent encore des chantiers majeurs. Deux ans apres sa creation, l'AES affiche ainsi des progres dans plusieurs domaines, mais reste confrontee a des defis importants pour atteindre les objectifs qu'elle s'est fixes. L’article AES : deux ans après, des avancées affichées mais des défis toujours majeurs est apparu en premier sur Studio Tamani - Informations, débats, magazines : toute l’actualité du Mali, en 5 langues .",
+      "_source": "Studio Tamani (Mali)",
+      "_sourceId": "rss_studio_tam",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1101,43 +1133,73 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Gestion durable des ressources en eau : le Pro-GIRE déploie ses actions dans le Sanguié",
-      "link": "https://faso7.com/2026/07/07/gestion-durable-des-ressources-en-eau-le-pro-gire-deploie-ses-actions-dans-le-sanguie/",
-      "pubDate": "2026-07-07T10:56:47.000Z",
-      "description": "Eau Vive Internationale est une ONG de droit burkinabè engagée depuis plusieurs décennies pour un accès durable à l’eau potable, à l’hygiène, à l’assainissement et à la gestion des ressources en eau en Afrique subsaharienne. Elle fédère les associations Eau Vive France, Eau Vive Burkina Faso, Eau Vive Mali, Eau Vive Niger, Eau Vive Sénégal et Eau Vive Togo. Au Burkina Faso comme dans les autres Eau Vive Pays, les actions de l’ONG sont mises en œuvre à travers des projets soutenus par des partenaires financiers. Ces projets sont entre autres le Projet de Renforcement de l'Opérationnalisation de la GIRE (Pro-GIRE) dans quatre sous bassins versants de l’espace de compétence de l’Agence de l’Eau du Mouhoun ; le Projet d’amélioration de l’approvisionnement en eau potable et à l'assainissement au profit des populations des provinces du Ganzourgou et du Zoundwéogo. En vue de capitaliser l'ensemble des réalisations sur le plan national, des journalistes sont allés sur les traces des différents projets du 09 au 12 juin 2026. Ouèra : des plants pour préserver le barrage 09 juin 2026. Nous sommes dans le Village de Ouéra dans la commune d’Imassogo relevant de la province du Sanguié. Dans cette partie du Burkina Faso, le Projet de Renforcement de l'Opérationnalisation de la GIRE (Pro-GIRE) est mis en œuvre depuis 2024par le co,sortium Eau Vive Internationale et Help sur financement de l’Union Européenne. Le Pro-GIRE cible essentiellement les Comités locaux de l'eau (CLE). Parmi les quatre (04) sous-bassins versants, il y a le CLE Vranso 3 qui intervient dans le village de Ouèra. on. Là bas, les habitants du village vivent essentiellement de la culture maraîchère. Cette activité n'est pas sans conséquence sur la vie du barrage qui est exploité. De ce fait, une alternative a été trouvée par le Pro-GIRE. Nadège Dabilgou, cheffe d’antenne Eau Vive Interantionale de Réo©️Faso7 « Avec le CLE Vranso 3, nous avons approché le CLE et il nous a trouvé des porteurs de projets. Ce sont des bénéficiaires qui sont installés au niveau des berges du barrage, puisqu'il faut qu'ils reculent de 100 mètres pour freiner l'ensablement, nous leur avons proposé des plants afin de combler l’espace libéré. », a expliqué Nadège Dabilgou, cheffe d’antenne Eau Vive Interantionale de Réo. Sur le terrain, les résultats sont palpables. Hervé Sinaré est l'illustration parfaite de cette expérience. Depuis 2024, cet agriculteur de profession a reçu de la part du projet plus de 100 plants. Ils sont composés de manguiers, de goyaviers et de tangelos qu'il a reboisés sur une superficie de 3 hectares. Il fait partie des sept (07) bénéficiaires qui avaient été sélectionnés et ont tous été sensibilisés sur les objectifs visés par le projet. « Leurs objectifs, c'est pour lutter contre l'ensablement du barrage. Pour faire quitter les gens, comment il faut faire, il faut les gérer avec les arbres pour que s'ils plantent, 10 ans, 15 ans comme ça, le terrain sera bien occupé par les arbres », se souvient-il des sensibilisations. Le bénéficiaire ne s'est pas contenté de recevoir les plants. Il a par la suite mobilisé les moyens pour la clôture du périmètre et l'achat d'une motopompe pour l'irrigation. Cependant, il dit être confronté à un manque de moyens pour clôturer l'ensemble de ses 3 hectares. Cette situation entraîne la destruction voire la dégradation de la qualité des plantes par les animaux. Hormis cela, il assure profiter des retombées de son reboisement. « J'ai pu manger (les mangues, NDLR). Beaucoup ont bénéficié de ça. Les enfants, les jeunes… Même les manguiers que j'ai plantés en 2024 ça commence à produire cette année », s'est-il réjoui. La réussite du reboisement de Hervé Sinaré a réveillé la passion chez certains habitants de Ouèra. Parmi eux, il y a Gouwendsongo Ouédraogo. Pour lui, les arbres représentent d'abord un héritage. Ils vont profiter à plusieurs générations et ils seront la preuve de son passage sur terre. Dans les échanges, il dit avoir compris également que les arbres participent fortement à la préservation de la berge. c'est pour lutter contre l'ensablement du barrage, Hervé Sinaré « On ne savait pas. Ils nous ont dit que nos activités au bord du barrage contribuent à l'ensablement du barrage. Une fois que le barrage est ensablé, il faut des moyens pour le restaurer. Ils nous ont sensibilisés et ils veulent nous donner des arbres pour lutter contre ce phénomène. On ignorait les conséquences, maintenant nous sommes tous informés », a-t-il ajouté. Au niveau du Pro-GIRE, la perspective est déjà à la prise en compte des nouveaux adhérents pour l'octroi de plants. Hervé Sinaré, lui, a remercié l'ONG Eau Vive Internationale pour cette initiative qui change la vie des populations et participe à la préservation de l'environnement. Goundi : Les boulis, une bouffée d’oxygiène pour les Producteurs Après Ouèra, la mission a mis le cap sur la commune rurale de Goundi, dans le département de Réo. L'équipe de journalistes a pu y constater les réalisations du Pro-GIRE. Il s'agit des réalisations de deux boulis (retenue d’eau dans le barrage) et de l'aménagement de la bande de servitude du barrage. Depuis la réalisation des boulis en 2025, la population témoigne du changement de son quotidien. « Nous ne pouvons que nous réjouir parce que ça améliore notre vie quotidienne. Avant la réalisation de ces boulis, le barrage n'arrivait plus à nous satisfaire en eau. On peut dire que dans le mois de mars, voir fin février, on avait plus d'eau dans le barrage. Après ça tout était bloqué », a raconté Yves Bazié, producteur sur le barrage de Goundi. Eau Vive Internationale à été claire. Elle ne vient pas pour mettre en conflit les populations, Yves Bazié, producteur sur le barrage de Goundi Dès l'implantation des boulis, une cellule a été mise en place, formée et équipée pour la gestion des crises liées à l'eau. Les tâches de cette cellule s'articulent autour de la sensibilisation sur l'interdiction d'utiliser le fumier sur les berges, l'utilisation des pesticides et l'interdiction de pêcher les alevins. Les difficultés recueillies sont transmises au CLE de Réo. « Eau Vive Internationale à été claire. Elle ne vient pas pour mettre en conflit les populations, mais c'est pour les aider un tant soit peu pour leur assurer la permanence de l'eau (…)Les gens qui n'avaient plus pratiquement d'eau en février peuvent travailler sereinement jusqu'au mois de mai et pour cela, nous remercions l’ONG. », a-t-il rappelé. L'un des deux boulis réalisés a été destiné au centre d'accueil des enfants en difficulté de Goundi. Bien qu'il n'arrive plus à retenir convenablement l'eau, le responsable du centre, le Frère Albert Sandwidi apprécie l’apport du bouli dans le maraîchage. Pouni Nord : Réhabilitation du déversoir du barrage pour le bonheur des populations À Pouni Nord, dans la commune de Dydir, les populations ont bénéficié de l'accompagnement de Eau Vive Internationale pour la réhabilitation du déversoir du barrage. Selon les récits, le déversoir était défectueux depuis près de trois ans. Ils ont donc sollicité l'appui de l'ONG après avoir mobilisé eux-mêmes des ressources financières. La visite a permis de constater l'état d'avancement des travaux. Le moins qu'on puisse dire est que le chantier est sur une bonne lancée. Pour accélérer les travaux, les maraîchers se sont constitués en groupes de travail pour aider l'entreprise. Face à toutes ces réalisations, les autorités locales n'ont pas manqué d'exprimer leur satisfaction. la réhabilitation du déversoir du barrage©️Faso7 « Les maraîchers ont été vraiment mobilisés. Ils se sont concertés, ils ont vu que sans eau on ne peut pas faire la maraîcher-culture, rien ne peut avoir vit. Ils se sont engagés à mobiliser du ciment et Eau Vive Internationale est venu en appui à cette population. Cela va permettre d'enlever une épine dans le pied de la commune en aidant à mettre en œuvre ce joyaux », a expliqué Justin Bertrand Bako, représentant du Président de la délégation spéciale (PDS) de Dydir. La cheffe d’antenne Réo de EVI, Nadège Dabilgou a rappelé que le projet est mis en œuvre par le consortium Eau Vive Internationale et l'ONG Help. Il intervient dans quatre sous-bassins versants, notamment le CLE Vranso 3, le CLE Mouhoun Tâ basé à Dédougou, le CLE Kou à Bobo-Dioulasso et le CLE Plandi 2 logé à Bama. Cheick Habib Désiré BAYILI Faso7 L’article Gestion durable des ressources en eau : le Pro-GIRE déploie ses actions dans le Sanguié est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "C",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Japan weighs AI-powered disaster relief distribution",
+      "link": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-weighs-ai-powered-disaster-relief-distribution",
+      "source": "Nikkei Asia",
+      "date": "2026-07-07T17:27:01.785Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Tentative d’assassinat à Monaco : la principale suspecte retrouvée enterrée près de Kiev, un agent du renseignement militaire impliqué",
+      "link": "https://francais.rt.com/international/135955-tentative-assassinat-monaco-renseignement-ukrainien",
+      "source": "RT en français",
+      "date": "2026-07-07T17:02:42.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ]
+    },
+    {
+      "title": "Sommet de l’Otan : les Alliés regarnissent leurs arsenaux dans l’urgence",
+      "link": "https://www.lefigaro.fr/international/sommet-de-l-otan-les-allies-regarnissent-leurs-arsenaux-dans-l-urgence-20260707",
+      "source": "Le Figaro International",
+      "date": "2026-07-07T16:42:37.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Situation in Cuba stable despite US energy blockade — foreign minister",
+      "link": "https://tass.com/world/2157043",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-07-07T16:23:02.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
     {
       "title": "Rahm Emanuel meets Herzog, calls for ‘historic agreement’ on Israeli-Palestinian future",
       "link": "https://www.jpost.com/israel-news/article-901759",
@@ -1155,18 +1217,34 @@
       ]
     },
     {
-      "title": "Japan weighs AI-powered disaster relief distribution",
-      "link": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-weighs-ai-powered-disaster-relief-distribution",
-      "source": "Nikkei Asia",
-      "date": "2026-07-07T15:14:59.588Z",
-      "rating": "F2",
+      "title": "Au premier jour du sommet de l’OTAN, à Ankara, Mark Rutte annonce une myriade de contrats de défense pour des milliards d’euros",
+      "link": "https://www.lemonde.fr/international/article/2026/07/07/au-premier-jour-du-sommet-de-l-otan-a-ankara-mark-rutte-annonce-une-myriade-de-contrats-de-defense-pour-des-milliards-d-euros_6721513_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-07-07T15:30:05.000Z",
+      "rating": "B2",
       "evidence": "Corrobore",
-      "level": "critical",
+      "level": "high",
       "bf": false,
       "majors": [
         {
-          "type": "crise",
-          "keyword": "disaster"
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "NATO reconnaissance aircraft performs several flights around Kaliningrad Region",
+      "link": "https://tass.com/world/2156973",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-07-07T15:19:12.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
         }
       ]
     },
@@ -1183,22 +1261,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Ukraine says ready for 'unconditional ceasefire' with Russia",
-      "link": "https://www.aa.com.tr/en/eurasia/ukraine-says-ready-for-unconditional-ceasefire-with-russia/3989288",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-07-07T14:27:44.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
         }
       ]
     },
@@ -1233,112 +1295,48 @@
           "keyword": "ceasefire"
         }
       ]
-    },
-    {
-      "title": "La suspecte de la tentative d’assassinat à Monaco retrouvée morte en Ukraine",
-      "link": "https://www.lemonde.fr/societe/article/2026/07/07/la-suspecte-de-la-tentative-d-assassinat-a-monaco-retrouvee-morte-en-ukraine_6721469_3224.html",
-      "source": "Le Monde International",
-      "date": "2026-07-07T11:31:33.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "En images : au Venezuela, l’espoir de retrouver des survivants du double séisme fait place au deuil",
-      "link": "https://www.lemonde.fr/international/article/2026/07/07/en-images-au-venezuela-l-espoir-de-retrouver-des-survivants-du-double-seisme-fait-place-au-deuil_6721468_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-07-07T11:30:02.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Turquie : deux journalistes arrêtés à la veille du sommet de l’Otan",
-      "link": "https://www.liberation.fr/international/turquie-deux-journalistes-arretes-a-la-veille-du-sommet-de-lotan-20260707_Y4KGUYZLTFD65LDNC5XMTLXDZA/",
-      "source": "Libération International",
-      "date": "2026-07-07T09:38:52.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "« Momar-Coumba Diop mérite une reconnaissance officielle »",
-      "link": "https://lesoleil.sn/actualites/education/momar-coumba-diop-merite-une-reconnaissance-officielle/",
-      "source": "Le Soleil (Sénégal)",
-      "date": "2026-07-07T09:37:20.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "reconnaissance"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      221
-    ],
-    [
-      "occident_fr",
-      106
+      215
     ],
     [
       "golfe_mo",
-      105
+      112
+    ],
+    [
+      "occident_fr",
+      108
     ],
     [
       "occident_us",
-      101
+      102
     ],
     [
       "autre",
-      101
-    ],
-    [
-      "turquie",
-      56
-    ],
-    [
-      "bf_local",
-      38
+      74
     ],
     [
       "russie",
-      27
+      53
+    ],
+    [
+      "bf_local",
+      48
+    ],
+    [
+      "turquie",
+      46
     ],
     [
       "chine",
-      25
+      21
     ],
     [
       "sahel",
-      20
+      21
     ]
   ],
   "desks": [
@@ -1356,6 +1354,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "A1"
+        },
+        {
+          "title": "AES : deux ans après, des avancées affichées mais des défis toujours majeurs",
+          "link": "https://www.studiotamani.org/204841-aes-deux-ans-apres-des-avancees-affichees-mais-des-defis-toujours-majeurs",
+          "source": "Studio Tamani (Mali)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "An II de l’AES: le message du Président du Faso lu lors de la montée des couleurs à Toma",
@@ -1383,15 +1390,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "C1"
-        },
-        {
-          "title": "‎Gnagna : la montée des couleurs réaffirme l’engagement des corps constitués envers la Nation et l’AES",
-          "link": "https://www.aib.media/gnagna-la-montee-des-couleurs-reaffirme-lengagement-des-corps-constitues-envers-la-nation-et-laes-2/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C1"
         }
       ]
     },
@@ -1399,11 +1397,38 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 69,
+      "count": 64,
       "top": [
         {
-          "title": "Over 18m Nigerians exposed to flooding, NiHSA warns",
-          "link": "https://www.vanguardngr.com/2026/07/over-18m-nigerians-exposed-to-flooding-nihsa-warns/",
+          "title": "‘We’re building a professional, combat-ready Army’ — COAS",
+          "link": "https://www.vanguardngr.com/2026/07/were-building-a-professional-combat-ready-army-coas/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Tinubu’s intervention funds delivering economic benefits – Yilwatda",
+          "link": "https://www.vanguardngr.com/2026/07/tinubus-intervention-funds-delivering-economic-benefits-yilwatda/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Sanwo-Olu, Umahi dismiss coastal highway flooding claim",
+          "link": "https://www.vanguardngr.com/2026/07/sanwo-olu-umahi-dismiss-coastal-highway-flooding-claim/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "L",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Russian Embassy disputes reports on death of Nigerian student in Ukraine",
+          "link": "https://www.vanguardngr.com/2026/07/russian-embassy-disputes-reports-on-death-of-nigerian-student-in-ukraine/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "D",
@@ -1411,40 +1436,13 @@
           "rating": "F2"
         },
         {
-          "title": "Nigeria: Lake Chad Basin - Humanitarian Overview – 2026 (as of 29 June 2026)",
-          "link": "https://reliefweb.int/report/nigeria/lake-chad-basin-humanitarian-overview-2026-29-june-2026",
-          "source": "ReliefWeb",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "Prince Osei Owusu distances himself from viral claims over Black Stars omission",
-          "link": "https://www.myjoyonline.com/prince-osei-owusu-distances-himself-from-viral-claims-over-black-stars-omission/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "Almajiri commission says controversial projects in 2026 budget are NASS constituency interventions",
-          "link": "https://www.vanguardngr.com/2026/07/almajiri-commission-says-controversial-projects-in-2026-budget-are-nass-constituency-interventions/",
+          "title": "Expedite State Police creation – Crisis Centre urges stakeholders",
+          "link": "https://www.vanguardngr.com/2026/07/expedite-state-police-creation-crisis-centre-urges-stakeholders/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Nigeria: Abuja secouée par le scandale d'un vrai-faux «Conseil présidentiel de promotion des investissement étrangers»",
-          "link": "https://www.rfi.fr/fr/afrique/20260707-nigeria-abuja-secou%C3%A9-par-le-scandale-d-un-vrai-faux-conseil-pr%C3%A9sidentiel-de-promotion-des-investissement-%C3%A9trangers",
-          "source": "RFI Afrique",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         }
       ]
     },
@@ -1455,9 +1453,9 @@
       "count": 17,
       "top": [
         {
-          "title": "Ces images de prétendus soldats français capturés à l’EST de la RDC sont fausses",
-          "link": "https://www.radiookapi.net/2026/07/07/emissions/les-faits-sont-sacres/ces-images-de-pretendus-soldats-francais-captures-lest-de",
-          "source": "Radio Okapi (RDC)",
+          "title": "RDC: PHC S.A. brandit une décision du Tribunal de commerce sur la sortie de l'État de son capital et dénonce des attaques mensongères visant à ternir son image",
+          "link": "https://actualite.cd/2026/07/07/rdc-phc-sa-brandit-une-decision-du-tribunal-de-commerce-sur-la-sortie-de-letat-de-son",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "S",
           "relevance": "A",
@@ -1482,6 +1480,15 @@
           "rating": "F2"
         },
         {
+          "title": "Cameroun : Face à l’impossible coalition de l’opposition, Abdouraman hamadou babba propose un »référendum »",
+          "link": "https://fr.journalducameroun.com/cameroun-face-a-limpossible-coalition-de-lopposition-abdouraman-hamadou-babba-propose-un-referendum/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Ebola : Patrick Muyaya appelle les communautés à être en première ligne de la riposte",
           "link": "https://www.radiookapi.net/2026/07/07/emissions/parole-aux-auditeurs/ebola-patrick-muyaya-appelle-les-communautes-etre-en",
           "source": "Radio Okapi (RDC)",
@@ -1489,15 +1496,6 @@
           "theme": "H",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "ONU : Judith Suminwa préside ce mercredi un débat sur les violences sexuelles liées aux conflits",
-          "link": "https://actualite.cd/2026/07/07/onu-judith-suminwa-preside-ce-mercredi-un-debat-sur-les-violences-sexuelles-liees-aux",
-          "source": "ActualitéCD (RDC)",
-          "zone": "3. Afrique centrale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1505,7 +1503,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 36,
+      "count": 42,
       "top": [
         {
           "title": "Nouveau Toyota RAV4 : une identité affirmée, portée par des technologies de nouvelle génération",
@@ -1544,11 +1542,11 @@
           "rating": "A2"
         },
         {
-          "title": "Mondial 2026 : l’attaque du Maroc prête à défier le mur défensif des Bleus",
-          "link": "https://fr.hespress.com/480432-mondial-2026-lattaque-du-maroc-prete-a-defier-le-mur-defensif-des-bleus.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Tebboune : “Zéro patient algérien à l’étranger, c’est une question de nif”",
+          "link": "https://www.tsa-algerie.com/tebboune-zero-patient-algerien-a-letranger-cest-une-question-de-nif/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1558,8 +1556,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 102,
+      "count": 108,
       "top": [
+        {
+          "title": "Comment Erdoğan a inventé le néo-royalisme",
+          "link": "https://legrandcontinent.eu/fr/2026/07/07/commet-erdogan-a-invente-le-neo-royalisme/",
+          "source": "Le Grand Continent",
+          "zone": "8. Moyen-Orient",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
         {
           "title": "Derrière la défaite des États-Unis face à l’Iran, une crise du système productif",
           "link": "https://www.iris-france.org/derriere-la-defaite-des-etats-unis-face-a-liran-une-crise-du-systeme-productif/",
@@ -1577,15 +1584,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "B2"
-        },
-        {
-          "title": "Recomposition géopolitique du Golfe après la guerre d’Iran | Les mardis de l’IRIS",
-          "link": "https://www.iris-france.org/recomposition-geopolitique-du-golfe-apres-la-guerre-diran-les-mardis-de-liris/",
-          "source": "IRIS France",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
         },
         {
           "title": "Rahm Emanuel meets Herzog, calls for ‘historic agreement’ on Israeli-Palestinian future",
@@ -1611,34 +1609,34 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 166,
+      "count": 179,
       "top": [
         {
-          "title": "Procès en appel du RN : Marine Le Pen condamnée à trois ans de prison",
-          "link": "https://burkina24.com/2026/07/07/proces-en-appel-du-rn-marine-le-pen-condamnee-a-trois-ans-de-prison/",
-          "source": "Burkina24",
-          "zone": "9. Europe occidentale",
-          "theme": "J",
+          "title": "105 ans du Parti communiste chinois : Pékin réaffirme son partenariat stratégique avec l’Afrique et le Burkina Faso",
+          "link": "https://faso7.com/2026/07/07/105-ans-du-parti-communiste-chinois-pekin-reaffirme-son-partenariat-strategique-avec-lafrique-et-le-burkina-faso/",
+          "source": "Faso7",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "F1"
         },
         {
-          "title": "La suspecte de la tentative d’assassinat à Monaco retrouvée morte en Ukraine",
-          "link": "https://www.lemonde.fr/societe/article/2026/07/07/la-suspecte-de-la-tentative-d-assassinat-a-monaco-retrouvee-morte-en-ukraine_6721469_3224.html",
+          "title": "Au premier jour du sommet de l’OTAN, à Ankara, Mark Rutte annonce une myriade de contrats de défense pour des milliards d’euros",
+          "link": "https://www.lemonde.fr/international/article/2026/07/07/au-premier-jour-du-sommet-de-l-otan-a-ankara-mark-rutte-annonce-une-myriade-de-contrats-de-defense-pour-des-milliards-d-euros_6721513_3210.html",
           "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B1"
-        },
-        {
-          "title": "En images : au Venezuela, l’espoir de retrouver des survivants du double séisme fait place au deuil",
-          "link": "https://www.lemonde.fr/international/article/2026/07/07/en-images-au-venezuela-l-espoir-de-retrouver-des-survivants-du-double-seisme-fait-place-au-deuil_6721468_3210.html",
-          "source": "Le Monde International",
-          "zone": "18. Amérique du Sud",
-          "theme": null,
-          "relevance": ".",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
           "rating": "B2"
+        },
+        {
+          "title": "Sommet de l’Otan : les Alliés regarnissent leurs arsenaux dans l’urgence",
+          "link": "https://www.lefigaro.fr/international/sommet-de-l-otan-les-allies-regarnissent-leurs-arsenaux-dans-l-urgence-20260707",
+          "source": "Le Figaro International",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Coupe du monde 2026 : la Belgique corrige les États-Unis et rejoint l’Espagne en quarts de finale",
@@ -1673,42 +1671,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-07-07T15:14:31.196Z",
+      "at": "2026-07-07T17:26:34.890Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-07T15:14:31.204Z",
+      "at": "2026-07-07T17:26:34.897Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-07T15:15:06.230Z",
+      "at": "2026-07-07T17:27:06.769Z",
       "agent": "Agent Collecte RSS",
-      "message": "113/170 flux OK, 1951 articles"
+      "message": "117/170 flux OK, 1952 articles"
     },
     {
-      "at": "2026-07-07T15:15:09.313Z",
+      "at": "2026-07-07T17:27:09.873Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-07T15:15:09.626Z",
+      "at": "2026-07-07T17:27:10.235Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-07T15:15:09.632Z",
+      "at": "2026-07-07T17:27:10.239Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 10 alertes"
     },
     {
-      "at": "2026-07-07T15:15:09.632Z",
+      "at": "2026-07-07T17:27:10.239Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-07-07T15:15:09.633Z",
+      "at": "2026-07-07T17:27:10.239Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
