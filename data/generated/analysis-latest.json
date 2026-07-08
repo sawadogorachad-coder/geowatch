@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-08T08:50:40.930Z",
+  "generatedAt": "2026-07-08T09:37:23.475Z",
   "stats": {
     "analysed": 800,
     "windowHours": 168,
-    "sources": 69
+    "sources": 66
   },
   "findings": {
     "tendancesLourdes": [
@@ -11,39 +11,39 @@
         "axe": "thematique",
         "cle": "P",
         "libelle": "Politique interne & gouvernance",
-        "volume": 98,
-        "base": 122.8,
+        "volume": 102,
+        "base": 122.3,
         "direction": "stable"
       },
       {
         "axe": "thematique",
         "cle": "E",
         "libelle": "Économie & ressources",
-        "volume": 75,
-        "base": 80.2,
+        "volume": 70,
+        "base": 79.9,
         "direction": "stable"
       },
       {
         "axe": "thematique",
         "cle": "D",
         "libelle": "Diplomatie & alliances",
-        "volume": 59,
-        "base": 50,
-        "direction": "stable"
+        "volume": 65,
+        "base": 50.4,
+        "direction": "hausse"
       },
       {
         "axe": "thematique",
         "cle": "S",
         "libelle": "Sécurité & défense",
-        "volume": 51,
-        "base": 51.7,
+        "volume": 55,
+        "base": 51.1,
         "direction": "stable"
       },
       {
         "axe": "thematique",
         "cle": "J",
         "libelle": "Justice & droit international",
-        "volume": 32,
+        "volume": 29,
         "base": 29.6,
         "direction": "stable"
       },
@@ -51,36 +51,44 @@
         "axe": "zone",
         "cle": 1,
         "libelle": "1. Sahel & AO franco.",
-        "volume": 86,
-        "base": 93.1,
+        "volume": 74,
+        "base": 91.8,
         "direction": "stable"
       },
       {
         "axe": "zone",
         "cle": 2,
         "libelle": "2. AO anglo. & côtière",
-        "volume": 46,
-        "base": 59.1,
-        "direction": "stable"
+        "volume": 42,
+        "base": 58.5,
+        "direction": "baisse"
       },
       {
         "axe": "zone",
         "cle": 7,
         "libelle": "7. Maghreb & Afr. Nord",
-        "volume": 31,
-        "base": 34.9,
+        "volume": 30,
+        "base": 34.7,
         "direction": "stable"
       },
       {
         "axe": "zone",
         "cle": 4,
         "libelle": "4. Grands Lacs",
-        "volume": 13,
-        "base": 12.4,
+        "volume": 10,
+        "base": 12.5,
         "direction": "stable"
       }
     ],
     "signauxFaibles": [
+      {
+        "zone": "12. Asie du Sud",
+        "thematique": "Diplomatie & alliances",
+        "code": "D",
+        "volume": 2,
+        "pertinence": "●",
+        "exemple": "Islamabad, Beijing agree to boost counterterrorism cooperation as Naqvi meets Chinese counterpart"
+      },
       {
         "zone": "3. Afrique centrale",
         "thematique": "Humanitaire & social",
@@ -136,14 +144,6 @@
         "volume": 1,
         "pertinence": "●",
         "exemple": "Ebola : l’Ouganda déploie environ 50 experts en RDC"
-      },
-      {
-        "zone": "5. Corne de l’Afrique",
-        "thematique": "Technologie & cyber",
-        "code": "T",
-        "volume": 1,
-        "pertinence": "○",
-        "exemple": "Sudan conflict - LTC Situation Report (Telecoms Area) #41 (Reporting period: June 2026)"
       }
     ],
     "ruptures": [
@@ -226,16 +226,23 @@
     {
       "zone": "1. Sahel & AO franco.",
       "thematiquesDominantes": [
+        "Politique interne & gouvernance",
         "Diplomatie & alliances",
-        "Économie & ressources",
-        "Politique interne & gouvernance"
+        "Économie & ressources"
       ],
       "faits": [
         {
-          "titre": "Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples",
+          "titre": "Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission",
           "source": "AIB — Agence Information BF",
           "cote": "A2",
-          "lien": "https://www.aib.media/noumbiel-an-ii-de-laes-le-haut-commissaire-appelle-a-sinspirer-des-ideaux-de-laes-pour-lunite-et-le-bien-etre-des-peuples/",
+          "lien": "https://www.aib.media/koosin-le-haut-commissaire-appelle-les-forces-vives-a-accompagner-les-policiers-municipaux-dans-laccomplissement-de-leur-mission/",
+          "theme": "P"
+        },
+        {
+          "titre": "Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération",
+          "source": "AIB — Agence Information BF",
+          "cote": "A2",
+          "lien": "https://www.aib.media/sissili-deuxieme-anniversaire-de-laes-les-forces-vives-de-la-sissili-mobilisees-a-leo-derriere-les-ideaux-de-la-confederation/",
           "theme": "P"
         },
         {
@@ -258,16 +265,9 @@
           "cote": "F2",
           "lien": "https://netafrique.net/burkina-plus-de-32-milliards-fcfa-pour-la-rehabilitation-de-laxe-moami-orodara/",
           "theme": "E"
-        },
-        {
-          "titre": "Pisciculture et transformation du poisson: Adèle Djiry et Dabouonibé Somé forcent l’adminiration dans le Djôrô",
-          "source": "Sidwaya",
-          "cote": "A2",
-          "lien": "https://www.sidwaya.info/pisciculture-et-transformation-du-poisson-adele-djiry-et-dabouonibe-some-forcent-ladminiration-dans-le-djoro/",
-          "theme": "E"
         }
       ],
-      "lectureStructuree": "Faits marquants : « Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples » (AIB — Agence Information BF) ; « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal)) ; « Ziro : Gao célèbre l’anniversaire de la Confédération de l’AES sous le signe de l’engagement patriotique » (AIB — Agence Information BF).\nThématiques actives : Diplomatie & alliances, Économie & ressources, Politique interne & gouvernance (86 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
+      "lectureStructuree": "Faits marquants : « Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission » (AIB — Agence Information BF) ; « Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération » (AIB — Agence Information BF) ; « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal)).\nThématiques actives : Politique interne & gouvernance, Diplomatie & alliances, Économie & ressources (74 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
       "confiance": "eleve",
       "proseIA": null
     },
@@ -279,13 +279,6 @@
         "Sécurité & défense"
       ],
       "faits": [
-        {
-          "titre": "NNPC remits N19.5tn to Federation Account in 14 months",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/07/nnpc-remits-n19-5tn-to-federation-account-in-14-months-2/",
-          "theme": "E"
-        },
         {
           "titre": "Nigeria’s UTM secures gas supply deal, clears key hurdle to $3 billion LNG project",
           "source": "MyJoyOnline (Ghana)",
@@ -313,20 +306,34 @@
           "cote": "F2",
           "lien": "https://www.vanguardngr.com/2026/07/why-tinubu-initially-withdrew-support-for-fasholas-second-term-ex-aide/",
           "theme": "P"
+        },
+        {
+          "titre": "BoG confident cedi stability will continue as dollar pressures ease",
+          "source": "MyJoyOnline (Ghana)",
+          "cote": "F2",
+          "lien": "https://www.myjoyonline.com/bog-confident-cedi-stability-will-continue-as-dollar-pressures-ease/",
+          "theme": "D"
         }
       ],
-      "lectureStructuree": "Faits marquants : « NNPC remits N19.5tn to Federation Account in 14 months » (Vanguard (Nigeria)) ; « Nigeria’s UTM secures gas supply deal, clears key hurdle to $3 billion LNG project » (MyJoyOnline (Ghana)) ; « Dangote Cement targets 20% emissions cut, expands capacity to 80mtpa » (Vanguard (Nigeria)).\nThématiques actives : Économie & ressources, Logistique & corridors, Sécurité & défense (46 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
+      "lectureStructuree": "Faits marquants : « Nigeria’s UTM secures gas supply deal, clears key hurdle to $3 billion LNG project » (MyJoyOnline (Ghana)) ; « Dangote Cement targets 20% emissions cut, expands capacity to 80mtpa » (Vanguard (Nigeria)) ; « Soldiers, NDLEA arrest three suspected terrorist drug suppliers in Katsina » (Punch (Nigeria)).\nThématiques actives : Économie & ressources, Logistique & corridors, Sécurité & défense (42 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
       "confiance": "eleve",
       "proseIA": null
     },
     {
       "zone": "7. Maghreb & Afr. Nord",
       "thematiquesDominantes": [
+        "Diplomatie & alliances",
         "Économie & ressources",
-        "Sécurité & défense",
-        "Diplomatie & alliances"
+        "Sécurité & défense"
       ],
       "faits": [
+        {
+          "titre": "Sommet africain IA et cybersécurité à Hammamet | Au-delà des déclarations d’intention",
+          "source": "Kapitalis (Tunisie)",
+          "cote": "F2",
+          "lien": "https://kapitalis.com/tunisie/2026/07/08/sommet-africain-ia-et-cybersecurite-a-hammamet-au-dela-des-declarations-dintention/",
+          "theme": "D"
+        },
         {
           "titre": "Banque centrale de Tunisie | Anatomie d’un optimisme administré",
           "source": "Kapitalis (Tunisie)",
@@ -354,16 +361,9 @@
           "cote": "F2",
           "lien": "https://kapitalis.com/tunisie/2026/07/08/wyse-2-0-job-fair-a-tunis-pour-valoriser-les-talents-feminins/",
           "theme": "D"
-        },
-        {
-          "titre": "Mondial 2026 : l’Egypte frôle l’exploit face à l’Argentine et conforte les anti-Petkovic",
-          "source": "TSA — Tout sur l'Algérie",
-          "cote": "F1",
-          "lien": "https://www.tsa-algerie.com/mondial-2026-legypte-frole-lexploit-face-a-largentine-et-conforte-les-anti-petkovic/",
-          "theme": "P"
         }
       ],
-      "lectureStructuree": "Faits marquants : « Banque centrale de Tunisie | Anatomie d’un optimisme administré » (Kapitalis (Tunisie)) ; « Mondial 2026 : l'Argentine et Leo Messi miraculés contre l'Égypte » (France 24) ; « Verdict dans l’affaire visant Samir Abdelli » (Kapitalis (Tunisie)).\nThématiques actives : Économie & ressources, Sécurité & défense, Diplomatie & alliances (31 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
+      "lectureStructuree": "Faits marquants : « Sommet africain IA et cybersécurité à Hammamet | Au-delà des déclarations d’intention » (Kapitalis (Tunisie)) ; « Banque centrale de Tunisie | Anatomie d’un optimisme administré » (Kapitalis (Tunisie)) ; « Mondial 2026 : l'Argentine et Leo Messi miraculés contre l'Égypte » (France 24).\nThématiques actives : Diplomatie & alliances, Économie & ressources, Sécurité & défense (30 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
       "confiance": "eleve",
       "proseIA": null
     }
@@ -383,7 +383,7 @@
     },
     {
       "zone": "2. AO anglo. & côtière",
-      "hypothese": "Si la dynamique « 2. AO anglo. & côtière » (stable) se poursuit a 3-6 mois, l'impact sur l'AES s'accentue.",
+      "hypothese": "Si la dynamique « 2. AO anglo. & côtière » (baisse) se poursuit a 3-6 mois, l'impact sur l'AES s'accentue.",
       "signauxASurveiller": [
         "Frequence et localisation des incidents",
         "Reactions diplomatiques (CEDEAO/UA/ONU)",
@@ -410,14 +410,20 @@
     {
       "code": "P",
       "libelle": "Politique interne & gouvernance",
-      "volume": 98,
+      "volume": 102,
       "direction": "stable",
       "faitsSaillants": [
         {
-          "titre": "Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples",
+          "titre": "Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission",
           "source": "AIB — Agence Information BF",
           "cote": "A2",
-          "lien": "https://www.aib.media/noumbiel-an-ii-de-laes-le-haut-commissaire-appelle-a-sinspirer-des-ideaux-de-laes-pour-lunite-et-le-bien-etre-des-peuples/"
+          "lien": "https://www.aib.media/koosin-le-haut-commissaire-appelle-les-forces-vives-a-accompagner-les-policiers-municipaux-dans-laccomplissement-de-leur-mission/"
+        },
+        {
+          "titre": "Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération",
+          "source": "AIB — Agence Information BF",
+          "cote": "A2",
+          "lien": "https://www.aib.media/sissili-deuxieme-anniversaire-de-laes-les-forces-vives-de-la-sissili-mobilisees-a-leo-derriere-les-ideaux-de-la-confederation/"
         },
         {
           "titre": "Tuy/2e anniversaire de l’AES : Les populations appelées à adhérer à la feuille de route de l’An II de la Confédération",
@@ -426,44 +432,38 @@
           "lien": "https://www.aib.media/tuy-2e-anniversaire-de-laes-les-populations-appelees-a-adherer-a-la-feuille-de-route-de-lan-ii-de-la-confederation/"
         },
         {
+          "titre": "Houet : la PDS de Toussiana revient sur les grandes lignes du discours du Chef de l’État à l’occasion de l’an II de l’AES",
+          "source": "AIB — Agence Information BF",
+          "cote": "A2",
+          "lien": "https://www.aib.media/houet-la-pds-de-toussiana-revient-sur-les-grandes-lignes-du-discours-du-chef-de-letat-a-loccasion-de-lan-ii-de-laes/"
+        },
+        {
           "titre": "Consolidation de la communication au sein de La Confédération AES : les projets de loi portant ratification de la radio et de la télévision AES présentés à la CAEDS",
           "source": "AIB — Agence Information BF",
           "cote": "C1",
           "lien": "https://www.aib.media/consolidation-de-la-communication-au-sein-de-la-confederation-aes-les-projets-de-loi-portant-ratification-de-la-radio-et-de-la-television-aes-presentes-a-la-caeds/"
-        },
-        {
-          "titre": "Consolidation de la communication dans la Confédération AES: les projets de loi portant ratification de la radio et de la télévision présentés aux deputés",
-          "source": "Sidwaya",
-          "cote": "C1",
-          "lien": "https://www.sidwaya.info/consolidation-de-la-communication-dans-la-confederation-aes-les-projets-de-loi-portant-ratification-de-la-radio-et-de-la-television-presentes-aux-deputes/"
-        },
-        {
-          "titre": "Tuy/2e anniversaire de l’AES : Le message du Président de la Confédération lu et traduit en dioula à Koti",
-          "source": "AIB — Agence Information BF",
-          "cote": "C1",
-          "lien": "https://www.aib.media/tuy-2e-anniversaire-de-laes-le-message-du-president-de-la-confederation-lu-et-traduit-en-dioula-a-koti/"
         }
       ],
-      "lecture": "Politique interne & gouvernance : 98 signaux sur la période (tendance stable). Faits marquants : « Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples » (AIB — Agence Information BF) ; « Tuy/2e anniversaire de l’AES : Les populations appelées à adhérer à la feuille de route de l’An II de la Confédération » (AIB — Agence Information BF) ; « Consolidation de la communication au sein de La Confédération AES : les projets de loi portant ratification de la radio et de la télévision AES présentés à la CAEDS » (AIB — Agence Information BF).",
+      "lecture": "Politique interne & gouvernance : 102 signaux sur la période (tendance stable). Faits marquants : « Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission » (AIB — Agence Information BF) ; « Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération » (AIB — Agence Information BF) ; « Tuy/2e anniversaire de l’AES : Les populations appelées à adhérer à la feuille de route de l’An II de la Confédération » (AIB — Agence Information BF).",
       "blocs": [
-        "afrique (28)",
-        "occident_fr (19)",
+        "afrique (27)",
+        "occident_fr (18)",
         "occident_us (14)",
-        "bf_local (13)"
+        "golfe_mo (12)"
       ],
       "sources": [
-        "AIB — Agence Information BF",
-        "MyJoyOnline (Ghana)",
         "El País (Espagne, ES)",
-        "France 24",
-        "Financial Times World"
+        "MyJoyOnline (Ghana)",
+        "AIB — Agence Information BF",
+        "RT en français",
+        "Vanguard (Nigeria)"
       ],
       "proseIA": null
     },
     {
       "code": "E",
       "libelle": "Économie & ressources",
-      "volume": 75,
+      "volume": 70,
       "direction": "stable",
       "faitsSaillants": [
         {
@@ -479,12 +479,6 @@
           "lien": "https://www.sidwaya.info/pisciculture-et-transformation-du-poisson-adele-djiry-et-dabouonibe-some-forcent-ladminiration-dans-le-djoro/"
         },
         {
-          "titre": "Burkina/Blanchiment de capitaux: les acteurs des transports terrestres du Grand Ouest outillés pour la lutte",
-          "source": "Wakat Séra",
-          "cote": "A2",
-          "lien": "https://www.wakatsera.com/burkina-blanchiment-de-capitaux-les-acteurs-des-transports-terrestres-du-grand-ouest-outilles-pour-la-lutte/"
-        },
-        {
           "titre": "Saponé : Les populations du village de Kougpaka font un don de 676 000 F FCFA pour l’opération « un village, au moins une moto pour nos VDP »",
           "source": "AIB — Agence Information BF",
           "cote": "C2",
@@ -495,29 +489,35 @@
           "source": "Net Afrique (BF)",
           "cote": "F2",
           "lien": "https://netafrique.net/burkina-faso-apres-le-drame-de-2022-la-mine-de-zinc-de-perkoa-va-bientot-rouvrir/"
+        },
+        {
+          "titre": "Burkina Faso : En 6 mois les mines de Kiaka et de Sanbrado génèrent un chiffre d’affaires de près de 610 milliards FCFA",
+          "source": "Net Afrique (BF)",
+          "cote": "F2",
+          "lien": "https://netafrique.net/burkina-faso-en-6-mois-les-mines-de-kiaka-et-de-sanbrado-generent-un-chiffre-daffaires-de-pres-de-610-milliards-fcfa/"
         }
       ],
-      "lecture": "Économie & ressources : 75 signaux sur la période (tendance stable). Faits marquants : « Burkina : Plus de 32 milliards FCFA pour la réhabilitation de l’axe Moami-Orodara » (Net Afrique (BF)) ; « Pisciculture et transformation du poisson: Adèle Djiry et Dabouonibé Somé forcent l’adminiration dans le Djôrô » (Sidwaya) ; « Burkina/Blanchiment de capitaux: les acteurs des transports terrestres du Grand Ouest outillés pour la lutte » (Wakat Séra).",
+      "lecture": "Économie & ressources : 70 signaux sur la période (tendance stable). Faits marquants : « Burkina : Plus de 32 milliards FCFA pour la réhabilitation de l’axe Moami-Orodara » (Net Afrique (BF)) ; « Pisciculture et transformation du poisson: Adèle Djiry et Dabouonibé Somé forcent l’adminiration dans le Djôrô » (Sidwaya) ; « Saponé : Les populations du village de Kougpaka font un don de 676 000 F FCFA pour l’opération « un village, au moins une moto pour nos VDP » » (AIB — Agence Information BF).",
       "blocs": [
-        "afrique (31)",
-        "bf_local (10)",
+        "afrique (26)",
         "occident_fr (9)",
-        "autre (8)"
+        "autre (9)",
+        "bf_local (8)"
       ],
       "sources": [
         "MyJoyOnline (Ghana)",
-        "Le Soleil (Sénégal)",
         "South China Morning Post",
-        "Vanguard (Nigeria)",
-        "Net Afrique (BF)"
+        "Le Soleil (Sénégal)",
+        "Dawn (Pakistan)",
+        "Hespress (Maroc, FR)"
       ],
       "proseIA": null
     },
     {
       "code": "D",
       "libelle": "Diplomatie & alliances",
-      "volume": 59,
-      "direction": "stable",
+      "volume": 65,
+      "direction": "hausse",
       "faitsSaillants": [
         {
           "titre": "Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes",
@@ -550,18 +550,18 @@
           "lien": "https://netafrique.net/cooperation-confederation-aes-federation-de-russie-lequipe-diplomatique-de-lespace-confederal-se-concerte-en-prelude-a-la-2e-session-prevue-ce-08-juillet/"
         }
       ],
-      "lecture": "Diplomatie & alliances : 59 signaux sur la période (tendance stable). Faits marquants : « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal)) ; « Ziro : Gao célèbre l’anniversaire de la Confédération de l’AES sous le signe de l’engagement patriotique » (AIB — Agence Information BF) ; « Coopération Confédération AES- Fédération de Russie: l’équipe diplomatique de l’espace confédéral se concerte en prélude à la 2e session prévue ce 08 juillet » (AIB — Agence Information BF).",
+      "lecture": "Diplomatie & alliances : 65 signaux sur la période (tendance hausse). Faits marquants : « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal)) ; « Ziro : Gao célèbre l’anniversaire de la Confédération de l’AES sous le signe de l’engagement patriotique » (AIB — Agence Information BF) ; « Coopération Confédération AES- Fédération de Russie: l’équipe diplomatique de l’espace confédéral se concerte en prélude à la 2e session prévue ce 08 juillet » (AIB — Agence Information BF).",
       "blocs": [
         "afrique (17)",
-        "bf_local (11)",
-        "occident_us (7)",
-        "golfe_mo (6)"
+        "bf_local (9)",
+        "occident_us (8)",
+        "turquie (8)"
       ],
       "sources": [
-        "AIB — Agence Information BF",
+        "Kapitalis (Tunisie)",
         "MyJoyOnline (Ghana)",
         "Daily Sabah (Turquie)",
-        "Kapitalis (Tunisie)",
+        "AIB — Agence Information BF",
         "Net Afrique (BF)"
       ],
       "proseIA": null
@@ -569,9 +569,21 @@
     {
       "code": "S",
       "libelle": "Sécurité & défense",
-      "volume": 51,
+      "volume": 55,
       "direction": "stable",
       "faitsSaillants": [
+        {
+          "titre": "EN DIRECT - Les hostilités reprennent entre les Etats-Unis et l’Iran, Trump affirme que le cessez-le-feu est «terminé»",
+          "source": "Libération International",
+          "cote": "C1",
+          "lien": "https://www.liberation.fr/international/moyen-orient/en-direct-les-hostilites-reprennent-entre-les-etats-unis-et-liran-trump-affirme-que-le-cessez-le-feu-est-termine-20260708_4Z7JFPA7WFDM3AT2XQ2MCAML5A/"
+        },
+        {
+          "titre": "Donald Trump affirme que le cessez-le-feu avec l’Iran est « terminé », après la reprise de frappes massives",
+          "source": "Le Monde International",
+          "cote": "B1",
+          "lien": "https://www.lemonde.fr/international/article/2026/07/08/donald-trump-affirme-que-le-cessez-le-feu-avec-l-iran-est-termine-apres-la-reprise-de-frappes-massives_6721802_3210.html"
+        },
         {
           "titre": "Mondial 2026 : la Suisse sort la Colombie et défiera l’Argentine en quarts",
           "source": "Le Soleil (Sénégal)",
@@ -589,33 +601,21 @@
           "source": "ICG — International Crisis Group",
           "cote": "A2",
           "lien": "https://www.crisisgroup.org/brf/africa/somalia/b212-new-chapter-same-stalemate-somalias-war-al-shabaab"
-        },
-        {
-          "titre": "Après de nouvelles attaques dans le détroit d’Ormuz, les Etats-Unis frappent l’Iran",
-          "source": "Le Monde International",
-          "cote": "B2",
-          "lien": "https://www.lemonde.fr/videos/video/2026/07/08/apres-de-nouvelles-attaques-dans-le-detroit-d-ormuz-les-etats-unis-frappent-l-iran_6721800_1669088.html"
-        },
-        {
-          "titre": "EN DIRECT, guerre en Ukraine : Kiev revendique des attaques de drones sur des pétroliers russes en mer d’Azov et des installations électriques en Crimée",
-          "source": "Le Monde International",
-          "cote": "B2",
-          "lien": "https://www.lemonde.fr/international/live/2026/07/08/en-direct-guerre-en-ukraine-des-attaques-russes-ont-vise-plusieurs-oblasts-dans-la-nuit-dont-celui-de-kiev-faisant-des-morts_6720832_3210.html"
         }
       ],
-      "lecture": "Sécurité & défense : 51 signaux sur la période (tendance stable). Faits marquants : « Mondial 2026 : la Suisse sort la Colombie et défiera l’Argentine en quarts » (Le Soleil (Sénégal)) ; « Soldiers, NDLEA arrest three suspected terrorist drug suppliers in Katsina » (Punch (Nigeria)) ; « New Chapter, Same Stalemate: Somalia’s War with Al-Shabaab » (ICG — International Crisis Group).",
+      "lecture": "Sécurité & défense : 55 signaux sur la période (tendance stable). Faits marquants : « EN DIRECT - Les hostilités reprennent entre les Etats-Unis et l’Iran, Trump affirme que le cessez-le-feu est «terminé» » (Libération International) ; « Donald Trump affirme que le cessez-le-feu avec l’Iran est « terminé », après la reprise de frappes massives » (Le Monde International) ; « Mondial 2026 : la Suisse sort la Colombie et défiera l’Argentine en quarts » (Le Soleil (Sénégal)).",
       "blocs": [
-        "occident_fr (14)",
+        "occident_fr (15)",
+        "russie (10)",
         "golfe_mo (10)",
-        "afrique (8)",
-        "russie (7)"
+        "afrique (7)"
       ],
       "sources": [
         "Le Monde International",
+        "France 24",
+        "RT en français",
         "Dawn (Pakistan)",
-        "Press TV (Iran)",
-        "Punch (Nigeria)",
-        "France 24"
+        "Press TV (Iran)"
       ],
       "proseIA": null
     }
@@ -624,18 +624,25 @@
     "c_aes": {
       "id": "c_aes",
       "name": "Sahel/AES",
-      "volume": 95,
+      "volume": 82,
       "themesDominants": [
+        "Politique interne & gouvernance",
         "Diplomatie & alliances",
-        "Économie & ressources",
-        "Politique interne & gouvernance"
+        "Économie & ressources"
       ],
       "faits": [
         {
-          "titre": "Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples",
+          "titre": "Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission",
           "source": "AIB — Agence Information BF",
           "cote": "A2",
-          "lien": "https://www.aib.media/noumbiel-an-ii-de-laes-le-haut-commissaire-appelle-a-sinspirer-des-ideaux-de-laes-pour-lunite-et-le-bien-etre-des-peuples/",
+          "lien": "https://www.aib.media/koosin-le-haut-commissaire-appelle-les-forces-vives-a-accompagner-les-policiers-municipaux-dans-laccomplissement-de-leur-mission/",
+          "theme": "P"
+        },
+        {
+          "titre": "Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération",
+          "source": "AIB — Agence Information BF",
+          "cote": "A2",
+          "lien": "https://www.aib.media/sissili-deuxieme-anniversaire-de-laes-les-forces-vives-de-la-sissili-mobilisees-a-leo-derriere-les-ideaux-de-la-confederation/",
           "theme": "P"
         },
         {
@@ -665,18 +672,11 @@
           "cote": "A2",
           "lien": "https://www.sidwaya.info/pisciculture-et-transformation-du-poisson-adele-djiry-et-dabouonibe-some-forcent-ladminiration-dans-le-djoro/",
           "theme": "E"
-        },
-        {
-          "titre": "Banfora : la montée des couleurs placée sous le signe du deuxième anniversaire de la Confédération de l’AES",
-          "source": "AIB — Agence Information BF",
-          "cote": "C1",
-          "lien": "https://www.aib.media/banfora-la-montee-des-couleurs-placee-sous-le-signe-du-deuxieme-anniversaire-de-la-confederation-de-laes/",
-          "theme": "J"
         }
       ],
       "enjeu": "Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.",
       "consequencesAES": "Maximale (priorité 1) : Le Burkina Faso EST le théâtre central de ce conflit. Toute analyse sahélienne est de facto une analyse burkinabè. : Le BF est l'État le plus exposé du trio AES en termes de pression jihadiste : ~40 % du territoire hors contrôle effectif, attaques mensuelles record en glissem…",
-      "lectureStructuree": "SITUATION (live) — 95 dépêches sur la période, dominante : Diplomatie & alliances, Économie & ressources, Politique interne & gouvernance.\nFaits saillants : « Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples » (AIB — Agence Information BF, cote A2) ; « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal), cote F2) ; « Ziro : Gao célèbre l’anniversaire de la Confédération de l’AES sous le signe de l’engagement patriotique » (AIB — Agence Information BF, cote C2).\n\nENJEU CENTRAL — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n\nPOURQUOI — C'est la rupture géopolitique africaine la plus profonde depuis les indépendances. Elle redistribue les cartes de l'influence en Afrique de l'Ouest, fragilise la CEDEAO, ouvre la voie à de nouveaux partenaires (Russie, Chine, Iran, Turquie, Émirats), et pose la question de la viabilité du modèle militaro-plébiscitaire face à une menace jihadiste qui continue de progresser.\n\nIMPACT POUR L'AES — Maximale (priorité 1) : Le Burkina Faso EST le théâtre central de ce conflit. Toute analyse sahélienne est de facto une analyse burkinabè. : Le BF est l'État le plus exposé du trio AES en termes de pression jihadiste : ~40 % du territoire hors contrôle effectif, attaques mensuelles record en glissem…\n\nSCÉNARIOS —\n• Tendanciel — érosion lente (55%) : Les transitions tiennent par la force et la popularité urbaine, mais perdent du territoire rural. Wagner reste mais ne stabilise pas. JNIM consolide ses émirats. Attaques sur capitales sans les prendre. Sortie partielle F CFA, instabilité monétaire gérée.\n• Rupture — chute d'un État (25%) : Un État (probablement BF ou Mali) bascule : prise de capitale ou effondrement militaire complet. Gouvernement transitionnel forcé d'inclure jihadistes. Onde de choc régionale, exode massif, intervention extérieure non-occidentale possible (Égypte, Algérie).\n\nÀ SURVEILLER — Une attaque réussie sur Ouagadougou-centre ou Bamako (rupture systémique). ; L'extension côtière de la guerre (Bénin, Togo, Côte d'Ivoire). ; La sortie effective du F CFA et la naissance d'une monnaie AES.",
+      "lectureStructuree": "SITUATION (live) — 82 dépêches sur la période, dominante : Politique interne & gouvernance, Diplomatie & alliances, Économie & ressources.\nFaits saillants : « Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission » (AIB — Agence Information BF, cote A2) ; « Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération » (AIB — Agence Information BF, cote A2) ; « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal), cote F2).\n\nENJEU CENTRAL — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n\nPOURQUOI — C'est la rupture géopolitique africaine la plus profonde depuis les indépendances. Elle redistribue les cartes de l'influence en Afrique de l'Ouest, fragilise la CEDEAO, ouvre la voie à de nouveaux partenaires (Russie, Chine, Iran, Turquie, Émirats), et pose la question de la viabilité du modèle militaro-plébiscitaire face à une menace jihadiste qui continue de progresser.\n\nIMPACT POUR L'AES — Maximale (priorité 1) : Le Burkina Faso EST le théâtre central de ce conflit. Toute analyse sahélienne est de facto une analyse burkinabè. : Le BF est l'État le plus exposé du trio AES en termes de pression jihadiste : ~40 % du territoire hors contrôle effectif, attaques mensuelles record en glissem…\n\nSCÉNARIOS —\n• Tendanciel — érosion lente (55%) : Les transitions tiennent par la force et la popularité urbaine, mais perdent du territoire rural. Wagner reste mais ne stabilise pas. JNIM consolide ses émirats. Attaques sur capitales sans les prendre. Sortie partielle F CFA, instabilité monétaire gérée.\n• Rupture — chute d'un État (25%) : Un État (probablement BF ou Mali) bascule : prise de capitale ou effondrement militaire complet. Gouvernement transitionnel forcé d'inclure jihadistes. Onde de choc régionale, exode massif, intervention extérieure non-occidentale possible (Égypte, Algérie).\n\nÀ SURVEILLER — Une attaque réussie sur Ouagadougou-centre ou Bamako (rupture systémique). ; L'extension côtière de la guerre (Bénin, Togo, Côte d'Ivoire). ; La sortie effective du F CFA et la naissance d'une monnaie AES.",
       "prospective": "12-24 mois : statu quo dégradé probable, perte de territoires ruraux, popularité urbaine maintenue.",
       "confiance": "eleve",
       "proseIA": null
@@ -684,59 +684,59 @@
     "c_iran_il": {
       "id": "c_iran_il",
       "name": "Iran-Israël",
-      "volume": 153,
+      "volume": 165,
       "themesDominants": [
         "Maritime & océanique",
-        "Diplomatie & alliances",
-        "Humanitaire & social"
+        "Sécurité & défense",
+        "Diplomatie & alliances"
       ],
       "faits": [
         {
+          "titre": "EN DIRECT - Les hostilités reprennent entre les Etats-Unis et l’Iran, Trump affirme que le cessez-le-feu est «terminé»",
+          "source": "Libération International",
+          "cote": "C1",
+          "lien": "https://www.liberation.fr/international/moyen-orient/en-direct-les-hostilites-reprennent-entre-les-etats-unis-et-liran-trump-affirme-que-le-cessez-le-feu-est-termine-20260708_4Z7JFPA7WFDM3AT2XQ2MCAML5A/",
+          "theme": "S"
+        },
+        {
+          "titre": "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/07/a-waste-of-time-dealing-with-iran-ceasefire-over-trump-declares/",
+          "theme": "M"
+        },
+        {
+          "titre": "Donald Trump affirme que le cessez-le-feu avec l’Iran est « terminé », après la reprise de frappes massives",
+          "source": "Le Monde International",
+          "cote": "B1",
+          "lien": "https://www.lemonde.fr/international/article/2026/07/08/donald-trump-affirme-que-le-cessez-le-feu-avec-l-iran-est-termine-apres-la-reprise-de-frappes-massives_6721802_3210.html",
+          "theme": "S"
+        },
+        {
           "titre": "Guerre au Moyen-Orient : Donald Trump estime que le cessez-le-feu avec l’Iran est «terminé»",
           "source": "Libération International",
-          "cote": "C2",
+          "cote": "C1",
           "lien": "https://www.liberation.fr/international/moyen-orient/guerre-au-moyen-orient-donald-trump-estime-que-le-cessez-le-feu-avec-liran-est-termine-20260708_4U6FP3GXKNEHNEN4GZ3HA5CFSM/",
           "theme": "D"
         },
         {
-          "titre": "Iran says US strikes targeted coastal surveillance sites, accuses Washington of violating ceasefire",
-          "source": "Anadolu Agency (Turquie)",
-          "cote": "F1",
-          "lien": "https://www.aa.com.tr/en/middle-east/iran-says-us-strikes-targeted-coastal-surveillance-sites-accuses-washington-of-violating-ceasefire/3990187",
-          "theme": null
+          "titre": "EN DIRECT - Moyen-Orient: Donald Trump affirme que le cessez-le-feu avec l'Iran est «terminé»",
+          "source": "RFI Moyen-Orient",
+          "cote": "C1",
+          "lien": "https://www.rfi.fr/fr/moyen-orient/20260708-en-direct-apr%C3%A8s-de-nouvelles-frappes-am%C3%A9ricaines-sur-l-iran-t%C3%A9h%C3%A9ran-dit-avoir-vis%C3%A9-des-bases-am%C3%A9ricaines-au-kowe%C3%AFt-et-%C3%A0-bahre%C3%AFn",
+          "theme": "M"
         },
         {
-          "titre": "YouTube defends video falsely claiming Bondi Beach massacre survivor is ‘crisis actor’",
-          "source": "Times of Israel",
-          "cote": "F1",
-          "lien": "https://www.timesofisrael.com/youtube-defends-video-falsely-claiming-bondi-beach-massacre-survivor-is-crisis-actor/",
-          "theme": "H"
-        },
-        {
-          "titre": "US, Iran trade strikes in new threat to ceasefire",
+          "titre": "Trump says Iran ceasefire 'over' after fighting flares",
           "source": "Al-Monitor",
-          "cote": "F2",
-          "lien": "https://www.al-monitor.com/originals/2026/07/us-iran-trade-strikes-new-threat-ceasefire",
+          "cote": "F1",
+          "lien": "https://www.al-monitor.com/originals/2026/07/trump-says-iran-ceasefire-over-after-fighting-flares",
           "theme": "M"
-        },
-        {
-          "titre": "Trump declares ceasefire with Iran has ended",
-          "source": "Washington Post World",
-          "cote": "B3",
-          "lien": "https://www.washingtonpost.com/world/2026/07/08/trump-declares-ceasefire-with-iran-has-ended/",
-          "theme": "M"
-        },
-        {
-          "titre": "U.S. strikes Iran and blocks oil sales in new test of ceasefire",
-          "source": "The Japan Times",
-          "cote": "F2",
-          "lien": "https://www.japantimes.co.jp/news/2026/07/08/world/politics/us-strikes-iran-oil-shipping-attacks/",
-          "theme": null
         }
       ],
       "enjeu": "La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.",
       "consequencesAES": "Élevée (impact indirect majeur) : Le BF n'est pas acteur direct mais subit la totalité des chocs économiques et géopolitiques de l'embrasement moyen-oriental. : Réseaux jihadistes sahéliens (JNIM, EIGS) bénéficient indirectement de l'effervescence post-Gaza : recrutement, financement Golfe, diffusio…",
-      "lectureStructuree": "SITUATION (live) — 153 dépêches sur la période, dominante : Maritime & océanique, Diplomatie & alliances, Humanitaire & social.\nFaits saillants : « Guerre au Moyen-Orient : Donald Trump estime que le cessez-le-feu avec l’Iran est «terminé» » (Libération International, cote C2) ; « Iran says US strikes targeted coastal surveillance sites, accuses Washington of violating ceasefire » (Anadolu Agency (Turquie), cote F1) ; « YouTube defends video falsely claiming Bondi Beach massacre survivor is ‘crisis actor’ » (Times of Israel, cote F1).\n\nENJEU CENTRAL — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n\nPOURQUOI — Le Moyen-Orient connaît sa plus profonde recomposition depuis 1979. L'affaiblissement de l'arc chiite ouvre une fenêtre incertaine : soit un nouvel ordre stable autour des puissances du Golfe, soit une escalade directe Iran-Israël-USA. Les chocs pétroliers potentiels via le détroit d'Ormuz frappent directement les économies importatrices comme le Burkina Faso. ⚠️ Certains éléments de cette analyse sont prospectifs — vérifiez avec les dernières sources IRIS/ICG.\n\nIMPACT POUR L'AES — Élevée (impact indirect majeur) : Le BF n'est pas acteur direct mais subit la totalité des chocs économiques et géopolitiques de l'embrasement moyen-oriental. : Réseaux jihadistes sahéliens (JNIM, EIGS) bénéficient indirectement de l'effervescence post-Gaza : recrutement, financement Golfe, diffusio…\n\nSCÉNARIOS —\n• Tendanciel — Iran affaibli, ordre US-saoudien (40%) : Régime iranien survit mais affaibli. Reconstruction proxies lente. Saoudiens dominent OPEC+ et arbitrent Levant. Israël intègre normalisation arabe (extension Abraham). Sahel et Russie reviennent par défaut.\n• Rupture — transition Pasdaran nucléaire (25%) : CGRI prend le pouvoir, sortie TNP, accélération bombe. Sanctions totales mais marché chinois maintenu. Course aux armements régionale (Saoudite, Turquie). Risque frappes israéliennes répétées.\n\nÀ SURVEILLER — L'état réel du programme nucléaire iranien (enrichissement résiduel ?). ; Le détroit d'Ormuz : toute fermeture déclencherait un choc pétrolier mondial. ; Le sort des sites nucléaires Fordo/Natanz : capacité résiduelle d'enrichir ?",
+      "lectureStructuree": "SITUATION (live) — 165 dépêches sur la période, dominante : Maritime & océanique, Sécurité & défense, Diplomatie & alliances.\nFaits saillants : « EN DIRECT - Les hostilités reprennent entre les Etats-Unis et l’Iran, Trump affirme que le cessez-le-feu est «terminé» » (Libération International, cote C1) ; « ‘A waste of time dealing with Iran; ceasefire over’ – Trump declares » (Vanguard (Nigeria), cote F2) ; « Donald Trump affirme que le cessez-le-feu avec l’Iran est « terminé », après la reprise de frappes massives » (Le Monde International, cote B1).\n\nENJEU CENTRAL — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n\nPOURQUOI — Le Moyen-Orient connaît sa plus profonde recomposition depuis 1979. L'affaiblissement de l'arc chiite ouvre une fenêtre incertaine : soit un nouvel ordre stable autour des puissances du Golfe, soit une escalade directe Iran-Israël-USA. Les chocs pétroliers potentiels via le détroit d'Ormuz frappent directement les économies importatrices comme le Burkina Faso. ⚠️ Certains éléments de cette analyse sont prospectifs — vérifiez avec les dernières sources IRIS/ICG.\n\nIMPACT POUR L'AES — Élevée (impact indirect majeur) : Le BF n'est pas acteur direct mais subit la totalité des chocs économiques et géopolitiques de l'embrasement moyen-oriental. : Réseaux jihadistes sahéliens (JNIM, EIGS) bénéficient indirectement de l'effervescence post-Gaza : recrutement, financement Golfe, diffusio…\n\nSCÉNARIOS —\n• Tendanciel — Iran affaibli, ordre US-saoudien (40%) : Régime iranien survit mais affaibli. Reconstruction proxies lente. Saoudiens dominent OPEC+ et arbitrent Levant. Israël intègre normalisation arabe (extension Abraham). Sahel et Russie reviennent par défaut.\n• Rupture — transition Pasdaran nucléaire (25%) : CGRI prend le pouvoir, sortie TNP, accélération bombe. Sanctions totales mais marché chinois maintenu. Course aux armements régionale (Saoudite, Turquie). Risque frappes israéliennes répétées.\n\nÀ SURVEILLER — L'état réel du programme nucléaire iranien (enrichissement résiduel ?). ; Le détroit d'Ormuz : toute fermeture déclencherait un choc pétrolier mondial. ; Le sort des sites nucléaires Fordo/Natanz : capacité résiduelle d'enrichir ?",
       "prospective": "6-12 mois : crise économique aiguë en Iran, possible accélération nucléaire clandestine.",
       "confiance": "eleve",
       "proseIA": null
@@ -744,11 +744,11 @@
     "c_ukr": {
       "id": "c_ukr",
       "name": "Ukraine-Russie",
-      "volume": 40,
+      "volume": 45,
       "themesDominants": [
         "Diplomatie & alliances",
-        "Politique interne & gouvernance",
-        "Sécurité & défense"
+        "Sécurité & défense",
+        "Politique interne & gouvernance"
       ],
       "faits": [
         {
@@ -780,23 +780,23 @@
           "theme": "P"
         },
         {
-          "titre": "EN DIRECT, guerre en Ukraine : Kiev revendique des attaques de drones sur des pétroliers russes en mer d’Azov et des installations électriques en Crimée",
-          "source": "Le Monde International",
-          "cote": "B2",
-          "lien": "https://www.lemonde.fr/international/live/2026/07/08/en-direct-guerre-en-ukraine-des-attaques-russes-ont-vise-plusieurs-oblasts-dans-la-nuit-dont-celui-de-kiev-faisant-des-morts_6720832_3210.html",
+          "titre": "La Russie frappe un atelier de drones et une usine de missiles à Kiev en représailles aux attaques terroristes ukrainiennes",
+          "source": "RT en français",
+          "cote": "A2",
+          "lien": "https://francais.rt.com/russie/135974-russie-frappe-atelier-drones-usine-missiles-represailles-attaques-terroristes-kiev",
           "theme": "S"
         },
         {
-          "titre": "Affaire Balogun | L’UEFA part en guerre contre la Fifa",
-          "source": "Kapitalis (Tunisie)",
-          "cote": "F2",
-          "lien": "https://kapitalis.com/tunisie/2026/07/08/affaire-balogun-luefa-part-en-guerre-contre-la-fifa/",
-          "theme": "D"
+          "titre": "EN DIRECT, guerre en Ukraine : Kiev revendique des attaques de drones contre des pétroliers russes en mer d’Azov et des installations électriques en Crimée",
+          "source": "Le Monde International",
+          "cote": "B1",
+          "lien": "https://www.lemonde.fr/international/live/2026/07/08/en-direct-guerre-en-ukraine-des-attaques-russes-ont-vise-plusieurs-oblasts-dans-la-nuit-dont-celui-de-kiev-faisant-des-morts_6720832_3210.html",
+          "theme": "S"
         }
       ],
       "enjeu": "L'Ukraine est trop grande pour être conquise et trop importante pour être abandonnée. Le conflit tend vers un blocage prolongé que personne ne sait résoudre.",
       "consequencesAES": "Élevée (Russie = partenaire stratégique BF) : La guerre russe en Ukraine engage directement le partenaire militaire principal du BF (Africa Corps) et structure ses capacités. : Africa Corps (héritier Wagner) : ~1 200-2 000 instructeurs/combattants au Mali, présence BF moins documentée mais croissant…",
-      "lectureStructuree": "SITUATION (live) — 40 dépêches sur la période, dominante : Diplomatie & alliances, Politique interne & gouvernance, Sécurité & défense.\nFaits saillants : « Coopération Confédération AES- Fédération de Russie: l’équipe diplomatique de l’espace confédéral se concerte en prélude à la 2e session prévue ce 08 juillet » (AIB — Agence Information BF, cote C1) ; « Coopération Confédération AES- Fédération de Russie : L’équipe diplomatique de l’espace confédéral se concerte en prélude à la 2e session prévue ce 08 juillet » (Net Afrique (BF), cote F1) ; « 2e session des consultations diplomatiques Confédération AES-Russie: l’équipe diplomatique de l’espace confédéral se concerte » (Sidwaya, cote C1).\n\nENJEU CENTRAL — L'Ukraine est trop grande pour être conquise et trop importante pour être abandonnée. Le conflit tend vers un blocage prolongé que personne ne sait résoudre.\n\nPOURQUOI — C'est la première guerre européenne de haute intensité depuis 1945 et le test décisif de l'ordre international post-Guerre froide. Si la Russie obtient des concessions par la force, la frontière taïwanaise, sahélienne et caucasienne deviennent négociables par les armes. C'est aussi un test pour le réarmement européen et la crédibilité de l'OTAN sans soutien américain.\n\nIMPACT POUR L'AES — Élevée (Russie = partenaire stratégique BF) : La guerre russe en Ukraine engage directement le partenaire militaire principal du BF (Africa Corps) et structure ses capacités. : Africa Corps (héritier Wagner) : ~1 200-2 000 instructeurs/combattants au Mali, présence BF moins documentée mais croissant…\n\nSCÉNARIOS —\n• Tendanciel — gel armé (40%) : Trump impose cessez-le-feu sur ligne actuelle. Pas de reconnaissance Crimée/Donbass. Pas de garanties OTAN. Conflit gelé type Coréen. Reconstruction lente, militarisation pérenne.\n• Rupture — effondrement russe (20%) : Crise économique aiguë + défaite militaire ponctuelle + crise succession ouvrent transition. Risque mais aussi opportunité historique.\n\nÀ SURVEILLER — Les décrets de Trump sur l'aide militaire (effectif effectif sur 6 mois). ; L'évolution du front : reprise russe ou ukrainienne dans Sumy/Kharkiv/Donetsk. ; Les capacités économiques russes après 4 ans d'économie de guerre (taux d'intérêt 21%, démographie négative).",
+      "lectureStructuree": "SITUATION (live) — 45 dépêches sur la période, dominante : Diplomatie & alliances, Sécurité & défense, Politique interne & gouvernance.\nFaits saillants : « Coopération Confédération AES- Fédération de Russie: l’équipe diplomatique de l’espace confédéral se concerte en prélude à la 2e session prévue ce 08 juillet » (AIB — Agence Information BF, cote C1) ; « Coopération Confédération AES- Fédération de Russie : L’équipe diplomatique de l’espace confédéral se concerte en prélude à la 2e session prévue ce 08 juillet » (Net Afrique (BF), cote F1) ; « 2e session des consultations diplomatiques Confédération AES-Russie: l’équipe diplomatique de l’espace confédéral se concerte » (Sidwaya, cote C1).\n\nENJEU CENTRAL — L'Ukraine est trop grande pour être conquise et trop importante pour être abandonnée. Le conflit tend vers un blocage prolongé que personne ne sait résoudre.\n\nPOURQUOI — C'est la première guerre européenne de haute intensité depuis 1945 et le test décisif de l'ordre international post-Guerre froide. Si la Russie obtient des concessions par la force, la frontière taïwanaise, sahélienne et caucasienne deviennent négociables par les armes. C'est aussi un test pour le réarmement européen et la crédibilité de l'OTAN sans soutien américain.\n\nIMPACT POUR L'AES — Élevée (Russie = partenaire stratégique BF) : La guerre russe en Ukraine engage directement le partenaire militaire principal du BF (Africa Corps) et structure ses capacités. : Africa Corps (héritier Wagner) : ~1 200-2 000 instructeurs/combattants au Mali, présence BF moins documentée mais croissant…\n\nSCÉNARIOS —\n• Tendanciel — gel armé (40%) : Trump impose cessez-le-feu sur ligne actuelle. Pas de reconnaissance Crimée/Donbass. Pas de garanties OTAN. Conflit gelé type Coréen. Reconstruction lente, militarisation pérenne.\n• Rupture — effondrement russe (20%) : Crise économique aiguë + défaite militaire ponctuelle + crise succession ouvrent transition. Risque mais aussi opportunité historique.\n\nÀ SURVEILLER — Les décrets de Trump sur l'aide militaire (effectif effectif sur 6 mois). ; L'évolution du front : reprise russe ou ukrainienne dans Sumy/Kharkiv/Donetsk. ; Les capacités économiques russes après 4 ans d'économie de guerre (taux d'intérêt 21%, démographie négative).",
       "prospective": "12-24 mois : forte probabilité de gel imposé par Trump sur la ligne actuelle, sans paix.",
       "confiance": "eleve",
       "proseIA": null
@@ -804,13 +804,20 @@
     "c_gaza": {
       "id": "c_gaza",
       "name": "Gaza-Liban",
-      "volume": 51,
+      "volume": 56,
       "themesDominants": [
         "Diplomatie & alliances",
-        "Humanitaire & social",
-        "Sécurité & défense"
+        "Sécurité & défense",
+        "Maritime & océanique"
       ],
       "faits": [
+        {
+          "titre": "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/07/a-waste-of-time-dealing-with-iran-ceasefire-over-trump-declares/",
+          "theme": "M"
+        },
         {
           "titre": "YouTube defends video falsely claiming Bondi Beach massacre survivor is ‘crisis actor’",
           "source": "Times of Israel",
@@ -840,23 +847,16 @@
           "theme": "D"
         },
         {
-          "titre": "US Defense Secretary Pete Hegseth to visit Israel following overnight strikes on Iran",
-          "source": "Jerusalem Post",
-          "cote": "F1",
-          "lien": "https://www.jpost.com/israel-news/defense-news/article-901816",
-          "theme": "P"
-        },
-        {
-          "titre": "Israel strikes southern Lebanon ahead of new round of talks",
+          "titre": "Death toll from Israeli strike on Gaza vehicle rises to 4",
           "source": "Anadolu Agency (Turquie)",
-          "cote": "F1",
-          "lien": "https://www.aa.com.tr/en/middle-east/israel-strikes-southern-lebanon-ahead-of-new-round-of-talks/3990359",
-          "theme": null
+          "cote": "F2",
+          "lien": "https://www.aa.com.tr/en/middle-east/death-toll-from-israeli-strike-on-gaza-vehicle-rises-to-4/3990441",
+          "theme": "S"
         }
       ],
       "enjeu": "Sans horizon politique palestinien crédible (deux États ou alternative), aucun cessez-le-feu ne sera durable. Le « jour d'après » est la vraie question, pas le « jour pendant ».",
       "consequencesAES": "Modérée (impact diplomatique et symbolique) : Le BF n'est pas acteur direct mais la cause palestinienne structure la rhétorique anti-occidentale du régime et l'imaginaire panafricain. : Pas d'impact sécuritaire direct. Mais radicalisation idéologique via réseaux numériques mobilise jihadistes sahéli…",
-      "lectureStructuree": "SITUATION (live) — 51 dépêches sur la période, dominante : Diplomatie & alliances, Humanitaire & social, Sécurité & défense.\nFaits saillants : « YouTube defends video falsely claiming Bondi Beach massacre survivor is ‘crisis actor’ » (Times of Israel, cote F1) ; « Affaire Balogun | L’UEFA part en guerre contre la Fifa » (Kapitalis (Tunisie), cote F2) ; « Iran Guards say American bases in Kuwait, Bahrain hit after US unleashes new wave of strikes » (Dawn (Pakistan), cote F1).\n\nENJEU CENTRAL — Sans horizon politique palestinien crédible (deux États ou alternative), aucun cessez-le-feu ne sera durable. Le « jour d'après » est la vraie question, pas le « jour pendant ».\n\nPOURQUOI — Au-delà du drame humanitaire (~50 000 morts à Gaza, famine documentée), cette guerre teste la crédibilité du droit international (procès CIJ, plaintes CPI), polarise les opinions occidentales et du Sud global, et reconfigure le Moyen-Orient. Elle bloque la normalisation arabe d'Israël et alimente partout les récits anti-impérialistes — y compris au Burkina Faso.\n\nIMPACT POUR L'AES — Modérée (impact diplomatique et symbolique) : Le BF n'est pas acteur direct mais la cause palestinienne structure la rhétorique anti-occidentale du régime et l'imaginaire panafricain. : Pas d'impact sécuritaire direct. Mais radicalisation idéologique via réseaux numériques mobilise jihadistes sahéli…\n\nSCÉNARIOS —\n• Tendanciel — guerre prolongée à intensité variable (45%) : Pas de cessez-le-feu durable. Opérations IDF récurrentes Gaza et Cisjordanie. Tirs sporadiques Sud-Liban. Hamas se reconstitue lentement. Reconstruction quasi-nulle. Crise humanitaire chronique.\n• Recomposition — plan régional Trump/Saoudien (25%) : Force internationale arabe (saoudienne, EAU, Égypte) à Gaza. Réforme Autorité palestinienne. Reconstruction financée Golfe. Normalisation saoudienne phase 1. Cisjordanie en attente.\n\nÀ SURVEILLER — Le plan régional Trump-Saoudien (force internationale arabe à Gaza ?). ; L'évolution Cisjordanie : risque de 3e Intifada. ; La survie de la coalition Netanyahou (otages, procès, élections).",
+      "lectureStructuree": "SITUATION (live) — 56 dépêches sur la période, dominante : Diplomatie & alliances, Sécurité & défense, Maritime & océanique.\nFaits saillants : « ‘A waste of time dealing with Iran; ceasefire over’ – Trump declares » (Vanguard (Nigeria), cote F2) ; « YouTube defends video falsely claiming Bondi Beach massacre survivor is ‘crisis actor’ » (Times of Israel, cote F1) ; « Affaire Balogun | L’UEFA part en guerre contre la Fifa » (Kapitalis (Tunisie), cote F2).\n\nENJEU CENTRAL — Sans horizon politique palestinien crédible (deux États ou alternative), aucun cessez-le-feu ne sera durable. Le « jour d'après » est la vraie question, pas le « jour pendant ».\n\nPOURQUOI — Au-delà du drame humanitaire (~50 000 morts à Gaza, famine documentée), cette guerre teste la crédibilité du droit international (procès CIJ, plaintes CPI), polarise les opinions occidentales et du Sud global, et reconfigure le Moyen-Orient. Elle bloque la normalisation arabe d'Israël et alimente partout les récits anti-impérialistes — y compris au Burkina Faso.\n\nIMPACT POUR L'AES — Modérée (impact diplomatique et symbolique) : Le BF n'est pas acteur direct mais la cause palestinienne structure la rhétorique anti-occidentale du régime et l'imaginaire panafricain. : Pas d'impact sécuritaire direct. Mais radicalisation idéologique via réseaux numériques mobilise jihadistes sahéli…\n\nSCÉNARIOS —\n• Tendanciel — guerre prolongée à intensité variable (45%) : Pas de cessez-le-feu durable. Opérations IDF récurrentes Gaza et Cisjordanie. Tirs sporadiques Sud-Liban. Hamas se reconstitue lentement. Reconstruction quasi-nulle. Crise humanitaire chronique.\n• Recomposition — plan régional Trump/Saoudien (25%) : Force internationale arabe (saoudienne, EAU, Égypte) à Gaza. Réforme Autorité palestinienne. Reconstruction financée Golfe. Normalisation saoudienne phase 1. Cisjordanie en attente.\n\nÀ SURVEILLER — Le plan régional Trump-Saoudien (force internationale arabe à Gaza ?). ; L'évolution Cisjordanie : risque de 3e Intifada. ; La survie de la coalition Netanyahou (otages, procès, élections).",
       "prospective": "12-24 mois : probable statu quo dégradé, occupation militaire permanente Gaza, raids Cisjordanie.",
       "confiance": "eleve",
       "proseIA": null
@@ -864,7 +864,7 @@
     "c_sdn": {
       "id": "c_sdn",
       "name": "Soudan",
-      "volume": 41,
+      "volume": 39,
       "themesDominants": [
         "Sécurité & défense",
         "Diplomatie & alliances",
@@ -916,7 +916,7 @@
       ],
       "enjeu": "Le Soudan est trop grand et trop divers pour qu'une victoire militaire d'un camp permette de gouverner. Toute issue militaire produira un État défaillant. Mais aucune négociation ne marche.",
       "consequencesAES": "Modérée (effet rebond Sahel) : Le BF subit la déstabilisation régionale et la concurrence pour l'attention humanitaire. : Aucun impact sécuritaire direct (distance géographique Soudan-BF ~3 500 km). · Possible diffusion modèle RSF/Janjaweed vers groupes sahéliens ? Pas documenté. · Réfugiés soudanai…",
-      "lectureStructuree": "SITUATION (live) — 41 dépêches sur la période, dominante : Sécurité & défense, Diplomatie & alliances, Humanitaire & social.\nFaits saillants : « World: Remarks of SRSG Patten at the High-level Event “Combatting Trafficking for the Purposes of Sexual Exploitation by Armed and Terrorist Groups: Closing Information Gaps and Strengthening Cooperation to Promote Accountability for Survivors”, New York, 7 July » (ReliefWeb, cote F2) ; « Fears of a massacre in this city on the front line of Sudan's war » (BBC World, cote B3) ; « Iran Guards say American bases in Kuwait, Bahrain hit after US unleashes new wave of strikes » (Dawn (Pakistan), cote F1).\n\nENJEU CENTRAL — Le Soudan est trop grand et trop divers pour qu'une victoire militaire d'un camp permette de gouverner. Toute issue militaire produira un État défaillant. Mais aucune négociation ne marche.\n\nPOURQUOI — C'est la guerre la plus meurtrière du moment (~150 000 morts, 10 millions de déplacés, famine déclarée IPC 5) et pourtant la moins couverte. Elle illustre l'effondrement total d'un État de 48 millions d'habitants, alimenté par des sponsors régionaux (EAU vs Égypte/Arabie). Sa persistance déstabilise la mer Rouge, le Tchad, le Sud-Soudan, et révèle la faillite des médiations africaines et arabes.\n\nIMPACT POUR L'AES — Modérée (effet rebond Sahel) : Le BF subit la déstabilisation régionale et la concurrence pour l'attention humanitaire. : Aucun impact sécuritaire direct (distance géographique Soudan-BF ~3 500 km). · Possible diffusion modèle RSF/Janjaweed vers groupes sahéliens ? Pas documenté. · Réfugiés soudanai…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (50%) : SAF tient Nord/Centre/Est avec capitale Khartoum reprise. RSF tient Darfour/Kordofan-Sud. Pas d'accord politique. Économie effondrée. Crise humanitaire chronique. Pas de service public.\n• Recomposition — médiation Trump-Saoudite (20%) : Pression US (sanctions, déclaration génocide) force EAU à lâcher RSF. Médiation Saoudite-Égypte. Cessez-le-feu, cantonnement RSF. Transition militaire-civile négociée.\n\nÀ SURVEILLER — L'évolution du soutien émirien aux RSF face aux pressions US (génocide reconnu jan. 2025). ; Le sort d'El Fasher au Darfour (massacres documentés). ; La possibilité d'une base navale russe à Port-Soudan (recomposition mer Rouge).",
+      "lectureStructuree": "SITUATION (live) — 39 dépêches sur la période, dominante : Sécurité & défense, Diplomatie & alliances, Humanitaire & social.\nFaits saillants : « World: Remarks of SRSG Patten at the High-level Event “Combatting Trafficking for the Purposes of Sexual Exploitation by Armed and Terrorist Groups: Closing Information Gaps and Strengthening Cooperation to Promote Accountability for Survivors”, New York, 7 July » (ReliefWeb, cote F2) ; « Fears of a massacre in this city on the front line of Sudan's war » (BBC World, cote B3) ; « Iran Guards say American bases in Kuwait, Bahrain hit after US unleashes new wave of strikes » (Dawn (Pakistan), cote F1).\n\nENJEU CENTRAL — Le Soudan est trop grand et trop divers pour qu'une victoire militaire d'un camp permette de gouverner. Toute issue militaire produira un État défaillant. Mais aucune négociation ne marche.\n\nPOURQUOI — C'est la guerre la plus meurtrière du moment (~150 000 morts, 10 millions de déplacés, famine déclarée IPC 5) et pourtant la moins couverte. Elle illustre l'effondrement total d'un État de 48 millions d'habitants, alimenté par des sponsors régionaux (EAU vs Égypte/Arabie). Sa persistance déstabilise la mer Rouge, le Tchad, le Sud-Soudan, et révèle la faillite des médiations africaines et arabes.\n\nIMPACT POUR L'AES — Modérée (effet rebond Sahel) : Le BF subit la déstabilisation régionale et la concurrence pour l'attention humanitaire. : Aucun impact sécuritaire direct (distance géographique Soudan-BF ~3 500 km). · Possible diffusion modèle RSF/Janjaweed vers groupes sahéliens ? Pas documenté. · Réfugiés soudanai…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (50%) : SAF tient Nord/Centre/Est avec capitale Khartoum reprise. RSF tient Darfour/Kordofan-Sud. Pas d'accord politique. Économie effondrée. Crise humanitaire chronique. Pas de service public.\n• Recomposition — médiation Trump-Saoudite (20%) : Pression US (sanctions, déclaration génocide) force EAU à lâcher RSF. Médiation Saoudite-Égypte. Cessez-le-feu, cantonnement RSF. Transition militaire-civile négociée.\n\nÀ SURVEILLER — L'évolution du soutien émirien aux RSF face aux pressions US (génocide reconnu jan. 2025). ; Le sort d'El Fasher au Darfour (massacres documentés). ; La possibilité d'une base navale russe à Port-Soudan (recomposition mer Rouge).",
       "prospective": "12-24 mois : partition de fait probable. SAF contrôle Khartoum/Nord/Est, RSF contrôle Darfour/Kordofan-Sud.",
       "confiance": "eleve",
       "proseIA": null
@@ -924,11 +924,10 @@
     "c_tai": {
       "id": "c_tai",
       "name": "Taïwan",
-      "volume": 73,
+      "volume": 71,
       "themesDominants": [
         "Maritime & océanique",
-        "Diplomatie & alliances",
-        "Sécurité & défense"
+        "Diplomatie & alliances"
       ],
       "faits": [
         {
@@ -939,10 +938,24 @@
           "theme": "D"
         },
         {
-          "titre": "US, Iran trade strikes in new threat to ceasefire",
-          "source": "Al-Monitor",
+          "titre": "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+          "source": "Vanguard (Nigeria)",
           "cote": "F2",
-          "lien": "https://www.al-monitor.com/originals/2026/07/us-iran-trade-strikes-new-threat-ceasefire",
+          "lien": "https://www.vanguardngr.com/2026/07/a-waste-of-time-dealing-with-iran-ceasefire-over-trump-declares/",
+          "theme": "M"
+        },
+        {
+          "titre": "Trump says Iran ceasefire 'over' after fighting flares",
+          "source": "Al-Monitor",
+          "cote": "F1",
+          "lien": "https://www.al-monitor.com/originals/2026/07/trump-says-iran-ceasefire-over-after-fighting-flares",
+          "theme": "M"
+        },
+        {
+          "titre": "Oil prices jump to 74$ per barrel after Trump says Iran ceasefire over",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/07/oil-prices-jump-to-74-per-barrel-after-trump-says-iran-ceasefire-over/",
           "theme": "M"
         },
         {
@@ -953,30 +966,16 @@
           "theme": "M"
         },
         {
-          "titre": "U.S. and Iran launch fresh strikes following attacks on commercial ships",
-          "source": "Washington Post World",
-          "cote": "B1",
-          "lien": "https://www.washingtonpost.com/world/2026/07/07/tanker-fire-after-being-struck-strait-hormuz-british-military-says/",
-          "theme": "M"
-        },
-        {
-          "titre": "Iran Guards say American bases in Kuwait, Bahrain hit after US unleashes new wave of strikes",
+          "titre": "Islamabad, Beijing agree to boost counterterrorism cooperation as Naqvi meets Chinese counterpart",
           "source": "Dawn (Pakistan)",
-          "cote": "F1",
-          "lien": "https://www.dawn.com/news/2013772/iran-guards-say-american-bases-in-kuwait-bahrain-hit-after-us-unleashes-new-wave-of-strikes",
-          "theme": "S"
-        },
-        {
-          "titre": "Oil prices climb as US strikes on Iran fuel fears truce is unravelling",
-          "source": "MyJoyOnline (Ghana)",
           "cote": "F2",
-          "lien": "https://www.myjoyonline.com/oil-prices-climb-as-us-strikes-on-iran-fuel-fears-truce-is-unravelling/",
-          "theme": "M"
+          "lien": "https://www.dawn.com/news/2013843/islamabad-beijing-agree-to-boost-counterterrorism-cooperation-as-naqvi-meets-chinese-counterpart",
+          "theme": "D"
         }
       ],
       "enjeu": "TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.",
       "consequencesAES": "Élevée (impact macro mondial) : Une crise Taïwan = choc économique global qui frapperait le BF de plein fouet via les puces, l'inflation et le dollar. : Impact sécuritaire direct nul (Asie Pacifique). · Mais : crise Taïwan distrait attention US/UE → désengagement d'autres théâtres (Sahel, Sahel orie…",
-      "lectureStructuree": "SITUATION (live) — 73 dépêches sur la période, dominante : Maritime & océanique, Diplomatie & alliances, Sécurité & défense.\nFaits saillants : « 105e anniversaire du PCC: Sous le signe d’une amitié sincère avec le Burkina » (Sidwaya, cote C2) ; « US, Iran trade strikes in new threat to ceasefire » (Al-Monitor, cote F2) ; « Trump declares ceasefire with Iran has ended » (Washington Post World, cote B3).\n\nENJEU CENTRAL — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.\n\nPOURQUOI — Une crise Taïwan ne serait pas régionale : ce serait l'équivalent de COVID + crise de 2008 combinés. Sans TSMC, l'IA, les smartphones, les voitures, la défense s'arrêtent en quelques mois. C'est aussi le test ultime de la primauté américaine en Pacifique : si Pékin gagne, la première chaîne d'îles tombe et l'ordre indo-pacifique bascule pour 50 ans.\n\nIMPACT POUR L'AES — Élevée (impact macro mondial) : Une crise Taïwan = choc économique global qui frapperait le BF de plein fouet via les puces, l'inflation et le dollar. : Impact sécuritaire direct nul (Asie Pacifique). · Mais : crise Taïwan distrait attention US/UE → désengagement d'autres théâtres (Sahel, Sahel orie…\n\nSCÉNARIOS —\n• Tendanciel — pression militaire constante, pas d'invasion (50%) : Pékin maintient pression militaire/économique/diplomatique. Taïwan se réarme. Économie mondiale absorbe coût continu de la « zone grise ». USA maintiennent ambiguïté.\n• Rupture — crise majeure non-cinétique (25%) : Blocus partiel ou « quarantaine » sanitaire/douanière. Test résolution US/alliés. Crise économique aiguë. Pas de guerre directe mais redéfinition règles.\n\nÀ SURVEILLER — Les exercices PLA majeurs (encerclement, blocus simulés). ; La position de Trump sur l'engagement militaire en cas d'invasion. ; Les avancées de TSMC en Arizona (relocalisation 100 Mds USD).",
+      "lectureStructuree": "SITUATION (live) — 71 dépêches sur la période, dominante : Maritime & océanique, Diplomatie & alliances.\nFaits saillants : « 105e anniversaire du PCC: Sous le signe d’une amitié sincère avec le Burkina » (Sidwaya, cote C2) ; « ‘A waste of time dealing with Iran; ceasefire over’ – Trump declares » (Vanguard (Nigeria), cote F2) ; « Trump says Iran ceasefire 'over' after fighting flares » (Al-Monitor, cote F1).\n\nENJEU CENTRAL — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.\n\nPOURQUOI — Une crise Taïwan ne serait pas régionale : ce serait l'équivalent de COVID + crise de 2008 combinés. Sans TSMC, l'IA, les smartphones, les voitures, la défense s'arrêtent en quelques mois. C'est aussi le test ultime de la primauté américaine en Pacifique : si Pékin gagne, la première chaîne d'îles tombe et l'ordre indo-pacifique bascule pour 50 ans.\n\nIMPACT POUR L'AES — Élevée (impact macro mondial) : Une crise Taïwan = choc économique global qui frapperait le BF de plein fouet via les puces, l'inflation et le dollar. : Impact sécuritaire direct nul (Asie Pacifique). · Mais : crise Taïwan distrait attention US/UE → désengagement d'autres théâtres (Sahel, Sahel orie…\n\nSCÉNARIOS —\n• Tendanciel — pression militaire constante, pas d'invasion (50%) : Pékin maintient pression militaire/économique/diplomatique. Taïwan se réarme. Économie mondiale absorbe coût continu de la « zone grise ». USA maintiennent ambiguïté.\n• Rupture — crise majeure non-cinétique (25%) : Blocus partiel ou « quarantaine » sanitaire/douanière. Test résolution US/alliés. Crise économique aiguë. Pas de guerre directe mais redéfinition règles.\n\nÀ SURVEILLER — Les exercices PLA majeurs (encerclement, blocus simulés). ; La position de Trump sur l'engagement militaire en cas d'invasion. ; Les avancées de TSMC en Arizona (relocalisation 100 Mds USD).",
       "prospective": "12-36 mois : pression militaire constante mais pas d'invasion immédiate. Risque crise non-cinétique (blocus, quarantaine).",
       "confiance": "eleve",
       "proseIA": null
@@ -984,11 +983,10 @@
     "c_cod": {
       "id": "c_cod",
       "name": "RDC-Est",
-      "volume": 21,
+      "volume": 18,
       "themesDominants": [
         "Diplomatie & alliances",
-        "Économie & ressources",
-        "Sécurité & défense"
+        "Économie & ressources"
       ],
       "faits": [
         {
@@ -1020,11 +1018,11 @@
           "theme": "E"
         },
         {
-          "titre": "RDC-Rwanda : Jason Stearns plaide pour une \"solution réaliste\" et écarte l'option d'une défaite militaire imposée au Rwanda",
-          "source": "ActualitéCD (RDC)",
-          "cote": "F2",
-          "lien": "https://actualite.cd/2026/07/07/rdc-rwanda-jason-stearns-plaide-pour-une-solution-realiste-et-ecarte-loption-dune",
-          "theme": "S"
+          "titre": "For Rebels in Congo, Ebola Could Help Strengthen Their Rule",
+          "source": "NYT World",
+          "cote": "B3",
+          "lien": "https://www.nytimes.com/2026/07/08/world/africa/ebola-congo-m23-rebels.html",
+          "theme": null
         },
         {
           "titre": "« Une certaine complaisance s'installe » : Jason Stearns alerte sur les intérêts cachés derrière la persistance du conflit à l'Est",
@@ -1036,7 +1034,7 @@
       ],
       "enjeu": "La RDC ne peut pas reconquérir le Kivu militairement seule. Le Rwanda ne peut pas annexer ouvertement sans crise diplomatique majeure. C'est un statu quo violent durable.",
       "consequencesAES": "Modérée (effet ressources critiques) : Le BF subit indirectement la crise du coltan et des minerais critiques, et observe avec intérêt le modèle d'État défaillant. : Pas d'impact sécuritaire direct (RDC à 2 500 km). · Mais : effet de précédent. Captation territoriale par voisin (Rwanda) sans réactio…",
-      "lectureStructuree": "SITUATION (live) — 21 dépêches sur la période, dominante : Diplomatie & alliances, Économie & ressources, Sécurité & défense.\nFaits saillants : « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal), cote F2) ; « Nord-Kivu : des renforts de l'AFC/M23 ravivent la peur d'une nouvelle escalade des combats dans le sud de Lubero » (ActualitéCD (RDC), cote F2) ; « Ebola : l’Ouganda déploie environ 50 experts en RDC » (Radio Okapi (RDC), cote F2).\n\nENJEU CENTRAL — La RDC ne peut pas reconquérir le Kivu militairement seule. Le Rwanda ne peut pas annexer ouvertement sans crise diplomatique majeure. C'est un statu quo violent durable.\n\nPOURQUOI — C'est le théâtre de la longue guerre des Grands Lacs (~6 millions de morts cumulés depuis 1996). Au-delà de la dimension humanitaire (~7 millions de déplacés), le coltan congolais (70% production mondiale) est indispensable à toute l'industrie tech mondiale. La crise illustre aussi la captation des ressources africaines par procuration et l'échec total des médiations EAC, SADC, UA face à un agresseur — le Rwanda — protégé par sa mémoire post-génocide.\n\nIMPACT POUR L'AES — Modérée (effet ressources critiques) : Le BF subit indirectement la crise du coltan et des minerais critiques, et observe avec intérêt le modèle d'État défaillant. : Pas d'impact sécuritaire direct (RDC à 2 500 km). · Mais : effet de précédent. Captation territoriale par voisin (Rwanda) sans réactio…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (45%) : Kivu sous contrôle M23/Rwanda. Kinshasa garde reste mais perd autorité Est. Économie de prédation continue. ~7-10 M déplacés. Pas d'accord politique.\n• Escalade — guerre régionale (Burundi-Rwanda) (25%) : Engagement direct Burundi-Rwanda autour Sud-Kivu. Risque Ouganda en bascule. Lac Tanganyika nœud. ~5 M réfugiés supplémentaires. Implication EAC.\n\nÀ SURVEILLER — Les mouvements vers Bukavu et au-delà (Sud-Kivu vers Burundi). ; Les sanctions Trump sur le Rwanda (déclaration soutien M23 ?). ; Le sort de la MONUSCO (retrait achevé) et l'éventuelle nouvelle force africaine.",
+      "lectureStructuree": "SITUATION (live) — 18 dépêches sur la période, dominante : Diplomatie & alliances, Économie & ressources.\nFaits saillants : « Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes » (Le Soleil (Sénégal), cote F2) ; « Nord-Kivu : des renforts de l'AFC/M23 ravivent la peur d'une nouvelle escalade des combats dans le sud de Lubero » (ActualitéCD (RDC), cote F2) ; « Ebola : l’Ouganda déploie environ 50 experts en RDC » (Radio Okapi (RDC), cote F2).\n\nENJEU CENTRAL — La RDC ne peut pas reconquérir le Kivu militairement seule. Le Rwanda ne peut pas annexer ouvertement sans crise diplomatique majeure. C'est un statu quo violent durable.\n\nPOURQUOI — C'est le théâtre de la longue guerre des Grands Lacs (~6 millions de morts cumulés depuis 1996). Au-delà de la dimension humanitaire (~7 millions de déplacés), le coltan congolais (70% production mondiale) est indispensable à toute l'industrie tech mondiale. La crise illustre aussi la captation des ressources africaines par procuration et l'échec total des médiations EAC, SADC, UA face à un agresseur — le Rwanda — protégé par sa mémoire post-génocide.\n\nIMPACT POUR L'AES — Modérée (effet ressources critiques) : Le BF subit indirectement la crise du coltan et des minerais critiques, et observe avec intérêt le modèle d'État défaillant. : Pas d'impact sécuritaire direct (RDC à 2 500 km). · Mais : effet de précédent. Captation territoriale par voisin (Rwanda) sans réactio…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (45%) : Kivu sous contrôle M23/Rwanda. Kinshasa garde reste mais perd autorité Est. Économie de prédation continue. ~7-10 M déplacés. Pas d'accord politique.\n• Escalade — guerre régionale (Burundi-Rwanda) (25%) : Engagement direct Burundi-Rwanda autour Sud-Kivu. Risque Ouganda en bascule. Lac Tanganyika nœud. ~5 M réfugiés supplémentaires. Implication EAC.\n\nÀ SURVEILLER — Les mouvements vers Bukavu et au-delà (Sud-Kivu vers Burundi). ; Les sanctions Trump sur le Rwanda (déclaration soutien M23 ?). ; Le sort de la MONUSCO (retrait achevé) et l'éventuelle nouvelle force africaine.",
       "prospective": "12-36 mois : partition de fait du Kivu. Kinshasa contrôle le reste mais perd autorité dans l'Est.",
       "confiance": "eleve",
       "proseIA": null
@@ -1044,17 +1042,38 @@
     "c_yem": {
       "id": "c_yem",
       "name": "Mer Rouge",
-      "volume": 45,
+      "volume": 44,
       "themesDominants": [
         "Maritime & océanique",
         "Sécurité & défense"
       ],
       "faits": [
         {
-          "titre": "US, Iran trade strikes in new threat to ceasefire",
-          "source": "Al-Monitor",
+          "titre": "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+          "source": "Vanguard (Nigeria)",
           "cote": "F2",
-          "lien": "https://www.al-monitor.com/originals/2026/07/us-iran-trade-strikes-new-threat-ceasefire",
+          "lien": "https://www.vanguardngr.com/2026/07/a-waste-of-time-dealing-with-iran-ceasefire-over-trump-declares/",
+          "theme": "M"
+        },
+        {
+          "titre": "EN DIRECT - Moyen-Orient: Donald Trump affirme que le cessez-le-feu avec l'Iran est «terminé»",
+          "source": "RFI Moyen-Orient",
+          "cote": "C1",
+          "lien": "https://www.rfi.fr/fr/moyen-orient/20260708-en-direct-apr%C3%A8s-de-nouvelles-frappes-am%C3%A9ricaines-sur-l-iran-t%C3%A9h%C3%A9ran-dit-avoir-vis%C3%A9-des-bases-am%C3%A9ricaines-au-kowe%C3%AFt-et-%C3%A0-bahre%C3%AFn",
+          "theme": "M"
+        },
+        {
+          "titre": "Trump says Iran ceasefire 'over' after fighting flares",
+          "source": "Al-Monitor",
+          "cote": "F1",
+          "lien": "https://www.al-monitor.com/originals/2026/07/trump-says-iran-ceasefire-over-after-fighting-flares",
+          "theme": "M"
+        },
+        {
+          "titre": "Oil prices jump to 74$ per barrel after Trump says Iran ceasefire over",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/07/oil-prices-jump-to-74-per-barrel-after-trump-says-iran-ceasefire-over/",
           "theme": "M"
         },
         {
@@ -1065,37 +1084,16 @@
           "theme": "M"
         },
         {
-          "titre": "Les Etats-Unis lancent des frappes contre l'Iran et rétablissent leurs sanctions après des tirs",
-          "source": "Hespress (Maroc, FR)",
-          "cote": "A1",
-          "lien": "https://fr.hespress.com/480557-les-etats-unis-lancent-des-frappes-contre-liran-et-retablissent-leurs-sanctions-apres-des-tirs.html",
-          "theme": "M"
-        },
-        {
           "titre": "Mondial 2026 : la Suisse sort la Colombie et défiera l’Argentine en quarts",
           "source": "Le Soleil (Sénégal)",
           "cote": "A1",
           "lien": "https://lesoleil.sn/actualites/sports/mondial-2026/mondial-2026-la-suisse-sort-la-colombie-et-defiera-largentine-en-quarts/",
           "theme": "S"
-        },
-        {
-          "titre": "Après de nouvelles attaques dans le détroit d’Ormuz, les Etats-Unis frappent l’Iran",
-          "source": "Le Monde International",
-          "cote": "B2",
-          "lien": "https://www.lemonde.fr/videos/video/2026/07/08/apres-de-nouvelles-attaques-dans-le-detroit-d-ormuz-les-etats-unis-frappent-l-iran_6721800_1669088.html",
-          "theme": "S"
-        },
-        {
-          "titre": "U.S. and Iran launch fresh strikes following attacks on commercial ships",
-          "source": "Washington Post World",
-          "cote": "B1",
-          "lien": "https://www.washingtonpost.com/world/2026/07/07/tanker-fire-after-being-struck-strait-hormuz-british-military-says/",
-          "theme": "M"
         }
       ],
       "enjeu": "Un acteur asymétrique armé de drones à 30 000 USD peut paralyser le commerce maritime mondial pendant des mois. C'est une révolution de l'asymétrie qui change toutes les doctrines navales.",
       "consequencesAES": "",
-      "lectureStructuree": "SITUATION (live) — 45 dépêches sur la période, dominante : Maritime & océanique, Sécurité & défense.\nFaits saillants : « US, Iran trade strikes in new threat to ceasefire » (Al-Monitor, cote F2) ; « Trump declares ceasefire with Iran has ended » (Washington Post World, cote B3) ; « Les Etats-Unis lancent des frappes contre l'Iran et rétablissent leurs sanctions après des tirs » (Hespress (Maroc, FR), cote A1).\n\nENJEU CENTRAL — Un acteur asymétrique armé de drones à 30 000 USD peut paralyser le commerce maritime mondial pendant des mois. C'est une révolution de l'asymétrie qui change toutes les doctrines navales.\n\nPOURQUOI — Bab el-Mandeb verrouille le passage entre Suez et l'océan Indien. Sa fermeture force les navires à contourner par le cap de Bonne-Espérance (+10-14 jours, +30% coût). Les frappes US-UK ne font pas reculer les Houthis, qui sortent renforcés (popularité gonflée, légitimité régionale, leçon utile pour tout acteur asymétrique). Cela impacte directement le commerce du Burkina Faso (importations Asie) et tous les pays enclavés du Sahel.\n\nÀ SURVEILLER — Le maintien ou la levée du blocus mer Rouge. ; Les négociations saoudo-houthies (gel possible ?). ; Le transfert de technologies iraniennes après l'effondrement de l'arc chiite.",
+      "lectureStructuree": "SITUATION (live) — 44 dépêches sur la période, dominante : Maritime & océanique, Sécurité & défense.\nFaits saillants : « ‘A waste of time dealing with Iran; ceasefire over’ – Trump declares » (Vanguard (Nigeria), cote F2) ; « EN DIRECT - Moyen-Orient: Donald Trump affirme que le cessez-le-feu avec l'Iran est «terminé» » (RFI Moyen-Orient, cote C1) ; « Trump says Iran ceasefire 'over' after fighting flares » (Al-Monitor, cote F1).\n\nENJEU CENTRAL — Un acteur asymétrique armé de drones à 30 000 USD peut paralyser le commerce maritime mondial pendant des mois. C'est une révolution de l'asymétrie qui change toutes les doctrines navales.\n\nPOURQUOI — Bab el-Mandeb verrouille le passage entre Suez et l'océan Indien. Sa fermeture force les navires à contourner par le cap de Bonne-Espérance (+10-14 jours, +30% coût). Les frappes US-UK ne font pas reculer les Houthis, qui sortent renforcés (popularité gonflée, légitimité régionale, leçon utile pour tout acteur asymétrique). Cela impacte directement le commerce du Burkina Faso (importations Asie) et tous les pays enclavés du Sahel.\n\nÀ SURVEILLER — Le maintien ou la levée du blocus mer Rouge. ; Les négociations saoudo-houthies (gel possible ?). ; Le transfert de technologies iraniennes après l'effondrement de l'arc chiite.",
       "prospective": "6-18 mois : maintien du harcèlement maritime probable, sauf accord régional global.",
       "confiance": "eleve",
       "proseIA": null
@@ -1103,7 +1101,7 @@
     "c_kor": {
       "id": "c_kor",
       "name": "Corée",
-      "volume": 17,
+      "volume": 13,
       "themesDominants": [
         "Justice & droit international",
         "Économie & ressources",
@@ -1155,7 +1153,7 @@
       ],
       "enjeu": "L'axe Russie-Corée du Nord brise les sanctions internationales et démontre qu'un État-paria peut sortir de l'isolement en s'alignant sur une grande puissance révisionniste.",
       "consequencesAES": "",
-      "lectureStructuree": "SITUATION (live) — 17 dépêches sur la période, dominante : Justice & droit international, Économie & ressources, Diplomatie & alliances.\nFaits saillants : « How a smart data tool helped the Jamaica Red Cross reach the most vulnerable after Hurricane Melissa | IFRC » (ReliefWeb, cote A2) ; « OpenAI to unveil GPT-5.6 on Thursday after delaying launch » (Dawn (Pakistan), cote F2) ; « South Korea falls into bear market as traders fret over AI chipmakers’ prospects » (Financial Times World, cote B2).\n\nENJEU CENTRAL — L'axe Russie-Corée du Nord brise les sanctions internationales et démontre qu'un État-paria peut sortir de l'isolement en s'alignant sur une grande puissance révisionniste.\n\nPOURQUOI — Le pacte Russie-Corée du Nord (juin 2024) est la première véritable alliance entre une puissance nucléaire et un État-paria depuis longtemps. ~12 000 soldats nord-coréens en Koursk = première projection terrestre de Pyongyang depuis 1953. En échange, Moscou transfère des technologies qui font sauter les verrous sur le programme nord-coréen, augmentant directement la menace pour le Japon, la Corée du Sud et les États-Unis.\n\nÀ SURVEILLER — Les tirs balistiques de nouvelle génération. ; La diplomatie Trump-Kim (sommet possible ?). ; Le retour des troupes nord-coréennes de Russie avec expérience combat.",
+      "lectureStructuree": "SITUATION (live) — 13 dépêches sur la période, dominante : Justice & droit international, Économie & ressources, Diplomatie & alliances.\nFaits saillants : « How a smart data tool helped the Jamaica Red Cross reach the most vulnerable after Hurricane Melissa | IFRC » (ReliefWeb, cote A2) ; « OpenAI to unveil GPT-5.6 on Thursday after delaying launch » (Dawn (Pakistan), cote F2) ; « South Korea falls into bear market as traders fret over AI chipmakers’ prospects » (Financial Times World, cote B2).\n\nENJEU CENTRAL — L'axe Russie-Corée du Nord brise les sanctions internationales et démontre qu'un État-paria peut sortir de l'isolement en s'alignant sur une grande puissance révisionniste.\n\nPOURQUOI — Le pacte Russie-Corée du Nord (juin 2024) est la première véritable alliance entre une puissance nucléaire et un État-paria depuis longtemps. ~12 000 soldats nord-coréens en Koursk = première projection terrestre de Pyongyang depuis 1953. En échange, Moscou transfère des technologies qui font sauter les verrous sur le programme nord-coréen, augmentant directement la menace pour le Japon, la Corée du Sud et les États-Unis.\n\nÀ SURVEILLER — Les tirs balistiques de nouvelle génération. ; La diplomatie Trump-Kim (sommet possible ?). ; Le retour des troupes nord-coréennes de Russie avec expérience combat.",
       "prospective": "12-24 mois : poursuite du rapprochement RU-PRK, renforcement programmes, peut-être test nucléaire.",
       "confiance": "eleve",
       "proseIA": null
@@ -1166,8 +1164,8 @@
       "volume": 45,
       "themesDominants": [
         "Diplomatie & alliances",
-        "Humanitaire & social",
-        "Sécurité & défense"
+        "Maritime & océanique",
+        "Humanitaire & social"
       ],
       "faits": [
         {
@@ -1192,6 +1190,13 @@
           "theme": "D"
         },
         {
+          "titre": "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/07/a-waste-of-time-dealing-with-iran-ceasefire-over-trump-declares/",
+          "theme": "M"
+        },
+        {
           "titre": "Fears of a massacre in this city on the front line of Sudan's war",
           "source": "BBC World",
           "cote": "B3",
@@ -1204,24 +1209,17 @@
           "cote": "F1",
           "lien": "https://www.dawn.com/news/2013772/iran-guards-say-american-bases-in-kuwait-bahrain-hit-after-us-unleashes-new-wave-of-strikes",
           "theme": "S"
-        },
-        {
-          "titre": "Chakwal CCD incident: Victim's father alleges robbers did not fire, police forced him to sign blank paper",
-          "source": "Dawn (Pakistan)",
-          "cote": "F2",
-          "lien": "https://www.dawn.com/news/2013815/chakwal-ccd-incident-victims-father-alleges-robbers-did-not-fire-police-forced-him-to-sign-blank-paper",
-          "theme": null
         }
       ],
       "enjeu": "La transition syrienne peut reconstruire un État viable (rare) ou se fragmenter en libanisation (probable). La gestion de la question kurde et le retour des réfugiés sont les vraies épreuves.",
       "consequencesAES": "",
-      "lectureStructuree": "SITUATION (live) — 45 dépêches sur la période, dominante : Diplomatie & alliances, Humanitaire & social, Sécurité & défense.\nFaits saillants : « 105e anniversaire du PCC: Sous le signe d’une amitié sincère avec le Burkina » (Sidwaya, cote C2) ; « Enquête nationale sur la santé familiale de l’Inde : l’ambassade partage les résultats de l’investigation 2026 » (Sidwaya, cote C2) ; « World: Remarks of SRSG Patten at the High-level Event “Combatting Trafficking for the Purposes of Sexual Exploitation by Armed and Terrorist Groups: Closing Information Gaps and Strengthening Cooperation to Promote Accountability for Survivors”, New York, 7 July » (ReliefWeb, cote F2).\n\nENJEU CENTRAL — La transition syrienne peut reconstruire un État viable (rare) ou se fragmenter en libanisation (probable). La gestion de la question kurde et le retour des réfugiés sont les vraies épreuves.\n\nPOURQUOI — La Syrie était le pilier oriental de l'arc chiite iranien et de la projection russe en Méditerranée (base Tartous). Sa chute reconfigure tout le Levant : Iran isolé, Russie affaiblie, Hezbollah privé de corridor logistique, Turquie en position de force. Mais HTS reste suspect (passé jihadiste), la question kurde non résolue, Israël a détruit 80% des capacités militaires syriennes en 48h post-Assad.\n\nÀ SURVEILLER — Les négociations HTS-SDF sur l'avenir des Kurdes. ; La levée ou non des sanctions occidentales sur le nouveau régime. ; Le retour des réfugiés syriens depuis Turquie/Liban (~6 millions).",
+      "lectureStructuree": "SITUATION (live) — 45 dépêches sur la période, dominante : Diplomatie & alliances, Maritime & océanique, Humanitaire & social.\nFaits saillants : « 105e anniversaire du PCC: Sous le signe d’une amitié sincère avec le Burkina » (Sidwaya, cote C2) ; « Enquête nationale sur la santé familiale de l’Inde : l’ambassade partage les résultats de l’investigation 2026 » (Sidwaya, cote C2) ; « World: Remarks of SRSG Patten at the High-level Event “Combatting Trafficking for the Purposes of Sexual Exploitation by Armed and Terrorist Groups: Closing Information Gaps and Strengthening Cooperation to Promote Accountability for Survivors”, New York, 7 July » (ReliefWeb, cote F2).\n\nENJEU CENTRAL — La transition syrienne peut reconstruire un État viable (rare) ou se fragmenter en libanisation (probable). La gestion de la question kurde et le retour des réfugiés sont les vraies épreuves.\n\nPOURQUOI — La Syrie était le pilier oriental de l'arc chiite iranien et de la projection russe en Méditerranée (base Tartous). Sa chute reconfigure tout le Levant : Iran isolé, Russie affaiblie, Hezbollah privé de corridor logistique, Turquie en position de force. Mais HTS reste suspect (passé jihadiste), la question kurde non résolue, Israël a détruit 80% des capacités militaires syriennes en 48h post-Assad.\n\nÀ SURVEILLER — Les négociations HTS-SDF sur l'avenir des Kurdes. ; La levée ou non des sanctions occidentales sur le nouveau régime. ; Le retour des réfugiés syriens depuis Turquie/Liban (~6 millions).",
       "prospective": "6-12 mois : stabilisation fragile ou fragmentation. Décision cruciale sur Kurdes.",
       "confiance": "eleve",
       "proseIA": null
     }
   },
-  "syntheseExecutive": "Sur la période, 800 dépêches ont été classées et cotées. Priorité géographique : 1. Sahel & AO franco. (86 signaux, tendance stable). Ruptures repérées : Nord-Kivu : des renforts de l'AFC/M23 ravivent la peur d'une nouvelle escalade des combats dans le sud de Lubero ; YouTube says Sydney massacre ‘crisis actor’ video can stay online. Signaux faibles émergents à surveiller : 3. Afrique centrale · Humanitaire & social ; 18. Amérique du Sud · Technologie & cyber ; 12. Asie du Sud · Climat & environnement.\n\nSujets chauds de la période :\n• Iran-Israël (153 signaux) — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n• Sahel/AES (95 signaux) — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n• Taïwan (73 signaux) — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.",
+  "syntheseExecutive": "Sur la période, 800 dépêches ont été classées et cotées. Priorité géographique : 1. Sahel & AO franco. (74 signaux, tendance stable). Ruptures repérées : Nord-Kivu : des renforts de l'AFC/M23 ravivent la peur d'une nouvelle escalade des combats dans le sud de Lubero ; YouTube says Sydney massacre ‘crisis actor’ video can stay online. Signaux faibles émergents à surveiller : 12. Asie du Sud · Diplomatie & alliances ; 3. Afrique centrale · Humanitaire & social ; 18. Amérique du Sud · Technologie & cyber.\n\nSujets chauds de la période :\n• Iran-Israël (165 signaux) — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n• Sahel/AES (82 signaux) — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n• Taïwan (71 signaux) — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.",
   "llmUsed": false,
   "achSuggestions": [
     {
@@ -1233,11 +1231,11 @@
         "Iran-Israël : desescalade / reglement partiel"
       ],
       "evidence": [
+        "EN DIRECT - Les hostilités reprennent entre les Etats-Unis et l’Iran, Trump affirme que le cessez-le-feu est «terminé»",
+        "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+        "Donald Trump affirme que le cessez-le-feu avec l’Iran est « terminé », après la reprise de frappes massives",
         "Guerre au Moyen-Orient : Donald Trump estime que le cessez-le-feu avec l’Iran est «terminé»",
-        "Iran says US strikes targeted coastal surveillance sites, accuses Washington of violating ceasefire",
-        "YouTube defends video falsely claiming Bondi Beach massacre survivor is ‘crisis actor’",
-        "US, Iran trade strikes in new threat to ceasefire",
-        "Trump declares ceasefire with Iran has ended"
+        "EN DIRECT - Moyen-Orient: Donald Trump affirme que le cessez-le-feu avec l'Iran est «terminé»"
       ]
     },
     {
@@ -1249,11 +1247,11 @@
         "Sahel/AES : desescalade / reglement partiel"
       ],
       "evidence": [
-        "Noumbiel/An II de l’AES : le Haut-commissaire appelle à s’inspirer des idéaux de l’AES pour l’unité et le bien-être des peuples",
+        "Koosin : Le Haut-commissaire appelle les forces vives à accompagner les policiers municipaux dans l’accomplissement de leur mission",
+        "Sissili/Deuxième anniversaire de l’AES : Les forces vives de la Sissili mobilisées à Léo derrière les idéaux de la Confédération",
         "Santé physique et mentale : l’application « Hello Ado » pour informer, orienter et accompagner les jeunes",
         "Ziro : Gao célèbre l’anniversaire de la Confédération de l’AES sous le signe de l’engagement patriotique",
-        "Burkina : Plus de 32 milliards FCFA pour la réhabilitation de l’axe Moami-Orodara",
-        "Pisciculture et transformation du poisson: Adèle Djiry et Dabouonibé Somé forcent l’adminiration dans le Djôrô"
+        "Burkina : Plus de 32 milliards FCFA pour la réhabilitation de l’axe Moami-Orodara"
       ]
     },
     {
@@ -1266,41 +1264,41 @@
       ],
       "evidence": [
         "105e anniversaire du PCC: Sous le signe d’une amitié sincère avec le Burkina",
-        "US, Iran trade strikes in new threat to ceasefire",
-        "Trump declares ceasefire with Iran has ended",
-        "U.S. and Iran launch fresh strikes following attacks on commercial ships",
-        "Iran Guards say American bases in Kuwait, Bahrain hit after US unleashes new wave of strikes"
+        "‘A waste of time dealing with Iran; ceasefire over’ – Trump declares",
+        "Trump says Iran ceasefire 'over' after fighting flares",
+        "Oil prices jump to 74$ per barrel after Trump says Iran ceasefire over",
+        "Trump declares ceasefire with Iran has ended"
       ]
     }
   ],
   "agentLog": [
     {
-      "at": "2026-07-08T08:50:40.890Z",
+      "at": "2026-07-08T09:37:23.440Z",
       "agent": "Agent Analyste",
       "message": "Demarrage (IA: non, mode structure)"
     },
     {
-      "at": "2026-07-08T08:50:40.920Z",
+      "at": "2026-07-08T09:37:23.467Z",
       "agent": "Agent Analyste",
       "message": "10 conflits charges"
     },
     {
-      "at": "2026-07-08T08:50:40.921Z",
+      "at": "2026-07-08T09:37:23.468Z",
       "agent": "Agent Analyste",
       "message": "800 articles dans la fenetre (168 h)"
     },
     {
-      "at": "2026-07-08T08:50:40.930Z",
+      "at": "2026-07-08T09:37:23.475Z",
       "agent": "Agent Analyste",
       "message": "Detection: 9 tendances, 8 signaux faibles, 8 ruptures, 0 recompositions"
     },
     {
-      "at": "2026-07-08T08:50:41.005Z",
+      "at": "2026-07-08T09:37:23.558Z",
       "agent": "Agent Analyste",
       "message": "10 conflits analyses, 3 suggestions ACH"
     },
     {
-      "at": "2026-07-08T08:50:41.006Z",
+      "at": "2026-07-08T09:37:23.559Z",
       "agent": "Agent Analyste",
       "message": "Productions: 3 notes zone, 3 prospectives, 4 etudes"
     }
