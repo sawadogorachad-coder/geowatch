@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-14T09:11:46.435Z",
+  "generatedAt": "2026-07-14T10:56:39.391Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1981,
+    "ok": 113,
+    "failed": 57,
+    "articles": 1967,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -61,6 +61,11 @@
         "id": "rss_observ_bf",
         "name": "L'Observateur Paalga",
         "count": 0
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "count": 10
       },
       {
         "id": "rss_maliweb",
@@ -158,6 +163,11 @@
         "count": 30
       },
       {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
+      },
+      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -166,11 +176,6 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -420,7 +425,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -480,7 +485,7 @@
       {
         "id": "rss_ttoi",
         "name": "Times of Israel",
-        "count": 14
+        "count": 13
       },
       {
         "id": "rss_jpost",
@@ -495,7 +500,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 23
+        "count": 27
       },
       {
         "id": "rss_pressTV",
@@ -520,7 +525,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -545,7 +550,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_burkina",
+        "name": "ReliefWeb — Burkina Faso",
+        "count": 0
+      },
+      {
+        "id": "rss_reliefweb_mali",
+        "name": "ReliefWeb — Mali",
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -556,22 +571,12 @@
         "id": "rss_worldbank",
         "name": "Banque Mondiale",
         "count": 0
-      },
-      {
-        "id": "rss_iaea",
-        "name": "AIEA — Top News (nucléaire)",
-        "count": 15
       }
     ],
     "failedSources": [
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
-        "error": "fetch failed"
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -612,7 +617,7 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_alakhbar",
@@ -657,7 +662,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
@@ -675,8 +680,8 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
         "error": "This operation was aborted"
       },
       {
@@ -830,16 +835,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_reliefweb_burkina",
-        "name": "ReliefWeb — Burkina Faso",
-        "error": "HTTP 406"
-      },
-      {
-        "id": "rss_reliefweb_mali",
-        "name": "ReliefWeb — Mali",
-        "error": "HTTP 406"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -858,15 +853,20 @@
         "id": "rss_imf",
         "name": "FMI — World Economic Outlook",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_iaea",
+        "name": "AIEA — Top News (nucléaire)",
+        "error": "HTTP 403"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 52,
-    "alerts": 18,
-    "criticalAlerts": 13,
-    "sourcesDistinct": 74
+    "bfAes": 49,
+    "alerts": 21,
+    "criticalAlerts": 15,
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
     {
@@ -939,10 +939,10 @@
       "_desk": "A1"
     },
     {
-      "title": "Sissili/Éducation : Clôture des activités pédagogiques du complexe Betsaleel sous le signe de l’excellence et de la solidarité",
-      "link": "https://www.aib.media/sissili-education-cloture-des-activites-pedagogiques-du-complexe-betsaleel-sous-le-signe-de-lexcellence-et-de-la-solidarite/",
-      "pubDate": "2026-07-13T20:19:16.000Z",
-      "description": "Sissili/Éducation : Clôture des activités pédagogiques du complexe Betsaleel sous le signe de l’excellence et de la solidarité Léo, 12 juillet 2026 (AIB) – Le complexe scolaire Betsaleel de Léo, situé au secteur 4, a clos ses activités pédagogiques de l’année scolaire, le samedi 11 juillet 2026. La cérémonie, rythmée par un défilé des élèves et une exposition de leurs créations artistiques (statuettes, pagnes tissés et tissus kokodonda), a servi de cadre pour célébrer un taux de réussite exceptionnel de 100 % au Certificat d’études primaires (CEP). Au-delà des performances académiques, l’événement a mis en lumière la vocation sociale de cet établissement, engagé dans l’accompagnement des enfants vulnérables et des orphelins pour leur garantir un autre destin. Ce bilan élogieux a réuni autorités locales, encadreurs et parents d’élèves, qui ont tour à tour pris la parole pour saluer la dynamique de l’établissement. Venu manifester le soutien de l’administration publique, le Haut-commissaire de la province de la Sissili, Téwindé Isaac Sia, a d’emblée exprimé sa gratitude. « Nous sommes venus assister à la clôture des activités pédagogiques de ce complexe scolaire. Aujourd’hui marque la fermeture des portes de l’établissement pour cette année, et c’est l’occasion pour nous d’exprimer toute notre reconnaissance à la fondatrice pour le travail abattu ». Constatant le succès au CEP, il a ajouté qu'« Avec un taux de réussite de 100 %, il est évident qu’un excellent travail a été accompli. C’est donc le moment pour nous de féliciter chaleureusement les lauréats. Cela prouve que lorsque les parents s’impliquent et que les enfants travaillent sérieusement, on ne peut qu’obtenir ce genre de réussite » a-t-il déclaré. Camarade Sia a conclu en invitant les élèves à des vacances utiles. « Nous espérons qu’ils sauront les mettre à profit pour aider leurs parents ou pour apprendre un métier. L’objectif est d’éviter l’oisiveté et de s’occuper utilement grâce à de petites activités » a conseillé le Haut-commissaire. À sa suite, le Directeur provincial de l’éducation préscolaire, primaire et non formelle (DPEPPNF), Soungalo Traoré, a mis en relief la portée de cette performance sur les statistiques provinciales. « Nous venons d’assister à un magnifique événement qui valorise le travail des enseignants. Comme vous le souligniez, cet établissement a réalisé un taux de réussite de 100 %. Cette performance exceptionnelle a considérablement contribué à l’atteinte du taux de réussite provincial que nous avons obtenu ». Admiratif devant l’exposition d’artisanat, il a précisé que « Cela prouve que cette école offre une formation complète, combinant le développement intellectuel et les compétences pratiques. Elle s’inscrit ainsi parfaitement dans la mise en œuvre de la politique de notre ministère, qui vise à initier les enfants très tôt aux métiers de l’artisanat ». Pour la rentrée prochaine, il a affiché ses ambitions. « Notre objectif sera de poursuivre sur la lancée de l’année qui s’achève. Nous allons redoubler d’efforts pour obtenir de meilleurs résultats encore. Soutenons-nous, encourageons-nous et donnons-nous la main pour que l’éducation au Burkina Faso soit une éducation de qualité ». L’un des moments forts de la journée a été la traduction concrète de cette culture du mérite par la remise des prix d’excellence. Pour encourager la saine émulation, des kits scolaires ont été remis aux deux premiers de chaque classe, du CP1 à la sixième. La promotion de CM2 a, quant à elle, bénéficié de récompenses spéciales notamment des vélos et des pagnes tissés aux sept premiers de la classe pour saluer leur exploit aux CEP. Pour la fondatrice du complexe, Madeleine Kalwoulé/Carama, ces distinctions récompensent un long parcours collectif. « Au CM2, les résultats au CEP sont tout simplement excellents, et cela vient couronner nos efforts d’une manière très gratifiante. C’est une réelle satisfaction de voir qu’après dix mois de bataille et de travail acharné, nous avons atteint nos objectifs. Ce succès est le fruit d’un véritable travail d’équipe. Sans l’entente, la compréhension et l’unité qui règnent entre nous, la tâche aurait été bien plus difficile » a-t-elle souligné. Évoquant les perspectives, elle a tracé des horizons à la fois technologiques et profondément humanitaires. « Pour l’avenir, notre ambition est d’introduire pleinement la technologie au sein de notre établissement ; ce sera notre grand combat pour l’année prochaine. De plus, nous tenons à cœur de soutenir un maximum d’orphelins, afin d’apporter de la joie et de redonner le sourire à ces enfants qui se battent au quotidien sans parents ». Cet appel à la fibre sociale a trouvé un écho fort dans l’intervention du président du conseil de l’école, Abdoul Azize Napon, s’exprimant au nom des parents d’élèves. « Je tiens tout d’abord à remercier la fondatrice pour sa vision, ainsi que les encadreurs qui sont constamment au four et au moulin pour la réussite des enfants. Mes remerciements vont également aux parents d’élèves qui nous accompagnent sans hésiter à chaque occasion pour soutenir la bonne marche de l’école ». Soucieux de l’ancrage communautaire de l’établissement, il a conclu par une exhortation. « L’appel que j’ai à lancer aux parents d’élèves de la commune de Léo est un appel à la solidarité ; je demande à chacun de faire parler son cœur. Il ne faut pas s’arrêter aux « on-dit ». J’invite les parents à s’approcher de l’école pour mieux comprendre les défis auxquels nous faisons face et renouveler leur confiance envers notre école ». Cette journée festive et solennelle consacre ainsi le complexe Betsaleel comme un modèle de réussite éducative, d’insertion culturelle et de solidarité humaine dans la province de la Sissili. Agence d’information du Burkina BAN/ata",
+      "title": "Koulpélogo/Yargatenga : Les nouveaux diplômés invités à réussir leur orientation académique et professionnelle",
+      "link": "https://www.aib.media/koulpelogo-yargatenga-les-nouveaux-diplomes-invites-a-reussir-leur-orientation-academique-et-professionnelle/",
+      "pubDate": "2026-07-14T10:53:06.000Z",
+      "description": "Koulpélogo/Yargatenga : Les nouveaux diplômés invités à réussir leur orientation académique et professionnelle Yargatenga, 13 juil. 2026 (AIB) – Le Haut-commissaire de la province du Koulpélogo, Saïdou Ouédraogo, a présidé, ce lundi au Lycée de Cinkansé, la cérémonie de lancement des 48 heures des Journées d’information et d’orientation (JIO) post-examens scolaires, édition 2026. Cette initiative vise à accompagner les nouveaux titulaires du BEPC et du baccalauréat dans le choix de leur parcours académique et professionnel. La cérémonie s’est déroulée en présence du Président de la Délégation spéciale (PDS) de la commune de Yargatenga, Mahamadou Sarambé, des autorités régionales et provinciales en charge de l’Enseignement secondaire et de la Formation professionnelle et technique, des autorités militaires et paramilitaires, des chefs de services, des partenaires du secteur éducatif, ainsi que des enseignants, élèves et parents d’élèves. Dans son mot de bienvenue, le PDS Mahamadou Sarambé a félicité les lauréats de la session 2026 et salué la résilience des acteurs du système éducatif, qui ont assuré la continuité des enseignements malgré le contexte sécuritaire. Il a invité les nouveaux diplômés à suivre avec attention les différentes communications afin de faire des choix éclairés pour leur avenir. Le Directeur provincial de l’Enseignement secondaire du Koulpélogo, Jacob Segda, a présenté les résultats enregistrés dans la province, faisant état d’un taux de réussite de 56,89 % au BEPC et de 62,25 % au baccalauréat. Félicitant les admis et encourageant les candidats ajournés à persévérer, il a rendu hommage aux Forces de Défense et de Sécurité (FDS) ainsi qu’aux Volontaires pour la Défense de la Patrie (VDP) pour leurs efforts en faveur du retour de la quiétude. Il a rappelé que l’obtention du BEPC ou du baccalauréat constitue une étape et non une finalité, soulignant que les JIO offrent aux nouveaux diplômés les repères nécessaires pour réussir leur orientation dans l’enseignement supérieur ou la formation professionnelle. Représentant le ministère en charge de l’Enseignement secondaire, le Directeur régional du Nakambé, Nachor Sorgo, a insisté sur l’importance d’une orientation réfléchie. Il a indiqué que, durant deux jours, les participants échangeront avec des conseillers d’orientation ainsi qu’avec des représentants d’universités et d’établissements de formation afin de mieux connaître les opportunités qui s’offrent à eux. Il a également annoncé que l’immersion patriotique obligatoire des nouveaux bacheliers du Koulpélogo se déroulera du 27 juillet au 26 août 2026 à Tenkodogo, tout en appelant à une mobilisation des ressources endogènes pour accompagner cette initiative. Le Haut-commissaire Saïdou Ouédraogo a, pour sa part, félicité les nouveaux diplômés pour leurs performances et les a exhortés à croire en leur potentiel. Il a salué l’engagement des différents acteurs de l’éducation avant de déclarer officiellement ouvertes les Journées d’information et d’orientation, édition 2026, dans la province du Koulpélogo. La cérémonie a été marquée par la mise en terre d’un arbre, symbole d’espoir, de croissance et d’avenir. Agence d’Information du Burkina LM/bp/yos",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -952,7 +952,6 @@
         "economic",
         "diplomatic",
         "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -962,82 +961,15 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A2"
+        "rating": "C2"
       },
-      "_rating": "A2",
-      "_score": 123,
+      "_rating": "C2",
+      "_score": 115,
       "_zone": 1,
-      "_theme": "H",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Sissili/Cohésion sociale : L’association Semfilms et les acteurs locaux unissent leurs voix à Léo pour prévenir les conflits fonciers",
-      "link": "https://www.aib.media/sissili-cohesion-sociale-lassociation-semfilms-et-les-acteurs-locaux-unissent-leurs-voix-a-leo-pour-prevenir-les-conflits-fonciers/",
-      "pubDate": "2026-07-13T20:14:28.000Z",
-      "description": "Sissili/Cohésion sociale : L’association Semfilms et les acteurs locaux unissent leurs voix à Léo pour prévenir les conflits fonciers Léo, 12 juillet 2026 (AIB) – La Maison des Jeunes et de la Culture de Léo a servi de cadre, le jeudi 9 juillet 2026, à une soirée culturelle de sensibilisation. Organisée par l’association SEMFILMS dans le cadre de sa « Caravane pour le dialogue, la paix et la cohésion sociale », cette étape s’est penchée sur la délicate question de la gestion des terres sous le thème « Prévenir les conflits fonciers, c’est bâtir une paix durable ». L’événement s’est déroulé sous la présidence du Haut-Commissaire de la Province de la Sissili, le Camarade Tewindé Isaac SIA, et sous le parrainage du Chef de Canton de Léo, Sa Majesté Léo-Pio Dan-Zwè. À travers des prestations artistiques, un ciné-débat et la projection de capsules vidéos — notamment le film « Agrobusiness, les assoiffés de terres » de Aziz Nikièma et une production de l’Observatoire National de Prévention et Gestion des Conflits Communautaires (ONAPREGECC) —, les participants ont été invités à une profonde réflexion sur la spéculation foncière. Le Haut-Commissaire de la Sissili, le Camarade Tewindé Isaac SIA, a d’emblée rappelé l’urgence d’une telle thématique dans sa circonscription. Face aux dérives liées au marché de la terre, l’autorité provinciale a interpellé l’assistance. « Que ces difficultés, nées essentiellement de la vente des terres, ne puissent pas entraver la cohésion sociale, [et] que ces conflits puissent être résolus pacifiquement une fois survenus. » Également Président de la section locale de l’ONAPREGECC, le Camarade Sia a tenu à rassurer les administrés sur l’engagement de l’État. «Je réaffirme ma disponibilité à toujours accompagner les populations afin que ces différends ne soient pas une entrave à la cohésion sociale et au vivre-ensemble dans la province. » Pour sa part, le Président de la Délégation Spéciale (PDS) de la commune de Léo, le Camarade Kassoum KOALAGA, a insisté sur l’approche locale de résolution des crises, mettant en avant le dialogue et les structures de proximité. «Il y a la nécessité de toujours s’asseoir, dialoguer pour trouver des solutions aux problèmes posés. Pour Léo, cela est boosté par les commissions de conciliations foncière et villageoise, installées dans tous les 19 villages de la commune, et aussi avec l’appui des autorités coutumières », a souligné le PDS. Du côté des organisateurs, la satisfaction était de mise quant à la pertinence des échanges nés des projections. Le Camarade Jean Sylvanus Ouali, coordonnateur de programmes à SEMFILMS, a résumé la portée de cette initiative. « Cette soirée culturelle, enrichie par des prestations artistiques et un ciné-débat, a mis en lumière la problématique de le bradage des terres et ses conséquences, tout en montrant que des solutions peuvent être trouvées collectivement. » Cette activité s’inscrit dans le cadre du Projet Paix et Cohésion Sociale dans le Sud-Ouest et les zones frontalières (PCSUD). Après l’étape de Léo, la caravane de SEMFILMS poursuivra son périple dans d’autres localités du pays, notamment à Batié , Gaoua et Dano. Agence d’Information du Burkina BAN/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "World: Reporting Sexual Violence and Abuse in Conflict - June 2026",
-      "link": "https://reliefweb.int/report/world/reporting-sexual-violence-and-abuse-conflict-june-2026",
-      "pubDate": "2026-07-14T09:04:28.000Z",
-      "description": "Countries: World, Cameroon, Central African Republic, Chad, Colombia, Democratic Republic of the Congo, Ethiopia, India, Kenya, Mexico, Myanmar, Nigeria, Pakistan, Somalia, Uzbekistan Source: Insecurity Insight This News Brief bears testimony to the brave survivors who speak about sexual violence by state bodies or conflict actors. Most events of violence are never reported. This compilation is neither complete nor representative of the extent or nature of sexual violence in general. It brings together dispersed accounts about survivors from around the world who broke the silence. Past editions: May , April ; March ; February ; January ; December : November ; October ; September ; August ; July ; June ; May ; April ; March ; February ; January ; December ; November ; October ; September ; August ; July ; All Help support our work by sharing this resource with your networks. Please copy and paste this link: https://bit.ly/Jun2026SV Contact us for data enquiries. Developments in June 2026 Chad: As reported in June 2026, an internal investigation by Médecins Sans Frontières (MSF) revealed widespread sexual exploitation and abuse of Sudanese refugee women and underage girls by local and international staff. Survivors were reportedly coerced into exchanging sex for food, water, employment, and other basic necessities. The findings highlight the heightened vulnerability of displaced women and girls to sexual exploitation by humanitarian personnel and underscore the urgent need for robust safeguarding measures, survivor-centred reporting and support mechanisms, and accountability to prevent and respond to sexual exploitation and abuse in humanitarian settings. See Chad section for more details. Data collected by Insecurity Insight shows that these incidents are not isolated. Cases of aid workers abusing their positions to sexually exploit and abuse people in their care have been publicly reported in Burkina Faso, the DRC and Sudan over several years and across different humanitarian settings. Reported abuses include demands for sex in exchange for food, shelter, aid registration or access to humanitarian assistance, particularly affecting displaced women and girls living in camps or other precarious conditions. Available reporting has implicated both national and international humanitarian staff, including employees of UN agencies and international NGOs, highlighting that sexual exploitation and abuse is not confined to individual organisations or emergency responses. These incidents demonstrate how unequal power dynamics, dependence on humanitarian assistance and weak accountability mechanisms can create opportunities for exploitation, particularly during large-scale displacement crises. Myanmar: In June 2026, reports from Magway, Bago, and Chin indicate a pattern of conflict-related sexual violence by Myanmar military and Military Council personnel against women, underscoring the continued use of sexual violence as a tool of intimidation and abuse in conflict-affected areas. In Magway region, military personnel reportedly raped and killed an unspecified number of women during a prolonged military raid in Pakokku township, raped two women during a military operation in Salin township, and raped another woman in Chauk township. In Bago region, a 28-year-old woman who had been forcibly conscripted as a cook for the military was reportedly raped and killed by military personnel. In Chin state, a woman was reportedly subjected to an attempted rape at gunpoint by a Military Council member after being forcibly removed from her home. These incidents highlight the heightened vulnerability of women and girls in areas affected by military operations and reinforce urgent calls for accountability, survivor-centred support services, and strengthened protection measures. See Myanmar section for more details. Data collected by Insecurity Insight shows that since the military coup on 01 February 2021 and 04 June 2026, at least 73 publicly reported incidents of conflict-related sexual violence were recorded across 15 states and regions. Nearly 25% of incidents were reported in Sagaing region. Approximately 66% of incidents were attributed to the Myanmar military. Women and children were most frequently subjected to sexual violence and abuse in their homes, with members of the Myanmar military identified as the primary perpetrators. Reporting Sexual Violence By state bodies or conflict actors that particularly targets IDPs and refugees, aid, health workers or educators or students among others. Africa Cameroon 10 June 2026: In Nachtigal town, Mbam-et-Kim division, Centre region, a 15-year-old girl was raped by a military officer at a military facility. The officer was arrested and transferred to the Military Security Division's disciplinary facility. The girl received emergency medical care and psychological support at a military hospital. Source: MMI News Between 14 and 15 June 2026: In Yagoua town, May-Danay department, Far North province, an unspecified number of women were sexually assaulted by four armed men who broke into their house during the night. Source: Humanity Purpose Central African Republic 13 June 2026: In Bassin area, PK9 neighbourhood, Bangui city, a 12-year-old boy was found decapitated with his genitals mutilated. The perpetrators were not identified. Source: Corbeau News Chad As reported on 13 June 2026: Across the country, an unspecified number of refugee Sudanese women and underage girls were sexually exploited by local and international MSF staff members, who forced them to trade sex for basic necessities like food, water, and jobs. An internal MSF investigation, launched after a 2024 AP report, uncovered 59 allegations of abuse, including the abduction of seven girls in an MSF vehicle between 2024 and 2025. MSF dismissed 18 employees, apologised for the severe harm caused, and committed to overhauling its hiring and reference-check procedures to prevent future abuse. Source: Premium Times NG Democratic Republic of the Congo 03 June 2026: In Bwisha chiefdom, Rutshutu territory, North Kivu province, a woman was subjected to an attempted rape by an armed man in military uniform. She and her husband were both killed after they resisted. Source: WIkiRumours 19 June 2026: On the Kiseya–Kilambo road, Waloa Yungu area, Walikale territory, North Kivu province, around 30 final-year students travelling to State Examination centres in Ntoto and Byungu were attacked by unidentified armed men, who intercepted them and robbed them of their notebooks, phones, money and other personal belongings. Three female students were reportedly subjected to sexual violence before the group was released. Source: Radio Okapi Ethiopia Between 18 and 29 June 2026: In Zayse woreda, Gamo zone, South Ethiopia Regional state, an unspecified number of women were sexually assaulted by South Ethiopian police and local kebele militia members. Source: Addis Standard Kenya As reported on 28 May 2026: In Gambogi locality, Hamisi sub-county, Vihiga county, a 14-year-old girl was raped by a police officer of the Gambogi police station. Source: Personal Communication Nigeria 29 June 2026: In Osogbo city, Osun state, an unspecified number of female students were stripped naked and sexually assaulted by soldiers from the Army Depot after they forcefully entered Osun State University. Another student was reportedly raped, though the incident was still being verified as the victim could not be identified at the time of filing the police report. Source: Punch Somalia 16 June 2026: In Jalalaqsi town, Hiiraan province, a young girl was sexually assaulted by clan members. Source: Baidoa Online 17 June 2026: In Jalalaqsi town, Hiiraan province, a young girl from an opposing clan was sexually assaulted by three clan members in retaliation for the assault of another young girl the day before. This led to armed confrontations between the rival clans. Source: Baidoa Online Asia India 13 June 2026: In Kainchi village, Nainital district, Kuamaon region, Uttarakhand state, a girl was sexually assaulted by two police constables, who were under the influence of alcohol. The policemen were caught by local residents and a criminal case registered. Source: India Today 16 June 2026: In Kalyansinghpur block, Rayagada district, Odisha state, two Odisha-based NGO interns - a young man and a female student - were beaten up by a mob following false rumours of them being child kidnappers. The student was also sexually assaulted, and her clothes were forcibly removed. Around 20 people were arrested in connection with the assault. Source: Orissa Post and The Hindu 17 June 2026: In Ladwa town Kurukshetra district, Haryanaa state, a 30-year-old man was physically assaulted, forced to strip, and sexually abused by three police personnel inside Ladwa Police Station following an argument that arose when he was stopped at a police checkpoint. The man was admitted to hospital for a medical examination. The perpetrators were suspended, an FIR registered against them and a Special Investigation Team (SIT) was formed to investigate the incident. Source: Times of India Indonesia 19 June 2026: Near Kali Biru area, Dekai district, Yahukimo regency, Highland Papua province, a Papuan woman was sexually assaulted by armed Indonesian security forces in her garden. Source: Free West Papua Vanuatu Support Myanmar 10-30 May 2026: In Myit Chay area, Pakokku township, Magway region, an unspecified number of women were raped and killed by members of the Myanmar military during a 20-day raid on villages in the area. Source: Irrawaddy 10 June 2026: In Myay Sin village, Salin township, Minbu district, Magway region, two women were raped by armed members of the military council during a raid on the village. Source: Khit Thit News 10 June 2026: In Myay Pin village, Nat Talin township, Bago region, a 28-year-old woman who had been forced to work as a cook for the Myanmar military since April 2026, following a raid on her village, was found dead and raped. Local sources stated that she had been raped and killed by military personnel. Source: Khit Thit News I 16 June 2026: In Baila ward, Falam township, Chin state, a woman was subjected to an attempted rape at gunpoint by a member of the Military Council after she was forcibly taken from her home to a cemetery. The assault was prevented by her husband, who intervened. Source: Shwe Phee Myay News Agency 21 June 2026: In Myay Sawk village, Chauk township and district, Magway region, a woman was raped by military council members. Source: Khit Thit News Pakistan As reported on 22 June 2026: In Sehrish Nagar railway crossing, Qasimbabad town, Hyderabad division, Sindh province, a boy was raped by two policemen at a police check point. Source: ACLED 1 Uzbekistan 03 June 2026: In Andijan city and region, a girl was raped by a social worker from the Center for Social and Legal Assistance to Minors after he took her to a multi-story building. The prosecutor’s office initiated a criminal investigation, and preliminary investigative actions were underway. Source: Zamon UZ The Americas Colombia Around 22 June 2026: In Riohacha municipality, a woman from Santa Lucia indigenous community was raped by an unidentified number of armed men after being held captive with another 22 people. Authorities rescued the 22 people and one man was arrested. Source: ACLED 1 Mexico 20 June 2026: In Canal de Aguas Negras, Michoacan street, Colonia Mexico neighbourhood, Jacona de Plancarte municipality, Michoacan state, a man was found dead and naked with a bag over his head. Source: Informa Oriente Insecurity Insight. 2026. Reporting Sexual Violence Monthly News Brief, June 2026. Switzerland: Insecurity Insight. https://bit.ly/Jun2026SV 1 Armed Conflict Location & Event Data Project (ACLED) database attribution policy . Accessed 07 July 2026.",
-      "_source": "ReliefWeb",
-      "_sourceId": "rss_reliefweb",
-      "_sourceCat": "humanitarian",
-      "_sourceBloc": "autre",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 119,
-      "_zone": 13,
       "_theme": "S",
-      "_zoneShort": "13. Asie du Sud-Est",
-      "_relevance": ".",
-      "_desk": "A6"
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
     },
     {
       "title": "Coopération bilatérale: des échanges pour le renforcement de l’axe Ouagadougou-Londres",
@@ -1136,9 +1068,170 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
+    },
+    {
+      "title": "Dépravation des mœurs à Ouaga : La Police Municipale interpelle 12 jeunes filles et hommes de 13 à 19 ans dans une villa louée transformée en lieu de débauche",
+      "link": "https://netafrique.net/depravation-des-moeurs-a-ouaga-la-police-municipale-interpelle-12-jeunes-filles-et-hommes-de-13-a-19-ans-dans-une-villa-louee-transformee-en-lieu-de-debauche/",
+      "pubDate": "2026-07-13T23:08:30.000Z",
+      "description": "La vigilance citoyenne vient de porter ses fruits dans la lutte contre l’atteinte aux bonnes mœurs. Ce dimanche 12 juillet 2026 , une opération ciblée de la Police Municipale a permis l’interpellation de douze jeunes , dont plusieurs mineurs, au sein d’une villa du quartier Kouritenga (Arrondissement 6). Signalés pour des faits de dépravation, ces adolescents, âgés de 13 à 19 ans, ont été conduits pour l’exécution de travaux d’intérêt général . Au-delà de la sanction, cette intervention a donné lieu à une séance de sensibilisation capitale à l'endroit des parents, rappelant l'urgence d'un suivi éducatif plus rigoureux dans un contexte de relâchement des comportements sociaux. Le quartier Kouritenga, dans l’arrondissement 6 de Ouagadougou, a été le théâtre d’une scène inhabituelle ce week-end. L'agitation n'était pas due à un événement festif ordinaire, mais à une intervention musclée des forces de l'ordre face à un phénomène qui inquiète de plus en plus : la location de villas privées par des jeunes à des fins de débauche. Tout commence par un acte de patriotisme. Inquiets de mouvements suspects autour d'une villa de la zone, des riverains ont alerté les autorités. D'après les sources , ce signalement dénonçait l'organisation d'activités portant gravement atteinte à la tranquillité publique et aux bonnes mœurs. La réactivité de la Police Municipale a été immédiate : une équipe s'est rendue sur les lieux pour confirmer les soupçons et procéder aux vérifications d'usage. Le constat effectué sur place a été sans appel. Les agents ont procédé à l'interpellation de douze individus . Le profil des personnes concernées est particulièrement révélateur de la vulnérabilité d'une certaine jeunesse : le groupe était composé de neuf garçons et trois filles , dont les âges oscillent entre 13 et 19 ans . Cette mixité et la présence de très jeunes adolescents soulignent l'ampleur du défi social auquel sont confrontées les autorités urbaines. Plutôt qu’une simple mesure répressive, la Police Municipale a opté pour une approche pédagogique et citoyenne. Les contrevenants ont été conduits pour l’exécution de travaux d’intérêt général , une manière de les confronter à leurs responsabilités envers la collectivité. Parallèlement, les géniteurs de ces jeunes ont été convoqués pour une séance de vérité. Selon les sources , les parents ont bénéficié d'une séance de sensibilisation axée sur leur rôle fondamental dans l'encadrement, le suivi et l'éducation de leurs enfants. Pour les forces de sécurité, il s'agit de s'attaquer à la racine du problème en renforçant la cellule familiale. Saluant la collaboration des populations de Kouritenga, la Police Municipale a réitéré son invitation à poursuivre cette dynamique de signalement. Cette affaire rappelle que la préservation de l'ordre public et de la sécurité ne peut se faire sans l'œil attentif du citoyen. En barrant la route à la dépravation, la police espère restaurer une sérénité durable au sein des quartiers de la capitale. L’article Dépravation des mœurs à Ouaga : La Police Municipale interpelle 12 jeunes filles et hommes de 13 à 19 ans dans une villa louée transformée en lieu de débauche est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina Faso : Les « héros silencieux » du don de sang distingués à Fada N’Gourma",
+      "link": "https://faso7.com/2026/07/13/burkina-faso-les-heros-silencieux-du-don-de-sang-distingues-a-fada-ngourma/",
+      "pubDate": "2026-07-13T23:05:38.000Z",
+      "description": "Célébrée chaque année le 14 juin depuis 2004, la Journée mondiale du donneur de sang (JMDS) constitue un moment de reconnaissance envers ces hommes et ces femmes qui, par un geste volontaire et désintéressé, contribuent à sauver des vies. Au Burkina Faso, l'édition 2026 a été commémorée, en différé, le 11 juillet 2026 à Fada N'Gourma, autour du thème : « Une goutte d'humanité. Donnez du sang. Sauvez des vies ». La cérémonie a été marquée par la distinction des cinq meilleurs donneurs de sang du pays. En reconnaissance de leur engagement exemplaire en faveur de la santé publique, les récipiendaires Orokiatou Traoré, Béon Kouraogo, Madia Ousmane Naba, Tibo Hyacinthe Yaméogo et Boubacar Sanou ont été élevés au rang de chevalier de l'ordre du Mérite de la santé et de l'action sociale avec agrafe Santé. Premier donneur national avec un total de 88 poches de sang offertes entre 2001 et 2025, Ousmane Naba n'a pas caché sa joie après cette distinction honorifique. « Ce 11 juillet est un jour magnifique et inoubliable. Je suis fier d'avoir contribué à sauver des vies » , a-t-il déclaré. Classée deuxième meilleure donneuse du pays avec 46 dons enregistrés, Orokiatou Traoré a, elle aussi, exprimé sa fierté de porter la médaille. « Je remercie les autorités pour cette reconnaissance » , s'est-elle réjouie. Meilleur donneur, Ousmane Naba (milieu) Outre ces décorations, plusieurs citoyens ainsi que des organisations associatives et communautaires engagés dans la promotion du don bénévole de sang ont reçu des attestations de reconnaissance des mains du ministre de la Santé, le Dr Robert Lucien Jean Claude Kargougou, du ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation, le Pr Adjima Thiombiano, parrain de la cérémonie, ainsi que de plusieurs autorités administratives, parmi lesquelles des gouverneurs de région. Pour le ministre de la Santé, la nation burkinabè doit une fière chandelle à ces hommes et femmes qui mènent, avec discrétion mais constance, un combat noble au service de la vie. « À travers les donneurs distingués aujourd'hui, ce sont tous les donneurs de sang des quatre coins du Burkina Faso à qui je rends solennellement hommage » , a indiqué le Dr Robert Lucien Jean Claude Kargougou. Même reconnaissance du côté du président de la Fédération des associations des donneurs de sang, Jean Bosco Zoundi. Selon lui, le don volontaire de sang constitue un exemple de citoyenneté, de patriotisme et de solidarité. « En acceptant de donner votre sang, vous accomplissez l'un des plus beaux actes d'amour envers votre prochain. Vous êtes les héros silencieux de notre système de santé » , a-t-il salué. Une collecte de sang a été initiée en marge de la cérémonie -©️Faso7 En outre, le ministre Kargougou a fait un clin d’œil au Centre national de transfusion sanguine (CNTS) et à ses partenaires pour les efforts déployés au quotidien dans la promotion du don bénévole de sang. Grâce à cette mobilisation collective, a-t-il souligné, 169 156 produits sanguins ont été distribués en 2025 dans les services de pédiatrie, de maternité, des urgences médico-chirurgicales, de néphrologie et de cancérologie, permettant la prise en charge de milliers de patients à travers le pays. Pour l'année 2026, son département entend collecter 250 519 poches de sang. Un objectif qui appelle, selon le parrain de la cérémonie, le Pr Adjima Thiombiano, à une mobilisation accrue de l'ensemble des Burkinabè. Dans un contexte national marqué par les opérations de reconquête du territoire, les besoins en produits sanguins demeurent particulièrement importants, a-t-il rappelé, invitant chaque citoyen éligible à faire du don de sang un réflexe de solidarité nationale. Prenant la parole au nom du directeur régional de l'Organisation mondiale de la santé (OMS) pour l'Afrique, le Dr Bessiou Neya a réaffirmé l'engagement de l'institution onusienne à accompagner davantage les États membres dans le renforcement de leurs systèmes nationaux de transfusion sanguine. L’article Burkina Faso : Les « héros silencieux » du don de sang distingués à Fada N'Gourma est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Le FSB déjoue une attaque massive de drones visant une entreprise russe du secteur de la défense dans la région de Moscou",
+      "link": "https://francais.rt.com/russie/136171-fsb-dejoue-attaque-massive-drones-visant-entreprise-secteur-defense-dans-region-de-moscou",
+      "source": "RT en français",
+      "date": "2026-07-14T10:27:13.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "attaque massive"
+        }
+      ]
+    },
+    {
+      "title": "Trump’s 20% Hormuz toll jolts markets as Asia adapts to oil shock",
+      "link": "https://www.scmp.com/week-asia/economics/article/3360531/trumps-20-hormuz-toll-jolts-markets-asia-adapts-oil-shock?utm_source=rss_feed",
+      "source": "South China Morning Post",
+      "date": "2026-07-14T10:00:19.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "oil shock"
+        }
+      ]
+    },
+    {
+      "title": "The U.S. is set to reinstate a blockade over the Strait of Hormuz",
+      "link": "https://www.npr.org/2026/07/14/nx-s1-5893257/us-iran-updates",
+      "source": "NPR World",
+      "date": "2026-07-14T09:56:45.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "US strikes Iran, vows to reimpose naval blockade",
+      "link": "https://www.vanguardngr.com/2026/07/us-strikes-iran-vows-to-reimpose-naval-blockade/",
+      "source": "Vanguard (Nigeria)",
+      "date": "2026-07-14T09:52:07.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Les forces américaines vont rétablir le blocus des ports iraniens mardi soir",
+      "link": "https://telquel.ma/instant-t/2026/07/14/les-forces-americaines-vont-retablir-le-blocus-des-ports-iraniens-mardi-soir_1998823/",
+      "source": "TelQuel (Maroc)",
+      "date": "2026-07-14T09:36:22.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
+      "title": "US strikes Iran, vows to reimpose naval blockade",
+      "link": "https://www.al-monitor.com/originals/2026/07/us-strikes-iran-vows-reimpose-naval-blockade",
+      "source": "Al-Monitor",
+      "date": "2026-07-14T09:30:32.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
     {
       "title": "Sénégal : la fracture au sommet du pouvoir",
       "link": "https://francais.rt.com/international/136166-senegal-fracture-sommet-pouvoir",
@@ -1252,22 +1345,6 @@
       ]
     },
     {
-      "title": "Oil hits nearly 1-month high above $85 amid US-Iran strikes, Hormuz blockade",
-      "link": "https://www.aa.com.tr/en/economy/oil-hits-nearly-1-month-high-above-85-amid-us-iran-strikes-hormuz-blockade/3997194",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-07-14T06:55:13.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
       "title": "In Singapore, ‘durian tsunami’ won’t last long as prices rise and wave ebbs",
       "link": "https://www.scmp.com/news/asia/southeast-asia/article/3360478/singapore-durian-tsunami-wont-last-long-prices-rise-and-wave-ebbs?utm_source=rss_feed",
       "source": "South China Morning Post",
@@ -1316,22 +1393,6 @@
       ]
     },
     {
-      "title": "Des frappes américaines qui visent \"la capacité iranienne à contourner le blocus du détroit\"",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260714-des-frappes-am%C3%A9ricaines-qui-visent-la-capacit%C3%A9-iranienne-%C3%A0-contourner-le-blocus-du-d%C3%A9troit",
-      "source": "France 24",
-      "date": "2026-07-14T01:20:47.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blocus"
-        }
-      ]
-    },
-    {
       "title": "Rupture diplomatique Burkina Faso-République française : le ministre des Affaires étrangères reçoit les diplomates burkinabè au complet de retour de Paris",
       "link": "https://netafrique.net/rupture-diplomatique-burkina-faso-republique-francaise-le-ministre-des-affaires-etrangeres-recoit-les-diplomates-burkinabe-au-complet-de-retour-de-paris/",
       "source": "Net Afrique (BF)",
@@ -1344,22 +1405,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "rupture diplomatique"
-        }
-      ]
-    },
-    {
-      "title": "Donald Trump prononcera un \"discours à la nation\" jeudi, en pleine escalade avec l'Iran",
-      "link": "https://www.france24.com/fr/am%C3%A9riques/20260713-donald-trump-annonce-prononcera-discours-nation-jeudi-soir-president-etats-unis-guerre-moyen-orient-bombardements-iran",
-      "source": "France 24",
-      "date": "2026-07-13T22:58:11.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "escalade"
         }
       ]
     },
@@ -1431,43 +1476,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      172
-    ],
-    [
-      "autre",
-      143
+      189
     ],
     [
       "occident_fr",
-      116
+      120
+    ],
+    [
+      "autre",
+      112
     ],
     [
       "golfe_mo",
-      106
+      107
     ],
     [
       "occident_us",
-      89
-    ],
-    [
-      "bf_local",
-      43
+      87
     ],
     [
       "russie",
-      42
-    ],
-    [
-      "chine",
-      35
+      48
     ],
     [
       "turquie",
-      35
+      45
+    ],
+    [
+      "bf_local",
+      39
+    ],
+    [
+      "chine",
+      33
     ],
     [
       "sahel",
-      19
+      20
     ]
   ],
   "desks": [
@@ -1475,7 +1520,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 85,
+      "count": 86,
       "top": [
         {
           "title": "Rupture diplomatique Burkina Faso-République française : le ministre des Affaires étrangères reçoit les diplomates burkinabè au complet de retour de Paris",
@@ -1496,22 +1541,13 @@
           "rating": "F2"
         },
         {
-          "title": "Sissili/Éducation : Clôture des activités pédagogiques du complexe Betsaleel sous le signe de l’excellence et de la solidarité",
-          "link": "https://www.aib.media/sissili-education-cloture-des-activites-pedagogiques-du-complexe-betsaleel-sous-le-signe-de-lexcellence-et-de-la-solidarite/",
+          "title": "Koulpélogo/Yargatenga : Les nouveaux diplômés invités à réussir leur orientation académique et professionnelle",
+          "link": "https://www.aib.media/koulpelogo-yargatenga-les-nouveaux-diplomes-invites-a-reussir-leur-orientation-academique-et-professionnelle/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "H",
+          "theme": "S",
           "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Sissili/Cohésion sociale : L’association Semfilms et les acteurs locaux unissent leurs voix à Léo pour prévenir les conflits fonciers",
-          "link": "https://www.aib.media/sissili-cohesion-sociale-lassociation-semfilms-et-les-acteurs-locaux-unissent-leurs-voix-a-leo-pour-prevenir-les-conflits-fonciers/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
+          "rating": "C2"
         },
         {
           "title": "Coopération bilatérale: des échanges pour le renforcement de l’axe Ouagadougou-Londres",
@@ -1521,6 +1557,15 @@
           "theme": "D",
           "relevance": "A",
           "rating": "C2"
+        },
+        {
+          "title": "Contingent spécialiste, session 2025 : 1 520 nouveaux soldats rejoignent les rangs des forces armées",
+          "link": "https://www.sidwaya.info/contingent-specialiste-session-2025-1-520-nouveaux-soldats-rejoignent-les-rangs-des-forces-armees/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
         }
       ]
     },
@@ -1528,7 +1573,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 58,
+      "count": 55,
       "top": [
         {
           "title": "Presidency faults Makinde’s UN probe call over Oyo school abduction",
@@ -1549,27 +1594,27 @@
           "rating": "F2"
         },
         {
-          "title": "Adom Brands formally petitions Ghana Armed Forces over alleged assault on reporter in Nkwanta South",
-          "link": "https://www.myjoyonline.com/adom-brands-formally-petitions-ghana-armed-forces-over-alleged-assault-on-reporter-in-nkwanta-south/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Air Force, drones failed to penetrate forest canopy in Oyo rescue, says Army commander",
-          "link": "https://punchng.com/air-force-drones-failed-to-penetrate-forest-canopy-in-oyo-rescue-says-army-commander/?utm_source=rss.punchng.com&utm_medium=web",
+          "title": "Power ministry seeks ICPC’s guidance to fight fraud, grid vandalism",
+          "link": "https://punchng.com/power-ministry-seeks-icpcs-guidance-to-fight-fraud-grid-vandalism/?utm_source=rss.punchng.com&utm_medium=web",
           "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "TUSAAG to resume indefinite strike July 20 over unpaid allowances",
-          "link": "https://www.myjoyonline.com/tusaag-to-resume-indefinite-strike-july-20-over-unpaid-allowances/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "When floodwaters recede, health crisis begins – Physicians warn",
+          "link": "https://www.vanguardngr.com/2026/07/when-floodwaters-recede-health-crisis-begins-physicians-warn/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Forgery charge: Alleged ‘fake’ PFIPC DG Adeyemi fails to appear in court",
+          "link": "https://www.vanguardngr.com/2026/07/forgery-charge-alleged-fake-pfipc-dg-adeyemi-fails-to-appear-in-court/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
@@ -1581,7 +1626,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 32,
+      "count": 30,
       "top": [
         {
           "title": "Génocide des Tutsis au Rwanda: les parties civiles fustigent la défense d'Eugène Rwamucyo à son procès en appel",
@@ -1593,40 +1638,40 @@
           "rating": "C2"
         },
         {
-          "title": "Crise à l’Agasa : Hermann Immongault recadre une direction en pleine tourmente",
-          "link": "https://www.gabonreview.com/crise-a-lagasa-hermann-immongault-recadre-une-direction-en-pleine-tourmente/",
-          "source": "Gabon Review",
+          "title": "Cameroun : deux terroristes de Boko Haram « neutralisés » par l’armée dans l’Extrême-Nord",
+          "link": "https://fr.journalducameroun.com/cameroun-deux-terroristes-de-boko-haram-neutralises-par-larmee-dans-lextreme-nord/",
+          "source": "Journal du Cameroun",
           "zone": "3. Afrique centrale",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "RDC: le Directeur régional Afrique de l'IEC en visite officielle à Kinshasa pour consolider la coopération entre l'OCC, la SNEL et la Commission électrotechnique internationale",
-          "link": "https://actualite.cd/2026/07/13/rdc-le-directeur-regional-afrique-de-liec-en-visite-officielle-kinshasa-pour-consolider",
-          "source": "ActualitéCD (RDC)",
+          "title": "Silences et démentis suite à des accusations russes contre l'Ukraine sur l’est de la RDC",
+          "link": "https://www.rfi.fr/fr/afrique/20260714-silences-et-d%C3%A9mentis-suite-%C3%A0-des-accusations-russes-contre-l-ukraine-sur-l-est-de-la-rdc",
+          "source": "RFI Afrique",
           "zone": "4. Grands Lacs",
-          "theme": "D",
+          "theme": "S",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "C2"
         },
         {
-          "title": "Beni : sept morts dans une nouvelle attaque attribuée aux rebelles ADF",
-          "link": "https://actualite.cd/2026/07/14/beni-sept-morts-dans-une-nouvelle-attaque-attribuee-aux-rebelles-adf",
-          "source": "ActualitéCD (RDC)",
+          "title": "Banditisme à Kasindi-Lubirigha : la société civile exige le renforcement des patrouilles de sécurité",
+          "link": "https://www.radiookapi.net/2026/07/14/actualite/securite/banditisme-kasindi-lubirigha-la-societe-civile-exige-le-renforcement",
+          "source": "Radio Okapi (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "RDC : « La responsabilité est davantage militaire », Christian Moleka dresse un bilan mitigé de la guerre à l'Est",
-          "link": "https://actualite.cd/2026/07/14/rdc-la-responsabilite-est-davantage-militaire-christian-moleka-dresse-un-bilan-mitige-de",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
+          "title": "Au Cameroun, un programme pour lutter contre les chantages à la sextape",
+          "link": "https://www.rfi.fr/fr/afrique/20260714-au-cameroun-un-programme-pour-lutter-contre-les-chantages-%C3%A0-la-sextape",
+          "source": "RFI Afrique",
+          "zone": "3. Afrique centrale",
+          "theme": "T",
+          "relevance": "L",
+          "rating": "C2"
         }
       ]
     },
@@ -1634,8 +1679,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 23,
+      "count": 29,
       "top": [
+        {
+          "title": "Allocation touristique : l’Algérie s’attaque au cœur du trafic de devises",
+          "link": "https://www.tsa-algerie.com/allocation-touristique-lalgerie-sattaque-au-coeur-du-trafic-de-devises/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Amel Bedoui explore la mémoire des femmes et les blessures de la filiation",
           "link": "https://kapitalis.com/tunisie/2026/07/14/amel-bedoui-explore-la-memoire-des-femmes-et-les-blessures-de-la-filiation/",
@@ -1664,15 +1718,6 @@
           "rating": "B2"
         },
         {
-          "title": "Algérie : six membres du MAK dont 4 Marocains arrêtés",
-          "link": "https://www.tsa-algerie.com/algerie-six-membres-du-mak-dont-4-marocains-arretes/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Transport : Kayouh fait le point sur les réformes et les grands projets en cours",
           "link": "https://fr.hespress.com/481244-transport-kayouh-fait-le-point-sur-les-reformes-et-les-grands-projets-en-cours.html",
           "source": "Hespress (Maroc, FR)",
@@ -1687,8 +1732,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 137,
+      "count": 129,
       "top": [
+        {
+          "title": "US strikes Iran, vows to reimpose naval blockade",
+          "link": "https://www.vanguardngr.com/2026/07/us-strikes-iran-vows-to-reimpose-naval-blockade/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "8. Moyen-Orient",
+          "theme": "M",
+          "relevance": "A",
+          "rating": "F1"
+        },
         {
           "title": "Americans expect prolonged US-Iran war as ceasefire falters, Reuters/Ipsos poll finds",
           "link": "https://www.al-monitor.com/originals/2026/07/americans-expect-prolonged-us-iran-war-ceasefire-falters-reutersipsos-poll-finds",
@@ -1699,6 +1753,24 @@
           "rating": "B2"
         },
         {
+          "title": "Les forces américaines vont rétablir le blocus des ports iraniens mardi soir",
+          "link": "https://telquel.ma/instant-t/2026/07/14/les-forces-americaines-vont-retablir-le-blocus-des-ports-iraniens-mardi-soir_1998823/",
+          "source": "TelQuel (Maroc)",
+          "zone": "8. Moyen-Orient",
+          "theme": "L",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "US strikes Iran, vows to reimpose naval blockade",
+          "link": "https://www.al-monitor.com/originals/2026/07/us-strikes-iran-vows-reimpose-naval-blockade",
+          "source": "Al-Monitor",
+          "zone": "8. Moyen-Orient",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
           "title": "U.S. strikes Iran for third day, will reimpose blockade",
           "link": "https://www.thehindu.com/news/international/us-strikes-iran-for-third-day-will-reimpose-blockade/article71220175.ece",
           "source": "The Hindu (Inde)",
@@ -1706,33 +1778,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F1"
-        },
-        {
-          "title": "Les États-Unis frappent à nouveau l'Iran et menace d'imposer un blocus dans le détroit d'Ormuz",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260714-les-%C3%A9tats-unis-frappent-%C3%A0-nouveau-l-iran-et-menace-d-imposer-un-blocus-dans-le-d%C3%A9troit-d-ormuz",
-          "source": "France 24",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Oil hits nearly 1-month high above $85 amid US-Iran strikes, Hormuz blockade",
-          "link": "https://www.aa.com.tr/en/economy/oil-hits-nearly-1-month-high-above-85-amid-us-iran-strikes-hormuz-blockade/3997194",
-          "source": "Anadolu Agency (Turquie)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "Donald Trump prononcera un \"discours à la nation\" jeudi, en pleine escalade avec l'Iran",
-          "link": "https://www.france24.com/fr/am%C3%A9riques/20260713-donald-trump-annonce-prononcera-discours-nation-jeudi-soir-president-etats-unis-guerre-moyen-orient-bombardements-iran",
-          "source": "France 24",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C1"
         }
       ]
     },
@@ -1740,17 +1785,8 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 180,
+      "count": 175,
       "top": [
-        {
-          "title": "World: Reporting Sexual Violence and Abuse in Conflict - June 2026",
-          "link": "https://reliefweb.int/report/world/reporting-sexual-violence-and-abuse-conflict-june-2026",
-          "source": "ReliefWeb",
-          "zone": "13. Asie du Sud-Est",
-          "theme": "S",
-          "relevance": ".",
-          "rating": "F2"
-        },
         {
           "title": "L’Afrique : entre dynamiques démographiques, intégration économique et affirmation géopolitique",
           "link": "https://www.iris-france.org/lafrique-entre-dynamiques-demographiques-integration-economique-et-affirmation-geopolitique/",
@@ -1770,15 +1806,6 @@
           "rating": "A2"
         },
         {
-          "title": "Des frappes américaines qui visent \"la capacité iranienne à contourner le blocus du détroit\"",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260714-des-frappes-am%C3%A9ricaines-qui-visent-la-capacit%C3%A9-iranienne-%C3%A0-contourner-le-blocus-du-d%C3%A9troit",
-          "source": "France 24",
-          "zone": "9. Europe occidentale",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
           "title": "Trump says U.S. military will reimpose blockade on Iranian ports",
           "link": "https://www.washingtonpost.com/world/2026/07/13/airstrikes-intensify-between-us-iran/",
           "source": "Washington Post World",
@@ -1786,6 +1813,24 @@
           "theme": "L",
           "relevance": "L",
           "rating": "B2"
+        },
+        {
+          "title": "Les origines infrastructurelles de la Révolution française",
+          "link": "https://legrandcontinent.eu/fr/2026/07/14/origines-infrastructurelles-de-la-revolution-francaise/",
+          "source": "Le Grand Continent",
+          "zone": "9. Europe occidentale",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "A2"
+        },
+        {
+          "title": "14 juillet : deux fois plus de véhicules et d’aéronefs défileront à Paris qu’en 2025 à Washington",
+          "link": "https://legrandcontinent.eu/fr/2026/07/14/14-juillet-deux-fois-plus-de-vehicules-et-daeronefs-defileront-a-paris-quen-2025-a-washington/",
+          "source": "Le Grand Continent",
+          "zone": "9. Europe occidentale",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "A2"
         }
       ]
     }
@@ -1798,43 +1843,48 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-07-14T09:11:10.524Z",
+      "at": "2026-07-14T10:56:00.245Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-14T09:11:10.531Z",
+      "at": "2026-07-14T10:56:00.253Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-14T09:11:43.229Z",
+      "at": "2026-07-14T10:56:36.180Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1981 articles"
+      "message": "113/170 flux OK, 1967 articles"
     },
     {
-      "at": "2026-07-14T09:11:46.132Z",
+      "at": "2026-07-14T10:56:39.076Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-14T09:11:46.431Z",
+      "at": "2026-07-14T10:56:39.388Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-14T09:11:46.436Z",
+      "at": "2026-07-14T10:56:39.393Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 18 alertes"
+      "message": "8 developpements, 21 alertes"
     },
     {
-      "at": "2026-07-14T09:11:46.437Z",
+      "at": "2026-07-14T10:56:39.393Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-07-14T10:56:39.393Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
