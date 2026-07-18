@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-18T16:11:19.285Z",
+  "generatedAt": "2026-07-18T19:32:26.832Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 113,
-    "failed": 57,
-    "articles": 1964,
+    "ok": 107,
+    "failed": 63,
+    "articles": 1909,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -58,11 +58,6 @@
         "count": 10
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
         "id": "rss_minute_bf",
         "name": "Minute BF",
         "count": 10
@@ -103,16 +98,6 @@
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -148,14 +133,14 @@
         "count": 30
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
-      },
-      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
+      },
+      {
+        "id": "rss_vanguard",
+        "name": "Vanguard (Nigeria)",
+        "count": 20
       },
       {
         "id": "rss_punch",
@@ -228,11 +213,6 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
         "count": 10
@@ -295,7 +275,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 24
+        "count": 23
       },
       {
         "id": "rss_rfimo",
@@ -348,11 +328,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -361,11 +336,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -425,7 +395,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 11
+        "count": 12
       },
       {
         "id": "rss_tass",
@@ -580,6 +550,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -610,14 +585,24 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -647,7 +632,7 @@
       {
         "id": "rss_pressafrik",
         "name": "Pressafrik (Sénégal)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_ghanaweb",
@@ -665,14 +650,14 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_vanguard",
-        "name": "Vanguard (Nigeria)",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_camer",
@@ -722,7 +707,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -735,9 +720,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -798,6 +788,16 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,51 +863,12 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 59,
+    "bfAes": 54,
     "alerts": 9,
     "criticalAlerts": 6,
     "sourcesDistinct": 66
   },
   "topDevelopments": [
-    {
-      "title": "Le président Ghazouani va prendre part au 69ème sommet de la CEDEAO à Freetown",
-      "link": "https://fr.saharamedias.net/le-president-ghazouani-va-prendre-part-au-69eme-sommet-de-la-cedeao-a-freetown/",
-      "pubDate": "2026-07-18T00:30:08.000Z",
-      "description": "Le président mauritanien Mohamed Ould Cheikh El Ghazouani se rendra demain samedi 18 juillet à Freetown, la capitale de la Sierra Leone, pour participer aux travaux du 69e sommet ordinaire des chefs d'État et de gouvernement de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO), a annoncé la présidence mauritanienne. Ce sommet se tient alors que l’organisation régionale traverse une période délicate, suite au retrait du Mali, du Niger et du Burkina Faso, qui ont choisi de renforcer leur coopération au sein de l’Alliance des États du Sahel, ce qui place l’avenir des relations entre la CEDEAO et ces pays au premier plan des dossiers soumis aux chefs d’État et de gouvernement. Les participants devraient débattre des moyens de renforcer le rôle de la CEDEAO et de rétablir sa présence régionale, ainsi que des défis sécuritaires et politiques auxquels l’Afrique de l’Ouest est confrontée, au premier rang desquels figurent la prolifération des groupes armés et la criminalité organisée transfrontalière. Les chefs d’État des pays membres examineront également les mécanismes permettant de préserver les liens économiques et la circulation des personnes avec les trois États qui se sont retirés, ainsi que les questions relatives à la réforme des institutions de la CEDEAO et à la mise en œuvre de sa force de réserve, qu’elle souhaite transformer en un outil d’intervention rapide face aux crises sécuritaires et politiques.",
-      "_source": "Sahara Médias",
-      "_sourceId": "rss_sahara_med",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 152,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
     {
       "title": "Bassirou Diomaye Faye à Freetown pour le Sommet sur l’avenir de l’intégration régionale",
       "link": "https://lesoleil.sn/actualites/politique/bassirou-diomaye-faye-a-freetown-pour-le-sommet-sur-lavenir-de-lintegration-regionale/",
@@ -979,39 +940,6 @@
       "_desk": "A1"
     },
     {
-      "title": "Académie de Police: 180 nouveaux cades prêts à servir la nation",
-      "link": "https://netafrique.net/academie-de-police-180-nouveaux-cades-prets-a-servir-la-nation/",
-      "pubDate": "2026-07-17T22:43:31.000Z",
-      "description": "‎ ‎Le camarade Premier ministre, Chef du Gouvernement, Rimtalba Jean Emmanuel Ouédraogo, a patronné, ce vendredi 17 juillet 2026 à Pabré, la cérémonie officielle de sortie de la 10ᵉ promotion des élèves commissaires et officiers formés à l’Académie de Police. Après deux années de formation intensive, 180 nouveaux cadres supérieurs de police sont désormais prêts à servir leurs pays respectifs. ‎ ‎Ils étaient 185 à franchir les portes de l'Academie de Police à la rentrée 2024. Au terme de la formation, 180 élèves, soit 62 commissaires et 118 officiers, ont été déclarés aptes à servir. Parmi les lauréats figurent 80 stagiaires tchadiens, dont 32 commissaires et 48 officiers. Leur présence témoigne de l’excellence des relations entre le Burkina Faso et la République du Tchad, tout en traduisant la reconnaissance du savoir-faire et du prestige de l’Académie de Police dans le domaine de la formation des forces de sécurité. ‎ ‎Les majors de la promotion se sont distingués avec des moyennes de 16,66 sur 20 pour le cycle des commissaires et de 16,41 sur 20 pour celui des officiers, illustrant la rigueur et la qualité de la formation dispensée à l’Académie de Police de Pabré. ‎ ‎Baptisée « Diir-na-Nou », une expression en langue lobiri signifiant « patriotisme », la 10ᵉ promotion de l'Académie de Police a retenu pour parrain le contrôleur général de police à la retraite, le camarade Paul Sondo. ‎ ‎Dans son allocution, le ministre de la Sécurité, le commissaire divisionnaire de police Mahamadou Sana, a souligné que la sortie de cette 10ᵉ promotion traduit la volonté constante de l’État de disposer d’une institution professionnelle, capable de former les compétences nécessaires pour faire face à l’évolution des menaces sécuritaires. ‎ ‎Il a salué la qualité de la formation assurée par l’Académie, l’engagement des encadreurs ainsi que le renforcement de la coopération sécuritaire avec les pays de la Confédération des États du Sahel (AES) et la République du Tchad. ‎ ‎Rappelant le combat décisif engagé par le Burkina Faso pour la défense de sa souveraineté et la sécurité des populations, le camarade ministre Mahamadou Sana a invité les nouveaux commissaires et officiers à exercer leurs fonctions avec discipline, loyauté, professionnalisme, intégrité et un patriotisme sans faille. ‎ ‎Afin de renforcer leur conscience patriotique et leur engagement au service du peuple et de l’État, le Chef du Gouvernement a remis aux lauréats des exemplaires du Manifeste de la Révolution progressiste populaire. Il les a exhortés à faire du patriotisme le fondement de leur engagement professionnel. ‎ ‎« Nous engageons chacun à être à la hauteur du sens du devoir envers l’État, à incarner les valeurs de probité et d’intégrité, et à être des hommes et des femmes d’action et d’audace. C’est ce dont nous avons le plus besoin aujourd’hui pour poursuivre la reconquête et la pacification de notre territoire », a déclaré le camarade Rimtalba Jean Emmanuel Ouédraogo. ‎ ‎S’exprimant au nom des lauréats, la commissaire Ramatou Konaté a réaffirmé leur détermination à servir avec loyauté, courage et intégrité. Elle a assuré que les nouveaux cadres mettront leur savoir-faire au service de la protection des populations, de la défense de la souveraineté nationale et de la reconquête du territoire. ‎ ‎𝐃𝐂𝐑𝐏/𝐏𝐫𝐢𝐦𝐚𝐭𝐮𝐫𝐞 L’article Académie de Police: 180 nouveaux cades prêts à servir la nation est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
       "title": "La nationalisation qui vient",
       "link": "https://legrandcontinent.eu/fr/2026/07/18/la-nationalisation-qui-vient/",
       "pubDate": "2026-07-18T10:03:36.000Z",
@@ -1046,10 +974,42 @@
       "_desk": "A6"
     },
     {
-      "title": "Burkina : Le CNEI-BF tient son premier congrès extraordinaire de l’année 2026",
-      "link": "https://www.minute.bf/burkina-le-cnei-bf-tient-son-premier-congres-extraordinaire-de-lannee-2026/",
-      "pubDate": "2026-07-18T15:22:22.000Z",
-      "description": "Le Conseil National de l'Économie Informelle du Burkina Faso (CNEI-BF) a tenu son premier congrès extraordinaire de l'année 2026, ce samedi 18 juillet 2026 à Ouagadougou. Au total, 83 participants, résidents et non-résidents, prennent part à cette séance plénière. L'objectif général de cette session est de renforcer la gouvernance institutionnelle du CNEI-BF à travers la relecture et l'adoption de ses textes statutaires, en conformité avec la loi n°11-2025/ALT du 17 juillet 2025 portant libertés d'association au Burkina Faso. Ce congrès, qui réunit les différents acteurs de l'organisation, doit permettre, selon le président du CNEI-BF, Salifou Nikiema, d'examiner, d'améliorer et d'adopter les textes statutaires afin de les aligner sur les orientations politiques des plus hautes autorités du pays. « Notre ambition n’est pas seulement de mettre nos textes en conformité avec la loi. Notre ambition est de faire du CNEI-BF une organisation de référence, capable de défendre efficacement les intérêts des acteurs de l’économie informelle, de promouvoir leur professionnalisation et de contribuer activement à la réalisation des objectifs du Plan de R.E.L.A.N.C.E à l’horizon 2030 », a-t-il indiqué. Il a également précisé que les travaux du congrès porteront sur l'examen du Plan stratégique de développement (PSD) du CNEI-BF. A en croire Salifou Nikièma, cette session permettra également aux participants d'apprécier le bilan du renouvellement des bureaux régionaux, de valider la carte des membres du CNEI-BF et de renforcer leurs capacités à travers une communication sur le leadership et le management des organisations associatives. Une vue des participants « Le succès de ce congrès dépendra de la qualité de nos contributions, de notre sens de l’écoute et de notre capacité à privilégier l’intérêt général. Je vous invite donc à participer activement aux débats, à faire preuve de responsabilité et à rechercher des consensus durables pour l’avenir de notre organisation », a-t-il lancé en guise d'appel aux participants. Salifou Nikiema a par ailleurs invité les associations qui n’ont pas encore pu tenir leurs assemblées générales à les organiser dans les délais impartis. Le directeur de l'économie informelle au Ministère en charge du sport, de la Jeunesse et de l’emploi, Moussa Zoundi Pour sa part, le directeur de l’économie informelle au Ministère des Sports, de la Jeunesse et de l’Emploi, Moussa Zoundi, a exhorté les responsables du CNEI-BF à œuvrer pour une meilleure prise en compte de l’inclusion ainsi que des différents aspects liés aux élections démocratiques au sein des instances de l’organisation. Saluant cette initiative, il a rassuré que le Ministère en charge de l’emploi reste disponible à accompagner techniquement le CNEI-BF afin de faciliter la compréhension des nouveaux textes. Les participants ont posé pour la postérité Au terme de ces assises, le CNEI-BF espère poser les bases d’une organisation plus forte, plus inclusive et mieux armée pour défendre durablement la voix des acteurs de l’économie informelle. Sidziguin Irène Corinne SAWADOGO (Stagiaire) Minute.bf",
+      "title": "Le MPY dénonce les ingérences extérieures tout en reafirmant son engagement en faveur de la RPP",
+      "link": "https://www.aib.media/le-mpy-denonce-les-ingerences-exterieures-tout-en-reafirmant-son-engagement-en-faveur-de-la-rpp/",
+      "pubDate": "2026-07-18T19:05:26.000Z",
+      "description": "Le MPY dénonce les ingérences extérieures tout en reafirmant son engagement en faveur de la RPP Ouahigouya, 18 juil. 2026 ( AIB)- Le Mouvement les Patriotes de Yaadga (MPY) a organisé le vendredi 17 juillet une conférence de presse pour dénoncer les ingérences extérieures dans les affaires du pays des hommes intègres et confirmer son engagement dans la conduite de la Révolution progressiste populaire (RPP), a constaté l'AIB sur place. Cette conférence initiée par le MPY et élargie aux membres et sympathisants du mouvement a pour objectif, à en croire le porte parole du mouvement, Amidou Ganamé, de dénoncer vigoureusement d'une part les ingérences dans les affaires intérieures du Burkina, réaffirmer l'engagement du mouvement à la RPP et d'autres part, de marquer leur solidarité aux peuples de l'AES et aux forces combattantes. Pour le MPY, » l'histoire du Burkina Faso ne s'écrit plus dans les bureaux des puissances étrangères. Notre souveraineté n'est ni négociable, ni transférable. Elle appartient exclusivement à notre peuple ». Les conférenciers n'ont pas manquer d'indiquer dans leur déclaration liminaire qu'en ce jour où l'histoire observe chacun de nos actes, le MPY estime que certaines circonstances imposent le silence pendant que d'autres font de la parole, un devoir. » « Notre voix n'est pas celle d'un individu, d'un parti politique ou d'une organisation isolée mais l'expression d'une conscience patriotique, celle d'un peuple qui refuse désormais que son destin soit interprété, orienté ou décidé par d'autres » ont soutenu les conférenciers. Intervenant au cours des échanges le membre fondateur du mouvement, par ailleurs député à l'ALP Issouf Ouédraogo « kitoko » a informé de la tenue de plusieurs activités visant l'épanouissement de la population de la région de Yaadga pour une réussite totale de la vision du chef de l'État, le capitaine Ibrahim Traoré. En rappel le MPY dans le cadre de ses activités a organisé entre autres des conférences de presse, a fait des publications, co-organisé des meetings, participé à des reboisements et a organisé des collectes de fonds pour soutenir des activités patriotiques. Agence d'information du Burkina PN/AS/ATA",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": null,
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": ".",
+      "_desk": "A1"
+    },
+    {
+      "title": "Cohésion sociale et paix : La Communauté Internationale des Soufis tient son premier congrès extraordinaire",
+      "link": "https://www.minute.bf/cohesion-sociale-et-paix-la-communaute-internationale-des-soufis-tient-son-premier-congres-extraordinaire/",
+      "pubDate": "2026-07-18T17:49:39.000Z",
+      "description": "La Communauté Internationale des Soufis (CIS) a ouvert son premier congrès extraordinaire ce samedi 18 juillet 2026 à Ouagadougou. Placée sous le haut patronage du ministre d'État, ministre de l'Administration territoriale, de la Décentralisation et de la Mobilité, Emile Zerbo, cette rencontre est organisée sous le signe de la cohésion sociale et de la paix. La Communauté Internationale des Soufis (CIS) s'est réunie ce samedi pour un congrès internationale afin de réfléchir et d'échanger sur la contribution de la communauté soufie au renforcement de la paix et du vivre-ensemble au Burkina Faso. Représentant le ministre d'État, le Directeur de cabinet du ministère de l'Administration territoriale, de la Décentralisation et de la Mobilité, Bertrand Toé, a salué l'initiative. Selon lui, la tenue de ce congrès traduit un acte de responsabilité et d'engagement en faveur des lois de la République ainsi que des valeurs universelles de paix, de solidarité et de fraternité. Une vue des participants Il a félicité les responsables de la CIS pour leur vision et leur détermination à contribuer, à travers cette rencontre, à l'épanouissement de la communauté et à la réflexion sur les défis majeurs auxquels le Burkina Faso est confronté. Bertrand Toé a également souligné que, dans le contexte actuel marqué par la lutte pour la reconquête du territoire national et la restauration de la souveraineté, l'engagement des communautés religieuses est indispensable. « Les valeurs de paix, de solidarité, d'équité et de vivre-ensemble promues par les communautés religieuses contribuent au renforcement de la cohésion sociale et de la résilience nationale », a-t-il affirmé. Prenant la parole, le guide spirituel de la Communauté Internationale des Soufis, Cheick Soufis Moaze, a rappelé que le soufisme est avant tout une école de vie fondée sur « la purification de l'âme, l'amour du prochain, le respect de l'autre, la compassion et la tolérance ». Il a ajouté que, depuis des années, cette voie spirituelle constitue un rempart contre l'extrémisme et un pont entre les communautés. Une vue des officiels Évoquant le contexte sécuritaire du Burkina Faso, Cheick Soufis Moaze a appelé les fidèles à multiplier les prières pour les Forces de défense et de sécurité (FDS), les Volontaires pour la défense de la patrie (VDP) ainsi que pour toutes les populations affectées par l'insécurité. Il a également exhorté les guides religieux à diffuser des messages d'apaisement dans les familles, les quartiers et les lieux de culte. Parrain de la cérémonie, Samuel Kalkoumdo, ministre conseiller spécial du Président du Faso, a salué l'initiative de la Communauté Internationale des Soufis. Il a rappelé que le Chef de l'État a toujours appelé les différentes confessions religieuses à être des vecteurs de paix, de cohésion sociale et d'unité nationale. Le parrain s'est réjoui de la forte mobilisation des différentes composantes de la communauté musulmane ainsi que de la présence de représentants d'autres confessions religieuses. Selon lui, cette diversité témoigne de la volonté commune des Burkinabè de promouvoir le dialogue, la tolérance, la solidarité et le vivre-ensemble. Le parrain de la cérémonie, Samuel Kalkoumdo, ministre conseiller spécial du Président du Faso « Nous n'avons qu'une seule nation. Au-delà de nos différences, c'est l'amour de la patrie qui doit nous rassembler », a-t-il déclaré, se disant satisfait des messages de paix et de fraternité portés par les participants. Pendant deux jours, les congressistes prendront part à des ateliers, des communications et des concertations destinés à renforcer l'organisation de la Communauté Internationale des Soufis et à formuler des recommandations en faveur de la paix, de la cohésion sociale et du développement du Burkina Faso Sakinatou ZOUNDI Minute.bf",
       "_source": "Minute BF",
       "_sourceId": "rss_minute_bf",
       "_sourceCat": "bf_local",
@@ -1073,21 +1033,52 @@
       "_rating": "F2",
       "_score": 115,
       "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina : Plus de 3 200 décès annuels liés au tabac selon ACONTA",
+      "link": "https://www.aib.media/burkina-plus-de-3-200-deces-annuels-lies-au-tabac-selon-aconta/",
+      "pubDate": "2026-07-18T17:10:45.000Z",
+      "description": "BURKINA-TABAC-SENSIBILISATION Burkina : Plus de 3 200 décès annuels liés au tabac selon ACONTA Ouagadougou, 18 juil. 2026 (AIB) – Chaque année, la consommation des produits du tabac provoque plus de 3 200 décès au Burkina Faso et engendre un coût économique de plus de 29 milliards de FCFA pour l'Etat, a indiqué vendredi le coordonnateur de l'Association Afrique contre le tabac (ACONTA), Adama Zango, à l'ouverture d'un atelier de sensibilisation des acteurs de la société civile sur la lutte antitabac. S'appuyant sur les données de Tobacco Atlas, M. Zango a expliqué que ces chiffres illustrent l'ampleur des conséquences sanitaires et économiques du tabagisme au Burkina Faso. Selon lui, les dépenses consacrées à la prise en charge des maladies liées au tabac constituent une lourde charge pour les finances publiques. « Le tabagisme est à l'origine de plus de 3 200 décès au Burkina Faso et l'État dépense plus de 29 milliards de FCFA pour faire face à ses conséquences. C'est pourquoi nous avons jugé nécessaire de renforcer les capacités des acteurs de la société civile afin qu'ils intensifient la sensibilisation auprès des différentes couches socioprofessionnelles », a-t-il déclaré. Le coordonnateur d'ACONTA a salué les progrès réalisés par le Burkina Faso dans la lutte antitabac, estimant que le pays figure parmi les plus avancés en Afrique. Il a invité les organisations de la société civile à préserver ces acquis en soutenant l'adoption des textes réglementaires en cours d'examen, notamment le projet de loi relatif à la lutte contre le tabac, le décret sur la prévention de l'ingérence de l'industrie du tabac et l'arrêté instituant le paquet neutre des produits du tabac. Selon lui, ces textes contribueront à réduire la consommation du tabac, à limiter l'influence de l'industrie du tabac sur les politiques publiques et à mieux protéger les populations, particulièrement les jeunes, principales cibles des fabricants. M. Zango a également alerté sur la prolifération de nouveaux produits du tabac, qu'il considère comme une menace croissante pour la jeunesse. Il a souhaité que le Burkina Faso interdise ces produits, à l'instar du Mali au sein de la Confédération des Etats du Sahel (AES). Le chargé à l'organisation de la Ligue des consommateurs du Burkina Faso (LCB), Assimiyou Compaoré, a réaffirmé l'engagement de son organisation à accompagner les actions de sensibilisation et de plaidoyer contre le tabagisme. Il a également rappelé que les effets du tabac touchent aussi bien les fumeurs que les personnes exposées à la fumée, notamment les enfants et les familles. Agence d’information du Burkina NO/yos",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
       "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Olympiades nationales « Youki’F Math-PC » : Le candidat de Bobo-Dioulasso décroche la première place nationale",
-      "link": "https://www.minute.bf/olympiades-nationales-youkif-math-pc-le-candidat-de-bobo-dioulasso-decroche-la-premiere-place-nationale/",
-      "pubDate": "2026-07-18T15:04:03.000Z",
-      "description": "La première édition de la Nuit des lauréats des Olympiades nationales de mathématiques et de sciences physiques, dénommées « Youki'F Math-PC », s'est tenue le vendredi 17 juillet 2026 à Ouagadougou. Placée sous le thème « Préparer les ingénieurs de demain », cette cérémonie a consacré Wozouhba Fahd Mathis Billa, du Lycée scientifique national de Bobo-Dioulasso, premier au classement national. L'initiative est soutenue par la Brasserie SODIBO/Brakina et bénéficie de l'accompagnement du ministère de l'Enseignement secondaire, de la Formation professionnelle et technique. Après plusieurs mois de compétition ayant mobilisé les meilleurs élèves de terminale des 13 régions du Burkina Faso, la région du Guiriko s'est hissée à la première place du classement national. Elle est suivie des Kuilsé, tandis que les Bankui viennent en troisième position. Pour le Coordonnateur technique de Youki'F, Claude Aimé Tassembédo, ces olympiades sont nées d'une conviction forte. « Aucun pays ne peut bâtir sa souveraineté économique et technologique sans investir durablement dans l'éducation et les talents de sa jeunesse » a t-il déclaré. Claude Aimé Tassembédo, Coordonnateur technique de Youki'F, Selon le coordinateur technique de Youki'F, le choix des mathématiques et des sciences physiques répond à cette ambition, ces disciplines constituant le socle des métiers de l'ingénierie, de l'architecture, des technologies numériques, de l'intelligence artificielle et de l'innovation. Il a rappelé que toutes les étapes de cette première édition, de la campagne de sensibilisation aux phases régionales puis nationales, ont été réalisées grâce à l'engagement des ministères, des associations initiatrices et des partenaires. Une attestation de reconnaissance a été remise au Directeur général de la SODIBO/Brakina Pour les éditions à venir, a-t-il dit, l'ambition est de faire des Olympiades « Youki'F Math-PC » une véritable institution nationale, avec la perspective d'une ouverture à l'espace de la Confédération des États du Sahel (AES). « Nous célébrons ce soir l'espérance d'un Burkina Faso plus compétent, plus innovant et plus souverain » , a déclaré M. Tassembédo. Faire de la formation de la jeunesse un levier de développement … Présidant la cérémonie, le ministre de l'Enseignement secondaire, de la Formation professionnelle et technique, Pr Moumouni Zoungrana, a salué une initiative qui contribue à promouvoir les filières scientifiques. « On ne peut pas développer un pays sans ingénieurs. Et les mathématiques ainsi que les sciences physiques constituent la matrice qui forme ces ingénieurs », a-t-il affirmé. Le ministre de l'Enseignement secondaire, de la Formation professionnelle et technique, Pr Moumouni Zoungrana, a salué l'initiative S'adressant aux lauréats, le ministre de l'enseignement secondaire les a invités à mesurer la responsabilité qui accompagne leur distinction. Selon lui, en tant que meilleurs élèves de leurs régions respectives, ils ont désormais le devoir de poursuivre l'excellence, de devenir des ingénieurs, des chercheurs et des innovateurs capables de contribuer au développement du Burkina Faso. Le directeur général de SODIBO/Brakina, Gaetan Van Belle, Sponsor officiel de la compétition, a, pour sa part, réaffirmé l'engagement de son entreprise en faveur de l'éducation et de l'excellence scolaire. « Brakina a apporté sa contribution à l'une des initiatives majeures portées par le camarade Président du Faso, faire de l'éducation et de la formation de la jeunesse un levier essentiel au développement de notre pays » a t-il déclaré. Le directeur général de SODIBO/Brakina, Gaetan Van Belle Il a indiqué que ce partenariat s'inscrit dans la volonté de sa société d'accompagner la formation d'une jeunesse compétente, convaincu que l'avenir du Burkina Faso se construit dans les salles de classe, les laboratoires, les ateliers et les entreprises. Représentant le parrain, Amadou Dicko, ministre délégué du ministre des ressources animales , Issa Ouédraogo, chargé de mission au ministère des Ressources animales et halieutiques, a souligné que les mathématiques et les sciences physiques sont indispensables à la modernisation de secteurs stratégiques tels que l'agriculture, l'hydraulique, l'élevage et les nouvelles technologies. Il a exhorté les lauréats à devenir des bâtisseurs, capables de proposer des solutions innovantes aux défis du pays. Le premier national, Wozouhba Fahd Mathis Billa, élève au Lycée scientifique national de Bobo-Dioulasso Sacré premier national, Wozouhba Fahd Mathis Billa, élève au Lycée scientifique national de Bobo-Dioulasso, a exprimé sa joie tout en reconnaissant que cette distinction représente avant tout une responsabilité. Il a indiqué vouloir poursuivre des études d'ingénierie avant de mettre ses compétences au service du Burkina Faso, notamment dans le domaine des nouvelles technologies. La cérémonie a été marquée par la remise de trophées, d'attestations et de récompenses financières aux lauréats ainsi qu'aux partenaires de l'événement. Le premier prix est doté de 2 500 000 FCFA, dont 1 000 000 FCFA en espèces, le deuxième de 2 250 000 FCFA, dont 750 000 FCFA en espèces, et le troisième de 2 000 000 FCFA, dont 500 000 FCFA en espèces. Les trois premiers ont également bénéficié chacun d'une bourse d'études de trois ans d'une valeur de 1 500 000 FCFA. Les lauréats ont posé avec les officiels Au niveau régional, les trois meilleurs candidats de chacune des treize régions ont reçu des récompenses financières allant de 50 000 FCFA à 100 000FCFA. Des prix spéciaux ont également été décernés aux candidats classés 4ᵉ à 8ᵉ, d'une valeur de 1 000 000 FCFA ainsi qu'à la première fille au classement national. Sakinatou ZOUNDI Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Burkina/Mines : La chaîne d'approvisionnement durable comme levier de performance",
+      "link": "https://lefaso.net/spip.php?article147950",
+      "pubDate": "2026-07-18T17:06:05.000Z",
+      "description": "Des spécialistes de la Responsabilité sociétale des entreprises (RSE), du développement durable et de la gouvernance des industries extractives ont animé, ce vendredi 17 juillet 2026 à Ouagadougou, une conférence sur le thème « RSE et Supply Chain : allier performance, compétitivité et impact durable ». Organisée par les étudiants de la 5ᵉ promotion en management de la supply chain et achats de l'École burkinabè des affaires (EBA), la rencontre a permis de démontrer que la performance économique des entreprises est désormais indissociable des enjeux environnementaux, sociaux et de gouvernance. Au cœur des échanges, les intervenants ont mis en évidence le rôle stratégique de la chaîne d'approvisionnement dans la mise en œuvre des politiques de Responsabilité sociétale des entreprises (RSE). Pour eux, la supply chain ne se limite plus à une fonction logistique, mais constitue désormais un levier de compétitivité, de gestion des risques et de création de valeur durable. Premier conférencier, le chef de la cellule RSE et développement durable de l'Institut international d'ingénierie de l'eau et de l'environnement (2iE), Facia Giraude Adeossi a présenté l'expérience de son institution, forte de quinze années d'engagement en faveur de la durabilité. Il a expliqué que les domaines de formation de 2iE, notamment l'eau et l'assainissement, les énergies renouvelables, le génie civil ou encore les aménagements éco-agricoles, sont naturellement alignés sur les Objectifs de développement durable (ODD), justifiant ainsi l'intégration de la RSE dans toute la stratégie de l'établissement. Pour Facia Giraude Adeossi, une démarche RSE structurée constitue un levier de compétitivité, de crédibilité et d'attractivité pour les organisations. « Si les métiers fondamentaux relèvent déjà du développement durable, il était naturel d'étendre cette vision à toute la stratégie de l'institution afin d'être un centre d'excellence socialement responsable contribuant activement au développement durable des territoires africains », a-t-il déclaré. Selon lui, la démarche RSE de 2iE a débuté en 2010 avec un diagnostic destiné à évaluer les pratiques de l'institution, les attentes des parties prenantes et son empreinte carbone. Cette première étape a permis d'élaborer une stratégie progressivement renforcée par une politique RSE formalisée, la publication de rapports de durabilité et l'adoption de référentiels internationaux. Selon Kalid Kéré, la chaîne d'approvisionnement est aujourd'hui un levier stratégique de performance, de gestion des risques et de résilience des entreprises. Facia Giraude Adeossi a insisté sur le fait qu'une politique RSE efficace ne peut reposer uniquement sur le bon sens ou la bonne volonté des dirigeants. « On ne peut pas faire de la RSE sans procéder à un diagnostic. Il faut analyser les pratiques, mesurer leur conformité aux exigences légales et internationales et prendre en compte les attentes des employés, des étudiants, des fournisseurs et des partenaires financiers », a-t-il expliqué. Pour structurer cette démarche, il a recommandé de s'appuyer sur des outils de référence tels que l'ISO 26000, qui définit les lignes directrices en matière de responsabilité sociétale, le Global Reporting Initiative (GRI) pour le reporting de durabilité, le Pacte mondial des Nations-unies, qui encourage les entreprises à respecter dix principes liés aux droits humains, au travail, à l'environnement et à la lutte contre la corruption, ainsi qu'EcoVadis, plateforme internationale d'évaluation de la performance RSE des organisations. Pour Facia Giraude Adeossi, ces référentiels constituent aujourd'hui un véritable avantage concurrentiel. Ils renforcent la réputation des entreprises, facilitent l'accès aux financements et répondent aux exigences croissantes des marchés internationaux en matière de durabilité. Le président du comité d'organisation, Soré Boureima, a rappelé que cette conférence vise à rapprocher les étudiants des réalités du monde professionnel. Réduire les risques et améliorer les performances Prenant la parole à son tour, le spécialiste RSE-ESG et gouvernance des industries extractives, Kalid Kéré, a démontré que la chaîne d'approvisionnement représente aujourd'hui l'un des principaux leviers de transformation des entreprises, notamment dans le secteur minier. « Lorsqu'on parle de RSE sans toucher à la chaîne d'approvisionnement, on passe à côté de l'un des domaines les plus stratégiques de l'entreprise », a-t-il soutenu. À travers plusieurs exemples tirés de son expérience à la mine d'Essakane, il a expliqué que l'intégration des critères environnementaux, sociaux et de gouvernance (ESG) dans les politiques d'achats permet de réduire les risques, d'améliorer les performances opérationnelles et de renforcer la résilience des entreprises. Il a notamment évoqué les stratégies de décarbonation, l'utilisation des énergies renouvelables, la réduction des déchets, la protection des droits humains dans la chaîne d'approvisionnement, la santé et la sécurité au travail ainsi que les achats responsables. Organisée par les étudiants de la 5ᵉ promotion en management de la supply chain et achats de l'École burkinabè des affaires (EBA), la conférence a réuni étudiants, professionnels et experts autour des enjeux de la RSE. Illustrant son propos, il a cité le cas d'un fournisseur ayant réduit les emballages de ses produits à la demande d'une entreprise minière. Cette initiative a permis simultanément de diminuer les coûts, de produire moins de déchets et de limiter l'empreinte environnementale. Kalid Kéré a également insisté sur l'importance du contenu local dans le développement des industries extractives. Selon lui, accompagner les fournisseurs nationaux afin qu'ils répondent aux standards des grandes entreprises contribue à sécuriser les approvisionnements, tout en renforçant la résilience économique des territoires. « Si nous n'avions pas développé une politique d'achats responsable et de promotion du contenu local autour de la mine, il serait aujourd'hui beaucoup plus difficile de maintenir nos activités », a-t-il affirmé. Pour le président du comité d'organisation, Boureima Soré, étudiant de la cinquième promotion en management de la supply chain et achats de l'EBA, cette conférence visait à renforcer les connaissances des étudiants tout en sensibilisant les entreprises aux enjeux actuels de la RSE. « Aujourd'hui, l'entreprise a intérêt, mais surtout le devoir de mettre l'homme au cœur de ses activités. Lorsqu'on gère correctement son personnel et ses parties prenantes, la performance suit naturellement », a-t-il déclaré. Il a estimé que cette rencontre a permis aux participants de mieux comprendre les enjeux de la responsabilité sociétale grâce aux expériences concrètes partagées par les experts. Il a enfin invité les entreprises burkinabè à intégrer pleinement la RSE dans leurs stratégies afin de répondre aux nouvelles exigences des marchés et d'améliorer durablement leur compétitivité. Anita Mireille Zongo Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
+      "_sourceVerified": true,
       "_tags": [
         "economic",
         "diplomatic",
@@ -1100,9 +1091,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
       "_theme": "E",
@@ -1111,12 +1102,12 @@
       "_desk": "A1"
     },
     {
-      "title": "Formation militaire patriotique: une cuvée d’élites pour la Présidence du Faso",
-      "link": "https://www.wakatsera.com/formation-militaire-patriotique-une-cuvee-delites-pour-la-presidence-du-faso/",
-      "pubDate": "2026-07-18T12:57:33.000Z",
-      "description": "‎ (Ouagadougou, le 18 juillet 2026). Le Ministre Directeur de cabinet du Pr é sident du Faso, Camarade Capitaine Martha C é leste Anderson Dekomwin MEDAH, a pr é sid é , hier vendredi apr è s-midi au camp Naaba-Koom 2, la sortie officielle de la seconde cohorte d'une formation militaire des cadres de la Présidence du Faso et des services rattachés. Cette immersion de trois semaines, fait d'eux, désormais, des Volontaires pour la Défense de la Patrie (VDP). ‎Le Ministre Directeur de Cabinet du Président du Faso a salué la résilience et le courage des récipiendaires de cette promotion baptisée « Lawili » qui a pour devise « servir avec honneur et loyauté, s'engager avec courage au service du Peuple ». ‎« La beauté d'un tapis réside dans la diversité de ses couleurs (…) Si nous voulons tisser un très beau tapis, il appartiendra à chacun d'entre nous de faire en sorte de rayonner de ses plus belles couleurs afin que le tapis que nous avons constitué à la fin, soit le plus beau. C'est une mission commune et cette diversité doit faire notre force », a-t-il déclaré tout en exhortant ses collaborateurs VDP à demeurer des modèles de civisme. ‎Le délégué de la promotion, le Camarade Ministre Conseiller spécial du Président du Faso, Gaëtan OUÉDRAOGO, a témoigné de la métamorphose subie durant ces semaines d'apprentissage intensif : « À la vérité, cette formation n'a pas été une sinécure. Elle a exigé de nous des sacrifices, de la sueur, de la bave, de la morve, des larmes et parfois du sang. Nous avons appris à repousser nos limites physiques et mentales, à dominer la fatigue, à dompter la douleur, à nous accommoder des privations, à faire de la discipline notre boussole », a-t-il témoigné. Le directeur de stage, Capitaine Inoussa Tarnagda ‎Selon le Directeur de stage, Camarade Capitaine Inoussa TARNAGDA, en plus des épreuves physiques d'endurance, « les stagiaires ont été confrontés à la stricte discipline militaire, avec l'apprentissage intensif du maniement des armes et du tir de combat, ainsi qu'une visite au Centre national d'entraînement Commando de Pô, avec l'ascension du pic Nahouri pour tester les limites de leur endurance ». ‎Une parade finale magistrale ‎La cérémonie s’est clôturée en apothéose par une parade militaire. Au rythme de la fanfare nationale, les sortants ont défilé au pas cadencés. Regards fiers, ils ont salué les autorités présentes sous les applaudissements nourris des convives. Le capitaine Martha Céleste Anderson Dekomwin Médah ‎Ces nouveaux soldats de la paix et du développement, désormais prêts à servir la Nation avec discipline et dévouement, ont été encouragés à concilier la discipline militaire, les connaissances et valeurs acquises avec celles professionnelles, afin d'avoir un rythme en phase avec la dynamique révolutionnaire de notre Patrie. ‎ Direction de la Communication de la Pr é sidence du Faso L’article Formation militaire patriotique: une cuvée d’élites pour la Présidence du Faso est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
+      "title": "Burkina: l’USFA clôt le Camp vacances Sport, civisme, cuisine et secourisme au profit de 149 enfants de FDS tombées pour la Nation",
+      "link": "https://www.aib.media/burkina-lusfa-clot-le-camp-vacances-sport-civisme-cuisine-et-secourisme-au-profit-de-149-enfants-de-fds-tombees-pour-la-nation/",
+      "pubDate": "2026-07-18T16:52:03.000Z",
+      "description": "BURKINA-USFA-CAMP-VACANCES- ENFANTS-FDS TOMBÉES Burkina: l'USFA clôt le Camp vacances Sport, civisme, cuisine et secourisme au profit de 149 enfants de FDS tombées pour la Nation Ouagadougou, 18 juil. 2026 (AIB) – L'Union sportive des forces armées (USFA) a clôturé, vendredi à Ouagadougou, les activités de la 3ᵉ édition du Camp vacances Sport, civisme, cuisine et secourisme, organisé du 22 juin au 17 juillet 2026 sous le thème : « Par le sport et le civisme : honorer la mémoire et bâtir l'avenir », au profit de 149 enfants des Forces de défense et de sécurité (FDS) tombées sur le champ d'honneur. Pendant près d'un mois, les 149 enfants des FDS tombées pour la Nation ont participé à diverses activités, notamment le football, des exercices physiques, des initiations aux gestes de premiers secours, la pratique d'instruments traditionnels ainsi qu'une initiation à la pâtisserie pour les filles. Des valeurs telles que le civisme, le patriotisme, la discipline, le respect, l'esprit d'équipe, la solidarité et l'amour de la patrie leur ont également été inculquées. Selon le président du comité d'organisation, le commandant Louis Rémis Hien, cette 3ᵉ édition traduit, une fois de plus, la volonté de l'USFA de contribuer à la formation intégrale de la jeunesse en lui inculquant les valeurs de l'athlétisme, de la responsabilité et de l'éducation. Il s'est félicité de l'atteinte des objectifs fixés au départ, tout en reconnaissant que des défis restent à relever. Le commandant Hien a exprimé sa gratitude à la hiérarchie militaire pour son accompagnement, aux partenaires ainsi qu'au parrain pour leur soutien, et aux parents des pensionnaires pour la confiance accordée à cette initiative. La porte-parole des pensionnaires du Camp vacances Sport, civisme, cuisine et secourisme, Ping D'Wendé Anifatou Zongo, a indiqué que ce camp leur a permis de vivre une expérience unique, riche en enseignements, en découvertes et en rencontres. Selon elle, ce camp n'a pas été une simple parenthèse de vacances, mais une véritable école de la vie, où les pensionnaires ont appris la discipline, le respect de l'autre, les gestes de premiers secours et, surtout, l'amour de la patrie. « À travers les séances sportives, les ateliers éducatifs, les visites, les causeries et les moments de partage, nous avons grandi, mûri et compris l'importance de valeurs fondamentales telles que la solidarité, l'engagement, la responsabilité et le civisme », a-t-elle déclaré. Représentant le chef d'état-major général des armées, le colonel-major Souleymane Traoré a souligné l'intérêt particulier que celui-ci accorde à ces activités, qui visent à offrir aux enfants des FDS ayant consenti le sacrifice suprême pour la patrie des vacances utiles ainsi qu'un cadre sain d'éducation et d'épanouissement. Il a salué le succès de cette 3ᵉ édition, qui a combiné activités sportives, apprentissage civique, discipline et valeurs morales, tout en réaffirmant l'engagement de l'armée, à travers l'USFA, à accompagner le développement intellectuel, physique et moral de ces enfants. « Que cette belle initiative perdure, s'amplifie et se développe afin qu'un plus grand nombre d'enfants en bénéficient à l'avenir », a-t-il souhaité. Car, pour lui, « c'est en investissant dans la jeunesse que nous bâtissons les fondations solides d'une nation forte, résiliente et prospère ». Représentant le parrain Simon Tiemtoré, président de Vista Holding Group, la responsable Communication, Marketing et RSE de Vista Bank, Amsatou Maïga, a réaffirmé l'engagement de son institution en faveur des enfants des FDS tombées sur le champ d'honneur. Elle a rappelé que Vista Bank accompagne cette initiative depuis trois ans. Elle a ajouté que cet accompagnement ne se limite pas aux trois semaines du camp de vacances. Mme Maïga a précisé que ces enfants bénéficieront également d'une prise en charge de leur scolarité et d'un accompagnement de la classe de sixième jusqu'en terminale. Agence d'information du Burkina BAK/yos",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1145,6 +1136,38 @@
     }
   ],
   "alerts": [
+    {
+      "title": "Cuban Ambassador calls for lifting of energy blockade imposed by the U.S.",
+      "link": "https://www.thehindu.com/news/international/cuban-ambassador-calls-for-lifting-of-energy-blockade-imposed-by-the-us/article71238971.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-07-18T17:01:23.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "What to expect after the US reimposes naval blockade on Iran’s ports?",
+      "link": "https://www.aljazeera.com/economy/2026/7/18/what-to-expect-after-the-us-reimposes-naval-blockade-on-irans-ports?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-07-18T16:47:14.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
     {
       "title": "Israeli army kills 8 Palestinians, expands occupied area in Gaza despite ceasefire",
       "link": "https://www.aa.com.tr/en/middle-east/israeli-army-kills-8-palestinians-expands-occupied-area-in-gaza-despite-ceasefire/4002387",
@@ -1256,80 +1279,48 @@
           "keyword": "disaster"
         }
       ]
-    },
-    {
-      "title": "Génocide des Tutsis au Rwanda: Eugène Rwamucyo condamné en appel à 27 ans de réclusion criminelle",
-      "link": "https://www.rfi.fr/fr/afrique/20260718-g%C3%A9nocide-des-tutsis-au-rwanda-eug%C3%A8ne-rwamucyo-condamn%C3%A9-en-appel-%C3%A0-27-ans-de-r%C3%A9clusion-criminelle",
-      "source": "RFI Afrique",
-      "date": "2026-07-18T02:27:49.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "Le président Ghazouani va prendre part au 69ème sommet de la CEDEAO à Freetown",
-      "link": "https://fr.saharamedias.net/le-president-ghazouani-va-prendre-part-au-69eme-sommet-de-la-cedeao-a-freetown/",
-      "source": "Sahara Médias",
-      "date": "2026-07-18T00:30:08.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": true,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      169
+      200
     ],
     [
       "occident_fr",
-      133
-    ],
-    [
-      "autre",
-      105
-    ],
-    [
-      "occident_us",
-      104
+      125
     ],
     [
       "golfe_mo",
-      91
+      108
+    ],
+    [
+      "autre",
+      92
+    ],
+    [
+      "occident_us",
+      89
     ],
     [
       "russie",
-      52
-    ],
-    [
-      "bf_local",
-      43
+      55
     ],
     [
       "turquie",
       39
     ],
     [
+      "bf_local",
+      36
+    ],
+    [
       "chine",
-      32
+      30
     ],
     [
       "sahel",
-      32
+      26
     ]
   ],
   "desks": [
@@ -1337,17 +1328,8 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 99,
+      "count": 89,
       "top": [
-        {
-          "title": "Le président Ghazouani va prendre part au 69ème sommet de la CEDEAO à Freetown",
-          "link": "https://fr.saharamedias.net/le-president-ghazouani-va-prendre-part-au-69eme-sommet-de-la-cedeao-a-freetown/",
-          "source": "Sahara Médias",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Bassirou Diomaye Faye à Freetown pour le Sommet sur l’avenir de l’intégration régionale",
           "link": "https://lesoleil.sn/actualites/politique/bassirou-diomaye-faye-a-freetown-pour-le-sommet-sur-lavenir-de-lintegration-regionale/",
@@ -1367,22 +1349,31 @@
           "rating": "F2"
         },
         {
-          "title": "Académie de Police: 180 nouveaux cades prêts à servir la nation",
-          "link": "https://netafrique.net/academie-de-police-180-nouveaux-cades-prets-a-servir-la-nation/",
-          "source": "Net Afrique (BF)",
+          "title": "Le MPY dénonce les ingérences extérieures tout en reafirmant son engagement en faveur de la RPP",
+          "link": "https://www.aib.media/le-mpy-denonce-les-ingerences-exterieures-tout-en-reafirmant-son-engagement-en-faveur-de-la-rpp/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "D",
+          "theme": null,
+          "relevance": ".",
+          "rating": "C2"
+        },
+        {
+          "title": "Cohésion sociale et paix : La Communauté Internationale des Soufis tient son premier congrès extraordinaire",
+          "link": "https://www.minute.bf/cohesion-sociale-et-paix-la-communaute-internationale-des-soufis-tient-son-premier-congres-extraordinaire/",
+          "source": "Minute BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Burkina : Le CNEI-BF tient son premier congrès extraordinaire de l’année 2026",
-          "link": "https://www.minute.bf/burkina-le-cnei-bf-tient-son-premier-congres-extraordinaire-de-lannee-2026/",
-          "source": "Minute BF",
+          "title": "Burkina : Plus de 3 200 décès annuels liés au tabac selon ACONTA",
+          "link": "https://www.aib.media/burkina-plus-de-3-200-deces-annuels-lies-au-tabac-selon-aconta/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "C2"
         }
       ]
     },
@@ -1390,7 +1381,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 49,
+      "count": 52,
       "top": [
         {
           "title": "Interventions régionales : la CEDEAO renforce son dispositif logistique avec deux bases à Lungi",
@@ -1411,13 +1402,22 @@
           "rating": "F2"
         },
         {
-          "title": "Past military feud starved soldiers of air support during operations — Bwala",
-          "link": "https://punchng.com/past-military-feud-starved-soldiers-of-air-support-during-operations-bwala/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
+          "title": "OAIC opposes proposed FRSC bill provision on preaching in commercial vehicles",
+          "link": "https://www.vanguardngr.com/2026/07/oaic-opposes-proposed-frsc-bill-provision-on-preaching-in-commercial-vehicles/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
+        },
+        {
+          "title": "Supreme Court and chieftaincy share common mission of justice and peace – Chief Justice",
+          "link": "https://www.myjoyonline.com/supreme-court-and-chieftaincy-share-common-mission-of-justice-and-peace-chief-justice/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Fair Wages and Salaries Commission appeals to GNAT to suspend planned strike over conditions of service",
@@ -1427,15 +1427,6 @@
           "theme": "L",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "Soldiers kill two suspected terrorists, rescue kidnap victims in Benue",
-          "link": "https://www.premiumtimesng.com/news/top-news/896343-soldiers-kill-two-suspected-terrorists-rescue-kidnap-victims-in-benue.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1443,25 +1434,16 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 22,
+      "count": 19,
       "top": [
         {
-          "title": "Génocide des Tutsis au Rwanda: Eugène Rwamucyo condamné en appel à 27 ans de réclusion criminelle",
-          "link": "https://www.rfi.fr/fr/afrique/20260718-g%C3%A9nocide-des-tutsis-au-rwanda-eug%C3%A8ne-rwamucyo-condamn%C3%A9-en-appel-%C3%A0-27-ans-de-r%C3%A9clusion-criminelle",
-          "source": "RFI Afrique",
+          "title": "Grands Lacs : « Faire disparaître le M23, c'est aussi vouloir faire disparaître le Rwanda » affirme Paul Kagame, qui se dit « prêt » si ce scénario venait à se produire",
+          "link": "https://actualite.cd/2026/07/18/grands-lacs-faire-disparaitre-le-m23-cest-aussi-vouloir-faire-disparaitre-le-rwanda",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "RDC: Tshisekedi change de cap et opte enfin pour un dialogue inclusif",
-          "link": "https://www.rfi.fr/fr/afrique/20260718-rdc-felix-tshisekedi-annonce-l-organisation-d-un-dialogue-national-inclusif",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
           "theme": "P",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "A2"
         },
         {
           "title": "9 civils tués lors d’une attaque dans le groupement de Tongo à Rutshuru",
@@ -1469,6 +1451,15 @@
           "source": "Radio Okapi (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Kinshasa et Kigali vont étudier d’éventuels mécanismes de vérification pour faciliter la mise en œuvre des Accords de Washington",
+          "link": "https://actualite.cd/2026/07/18/kinshasa-et-kigali-vont-etudier-deventuels-mecanismes-de-verification-pour-faciliter-la",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1496,8 +1487,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 30,
+      "count": 31,
       "top": [
+        {
+          "title": "Algérie : une panne géante ébranle le récit de la « puissance exportatrice d'électricité »",
+          "link": "https://fr.hespress.com/481975-algerie-une-panne-geante-ebranle-le-recit-de-la-puissance-exportatrice-delectricite.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
         {
           "title": "Législatives en Algérie : des « irrégularités » enregistrées dans 9 wilayas",
           "link": "https://www.tsa-algerie.com/legislatives-en-algerie-des-irregularites-enregistrees-dans-9-wilayas/",
@@ -1505,15 +1505,6 @@
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Parité dans les médias : au rythme actuel, le Maroc devra attendre 2087",
-          "link": "https://fr.hespress.com/481133-parite-dans-les-medias-au-rythme-actuel-le-maroc-devra-attendre-2087.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
           "rating": "F2"
         },
         {
@@ -1549,7 +1540,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 115,
+      "count": 121,
       "top": [
         {
           "title": "Israeli army kills 8 Palestinians, expands occupied area in Gaza despite ceasefire",
@@ -1570,31 +1561,31 @@
           "rating": "F2"
         },
         {
-          "title": "US strike cuts water supply in Iran, Iran damages water supply in Kuwait",
-          "link": "https://www.premiumtimesng.com/news/top-news/896307-us-strike-cuts-water-supply-in-iran-iran-damages-water-supply-in-kuwait.html",
-          "source": "Premium Times (Nigeria)",
+          "title": "Khamenei says Trump's signature on MoU is 'worthless' as US, Iran continue strikes",
+          "link": "https://www.jpost.com/middle-east/iran-news/article-902879",
+          "source": "Jerusalem Post",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
-          "title": "'Netanyahu belongs in The Hague': NYC mayor Mamdani mulls whether he can order Israeli PM's arrest",
-          "link": "https://www.dawn.com/news/2016505/netanyahu-belongs-in-the-hague-nyc-mayor-mamdani-mulls-whether-he-can-order-israeli-pms-arrest",
-          "source": "Dawn (Pakistan)",
+          "title": "2 US soldiers killed, 1 missing after Iran strikes on Jordan",
+          "link": "https://www.vanguardngr.com/2026/07/2-us-soldiers-killed-1-missing-after-iran-strikes-on-jordan/",
+          "source": "Vanguard (Nigeria)",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A1"
         },
         {
-          "title": "Des \"crimes de guerres\" comis par l'Iran à Bahreïn, au Koweit et en Jordanie dénoncés",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260718-des-crimes-de-guerres-comis-par-l-iran-%C3%A0-bahre%C3%AFn-au-koweit-et-en-jordanie-d%C3%A9nonc%C3%A9s",
-          "source": "France 24",
+          "title": "Two US troops killed and one missing in Jordan following Iran attack",
+          "link": "https://www.myjoyonline.com/two-us-troops-killed-and-one-missing-in-jordan-following-iran-attack/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "A1"
         }
       ]
     },
@@ -1602,7 +1593,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 163,
+      "count": 167,
       "top": [
         {
           "title": "La nationalisation qui vient",
@@ -1614,13 +1605,13 @@
           "rating": "A3"
         },
         {
-          "title": "Banfora : Élan de solidarité exceptionnel des VDP des Tannouyan au profit de l’Agence Faso MêBo et du CHR",
-          "link": "https://www.aib.media/banfora-elan-de-solidarite-exceptionnel-des-vdp-des-tannouyan-au-profit-de-lagence-faso-mebo-et-du-chr/",
-          "source": "AIB — Agence Information BF",
+          "title": "Ségolène Royal tire l’alarme : « La France se fait remplacer » en Algérie",
+          "link": "https://www.tsa-algerie.com/segolene-royal-tire-lalarme-la-france-se-fait-remplacer-en-algerie/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "9. Europe occidentale",
-          "theme": "E",
+          "theme": "D",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         },
         {
           "title": "Venezuela : le bilan du double séisme dépasse désormais les 5 000 morts, le FMI débloque des fonds",
@@ -1632,6 +1623,15 @@
           "rating": "C1"
         },
         {
+          "title": "Pressée par l'OTAN et l'UE, la Grèce refuse de livrer ses missiles Patriot à l'Ukraine",
+          "link": "https://francais.rt.com/international/136302-pressee-par-otan-ue-grece-refuse-livrer-ses-missiles-patriot-a-ukraine",
+          "source": "RT en français",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
           "title": "Économie russe : l’indice de la bourse de Moscou a chuté de 27 % depuis le début de l’année",
           "link": "https://legrandcontinent.eu/fr/2026/07/18/economie-russe-lindice-de-la-bourse-de-moscou-a-chute-de-27-depuis-le-debut-de-lannee/",
           "source": "Le Grand Continent",
@@ -1639,15 +1639,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "EN DIRECT, guerre en Ukraine : soixante-neuf affrontements sur le front depuis le début de la journée, selon l’état-major ukrainien",
-          "link": "https://www.lemonde.fr/international/live/2026/07/18/en-direct-guerre-en-ukraine-soixante-neuf-affrontements-sur-le-front-depuis-le-debut-de-la-journee-selon-l-etat-major-ukrainien_6722853_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B2"
         }
       ]
     }
@@ -1656,7 +1647,8 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1664,42 +1656,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-07-18T16:10:42.533Z",
+      "at": "2026-07-18T19:31:35.995Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-18T16:10:42.541Z",
+      "at": "2026-07-18T19:31:36.003Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-18T16:11:15.877Z",
+      "at": "2026-07-18T19:32:23.629Z",
       "agent": "Agent Collecte RSS",
-      "message": "113/170 flux OK, 1964 articles"
+      "message": "107/170 flux OK, 1909 articles"
     },
     {
-      "at": "2026-07-18T16:11:18.981Z",
+      "at": "2026-07-18T19:32:26.542Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-18T16:11:19.282Z",
+      "at": "2026-07-18T19:32:26.829Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-18T16:11:19.287Z",
+      "at": "2026-07-18T19:32:26.834Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-07-18T16:11:19.287Z",
+      "at": "2026-07-18T19:32:26.835Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-07-18T16:11:19.287Z",
+      "at": "2026-07-18T19:32:26.835Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
