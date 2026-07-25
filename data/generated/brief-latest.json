@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-25T08:24:10.953Z",
+  "generatedAt": "2026-07-25T09:06:20.808Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 114,
-    "failed": 56,
-    "articles": 1956,
+    "ok": 113,
+    "failed": 57,
+    "articles": 1944,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -183,11 +183,6 @@
         "count": 30
       },
       {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
-      },
-      {
         "id": "rss_standard_ke",
         "name": "The Standard (Kenya)",
         "count": 30
@@ -305,7 +300,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 24
+        "count": 23
       },
       {
         "id": "rss_rfimo",
@@ -525,7 +520,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -678,6 +673,11 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 66,
+    "bfAes": 68,
     "alerts": 9,
     "criticalAlerts": 5,
-    "sourcesDistinct": 73
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
@@ -1057,9 +1057,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "F1"
       },
-      "_rating": "F2",
+      "_rating": "F1",
       "_score": 115,
       "_zone": 1,
       "_theme": "P",
@@ -1198,6 +1198,22 @@
       ]
     },
     {
+      "title": "Les Houthis revendiquent une frappe en Arabie saoudite et poursuivent leur blocus en mer Rouge",
+      "link": "https://www.france24.com/fr/moyen-orient/20260725-les-houthis-revendiquent-une-frappe-en-arabie-saoudite-et-poursuivent-leur-blocus-en-mer-rouge",
+      "source": "France 24",
+      "date": "2026-07-25T00:45:13.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
       "title": "Koulsé/Reconnaissance nationale : les forces vives outillées sur les droits des héros, martyrs et invalides de la Nation",
       "link": "https://www.aib.media/koulse-reconnaissance-nationale-les-forces-vives-outillees-sur-les-droits-des-heros-martyrs-et-invalides-de-la-nation/",
       "source": "AIB — Agence Information BF",
@@ -1260,28 +1276,12 @@
           "keyword": "massacre"
         }
       ]
-    },
-    {
-      "title": "Blocus naval par les Houthis: «Le détroit de Bab el-Mandeb est aussi important que celui d’Ormuz»",
-      "link": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260724-blocus-naval-par-les-houthis-le-d%C3%A9troit-de-bab-el-mandeb-est-aussi-important-que-celui-d-ormuz",
-      "source": "RFI Moyen-Orient",
-      "date": "2026-07-24T16:07:14.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blocus"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      202
+      195
     ],
     [
       "occident_fr",
@@ -1289,19 +1289,19 @@
     ],
     [
       "occident_us",
-      114
+      116
     ],
     [
       "autre",
-      108
+      110
     ],
     [
       "golfe_mo",
-      72
+      71
     ],
     [
       "bf_local",
-      54
+      56
     ],
     [
       "russie",
@@ -1313,7 +1313,7 @@
     ],
     [
       "turquie",
-      24
+      26
     ],
     [
       "sahel",
@@ -1325,7 +1325,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 117,
+      "count": 120,
       "top": [
         {
           "title": "Koulsé/Reconnaissance nationale : les forces vives outillées sur les droits des héros, martyrs et invalides de la Nation",
@@ -1378,7 +1378,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 67,
+      "count": 65,
       "top": [
         {
           "title": "Etihad Airways and Africa World Airlines sign strategic partnership agreement",
@@ -1408,20 +1408,20 @@
           "rating": "F2"
         },
         {
-          "title": "2027: Ondo APC disowns Ex-commissioner over claim Tinubu may lose state",
-          "link": "https://www.vanguardngr.com/2026/07/2027-ondo-apc-disowns-ex-commissioner-over-claim-tinubu-may-lose-state/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
           "title": "H1 2026 Review: Airlines battle rising operational costs, FAAN faces policy hurdle",
           "link": "https://www.vanguardngr.com/2026/07/h1-2026-review-airlines-battle-rising-operational-costs-faan-faces-policy-hurdle/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Soldiers recover weapons in Rivers hideout raid",
+          "link": "https://punchng.com/soldiers-recover-weapons-in-rivers-hideout-raid/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1431,7 +1431,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 18,
+      "count": 12,
       "top": [
         {
           "title": "Oligui Nguema à Paris, que sont devenues les grandes figures du développement, négociateurs du Polisario, les « déchus de la République » du Cameroun… Les 5 infos qu’il ne fallait pas manquer",
@@ -1441,6 +1441,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Cameroon: Paul Biya’s 48-day absence sparks debate over government inaction",
+          "link": "https://www.vanguardngr.com/2026/07/cameroon-paul-biyas-48-day-absence-sparks-debate-over-government-inaction/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
         },
         {
           "title": "MSF alerte sur l'aggravation de la crises humanitaires en RDC",
@@ -1458,7 +1467,7 @@
           "zone": "3. Afrique centrale",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "Soudan: à El‑Obeid, «certains produits de base sont devenus inabordables»",
@@ -1468,15 +1477,6 @@
           "theme": "H",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "Selon le professeur Bob Kabamba, le dialogue politique initié par Félix Tshisekedi vise « uniquement à organiser une transition »",
-          "link": "https://www.radiookapi.net/2026/07/24/emissions/regard-sur-lactualite-de-la-semaine/selon-le-professeur-bob-kabamba-le-dialogue",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     },
@@ -1484,7 +1484,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 34,
+      "count": 33,
       "top": [
         {
           "title": "Tunisie – France | Fritures sur la ligne",
@@ -1537,7 +1537,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 105,
+      "count": 106,
       "top": [
         {
           "title": "Houthi blockade of Saudi trade threatens wider Middle East conflict",
@@ -1567,13 +1567,13 @@
           "rating": "C2"
         },
         {
-          "title": "Blocus naval par les Houthis: «Le détroit de Bab el-Mandeb est aussi important que celui d’Ormuz»",
-          "link": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260724-blocus-naval-par-les-houthis-le-d%C3%A9troit-de-bab-el-mandeb-est-aussi-important-que-celui-d-ormuz",
-          "source": "RFI Moyen-Orient",
+          "title": "Les Houthis revendiquent une frappe en Arabie saoudite et poursuivent leur blocus en mer Rouge",
+          "link": "https://www.france24.com/fr/moyen-orient/20260725-les-houthis-revendiquent-une-frappe-en-arabie-saoudite-et-poursuivent-leur-blocus-en-mer-rouge",
+          "source": "France 24",
           "zone": "8. Moyen-Orient",
-          "theme": "M",
+          "theme": "S",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "C1"
         },
         {
           "title": "Houthis claim missile attack on Saudi Arabia as conflict deepens",
@@ -1590,7 +1590,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 175,
+      "count": 176,
       "top": [
         {
           "title": "Bangladesh: Le président Mohammed Shahabuddin présente sa démission au président du Parlement, invoquant des raisons de santé",
@@ -1620,6 +1620,15 @@
           "rating": "F2"
         },
         {
+          "title": "Italian embassy, teen apologise after confrontation with Thai woman on Bangkok train",
+          "link": "https://www.dawn.com/news/2018282/italian-embassy-teen-apologise-after-confrontation-with-thai-woman-on-bangkok-train",
+          "source": "Dawn (Pakistan)",
+          "zone": "13. Asie du Sud-Est",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
           "title": "EN DIRECT, guerre en Ukraine : les dernières informations",
           "link": "https://www.lemonde.fr/international/live/2026/07/25/en-direct-guerre-en-ukraine-les-dernieres-informations-au-25-juillet-2026_6725306_3210.html",
           "source": "Le Monde International",
@@ -1627,15 +1636,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "B2"
-        },
-        {
-          "title": "US announces visa restriction policy on cyber criminals, their immediate family members",
-          "link": "https://www.dawn.com/news/2018267/us-announces-visa-restriction-policy-on-cyber-criminals-their-immediate-family-members",
-          "source": "Dawn (Pakistan)",
-          "zone": "16. Amérique du Nord",
-          "theme": "T",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     }
@@ -1648,48 +1648,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-07-25T08:23:28.509Z",
+      "at": "2026-07-25T09:05:44.680Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-25T08:23:28.515Z",
+      "at": "2026-07-25T09:05:44.687Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-25T08:24:08.007Z",
+      "at": "2026-07-25T09:06:17.584Z",
       "agent": "Agent Collecte RSS",
-      "message": "114/170 flux OK, 1956 articles"
+      "message": "113/170 flux OK, 1944 articles"
     },
     {
-      "at": "2026-07-25T08:24:10.627Z",
+      "at": "2026-07-25T09:06:20.483Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-25T08:24:10.949Z",
+      "at": "2026-07-25T09:06:20.804Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-25T08:24:10.955Z",
+      "at": "2026-07-25T09:06:20.810Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-07-25T08:24:10.955Z",
+      "at": "2026-07-25T09:06:20.810Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-07-25T08:24:10.955Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
