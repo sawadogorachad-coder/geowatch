@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-26T10:54:11.207Z",
+  "generatedAt": "2026-07-26T13:56:33.612Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1877,
+    "ok": 112,
+    "failed": 58,
+    "articles": 1940,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -56,6 +56,11 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -73,19 +78,9 @@
         "count": 30
       },
       {
-        "id": "rss_studio_tam",
-        "name": "Studio Tamani (Mali)",
-        "count": 10
-      },
-      {
         "id": "rss_journ_mali",
         "name": "Journal du Mali",
         "count": 9
-      },
-      {
-        "id": "rss_kalangou",
-        "name": "Studio Kalangou (Niger)",
-        "count": 10
       },
       {
         "id": "rss_tamtam",
@@ -161,6 +156,11 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -280,7 +280,7 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_f24afr",
@@ -295,7 +295,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 24
+        "count": 25
       },
       {
         "id": "rss_rfimo",
@@ -453,6 +453,16 @@
         "count": 20
       },
       {
+        "id": "rss_cgtn",
+        "name": "CGTN (Chine, EN)",
+        "count": 30
+      },
+      {
+        "id": "rss_globaltimes",
+        "name": "Global Times (Chine)",
+        "count": 30
+      },
+      {
         "id": "rss_chinadaily",
         "name": "China Daily",
         "count": 30
@@ -475,7 +485,7 @@
       {
         "id": "rss_jpost",
         "name": "Jerusalem Post",
-        "count": 25
+        "count": 26
       },
       {
         "id": "rss_dailysabah",
@@ -565,11 +575,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -577,6 +582,11 @@
       {
         "id": "rss_quotidien_bf",
         "name": "Le Quotidien (BF)",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_studio_tam",
+        "name": "Studio Tamani (Mali)",
         "error": "fetch failed"
       },
       {
@@ -595,6 +605,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_kalangou",
+        "name": "Studio Kalangou (Niger)",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
@@ -602,7 +617,7 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_alakhbar",
@@ -612,7 +627,7 @@
       {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_fratmat",
@@ -663,11 +678,6 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -785,16 +795,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_cgtn",
-        "name": "CGTN (Chine, EN)",
-        "error": "fetch failed"
-      },
-      {
-        "id": "rss_globaltimes",
-        "name": "Global Times (Chine)",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
         "error": "HTTP 403"
@@ -842,7 +842,7 @@
       {
         "id": "rss_amnesty",
         "name": "Amnesty International",
-        "error": "HTTP 404"
+        "error": "HTTP 504"
       },
       {
         "id": "rss_msf",
@@ -864,16 +864,48 @@
   "stats": {
     "articles": 800,
     "bfAes": 55,
-    "alerts": 4,
+    "alerts": 6,
     "criticalAlerts": 3,
     "sourcesDistinct": 66
   },
   "topDevelopments": [
     {
-      "title": "‎Burkina: le Capitaine Ibrahim Traoré est arrivé à Pô",
-      "link": "https://www.wakatsera.com/burkina-le-capitaine-ibrahim-traore-est-arrive-a-po/",
-      "pubDate": "2026-07-25T13:58:18.000Z",
-      "description": "‎(Pô, 25 juillet 2026). Le Président du Faso, Chef de l’État, Président de la Confédération des États du Sahel (AES), le Camarade Capitaine Ibrahim TRAORÉ, est arrivé, ce samedi matin, dans la ville de Pô, province du Nahouri, région du Nazinon. ‎ Dans le chef-lieu de la province du Nahouri, le Président du Faso va présider cet après-midi la cérémonie officielle de sortie de la 25e promotion des Élèves-Officiers d’Active de l’Académie Militaire Georges-NAMOANO. Ce matin, le Chef de l'État procèdera à la mise en eau du barrage de Pô Kapro, première infrastructure hydro-agricole d’envergure de la localité. ‎‎Direction de la communication de la Présidence du Faso Images L’article ‎Burkina: le Capitaine Ibrahim Traoré est arrivé à Pô est apparu en premier sur Wakat Séra .",
+      "title": "« La souveraineté exige des sacrifices » : Le message fort du Général Abdourahamane Tiani",
+      "link": "https://burkina24.com/2026/07/26/la-souverainete-exige-des-sacrifices-le-message-fort-du-general-abdourahamane-tiani/",
+      "pubDate": "2026-07-26T13:17:04.000Z",
+      "description": "Trois ans après les événements du 26 juillet 2023, le Niger a marqué sa Journée Nationale de la Souveraineté et du Patriotisme dans un climat de ferveur populaire et de détermination politique. Lors d’un entretien exclusif accordé à la RTN le 25 juillet 2026, le Chef de l’État, le Général d’armée Abdourahamane Tiani, a dressé … The post « La souveraineté exige des sacrifices » : Le message fort du Général Abdourahamane Tiani appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "District 403 A3: le Gouverneur Arouna Nikièma officiellement installé devant près de 800 lions et léos",
+      "link": "https://www.wakatsera.com/district-403-a3-le-gouverneur-arouna-nikiema-officiellement-installe-devant-pres-de-800-lions-et-leos/",
+      "pubDate": "2026-07-26T12:05:54.000Z",
+      "description": "Le Gouverneur du District 403 A3 du Lions club international pour le mandat 2026-2027, Arouna Nikièma, a été officiellement installé, le samedi 25 juillet 2026, devant près de 800 personnes, vêtus aux couleurs de la première organisation mondiale de club service, à Ouaga 2000 dans l’emblématique salle des Banquets. Cette cérémonie a été couplée à la cinquième Rentrée des lions et léos dont le thème de la communication est: « Osons l'impossible pour une croissance inclusive et un service de qualité ». Discours, séquence d'intronisation marqué par le port du chapeau du chef, prestation artistique, capsules vidéo de témoignages sur le parcours militant de Arouna Nikièma et la signature de jumelage pour des actions communes de lutte entre les Districts 403 A1, 403 A2, 403 A3 et 403 A4, ont été les temps forts de cette cérémonie solennelle et festive. Voulant ses ambitions très grandes, Arouna Nikièma, Président du Conseil Exécutif de BBS Holding se dote comme slogan pour son mandat: «Osons l’impossible !». La cour de l’emblématique Salle des Banquets de la capitale burkinabè était noire de monde et d’engins à quatre et deux roues dans la matinée du samedi 25 juillet 2026. Et pour cause, les lions et léos du District 403 A3 ne voulaient rater pour rien au monde, l’investiture de leur nouveau premier responsable, Arouna Nikièma, le Président du Comité Exécutif de BBS Holding, qui a fondé le lions club Ouagadougou Karité. Dès 08H00 (GMT), la Salle a commencé recevoir les lions et léos parés aux couleurs du club service qui a fait ses preuves à travers un engagement actif au Burkina Faso, depuis 1958, soit 67 ans de soutiens aux couches les plus vulnérables du pays. La cérémonie d’intronisation du nouveau Gouverneur du District 403 A3, Arouna Nikièma, a été couplée à la cinquième Rentrée Lions visant à former les membres pour l’atteinte des objectifs de l’association qui se résume à servir les couches sociales les plus vulnérables. Les lions et léos, à l’occasion de ce moment de retrouvaille et convivialité, ont vécu une journée d’ambiance entre amis dont eux seuls ont le secret. L’année du mandat du bureau actuel va de la période du 1 er juillet 2026 au 30 juin 2027. C’est par des ovations bien nourries que les officiels et les anciens dirigeants du Lions club dont les Past Président du Conseil des Gouverneurs (PPCG), notamment le parrain de l’évènement Lassiné Diawara et Jean-Baptiste So et les Past Gouverneur de District (PGD), Dieudonné Hubert Millogo, Djénéba Diallo, Dr Daouda Diallo, Hamza Koné, Jean-Urbain Korsaga et Yacouba Barry ont fait leur entrée dans la salle, signe du démarrage de la cérémonie, placée sous le patronage du ministre des Affaires étrangères, Karamoko Jean-Marie Traoré. La deuxième salve d’applaudissements a été faite pour accueillir les Gouverneurs de trois autres Districts que sont le 403 A1, 403 A2 ET 403 A4 des pays dont la Côte d’Ivoire, le Togo, la Mauritanie, la Guinée et le Bénin. Les anciens Gouverneurs du District 403 A3 en première ligne A la suite des discours vient le moment tant attendu, à savoir le cérémonial captivant reposant sur plusieurs séquences. Habillé d'une tenue traditionnelle du terroir, Arouna Nikièma était confortablement et majestueusement installé dans une calèche classique. C’est sur ce moyen unique de transport que le Gouverneur du District 403 A3 a rejoint le décor au fond de la Salle des Banquets de Ouaga 2000 qui n’a été dévoilé qu’au moment du déroulé du cérémonial d’intronisation. Ce décor réaliste symbolise l’environnement de Arouna Nikièma. Il est composé en partie par les membres de sa famille et ses amis lions, signe de ces forces vitales dans la vie. Abdoulaye Nikièma, grand-frère du Gouverneur, représentant la famille Avec une allure royale, les deux colosses qui tenaient la calèche ont conduit le Gouverneur qui s’est installé au milieu du décor du fond de la scène donnant face au public où une chaise royale a été installée. Après cette séquence, les colosses, ont apporté le chapeau du nouveau chef Arouna Nikièma. Il a été remis à son prédécesseur, le Gouverneur sortant Yacouba Barry, qui s’est levé sous les applaudissements, l’a porté, à son tour, sur la tête de son successeur. Après cet acte qui signifie son installation officielle, le Gouverneur Nikièma s’est levé vers le public et soulevé sa canne, signe du pouvoir royal. Une vue large du public Devant les milliers de lions et léos, le Gouverneur Nikièma a promis de conduire le District 403 A3 avec «humilité, transparence et esprit de service», adressant ses hommages respectueux aux Past Présidents de Conseil des Gouverneurs (PPCG) et les Past Gouverneurs qui au fil des années ont bâti avec «passion, courage et détermination, un modèle de leadership local jamais égalé». «Si nous pouvons aujourd’hui rêver plus grand, c’est parce que vous avez construit des fondations solides», a-t-il soutenu. «Nos projets, cette année, au niveau de notre District sont orientés autour de quatre causes prioritaires qui sont la protection de l’environnement, la lutte contre la faim, le diabète et la lutte contre le paludisme, et deux causes pour les léos qui sont l’alphabétisation et la sécurité routière», a déclaré le Gouverneur Nikièma. Le Gouverneur Arouna Nikièma lors des interviews avec la presse Le parrain de la cérémonie, le PPCG Lassiné Diawara, l’un des pionniers du lionisme au Burkina Faso, a prodigué des conseils à son filleul. «Cher ami Gouverneur Arouna Nikièma, les lions et léos du District 403 A3 te confient leur confiance. Tu seras parfois applaudi, parfois critiqué. Tu rencontreras aussi des difficultés, c’est le destin de tout dirigeant. Mais souviens-toi toujours qu’un Gouverneur ne dirige pas par l’autorité. Le véritable leadership consiste non à être devant les autres, car leur permettre d’aller plus loin», a déclaré Lassiné Diawara, lui demandant de rester proche des clubs où bat le cœur des lions. Photo de famille avec les officiels et les délégations venues des autres pays Le patron de la cérémonie, le ministre des Affaires étrangères, Karamoko Jean-Marie Traoré, a félicité le Gouverneur et les lions et léos pour leur forte mobilisation. «Votre parcours professionnel vous a suffisamment enseigné sur le défi des obstacles, du leadership, la notion de la cohabitation, l’effort et je crois que si vous avez choisi d’annexer l’impossible, c’est parce que vous avez évaluer vos forces et je vous en félicite», a-t-il lancé à l’endroit du Gouverneur Arouna Nikièma, formulant le vœu que ce mandat soit couronné de succès. Par Bernard BOUGOUM Encadré Les commentaires des Gouverneurs invités sur la cérémonie et leur ami Arouna Nikièma Je suis Arsène Soglo, Gouverneur du District 403 A4 du Bénin Mes impressions sont très bonnes. J'ai participé à une très très belle cérémonie de Rentrée solennelle et d'investiture du Gouverneur Arouna Nikièma du District 403 A3. J'ai vu un enthousiasme au sein des lions du District qui m'a émerveillé, un accueil chaleureux.Tout s'est très très bien passé, donc je repars de cette cérémonie sûr que mon ami le Gouverneur fera un mandat très fécond en réalisation. Le Gouverneur Arouna Nikièma est un lion très engagé et ce n'est pas pour rien que les lions du District 403 A3 lui ont fait confiance. Je sais qu'il est largement à la hauteur de la mission et j'espère qu'il fera, comme je l'ai dit tantôt, un mandat fécond en réalisation et en réformes. Le Gouverneur du District 403 A2, Jean-Pierre Illa Je suis le lion Jean-Pierre Illa du Togo, actuellement Gouverneur du District 403 A2 regroupant en plus là Côte d'Ivoire, le Liberia et la Sierra-Leone. Un mandat se tourne et avec, la rotation des équipes dirigeantes. Je suis de la même promotion que Nikièma qui prend un nouveau mandat. Et c'est de bonne guerre qu'à l'occasion de la Rentrée des lions du Burkina Faso, nous puissions venir le soutenir et l'encourager. Je vous avoue que ça a été une très belle fête. La mobilisation nous a vraiment séduite. Nous avons trouvé des lions du Burkina Faso très unis, très solidaires, nous ne pouvons que les encourager à continuer dans ce sens. C'est une mobilisation et une unité d'actions qui peuvent aider à atteindre les objectifs du Gouverneur qui sont placés sous sa devise « Osons l'impossible ! ». Nikièma, ça fait trois ans que je le côtoye. Je l'ai côtoyé en tant que deuxième et premier vice-Gouverneur. C'est une force tranquille. C'est quelqu'un qui ne parle pas beaucoup mais qui fait de grandes choses. Donc, je ne doute pas un seul instant de sa capacité à réussir son mandat par de grandes réalisations. Yasser Alnabhani, Gouverneur du District 403 A1 Je suis Yasser Alnabhani, Gouverneur du District 403 A1. Je représente la Mauritanie pour le mandat 2026-2027. Nous couvrons huit pays de l'Afrique de l'Ouest que sont la Mauritanie, le Sénégal, la Guinée, le Niger, le Mali, le Cap-Vert, la Guinée-Bissau et la Gambie. C'était vraiment pour moi un grand honneur car c'est une première de venir à une invitation d'un Gouverneur du District 403 A3. Et Arouna est un frère et un ami de longue date. Quand j'ai reçu son invitation, on l'a répondue avec un grand plaisir et une grande joie. Je vois qu'il y a de belles choses qui se font. On a de belles réalisations et cela va nous permettre de coordonner un peu nos efforts pour qu'on puisse avoir des actions sur le terrain qui sont beaucoup plus synchronisées entre nous. On a des causes communes entre nos pays et nos Districts et on va les renforcer encore plus surtout que le Burkina était dans notre District huit ans en avant. Dans le passé, il était avec nous dans le même District. On s'est séparés parce qu'on grandit comme on dit. Mais là, on se rejoint encore sur les mêmes causes et on essaiera de travailler tous ensemble pour qu'on ait un impact beaucoup plus important, beaucoup plus durable et qui couvrirait le maximum des pays qu'on peut. Le Gouverneur Arouna Nikièma lors des interviews avec la presse Le Burkina Faso est connu et nous a toujours étonné par la mobilisation des lions. Depuis qu'ils nous ont quitté, on les voit chaque année grandir, avoir plus d'impact, plus de membres, plus d'actions. Et je vous avoue que des fois, on est même jaloux de ce District qui est toujours dans la mouvance, qui avance tout le temps, qui avance sur des bonnes bases, des bases solides, des bases très importantes. Il y a des grands lions qui sont sortis de ce District et sur qui nous continuons de nous appuyer pour toutes nos actions dans le lionisme. Que dire du Gouverneur ! Arouna est humble, intègre et représente vraiment les valeurs des Burkinabè mais aussi les valeurs des lions, des Burkina Faso. C'est quelqu'un qui a une amitié sincère, un engagement qui sont sincère. Et quand il s'engage pour une cause, il s'engage avec tout son cœur, tous ses moyens. Et on le sent dans ses actions, dans sa façon de faire les choses. Et l'engouement, l'enthousiasme dans lequel il se lance, l'aident beaucoup. C'est quelqu'un que j'ai connu il n'y a pas longtemps mais on est devenu des amis très très proches, en un temps très très court. Tout simplement parce qu'il a un grand cœur, il a un cœur qui est ouvert à tout le monde. vous. L’article District 403 A3: le Gouverneur Arouna Nikièma officiellement installé devant près de 800 lions et léos est apparu en premier sur Wakat Séra .",
       "_source": "Wakat Séra",
       "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
@@ -883,6 +915,7 @@
         "economic",
         "diplomatic",
         "military",
+        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -892,9 +925,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
+      "_rating": "C2",
       "_score": 127,
       "_zone": 1,
       "_theme": "P",
@@ -967,6 +1000,105 @@
       "_desk": "A1"
     },
     {
+      "title": "Banfora : 72 heures d’activités pour promouvoir la réinsertion sociale des détenus",
+      "link": "https://www.aib.media/banfora-72-heures-dactivites-pour-promouvoir-la-reinsertion-sociale-des-detenus/",
+      "pubDate": "2026-07-26T12:28:09.000Z",
+      "description": "Banfora : 72 heures d'activités pour promouvoir la réinsertion sociale des détenus Banfora, 17 juillet 2026(AIB)-La Maison d'arrêt et de correction de Banfora (MAC-BFR) a lancé, le jeudi 16 juillet 2026, les activités commémoratives de la Journée internationale Nelson Mandela, encore appelée « Journée du détenu ». Placée sous le patronage du gouverneur de la région des Tannounyan. Cette célébration se déroule sur 72 heures, du 16 au 18 juillet, à travers diverses activités visant à promouvoir les droits des personnes privées de liberté et leur réinsertion sociale. Dans son allocution d'ouverture, le directeur de la MAC-BFR, Dialinli Yonli, a rappelé que cette journée rend hommage à Nelson Mandela, figure emblématique de la lutte pour les droits humains, et constitue un cadre d'échanges entre les acteurs engagés dans l'amélioration des conditions de détention. Il a indiqué que la prison de Banfora fait partie des plus importantes structures pénitentiaires du pays, avec un taux de surpopulation élevé. Plus de 85 % des détenus sont des jeunes de moins de 40 ans, une main-d'œuvre importante qui peut contribuer aux ambitions nationales en matière d'autosuffisance alimentaire. Le thème retenu cette année est : « Contribution des centres pénitentiaires agricoles à la formation professionnelle des détenus et à l'atteinte de l'autosuffisance alimentaire : défis et perspectives ». Selon le directeur de la MAC-BFR, ce thème trouve tout son sens dans les efforts entrepris par l'établissement pour développer les activités agricoles au profit des pensionnaires. Grâce à l'accompagnement de la SOSUCO et de l'INERA, la maison d'arrêt a exploité 35 hectares de terres au cours de la campagne agricole 2025-2026, produisant 19 tonnes de céréales et mobilisant plus d'une centaine de détenus, une performance qui a permis à la MAC-BFR d'occuper la deuxième place nationale en matière de production agricole pénitentiaire. Le gouverneur de la région des Tannounyan, patron de la cérémonie, a salué la portée de cette journée instituée par les Nations unies en hommage aux 67 années de combat de Nelson Mandela pour la paix, la démocratie et les droits humains. Il a souligné que la célébration vise également à rappeler que les détenus demeurent des membres à part entière de la société et méritent des conditions de détention plus humaines. Le premier responsable de la région a invité l'ensemble des forces vives à soutenir davantage les établissements pénitentiaires et à accompagner les détenus dans leur processus de resocialisation. Prenant acte des préoccupations exprimées par les responsables de la MAC-BFR, il a annoncé son engagement à financer la réalisation d'un forage afin d'améliorer l'accès à l'eau au sein de l'établissement. Les activités prévues au cours de ces 72 heures comprennent notamment une journée de salubrité, des séances de sensibilisation sur la réinsertion sociale des détenus, une conférence-panel autour du thème national, ainsi que des manifestations sportives, culturelles et artistiques. La célébration s'achèvera par un repas communautaire réunissant détenus, autorités et partenaires. À travers cette initiative, la Maison d'arrêt et de correction de Banfora entend renforcer la solidarité autour des personnes privées de liberté et promouvoir leur réinsertion comme facteur essentiel de cohésion sociale et de développement. Agence d'information du Burkina Jean Paul YEKPAYE AIB/Comoé",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Professeur « Miles », un art (vivant) et son critique (2/2)",
+      "link": "https://lesoleil.sn/actualites/arts-et-culture/professeur-miles-un-art-vivant-et-son-critique-2-2/",
+      "pubDate": "2026-07-26T12:03:48.000Z",
+      "description": "Avec sa mort le mercredi 22 juillet, à 77 ans, Pr Maguèye Kassé est passé d’un homme à la présence élégante et utile, à un patrimoine dont le legs inspirera plusieurs générations et plusieurs matières. Il avait fini par confondre son identité à ses passions pour les arts, se muant en un « spectacle humain » qui chantait juste l’universel. Esthète de grande classe, épicurien tel qu’il s’en réclamait, Pr Maguèye Kassé était un brillant critique d’arts. Passionné de jazz, féru de Miles Davis qu’il écoutait avec le cœur et l’esprit, il avait avancé dans un essai consacré à ce genre musical majeur et ce musicien révolutionnaire. Pr Kassé n’observait pas que l’art, il le vivait. Il avait une préférence pour « Concerto de Aranjuez » et « Kind of Blue », notamment la plage « So What » qui était la sonnerie de son téléphone portable. « Je me suis essayé au saxo. J’avais surtout les dimanches pour taquiner l’instrument. Mais un moment ma famille m’a fait comprendre que je ne devais pas tant faire plaisir au voisinage », nous racontait-il dans des phrases ponctuées de son rire franc et un tantinet espiègle. C’est aussi cela, sa personnalité : il ne s’arrêtait pas à simplement aimer, il cherchait par ailleurs à envelopper, à habiter, à comprendre son sujet. Ami du cinéaste Sembène Ousmane, par ailleurs président de l’Association Sembène Ousmane qu’il animait avec dévouement, il gardait beaucoup de souvenirs intimes de « l’Aîné des anciens ». Il avait d’ailleurs, dans son immense bibliothèque de sa résidence de Mermoz, le scénario et des documents avec force détails du film non réalisé de Sembène, « L’Almamy Samori Touré ». Pr Maguèye Kassé était un critique avisé du 7e art, notamment du cinéma africain. Il était une personnalité reconnue des couloirs du Festival panafricain du cinéma et de la télévision de Ouagadougou (Fespaco) et du Festival international du cinéma africain de Khouribga (Maroc), au cours desquels ses conférences étaient toujours remarquables. Lire aussi: Le trépas d’un seigneur comme on n’en fait plus (1/2) Mais son lien au cinéma ne se circonscrit certainement pas à Sembène Ousmane dont il cherchait à expliquer le sens communiste, le propos féministe et la lutte de transformation sociale qui sous-tendent sa cinématographie. Pr Kassé se prononçait presqu’avec la même passion sur le cinéma français, américain, sur le Japonais Akira Kurosawa, ou encore sur les films de l’Amérique latine qu’il a visitée le trimestre de cette année. Le directeur des Arts, Hugues Diaz, affirme que « toutes les grandes retombées que nous avons eues dans ce secteur (cinéma), sa main y est pour quelque chose ». L’ancien directeur de la Cinématographie sénégalais indique que, à la Berlinale (Festival international de film de Berlin), « c’est (Pr Kassé) qui nous ouvrait toutes les portes, avec sa maîtrise de la culture allemande, sa connaissance du secteur cinématographique de ce pays, son universalité et sa rigueur intellectuelle ». Pour le théâtre, il avait le même regard critique et précieux. C’est quelque peu parti de ses travaux scientifiques sur l’œuvre théâtrale de Bertolt Brecht. C’était, en outre, un régal d’écouter Pr Kassé faire une étude comparée entre « Hyènes » de Djibril Diop Mambéty et son inspiration « La Visite de la vieille dame » du Suisse Friedrich Dürrenmatt. Pr Maguèye Kassé était le Commissaire général de la 8e édition de la Biennale de l’art africain contemporain (Dak’art 2008). Jusqu’à sa mort, il siégeait à la section Arts, Lettres et Cultures de l’Académie nationale des sciences et techniques du Sénégal, où il était élu dès la création de cette dite section. Ces deux reconnaissances ne sont ni fortuites, encore moins usurpées. C’est la rançon d’un dévouement aux arts et à la culture, qui transparaissait jusqu’à son geste et son verbe au quotidien. Pour l’artiste visuel et icône du sous-verre, Serigne Ndiaye, le défunt avait ce génie rare « d’animer et créer des échanges et favoriser des inter-rapports culturels et artistiques ». Ce qui en faisait ainsi un curateur éclatant, qui avait le secret d’enrichir et de prolonger le discours artistique. Le défunt plasticien Abdoulaye Diallo « Lebergerdel’îledenGor », dont il était le commissaire permanent, avait grandement bénéficié de son obligeance. Les contributions les plus marquantes sont sans doute les expos « Quelle humanité pour demain ? » à la Bibliothèque universitaire Cheikh Anta Diop (mai-juillet 2018, 4800 visiteurs), « Art rupestre africain. De la contribution africaine à la découverte d’un patrimoine universel » (Musée Théodore Monod – Ifan, mars-avril 2017) et « Prehistomania » au Musée de l’Homme de Paris (novembre 2023-mai 2024). Dans ce prestigieux musée sis Place Trocadéro, qui exposait pour la première fois un artiste africain avec Lebergerdel’îledenGor, Pr Maguèye Kassé était commissaire invité aux côtés du Pr Jean-Louis Georget et Egidia Souto. Il avait fait une merveilleuse impression chez les invités et chaque fois qu’il fallait expliquer la toile sélectionnée « Hommage à Leo Frobenius 2 », affirmant son érudition de la germanistique et la vastitude de sa culture des arts et de l’universel. Il y avait également la parution des six livrets qui explicitent l’art et l’œuvre de « Lebergerdel’îledenGor ». Le passage de sa préface de la toute dernière production de l’artiste visuel décédé le 25 septembre 2025 illustre sa motivation de critique. « Il peut sembler, à un public non habitué à la créativité d’un artiste, incompréhensible d’associer dans une œuvre d’art deux champs de réflexions voire d’études si différents et si éloignés l’un de l’autre. De même, on peut penser que pour des férus d’art, l’interrogation est légitime, dans le même ordre d’idées, quant aux clefs indispensables dont ils doivent disposer pour suivre la motivation de l’artiste, sa démarche et ses procédés techniques », a préfacé Pr Kassé pour le livret « Du Tirailleur au naufragé », qui explicitait la toile éponyme, traitant du massacre de Thiaroye en 1944 et des ravages de l’émigration clandestine par les océans. Un militant fidèlement marqué rouge « S’il ne devait rester qu’un communiste, ce serait moi. (…) Les gens ont tout faux de parler de fin des idéologies. Tous ces débats conjoncturels que vous entendez ne dépassent pas ce sujet ». C’était la conviction de Pr Maguèye Kassé. Marxiste convaincu, militant du Parti de l’indépendance et du travail (Pit) dont il était le Secrétaire du Comité central, le défunt s’est foncièrement approprié les valeurs humaines qui fondent le communisme. Émancipation des classes opprimées, néocolonialisme, discrimination de genre, justice sociale, transformation sociale, liberté, liberté, liberté encore, souveraineté populaire. Voilà les sujets qui ont toujours rythmé son propos. Il ne disait pas ces mots pour la beauté du slogan, il les vivait. C’était chez lui une manière d’habiter le monde, selon son camarade Amadou Mbengue « Vieux ». « Son engagement au sein du Pit n’était pas un simple choix militant. Maguèye Kassé procédait d’une conviction philosophique selon laquelle la connaissance n’a de sens que lorsqu’elle contribue à transformer la société. Cette fidélité à la Gauche sénégalaise n’a jamais varié. Elle traversa les décennies sans jamais céder aux modes politiques ni aux opportunismes. (…) Il croyait que le savoir devait éclairer les consciences et nourrir les luttes contre les injustices », témoigne le membre du bureau politique du Pit. Cette fidélité se prononçait dans ses amitiés comme ses amours, son amour. « Mon épouse » était une de ses rengaines préférées, parlant de Ndeye Amy Faye, avec qui il est marié depuis juin 1986. Par Mamadou Oumar KAMARA et Moussa SECK",
+      "_source": "Le Soleil (Sénégal)",
+      "_sourceId": "rss_lesoleil",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Tenkodogo : le parquet incinère 94 millions FCFA de produits illicites et durcit le ton contre les fraudeurs",
+      "link": "https://www.aib.media/tenkodogo-le-parquet-incinere-94-millions-fcfa-de-produits-illicites-et-durcit-le-ton-contre-les-fraudeurs/",
+      "pubDate": "2026-07-26T10:55:05.000Z",
+      "description": "Tenkodogo : le parquet incinère 94 millions FCFA de produits illicites et durcit le ton contre les fraudeurs Tenkodogo, 25 juillet 2026 (AIB) – Le parquet près le Tribunal de grande instance de Tenkodogo a procédé, samedi, à l'incinération d'importantes quantités de drogues, de cigarettes de contrebande, d'alcool frelaté et de médicaments prohibés, d'une valeur estimée à près de 94 millions de francs CFA. A travers cette opération, la justice réaffirme sa détermination à lutter contre la fraude, le trafic de stupéfiants et la commercialisation de produits dangereux dans la région du Nakambé. Placée sous l'autorité du Procureur du Faso près le Tribunal de grande instance de Tenkodogo, Bouma Ido, assisté de son substitut Falalou Namoano, la cérémonie d'incinération s'est déroulée sur un site sécurisé en présence des Officiers de police judiciaire (OPJ), des Forces de défense et de sécurité (FDS) ainsi que des professionnels des médias. Les produits détruits avaient été saisis entre janvier et juillet 2026 au cours de plusieurs opérations menées par les services de sécurité. Leur destruction intervient à la suite de décisions de confiscation définitive prononcées par le Tribunal, conformément aux dispositions légales en vigueur. Selon le substitut du Procureur Falalou Namoano, les produits incinérés comprennent 132 kilogrammes de chanvre indien, 140 cartons de cigarettes de contrebande, 10 cartons d'alcool frelaté et près de 300 cartons de produits pharmaceutiques prohibés, dont du tramadol. Le Camarade Namoano a précisé que les produits pharmaceutiques prohibés ont été saisis par le Commissariat de police de district de Garango, les cigarettes de contrebande par la Brigade territoriale de gendarmerie de Bagré, tandis que le tramadol et les autres stupéfiants proviennent d'opérations conduites par le Commissariat de police de district de Bittou. Pour le substitut du procureur, ces résultats illustrent le renforcement de la lutte contre la contrebande et le trafic de produits illicites dans cette zone frontalière. Il a rendu un hommage appuyé aux Officiers de police judiciaire pour leur professionnalisme et leur engagement malgré les difficultés auxquelles ils sont confrontés, les invitant à poursuivre leurs efforts. « Nous n'allons pas lâcher tant qu'ils vont continuer », a-t-il déclaré, adressant un avertissement clair aux réseaux de fraudeurs. Le magistrat a expliqué que cette lutte poursuit quatre objectifs majeurs : protéger la santé des populations contre les effets nocifs des médicaments prohibés et des alcools frelatés ; préserver les recettes fiscales de l'État mises à mal par la contrebande ; garantir une concurrence loyale au profit des entreprises respectueuses de la réglementation ; et combattre le blanchiment de capitaux alimenté par les circuits de commerce illicite. Abordant le sort réservé aux personnes mises en cause, Falalou Namoano a indiqué que la majorité des auteurs ont été interpellés, déférés devant le parquet puis sanctionnés. Il a précisé que, conformément aux réformes du Code de procédure pénale, plusieurs dossiers ont été traités dans le cadre de la composition pénale, avec le paiement d'importantes amendes au Trésor public, en plus de la confiscation des marchandises détruites. Le Procureur du Faso a enfin salué l'engagement de l'ensemble des acteurs de la chaîne pénale ainsi que l'accompagnement des médias dans la sensibilisation des populations sur les dangers liés aux produits prohibés et à la fraude. Agence D'information du Burkina SM/ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Yaadga/Excellence scolaire : Le Loroum se distingue avec 39 lauréats à l’excellence régionale 2026",
       "link": "https://www.aib.media/yaadga-excellence-scolaire-le-loroum-se-distingue-avec-39-laureats-a-lexcellence-regionale-2026/",
       "pubDate": "2026-07-26T08:30:44.000Z",
@@ -997,154 +1129,54 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Gourma/Sécurité alimentaire : Le conseil régional préconise l’anticipation de l’approvisionnement des zones à défis sécuritaires",
-      "link": "https://www.aib.media/gourma-securite-alimentaire-le-conseil-regional-preconise-lanticipation-de-lapprovisionnement-des-zones-a-defis-securitaires/",
-      "pubDate": "2026-07-26T08:15:08.000Z",
-      "description": "BURKINA -GOULMOU- AGRICULTURE-SECURITE-ALIMENTS Gourma/Sécurité alimentaire : Le conseil régional préconise l'anticipation de l'approvisionnement des zones à défis sécuritaires Fada N'Gourma, 24 juil. 2026 (AIB)-Le secrétaire général de la région du Goulmou, Siaka Ouattara, a présidé, le vendredi 24 juillet 2026 à Fada N'Gourma, la première session ordinaire de l'Assemblée générale du Conseil régional de sécurité alimentaire (CRSA) des régions du Goulmou, de la Sirba et de la Tapoa, consacrée à la recherche de solutions endogènes face aux défis sécuritaires, humanitaires et climatiques dans une dynamique de souveraineté alimentaire. Présidant les travaux, le secrétaire général de la région du Goulmou, Siaka Ouattara a salué la tenue de cette première session de l'année, qu'il a qualifiée de cadre d'échanges indispensable pour renforcer la résilience des populations face aux multiples défis auxquels sont confrontées les trois régions. Il a, par ailleurs, invité l'ensemble des acteurs intervenant dans le domaine de la sécurité alimentaire à s'investir pleinement, chacun à son niveau, afin de permettre aux régions du Goulmou, de la Sirba et de la Tapoa d'atteindre l'autosuffisance alimentaire, conformément à l'une des visions portées par les plus hautes autorités du Burkina Faso. La rencontre a permis aux différents acteurs d'examiner la situation alimentaire et nutritionnelle dans les trois régions, à un moment jugé crucial de la campagne agropastorale 2026-2027. Selon le directeur régional en charge de l'Agriculture du Goulmou, Bassirou Mandé, la situation alimentaire demeure globalement satisfaisante au regard des résultats de la campagne agricole 2025-2026, malgré quelques disparités liées aux défis sécuritaires, humanitaires et climatiques. Il a indiqué que des efforts importants ont été consentis pour approvisionner les localités difficiles en vivres et en intrants agricoles, tout en saluant les initiatives locales développées par les populations retournées et celles restées sur place pour maintenir les activités de production. A l'issue des échanges, les participants ont formulé deux recommandations majeures. La première consiste à anticiper l'approvisionnement des zones difficiles en intrants agropastoraux avant le démarrage effectif de la campagne, afin de permettre aux producteurs de mieux s'organiser et de disposer à temps d'intrants de qualité. La seconde recommandation porte sur le renforcement de la réinsertion socioéconomique des personnes retournées et des populations affectées par la crise, notamment à travers la reconstitution du cheptel, l'appui en équipements, en intrants et le renforcement des moyens d'existence. Pour Bassirou Mandé, cette session, organisée à une période stratégique de la campagne agricole, a permis de mobiliser les différents acteurs autour des enjeux de la sécurité alimentaire et de dégager des orientations susceptibles de renforcer la souveraineté alimentaire dans les régions du Goulmou, de la Sirba et de la Tapoa. Agence d’information du Burkina KAC/HB/OO",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "L",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Léraba : Populations et forces combattantes sensibilisées à une meilleure collaboration contre le terrorisme",
-      "link": "https://www.aib.media/leraba-populations-et-forces-combattantes-sensibilisees-a-une-meilleure-collaboration-contre-le-terrorisme/",
-      "pubDate": "2026-07-26T08:04:23.000Z",
-      "description": "BURKINA-LERABA-COHESION-SENSIBILISATION Léraba : Populations et forces combattantes sensibilisées à une meilleure collaboration contre le terrorisme Sindou, 23 juil. 2026 (AIB)-La Coordination nationale des Volontaires pour la défense de la patrie (VDP) a organisé, ce jeudi 23 juillet 2026 à Sindou, une rencontre de sensibilisation et d'échanges visant à renforcer la collaboration entre les populations, les VDP et les Forces de défense et de sécurité (FDS) dans la lutte contre le terrorisme. Présidée par le Président de la délégation spéciale (PDS) de la commune de Sindou, Issiaka Yadia, la rencontre a réuni les populations des villages du département, leurs VDP ainsi que des représentants des FDS venus de Ouagadougou, de Banfora et de Sindou. Selon les organisateurs, cette initiative vise à consolider la coopération entre les différents acteurs engagés dans la sécurisation du territoire national face à la menace terroriste. Les échanges ont porté notamment sur la vigilance dans l'utilisation des réseaux sociaux, la dénonciation des comportements et mouvements suspects, ainsi que la nécessité de faire preuve de prudence dans les relations avec des personnes inconnues. Au nom des autorités coutumières, Sina Ouattara a salué l'initiative avant d'inviter les FDS à poursuivre le renforcement de la collaboration avec les populations afin d'atteindre les objectifs recherchés en matière de sécurité. Pour sa part, le PDS Issiaka Yadia a félicité les initiateurs de la rencontre. Il a exhorté les populations à demeurer vigilantes et à maintenir une collaboration étroite avec les FDS et les VDP afin de contribuer efficacement à la protection des personnes et des biens face à la menace terroriste. Agence d’information du Burkina MK/HB/OO",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "‎Une dynamique sécuritaire et socio-économique saluée par le Capitaine Ibrahim TRAORÉ",
-      "link": "https://www.aib.media/une-dynamique-securitaire-et-socio-economique-saluee-par-le-capitaine-ibrahim-traore/",
-      "pubDate": "2026-07-25T19:19:32.000Z",
-      "description": "SÉJOUR DU PRÉSIDENT DU FASO DANS LE NAZINON ‎Une dynamique sécuritaire et socio-économique saluée par le Capitaine Ibrahim TRAORÉ ‎ ‎(Pô, 25 juillet 2026). Le Président du Faso, Chef de l’État, Président de la Confédération AES, le Camarade Capitaine Ibrahim TRAORÉ, aussitôt arrivé à Pô, ce samedi dans la matinée, a reçu en audience les chefs des circonscriptions administratives de la région du Nazinon. Conduits par la Camarade Gouverneur Massadalo Yvette NACOULMA/SANOU, ils ont dressé un bilan très positif des progrès enregistrés sur les plans sécuritaire, sanitaire et agricole, et recueilli les nouvelles orientations du Chef de l'État . ‎‎ ‎La région enregistre une accalmie continue grâce à l'engagement conjoint des forces combattantes et des populations mobilisées. Cette amélioration s'accompagne du renforcement des infrastructures de défense, notamment l'opérationnalisation de l'escadron de gendarmerie et l'ouverture de la compagnie des Sapeurs-pompiers de Manga. Par ailleurs, l'initiative locale « Un village, au moins une moto » a permis de collecter plus de 140 millions F CFA, offrant 250 motos et du carburant aux VDP, une action patriotique vivement félicitée par le Chef de l'État, selon la Gouverneur du Nazinon. ‎ Avancées sanitaires et agricoles ‎ ‎Sur le plan du développement socio-économique, l'ouverture du Centre hospitalier régional de Manga et les travaux des Centres médicaux communaux de Tiébélé et de Kayao illustrent la concrétisation des projets présidentiels. Côté agriculture, les réalisations d'aménagements hydrauliques et l'octroi d'intrants vont propulser les récoltes céréalières vers des rendements records. ‎« Les réalisations du Chef de l'État sont inclusives et reposent sur la participation citoyenne à la base. Ses conseils nous permettront d'accentuer cet élan de développement », a conclu la Camarade Gouverneur à la sortie de l'audience. ‎ Direction de la communication de la Présidence du Faso",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Contrat d’objectifs : Le Pr Adjima Thiombiano atteint un taux de performance de 55,86 % à la mi-année",
-      "link": "https://www.minute.bf/contrat-dobjectifs-le-pr-adjima-thiombiano-atteint-un-taux-de-performance-de-5586-a-la-mi-annee/",
-      "pubDate": "2026-07-25T18:40:12.000Z",
-      "description": "Le Premier ministre, Rimtalba Jean Emmanuel Ouédraogo, a poursuivi ce samedi 25 juillet 2026 l’évaluation à mi-parcours des membres du Gouvernement sur la base de leurs contrats d’objectifs. Le ministre de l’Enseignement supérieur, de la Recherche et de l’Innovation (MESRI), le Pr Adjima Thiombiano, a présenté un bilan marqué par la mise en œuvre de plusieurs réformes structurantes dans les domaines de la formation, de la gouvernance universitaire et de la recherche. Son taux global de performance s’établit à 55,86 %. Durant le premier semestre de l’année, le département de l’Enseignement supérieur, de la Recherche et de l’Innovation a engagé des réformes majeures visant à améliorer la qualité de l’enseignement supérieur et à renforcer le système national de recherche. Parmi les avancées notables figurent l’entrée en vigueur du nouveau régime des études de licence et de master, ainsi que l’évaluation des institutions d’enseignement supérieur et de recherche (IESR). Le Pr Thiombiano a également souligné l’élaboration et l’application de nouveaux textes encadrant la gestion des bourses d’études, des stages et des formations. Sur le plan des infrastructures, le ministre a relevé des progrès significatifs au sein de plusieurs établissements. Ces investissements ont permis d’améliorer les conditions d’apprentissage, tant en quantité qu’en qualité. Associés aux actions menées en matière de gouvernance, ils ont favorisé une nette avancée dans la normalisation des années académiques. Une évaluation réalisée au 15 avril 2026 fait ainsi état d’un taux de normalisation de 97 %, ce qui conduit le ministre Thiombiano à estimer que le système universitaire burkinabè est « presque au bout du tunnel ». Dans le secteur de la recherche, une réforme a été engagée pour mieux structurer les acteurs et orienter les travaux scientifiques vers les priorités nationales. Cette dynamique s’est concrétisée par la création d’équipes mixtes de recherche associant chercheurs, enseignants-chercheurs, représentants du secteur privé, producteurs et transformateurs. Ces cadres de concertation visent à identifier les problématiques essentielles et à proposer des solutions adaptées aux réalités du pays. Plusieurs filières stratégiques sont concernées, parmi lesquelles le blé, le sorgho, la tomate, la mangue et l’anacarde. Par ailleurs, le ministre Pr Thiombiano a annoncé l’élaboration d’un cahier des charges destiné aux institutions privées de recherche, une initiative qui fait suite à l’adoption en 2025 d’un document similaire pour les établissements privés d’enseignement supérieur. L’objectif est d’harmoniser les pratiques et de renforcer la qualité des structures privées actives dans la recherche. Le Pr Thiombiano a également rappelé la mise en place de la Contribution spéciale à la Recherche et à l’Innovation (CORI), pour laquelle un budget d’environ 12,8 milliards de FCFA a été inscrit dans la loi de finances rectificative. Cet accompagnement financier traduit, selon lui, la volonté des autorités de faire de la recherche et de l’innovation des moteurs du développement national. À mi-parcours, le taux global de performance du contrat d’objectifs du Pr Adjima Thiombiano atteint 55,86 %. Le ministre en charge de l'enseignement supérieur entend poursuivre les réformes engagées pour améliorer encore les performances du système d’enseignement supérieur, de recherche et d’innovation au Burkina Faso. Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "US military disables tanker accused of breaking the Iran blockade",
-      "link": "https://www.aljazeera.com/video/newsfeed/2026/7/26/us-military-disables-tanker-accused-of-breaking-the-iran-blockade?traffic_source=rss",
+      "title": "From paradise to ‘pilot zone’ disaster: Returning to destroyed Lebanon home",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/7/26/from-paradise-to-pilot-zone-disaster-returning-to-destroyed-lebanon-home?traffic_source=rss",
       "source": "Al Jazeera English",
-      "date": "2026-07-26T04:33:16.000Z",
+      "date": "2026-07-26T13:34:45.000Z",
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
       "bf": false,
       "majors": [
         {
-          "type": "rupture",
-          "keyword": "blockade"
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Several dozen local bodies vie for disaster management agency’s regional bases",
+      "link": "https://www.japantimes.co.jp/news/2026/07/26/japan/disaster-management-agencys-regional-bases/",
+      "source": "The Japan Times",
+      "date": "2026-07-26T11:18:00.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Israeli strike kills central Gaza internal security chief amid ceasefire violations",
+      "link": "https://www.aa.com.tr/en/middle-east/israeli-strike-kills-central-gaza-internal-security-chief-amid-ceasefire-violations/4009706",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-07-26T11:12:23.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
         }
       ]
     },
@@ -1152,7 +1184,7 @@
       "title": "Massacre de Tiananmen : des vidéos inédites révèlent comment le régime chinois a basculé dans la répression violente",
       "link": "https://www.lemonde.fr/international/video/2026/07/26/massacre-de-tiananmen-des-videos-inedites-revelent-comment-le-regime-chinois-a-bascule-dans-la-repression-violente_6732770_3210.html",
       "source": "Le Monde International",
-      "date": "2026-07-26T04:01:14.000Z",
+      "date": "2026-07-26T04:00:35.000Z",
       "rating": "B2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1181,13 +1213,13 @@
       ]
     },
     {
-      "title": "US says naval blockade against Iran remains in effect",
-      "link": "https://www.aa.com.tr/en/americas/us-says-naval-blockade-against-iran-remains-in-effect/4009440",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-07-25T21:55:20.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
+      "title": "US maintains naval blockade on Iran amid military pause",
+      "link": "https://news.cgtn.com/news/2026-07-26/US-maintains-naval-blockade-on-Iran-amid-military-pause-1P5iipmWOiI/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
+      "source": "CGTN (Chine, EN)",
+      "date": "2026-07-26T02:40:16.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
       "bf": false,
       "majors": [
         {
@@ -1200,43 +1232,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      198
+      200
     ],
     [
       "autre",
-      123
+      120
     ],
     [
       "occident_fr",
-      112
+      118
     ],
     [
       "occident_us",
-      95
+      91
     ],
     [
       "golfe_mo",
-      83
-    ],
-    [
-      "russie",
-      52
+      72
     ],
     [
       "turquie",
-      41
+      55
+    ],
+    [
+      "russie",
+      53
     ],
     [
       "bf_local",
-      38
+      42
     ],
     [
       "chine",
-      30
+      32
     ],
     [
       "sahel",
-      28
+      17
     ]
   ],
   "desks": [
@@ -1244,16 +1276,25 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 105,
+      "count": 99,
       "top": [
         {
-          "title": "‎Burkina: le Capitaine Ibrahim Traoré est arrivé à Pô",
-          "link": "https://www.wakatsera.com/burkina-le-capitaine-ibrahim-traore-est-arrive-a-po/",
+          "title": "« La souveraineté exige des sacrifices » : Le message fort du Général Abdourahamane Tiani",
+          "link": "https://burkina24.com/2026/07/26/la-souverainete-exige-des-sacrifices-le-message-fort-du-general-abdourahamane-tiani/",
+          "source": "Burkina24",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "District 403 A3: le Gouverneur Arouna Nikièma officiellement installé devant près de 800 lions et léos",
+          "link": "https://www.wakatsera.com/district-403-a3-le-gouverneur-arouna-nikiema-officiellement-installe-devant-pres-de-800-lions-et-leos/",
           "source": "Wakat Séra",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "C2"
         },
         {
           "title": "‎Sortie de la 25e promotion de l’AMGN : « Soyez dignes de votre choix », dixit le Chef de l’État",
@@ -1274,20 +1315,11 @@
           "rating": "F1"
         },
         {
-          "title": "Yaadga/Excellence scolaire : Le Loroum se distingue avec 39 lauréats à l’excellence régionale 2026",
-          "link": "https://www.aib.media/yaadga-excellence-scolaire-le-loroum-se-distingue-avec-39-laureats-a-lexcellence-regionale-2026/",
+          "title": "Banfora : 72 heures d’activités pour promouvoir la réinsertion sociale des détenus",
+          "link": "https://www.aib.media/banfora-72-heures-dactivites-pour-promouvoir-la-reinsertion-sociale-des-detenus/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Gourma/Sécurité alimentaire : Le conseil régional préconise l’anticipation de l’approvisionnement des zones à défis sécuritaires",
-          "link": "https://www.aib.media/gourma-securite-alimentaire-le-conseil-regional-preconise-lanticipation-de-lapprovisionnement-des-zones-a-defis-securitaires/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "L",
+          "theme": "E",
           "relevance": "A",
           "rating": "C2"
         }
@@ -1297,8 +1329,17 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 55,
+      "count": 62,
       "top": [
+        {
+          "title": "NDLEA arrests Lagos businessman over UK cocaine plot",
+          "link": "https://www.vanguardngr.com/2026/07/ndlea-arrests-lagos-businessman-over-uk-cocaine-plot/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F1"
+        },
         {
           "title": "ECOWAS needs our collective wisdom, not a shared amnesia, By Owei Lakemfa",
           "link": "https://www.premiumtimesng.com/opinion/898152-ecowas-needs-our-collective-wisdom-not-a-shared-amnesia-by-owei-lakemfa.html",
@@ -1307,15 +1348,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "F2"
-        },
-        {
-          "title": "SERAP sues NNPCL over ‘failure to account for ₦211 trillion in oil money’",
-          "link": "https://www.vanguardngr.com/2026/07/serap-sues-nnpcl-over-failure-to-account-for-%e2%82%a6211-trillion-in-oil-money/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
         },
         {
           "title": "Nigerian soldiers should earn ₦250,000 monthly — Retired general",
@@ -1327,22 +1359,22 @@
           "rating": "F2"
         },
         {
-          "title": "Joshua survives knockdowns, stops Prenga",
-          "link": "https://www.vanguardngr.com/2026/07/joshua-survives-knockdowns-stops-prenga/",
+          "title": "Nigeria’s elections have never been truly free or credible — Pat Utomi",
+          "link": "https://www.vanguardngr.com/2026/07/nigerias-elections-have-never-been-truly-free-or-credible-pat-utomi/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
+          "theme": "P",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Troops rescue five family members as search intensifies for abducted Zamfara LG chairman",
-          "link": "https://www.vanguardngr.com/2026/07/troops-rescue-five-family-members-as-search-intensifies-for-abducted-zamfara-lg-chairman/",
+          "title": "Tinubu financed 2015 campaign, played key role in APC formation – Babachir Lawal",
+          "link": "https://www.vanguardngr.com/2026/07/tinubu-financed-2015-campaign-played-key-role-in-apc-formation-babachir-lawal/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         }
       ]
     },
@@ -1350,8 +1382,17 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 16,
+      "count": 18,
       "top": [
+        {
+          "title": "Hôpital Sékou Touré de Tanzanie : une bagarre autour de la dépouille d’un homme, ses épouses divisées sur le lieu de son enterrement",
+          "link": "https://mediaguinee.com/2026/07/hopital-sekou-toure-de-tanzanie-une-bagarre-autour-de-la-depouille-dun-homme-ses-epouses-divisees-sur-le-lieu-de-son-enterrement/",
+          "source": "Mediaguinee",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "RD Congo : une vingtaine de morts dans une attaque des ADF à Mambasa et à Béni",
           "link": "https://www.france24.com/fr/vid%C3%A9o/20260725-rd-congo-une-vingtaine-de-morts-dans-une-attaque-des-adf-%C3%A0-mambasa-et-%C3%A0-b%C3%A9ni",
@@ -1362,13 +1403,13 @@
           "rating": "C2"
         },
         {
-          "title": "RDC : les ADF multiplient les attaques sur fond de progression d'Ebola",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260725-rdc-les-adf-multiplient-les-attaques-sur-fond-de-progression-d-ebola",
-          "source": "France 24 Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "S",
+          "title": "Le coltan de Rubaya, une manne minière accusée de financer le M23 : l’ONU appelée à agir davantage contre l’exploitation illicite des ressources naturelles",
+          "link": "https://actualite.cd/2026/07/26/le-coltan-de-rubaya-une-manne-miniere-accusee-de-financer-le-m23-lonu-appelee-agir",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "E",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         },
         {
           "title": "L’Ougandais Olara Otunnu, 7e candidat au poste de chef de l’ONU",
@@ -1377,7 +1418,7 @@
           "zone": "4. Grands Lacs",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "Ebola à Butembo : les structures sanitaires privées appelées au respect strict des normes",
@@ -1387,15 +1428,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Le Parc marin des mangroves à Muanda, un trésor naturel que la RDC doit protéger",
-          "link": "https://www.radiookapi.net/2026/07/26/actualite/societe/le-parc-marin-des-mangroves-muanda-un-tresor-naturel-que-la-rdc-doit",
-          "source": "Radio Okapi (RDC)",
-          "zone": "3. Afrique centrale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
         }
       ]
     },
@@ -1403,7 +1435,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 38,
+      "count": 34,
       "top": [
         {
           "title": "Economie tunisienne | Pour une euthanasie salvatrice ! (1-3)",
@@ -1411,6 +1443,24 @@
           "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Handicap : des familles racontent les obstacles d'une inclusion encore inachevée",
+          "link": "https://fr.hespress.com/482895-handicap-des-familles-racontent-les-obstacles-dune-inclusion-encore-inachevee.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Élections 2026 : Benkirane qualifie le PAM de « parti de la corruption »",
+          "link": "https://fr.hespress.com/482903-elections-2026-benkirane-qualifie-le-pam-de-parti-de-la-corruption.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1431,24 +1481,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "CAN 2026 : en Afrique, le football au féminin face à ses limites malgré les ambitions affichées",
-          "link": "https://www.lemonde.fr/sport/article/2026/07/26/can-2026-en-afrique-le-football-au-feminin-face-a-ses-limites-malgre-les-ambitions-affichees_6733111_3242.html",
-          "source": "Le Monde International",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Législatives 2026 : les jeunes seront-ils les grands absents des urnes ?",
-          "link": "https://fr.hespress.com/482877-legislatives-2026-les-jeunes-seront-ils-les-grands-absents-des-urnes.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     },
@@ -1456,25 +1488,16 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 110,
+      "count": 101,
       "top": [
         {
-          "title": "Trump pauses major escalation against Iran over dwindling US air defense missile stocks: Report",
-          "link": "https://www.aa.com.tr/en/americas/trump-pauses-major-escalation-against-iran-over-dwindling-us-air-defense-missile-stocks-report/4009446",
+          "title": "Israeli strike kills central Gaza internal security chief amid ceasefire violations",
+          "link": "https://www.aa.com.tr/en/middle-east/israeli-strike-kills-central-gaza-internal-security-chief-amid-ceasefire-violations/4009706",
           "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "Guerre Iran-Irak – « Saddam Hussein a dit à Sékou Touré : “Grand frère, toute proposition de solution que vous aurez à présenter à l’Iran, si elle accepte, je l’accepte” », révèle Madifing Diané",
-          "link": "https://mediaguinee.com/2026/07/guerre-iran-irak-saddam-hussein-a-dit-a-sekou-toure-grand-frere-toute-proposition-de-solution-que-vous-aurez-a-presenter-a-liran-si-elle-accepte-je-laccepte/",
-          "source": "Mediaguinee",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
           "title": "US pauses attack on Iran, but Houthis, Saudi continue retaliatory strikes",
@@ -1486,22 +1509,31 @@
           "rating": "F2"
         },
         {
-          "title": "Dans Gaza dévastée, les « zones pilotes », un simulacre de reconstruction qui ne convainc pas les habitants",
-          "link": "https://www.lemonde.fr/international/article/2026/07/26/dans-gaza-devastee-les-zones-pilotes-un-simulacre-de-reconstruction-qui-ne-convainc-pas-les-habitants_6733218_3210.html",
+          "title": "Guerre au Liban : Beyrouth condamne les attaques israéliennes qui empêchent le déploiement de l’armée dans le sud",
+          "link": "https://www.liberation.fr/international/moyen-orient/guerre-au-liban-beyrouth-condamne-les-attaques-israeliennes-qui-empechent-le-deploiement-de-larmee-dans-le-sud-20260726_J2VQWJQBD5BPLNFSZB4HBF6LHA/",
+          "source": "Libération International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "EN DIRECT, guerre au Moyen-Orient : l’Iran dit avoir « interrompu » ses attaques sur les pays du Golfe parce que les Etats-Unis ont cessé leurs bombardements depuis deux jours",
+          "link": "https://www.lemonde.fr/international/live/2026/07/26/en-direct-guerre-au-moyen-orient-l-iran-dit-avoir-interrompu-ses-attaques-sur-les-pays-du-golfe-parce-que-les-etats-unis-ont-cesse-leurs-bombardements-depuis-deux-jours_6725301_3210.html",
           "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "B1"
         },
         {
-          "title": "Israeli settlers torch 2 mosques in West Bank: Palestinian officials",
-          "link": "https://www.dawn.com/news/2018507/israeli-settlers-torch-2-mosques-in-west-bank-palestinian-officials",
-          "source": "Dawn (Pakistan)",
+          "title": "U.S.-Iran War Pauses for 2nd Straight Day With Both Sides Holding Off on Strikes",
+          "link": "https://www.nytimes.com/2026/07/26/world/middleeast/us-iran-war-pause.html",
+          "source": "NYT World",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F1"
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
         }
       ]
     },
@@ -1509,8 +1541,17 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 160,
+      "count": 169,
       "top": [
+        {
+          "title": "AIB Actu-inter/A Berlin, un véhicule fonce sur la foule pendant un défilé homosexuel : un mort et 17 blessés",
+          "link": "https://www.aib.media/aib-actu-inter-a-berlin-un-vehicule-fonce-sur-la-foule-pendant-un-defile-homosexuel-un-mort-et-17-blesses/",
+          "source": "AIB — Agence Information BF",
+          "zone": "9. Europe occidentale",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "C1"
+        },
         {
           "title": "Présidentielle au Brésil : Brasilia refuse des visas à des responsables américains avant le scrutin",
           "link": "https://burkina24.com/2026/07/26/presidentielle-au-bresil-brasilia-refuse-des-visas-a-des-responsables-americains-avant-le-scrutin/",
@@ -1519,6 +1560,15 @@
           "theme": "P",
           "relevance": ".",
           "rating": "C2"
+        },
+        {
+          "title": "Milei lance la campagne de Flavio Bolsonaro (discours intégral)",
+          "link": "https://legrandcontinent.eu/fr/2026/07/26/milei-lance-la-campagne-de-flavio-bolsonaro-discours-integral/",
+          "source": "Le Grand Continent",
+          "zone": "18. Amérique du Sud",
+          "theme": "P",
+          "relevance": ".",
+          "rating": "A1"
         },
         {
           "title": "Tout ce que vous avez toujours voulu savoir sur l’Encyclique Magnifica humanitas",
@@ -1530,31 +1580,13 @@
           "rating": "A2"
         },
         {
-          "title": "Guerre au Moyen-Orient : les stocks de missiles freinent les projets de Trump",
-          "link": "https://francais.rt.com/international/136547-guerre-moyen-orient-stocks-missiles-freinent-projets-trump",
-          "source": "RT en français",
-          "zone": "16. Amérique du Nord",
-          "theme": "S",
+          "title": "PMD issues Glof alert for northern areas as several GB areas cut off for 5th consecutive day",
+          "link": "https://www.dawn.com/news/2018510/pmd-issues-glof-alert-for-northern-areas-as-several-gb-areas-cut-off-for-5th-consecutive-day",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "C",
           "relevance": "L",
           "rating": "A2"
-        },
-        {
-          "title": "Security forces kill 4 terrorists in South Waziristan, foil suicide attack on checkpost: ISPR",
-          "link": "https://www.dawn.com/news/2018322/security-forces-kill-4-terrorists-in-south-waziristan-foil-suicide-attack-on-checkpost-ispr",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "A1"
-        },
-        {
-          "title": "KP Governor Kundi says over 1,300kg of explosives used in Tank checkpost attack",
-          "link": "https://www.dawn.com/news/2018508/kp-governor-kundi-says-over-1300kg-of-explosives-used-in-tank-checkpost-attack",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     }
@@ -1563,8 +1595,7 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
-    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
@@ -1572,42 +1603,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-07-26T10:53:30.282Z",
+      "at": "2026-07-26T13:55:47.559Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-26T10:53:30.289Z",
+      "at": "2026-07-26T13:55:47.565Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-26T10:54:07.791Z",
+      "at": "2026-07-26T13:56:30.637Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1877 articles"
+      "message": "112/170 flux OK, 1940 articles"
     },
     {
-      "at": "2026-07-26T10:54:10.839Z",
+      "at": "2026-07-26T13:56:33.253Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-26T10:54:11.204Z",
+      "at": "2026-07-26T13:56:33.610Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-26T10:54:11.209Z",
+      "at": "2026-07-26T13:56:33.614Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 4 alertes"
+      "message": "8 developpements, 6 alertes"
     },
     {
-      "at": "2026-07-26T10:54:11.209Z",
+      "at": "2026-07-26T13:56:33.614Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-07-26T10:54:11.209Z",
+      "at": "2026-07-26T13:56:33.614Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
