@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-25T22:10:22.412Z",
+  "generatedAt": "2026-07-26T03:55:09.829Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 113,
-    "failed": 57,
-    "articles": 1943,
+    "ok": 114,
+    "failed": 56,
+    "articles": 1951,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -51,6 +51,11 @@
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
+      },
+      {
+        "id": "rss_netafrique",
+        "name": "Net Afrique (BF)",
+        "count": 10
       },
       {
         "id": "rss_observ_bf",
@@ -285,12 +290,12 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 24
+        "count": 23
       },
       {
         "id": "rss_f24afr",
         "name": "France 24 Afrique",
-        "count": 30
+        "count": 29
       },
       {
         "id": "rss_jeuneafr",
@@ -410,7 +415,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 26
+        "count": 25
       },
       {
         "id": "rss_bbc_africa",
@@ -520,7 +525,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 26
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -574,11 +579,6 @@
       }
     ],
     "failedSources": [
-      {
-        "id": "rss_netafrique",
-        "name": "Net Afrique (BF)",
-        "error": "This operation was aborted"
-      },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
@@ -667,7 +667,7 @@
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
-        "error": "This operation was aborted"
+        "error": "HTTP 500"
       },
       {
         "id": "rss_saharang",
@@ -677,7 +677,7 @@
       {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -864,8 +864,8 @@
   "stats": {
     "articles": 800,
     "bfAes": 57,
-    "alerts": 7,
-    "criticalAlerts": 2,
+    "alerts": 9,
+    "criticalAlerts": 4,
     "sourcesDistinct": 69
   },
   "topDevelopments": [
@@ -1134,11 +1134,11 @@
   ],
   "alerts": [
     {
-      "title": "US says naval blockade against Iran remains in effect",
-      "link": "https://www.aa.com.tr/en/americas/us-says-naval-blockade-against-iran-remains-in-effect/4009440",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-07-25T21:55:20.000Z",
-      "rating": "F2",
+      "title": "West Asia war LIVE: U.S. naval blockade against Iran remains in 'full effect' even as the two sides pause airstrikes",
+      "link": "https://www.thehindu.com/news/international/west-asia-war-iran-us-conflict-paused-donald-trump-gulf-countries-strait-of-hormuz-live-updates-july-26-2026/article71268545.ece",
+      "source": "The Hindu (Inde)",
+      "date": "2026-07-26T03:10:53.000Z",
+      "rating": "F1",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1150,18 +1150,50 @@
       ]
     },
     {
-      "title": "Iran says it sold $18bn of oil during war, ceasefire",
-      "link": "https://punchng.com/iran-says-it-sold-18bn-of-oil-during-war-ceasefire/?utm_source=rss.punchng.com&utm_medium=web",
-      "source": "Punch (Nigeria)",
-      "date": "2026-07-25T21:23:10.000Z",
-      "rating": "F6",
-      "evidence": "Source unique",
-      "level": "high",
+      "title": "Trois ans après le coup d'État, le Niger toujours en proie à l'instabilité et au terrorisme",
+      "link": "https://www.rfi.fr/fr/afrique/20260726-trois-ans-apr%C3%A8s-le-coup-d-%C3%A9tat-le-niger-toujours-en-proie-%C3%A0-l-instabilit%C3%A9-et-au-terrorisme",
+      "source": "RFI Afrique",
+      "date": "2026-07-26T02:55:10.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
       "bf": false,
       "majors": [
         {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
+          "type": "rupture",
+          "keyword": "coup d'état"
+        }
+      ]
+    },
+    {
+      "title": "US maintains naval blockade on Iran amid military pause",
+      "link": "https://news.cgtn.com/news/2026-07-26/US-maintains-naval-blockade-on-Iran-amid-military-pause-1P5iipmWOiI/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
+      "source": "CGTN (Chine, EN)",
+      "date": "2026-07-26T02:40:16.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "US says naval blockade against Iran remains in effect",
+      "link": "https://www.aa.com.tr/en/americas/us-says-naval-blockade-against-iran-remains-in-effect/4009440",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-07-25T21:55:20.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
         }
       ]
     },
@@ -1234,7 +1266,7 @@
       "link": "https://www.scmp.com/week-asia/politics/article/3361822/houthi-blockade-saudi-trade-threatens-wider-middle-east-conflict?utm_source=rss_feed",
       "source": "South China Morning Post",
       "date": "2026-07-25T08:00:18.000Z",
-      "rating": "F1",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1249,39 +1281,39 @@
   "narrativesByBloc": [
     [
       "afrique",
-      222
-    ],
-    [
-      "occident_fr",
-      106
+      218
     ],
     [
       "autre",
-      102
+      113
+    ],
+    [
+      "occident_fr",
+      96
     ],
     [
       "occident_us",
-      92
+      88
     ],
     [
       "golfe_mo",
-      83
+      84
     ],
     [
       "russie",
-      54
+      47
     ],
     [
-      "bf_local",
-      41
+      "chine",
+      44
     ],
     [
       "turquie",
       40
     ],
     [
-      "chine",
-      30
+      "bf_local",
+      40
     ],
     [
       "sahel",
@@ -1293,7 +1325,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 116,
+      "count": 119,
       "top": [
         {
           "title": "‎Burkina: le Capitaine Ibrahim Traoré est arrivé à Pô",
@@ -1346,7 +1378,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 61,
+      "count": 67,
       "top": [
         {
           "title": "ECOWAS needs our collective wisdom, not a shared amnesia, By Owei Lakemfa",
@@ -1399,7 +1431,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 28,
+      "count": 24,
       "top": [
         {
           "title": "Sudan Nashra: Burhan in Asmara, ceasefire initiative tops agenda | Museveni invites Burhan to Uganda over South Sudan elections, Burhan-Hemedti channel | Burhan accelerates state-led dialogue plan | Deadly RSF drone strikes along Chad border as forces prepare for possible battle over Tina",
@@ -1429,17 +1461,17 @@
           "rating": "A2"
         },
         {
-          "title": "Suppression de l’avancement automatique des fonctionnaires : le FDS plaide pour la concertation avant toute décision",
-          "link": "https://www.gabonreview.com/suppression-de-lavancement-automatique-des-fonctionnaires-le-fds-plaide-pour-la-concertation-avant-toute-decision/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
+          "title": "Nord-Kivu : reprise normale des activités socio-économiques à Masisi centre après les affrontements entre l'AFC/M23 et les Wazalendo",
+          "link": "https://actualite.cd/2026/07/25/nord-kivu-reprise-normale-des-activites-socio-economiques-masisi-centre-apres-les",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Nord-Kivu : reprise normale des activités socio-économiques à Masisi centre après les affrontements entre l'AFC/M23 et les Wazalendo",
-          "link": "https://actualite.cd/2026/07/25/nord-kivu-reprise-normale-des-activites-socio-economiques-masisi-centre-apres-les",
+          "title": "Walikale : une dispute entre militaires vire à la fusillade à Logu, deux civils tués",
+          "link": "https://actualite.cd/2026/07/25/walikale-une-dispute-entre-militaires-vire-la-fusillade-logu-deux-civils-tues",
           "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "S",
@@ -1452,7 +1484,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 36,
+      "count": 35,
       "top": [
         {
           "title": "Atteinte à l'ordre public et Fake news : Ouahbi veut durcir l'arsenal pénal",
@@ -1482,18 +1514,18 @@
           "rating": "F2"
         },
         {
-          "title": "L’Espérance de Tunis retire le numéro 5 | L’éternel hommage à Hédi Berrekhissa",
-          "link": "https://kapitalis.com/tunisie/2026/07/25/lesperance-de-tunis-retire-le-numero-5-leternel-hommage-a-hedi-berrekhissa/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Le RNI brandit à Dakhla le bilan de ses réalisations et rejette les « recrutements de la 90e minute »",
+          "link": "https://fr.hespress.com/482879-le-rni-brandit-a-dakhla-le-bilan-de-ses-realisations-et-rejette-les-recrutements-de-la-90e-minute.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Visas pour les Algériens : Paris révèle une forte baisse de 20 %",
-          "link": "https://www.tsa-algerie.com/visas-pour-les-algeriens-paris-revele-une-forte-baisse-de-20/",
-          "source": "TSA — Tout sur l'Algérie",
+          "title": "L’Espérance de Tunis retire le numéro 5 | L’éternel hommage à Hédi Berrekhissa",
+          "link": "https://kapitalis.com/tunisie/2026/07/25/lesperance-de-tunis-retire-le-numero-5-leternel-hommage-a-hedi-berrekhissa/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "D",
           "relevance": "A",
@@ -1505,7 +1537,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 107,
+      "count": 103,
       "top": [
         {
           "title": "Houthi blockade of Saudi trade threatens wider Middle East conflict",
@@ -1514,7 +1546,7 @@
           "zone": "8. Moyen-Orient",
           "theme": "M",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
           "title": "The Ticking Clock on the Strait of Hormuz",
@@ -1526,6 +1558,15 @@
           "rating": "F2"
         },
         {
+          "title": "West Asia war LIVE: U.S. naval blockade against Iran remains in 'full effect' even as the two sides pause airstrikes",
+          "link": "https://www.thehindu.com/news/international/west-asia-war-iran-us-conflict-paused-donald-trump-gulf-countries-strait-of-hormuz-live-updates-july-26-2026/article71268545.ece",
+          "source": "The Hindu (Inde)",
+          "zone": "8. Moyen-Orient",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
           "title": "Guerre Iran-Irak – « Saddam Hussein a dit à Sékou Touré : “Grand frère, toute proposition de solution que vous aurez à présenter à l’Iran, si elle accepte, je l’accepte” », révèle Madifing Diané",
           "link": "https://mediaguinee.com/2026/07/guerre-iran-irak-saddam-hussein-a-dit-a-sekou-toure-grand-frere-toute-proposition-de-solution-que-vous-aurez-a-presenter-a-liran-si-elle-accepte-je-laccepte/",
           "source": "Mediaguinee",
@@ -1535,22 +1576,13 @@
           "rating": "A2"
         },
         {
-          "title": "Iran War Live Updates: U.S.-Iran Strikes Abate, but Supporters of Both Sides Exchange Attacks",
-          "link": "https://www.nytimes.com/live/2026/07/25/world/iran-war-us-strikes-trump-oil",
-          "source": "NYT World",
+          "title": "Trump decides not to escalate Iran conflict as Middle East interceptor stockpile decreases - report",
+          "link": "https://www.jpost.com/middle-east/iran-news/article-903628",
+          "source": "Jerusalem Post",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "B2"
-        },
-        {
-          "title": "Houthis claim attack on Saudi oil refinery as Iran war widens to Red Sea",
-          "link": "https://www.washingtonpost.com/world/2026/07/25/houthis-claim-attack-saudi-oil-refinery-iran-war-widens-red-sea/",
-          "source": "Washington Post World",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         }
       ]
     },
@@ -1558,7 +1590,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 167,
+      "count": 173,
       "top": [
         {
           "title": "CDM 2026 : L’Espagne sacrée, les États-Unis grands gagnants financiers",
@@ -1579,13 +1611,13 @@
           "rating": "A2"
         },
         {
-          "title": "Ukraine insists Japan’s pacifist rules permit Patriot missile help",
-          "link": "https://www.scmp.com/news/world/europe/article/3361829/ukraine-insists-japans-pacifist-rules-permit-patriot-missile-help?utm_source=rss_feed",
-          "source": "South China Morning Post",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
+          "title": "A Brief Exchange That Shows the Enormous Difference Between Trump and Obama",
+          "link": "https://www.theatlantic.com/culture/2026/07/obama-caitlin-clark/688073/?utm_source=feed",
+          "source": "The Atlantic",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "F2"
         },
         {
           "title": "EN DIRECT, guerre en Ukraine : au moins 20 morts en Ukraine et en Russie, selon les autorités des deux pays",
@@ -1620,42 +1652,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-07-25T22:09:46.262Z",
+      "at": "2026-07-26T03:54:36.876Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-25T22:09:46.269Z",
+      "at": "2026-07-26T03:54:36.882Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-25T22:10:19.079Z",
+      "at": "2026-07-26T03:55:06.344Z",
       "agent": "Agent Collecte RSS",
-      "message": "113/170 flux OK, 1943 articles"
+      "message": "114/170 flux OK, 1951 articles"
     },
     {
-      "at": "2026-07-25T22:10:22.083Z",
+      "at": "2026-07-26T03:55:09.459Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-25T22:10:22.408Z",
+      "at": "2026-07-26T03:55:09.827Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-25T22:10:22.414Z",
+      "at": "2026-07-26T03:55:09.831Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-07-25T22:10:22.415Z",
+      "at": "2026-07-26T03:55:09.832Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-07-25T22:10:22.415Z",
+      "at": "2026-07-26T03:55:09.832Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
