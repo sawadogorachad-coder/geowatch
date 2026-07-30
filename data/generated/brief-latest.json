@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T09:35:45.855Z",
+  "generatedAt": "2026-07-30T11:20:59.854Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1932,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1894,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -21,11 +21,6 @@
         "id": "rss_sidwaya",
         "name": "Sidwaya",
         "count": 10
-      },
-      {
-        "id": "rss_aib",
-        "name": "AIB — Agence Information BF",
-        "count": 20
       },
       {
         "id": "rss_wakatsera",
@@ -45,17 +40,12 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
-      },
-      {
-        "id": "rss_netafrique",
-        "name": "Net Afrique (BF)",
-        "count": 10
       },
       {
         "id": "rss_observ_bf",
@@ -93,13 +83,13 @@
         "count": 10
       },
       {
-        "id": "rss_tchadinfos",
-        "name": "Tchadinfos",
+        "id": "rss_tamtam",
+        "name": "Tamtaminfo (Niger)",
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
+        "id": "rss_tchadinfos",
+        "name": "Tchadinfos",
         "count": 10
       },
       {
@@ -143,6 +133,11 @@
         "count": 30
       },
       {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "count": 20
+      },
+      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
@@ -171,11 +166,6 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -211,6 +201,11 @@
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
+      },
+      {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "count": 0
       },
       {
         "id": "rss_madamasr",
@@ -375,7 +370,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 4
+        "count": 3
       },
       {
         "id": "rss_fp",
@@ -400,7 +395,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 26
+        "count": 25
       },
       {
         "id": "rss_bbc_africa",
@@ -420,7 +415,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -490,7 +485,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 28
+        "count": 27
       },
       {
         "id": "rss_tehran",
@@ -510,7 +505,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 24
       },
       {
         "id": "rss_nikkei",
@@ -565,6 +560,16 @@
     ],
     "failedSources": [
       {
+        "id": "rss_aib",
+        "name": "AIB — Agence Information BF",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_netafrique",
+        "name": "Net Afrique (BF)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
@@ -595,14 +600,14 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_tamtam",
-        "name": "Tamtaminfo (Niger)",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "fetch failed"
       },
       {
         "id": "rss_cridem",
@@ -660,11 +665,6 @@
         "error": "HTTP 500"
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -673,6 +673,11 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -718,11 +723,6 @@
         "id": "rss_le360",
         "name": "Le360 (Maroc)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_libya_obs",
@@ -863,26 +863,61 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 42,
-    "alerts": 10,
-    "criticalAlerts": 4,
-    "sourcesDistinct": 70
+    "bfAes": 36,
+    "alerts": 13,
+    "criticalAlerts": 8,
+    "sourcesDistinct": 69
   },
   "topDevelopments": [
     {
-      "title": "Affaire démolition des constructions d’Italia Construction en Côte d’Ivoire: Qui est Moussa Douamba, le propriétaire qui a défié l’État et les promoteurs ?",
-      "link": "https://netafrique.net/affaire-demolition-des-constructions-ditalia-construction-en-cote-divoire-qui-est-moussa-douamba-le-proprietaire-qui-a-defie-letat-et-les-promoteurs/",
-      "pubDate": "2026-07-30T02:47:36.000Z",
-      "description": "La victoire judiciaire obtenue le 21 juillet 2026 par Moussa Douamba contre la société Italia Construction n'est pas seulement celle d'un propriétaire foncier, c'est celle d'un homme forgé par l'épreuve. À 66 ans, ce leader respecté de la diaspora burkinabè, ancien responsable du Conseil des Burkinabè de l’extérieur, vient de voir le tribunal de Grand-Bassam ordonner la démolition d'un programme immobilier illégalement bâti sur son hectare de terre à Modeste. Mais pour comprendre la ténacité de cet homme qui a refusé 20 millions de FCFA pour un terrain estimé à un milliard, il faut plonger dans son passé. De ses années de « garibou » à Ouagadougou jusqu'à ses marches héroïques entre Boromo et la capitale, Moussa Douamba prouve que l'endurance est son arme la plus redoutable face à l'injustice. Dans les travées du tribunal de Grand-Bassam, le visage de Moussa Douamba ne trahit aucune fatigue malgré neuf années de procédure. Pour cet opérateur économique de 66 ans, la décision ordonnant le déguerpissement d'Italia Construction et la démolition des bâtiments sur sa parcelle est l'aboutissement d'un combat qu'il était programmé pour gagner. Moussa Douamba n'est pas un héritier. Celui qui est aujourd'hui une figure marquante de la communauté burkinabè en Côte d'Ivoire raconte volontiers son parcours avec humilité. « J'aime me battre », confie-t-il, rappelant qu'il a été « garibou » (élève mendiant) dans les rues de Ouagadougou. C'est dans cette école de la vie, marquée par la privation et la persévérance, qu'il a puisé sa force de caractère. Cette endurance hors du commun, il l'a illustrée physiquement en marchant de Boromo à Ouagadougou à quatre reprises, un trajet de près de 180 kilomètres qu'il a dompté par la seule force de sa volonté. Neuf ans de « marche » judiciaire Cette capacité à ne jamais abandonner a été mise à rude épreuve depuis 2017. Face à un promoteur qui a poursuivi les travaux malgré les sommations et les titres fonciers réguliers (ACD publié en 2018), Moussa Douamba a dû multiplier les recours. Comme il l'explique avec émotion, il a littéralement « marché » pendant près d'une décennie d'une administration à l'autre pour protéger son bien. Rien n'a pu ébranler son intégrité, pas même les propositions financières du promoteur. Italia Construction lui a proposé 20 millions de FCFA pour racheter son terrain, une offre qu'il a balayée d'un revers de main, sachant que la valeur réelle de son hectare, désormais au cœur d'un quartier prisé, frise le milliard de FCFA. Reconnu propriétaire légitime par le Conseil d’État en 2025 puis par le tribunal de première instance en 2026, Moussa Douamba incarne désormais l'espoir pour de nombreux propriétaires spoliés. Ancien défenseur des intérêts des Burkinabè de l'étranger, son parcours entrepreneurial rejoint aujourd'hui son engagement communautaire. Pour Moussa Douamba, cette décision de démolition des constructions litigieuses est plus qu'un verdict financier : c'est la validation d'une vie de labeur commencée dans la poussière de Ouagadougou et couronnée par la reconnaissance de ses droits en terre ivoirienne. À 66 ans, le vieux marcheur de Boromo peut enfin s'arrêter, non pas par fatigue, mais parce qu'il est enfin arrivé à destination : celle de la justice rendue. L’article Affaire démolition des constructions d’Italia Construction en Côte d'Ivoire: Qui est Moussa Douamba, le propriétaire qui a défié l’État et les promoteurs ? est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
+      "title": "Burkina Faso/Médias : Face à l'intelligence artificielle, Dr Cyriaque Paré appelle à une nouvelle culture de la vérification de l'information",
+      "link": "https://lefaso.net/spip.php?article148263",
+      "pubDate": "2026-07-30T09:56:59.000Z",
+      "description": "La frontière entre le vrai, le faux et le vraisemblable devient de plus en plus difficile à distinguer. C'est par ce constat que le Dr Cyriaque Paré plante le décor d'une nouvelle réalité informationnelle à laquelle les professionnels des médias doivent désormais faire face. Son intervention s'inscrit dans le cadre de l'atelier de formation et de sensibilisation organisé au profit des journalistes et web-activistes sur la gestion de l'information en période de crise, du 27 au 29 juillet 2026 à Koudougou. La thématique abordée par l'expert des sciences de l'information et de la communication a porté sur « La manipulation de l'information à l'ère de l'intelligence artificielle ». Journaliste de formation, le Dr Cyriaque Paré est chercheur à l'Institut des sciences des sociétés (INSS) du Centre national de la recherche scientifique et technologique (CNRST). À travers une analyse à la fois théorique, historique et pratique de la manipulation de l'information, le Dr Cyriaque Paré a montré comment l'intelligence artificielle transforme profondément les modes de production et de diffusion de l'information. Il y a encore quelques années, les préoccupations liées aux fausses informations portaient principalement, dit-il, sur des phénomènes connus. Des phénomènes comme les rumeurs diffusées sur les réseaux sociaux, les montages photographiques réalisés avec des logiciels de retouche ou encore les faux profils utilisés pour influencer les débats publics. « Aujourd'hui, nous sommes entrés dans une nouvelle époque. Une époque où une personne munie d'un ordinateur ou d'un téléphone portable peut produire en quelques minutes un faux communiqué crédible, une image qui n'a jamais existé, une vidéo d'apparence authentique ou encore imiter presque parfaitement la voix d'une personnalité publique », souligne le Dr Paré. Pour le chercheur et enseignant, cette évolution marque une rupture majeure. Le défi, explique-t-il, n'est plus uniquement la circulation des fausses informations, mais aussi l'accessibilité des outils permettant de les fabriquer. Désormais, quelques instructions formulées en langage courant à une intelligence artificielle peuvent suffire pour générer un texte, une image, une voix ou une vidéo avec un réalisme impressionnant. Selon le Dr Paré, cette démocratisation de l'intelligence artificielle constitue une opportunité considérable dans plusieurs domaines comme l'éducation, la recherche, la création de contenus ou encore l'innovation. Mais elle représente également une source de préoccupations lorsqu'elle est utilisée pour tromper, manipuler ou semer la confusion. La nouvelle puissance de la manipulation Dans son analyse, le Dr Cyriaque Paré invite à éviter une erreur d'interprétation, celle qui laisserait croire que l'intelligence artificielle serait à l'origine de la manipulation de l'information. Car la propagande, mentionne-t-il, existe depuis bien longtemps. Il évoque notamment les stratégies d'influence décrites dans les écrits anciens, les phénomènes de désinformation qui traversent l'histoire humaine, ainsi que l'existence de faux documents ayant marqué les sociétés contemporaines. La nouveauté, explique-t-il, réside dans l'ampleur du phénomène. L'intelligence artificielle, relève-t-il, agit comme un accélérateur. Elle permet de produire davantage de contenus plus rapidement, à moindre coût et avec un niveau de réalisme parfois inédit. Autrement dit, la technologie ne change pas la nature humaine de la manipulation, mais elle augmente considérablement ses capacités de diffusion et son potentiel d'impact. Une révolution comparable à l'arrivée d'Internet Pour mesurer l'ampleur de cette transformation, le conférencier compare l'arrivée de l'intelligence artificielle générative aux grandes ruptures technologiques qui ont marqué l'histoire récente. Après la radio, la télévision, Internet et les réseaux sociaux, l'humanité connaît aujourd'hui une nouvelle révolution. En moins de cinq ans, ajoute-t-il, des outils capables de rédiger des textes, produire des illustrations, générer des vidéos, cloner des voix, sont devenus accessibles au grand public. Cette rapidité, soutient le communicologue, explique le sentiment de décalage ressenti par de nombreux acteurs tels que les journalistes, chercheurs, régulateurs et citoyens ayant parfois l'impression de courir derrière des innovations qui évoluent à un rythme extrêmement rapide. Comprendre les concepts pour faire face aux manipulations Au-delà des outils, le Dr Cyriaque Paré insiste sur l'importance de maîtriser les concepts. Selon lui, l'expression “fake news”, souvent utilisée dans le débat public pour désigner toute information fausse, manque de précision. Elle peut également être instrumentalisée pour discréditer certains médias ou certaines informations, car étiqueter une information de “fake” ne suffit pas à dire qu'elle est effectivement fausse. Le chercheur propose plutôt de distinguer plusieurs notions. « La mésinformation est une information fausse ou inexacte diffusée sans intention de nuire ». C'est le cas par exemple, illustre-t-il, d'une personne qui partage une ancienne photographie en pensant qu'elle illustre un événement récent. Vient ensuite la définition de la désinformation, qui suppose une intention de tromper. À en croire l'expert, elle peut poursuivre des objectifs politiques, économiques, idéologiques ou stratégiques avec pour but d'influencer une opinion, provoquer la peur, discréditer une institution ou manipuler une population. La malinformation, elle, correspond à une autre forme de manipulation, telle qu'une information authentique, mais sortie de son contexte ou utilisée de manière sélective afin de nuire, explique-t-il. Le conférencier ajoute également la notion de non-information, qui consiste à diffuser des contenus secondaires ou non pertinents afin de distraire, de détourner l'attention du public et de masquer des enjeux importants. De son point de vue, ces distinctions sont essentielles pour les professionnels de l'information, « Il ne suffit plus donc de se demander si un contenu est vrai ou faux. Il faut également interroger son contexte, son intention et les effets recherchés », insiste-t-il. Les nouveaux outils de la manipulation L'un des points centraux de la communication du Dr Paré concerne les nouvelles formes de contenus manipulés. Si autrefois une fausse information pouvait être repérée grâce à une mauvaise qualité rédactionnelle, le communicateur souligne que cette époque est aujourd'hui révolue. Car désormais, une intelligence artificielle peut produire un faux communiqué ou un faux discours avec une structure convaincante, un vocabulaire adapté, un ton administratif ou journalistique crédible. Cela a un impact majeur sur la profession des journalistes ; si bien que la qualité d'écriture ne constitue plus une garantie d'authenticité. La question essentielle devient désormais « Qui est la source ? ». Le chercheur alerte également sur une pratique très répandue. Celle liée au fait que de moins en moins de personnes prennent le soin d'avoir une bonne compréhension des contenus en ligne. Beaucoup d'utilisateurs consultent uniquement un titre, parfois quelques lignes, avant de partager une information. C'est précisément, poursuit-il, sur la précipitation que les campagnes de désinformation exploitent. Pendant longtemps, rappelle Dr Cyriaque Paré, la photographie était considérée comme une preuve. L'expression populaire selon laquelle une image vaut mille mots traduit cette confiance. Mais il affirme qu'aujourd'hui cette certitude doit être nuancée. « Une image peut aussi raconter mille mensonges », a-t-il interpellé. Les générateurs d'images permettent désormais de créer des foules inexistantes, des bâtiments prétendument détruits, des camps de déplacés fictifs, des scènes impliquant des responsables publics qui n'ont jamais existé. La différence fondamentale avec les anciennes manipulations, déclare le chercheur, est qu'il ne s'agit plus simplement de modifier une photographie existante. L'image, précise-t-il, peut être entièrement créée artificiellement, sans aucun original permettant une comparaison. Les deepfakes et le clonage vocal De l'avis de l'expert, les vidéos truquées par intelligence artificielle, ou deepfakes, constituent l'un des défis majeurs. Grâce aux progrès technologiques, il est désormais possible de reproduire les expressions du visage, les mouvements des lèvres, les gestes, la voix. Une personne peut ainsi apparaître dans une vidéo en train de prononcer des propos qu'elle n'a jamais tenus. Même si les productions les plus sophistiquées restent complexes à réaliser, leur qualité progresse rapidement. Le Dr Paré conseille aux journalistes et web-activistes de redoubler de vigilance. Plus une vidéo paraît incroyable, plus elle mérite d'être vérifiée. Il attire également l'attention sur le clonage vocal. Quelques secondes d'un enregistrement peuvent parfois suffire à reproduire une voix de manière troublante. Dans des sociétés comme les nôtres où les messages vocaux circulent massivement sur WhatsApp, cette technologie constitue un défi particulier. Une voix familière inspire naturellement confiance, mais cette confiance peut désormais être exploitée, prévient-il. Quand le faux devient populaire La manipulation ne repose pas seulement sur la fabrication des contenus. Elle concerne aussi leur diffusion. Le Dr Paré explique le rôle des bots, ces programmes capables de publier, partager ou commenter automatiquement. Pris isolément, un compte automatisé a peu d'impact. Mais plusieurs centaines ou milliers de comptes peuvent créer une impression de majorité. C'est ce qu'il appelle une illusion de majorité. « Un contenu peut alors sembler largement accepté alors qu'une partie de sa visibilité repose sur une activité artificielle. À cela s'ajoute le rôle des algorithmes des plateformes numériques. Ces derniers favorisent souvent les contenus qui génèrent de fortes réactions émotionnelles : peur, colère, indignation ou surprise. Les manipulateurs exploitent cette logique en produisant des contenus destinés à provoquer immédiatement des réactions », a-t-il expliqué. Pour les journalistes, une règle s'impose, celle qu'un contenu viral n'est jamais automatiquement un contenu fiable. Pour Dr Cyriaque Paré, le contexte burkinabè rend cette question particulièrement sensible. Depuis plusieurs années, le pays traverse une crise sécuritaire complexe. Une crise militaire, humanitaire et économique, mais également informationnelle. Dans un tel contexte, Dr Paré rappelle que chaque attaque, déplacement de populations, opération de sécurisation ou déclaration officielle donne lieu à une intense circulation de contenus numériques. Dans cet environnement, dit-il, coexistent des informations exactes, des erreurs involontaires et des contenus volontairement trompeurs. Un mélange qui crée un brouillard informationnel dans lequel il devient difficile pour les citoyens de distinguer les faits des rumeurs. Cette situation occasionne ainsi une conséquence grave. Car lorsque la confiance disparaît, la vulnérabilité aux manipulations augmente. Selon le chercheur, les manipulations peuvent opposer des communautés, renforcer des préjugés, alimenter la peur, provoquer des tensions, fragiliser les institutions. Il évoque également un paradoxe majeur. Celui qu'à force de voir circuler de faux contenus, certaines personnes finissent par penser que plus rien n'est vrai. Cette situation, appelée par certains chercheurs « dividende du menteur », permet à des personnes réellement mises en cause de rejeter des preuves authentiques en affirmant qu'elles sont des deepfakes. Face à ces défis, Dr Cyriaque Paré refuse toute fatalité. Pour lui, les journalistes et web-activistes sont des acteurs essentiels de la résilience informationnelle. Cette résilience désigne la capacité d'une société à résister aux chocs, à s'adapter et à continuer à fonctionner malgré les difficultés. Dans le domaine de l'information, elle suppose la capacité à produire des contenus fiables, vérifier les informations, corriger les erreurs, préserver la qualité du débat public. Et de ce fait, chaque geste compte. Un journaliste qui vérifie avant publication renforce cette résilience, un créateur de contenu qui corrige une erreur contribue à cette protection, une plateforme qui refuse d'amplifier une rumeur participe également à cet effort collectif. La méthode S.T.O.P. Pour aider les participants à adopter des réflexes de vérification face à la prolifération des contenus manipulés, le Dr Cyriaque Paré a proposé une méthode simple, résumée par l'acronyme S.T.O.P. La première étape “S'' pour Source, consiste à identifier l'auteur ou l'émetteur de l'information. S'agit-il d'un média reconnu, d'une institution officielle, d'un journaliste identifiable, d'un témoin direct ou au contraire d'un compte anonyme créé récemment ? Pour les documents circulant sur les réseaux sociaux, il recommande de toujours vérifier leur existence sur les plateformes officielles des institutions concernées. Vient ensuite la deuxième étape “T'' pour Temps. Elle invite à s'interroger sur la date de production du contenu, son contexte et les circonstances de sa diffusion. Cela, afin d'éviter de présenter une ancienne information comme un fait récent. Avec la troisième étape “O” comme Origine, le conférencier exhorte les journalistes et web-activistes à remonter jusqu'à la source initiale du document et à déterminer s'il s'agit de l'original, d'une capture d'écran, d'une copie ou d'un montage. Il rappelle que plus une information s'éloigne de son origine, plus le risque de manipulation augmente. Enfin, l'étape “P'' comme Preuves, rappelle qu'aucune affirmation ne doit être considérée comme un fait sans éléments de vérification solides. « Sans preuve, une affirmation reste une affirmation », même venant parfois d'une autorité, insiste-t-il, soulignant qu'un contenu ne devient pas vrai parce qu'il est massivement partagé, pas plus qu'il ne devient faux parce qu'il est simplement étiqueté « Faux » ou « Fake ». Aux web-activistes et créateurs de contenus, il invite à s'abstenir de toute publication au cas où ces derniers auraient des doutes sur la véracité et l'utilité de l'information, mais aussi sur sa probabilité à engendrer ou aggraver des tensions. Car, rappelle-t-il, le clic ne doit jamais devenir plus important que les conséquences sociales d'une publication. En conclusion, le Dr Cyriaque Paré rappelle que l'intelligence artificielle est une révolution, mais pas une fatalité. Les précédentes évolutions technologiques avaient déjà suscité des inquiétudes sur l'avenir du journalisme. Pourtant, jamais le besoin de professionnels capables de distinguer le vrai du vraisemblable n'a été aussi fort. À l'ère où chacun peut produire et diffuser de l'information, le journaliste se distingue moins par sa capacité à publier rapidement que par sa méthode, sa rigueur, son indépendance, son éthique, son professionnalisme. « Vérifier n'est pas perdre du temps. C'est gagner en crédibilité », insiste-t-il. Car, « Dans un environnement où les technologies produiront toujours davantage de contenus, la véritable différence reposera finalement sur une capacité profondément humaine qu'est notamment le discernement ». Hamed Nanéma Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "T",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "L",
+      "_desk": "A1"
+    },
+    {
+      "title": "Ghana must export mining innovation, not just minerals — Alhaji Ali Ibrahim",
+      "link": "https://www.myjoyonline.com/ghana-must-export-mining-innovation-not-just-minerals-alhaji-ali-ibrahim/",
+      "pubDate": "2026-07-30T10:21:35.000Z",
+      "description": "Renowned indigenous mining entrepreneur and Founder of Rabotec Group, Alhaji Ali Ibrahim, has called on Ghana to move beyond exporting raw minerals and focus on developing world-class mining technologies and systems that can compete globally. Speaking in an interview, Ali Ibrahim said that although Ghana has more than a century of mining experience, the country has yet to transform that knowledge into indigenous innovations that can be exported to the rest of the world. According to him, Ghana should leverage its abundant mineral resources and technical expertise to create homegrown mining solutions that other countries would be willing to adopt. “My biggest focus is not just to say Ghana is the heart of mining in Africa. We should be able to develop a system that other nations and continents will come here to pay for because it was created by Ghanaians.” He cited industry analyses indicating that Ghana still possesses mineral resources estimated to be nearly three times what has been extracted over the past century, suggesting the country has enough reserves to sustain mining for another 300 years. “We have over 300 years of mineral resources ahead of us. It is time for Ghana to create mining systems that the world will come here to buy.” Ali Ibrahim believes this presents a unique opportunity for young Ghanaian engineers, innovators and entrepreneurs to collaborate and develop technologies that will leave a lasting legacy for the country. “If 10 or 15 young engineers come together with a unique mining innovation, I’m ready to invest in them. I want to be part of a legacy that the world will recognise as proudly Ghanaian.” Reflecting on his journey as the head of an indigenous mining company, Ali Ibrahim said the greatest challenge facing local businesses is not access to capital but the lack of confidence Ghanaians have in one another. “The biggest challenge is not finance. It is Ghanaians believing in Ghanaians.” He argued that indigenous entrepreneurs often face criticism and opposition from their own people, making leadership more difficult than it should be. “Being a leader in Ghana is like being on a political platform. You always have an opposition waiting for the day you make a mistake.” Describing what he sees as a national mindset that must change, Ibrahim said successes are often forgotten while failures are magnified. “Our good days are written on water, but our bad days are written on brass.” He also recounted instances where former employees allegedly spread false rumours about his company after resigning, saying such actions discourage entrepreneurship and weaken indigenous businesses. Questioning why many Ghanaians readily patronise foreign-owned companies while doubting local enterprises, he urged government, industry stakeholders and the public to support indigenous businesses capable of driving innovation, creating jobs and transforming the economy. Rabotec’s Expanding African Footprint Ali Ibrahim revealed that Rabotec is currently managing mining and infrastructure projects valued between US$1.5 billion and US$1.8 billion across several African countries. The company’s operations span Ghana, Guinea, Mali, Sierra Leone and Burkina Faso, covering mining, infrastructure development and mineral processing. According to him, Rabotec is executing projects worth approximately US$350 million in Mali, US$285 million in Sierra Leone, US$250 million in Burkina Faso, and US$250 million in Guinea, where the company is responsible for complete mining operations, including drilling, blasting, loading, hauling and mine management. In Ghana, Rabotec is executing a US$400 million mining contract at Asanko Gold after the client renewed and expanded an earlier agreement. “Currently, we are running projects worth between US$1.5 billion and US$1.8 billion over a five-year period. That reflects the scale of Rabotec’s operations across Africa.” Investing in Sustainable Mining Ali Ibrahim highlighted Rabotec’s leadership in the design and construction of Tailings Storage Facilities (TSFs), engineered facilities used to safely contain mining waste generated during mineral processing. He said the company has built several of Ghana’s major TSFs and has undertaken similar projects across the continent, including in Sierra Leone. “TSF construction is one of our strongest areas. We have built most of the large-scale tailings storage facilities in Ghana, and we’ve also delivered major projects outside the country.” He explained that TSFs play a vital role in preventing hazardous mining waste from contaminating nearby communities and the environment, adding that all facilities undergo strict regulatory inspections and approvals. He also disclosed that Rabotec has obtained ISO certification and is investing in green mining technologies to align with evolving global environmental standards. “We are embracing every environmental and safety requirement. We are investing in green mining technologies because that is where the future of the industry is heading.” Ambition to Become a Mine Owner Beyond providing mining services, Ibrahim reiterated his ambition to transform Rabotec into a fully integrated mining company that owns and operates its own large-scale mines across Africa. “My ambition is clear. Very soon, you will hear of Rabotec Mine. We are developing concessions in Ghana and other African countries, and we are working towards becoming mine owners.” He expressed confidence that the company will begin operating its first fully owned large-scale gold mine within the next five years. Quiet Philanthropy Beyond business, Ibrahim said one of the initiatives closest to his heart is supporting prison inmates and helping former inmates rebuild their lives through employment. He stressed that many inmates are imprisoned due to circumstances such as unpaid fines and other non-violent offences and deserve an opportunity to start afresh. “Not everybody in prison is a criminal. Sometimes circumstances put people behind bars, and when they come out, they deserve another chance.” According to him, several former inmates are now employed across Rabotec’s operations as drivers, equipment operators and skilled artisans. He disclosed that even before the government’s Nkoko Nkitinkiti initiative was introduced in 2025, he had donated day-old chicks to inmates to equip them with livelihood skills and support their reintegration into society. His corporate social responsibility initiatives also include support for hospitals, orphanages, flood relief efforts, dredging waterways in affected communities, constructing mosques and responding to humanitarian emergencies wherever assistance is needed. Investing in People Alhaji Ali Ibrahim revealed that, under his leadership, Rabotec has trained and mentored more than 300 employees who entered the mining industry with little or no prior technical knowledge. “I have taken people who knew absolutely nothing about mining and today they are supervisors, superintendents, plant operators and industry professionals. That gives me great satisfaction as a CEO.” He estimated that Rabotec currently employs more than 5,000 people directly across its operations, with the livelihoods of approximately 20,000 people supported through the company’s employment opportunities. Overcoming Challenges Despite the company’s rapid growth, Ali Ibrahim acknowledged that the journey has not been without setbacks. He revealed that one of Rabotec’s operational sites suffered a devastating attack this year when unidentified individuals allegedly set heavy mining equipment ablaze, causing losses running into tens of millions of dollars. “We were hit by a calamity. Some unknown people attacked one of our operational sites and burnt equipment worth almost US$30 million. But we have overcome it and moved on.” He also noted that Ghana’s local content and localisation policies are increasingly shaping mining regulations across West Africa, requiring companies to strengthen local partnerships while remaining competitive. “Most countries in the sub-region are adopting Ghana’s localisation policies. We comply with local content requirements everywhere we operate, but the changing regulations remain a challenge.” Despite these challenges, Alhaji Ali Ibrahim said Rabotec continues to expand its footprint across Africa, with exploration and mining interests in Ghana, Mali, Sierra Leone and newly acquired concessions in Guinea. Looking ahead, he said the company’s long-term vision is to evolve from one of Africa’s leading mining contractors into a major mine owner and gold producer, while investing heavily in sustainability, compliance and innovation to position itself for the next phase of growth in Africa’s mining industry. Away from business, Alhaji Ali Ibrahim is a devoted family man, happily married and blessed with children.",
+      "_source": "MyJoyOnline (Ghana)",
+      "_sourceId": "rss_myjoyonline",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military"
+        "humanitarian",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -895,11 +930,11 @@
       },
       "_rating": "F2",
       "_score": 115,
-      "_zone": 1,
+      "_zone": 2,
       "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
+      "_zoneShort": "2. AO anglo. & côtière",
       "_relevance": "A",
-      "_desk": "A1"
+      "_desk": "A2"
     },
     {
       "title": "99e anniversaire de la fondation de l’armée populaire de Chine: l’évènement célébré à Ouagadougou",
@@ -935,171 +970,6 @@
       "_desk": "A1"
     },
     {
-      "title": "Le président du CSD-DS, ministre de la sécurité : « Nous avons le devoir historique de léguer aux générations futures un Burkina Faso libre, souverain, sécurisé et prospère »",
-      "link": "https://lefaso.net/spip.php?article148256",
-      "pubDate": "2026-07-29T23:22:00.000Z",
-      "description": "Le ministre de la sécurité, Mahamadou Sana, a présidé, le mercredi 29 juillet 2026 à Ouagadougou, la revue à mi-parcours 2026 du Cadre sectoriel de dialogue « défense-sécurité ». Par cette instance, il s'est agi pour les membres de dresser un bilan des actions menées au cours du premier semestre de l'année et de calibrer les perspectives. Au terme du premier semestre de l'année 2026, le secteur peut, retient-on, se prévaloir de résultats encourageants, obtenus malgré un contexte de défis particulièrement exigeant. « Grâce à la détermination des Forces de défense et de sécurité, à l'engagement patriotique des Volontaires pour la défense de la patrie et au soutien constant des populations, le taux de reconquête et de sécurisation du territoire national a atteint le taux de 74,53 %. (…). S'agissant du redéploiement des services de la Police nationale et de la Gendarmerie nationale, le niveau de mise en œuvre du décret portant détermination des zones de compétence atteint un taux global de 75 %. Cette avancée contribue au renforcement de la couverture sécuritaire du territoire et rapproche davantage les services de sécurité des citoyens. Par ailleurs, les capacités humaines de notre dispositif de défense et de sécurité continuent de se consolider. En effet, au cours de la première moitié de l'année, plus de 15 000 éléments des Forces de défense et de sécurité ainsi que des Volontaires pour la défense de la patrie ont bénéficié d'actions de renforcement de capacités, améliorant ainsi notre aptitude collective à répondre efficacement aux défis sécuritaires », a présenté le président du Cadre sectoriel de dialogue « défense-sécurité » (CSD-DS), le ministre de la sécurité, Mahamadou Sana. Ce résultat traduit, relève-t-il, les progrès accomplis dans la restauration de l'autorité de l'État et la sécurisation de nombreuses localités autrefois sous l'emprise des groupes armés terroristes. L'évaluation à mi-parcours fait ressortir un taux d'exécution physique global de 42,85 % et un taux d'exécution financière de 29,52 %. « Ces niveaux d'exécution traduisent les contraintes auxquelles notre secteur demeure confronté, notamment en matière de mobilisation des ressources, de réalisation de certaines activités structurantes et de persistance des défis sécuritaires. Ils nous interpellent collectivement et nous rappellent la nécessité d'accélérer la mise en œuvre de nos actions afin d'atteindre les objectifs fixés pour l'année 2026. La présente revue constitue donc un cadre privilégié pour apprécier avec objectivité les performances enregistrées, analyser les difficultés rencontrées et prendre les mesures correctives nécessaires. Elle devra également permettre d'actualiser notre programmation afin de prendre en compte les orientations stratégiques du gouvernement ainsi que les instructions du camarade Premier ministre visant à optimiser la mise en œuvre du Plan RELANCE 2026-2030 », déroule le président du Cadre sectoriel de dialogue « défense-sécurité », à l'ouverture des travaux. Les participants, observant un instant pieux en la mémoire des Forces combattantes tombées sur le champ d'honneur. Lien utile : Burkina : \"74,53 % du territoire est reconquis, pacifié et sécurisé, avec le retour progressif des populations et de l'administration\", annonce le ministre de la Défense L'autorité a ensuite rappelé que le Plan RELANCE 2026-2030 assigne une ambition claire ; celle d'accélérer la transformation structurelle du pays, en s'appuyant avant tout sur ses propres forces, les ressources nationales et la capacité de résilience. Dans cette dynamique, poursuit le ministre Sana, le secteur « Défense-Sécurité » demeure le socle de toutes les politiques publiques, car, sans sécurité, il ne saurait y avoir ni développement durable, ni cohésion sociale, ni prospérité partagée. C'est pourquoi a-t-il noté que cette revue constitue un cadre privilégié pour apprécier avec objectivité les performances enregistrées, analyser les difficultés rencontrées et prendre les mesures correctives nécessaires. Elle vise à actualiser la programmation, afin de prendre en compte les orientations stratégiques du gouvernement ainsi que les instructions du Premier ministre, de sorte à optimiser la mise en œuvre du Plan RELANCE 2026-2030. Selon son président, l'ambition demeure claire : faire du secteur « Défense-Sécurité » un puissant levier de reconquête territoriale, de stabilité institutionnelle et de développement endogène. Pour y parvenir donc, il faut renforcer la coordination entre les acteurs, améliorer l'efficacité des interventions, l'utilisation des ressources disponibles et consolider, à tous les niveaux, la culture de la performance et du résultat. « Dans cette phase décisive de notre histoire, les défis restent immenses, mais notre détermination l'est encore plus. Chaque localité reconquise, chaque service public rouvert et chaque portion de territoire préservée constituent une victoire collective du peuple burkinabè. (…). Les générations futures jugeront notre capacité à relever les défis de notre époque. Nous avons le devoir historique de léguer aux générations futures un Burkina Faso libre, souverain, sécurisé et prospère », a affiché le ministre de la sécurité, Mahamadou Sana, président du CSD-DS, réaffirmant « la ferme volonté » du gouvernement de poursuivre les efforts de renforcement des capacités opérationnelles, logistiques et humaines des forces engagées sur le terrain, sous le leadership éclairé du chef de l'État, le capitaine Ibrahim Traoré. \"Chaque avancée enregistrée est le fruit d'une volonté collective, surtout du courage et de l'engagement de nos héros qui consentent, chaque jour, les plus lourds sacrifices pour préserver notre souveraineté\" (président du (CSD-DS) Rappelons au passage que le Cadre sectoriel de dialogue « défense-sécurité » (CSD-DS) comprend plusieurs ministères, dont, et en plus du ministère de la Guerre et de la défense patriotique et du ministère de la Sécurité, le ministère de l'Administration territoriale et de la mobilité, le ministère de la Famille et de la solidarité. Lire aussi : Burkina/Évaluation gouvernementale : Le ministre de la sécurité atteint 62,81 % de son contrat d'objectif 2026 O.L. et Dominique Ouédraogo Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina: le personnel du ministère de la Guerre informé sur l’importance et la gestion des archives",
-      "link": "https://www.wakatsera.com/burkina-le-personnel-du-ministere-de-la-guerre-informe-sur-limportance-et-la-gestion-des-archives/",
-      "pubDate": "2026-07-29T18:45:28.000Z",
-      "description": "Le mardi 21 juillet 2026, s’est tenue dans la salle de conférence du Ministère de la Guerre et de la Défense patriotique, une journée de sensibilisation sur les archives. L’Intendant Colonel-Major Yamba Léonard OUOBA, président la session, a reconnu l’intérêt d’informer et sensibiliser les hommes sur l’importance des archives pour le personnel des forces armées et pour l’administration. Il a salué la présence des participants et les a exhortés à faire preuve de curiosité, à poser les bonnes questions et à s'investir pleinement dans leur apprentissage afin de devenir de bons archivistes. La Directrice Générale par intérim des Archives nationales, la Camarade Jeanne Marie DIASSO, a ensuite animé une communication sur l'importance et les enjeux des archives. Elle a rappelé que la gestion des archives repose sur trois phases essentielles à savoir la phase courante de 0 à 5 ans ; la phase intermédiaire, de 5 à 30 ans ; la phase définitive, consacrée à la conservation permanente des archives présentant un intérêt historique, administratif ou patrimonial. Elle a également souligné que les archives constituent la mémoire de la Nation, garantissent la traçabilité des décisions publiques et permettent de capitaliser les expériences afin d'éclairer les décisions futures, particulièrement dans le contexte actuel de crise sécuritaire et de refondation de l'État. À l'issue de cette communication, le Camarade Lieutenant NONGUIERMA Ruffin, Directeur des Archives du Ministère de la Guerre et de la Défense patriotique, a exprimé sa satisfaction quant à la qualité de la présentation et à la richesse des échanges. Il a salué la pertinence des enseignements dispensés ainsi que l'intérêt manifesté par les participants. Clôturant la session, le Secrétaire Général s'est félicité des connaissances acquises au cours de cette journée d'information. Il a invité les participants à mettre en pratique les enseignements reçus dans leurs différents services, afin de contribuer à une gestion efficace des archives et à la préservation de la mémoire institutionnelle du ministère. DCRP/MGDP L’article Burkina: le personnel du ministère de la Guerre informé sur l’importance et la gestion des archives est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Cadre sectoriel de Dialogue Défense-Sécurité : Le MATM prend part à la revue à mi-parcours 2026",
-      "link": "https://www.minute.bf/cadre-sectoriel-de-dialogue-defense-securite-le-matm-prend-part-a-la-revue-a-mi-parcours-2026/",
-      "pubDate": "2026-07-29T18:07:16.000Z",
-      "description": "Le Secrétaire Général du ministère de l'Administration territoriale et de la Mobilité (MATM), le Camarade Saïdou SANKARA, représentant le Ministre d'Etat, Ministre de l'Administration territoriale et de la Mobilité, a pris part, le mercredi 29 juillet 2026, à Ouagadougou, aux travaux de la revue à mi-parcours 2026 du Cadre sectoriel de Dialogue (CSD) « Défense-Sécurité ». Le Cadre sectoriel de Dialogue « Défense-Sécurité » constitue un mécanisme de coordination des actions en faveur de la reconquête du territoire, du rétablissement de l'autorité de l'Etat et de la consolidation de la paix. Il regroupe les ministères de la Guerre et de la Défense patriotique, de la Sécurité, de l'Administration territoriale et de la Mobilité, des Affaires étrangères ainsi que de la Famille et de la Solidarité. Ouvrant les travaux, le Ministre de la Sécurité, le Camarade Commissaire divisionnaire de Police Mahamadou SANA, président du Cadre sectoriel de Dialogue (CSD) « Défense-Sécurité », a situé cette revue à mi-parcours 2026 dans un contexte marqué par la poursuite des opérations de reconquête du territoire national et de restauration durable de la sécurité. Il a rendu un vibrant hommage aux Forces de Défense et de Sécurité (FDS), aux Volontaires pour la Défense de la Patrie (VDP) ainsi qu'à toutes les victimes du terrorisme. Le Ministre de la Sécurité, le Camarade Commissaire divisionnaire de Police Mahamadou SANA, a rappelé que le Plan de relance 2026-2030 fait de la sécurité le socle de toutes les politiques publiques. « Sans sécurité, il ne saurait y avoir ni développement durable, ni cohésion sociale, ni prospérité partagée », a-t-il souligné. Il a exhorté l'ensemble des acteurs à maintenir leur engagement pour l'atteinte des objectifs stratégiques assignés au secteur. Au titre des résultats enregistrés au cours des six (06) premiers mois de l'année, le Ministre de la Sécurité, le Camarade Commissaire divisionnaire de Police Mahamadou SANA, a relevé des avancées notables, notamment un taux de reconquête et de sécurisation du territoire estimé à 74,53%, la réouverture progressive de services publics dans plusieurs localités ainsi que le renforcement des capacités de plus de 15 000 éléments des FDS et VDP. Il a également indiqué que le taux de criminalité au premier trimestre est évalué à 6,13%, traduisant une amélioration progressive de la situation sécuritaire. Le bilan à mi-parcours fait ressortir un taux d'exécution physique global de 42,85% et un taux d'exécution financière de 29,52%. Selon le Ministre de la Sécurité, le Camarade Commissaire divisionnaire de Police Mahamadou SANA, les résultats appellent à une accélération de la mise en œuvre des activités afin d'atteindre les objectifs fixés d'ici la fin de l'année. Il a réaffirmé l'engagement du Gouvernement, sous le leadership du Président du Faso, Chef de l’Etat, le Camarade Capitaine Ibrahim TRAORE, à poursuivre le renforcement des capacités opérationnelles, logistiques et humaines des forces engagées. Il a invité les membres du Cadre sectoriel de Dialogue (CSD) « Défense-Sécurité » à faire preuve de responsabilité, de rigueur et de culture du résultat afin que les recommandations issues de cette revue contribuent efficacement à la consolidation de la sécurité, de la souveraineté nationale et du développement du Burkina Faso. DCRP/MATM",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Koosin/Immersion patriotique obligatoire 2026 : 422 bacheliers à l’école du patriotisme",
-      "link": "https://www.aib.media/koosin-immersion-patriotique-obligatoire-2026-422-bacheliers-a-lecole-du-patriotisme/",
-      "pubDate": "2026-07-29T18:03:51.000Z",
-      "description": "BURKINA-KOOSIN-IMMERSION-PATRIOTIQUE-OBLIGATOIRE Koosin/Immersion patriotique obligatoire 2026 : 422 bacheliers à l’école du patriotisme Nouna, 28 juil. 2026 (AIB)-Le Haut-commissaire de la province de la Koosin, Noufo Dembélé, a lancé, ce mardi 28 juillet 2026 au lycée provincial polyvalent de Nouna, les activités de l’immersion patriotique obligatoire, en présence des forces vives de la province. Au total, 422 appelés prennent part à cette activité, conformément à l’initiative du Président du Faso, le Capitaine Ibrahim Traoré. Les lauréats du baccalauréat de la session 2026 ainsi que les candidats ajournés de la session précédente ont répondu présents à l’appel pour cette immersion patriotique obligatoire. Au total, 422 appelés prennent part à cette activité, conformément à l’initiative du président du Faso, le capitaine Ibrahim Traoré. Réunis au « carré d’as », les participants ont procédé à la montée solennelle des couleurs nationales, avant l’arrivée des autorités administratives, militaires, coutumières et religieuses. La cérémonie s’est déroulée dans une atmosphère empreinte de solennité. Après le mot introductif de Fernand Badiel, le proviseur du Lycée provincial polyvalent de Nouna, Emmanuel Coulibaly, a souhaité la bienvenue aux participants. Il a également rappelé que la précédente édition avait répondu aux attentes des parents et des appelés, qualifiant ainsi l’édition 2025 de réussite. Le Haut-commissaire de la province de la Koosin, Noufo Dembélé a situé l’immersion patriotique obligatoire dans son contexte et a insisté sur la nécessité, pour les appelés, de s’approprier les valeurs civiques et patriotiques afin de pouvoir les transmettre à leurs proches à l’issue de leur séjour sur le site d’accueil. Il a, par ailleurs, invité les forces vives de la province à accompagner cette initiative à travers des soutiens multiples et multiformes. Le Haut-commissaire a précisé que les contributions en espèces peuvent être effectuées auprès du Trésor public, tandis que les dons en nature peuvent être déposés au niveau du site d’accueil. Après cette intervention, les participants ont entonné l’hymne national, avant de suivre un message du chef de l’État d’une durée de cinq minutes. Dans son message, le Président du Faso a indiqué que la guerre imposée au Burkina Faso nécessite une réponse à la hauteur des défis auxquels le pays est confronté. Il a expliqué que l’immersion patriotique vise notamment à permettre aux jeunes de mieux comprendre la géopolitique, le choix de la Révolution progressiste et populaire ainsi que les enjeux liés aux ressources naturelles du pays. Les appelés ont été exhortés à s’approprier les différents modules enseignés, dans la discipline et l’ordre, et à rester dignes et patriotes afin de s’engager pleinement dans la voie de la révolution. Selon lui, les ancêtres ont souffert pour léguer aux générations actuelles une terre libre. Il appartient donc à la jeunesse de maintenir le flambeau de la liberté et de le transmettre aux générations futures. Abordant la question de la désinformation, le président du Faso a souligné qu’elle constitue un outil utilisé pour atteindre particulièrement la jeunesse. Il a ainsi appelé les jeunes à s’armer de connaissances et à contribuer à lutter contre la désinformation en privilégiant la recherche et la diffusion d’informations vérifiées. La cérémonie de lancement s’est achevée par une opération de plantation d’arbres au sein de l’établissement. Agence d’information du Burkina AC/AI/HB/OO",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Deuil au sein de la Police Nationale : Le Contrôleur général Missa Millogo fauché en pleine gloire",
-      "link": "https://netafrique.net/deuil-au-sein-de-la-police-nationale-le-controleur-general-missa-millogo-fauche-un-en-pleine-gloire/",
-      "pubDate": "2026-07-30T02:48:58.000Z",
-      "description": "C’est une onde de choc qui traverse les rangs de la Police nationale et la communauté scientifique du Burkina Faso. Le Dr Missa Millogo, Contrôleur général de police et éminent expert en criminalistique, a rendu l’âme le mardi 28 juillet 2026 au Centre Hospitalier Universitaire (CHU) de Tengandogo. Victime d'un accident de la circulation alors qu'il a garé son véhicule pour se rendre dans un supermarché, ce haut cadre à la carrière fulgurante laisse derrière lui l'image d'un chercheur rigoureux et d'un officier dévoué. Entre hommages officiels et douleur familiale, le pays s'apprête à conduire à sa dernière demeure celui qui a révolutionné l'approche des preuves génétiques dans les enquêtes judiciaires burkinabè. La Police nationale est en deuil. Le Dr Missa Millogo, une figure de proue de la nouvelle génération d'officiers supérieurs, a tiré sa révérence à la suite d'un accident aussi banal que tragique. Alors qu'il avait garé son véhicule pour se rendre dans un supermarché, il a été fauché par un motocycliste. Si son état de santé a un temps laissé entrevoir un espoir de stabilisation, une dégradation subite a finalement emporté ce serviteur de l'État dans sa 1ère heure du mardi 28 juillet. Le Dr Millogo n'était pas seulement un homme de terrain, c'était avant tout un scientifique de haut niveau. En février 2022, il marquait les esprits en soutenant une thèse de doctorat remarquée sur l’apport des empreintes génétiques et digitales en criminalistique au Burkina Faso. Cette expertise lui a ouvert les portes de hautes responsabilités : nommé Directeur de la Police technique et scientifique en avril 2022 en tant que Commissaire divisionnaire, il a connu une ascension rapide. En janvier 2026, il atteignait le sommet de la hiérarchie en étant promu au grade de Contrôleur général de police et nommé Directeur de la police judiciaire. Au-delà des grades, c'est la perte d'un savoir-faire unique qui afflige ses pairs. Le Dr Millogo incarnait la modernisation de la police burkinabè par la science. Sa disparition crée un vide immense au sein de la Direction Générale de la Police Nationale, où il gérait des dossiers sensibles en tant que patron de la police judiciaire. Ses amis et sa famille,, décrivent un homme jeune dont la carrière était encore pleine de promesses. Le programme des obsèques prévoit un dernier hommage solennel à la hauteur de son rang. Le jeudi 30 juillet, après une levée du corps au CHU de Bogodogo et un recueillement à son domicile de Rimkiéta, une cérémonie d’hommage et de décoration se tiendra à 10 heures. Le cortège prendra ensuite la route de son village natal, Oualana, où il recevra les prières de la communauté musulmane. L'inhumation du Dr Missa Millogo aura lieu le vendredi 31 juillet 2026 dans l'intimité du domicile familial, mettant un point final au voyage terrestre d'un homme qui a mis la science au service de la justice. L’article Deuil au sein de la Police Nationale : Le Contrôleur général Missa Millogo fauché en pleine gloire est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A1"
-      },
-      "_rating": "A1",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "J",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
       "title": "WAFU B U20: Black Satellites face defining Burkina Faso test today",
       "link": "https://www.myjoyonline.com/wafu-b-u20-black-satellites-face-defining-burkina-faso-test-today/",
       "pubDate": "2026-07-30T09:30:40.000Z",
@@ -1128,22 +998,197 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "L",
       "_desk": "A1"
+    },
+    {
+      "title": "Éducation : « Le syndicalisme, les gens l’ont pris comme étant une guerre », plaide le nouveau secrétaire général du SYNAPEC",
+      "link": "https://burkina24.com/2026/07/29/education-le-syndicalisme-les-gens-lont-pris-comme-etant-une-guerre-plaide-le-nouveau-secretaire-general-du-synapec/",
+      "pubDate": "2026-07-29T19:42:56.000Z",
+      "description": "Le Syndicat national des professeurs d’école (SYNAPEC) a renouvelé ses instances dirigeantes à l’occasion d’un congrès extraordinaire tenu ce mercredi 29 juillet 2026 à la Bourse du travail de Ouagadougou. À l’unanimité, les congressistes ont porté Tenga Abel Yaméogo à la tête de l’organisation pour un mandat de cinq ans, renouvelable une seule fois. Une … The post Éducation : « Le syndicalisme, les gens l'ont pris comme étant une guerre », plaide le nouveau secrétaire général du SYNAPEC appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "L",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Football : La première phase du projet Bambifoot s’achève avec le repérage de 1 000 jeunes talents",
+      "link": "https://www.minute.bf/football-la-premiere-phase-du-projet-bambifoot-sacheve-avec-le-reperage-de-1-000-jeunes-talents/",
+      "pubDate": "2026-07-30T09:17:54.000Z",
+      "description": "Le projet Bambifoot, dédié au football de base, a bouclé son premier cycle sur une note satisfaisante le mercredi 29 juillet 2026. Initié par la Fédération burkinabè de football (FBF) avec l’appui de la FIFA, le programme a permis de détecter et d’encadrer un millier d’enfants âgés de 7 à 12 ans à travers huit régions du Burkina Faso. La clôture du premier cycle du projet Bambifoot a été marquée par un sentiment d’accomplissement partagé par les acteurs du football de base. Lors du dernier festival organisé dans la région du Kadiogo, l’heure était au bilan pour Mamounata Sawadogo, Cheffe de service sport à la direction générale du sport du Ministère de l'enseignement de base. La représentante du Ministère de l'enseignement de base louant cette initiative de détection des talents Celle-ci a salué une initiative qu'elle juge non seulement louable, mais indispensable pour l'avenir du football national. « Si ce n'était pas né, il fallait créer cette initiative », a-t-elle martelé, soulignant que le travail de fond, souvent négligé, est pourtant la clé de la réussite sportive. Avec un engagement de 1 000 enfants, dont 200 filles, le Ministère de l'enseignement de base voit dans ce programme un levier essentiel pour le développement du football de base. « Ce premier cycle est venu montrer le talent des enfants. C'est un plus que nous apportons, a ajouté madame Sawadogo, en rappelant que cette phase a déjà permis à plusieurs jeunes joueurs et joueuses d’intégrer des clubs burkinabè. Pour l’avenir, elle espère que ces enfants, qui sont aujourd’hui « piochés à gauche et à droite », auront l’opportunité de réaliser leur rêve dans les dix prochaines années. Le coach Da montrant sa satisfaction du niveau des enfants Du côté de l’encadrement technique, la satisfaction est tout aussi palpable. Sami Bèbè Da, Coordonnateur régional Bambifoot du Kadiogo, s’est dit impressionné par l’évolution des jeunes participants. « Par rapport au festival passé, on est satisfait. Il y a beaucoup de choses qu'ils ont appris », a-t-il confié. Pour étayer ses propos, me coach Da a comparé les performances des enfants entre le début et la fin du cycle, citant l’exemple de jeunes joueurs arrivés timides et incapables de réaliser dix jongles, mais qui parviennent désormais à en enchaîner jusqu'à cent. Plusieurs enfants se sont démarqués… Les ateliers proposés, allant du contrôle de balle aux exercices de précision en passant par le jeu du « bombardier », ont visiblement porté leurs fruits. Le projet Bambifoot a pour objectif de créer une passerelle durable entre cette détection précoce et les centres de formation des clubs professionnels. Lire aussi : Football de base : Le projet Bambifoot FIFA-FBF forme 1 000 enfants pour le football professionnel Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Cadre sectoriel de dialogue santé: 71 infrastructures sanitaires inaugurées au premier semestre 2026",
+      "link": "https://www.sidwaya.info/cadre-sectoriel-de-dialogue-sante-71-infrastructures-sanitaires-inaugurees-au-premier-semestre-2026/",
+      "pubDate": "2026-07-30T00:40:29.000Z",
+      "description": "Le ministre de la Santé, Robert Lucien Jean-Claude Kargougou, a présidé la deuxième session ordinaire de l’année 2026 du cadre sectoriel de dialogue santé, mercredi 29 juillet 2026, à Ouagadougou. Le Cadre sectoriel de dialogue (CSD) santé se veut un cadre de concertation des acteurs pour faire le bilan des activités et ajuster les ambitions futures dans le secteur de la santé. La deuxième session ordinaire de l’année 2026 du CSD santé a eu lieu, mercredi 29 juillet 2026, à Ouagadougou sous la présidence du ministre de la Santé, Robert Lucien Jean-Claude Kargougou. Il a indiqué que cette session qui constitue la première revue à mi-parcours du Plan national de développement (PND) 2026-2030 trace désormais la trajectoire pour la souveraineté et le progrès économique du Burkina Faso. Le ministre de la Santé a rappelé que le secteur de la santé est porté principalement par le pilier 3 du plan RELANCE « Développer le capital humain », à travers le programme 3.1 « Santé et nutrition ». « Notre ambition est de garantir un accès équitable à des soins de qualité, renforcer la souveraineté pharmaceutique et d’améliorer durablement l’état nutritionnel des populations », a-t-il confié. Robert Lucien Jean-Claude Kargougou a mis en avant plusieurs acquis enregistrés au cours du premier semestre 2026. Sur le plan institutionnel et social, il a révélé que le département a franchi des étapes décisives, notamment la validation de la stratégie nationale de développement sanitaire 2026-2030, le paiement de plus de 21,2 milliards F CFA au titre du passif social de l’Agence nationale de gestion des soins de santé primaires, la réussite de deux transplantations rénales, ainsi que la disponibilité de 24 médicaments anticancéreux sur les 41 prévus. Mis ensemble, ces acquis portent le taux de réalisation du CSD santé à 78 %, a annoncé le ministre de la Santé. Il a également noté la formation de 869 médecins spécialistes dans le cadre du Plan 1000×5 et l’orga- nisation du premier forum sur le financement de la santé. Dans le volet infrastructures, le ministre de la Santé a souligné l’inauguration de 71 infrastructures sanitaires bénéficiant à plus de 150 000 personnes, l’ouverture de quatre nouveaux centres d’hémodialyse. Il a salué aussi l’état d’avancement du centre hospitalier universitaire régional de Gaoua, l’opérationnalisation du centre de médecine traditionnelle et de soins intégrés et du technopole pharmaceutique Faso-pharma qui affiche un taux de 96,5 %. Tout en saluant ces performances, Robert Lucien Jean- Claude Kargougou a reconnu la persistance de certains défis, notamment les retards dans certains projets d’infrastructures et la faible mobilisation des financements extérieurs due à des lourdeurs administratives. Il a invité les acteurs à accélérer l’exécution des investissements durant le second semestre. « C’est par la rigueur de notre travail et la qualité de nos échanges que nous transformerons ces défis en réussite » a-t-il ajouté. Pour le chef du département de la Santé, l’objectif reste inchangé. « Assurer à chaque Burki- nabè le droit fondamental à une santé de qualité », a-t-il conclu. Abdoulaye BALBONE Assami TIENDREBEOGO (Stagiaire)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Transplantation rénale au Burkina : une délégation gouvernementale salue les efforts du CHU de Tengandogo",
+      "link": "https://www.sidwaya.info/transplantation-renale-au-burkina-une-delegation-gouvernementale-salue-les-efforts-du-chu-de-tengandogo/",
+      "pubDate": "2026-07-30T00:37:28.000Z",
+      "description": "Une délégation gouvernementale, conduite par le ministre de la Santé, Robert Lucien Jean-Claude Kargougou et celui chargé de la Recherche, Adjima Thombiano, est allée encourager et féliciter les équipes engagées dans la troisième campagne de transplantation rénale au centre hospitalier universitaire de Tengandogo, mercredi 29 juillet 2026, à Ouagadougou. L’ambition du gouvernement qui vise la souveraineté sanitaire du Burkina est en bonne voie pour se concrétiser. Après l’implémentation à succès de plusieurs types d’interventions complexes, la transplantation rénale est une réalité au Burkina. En effet, dans le cadre de la troisième campagne de transplantation rénale au centre hospitalier universitaire de Tengandogo, une délégation gouvernementale conduite par les ministres de la Santé, Robert Lucien Kargougou et de l’Enseignement supérieur, de la Recherche scientifique et de l’Innovation, Adjima Thombiano, est allée encourager et féliciter les équipes engagées, le mercredi 29 juillet 2026, à Ouagadougou. La transplantation au Burkina Faso permet, entre autres, d’éviter les coûteuses évacuations sanitaires à l’étranger, de réduire les dépenses médicales et faciliter le suivi postopératoire. A l’issue de la visite, Adjima Thombiano a traduit la reconnaissance du gouvernement à l’endroit de l’équipe et l’ensemble des acteurs qui ont apporté leur concours à la réussite de ces prouesses. « Nous avons constaté l’effectivité de cette session de transplantation rénale, qui montre une véritable prouesse, non seulement des équipes, mais du système de santé dans son ensemble. Cela vient consolider la vision du gouvernement : faire bénéficier les populations de soins de santé avec des équipes endogènes », a salué le ministre chargé de la Récherche. Il a, en outre, soutenu qu’ils ont trouvé des équipes très engagées qui mettent du cœur à la tâche et des malades qui recouvrent parfaitement leur santé, ce qui témoigne de la réussite de l’intervention. « Nous repartons très satisfaits et confiants, surtout que nous avons une expertise de haute facture au Burkina pour prendre en charge de telles opérations », a-t-il assuré. Le donneur D. T. du patient qui a reçu la transplantation a avoué avoir eu de la peine à voir souffrir son frère consanguin. C’est pourquoi il a volontairement décidé de lui céder un rein. « Aujourd’hui, grâce au ministère de la Santé, à travers cette campagne, mon frère va recouvrer sa santé», a-t-il ajouté. Pour lui, la réussite de cette opération est la preuve concrète de la réalisation de la vision révolutionnaire du gouvernement dans plusieurs domaines, notamment la santé. Emmanuel BICABA Assani TIENDREBEOGO (Stagiaire)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Israeli strikes kill 4 Palestinians, including 2 children, in Gaza despite ongoing ceasefire",
-      "link": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-4-palestinians-including-2-children-in-gaza-despite-ongoing-ceasefire/4013563",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-07-30T08:33:08.000Z",
-      "rating": "F1",
+      "title": "Trafic suspendu sur le pont Ituri entre Komanda et Mambasa pour prévenir un effondrement",
+      "link": "https://www.radiookapi.net/2026/07/30/actualite/societe/trafic-suspendu-sur-le-pont-ituri-entre-komanda-et-mambasa-pour",
+      "source": "Radio Okapi (RDC)",
+      "date": "2026-07-30T10:59:54.000Z",
+      "rating": "F2",
       "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "effondrement"
+        }
+      ]
+    },
+    {
+      "title": "Deux jours après le séisme au Japon, au moins 34 morts, des milliers de rescapés et des opérations de sauvetage sous la canicule",
+      "link": "https://www.lemonde.fr/international/article/2026/07/30/seisme-au-japon-les-autorites-denombrent-au-moins-34-morts-alors-que-la-chaleur-accable-les-rescapes_6736875_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-07-30T09:53:48.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Séisme au Japon : ce que nous savons",
+      "link": "https://www.bbc.com/afrique/articles/cd69gq4dpwyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Afrique (FR)",
+      "date": "2026-07-30T09:52:36.000Z",
+      "rating": "B3",
+      "evidence": "Source fiable unique",
       "level": "high",
       "bf": false,
       "majors": [
         {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Le Cameroun officialise son entrée dans le Pandemic Fund pour renforcer sa sécurité sanitaire",
+      "link": "https://fr.journalducameroun.com/le-cameroun-officialise-son-entree-dans-le-pandemic-fund-pour-renforcer-sa-securite-sanitaire/",
+      "source": "Journal du Cameroun",
+      "date": "2026-07-30T09:40:16.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "pandemic"
         }
       ]
     },
@@ -1168,7 +1213,7 @@
       "link": "https://www.al-monitor.com/originals/2026/07/israeli-strikes-kill-four-gaza-including-two-children-amid-new-ceasefire-push",
       "source": "Al-Monitor",
       "date": "2026-07-30T07:46:49.000Z",
-      "rating": "F1",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1176,22 +1221,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "FACTBOX: What is known about last night's massive strike by Russia on targets in Ukraine",
-      "link": "https://tass.com/defense/2167147",
-      "source": "TASS (Russie, EN)",
-      "date": "2026-07-30T07:42:32.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "massive strike"
         }
       ]
     },
@@ -1240,6 +1269,22 @@
         {
           "type": "crise",
           "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Russia strikes Ukrainian cities in major attack, Poland’s airspace violated",
+      "link": "https://www.scmp.com/news/world/europe/article/3362352/poland-scrambles-fighter-jets-russia-strikes-cities-across-ukraine?utm_source=rss_feed",
+      "source": "South China Morning Post",
+      "date": "2026-07-30T05:40:06.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "major attack"
         }
       ]
     },
@@ -1295,35 +1340,31 @@
   "narrativesByBloc": [
     [
       "afrique",
-      190
+      199
     ],
     [
       "occident_fr",
+      122
+    ],
+    [
+      "occident_us",
       120
     ],
     [
       "autre",
-      117
-    ],
-    [
-      "occident_us",
-      112
-    ],
-    [
-      "golfe_mo",
-      64
+      119
     ],
     [
       "turquie",
-      53
+      57
+    ],
+    [
+      "golfe_mo",
+      55
     ],
     [
       "russie",
-      48
-    ],
-    [
-      "bf_local",
-      43
+      51
     ],
     [
       "chine",
@@ -1331,6 +1372,10 @@
     ],
     [
       "sahel",
+      24
+    ],
+    [
+      "bf_local",
       18
     ]
   ],
@@ -1339,16 +1384,16 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 75,
+      "count": 72,
       "top": [
         {
-          "title": "Affaire démolition des constructions d’Italia Construction en Côte d’Ivoire: Qui est Moussa Douamba, le propriétaire qui a défié l’État et les promoteurs ?",
-          "link": "https://netafrique.net/affaire-demolition-des-constructions-ditalia-construction-en-cote-divoire-qui-est-moussa-douamba-le-proprietaire-qui-a-defie-letat-et-les-promoteurs/",
-          "source": "Net Afrique (BF)",
+          "title": "Burkina Faso/Médias : Face à l'intelligence artificielle, Dr Cyriaque Paré appelle à une nouvelle culture de la vérification de l'information",
+          "link": "https://lefaso.net/spip.php?article148263",
+          "source": "Lefaso.net",
           "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
+          "theme": "T",
+          "relevance": "L",
+          "rating": "C2"
         },
         {
           "title": "99e anniversaire de la fondation de l’armée populaire de Chine: l’évènement célébré à Ouagadougou",
@@ -1360,29 +1405,29 @@
           "rating": "C2"
         },
         {
-          "title": "Le président du CSD-DS, ministre de la sécurité : « Nous avons le devoir historique de léguer aux générations futures un Burkina Faso libre, souverain, sécurisé et prospère »",
-          "link": "https://lefaso.net/spip.php?article148256",
-          "source": "Lefaso.net",
+          "title": "WAFU B U20: Black Satellites face defining Burkina Faso test today",
+          "link": "https://www.myjoyonline.com/wafu-b-u20-black-satellites-face-defining-burkina-faso-test-today/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "1. Sahel & AO franco.",
-          "theme": "P",
+          "theme": "T",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Éducation : « Le syndicalisme, les gens l’ont pris comme étant une guerre », plaide le nouveau secrétaire général du SYNAPEC",
+          "link": "https://burkina24.com/2026/07/29/education-le-syndicalisme-les-gens-lont-pris-comme-etant-une-guerre-plaide-le-nouveau-secretaire-general-du-synapec/",
+          "source": "Burkina24",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "L",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "Burkina: le personnel du ministère de la Guerre informé sur l’importance et la gestion des archives",
-          "link": "https://www.wakatsera.com/burkina-le-personnel-du-ministere-de-la-guerre-informe-sur-limportance-et-la-gestion-des-archives/",
-          "source": "Wakat Séra",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Cadre sectoriel de Dialogue Défense-Sécurité : Le MATM prend part à la revue à mi-parcours 2026",
-          "link": "https://www.minute.bf/cadre-sectoriel-de-dialogue-defense-securite-le-matm-prend-part-a-la-revue-a-mi-parcours-2026/",
+          "title": "Football : La première phase du projet Bambifoot s’achève avec le repérage de 1 000 jeunes talents",
+          "link": "https://www.minute.bf/football-la-premiere-phase-du-projet-bambifoot-sacheve-avec-le-reperage-de-1-000-jeunes-talents/",
           "source": "Minute BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1392,8 +1437,17 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 47,
+      "count": 58,
       "top": [
+        {
+          "title": "Ghana must export mining innovation, not just minerals — Alhaji Ali Ibrahim",
+          "link": "https://www.myjoyonline.com/ghana-must-export-mining-innovation-not-just-minerals-alhaji-ali-ibrahim/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "2027: Quit if you can’t campaign for us, APC tells Tinubu’s ‘technocrats’",
           "link": "https://www.vanguardngr.com/2026/07/2027-quit-if-you-cant-campaign-for-us-apc-tells-tinubus-technocrats/",
@@ -1401,6 +1455,15 @@
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "WAFCON 2026: Ghana cruise past Cape Verde as Cameroon edge Mali in thrilling Group D opener",
+          "link": "https://www.premiumtimesng.com/sports/football/899390-wafcon-2026-ghana-cruise-past-cape-verde-as-cameroon-edge-mali-in-thrilling-group-d-opener.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
@@ -1420,24 +1483,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Strike: Ondo gov approves ₦1.1bn for varsity, urges lecturers to return to work",
-          "link": "https://www.premiumtimesng.com/news/more-news/899383-strike-ondo-gov-approves-%e2%82%a61-1bn-for-varsity-urges-lecturers-to-return-to-work.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "UK court jails Nigerian two years for sexual assault",
-          "link": "https://punchng.com/uk-court-jails-nigerian-two-years-for-sexual-assault/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
         }
       ]
     },
@@ -1445,7 +1490,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 21,
+      "count": 19,
       "top": [
         {
           "title": "CAN féminine : deux Lionnes camerounaises du FC Fleury à suivre",
@@ -1457,6 +1502,15 @@
           "rating": "C2"
         },
         {
+          "title": "Le Cameroun officialise son entrée dans le Pandemic Fund pour renforcer sa sécurité sanitaire",
+          "link": "https://fr.journalducameroun.com/le-cameroun-officialise-son-entree-dans-le-pandemic-fund-pour-renforcer-sa-securite-sanitaire/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Kenya: cinq morts dans une nouvelle attaque attribuées à des shebabs près de la frontière somalienne",
           "link": "https://www.rfi.fr/fr/afrique/20260730-kenya-cinq-morts-dans-une-nouvelle-attaque-attribu%C3%A9es-%C3%A0-des-shebabs-pr%C3%A8s-de-la-fronti%C3%A8re-somalienne",
           "source": "RFI Afrique",
@@ -1466,24 +1520,6 @@
           "rating": "C2"
         },
         {
-          "title": "RDC : cinq des six zones identifiées comme abritant les FDLR sont sous le contrôle du Rwanda/AFC-M23, selon le gouvernement",
-          "link": "https://actualite.cd/2026/07/30/rdc-cinq-des-six-zones-identifiees-comme-abritant-les-fdlr-sont-sous-le-controle-du",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Masisi : après une semaine de combats entre l'AFC/M23 et les wazalendo, un calme précaire s'installe dans le sud du territoire",
-          "link": "https://actualite.cd/2026/07/30/masisi-apres-une-semaine-de-combats-entre-lafcm23-et-les-wazalendo-un-calme-precaire",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
           "title": "Centrafrique: installation d’un laboratoire à Obo, qui anticipe l’arrivée possible d'Ebola",
           "link": "https://www.rfi.fr/fr/afrique/20260730-centrafrique-installation-d-un-laboratoire-%C3%A0-obo-qui-anticipe-l-arriv%C3%A9e-possible-d-ebola",
           "source": "RFI Afrique",
@@ -1491,6 +1527,15 @@
           "theme": null,
           "relevance": ".",
           "rating": "C2"
+        },
+        {
+          "title": "RDC : 2,30 milliards USD d’investissements mobilisés en 100 jours dans le secteur de l’électricité",
+          "link": "https://www.radiookapi.net/2026/07/30/actualite/societe/rdc-230-milliards-usd-dinvestissements-mobilises-en-100-jours-dans-le",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1498,8 +1543,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 33,
+      "count": 36,
       "top": [
+        {
+          "title": "Incendies de forêt : baisse de près de 31% des superficies brûlées",
+          "link": "https://fr.hespress.com/483404-incendies-de-foret-baisse-de-pres-de-31-des-superficies-brulees.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A1"
+        },
         {
           "title": "WAFCON Maroc 2026 : les Aigles Dames s'inclinent d'entrée face au Cameroun",
           "link": "https://malijet.com/actualite_sportive_au_mali/310862-wafcon-maroc-2026-les-aigles-dames-sinclinent-dentree-fa.html",
@@ -1510,6 +1564,24 @@
           "rating": "F2"
         },
         {
+          "title": "Discours du Trône : le PAM salue un message \"porteur de perspectives\" pour le Maroc",
+          "link": "https://fr.hespress.com/483437-discours-du-trone-le-pam-salue-un-message-porteur-de-perspectives-pour-le-maroc.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "CAN féminine 2026 : le Maroc et l'Algérie se retrouvent pour un derby décisif",
+          "link": "https://fr.hespress.com/483430-can-feminine-2026-le-maroc-et-lalgerie-se-retrouvent-pour-un-derby-decisif.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "FT/Gaza, Sahara, Afrique… le pari d'une diplomatie de présence",
           "link": "https://fr.hespress.com/482406-ft-gaza-sahara-afrique-le-pari-dune-diplomatie-de-presence.html",
           "source": "Hespress (Maroc, FR)",
@@ -1517,33 +1589,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Les menaces réelles à la stabilité tunisienne",
-          "link": "https://kapitalis.com/tunisie/2026/07/30/les-menaces-reelles-a-la-stabilite-tunisienne/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Primaire, collège, lycée : le grand virage de l’Algérie vers l’anglais",
-          "link": "https://www.tsa-algerie.com/primaire-college-lycee-le-grand-virage-de-lalgerie-vers-langlais/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Maroc : Mohammed VI place la souveraineté économique et la stabilité au cœur de son discours du Trône",
-          "link": "https://www.jeuneafrique.com/1828336/politique/maroc-mohammed-vi-place-la-souverainete-economique-et-la-stabilite-au-coeur-de-son-discours-du-trone/",
-          "source": "Jeune Afrique",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "B1"
         }
       ]
     },
@@ -1551,7 +1596,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 108,
+      "count": 96,
       "top": [
         {
           "title": "Décentralisation et développement local : les projets et programmes passés au crible",
@@ -1563,13 +1608,13 @@
           "rating": "C2"
         },
         {
-          "title": "Israeli strikes kill 4 Palestinians, including 2 children, in Gaza despite ongoing ceasefire",
-          "link": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-4-palestinians-including-2-children-in-gaza-despite-ongoing-ceasefire/4013563",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Guerre(s) pour l’hégémonie régionale au Moyen-Orient",
+          "link": "https://www.iris-france.org/guerres-pour-lhegemonie-regionale-au-moyen-orient/",
+          "source": "IRIS France",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F1"
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Israeli strikes kill four in Gaza, including two children, amid new ceasefire push",
@@ -1578,25 +1623,25 @@
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F1"
-        },
-        {
-          "title": "EN DIRECT, guerre au Moyen-Orient : l’incendie dans le port égyptien de Damiette déclenché par une attaque de drone ; négociations « en cours » entre les Etats-Unis et l’Iran, selon le Pakistan",
-          "link": "https://www.lemonde.fr/international/live/2026/07/30/en-direct-guerre-au-moyen-orient-l-incendie-dans-le-port-egyptien-de-damiette-du-a-une-attaque-de-drone-negociations-en-cours-entre-les-etats-unis-et-l-iran-selon-le-pakistan_6725301_3210.html",
-          "source": "Le Monde International",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Saudi Arabia joins US in strikes on Iran-backed militias in Iraq",
-          "link": "https://www.vanguardngr.com/2026/07/saudi-arabia-joins-us-in-strikes-on-iran-backed-militias-in-iraq/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Middle East crisis live: Jordan says it foiled Iranian missile attack as US launches ‘heavy’ strikes on Iran after pause",
+          "link": "https://www.theguardian.com/world/live/2026/jul/30/us-iran-war-live-updates-missile-strikes-attacks-iraq-egypt-middle-east-crisis-latest-news",
+          "source": "The Guardian World",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A1"
+        },
+        {
+          "title": "US launches 'heavy' strikes on Iran after attempted attack on American troops",
+          "link": "https://www.bbc.co.uk/news/articles/c74gwdzywmeo?at_medium=RSS&at_campaign=rss",
+          "source": "BBC World",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B1"
         }
       ]
     },
@@ -1604,7 +1649,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 163,
+      "count": 167,
       "top": [
         {
           "title": "Séisme au Japon : le bilan monte à au moins 30 morts, les survivants confrontés à de fortes chaleurs",
@@ -1616,6 +1661,33 @@
           "rating": "C2"
         },
         {
+          "title": "Russia strikes Ukrainian cities in major attack, Poland’s airspace violated",
+          "link": "https://www.scmp.com/news/world/europe/article/3362352/poland-scrambles-fighter-jets-russia-strikes-cities-across-ukraine?utm_source=rss_feed",
+          "source": "South China Morning Post",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "Deux jours après le séisme au Japon, au moins 34 morts, des milliers de rescapés et des opérations de sauvetage sous la canicule",
+          "link": "https://www.lemonde.fr/international/article/2026/07/30/seisme-au-japon-les-autorites-denombrent-au-moins-34-morts-alors-que-la-chaleur-accable-les-rescapes_6736875_3210.html",
+          "source": "Le Monde International",
+          "zone": "14. Extrême-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Séisme au Japon : ce que nous savons",
+          "link": "https://www.bbc.com/afrique/articles/cd69gq4dpwyo?at_medium=RSS&at_campaign=rss",
+          "source": "BBC Afrique (FR)",
+          "zone": "14. Extrême-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "B3"
+        },
+        {
           "title": "Le bilan du puissant séisme au Japon grimpe à au moins 25 morts",
           "link": "https://www.france24.com/fr/asie-pacifique/20260730-le-bilan-du-puissant-s%C3%A9isme-au-japon-grimpe-%C3%A0-28-morts",
           "source": "France 24",
@@ -1623,33 +1695,6 @@
           "theme": "H",
           "relevance": "L",
           "rating": "A2"
-        },
-        {
-          "title": "Séisme au Japon : les secours toujours à la recherche de survivants piégés dans un centre commercial à Kumamoto",
-          "link": "https://www.lemonde.fr/international/article/2026/07/30/seisme-au-japon-les-secours-toujours-a-la-recherche-de-survivants-pieges-dans-un-centre-commercial-apres-le-seisme-a-kumamoto-qui-a-fait-au-moins-28-morts_6736366_3211.html",
-          "source": "Le Monde International",
-          "zone": "14. Extrême-Orient",
-          "theme": "H",
-          "relevance": "L",
-          "rating": "B2"
-        },
-        {
-          "title": "Pakistan says 'doing utmost' to bring US, Iran back to Islamabad MoU",
-          "link": "https://www.dawn.com/news/2019454/pakistan-says-doing-utmost-to-bring-us-iran-back-to-islamabad-mou",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "L’Australie poursuit Telegram en justice pour manquement à ses obligations de retrait de contenus terroristes",
-          "link": "https://www.lemonde.fr/pixels/article/2026/07/30/l-australie-poursuit-telegram-en-justice-pour-manquement-a-ses-obligations-de-retrait-de-contenus-terroristes_6736841_4408996.html",
-          "source": "Le Monde International",
-          "zone": "15. Océanie & Pacifique",
-          "theme": "S",
-          "relevance": ".",
-          "rating": "B2"
         }
       ]
     }
@@ -1658,47 +1703,53 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-07-30T09:35:06.563Z",
+      "at": "2026-07-30T11:20:17.280Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-07-30T09:35:06.571Z",
+      "at": "2026-07-30T11:20:17.288Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-07-30T09:35:42.690Z",
+      "at": "2026-07-30T11:20:56.665Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1932 articles"
+      "message": "110/170 flux OK, 1894 articles"
     },
     {
-      "at": "2026-07-30T09:35:45.578Z",
+      "at": "2026-07-30T11:20:59.542Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-07-30T09:35:45.852Z",
+      "at": "2026-07-30T11:20:59.851Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-07-30T09:35:45.857Z",
+      "at": "2026-07-30T11:20:59.856Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 10 alertes"
+      "message": "8 developpements, 13 alertes"
     },
     {
-      "at": "2026-07-30T09:35:45.857Z",
+      "at": "2026-07-30T11:20:59.857Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-07-30T11:20:59.857Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
