@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T09:12:19.621Z",
+  "generatedAt": "2026-08-01T10:48:51.320Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1932,
+    "ok": 104,
+    "failed": 66,
+    "articles": 1836,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -56,11 +56,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -100,16 +95,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -166,6 +151,11 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -228,18 +218,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -343,11 +323,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -356,11 +331,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -438,11 +408,6 @@
         "count": 30
       },
       {
-        "id": "rss_ria",
-        "name": "RIA Novosti (EN)",
-        "count": 30
-      },
-      {
         "id": "rss_xinhua",
         "name": "Xinhua (EN)",
         "count": 20
@@ -510,7 +475,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -570,6 +535,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -600,14 +570,24 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -665,11 +645,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_actuacd",
         "name": "ActualitéCD (RDC)",
         "error": "This operation was aborted"
@@ -712,7 +687,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -725,9 +700,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -743,6 +723,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -793,6 +778,21 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_ria",
+        "name": "RIA Novosti (EN)",
+        "error": "HTTP 503"
       },
       {
         "id": "rss_alarabiya",
@@ -852,7 +852,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_imf",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 58,
-    "alerts": 16,
-    "criticalAlerts": 10,
-    "sourcesDistinct": 71
+    "bfAes": 56,
+    "alerts": 20,
+    "criticalAlerts": 13,
+    "sourcesDistinct": 67
   },
   "topDevelopments": [
     {
@@ -1100,15 +1100,15 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina Faso : 124 % de couverture céréalière atteints grâce à l’Offensive agropastorale",
-      "link": "https://faso7.com/2026/07/31/burkina-faso-124-de-couverture-cerealiere-atteints-grace-a-loffensive-agropastorale/",
-      "pubDate": "2026-07-31T23:15:27.000Z",
-      "description": "Le ministère de l’Agriculture, de l’Eau, des Ressources Animales et Halieutiques a présenté, ce 31 juillet 2026, le bilan de la mise en œuvre de l’Offensive agro-pastorale et halieutique couvrant la période 2023-2025. Cette stratégie a permis une augmentation historique des volumes de production dans toutes les filières, qu’il s’agisse du riz, du maïs, de l’élevage ou de la pêche. Cette performance repose sur un encadrement étatique renforcé, un contrôle des prix sur les marchés et un taux de couverture des besoins céréaliers du pays qui atteint désormais 124 %. En matière d’aménagement des terres, les réalisations comprennent 11 774 hectares de périmètres irrigués aménagés ou réhabilités, ainsi que 41 275 hectares de bas-fonds, dont 25 031 hectares ont été traités selon l’approche communautaire. Par ailleurs, 120 158 hectares ont été labourés gratuitement ou à prix subventionné au profit des producteurs, et 485 forages à gros débit ont été forés. L’effort d’équipement s’est traduit par la mise à disposition de 1 261 tracteurs, 1 235 motoculteurs, 1 072 matériels de récolte et de post-récolte, 777 semoirs, 1 880 motopompes et 1 545 cages flottantes pour la pisciculture. Pour le transport et le stockage, 37 engins de transport et 418 infrastructures de stockage ont été acquis ou bâtis. Côté transformation et conservation, on dénombre 63 unités de transformation, 398 unités ou kits d’étuvage de riz, 11 chambres froides et une unité de surgélation de poisson. Intensification des investissements Concernant les intrants, le bilan fait état de 160 560 tonnes d’engrais minéraux, dont 70 000 tonnes ont été livrées en 2025 seulement. S’ajoutent 10 665 tonnes de fumure organique, 30 328 tonnes de semences de céréales hors blé, 404 tonnes de semences de blé et 1 771 tonnes de semences de pomme de terre. Les intrants fourragers et alimentaires ne sont pas en reste avec 2 067 tonnes de semences fourragères, 24 684 tonnes d’aliments pour le bétail, 7 825 tonnes pour la volaille et 4 362 tonnes pour les poissons, sans oublier 160,6 millions d’alevins et 87 588 litres de produits phytosanitaires. « Pour ce qui est des investissements, l'Offensive agropastorale et halieutique a été le cadre pour nous d'intensifier les investissements dans le domaine agropastoral et halieutique. C'est vraiment des niveaux d'investissement jamais atteints dans notre pays qui ont été réalisés dans le cadre de l'Offensive agropastorale et halieutique », a indiqué Amos Kiénou, Secrétaire technique de l’Offensive agropastorale et halieutique La lutte contre les épizooties a également mobilisé des moyens considérables. Plus de 9,6 millions de bovins ont été vaccinés contre la péripneumonie contagieuse bovine, plus de 9,2 millions de petits ruminants contre la peste et près de 50 millions de volailles contre la maladie de Newcastle. Par ailleurs, 2,8 millions de petits ruminants ont été protégés contre la pasteurellose et 2,5 millions de poissons contre la streptococcose. Dans le domaine de l’amélioration génétique, 15 912 vaches ont été inséminées, tandis que la contribution du producteur pour cet acte est passée de 50 000 à seulement 5 000 francs CFA. Par ailleurs, 710 vaches gestantes de race performante ont été directement confiées aux éleveurs. En zone pastorale, la reconstitution du cheptel s’est matérialisée par 10 forages, 14 aménagements hydro-agricoles, 11 parcs de vaccination et 3 magasins de stockage de produits vétérinaires, ainsi que par la réhabilitation de 470 hectares de terres dégradées et l’installation de 220 hectares de cultures fourragères. Sur le plan quantitatif, cette dynamique a permis d’atteindre des volumes de production très significatifs. La production céréalière totale dépasse 7,142 millions de tonnes, dont plus d’un million de tonnes de riz paddy et plus de 2,686 millions de tonnes de maïs. La filière piscicole enregistre plus de 58 000 tonnes, tandis que l’aviculture compte plus de 1,8 million de têtes et la pomme de terre plus de 51 000 tonnes. Selon Amos Kiénou, les réformes institutionnelles ont accompagné ces avancées, notamment la création d’organismes spécialisés pour l’approvisionnement en engrais, la gestion des barrages, les produits vétérinaires, la génétique animale ainsi que pour l’alimentation du bétail et des poissons. Réformes institutionnelles Par ailleurs, Amos Kiénou a souligné que la restructuration de la SONAGESS a permis de collecter plus de 300 000 tonnes de céréales, stabilisant ainsi les prix en période de soudure et garantissant l’achat des récoltes locales. « Nous avons vraiment constaté une forte volonté politique des plus hautes autorités du pays de faire de l'agriculture le levier majeur de la transformation structurelle de notre économie. C'est l'occasion pour nous de remercier du fond du cœur les premiers responsables, notamment le camarade Capitaine Ibrahim Traoré, qui a mis tous les moyens à disposition de l'Offensive agropastorale pour lui permettre d'atteindre ses objectifs » , a-t-il déclaré. Notons que les réformes institutionnelles et l'accompagnement des producteurs reposent en grande partie sur la création de plusieurs organismes spécialisés. L'État a ainsi mis en place des structures dédiées à l'approvisionnement en engrais avec la SOBIMAP, à la gestion des barrages avec l'ONBAH et aux soins vétérinaires avec le CAMVET. Parallèlement, des entités spécifiques ont été créées pour l'amélioration génétique animale avec la CPAMAP, ainsi que pour la production d'aliments pour le bétail et la pisciculture avec Faso Guulgo. Lazard KOLA Faso7 L’article Burkina Faso : 124 % de couverture céréalière atteints grâce à l’Offensive agropastorale est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "Le ministre en charge de la guerre, général Simporé : « L'objectif principal, c'est de faire en sorte que ce terrorisme prenne fin…, et cela sera effectif, vous pouvez compter sur nous »",
+      "link": "https://lefaso.net/spip.php?article148314",
+      "pubDate": "2026-07-31T22:40:00.000Z",
+      "description": "Le ministère de la Guerre et de la défense patriotique a tenu, ce vendredi 31 juillet 2026 à Ouagadougou, sa première session ordinaire de l'année 2026 du Conseil d'administration du secteur ministériel (CASEM) autour du thème : « L'emploi des Volontaires pour la défense de la patrie (VDP) dans la lutte contre le terrorisme ». Il s'est agi pour les membres de l'instance de faire un bilan du premier semestre et d'envisager les perspectives pour la seconde moitié de l'année. Ce cadre a donc offert aux différents responsables l'opportunité d'apprécier objectivement les progrès accomplis, d'identifier les difficultés rencontrées et de définir les mesures correctives nécessaires afin d'améliorer durablement la capacité de réponse aux défis. Selon le ministre d'État, ministre de la guerre et de la défense patriotique, le général de division Célestin Simporé, qui a présidé l'ouverture, cette session vise à évaluer le niveau de mise en œuvre des recommandations et résolutions de la deuxième session de l'année 2025 du CASEM ; faire le bilan des activités au 30 juin 2026 conduites par le département ; mesurer le niveau d'exécution du plan de travail annuel budgétaire au 30 juin 2026 et voir les ajustements éventuels à apporter au programme d'activités afin d'assurer une meilleure atteinte des objectifs stratégiques. « À cet égard, je me réjouis de constater qu'au 30 juin 2026, le ministère de la Guerre et de la défense patriotique enregistre un taux global de mise en œuvre de 50,47 % de ses activités. Cette performance, qui traduit les efforts importants consentis par l'ensemble des structures du département, mérite d'être saluée. (…). Grâce à la vision éclairée du camarade capitaine Ibrahim Traoré, président du Faso, aux sacrifices quotidiens consentis par les forces combattantes, les VDP, les forces de sécurité intérieure ainsi qu'à l'engagement patriotique de notre peuple, des avancées significatives sont aujourd'hui enregistrées sur l'ensemble des théâtres d'opérations. Ces acquis, fruits d'une volonté politique affirmée et d'une mobilisation nationale sans précédent, nous imposent davantage de rigueur, de discipline, de cohérence et d'efficacité dans la conduite de nos missions administratives et opérationnelles. (…). Les défis auxquels notre nation est confrontée exigent de chacun de nous une mobilisation permanente. Ils nous commandent de bannir toute autre considération au profit exclusif de l'intérêt supérieur de la nation. Nous devons continuer à bâtir une administration performante, exemplaire, innovante et entièrement tournée vers l'atteinte des résultats », a présenté le ministre d'État Célestin Simporé. Au-delà des performances du département, la session est enrichie, indique-t-il, par deux communications majeures sur « l'emploi des volontaires pour la défense de la patrie dans la lutte contre le terrorisme : état des lieux et perspectives » et sur la « loi portant statut de la réserve militaire au Burkina Faso ». S'attardant sur ces sujets, le général a souligné que le recrutement des VDP s'est imposé comme une composante essentielle de l'architecture nationale de défense. « Leur connaissance du terrain, leur proximité avec les populations, leur engagement patriotique et leur courage remarquable ont contribué aux opérations de reconquête du territoire national », a soutenu le ministre d'État, ministre de la guerre et de la défense patriotique. Selon l'autorité, la communication vise donc à dresser le bilan de l'expérience de cette force, identifier les bonnes pratiques et les insuffisances pour proposer des orientations susceptibles de renforcer son efficacité au service de la défense de la patrie et de la souveraineté nationale. En ce qui concerne la mise en place de la réserve militaire, elle constitue une réforme structurante du système de défense. « Elle traduit la volonté de l'État de disposer d'une capacité supplémentaire de mobilisation des compétences nationales en vue de renforcer durablement la résilience de notre dispositif sécuritaire. Cette réforme contribuera à bâtir une défense nationale davantage intégrée, capable de répondre efficacement aux exigences d'un environnement stratégique en constante évolution », a rappelé le général Célestin Simporé, ajoutant que la communication permettra de saisir son cadre juridique et de comprendre la participation citoyenne à la défense de la nation. Le Burkina Faso poursuit avec courage et détermination un combat historique pour la préservation de son intégrité territoriale, la protection des populations et la restauration pleine et entière de l'autorité de l'État sur l'ensemble du territoire national, exalte le ministre en charge de la défense patriotique. Le général rassure : « L'objectif principal assigné au ministère de la Guerre et de la défense patriotique, c'est de faire en sorte que ce terrorisme prenne fin. Que nos FDS aient le triomphe sur les forces du mal, et cela sera effectif, vous pouvez compter sur nous ». O.L. Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
+      "_sourceVerified": true,
       "_tags": [
         "economic",
         "diplomatic",
@@ -1122,18 +1122,82 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "C2"
       },
-      "_rating": "F1",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Israeli strikes kill 3 Palestinians in Gaza despite deal on next phase of ceasefire",
+      "link": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-3-palestinians-in-gaza-despite-deal-on-next-phase-of-ceasefire/4015708",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-08-01T10:44:38.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Guerre au Moyen-Orient : l'Iran accuse les États-Unis d'alimenter l'escalade et met en garde leurs alliés",
+      "link": "https://fr.hespress.com/483713-guerre-au-moyen-orient-liran-accuse-les-etats-unis-dalimenter-lescalade-et-met-en-garde-leurs-allies.html",
+      "source": "Hespress (Maroc, FR)",
+      "date": "2026-08-01T10:10:01.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "escalade"
+        }
+      ]
+    },
+    {
+      "title": "Près de Naples, un séisme fait 21 blessés et cause des dégâts matériels",
+      "link": "https://www.lemonde.fr/international/article/2026/08/01/pres-de-naples-un-seisme-fait-21-blesses-et-cause-des-degats-materiels_6737211_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-08-01T10:07:18.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Egypt captains recount scramble to stop disaster after drone strike",
+      "link": "https://www.al-monitor.com/originals/2026/08/egypt-captains-recount-scramble-stop-disaster-after-drone-strike",
+      "source": "Al-Monitor",
+      "date": "2026-08-01T09:30:39.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
     {
       "title": "VIH : des avancées médicales historiques menacées par l’effondrement des financements internationaux",
       "link": "https://tchadinfos.com/2026/08/01/vih-des-avancees-medicales-historiques-menacees-par-leffondrement-des-financements-internationaux/",
@@ -1394,39 +1458,39 @@
   "narrativesByBloc": [
     [
       "afrique",
-      212
-    ],
-    [
-      "occident_us",
-      118
+      223
     ],
     [
       "occident_fr",
-      114
+      119
+    ],
+    [
+      "occident_us",
+      111
     ],
     [
       "autre",
-      99
+      98
     ],
     [
       "golfe_mo",
-      69
-    ],
-    [
-      "russie",
-      50
+      68
     ],
     [
       "bf_local",
-      43
+      42
+    ],
+    [
+      "russie",
+      40
+    ],
+    [
+      "turquie",
+      37
     ],
     [
       "chine",
       35
-    ],
-    [
-      "turquie",
-      33
     ],
     [
       "sahel",
@@ -1438,7 +1502,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 111,
+      "count": 116,
       "top": [
         {
           "title": "Burkina : Le Gouvernement suspend l’importation de la farine, du couscous et de la semoule",
@@ -1491,35 +1555,8 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 66,
+      "count": 61,
       "top": [
-        {
-          "title": "Ghana’s trade surplus triples to GHS48bn in 2025",
-          "link": "https://www.myjoyonline.com/ghanas-trade-surplus-triples-to-ghs48bn-in-2025/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Mahama leads nation in bidding farewell to James Victor Gbeho",
-          "link": "https://www.myjoyonline.com/mahama-leads-nation-in-bidding-farewell-to-james-victor-gbeho/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "La BIDC soutient la transformation agricole en Gambie avec un financement de 10,04 millions USD en faveur de G Farms Ltd",
-          "link": "https://www.wakatsera.com/la-bidc-soutient-la-transformation-agricole-en-gambie-avec-un-financement-de-1004-millions-usd-en-faveur-de-g-farms-ltd/",
-          "source": "Wakat Séra",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "FG denies fresh ban on Nigerian domestic workers in Kuwait",
           "link": "https://punchng.com/fg-denies-fresh-ban-on-nigerian-domestic-workers-in-kuwait/?utm_source=rss.punchng.com&utm_medium=web",
@@ -1527,12 +1564,39 @@
           "zone": "2. AO anglo. & côtière",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "50 yrs on stage: How Ajegunle, ‘Dyna’, Vanguard, Eko Hotels shaped my journey – Daddy Showkey",
           "link": "https://www.vanguardngr.com/2026/08/daddy-showkey-from-ghetto-to-grace-celebrates-50-years-on-stage/",
           "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "How an Imo monarch’s homecoming ended in tragedy",
+          "link": "https://www.vanguardngr.com/2026/08/how-an-imo-monarchs-homecoming-ended-in-tragedy/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "“It is a must win Game” – Madugu rallies Super Falcons for Zambia showdown after Malawi shock",
+          "link": "https://www.premiumtimesng.com/sports/football/899918-it-is-a-must-win-game-madugu-rallies-super-falcons-for-zambia-showdown-after-malawi-shock.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "The strategic imperative of global business summits on Africa, By Ehi Braimah",
+          "link": "https://www.premiumtimesng.com/opinion/899886-the-strategic-imperative-of-global-business-summits-on-africa-by-ehi-braimah.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
@@ -1544,7 +1608,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 13,
+      "count": 15,
       "top": [
         {
           "title": "Avec «Liwa Ya Emery», Franco Luambo chante l'assassinat de Patrice Lumumba en RDC",
@@ -1558,7 +1622,7 @@
         {
           "title": "Somalie : quel avenir pour l'AUSSOM à la fin du soutien américain ?",
           "link": "https://www.france24.com/fr/vid%C3%A9o/20260731-somalie-quel-avenir-pour-l-aussom-%C3%A0-la-fin-du-soutien-am%C3%A9ricain",
-          "source": "France 24",
+          "source": "France 24 Afrique",
           "zone": "5. Corne de l’Afrique",
           "theme": "D",
           "relevance": "A",
@@ -1583,13 +1647,13 @@
           "rating": "A2"
         },
         {
-          "title": "Ebola en RDC, une épidémie hors de contrôle ?",
-          "link": "https://www.crisisgroup.org/fr/pod/africa/democratic-republic-congo/ebola-en-rdc-une-epidemie-hors-de-controle",
-          "source": "ICG — International Crisis Group",
+          "title": "Ouganda : l'opposant incarcéré Kizza Besigye placé en soins intensifs",
+          "link": "https://www.france24.com/fr/vid%C3%A9o/20260801-ouganda-l-opposant-incarc%C3%A9r%C3%A9-kizza-besigye-plac%C3%A9-en-soins-intensifs",
+          "source": "France 24",
           "zone": "4. Grands Lacs",
-          "theme": "H",
+          "theme": "P",
           "relevance": "A",
-          "rating": "A3"
+          "rating": "C2"
         }
       ]
     },
@@ -1597,7 +1661,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 41,
+      "count": 38,
       "top": [
         {
           "title": "Sebta : la Fédération de la Ligue des droits des femmes dénonce une « catastrophe humanitaire »",
@@ -1607,6 +1671,15 @@
           "theme": "H",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Afflux de migrants à Ceuta : «Le gouvernement a systématiquement ignoré les avertissements» du renseignement, accuse un média",
+          "link": "https://francais.rt.com/international/136753-crise-migrants-ceuta-avertissements-ignores",
+          "source": "RT en français",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Voyage en Algérie : voici comment déclarer ses devises et objets de valeur",
@@ -1634,15 +1707,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Afflux de migrants à Ceuta : l’Espagne face à une crise inédite et sous le feu de la droite mondiale",
-          "link": "https://www.lemonde.fr/international/article/2026/08/01/afflux-de-migrants-a-ceuta-l-espagne-sous-le-feu-de-la-droite-reactionnaire-mondiale_6737180_3210.html",
-          "source": "Le Monde International",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "B1"
         }
       ]
     },
@@ -1650,8 +1714,26 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 88,
+      "count": 82,
       "top": [
+        {
+          "title": "Guerre au Moyen-Orient : l'Iran accuse les États-Unis d'alimenter l'escalade et met en garde leurs alliés",
+          "link": "https://fr.hespress.com/483713-guerre-au-moyen-orient-liran-accuse-les-etats-unis-dalimenter-lescalade-et-met-en-garde-leurs-allies.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "Israeli strikes kill 3 Palestinians in Gaza despite deal on next phase of ceasefire",
+          "link": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-3-palestinians-in-gaza-despite-deal-on-next-phase-of-ceasefire/4015708",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
         {
           "title": "DIRECT - Guerre au Moyen-Orient: l'Iran accuse les États-Unis de favoriser l'«escalade des tensions»",
           "link": "https://www.rfi.fr/fr/moyen-orient/20260801-direct-guerre-au-moyen-orient-un-p%C3%A9trolier-frapp%C3%A9-dans-le-d%C3%A9troit-d-ormuz-au-large-d-oman",
@@ -1678,24 +1760,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "C2"
-        },
-        {
-          "title": "Israel, US consider land blockade against Iran to increase economic isolation - report",
-          "link": "https://www.jpost.com/middle-east/iran-news/article-904246",
-          "source": "Jerusalem Post",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Ansarullah leader ties Riyadh to Epstein as Yemen locks in naval blockade",
-          "link": "https://www.tehrantimes.com/news/528745/Ansarullah-leader-ties-Riyadh-to-Epstein-as-Yemen-locks-in-naval",
-          "source": "Tehran Times",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
         }
       ]
     },
@@ -1703,7 +1767,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 172,
+      "count": 173,
       "top": [
         {
           "title": "Expulsion d’une journaliste russe en France : quand Paris ravale ses propres leçons de liberté d’expression",
@@ -1715,6 +1779,24 @@
           "rating": "C2"
         },
         {
+          "title": "Près de Naples, un séisme fait 21 blessés et cause des dégâts matériels",
+          "link": "https://www.lemonde.fr/international/article/2026/08/01/pres-de-naples-un-seisme-fait-21-blesses-et-cause-des-degats-materiels_6737211_3210.html",
+          "source": "Le Monde International",
+          "zone": "9. Europe occidentale",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Espionnage : un Français condamné en Azerbaïdjan, l’Algérie parmi les pays ciblés",
+          "link": "https://www.tsa-algerie.com/espionnage-un-francais-condamne-en-azerbaidjan-lalgerie-parmi-les-pays-cibles/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Comment l’essor du tourisme récepteur reflète une Chine plus ouverte et plus connectée",
           "link": "https://guineenews.org/2026/08/01/comment-lessor-du-tourisme-recepteur-reflete-une-chine-plus-ouverte-et-plus-connectee/",
           "source": "Guineenews",
@@ -1724,30 +1806,12 @@
           "rating": "F2"
         },
         {
-          "title": "Search operation to locate 7 climbers missing after Broad Peak avalanche resumes",
-          "link": "https://www.dawn.com/news/2019914/search-operation-to-locate-7-climbers-missing-after-broad-peak-avalanche-resumes",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "A1"
-        },
-        {
-          "title": "Le corps illibéral de l’idéologie vécue",
-          "link": "https://legrandcontinent.eu/fr/2026/08/01/clavicular-looksmaxxing-corps-illiberal-lideologie-vecue/",
-          "source": "Le Grand Continent",
+          "title": "Chronique critique des puissances mondiales (2026–2036)",
+          "link": "https://kapitalis.com/tunisie/2026/08/01/chronique-critique-des-puissances-mondiales-2026-2036/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "9. Europe occidentale",
-          "theme": "J",
+          "theme": "E",
           "relevance": "A",
-          "rating": "A3"
-        },
-        {
-          "title": "Russia pounds Kyiv with missiles, killing at least nine",
-          "link": "https://www.al-monitor.com/originals/2026/07/russia-pounds-kyiv-missiles-killing-least-nine",
-          "source": "Al-Monitor",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": null,
-          "relevance": ".",
           "rating": "A2"
         }
       ]
@@ -1757,47 +1821,53 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-08-01T09:11:37.901Z",
+      "at": "2026-08-01T10:48:15.246Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-01T09:11:37.909Z",
+      "at": "2026-08-01T10:48:15.253Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-01T09:12:16.266Z",
+      "at": "2026-08-01T10:48:47.911Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1932 articles"
+      "message": "104/170 flux OK, 1836 articles"
     },
     {
-      "at": "2026-08-01T09:12:19.273Z",
+      "at": "2026-08-01T10:48:50.979Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-01T09:12:19.618Z",
+      "at": "2026-08-01T10:48:51.316Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-01T09:12:19.623Z",
+      "at": "2026-08-01T10:48:51.322Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 16 alertes"
+      "message": "8 developpements, 20 alertes"
     },
     {
-      "at": "2026-08-01T09:12:19.623Z",
+      "at": "2026-08-01T10:48:51.322Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-08-01T10:48:51.322Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
