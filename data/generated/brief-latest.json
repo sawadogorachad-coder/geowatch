@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T10:05:35.629Z",
+  "generatedAt": "2026-08-03T10:50:18.638Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1897,
+    "ok": 114,
+    "failed": 56,
+    "articles": 1957,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -25,7 +25,7 @@
       {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
-        "count": 18
+        "count": 19
       },
       {
         "id": "rss_wakatsera",
@@ -38,9 +38,14 @@
         "count": 12
       },
       {
+        "id": "rss_eco_faso",
+        "name": "L'Économiste du Faso",
+        "count": 10
+      },
+      {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -138,6 +143,11 @@
         "count": 12
       },
       {
+        "id": "rss_guineenews",
+        "name": "Guineenews",
+        "count": 30
+      },
+      {
         "id": "rss_mediaguinee",
         "name": "Mediaguinee",
         "count": 20
@@ -171,6 +181,11 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -400,7 +415,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 28
+        "count": 26
       },
       {
         "id": "rss_bbc_africa",
@@ -490,7 +505,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 26
+        "count": 27
       },
       {
         "id": "rss_tehran",
@@ -564,11 +579,6 @@
       }
     ],
     "failedSources": [
-      {
-        "id": "rss_eco_faso",
-        "name": "L'Économiste du Faso",
-        "error": "HTTP 500"
-      },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
@@ -660,11 +670,6 @@
         "error": "HTTP 500"
       },
       {
-        "id": "rss_guineenews",
-        "name": "Guineenews",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -675,11 +680,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_7sur7",
         "name": "7sur7.cd (RDC)",
         "error": "HTTP 404"
@@ -687,7 +687,7 @@
       {
         "id": "rss_adiac",
         "name": "ADIAC — Dépêches Brazzaville",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_dailynation",
@@ -762,7 +762,7 @@
       {
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_apa",
@@ -852,7 +852,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_imf",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 66,
-    "alerts": 8,
+    "bfAes": 69,
+    "alerts": 9,
     "criticalAlerts": 7,
-    "sourcesDistinct": 70
+    "sourcesDistinct": 74
   },
   "topDevelopments": [
     {
@@ -1007,9 +1007,9 @@
       "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260802-pourquoi-certains-%C3%A9tats-veulent-quitter-la-cour-p%C3%A9nale-internationale",
       "pubDate": "2026-08-02T20:36:31.000Z",
       "description": "Après le Burkina Faso, le Mali et le Niger, le Tchad a annoncé le 27 juillet son retrait de la Cour pénale internationale. C’est une nouvelle étape dans la stratégie diplomatique de ces États du Sahel. Après leur départ de la Cédéao et de l'OIF, les Etats de l'AES dénoncent désormais une institution qu'elles jugent instrumentalisée par les puissances occidentales.",
-      "_source": "France 24",
-      "_sourceId": "rss_f24fr",
-      "_sourceCat": "geopol",
+      "_source": "France 24 Afrique",
+      "_sourceId": "rss_f24afr",
+      "_sourceCat": "africa",
       "_sourceBloc": "occident_fr",
       "_sourceVerified": false,
       "_tags": [
@@ -1034,72 +1034,10 @@
       "_desk": "A1"
     },
     {
-      "title": "‘We will come back stronger’ – Konadu targets Ghana revival after WAFU setback",
-      "link": "https://www.myjoyonline.com/we-will-come-back-stronger-konadu-targets-ghana-revival-after-wafu-setback/",
-      "pubDate": "2026-08-03T09:35:43.000Z",
-      "description": "Ghana’s Black Satellites have been eliminated from the 2026 WAFU B U-20 Championship after a goalless draw with Togo in their final Group B match. Ghana needed a victory against Togo at the Charles Konan Banny Stadium in Yamoussoukro, Côte d’Ivoire, to keep their semi-final hopes alive. However, despite controlling long periods of the match and creating several opportunities, the Black Satellites could not find the decisive goal. The result left Ghana third in Group B with two points from three matches, ending their campaign at the regional tournament. The Black Satellites began the competition with defeat against Nigeria before drawing with Burkina Faso in their second encounter. Although Ghana failed to progress, head coach Maxwell Konadu believes the experience gained in Côte d’Ivoire will help shape a stronger team ahead of the 2027 CAF U-20 Africa Cup of Nations, where Ghana will participate as hosts. “The team came here to compete and to win. Having said that, we also know there were one or two things that didn’t go according to plan. In football, you don’t always get everything 100 percent.” “This is not going to demotivate us. Rather, it will encourage us to give our best. We have to move on, reorganise ourselves and come back stronger.” “We came here to win, but it didn’t work out. We will reorganise ourselves. Definitely, we will not present the same team for the AFCON next year.”",
-      "_source": "MyJoyOnline (Ghana)",
-      "_sourceId": "rss_myjoyonline",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 2,
-      "_theme": "T",
-      "_zoneShort": "2. AO anglo. & côtière",
-      "_relevance": "L",
-      "_desk": "A2"
-    },
-    {
-      "title": "Promotion de la paix et de la cohésion sociale : la contribution de Cheikh Tang Zoug Moré",
-      "link": "https://www.sidwaya.info/promotion-de-la-paix-et-de-la-cohesion-sociale-la-contribution-de-cheikh-tang-zoug-more/",
-      "pubDate": "2026-08-03T09:34:00.000Z",
-      "description": "Le guide religieux Redwane Pougda dit Cheikh Tang Zoug Moré a animé une conférence de presse, mercredi 22 juillet 2026, à Ouagadougou. Devant les journalistes, il a partagé son parcours, sa vision, ses expériences et actions en tant que guide religieux dans la promotion de la paix, du vivre ensemble et de l’acceptation de l’autre. Dans le contexte marqué par les défis sécuritaires, les tensions communautaires et la nécessité du vivre-ensemble, le guide religieux Cheikh Tang Zoug Moré œuvre pour rapprocher les communautés. Au cours d’une conférence de presse, tenue mercredi 22 juillet 2026 à Ouagadougou, le guide religieux a confié que la foi doit être vécue à travers les actes avant les paroles. Reconnu comme étant un homme de dialogue, d'écoute et de proximité, il encourage chacun à devenir un acteur de paix dans son environnement à travers ses enseignements. Pour lui, la religion constitue un facteur de rassemblement pour prôner la paix, la cohésion sociale, le dialogue interreligieux. A cet effet, il lutte contre les divisions religieuses, encourage la tolérance religieuse et développe la solidarité à travers des valeurs morales. « Les différences religieuses ne doivent jamais devenir des motifs de conflit mais des occasions de mieux se connaître », a-t-il dit. Le guide religieux a ajouté qu’aucune religion ne peut justifier la haine. La foi doit rapprocher les hommes plutôt que les opposer. Car tous les êtres humains sont égaux devant Dieu et le jugement appartient uniquement au créateur et non aux hommes. A travers son association « Djamiyatoul Filoul Kayraat », Cheikh Tang Zoug Moré développe plusieurs initiatives visant à renforcer des œuvres sociales en aidant les personnes vulnérables de sa communauté. Originaire du village Yourga dans la commune de Sangha, province du Koulpélogo, région du Nakambé, le guide religieux Cheikh Tang Zoug a été marqué par la visite d'un maître venu enseigner la religion dans son village en 2006. Il décide, avec l'accord de son père, d'abandonner l'école classique afin de se consacrer aux études islamiques où il découvre très tôt sa vocation religieuse. Sa formation le conduit à Nakiboane dans la région de Fada N'Gourma, à Bobo-Dioulasso, en Egypte, au Niger et au Ghana. Ces années d'apprentissage lui ont permis d'acquérir une solide formation en langue arabe, en sciences islamiques et en enseignement religieux. A son retour au Burkina Faso, il devient guide religieux et forme de nombreux élèves participant à la promotion des valeurs de paix et de cohésion sociale. Gbetcheni Constantin Bertrand KAMBIRE",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": null,
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
-      "_desk": "A1"
-    },
-    {
-      "title": "Zoundwéogo/Éducation: Tinrtinga célèbre l’excellence scolaire sous le thème « Tous unis pour une éducation de qualité »",
-      "link": "https://www.aib.media/zoundweogo-education-tinrtinga-celebre-lexcellence-scolaire-sous-le-theme-tous-unis-pour-une-education-de-qualite/",
-      "pubDate": "2026-08-03T09:09:40.000Z",
-      "description": "Zoundwéogo/Éducation: Tinrtinga célèbre l'excellence scolaire sous le thème « Tous unis pour une éducation de qualité » Guiba, 1er août 2026 (AIB) – La communauté de Tinrtinga, dans la commune de Guiba, a célébré samedi les meilleurs élèves ainsi que les acteurs de l'école primaire publique du village, à l'occasion d'une journée dédiée à l'excellence scolaire, placée sous le thème: « Tous unis pour une éducation de qualité ». La cérémonie a réuni les autorités coutumières et religieuses, les autorités communales ainsi que les fils et filles du village, venus témoigner leur engagement en faveur de la promotion de l'éducation. Dans son intervention, le directeur de l'école primaire publique de Tinrtinga, Singo Sawadogo, a présenté les performances de son établissement. Au titre de l'année scolaire 2025-2026, l'école a enregistré un effectif de 205 élèves, dont 108 filles. Le conseil de décision a affiché un taux de passage en classe supérieure de 98,53 %. Au Certificat d'études primaires (CEP), supervisé par la camarade Rihanatou Ouédraogo, les 41 candidats présentés ont tous été admis, soit un taux de réussite de 100 %. Ils ont également tous réussi le concours d'entrée en classe de sixième. Le directeur n'a toutefois pas occulté les difficultés auxquelles l'établissement reste confronté. Il a notamment cité la baisse progressive des effectifs, les absences répétées de certains élèves au cours de l'année scolaire ainsi que la vétusté des latrines. Selon lui, ces défis nécessitent une mobilisation accrue de l'ensemble des acteurs afin d'améliorer les conditions d'apprentissage et de garantir le maintien des enfants à l'école. Le parrain de la cérémonie, Tasseré Zoungrana, a invité les parents d'élèves à faire de l'éducation « une priorité communautaire », estimant que « chaque leçon apprise, chaque livre lu rapproche les enfants de leur réussite ». Il s'est dit convaincu qu'avec l'engagement des familles et de toute la communauté éducative, l'école continuera de former des citoyens capables de contribuer au développement local et national. Le chef de la Circonscription d'éducation de base (CEB) de Guiba, Joachim Compaoré, a salué cette initiative qui valorise le mérite scolaire. Il a félicité les enseignants, les élèves et les parents pour les résultats obtenus, rappelant que la CEB de Guiba a enregistré un taux de succès de 98,90 % au CEP, session de 2026. Au terme de la cérémonie, les cinq meilleurs élèves de chaque classe ont reçu des kits scolaires et divers présents offerts par les parents d'élèves. Les meilleurs admis au CEP ont, quant à eux, été récompensés par des vélos neufs. La camarade Ouédraogo a également reçu un ordinateur en reconnaissance de son engagement et de sa contribution aux excellents résultats de l'établissement. Agence d'information du Burkina SM/BGB/bak",
+      "title": "Nayala: le village de Biba célèbre le retour du VDP Dozo Seydou Sow décoré pour son engagement patriotique",
+      "link": "https://www.aib.media/nayala-le-village-de-biba-celebre-le-retour-du-vdp-dozo-seydou-sow-decore-pour-son-engagement-patriotique/",
+      "pubDate": "2026-08-03T10:48:45.000Z",
+      "description": "Burkina-Nayala-Yaba-Sécurité-Décoration-VDP Nayala: le village de Biba célèbre le retour du VDP Dozo Seydou Sow décoré pour son engagement patriotique Yaba, 1er août 2026 (AIB) – Le village de Biba, dans la province du Nayala, a célébré samedi le retour du VDP Dozo Seydou Sow, dit « Ouattara Wôngo », décoré à Ouagadougou pour son engagement dans la défense de la patrie. La cérémonie, a rassemblé autorités locales, forces de défense et de sécurité, parents, amis et populations venues saluer cette reconnaissance nationale. De retour de la capitale après avoir reçu sa distinction, le VDP Seydou Sow a été accueilli dans une ambiance de ferveur patriotique. Prenant la parole au nom du chef coutumier, Tibou Ki a qualifié cette décoration de « fierté pour Biba » et a invité les jeunes à suivre l’exemple de bravoure du récipiendaire. Il a également formulé des prières pour le retour durable de la paix au Burkina Faso. Le commissaire de Yaba a ensuite procédé à la présentation officielle du trophée reçu à Ouagadougou, sous les applaudissements de l’assistance. Dans son intervention, Sow Seydou a exprimé sa reconnaissance aux autorités burkinabè et aux populations de Biba. Il a rappelé que l’unité, symbolisée par son nom d’artiste « Wôngo » signifiant « nous sommes tous un », demeure essentielle pour la reconquête du territoire national. La marraine de la cérémonie, la camarade Fatou Sow, a salué le sacrifice quotidien des FDS, VDP et Dozos qui ont contribué à la réinstallation et à la sécurisation de Biba après les épreuves traversées par le village. Elle a appelé les populations à soutenir les forces engagées par la prière, la vigilance citoyenne et la transmission de bonnes informations. Le représentant des Dozos du Nayala, Ki Pierre, a souligné que l’engagement dozo repose sur le courage, la discipline et la connaissance du terrain, avant de remercier les autorités pour cette reconnaissance accordée aux combattants engagés aux côtés des FDS. Cette célébration traduit l’attachement des communautés rurales aux VDP et aux Dozos engagés dans la lutte contre le terrorisme. Elle ouvre également des perspectives de renforcement de leur rôle aux côtés des forces armées pour la sécurisation durable des localités et le retour définitif de la paix au Burkina Faso. Agence d'information du Burkina KTA/bak",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -1117,9 +1055,77 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina Faso : Acteurs des médias et communicateurs outillés à Dédougou contre la désinformation",
+      "link": "https://faso7.com/2026/08/03/burkina-faso-acteurs-des-medias-et-communicateurs-outilles-a-dedougou-contre-la-desinformation/",
+      "pubDate": "2026-08-03T10:25:26.000Z",
+      "description": "La première session d'élaboration de contenus alternatifs aux messages subversifs et à la désinformation contre le Burkina Faso s'est achevée le 30 juillet 2026 à Dédougou dans la région du Bankui. Organisée par la direction générale de la communication et des médias (DGCM), elle a réuni des journalistes et des communicateurs autour du thème : « Communication stratégique et lutte contre la désinformation et les messages subversifs contre le Burkina Faso : Contributions des journalistes, des communicants, des blogueurs et FDS dans le renforcement de l'image du Burkina Faso et la prévention de l'extrémisme violent ». À travers cette première session, l'objectif de la DGCM était d'outiller les participants afin qu'ils soient en mesure de répondre efficacement aux messages de désinformation à travers l'identification des facteurs de radicalisation et d'extrémisme violent. Les travaux ont été axés autour de six sous-thèmes. La première communication était relative à l’introduction au mémorandum sur la déconstruction des stéréotypes sur le Burkina Faso. C'est un document qui a été élaboré en 2025 et mis à jour en 2026 sur instruction du ministre des Affaires étrangères, afin de déconstruire les stéréotypes qui impactent négativement l'image du Burkina Faso. Les stéréotypes qui ressortent du document sont catégorisés en sept domaines, dont la défense et la sécurité, les droits humains et l’action humanitaire, l'administration territoriale et la cohésion sociale, l’information et la communication, la souveraineté, la diplomatie et la coopération, l’économie et le développement ainsi que l'énergie, les mines et les carrières. Il s'est agi pour les experts du ministère des Affaires étrangères de mettre en exergue les arguments du mémorandum opposant les idées préconçues sur le Burkina Faso. Sur le plan de la défense, par exemple, le mémorandum révèle que le Burkina Faso n'est pas le théâtre d'un conflit armé, mais qu’il est plutôt engagé dans la lutte contre le terrorisme. Dans la communication consacrée aux éléments de langage pour une déconstruction des stéréotypes, il a été conseillé d'éviter l'usage des termes de « guerre civile », de « rébellion » et de « crime de guerre ». « Le Burkina Faso n'est pas en lutte contre des groupes armés terroristes. Le Burkina Faso fait plutôt front à des terroristes », a expliqué San Simon Coulibaly, ambassadeur, expert au Bureau d'analyses stratégiques du ministère des Affaires étrangères. En réponse au stéréotype faisant état de la dégradation de la situation sécuritaire, les experts ont rappelé dans le mémorandum qu'à la date du 30 juin 2026, 74,53 % du territoire avait été reconquis. Au niveau des droits humains, les allégations tendant à incriminer les FDS et les VDP comme auteurs d'exactions sont infirmées par la judiciarisation du théâtre des opérations dont fait preuve le gouvernement, à travers la loi n°001-2023/ALT du 16 février 2023 portant révision du Code de justice militaire et consacre le déploiement de la prévôté sur le théâtre des opérations nationales. Une autre communication a porté sur le rôle et la responsabilité des acteurs de l'information et de la communication dans la promotion de la paix, de la cohésion sociale et du vivre-ensemble. Elle a été animée par Moussa Sawadogo, consultant en communication et journalisme, qui a expliqué que les acteurs ont la même mission. Pour le journaliste, il s'agit, entre autres, de vérifier systématiquement les faits et de veiller au respect d'une déontologie rigoureuse. Le communicant doit aussi porter une parole institutionnelle crédible et agir en synergie avec l'État. Par ailleurs, le Dr Inoussa Compaoré à travers sa communication sur la promotion de la culture de la paix et de la cohésion sociale au Burkina Faso a indiqué que toutes les confessions religieuses appellent à l'unité et à la cohésion. En dépit de leurs différences, elles présentent des valeurs communes sur lesquelles le tissu social peut être reconstitué. Pour lui, le plus important est l'implication des acteurs religieux pour faire l'unanimité au sein des communautés. À l'issue des travaux, le chargé de mission du ministère de la Communication, Alexis Yaméogo, a indiqué que les acteurs ont assimilé les enjeux de la lutte contre la désinformation. Il a invité les participants à être des ambassadeurs et des défenseurs de l'image du Burkina Faso. « Soyons, après cet atelier, des journalistes qui se battent pour l'intérêt général et privilégient l'unité nationale plutôt que la division. Soyons des communicants qui travaillent toujours à mobiliser, à convaincre pour mieux faire adhérer nos populations à la cause de notre souveraineté, de notre dignité », a-t-il insisté. Cheick Habib Désiré BAYILI Faso7 L’article Burkina Faso : Acteurs des médias et communicateurs outillés à Dédougou contre la désinformation est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "I",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Nayala: l’école primaire publique de Nimina célèbre l’excellence et la résilience éducative",
+      "link": "https://www.aib.media/nayala-lecole-primaire-publique-de-nimina-celebre-lexcellence-et-la-resilience-educative/",
+      "pubDate": "2026-08-03T10:14:30.000Z",
+      "description": "Burkina-Nayala-Excellence-Scolaire Nayala: l'école primaire publique de Nimina célèbre l'excellence et la résilience éducative Kougny, 1er août 2026 (AIB) – Le village résilient de Nimina, situé dans la commune de Kougny, a organisé, le samedi 1er août 2026, la première édition de la Journée de l'excellence de son École primaire publique. À cette occasion, les meilleurs élèves ont été récompensés par des vélos et des kits scolaires, tandis que des attestations de reconnaissance ont été remises aux acteurs engagés de l'école . Cette première célébration de l'excellence scolaire a constitué un moment de fierté et d'espoir pour toute la communauté. Placée sous la présidence du camarade Drissa Barro, président de la Délégation spéciale de la commune de Kougny, la cérémonie a été rythmée par des prestations artistiques, la présentation des résultats scolaires ainsi que la remise de distinctions aux trois meilleurs élèves de chaque classe et aux admis au Certificat d'études primaires (CEP). Dans son intervention, le camarade Drissa Barro a rendu un vibrant hommage aux enseignants, aux Forces de défense et de sécurité (FDS) ainsi qu'aux Volontaires pour la défense de la patrie (VDP). Il a invité les élèves à cultiver le civisme, le patriotisme et la discipline, indispensables à leur réussite. Présentant le bilan de l'année scolaire, le directeur de l'établissement, le camarade Drissa Diallo, a salué les efforts conjugués des enseignants, des parents d'élèves et des partenaires, qui ont permis d'obtenir un taux de réussite de 100 % au CEP, malgré les défis imposés par la crise sécuritaire. Le représentant des parrains a, pour sa part, réaffirmé la volonté des anciens élèves d'unir leurs forces afin d'offrir, dans les années à venir, un meilleur cadre d'apprentissage aux enfants du village. Invitée d'honneur et ancienne enseignante de l'école, la camarade Sow Ruffine a rendu hommage à la résilience de la communauté de Nimina ainsi qu'au dévouement des enseignants, qu'elle a qualifiés de « soldats de la craie ». Elle a également plaidé pour la construction d'une deuxième école afin de répondre à l'accroissement des effectifs. Le représentant du directeur provincial de l'Éducation préscolaire, primaire et non formelle, le camarade Traoré Gaston, a insisté sur l'importance de la paix, de la solidarité et du patriotisme comme fondements d'un développement éducatif durable. Le chef de terre, le camarade Ky Yaya, a formulé des bénédictions en faveur de l'école, des élèves et de l'ensemble de la communauté éducative. Enfin, le président du comité d'organisation, le camarade Karambiri Konwoma Sayouba, a lancé un appel à l'unité des filles et fils de Nimina afin de doter le village d'infrastructures éducatives modernes au bénéfice des générations futures. La cérémonie s'est achevée par la remise de prix, de vélos, de kits scolaires, d'attestations de reconnaissance et d'encouragements aux lauréats ainsi qu'aux différents acteurs ayant contribué au rayonnement de l'école. Cette première édition nourrit désormais l'espoir d'une mobilisation durable des filles et fils de Nimina pour renforcer le système éducatif local et accompagner le développement du village. Agence d'information du Burkina KTA/bak",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
       "_theme": "D",
@@ -1129,6 +1135,38 @@
     }
   ],
   "alerts": [
+    {
+      "title": "Gaza : les frappes israéliennes se poursuivent malgré les avancées annoncées vers un cessez-le-feu",
+      "link": "https://francais.rt.com/international/136786-gaza-frappes-israeliennes",
+      "source": "RT en français",
+      "date": "2026-08-03T10:10:06.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Genocost : pour la juriste Lilas Sansa, les crimes commis en RDC relèvent à la fois du génocide, des crimes contre l'humanité et des crimes de guerre",
+      "link": "https://actualite.cd/2026/08/03/genocost-pour-la-juriste-lilas-sansa-les-crimes-commis-en-rdc-relevent-la-fois-du",
+      "source": "ActualitéCD (RDC)",
+      "date": "2026-08-03T09:26:53.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "génocide"
+        }
+      ]
+    },
     {
       "title": "Un séisme de magnitude 5,6 frappe l’Egypte sans faire de victimes",
       "link": "https://www.liberation.fr/international/afrique/un-seisme-de-magnitude-56-frappe-legypte-sans-faire-de-victimes-20260803_XREUBI4YP5G5RAZFVWRGEIXIV4/",
@@ -1240,52 +1278,36 @@
           "keyword": "pandemic"
         }
       ]
-    },
-    {
-      "title": "Iran’s red line holds: Trump forced into humiliating retreat",
-      "link": "https://www.tehrantimes.com/news/528799/Iran-s-red-line-holds-Trump-forced-into-humiliating-retreat",
-      "source": "Tehran Times",
-      "date": "2026-08-02T17:16:16.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "red line"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      190
+      205
     ],
     [
       "occident_fr",
-      136
+      128
     ],
     [
       "autre",
-      118
+      112
     ],
     [
       "occident_us",
-      94
-    ],
-    [
-      "golfe_mo",
-      65
+      96
     ],
     [
       "bf_local",
-      54
+      57
+    ],
+    [
+      "golfe_mo",
+      51
     ],
     [
       "turquie",
-      44
+      48
     ],
     [
       "russie",
@@ -1297,7 +1319,7 @@
     ],
     [
       "sahel",
-      24
+      28
     ]
   ],
   "desks": [
@@ -1305,7 +1327,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 106,
+      "count": 114,
       "top": [
         {
           "title": "Climate Change is making malaria worse in parts of Africa while wiping it out in others, new study finds",
@@ -1346,7 +1368,7 @@
         {
           "title": "Pourquoi certains États veulent quitter la Cour pénale internationale",
           "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260802-pourquoi-certains-%C3%A9tats-veulent-quitter-la-cour-p%C3%A9nale-internationale",
-          "source": "France 24",
+          "source": "France 24 Afrique",
           "zone": "1. Sahel & AO franco.",
           "theme": "J",
           "relevance": "A",
@@ -1358,7 +1380,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 59,
+      "count": 58,
       "top": [
         {
           "title": "‘We will come back stronger’ – Konadu targets Ghana revival after WAFU setback",
@@ -1379,29 +1401,29 @@
           "rating": "F2"
         },
         {
+          "title": "Nord-ouest du Nigeria : au moins 52 personnes kidnappées par des hommes armés",
+          "link": "https://lesoleil.sn/international/infos-afrique/nord-ouest-du-nigeria-au-moins-52-personnes-kidnappees-par-des-hommes-armes/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "Au Nigeria, au moins 52 personnes kidnappées par des hommes armés dans le nord-ouest du pays",
+          "link": "https://www.lemonde.fr/international/article/2026/08/03/au-nigeria-au-moins-52-personnes-kidnappees-par-des-hommes-armes-dans-le-nord-ouest-du-pays_6737359_3210.html",
+          "source": "Le Monde International",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B1"
+        },
+        {
           "title": "N10trn investments in 13 years fail to lift power supply",
           "link": "https://www.vanguardngr.com/2026/08/n10trn-investments-in-13-years-fail-to-lift-power-supply/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Onaiyekan: Northern Christians, Atiku, Senator Shehu Sani defend Catholic Bishops",
-          "link": "https://www.vanguardngr.com/2026/08/onaiyekan-northern-christians-atiku-senator-shehu-sani-defend-catholic-bishops/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Troops exhume remains of community leader allegedly murdered in Imo",
-          "link": "https://www.vanguardngr.com/2026/08/troops-exhume-remains-of-community-leader-allegedly-murdered-in-imo/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1411,8 +1433,26 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 38,
+      "count": 46,
       "top": [
+        {
+          "title": "CAN féminine 2026 : le Burkina Faso se relance face à la Tanzanie (2-1)",
+          "link": "https://leconomistedufaso.com/2026/08/03/can-feminine-2026-le-burkina-faso-se-relance-face-a-la-tanzanie-2-1/",
+          "source": "L'Économiste du Faso",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Genocost : pour la juriste Lilas Sansa, les crimes commis en RDC relèvent à la fois du génocide, des crimes contre l'humanité et des crimes de guerre",
+          "link": "https://actualite.cd/2026/08/03/genocost-pour-la-juriste-lilas-sansa-les-crimes-commis-en-rdc-relevent-la-fois-du",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
         {
           "title": "Société commerciale pour le Mondial: l’UEFA sort le carton rouge, Infantino recule, la Caf encore hors-jeu!",
           "link": "https://www.wakatsera.com/societe-commerciale-pour-le-mondial-luefa-sort-le-carton-rouge-infantino-recule-la-caf-encore-hors-jeu/",
@@ -1438,25 +1478,7 @@
           "zone": "4. Grands Lacs",
           "theme": "D",
           "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Centrafrique: un ressortissant suisse et un soldat tués dans une attaque au nord de Bangui",
-          "link": "https://www.rfi.fr/fr/afrique/20260803-centrafrique-un-ressortissant-suisse-et-un-soldat-tu%C3%A9s-dans-une-attaque-au-nord-de-bangui",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Soudan : une ONG accuse l’armée d’avoir tué 35 personnes dans une frappe de drone sur un tribunal du Darfour",
-          "link": "https://www.lemonde.fr/afrique/article/2026/08/03/soudan-une-ong-accuse-l-armee-d-avoir-tue-35-personnes-dans-une-frappe-de-drone-sur-un-tribunal-du-darfour_6737320_3212.html",
-          "source": "Le Monde Afrique",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B1"
+          "rating": "C1"
         }
       ]
     },
@@ -1464,7 +1486,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 38,
+      "count": 33,
       "top": [
         {
           "title": "Crise de Ceuta, quel impact sur l’Algérie ? Le décryptage d’Abdelaziz Rahabi",
@@ -1494,13 +1516,13 @@
           "rating": "F2"
         },
         {
-          "title": "Kick-boxing : la jeune Marocaine Ambar Tissoudali invitée à un prestigieux tournoi en Chine",
-          "link": "https://fr.hespress.com/483859-kick-boxing-la-jeune-marocaine-ambar-tissoudali-invitee-a-un-prestigieux-tournoi-en-chine.html",
+          "title": "Sunderland : Chemsdine Talbi dans le viseur du RB Leipzig",
+          "link": "https://fr.hespress.com/483883-sunderland-chemsdine-talbi-dans-le-viseur-du-rb-leipzig.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
           "title": "Expats, seul votre argent compte pour l’État tunisien !",
@@ -1517,8 +1539,26 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 93,
+      "count": 82,
       "top": [
+        {
+          "title": "Analysis-How Iran is widening its pressure campaign to force US concessions",
+          "link": "https://www.al-monitor.com/originals/2026/08/analysis-how-iran-widening-its-pressure-campaign-force-us-concessions",
+          "source": "Al-Monitor",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Trump annonce une reprise des négociations lundi, l'Iran dément",
+          "link": "https://telquel.ma/instant-t/2026/08/03/trump-annonce-une-reprise-des-negociations-lundi-liran-dement_2001840/",
+          "source": "TelQuel (Maroc)",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F1"
+        },
         {
           "title": "Bulls in charge as PSX opens week by gaining 1,700 points during intraday trade",
           "link": "https://www.dawn.com/news/2020325/bulls-in-charge-as-psx-opens-week-by-gaining-1700-points-during-intraday-trade",
@@ -1545,24 +1585,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Iran executes two men convicted of spying for Israel",
-          "link": "https://www.vanguardngr.com/2026/08/iran-executes-two-men-convicted-of-spying-for-israel/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F1"
-        },
-        {
-          "title": "Guerre au Moyen-Orient : l’Iran dément la reprise des négociations annoncée par Donald Trump",
-          "link": "https://www.liberation.fr/international/moyen-orient/donald-trump-annonce-une-reprise-des-negociations-avec-liran-ce-lundi-20260803_EBTNTDBRD5GXDPVVDKGYAMSYBU/",
-          "source": "Libération International",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C1"
         }
       ]
     },
@@ -1570,16 +1592,16 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 154,
+      "count": 146,
       "top": [
         {
-          "title": "Iran’s red line holds: Trump forced into humiliating retreat",
-          "link": "https://www.tehrantimes.com/news/528799/Iran-s-red-line-holds-Trump-forced-into-humiliating-retreat",
-          "source": "Tehran Times",
-          "zone": "16. Amérique du Nord",
+          "title": "Une géopolitique du mariage homosexuel sous Vladimir Poutine : le cas Zabiiako-Kasatkina",
+          "link": "https://www.iris-france.org/une-geopolitique-du-mariage-homosexuel-sous-vladimir-poutine-le-cas-zabiiako-kasatkina/",
+          "source": "IRIS France",
+          "zone": "10. Europe orient. & Balkans",
           "theme": "P",
           "relevance": "L",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
           "title": "EN DIRECT, guerre au Moyen-Orient : « Nous ne négocions pas avec les Etats-Unis », assure la diplomatie iranienne, contredisant des propos tenus par Donald Trump dimanche",
@@ -1628,48 +1650,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-08-03T10:05:01.239Z",
+      "at": "2026-08-03T10:49:42.234Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-03T10:05:01.246Z",
+      "at": "2026-08-03T10:49:42.241Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-03T10:05:32.076Z",
+      "at": "2026-08-03T10:50:15.203Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1897 articles"
+      "message": "114/170 flux OK, 1957 articles"
     },
     {
-      "at": "2026-08-03T10:05:35.275Z",
+      "at": "2026-08-03T10:50:18.319Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-03T10:05:35.627Z",
+      "at": "2026-08-03T10:50:18.636Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-03T10:05:35.632Z",
+      "at": "2026-08-03T10:50:18.640Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 8 alertes"
+      "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-08-03T10:05:35.632Z",
+      "at": "2026-08-03T10:50:18.641Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-08-03T10:05:35.632Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
