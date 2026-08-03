@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T15:16:04.654Z",
+  "generatedAt": "2026-08-03T17:21:02.696Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1928,
+    "ok": 107,
+    "failed": 63,
+    "articles": 1894,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -43,6 +43,11 @@
         "count": 10
       },
       {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "count": 10
+      },
+      {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
@@ -51,11 +56,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_maliweb",
@@ -93,8 +93,8 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -223,18 +223,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -343,11 +333,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -356,11 +341,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -420,7 +400,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 10
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -565,14 +545,14 @@
     ],
     "failedSources": [
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_minute_bf",
@@ -610,11 +590,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -623,6 +598,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -717,7 +697,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -730,9 +710,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -748,6 +733,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -793,6 +783,16 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -852,7 +852,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_imf",
@@ -863,9 +863,9 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 63,
-    "alerts": 7,
-    "criticalAlerts": 4,
+    "bfAes": 77,
+    "alerts": 8,
+    "criticalAlerts": 5,
     "sourcesDistinct": 73
   },
   "topDevelopments": [
@@ -902,6 +902,40 @@
       "_desk": "A1"
     },
     {
+      "title": "Burkina/Arrondissement 9 : Plus de 500 leaders religieux mobilisés pour promouvoir la paix, la cohésion sociale et le vivre-ensemble",
+      "link": "https://www.aib.media/burkina-arrondissement-9-plus-de-500-leaders-religieux-mobilises-pour-promouvoir-la-paix-la-cohesion-sociale-et-le-vivre-ensemble/",
+      "pubDate": "2026-08-03T16:45:00.000Z",
+      "description": "BURKINA–RELIGION–SENSIBILISATION–COHÉSION- SOCIALE Burkina/Arrondissement 9 : Plus de 500 leaders religieux mobilisés pour promouvoir la paix, la cohésion sociale et le vivre-ensemble Ouagadougou, 3 août 2026 (AIB) – Le Bureau exécutif local de la Communauté musulmane du Burkina Faso (CMBF) de l'arrondissement 9 a organisé, samedi à Ouagadougou, un atelier de sensibilisation réunissant plus de 500 participants, parmi lesquels des maîtres coraniques, des responsables de médersas, des prêcheurs et des leaders religieux, en vue de promouvoir la paix, la cohésion sociale et le vivre-ensemble. Cette rencontre de deux jours vise à renforcer les capacités des acteurs religieux afin qu'ils contribuent davantage à la consolidation de la paix, à la promotion du vivre-ensemble et à une meilleure organisation des foyers coraniques, conformément aux orientations nationales et aux dispositions légales en vigueur. Selon le secrétaire général du Bureau exécutif local de la CMBF de l'arrondissement 9, Mahamadi Zoungrana, cette initiative répond aux exigences du contexte national. « Nous avons constaté les orientations données au plus haut niveau en faveur du renforcement de la cohésion sociale, de la paix et du vivre-ensemble. Il était donc nécessaire de réunir les leaders religieux afin qu'ils s'approprient ces orientations ainsi que les dispositions de la loi n°011 portant libertés d'association », a-t-il expliqué. M. Zoungrana s'exprimait à l'ouverture de l'atelier placé sous le thème : « La problématique des foyers coraniques et le rôle des guides religieux dans la préservation de la paix, de la cohésion sociale et du vivre-ensemble ». Il a indiqué que cette activité s'inscrit dans le plan d'action opérationnel du bureau local, sous l'impulsion de son président, El Hadj Hamado Ouédraogo, en collaboration avec le bureau national de la Communauté musulmane du Burkina Faso. Au cours des deux journées, cinq communications seront présentées afin d'outiller les participants sur la gestion des foyers coraniques, la protection des enfants, la promotion des discours de paix et le respect des textes encadrant les activités religieuses. Le Représentant du président de la Communauté musulmane du Burkina Faso, le secrétaire général, Dr Hatimi Démé, a salué une initiative qu'il a qualifiée d'exemplaire au regard du contexte sécuritaire. Selon lui, la crise que traverse le Burkina Faso exige l'engagement de toutes les composantes de la Nation, notamment des guides religieux dont les messages influencent fortement les communautés. « Les maîtres coraniques et les leaders religieux doivent être sensibilisés aux nouvelles dispositions relatives aux religions ainsi qu'aux innovations concernant les foyers coraniques afin de garantir une éducation de qualité, respectueuse des droits et de la sécurité des enfants », a-t-il souligné. M. Démé a rappelé qu'une étude commanditée par l'UNICEF en 2021 a recensé 5 633 foyers coraniques accueillant plus de 200 000 apprenants au Burkina Faso, illustrant l'importance de ce secteur dans l'éducation non formelle. Il a également insisté sur la nécessité de mieux encadrer les déplacements des maîtres coraniques et de leurs élèves afin de prévenir les difficultés auxquelles ces enfants sont confrontés. La présidente de la délégation spéciale de l'arrondissement 9, Jocelyne Traoré/Sanon, a salué une initiative « d'une importance capitale » dans le contexte actuel. Selon elle, la dynamique de la Révolution progressiste populaire appelle chaque citoyen à promouvoir des discours conciliateurs, responsables et fédérateurs. « Nous attendons qu'au terme de cette formation, les guides religieux s'engagent davantage à diffuser des messages qui rassemblent les Burkinabè, renforcent la cohésion sociale et consolident le vivre-ensemble autour de la patrie », a-t-elle déclaré. Le parrain de la cérémonie, El Hadj Sayouba Traoré, s'est réjoui de cette initiative du Bureau exécutif local de la CMBF de l'arrondissement 9 visant à promouvoir le vivre-ensemble. Il a invité les autres bureaux locaux de la communauté musulmane à s'en inspirer afin de renforcer la paix durable au Burkina Faso. Agence d'information du Burkina NO/yos",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 123,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Séno: la radio Kawral lance la 4e édition de « Vacances Kawral 2026 » pour promouvoir un Sahel plus protecteur et inclusif",
       "link": "https://www.aib.media/seno-la-radio-kawral-lance-la-4e-edition-de-vacances-kawral-2026-pour-promouvoir-un-sahel-plus-protecteur-et-inclusif/",
       "pubDate": "2026-08-03T14:58:48.000Z",
@@ -928,6 +962,40 @@
       "_score": 119,
       "_zone": 1,
       "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "SOUM/DJIBO : la montée des couleurs délocalisée au BIR 22 pour renforcer le lien entre les Forces combattantes et les populations",
+      "link": "https://www.aib.media/soum-djibo-la-montee-des-couleurs-delocalisee-au-bir-22-pour-renforcer-le-lien-entre-les-forces-combattantes-et-les-populations/",
+      "pubDate": "2026-08-03T17:19:34.000Z",
+      "description": "SOUM/DJIBO : la montée des couleurs délocalisée au BIR 22 pour renforcer le lien entre les Forces combattantes et les populations Djibo, 3 août 2026 (AIB)-La cérémonie mensuelle de montée des couleurs nationales s'est tenue, ce lundi 3 août 2026, dans l'enceinte du 22ᵉ Bataillon d'intervention rapide (BIR 22) de Djibo, à l'initiative du Haut-Commissaire de la province du Soum, Camarade Wend Néré Wilfried Tougma, en collaboration avec le Camarade Commandant du BIR 22. Cette délocalisation, une première dans la province, vise à renforcer le rapprochement entre les Forces engagées sur le terrain et les populations, dans un contexte de reconquête du territoire national. Habituellement organisée au Haut-Commissariat, la cérémonie s'est déroulée cette fois au sein du BIR 22, également appelé « Bataillon de choc ». Elle a réuni les autorités administratives, coutumières et religieuses, les Forces de Défense et de Sécurité (FDS), les Volontaires pour la Défense de la Patrie (VDP), les partenaires techniques et humanitaires, les organisations de la société civile, ainsi qu'une forte mobilisation des populations. Dans son allocution, le camarade Haut-Commissaire a exprimé sa gratitude au commandement du BIR 22 pour avoir accepté d'abriter cette cérémonie républicaine. Il a salué cette initiative, qu'il a qualifiée de symbole fort du rapprochement entre les Forces combattantes et les populations, dans un contexte marqué par la reconquête du territoire national et le renforcement de la cohésion sociale. Profitant de cette tribune, il a dressé le bilan des principales activités conduites dans la province au cours du mois de juillet 2026. Il a notamment évoqué la tenue de la deuxième session du Cadre de concertation provincial (CCP), consacrée à la cohésion sociale et au vivre-ensemble, l'organisation d'une grande conférence publique sur cette thématique, l'installation du bureau provincial du Conseil des personnes vivant avec un handicap, la vulgarisation des textes relatifs au Conseil national consultatif de la jeunesse (CNCJ-BF), ainsi que la mise en place de son bureau provincial. Il est également revenu sur le lancement des concours directs et professionnels de la Fonction publique, les échanges sur la liberté d'association, le déroulement de la manifestation communautaire « DÉORAL », le lancement des épreuves du Certificat supérieur d'aptitude pédagogique (CSAPe), ainsi que celui de l'immersion patriotique obligatoire des nouveaux bacheliers de la session 2026. Parmi les actions de solidarité et de soutien aux initiatives de développement et de sécurisation figurent le don de trois tonnes de riz et de 30 cartons de savon offert par le 28ᵉ Bataillon d'intervention rapide (BIR 28) aux populations et aux personnes déplacées internes d'Arbinda, l'appui matériel et financier de la commune de Djibo à l'organisation de l'immersion patriotique, le don de 260 litres de carburant remis par la veille citoyenne d'Arbinda aux Volontaires pour la Défense de la Patrie, ainsi que les activités de sensibilisation sur le port du casque et la distribution de casques au profit des agents communaux et des membres de la délégation spéciale de Kelbo. La cérémonie s'est achevée dans une ambiance empreinte de ferveur patriotique et de convivialité. Au-delà de son caractère républicain et symbolique, cette édition délocalisée de la montée des couleurs a illustré la volonté des autorités provinciales de consolider les liens entre les Forces combattantes et les populations, tout en réaffirmant l'engagement collectif des acteurs de la province en faveur du patriotisme, de la cohésion sociale et de la construction d'un Burkina Faso souverain, résilient et prospère. Agence d'information du Burkina AG/ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "H",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -998,19 +1066,21 @@
       "_desk": "A1"
     },
     {
-      "title": "Gourma : La société de participation minière du Burkina offre plus de 21 millions FCFA de vivres aux veuves et orphelins des forces combattantes",
-      "link": "https://www.aib.media/gourma-la-societe-de-participation-miniere-du-burkina-offre-plus-de-21-millions-fcfa-de-vivres-aux-veuves-et-orphelins-des-forces-combattantes/",
-      "pubDate": "2026-08-03T10:59:53.000Z",
-      "description": "BURKINA-GOULMOU-SOLIDARITE-DON Gourma : La société de participation minière du Burkina offre plus de 21 millions FCFA de vivres aux veuves et orphelins des forces combattantes Fada N'Gourma, 31 juil. 2026 (AIB)-La Société de Participation Minière du Burkina (SOPAMIB-Boungou) a remis, ce vendredi à Fada N'Gourma, un important lot de vivres et de produits de première nécessité d'une valeur totale de 21 240 000 F CFA, au profit des veuves et orphelins des forces combattantes des régions du Goulmou, de la Sirba et de la Tapoa. La cérémonie de remise du don a été présidée par le gouverneur de la région du Goulmou, Ram Joseph Kafando, en présence des autorités administratives, militaires et paramilitaires. Le don est composé de 20 tonnes de maïs, 20 tonnes de riz de Bagré, 400 bidons de 5 litres d'huile et 240 cartons de savon CITEC d’une valeur globale de 21 240 000 de F CFA. Le directeur général de la Société de Participation Minière du Burkina (SOPAMIB-Boungou), Bassoma Aboubacar Traoré, a indiqué que cette action de solidarité répond à l'appel lancé par les plus hautes autorités du Burkina Faso en faveur des familles des forces combattantes. « Nous voulons montrer notre solidarité à ces franges sociales, leur témoigner que nous sommes avec elles et qu'elles ne sont pas seules. C'est une manière d'exprimer notre reconnaissance envers ceux qui se battent jour et nuit, souvent au prix de leur vie, pour que la patrie reste debout », a-t-il déclaré. Recevant le don, le gouverneur de la région du Goulmou, Ram Joseph Kafando a, au nom des bénéficiaires exprimé sa profonde gratitude à la SOPAMIB-Boungou pour ce geste de solidarité en faveur des veuves et orphelins des forces combattantes. Il a salué l'engagement citoyen de la société minière avant d'inviter les autres entreprises ainsi que les populations à emboîter le pas en apportant leur soutien aux familles de ceux qui consentent d'énormes sacrifices pour la défense de la Nation. Agence d’information du Burkina KAC/HB/OO",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Burkina Faso : Acteurs des médias et communicateurs outillés à Dédougou contre la désinformation",
+      "link": "https://faso7.com/2026/08/03/burkina-faso-acteurs-des-medias-et-communicateurs-outilles-a-dedougou-contre-la-desinformation/",
+      "pubDate": "2026-08-03T10:25:26.000Z",
+      "description": "La première session d'élaboration de contenus alternatifs aux messages subversifs et à la désinformation contre le Burkina Faso s'est achevée le 30 juillet 2026 à Dédougou dans la région du Bankui. Organisée par la direction générale de la communication et des médias (DGCM), elle a réuni des journalistes et des communicateurs autour du thème : « Communication stratégique et lutte contre la désinformation et les messages subversifs contre le Burkina Faso : Contributions des journalistes, des communicants, des blogueurs et FDS dans le renforcement de l'image du Burkina Faso et la prévention de l'extrémisme violent ». À travers cette première session, l'objectif de la DGCM était d'outiller les participants afin qu'ils soient en mesure de répondre efficacement aux messages de désinformation à travers l'identification des facteurs de radicalisation et d'extrémisme violent. Les travaux ont été axés autour de six sous-thèmes. La première communication était relative à l’introduction au mémorandum sur la déconstruction des stéréotypes sur le Burkina Faso. C'est un document qui a été élaboré en 2025 et mis à jour en 2026 sur instruction du ministre des Affaires étrangères, afin de déconstruire les stéréotypes qui impactent négativement l'image du Burkina Faso. Les stéréotypes qui ressortent du document sont catégorisés en sept domaines, dont la défense et la sécurité, les droits humains et l’action humanitaire, l'administration territoriale et la cohésion sociale, l’information et la communication, la souveraineté, la diplomatie et la coopération, l’économie et le développement ainsi que l'énergie, les mines et les carrières. Il s'est agi pour les experts du ministère des Affaires étrangères de mettre en exergue les arguments du mémorandum opposant les idées préconçues sur le Burkina Faso. Sur le plan de la défense, par exemple, le mémorandum révèle que le Burkina Faso n'est pas le théâtre d'un conflit armé, mais qu’il est plutôt engagé dans la lutte contre le terrorisme. Dans la communication consacrée aux éléments de langage pour une déconstruction des stéréotypes, il a été conseillé d'éviter l'usage des termes de « guerre civile », de « rébellion » et de « crime de guerre ». « Le Burkina Faso n'est pas en lutte contre des groupes armés terroristes. Le Burkina Faso fait plutôt front à des terroristes », a expliqué San Simon Coulibaly, ambassadeur, expert au Bureau d'analyses stratégiques du ministère des Affaires étrangères. En réponse au stéréotype faisant état de la dégradation de la situation sécuritaire, les experts ont rappelé dans le mémorandum qu'à la date du 30 juin 2026, 74,53 % du territoire avait été reconquis. Au niveau des droits humains, les allégations tendant à incriminer les FDS et les VDP comme auteurs d'exactions sont infirmées par la judiciarisation du théâtre des opérations dont fait preuve le gouvernement, à travers la loi n°001-2023/ALT du 16 février 2023 portant révision du Code de justice militaire et consacre le déploiement de la prévôté sur le théâtre des opérations nationales. Une autre communication a porté sur le rôle et la responsabilité des acteurs de l'information et de la communication dans la promotion de la paix, de la cohésion sociale et du vivre-ensemble. Elle a été animée par Moussa Sawadogo, consultant en communication et journalisme, qui a expliqué que les acteurs ont la même mission. Pour le journaliste, il s'agit, entre autres, de vérifier systématiquement les faits et de veiller au respect d'une déontologie rigoureuse. Le communicant doit aussi porter une parole institutionnelle crédible et agir en synergie avec l'État. Par ailleurs, le Dr Inoussa Compaoré à travers sa communication sur la promotion de la culture de la paix et de la cohésion sociale au Burkina Faso a indiqué que toutes les confessions religieuses appellent à l'unité et à la cohésion. En dépit de leurs différences, elles présentent des valeurs communes sur lesquelles le tissu social peut être reconstitué. Pour lui, le plus important est l'implication des acteurs religieux pour faire l'unanimité au sein des communautés. À l'issue des travaux, le chargé de mission du ministère de la Communication, Alexis Yaméogo, a indiqué que les acteurs ont assimilé les enjeux de la lutte contre la désinformation. Il a invité les participants à être des ambassadeurs et des défenseurs de l'image du Burkina Faso. « Soyons, après cet atelier, des journalistes qui se battent pour l'intérêt général et privilégient l'unité nationale plutôt que la division. Soyons des communicants qui travaillent toujours à mobiliser, à convaincre pour mieux faire adhérer nos populations à la cause de notre souveraineté, de notre dignité », a-t-il insisté. Cheick Habib Désiré BAYILI Faso7 L’article Burkina Faso : Acteurs des médias et communicateurs outillés à Dédougou contre la désinformation est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military"
+        "military",
+        "humanitarian",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -1019,44 +1089,12 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "F2"
       },
-      "_rating": "C1",
+      "_rating": "F2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Nayala: le village de Biba célèbre le retour du VDP Dozo Seydou Sow décoré pour son engagement patriotique",
-      "link": "https://www.aib.media/nayala-le-village-de-biba-celebre-le-retour-du-vdp-dozo-seydou-sow-decore-pour-son-engagement-patriotique/",
-      "pubDate": "2026-08-03T10:48:45.000Z",
-      "description": "Burkina-Nayala-Yaba-Sécurité-Décoration-VDP Nayala: le village de Biba célèbre le retour du VDP Dozo Seydou Sow décoré pour son engagement patriotique Yaba, 1er août 2026 (AIB) – Le village de Biba, dans la province du Nayala, a célébré samedi le retour du VDP Dozo Seydou Sow, dit « Ouattara Wôngo », décoré à Ouagadougou pour son engagement dans la défense de la patrie. La cérémonie, a rassemblé autorités locales, forces de défense et de sécurité, parents, amis et populations venues saluer cette reconnaissance nationale. De retour de la capitale après avoir reçu sa distinction, le VDP Seydou Sow a été accueilli dans une ambiance de ferveur patriotique. Prenant la parole au nom du chef coutumier, Tibou Ki a qualifié cette décoration de « fierté pour Biba » et a invité les jeunes à suivre l’exemple de bravoure du récipiendaire. Il a également formulé des prières pour le retour durable de la paix au Burkina Faso. Le commissaire de Yaba a ensuite procédé à la présentation officielle du trophée reçu à Ouagadougou, sous les applaudissements de l’assistance. Dans son intervention, Sow Seydou a exprimé sa reconnaissance aux autorités burkinabè et aux populations de Biba. Il a rappelé que l’unité, symbolisée par son nom d’artiste « Wôngo » signifiant « nous sommes tous un », demeure essentielle pour la reconquête du territoire national. La marraine de la cérémonie, la camarade Fatou Sow, a salué le sacrifice quotidien des FDS, VDP et Dozos qui ont contribué à la réinstallation et à la sécurisation de Biba après les épreuves traversées par le village. Elle a appelé les populations à soutenir les forces engagées par la prière, la vigilance citoyenne et la transmission de bonnes informations. Le représentant des Dozos du Nayala, Ki Pierre, a souligné que l’engagement dozo repose sur le courage, la discipline et la connaissance du terrain, avant de remercier les autorités pour cette reconnaissance accordée aux combattants engagés aux côtés des FDS. Cette célébration traduit l’attachement des communautés rurales aux VDP et aux Dozos engagés dans la lutte contre le terrorisme. Elle ouvre également des perspectives de renforcement de leur rôle aux côtés des forces armées pour la sécurisation durable des localités et le retour définitif de la paix au Burkina Faso. Agence d'information du Burkina KTA/bak",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
+      "_theme": "I",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1091,41 +1129,41 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": ".",
       "_desk": "A1"
-    },
-    {
-      "title": "CAN féminine 2026 : le Burkina Faso se relance face à la Tanzanie (2-1)",
-      "link": "https://leconomistedufaso.com/2026/08/03/can-feminine-2026-le-burkina-faso-se-relance-face-a-la-tanzanie-2-1/",
-      "pubDate": "2026-08-03T08:09:23.000Z",
-      "description": "Une victoire contre l’Afrique du Sud le 4 aout prochain… Les qualifiera aux ¼ de finale «Une victoire historique», «une victoire qui maintient en vie», etc. Les qualificatifs de cette prouesse des Etalons Dames face à la Tanzanie ne finissent pas. Après une défaite 4-1 lors de leur premier match à cette compétition face à la Côte d’Ivoire, les filles du coach Issa Balboné se sont relancées suite à leur victoire 2-1 contre la Tanzanie. Le match avait pourtant commencé timidement mais avec une maitrise du jeu par les Burkinabè. Bonne circulation de balles, réussite dans les passes, intelligence, les Etalons Dames sont sorties totalement reconfigurées par rapport au match contre les Eléphantes. Le coach a choisi de commencer avec Juliette Nana à l’attaque, Nina Dabilgou dans les buts. Les Burkinabè se montrent très menaçantes après le round d’observation. A la 18e, Rasmata Sawadogo s’incruste dans la défense tanzanienne la balle au pied. Sa passe est mal exploitée et l’adversaire se sauve en chassant la balle loin de sa surface de réparation. Les assauts se multiplient de part et d’autres. La paire défensive Madinatou Rouamba-Alimata Belem contient les attaques adverses. A la 43e minute, Adèle Kabré, servie dans le dos de la défense, devance ses «gardes de corps» et bat la portière tanzanienne. Burkina Faso 1-0 Tanzanie. L’apocalypse annoncée est en faveur du Burkina Faso. La juge de la partie, Yacine Samassa de la Mauritanie, envoie les deux équipes à la pause sur ce score. Une seconde période difficile pour les Burkinabè De retour des vestiaires, les Tanzaniennes mettent le pied sur la balle et obligent les filles du coach Issa Balboné à courir. Elles se montrent très dangereuses mais ne concrétisent pas les occasions. A la 53e minute, la Tanzanienne Hansath Ubamba est expulsée pour une intervention dangereuse sur la gardienne Nina Dabilgou. Réduites à 10, les Tanzaniennes n’abdiquent cependant pas. Elles maintiennent la pression sur les Etalons Dames. Leurs efforts finiront par payer à la 62e lorsque la joueuse Alsha Juma Mnuka offre, sur un coup de pied arrêté, l’égalisation à son équipe. Sentant son équipe menacée, Issa Balboné opère des changements. «On a pris un but contre le cours du jeu. Les enfants étaient vraiment un peu KO, on les a remontés et les changements qu'on a faits ont apporté de la fraîcheur au milieu du terrain», a expliqué le sélectionneur national. Les Etalons retrouvent un regain d’énergie et relancent leur machine. Adèle Kabré, Adama Congo mènent les assauts au front de l’attaque. Finalement, c’est à la 80e, en finition d'une contre-attaque parfaitement exécutée, Balkissa Sawadogo d’un sang-froid extraordinaire offre la victoire aux siennes (2-1). Les Tanzaniennes, malgré les initiatives répétées, ne parviennent plus à revenir au score. Désormais 3e du groupe B avec 3 points-2, et derrière la Tanzanie 2e (3points+0) et la Côte d’Ivoire 1ère (4 points +3), les Etalons Dames iront chercher leur qualification en quarts de finale, le 4 Aout prochain, face à l’Afrique du Sud, dernière du groupe avec 1 point -1. Jacques Théodore Balima (Collaborateur) Avis de joueuses Adèle Naomie Kabré : Le match était très difficile mais nous avons arraché la victoire grâce à notre condition physique et surtout à notre force mental. Après le carton rouge, nous nous sommes dit que face à une équipe réduite à 10, il fallait vraiment marquer le maximum de buts. On est très fiers pour cette victoire, c'était très important pour nous. Pour le match contre l’Afrique du sud, nous allons bien le prépare. C'est notre dernier match et on va chercher la qualification. Madinatou Rouamba, défenseure : Merci aux filles, merci à l'encadrement, merci à tous pour le soutien. On a été solide du début jusqu'à la fin. Aujourd’hui, on s'est dit seulement qu'on devait juste gagner ce match. Vu que les filles étaient un peu découragées après le premier match, il y a eu quelques motivations. On est allés prendre les trois points aujourd'hui. Je dis merci à tout le monde, aux supporters venus de Ougadougou, pour le soutien. The post CAN féminine 2026 : le Burkina Faso se relance face à la Tanzanie (2-1) appeared first on L'economiste du faso .",
-      "_source": "L'Économiste du Faso",
-      "_sourceId": "rss_eco_faso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "B2"
-      },
-      "_rating": "B2",
-      "_score": 115,
-      "_zone": 4,
-      "_theme": "S",
-      "_zoneShort": "4. Grands Lacs",
-      "_relevance": "A",
-      "_desk": "A3"
     }
   ],
   "alerts": [
+    {
+      "title": "Middle East crisis live: Trump says Iran ‘unbelievably duplicitous’ and US blockade will continue until ‘deal or total surrender’",
+      "link": "https://www.theguardian.com/world/live/2026/aug/03/us-iran-trump-strait-of-hormuz-talks-israel-gaza-lebanon-latest-news-updates",
+      "source": "The Guardian World",
+      "date": "2026-08-03T17:12:38.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Poland says its F-16s intercept Russian reconnaissance plane over Baltic Sea",
+      "link": "https://www.aa.com.tr/en/europe/poland-says-its-f-16s-intercept-russian-reconnaissance-plane-over-baltic-sea/4017369",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-08-03T17:04:03.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
+        }
+      ]
+    },
     {
       "title": "MK Kariv warns of emigration 'tsunami' as study shows nearly 270,000 people left Israel since 2023",
       "link": "https://www.jpost.com/israel-news/article-904446",
@@ -1139,6 +1177,22 @@
         {
           "type": "crise",
           "keyword": "tsunami"
+        }
+      ]
+    },
+    {
+      "title": "Cuba, sous blocus américain, frappée par une panne de courant généralisée",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260803-cuba-sous-blocus-am%C3%A9ricain-frapp%C3%A9e-par-une-panne-de-courant-g%C3%A9n%C3%A9ralis%C3%A9e",
+      "source": "France 24",
+      "date": "2026-08-03T15:21:54.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
         }
       ]
     },
@@ -1171,38 +1225,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Board of Peace envoy arrives in Israel for talks on Gaza ceasefire phase 2",
-      "link": "https://www.aa.com.tr/en/middle-east/board-of-peace-envoy-arrives-in-israel-for-talks-on-gaza-ceasefire-phase-2/4017236",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-03T13:59:01.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Genocost : pour la juriste Lilas Sansa, les crimes commis en RDC relèvent à la fois du génocide, des crimes contre l'humanité et des crimes de guerre",
-      "link": "https://actualite.cd/2026/08/03/genocost-pour-la-juriste-lilas-sansa-les-crimes-commis-en-rdc-relevent-la-fois-du",
-      "source": "ActualitéCD (RDC)",
-      "date": "2026-08-03T09:26:53.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
         }
       ]
     },
@@ -1242,7 +1264,7 @@
   "narrativesByBloc": [
     [
       "afrique",
-      238
+      248
     ],
     [
       "occident_fr",
@@ -1250,11 +1272,11 @@
     ],
     [
       "occident_us",
-      92
+      80
     ],
     [
       "autre",
-      86
+      72
     ],
     [
       "turquie",
@@ -1262,19 +1284,19 @@
     ],
     [
       "golfe_mo",
-      52
+      54
+    ],
+    [
+      "sahel",
+      53
     ],
     [
       "russie",
       51
     ],
     [
-      "sahel",
-      46
-    ],
-    [
       "bf_local",
-      38
+      45
     ],
     [
       "chine",
@@ -1286,7 +1308,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 102,
+      "count": 115,
       "top": [
         {
           "title": "UFOA-B : Les Étalons U20 défieront le Mena U20 dans un derby de l’AES le jour de l’indépendance",
@@ -1298,11 +1320,29 @@
           "rating": "C2"
         },
         {
+          "title": "Burkina/Arrondissement 9 : Plus de 500 leaders religieux mobilisés pour promouvoir la paix, la cohésion sociale et le vivre-ensemble",
+          "link": "https://www.aib.media/burkina-arrondissement-9-plus-de-500-leaders-religieux-mobilises-pour-promouvoir-la-paix-la-cohesion-sociale-et-le-vivre-ensemble/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
           "title": "Séno: la radio Kawral lance la 4e édition de « Vacances Kawral 2026 » pour promouvoir un Sahel plus protecteur et inclusif",
           "link": "https://www.aib.media/seno-la-radio-kawral-lance-la-4e-edition-de-vacances-kawral-2026-pour-promouvoir-un-sahel-plus-protecteur-et-inclusif/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "SOUM/DJIBO : la montée des couleurs délocalisée au BIR 22 pour renforcer le lien entre les Forces combattantes et les populations",
+          "link": "https://www.aib.media/soum-djibo-la-montee-des-couleurs-delocalisee-au-bir-22-pour-renforcer-le-lien-entre-les-forces-combattantes-et-les-populations/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "H",
           "relevance": "A",
           "rating": "C2"
         },
@@ -1314,24 +1354,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "Mouhoun/Lutte contre la désinformation : Des journalistes appelés à devenir des ambassadeurs de l’image du Burkina Faso",
-          "link": "https://www.aib.media/mouhoun-lutte-contre-la-desinformation-des-journalistes-appeles-a-devenir-des-ambassadeurs-de-limage-du-burkina-faso/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "I",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Gourma : La société de participation minière du Burkina offre plus de 21 millions FCFA de vivres aux veuves et orphelins des forces combattantes",
-          "link": "https://www.aib.media/gourma-la-societe-de-participation-miniere-du-burkina-offre-plus-de-21-millions-fcfa-de-vivres-aux-veuves-et-orphelins-des-forces-combattantes/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C1"
         }
       ]
     },
@@ -1339,8 +1361,17 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 77,
+      "count": 75,
       "top": [
+        {
+          "title": "Ghana: la CEDEAO débloque près de 150 millions de F CFA pour soutenir les victimes des inondations",
+          "link": "https://www.wakatsera.com/ghana-la-cedeao-debloque-pres-de-150-millions-de-f-cfa-pour-soutenir-les-victimes-des-inondations/",
+          "source": "Wakat Séra",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "C2"
+        },
         {
           "title": "Nord-ouest du Nigeria : au moins 52 personnes kidnappées par des hommes armés",
           "link": "https://lesoleil.sn/international/infos-afrique/nord-ouest-du-nigeria-au-moins-52-personnes-kidnappees-par-des-hommes-armes/",
@@ -1351,40 +1382,31 @@
           "rating": "F1"
         },
         {
-          "title": "NEPC, workers dismiss strike reports, affirm industrial harmony",
-          "link": "https://punchng.com/nepc-workers-dismiss-strike-reports-affirm-industrial-harmony/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
+          "title": "FG seeks Israeli expertise to strengthen border security, combat cross-border crimes",
+          "link": "https://www.vanguardngr.com/2026/08/fg-seeks-israeli-expertise-to-strengthen-border-security-combat-cross-border-crimes/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "The Supreme Court has Opened the Door. Parliament must now Reform Ghana’s Political Finance Architecture",
-          "link": "https://www.myjoyonline.com/the-supreme-court-has-opened-the-door-parliament-must-now-reform-ghanas-political-finance-architecture/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Au Nigeria, au moins 52 personnes kidnappées par des hommes armés dans le nord-ouest du pays",
-          "link": "https://www.lemonde.fr/international/article/2026/08/03/au-nigeria-au-moins-52-personnes-kidnappees-par-des-hommes-armes-dans-le-nord-ouest-du-pays_6737359_3210.html",
-          "source": "Le Monde International",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B1"
-        },
-        {
-          "title": "Young gospel musicians use my songs without permission – Obaapa Christy",
-          "link": "https://www.myjoyonline.com/young-gospel-musicians-use-my-songs-without-permission-obaapa-christy/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Old vs New Honda City: Design, features, and technology compared",
+          "link": "https://www.premiumtimesng.com/promoted/900421-900421old-vs-new-honda-city-design-features-and-technology-compared.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": null,
           "relevance": ".",
-          "rating": "A2"
+          "rating": "F2"
+        },
+        {
+          "title": "NAFDAC joins £3.7m global vaccine safety project to combat fake, substandard vaccines",
+          "link": "https://www.vanguardngr.com/2026/08/nafdac-joins-3-7m-global-vaccine-safety-project-to-combat-fake-substandard-vaccines/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1392,24 +1414,15 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 35,
+      "count": 30,
       "top": [
         {
-          "title": "CAN féminine 2026 : le Burkina Faso se relance face à la Tanzanie (2-1)",
-          "link": "https://leconomistedufaso.com/2026/08/03/can-feminine-2026-le-burkina-faso-se-relance-face-a-la-tanzanie-2-1/",
-          "source": "L'Économiste du Faso",
-          "zone": "4. Grands Lacs",
+          "title": "Cameroun : voici les cinq nouveaux généraux promus ce 03 août 2026",
+          "link": "https://fr.journalducameroun.com/cameroun-voici-les-cinq-nouveaux-generaux-promus-ce-03-aout-2026/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
           "theme": "S",
           "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Genocost : pour la juriste Lilas Sansa, les crimes commis en RDC relèvent à la fois du génocide, des crimes contre l'humanité et des crimes de guerre",
-          "link": "https://actualite.cd/2026/08/03/genocost-pour-la-juriste-lilas-sansa-les-crimes-commis-en-rdc-relevent-la-fois-du",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": null,
-          "relevance": ".",
           "rating": "F2"
         },
         {
@@ -1438,6 +1451,15 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Au moins cinq morts et deux disparus en six jours dans des attaques armées à Rutshuru",
+          "link": "https://www.radiookapi.net/2026/08/03/actualite/securite/au-moins-cinq-morts-et-deux-disparus-en-six-jours-dans-des-attaques",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1445,14 +1467,14 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 46,
+      "count": 41,
       "top": [
         {
-          "title": "Crise de Ceuta, quel impact sur l’Algérie ? Le décryptage d’Abdelaziz Rahabi",
-          "link": "https://www.tsa-algerie.com/crise-de-ceuta-quel-impact-sur-lalgerie-le-decryptage-dabdelaziz-rahabi/",
+          "title": "Mali : une députée française appelle Paris à s’appuyer sur la médiation d’Alger",
+          "link": "https://www.tsa-algerie.com/mali-une-deputee-francaise-appelle-paris-a-sappuyer-sur-la-mediation-dalger/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1475,6 +1497,15 @@
           "rating": "F2"
         },
         {
+          "title": "Nissan Égypte lance la commercialisation du Magnite assemblé localement",
+          "link": "https://fr.hespress.com/483924-nissan-egypte-lance-la-commercialisation-du-magnite-assemble-localement.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
           "title": "CAN Fémiine 2026 : Sénégal-Maroc, les Lionnes à quitte ou double",
           "link": "https://lesoleil.sn/actualites/sports/an-femiine-2026-senegal-maroc-les-lionnes-a-quitte-ou-double/",
           "source": "Le Soleil (Sénégal)",
@@ -1482,15 +1513,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Crise de Ceuta : Ursula von der Leyen appelle à une « réponse européenne commune » pour « renforcer les frontières »",
-          "link": "https://www.lemonde.fr/international/article/2026/08/03/crise-de-ceuta-ursula-von-der-leyen-appelle-a-une-reponse-europeenne-commune-pour-renforcer-les-frontieres_6737366_3210.html",
-          "source": "Le Monde International",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "B1"
         }
       ]
     },
@@ -1510,13 +1532,22 @@
           "rating": "F2"
         },
         {
-          "title": "EN DIRECT, guerre au Moyen-Orient : l’Iran accuse à nouveau les Etats-Unis d’avoir violé l’accord de juin visant à mettre fin au conflit",
-          "link": "https://www.lemonde.fr/international/live/2026/08/03/en-direct-guerre-au-moyen-orient-l-iran-accuse-a-nouveau-les-etats-unis-d-avoir-viole-l-accord-visant-a-mettre-fin-au-conflit-signe-en-juin_6737099_3210.html",
-          "source": "Le Monde International",
+          "title": "Explained: Why Morocco is accused of allowing migrants into Spain’s Ceuta",
+          "link": "https://www.vanguardngr.com/2026/08/explained-why-morocco-is-accused-of-allowing-migrants-into-spains-ceuta/",
+          "source": "Vanguard (Nigeria)",
           "zone": "8. Moyen-Orient",
-          "theme": "I",
+          "theme": "D",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
+        },
+        {
+          "title": "Middle East crisis live: Trump says Iran ‘unbelievably duplicitous’ and US blockade will continue until ‘deal or total surrender’",
+          "link": "https://www.theguardian.com/world/live/2026/aug/03/us-iran-trump-strait-of-hormuz-talks-israel-gaza-lebanon-latest-news-updates",
+          "source": "The Guardian World",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
         },
         {
           "title": "MK Kariv warns of emigration 'tsunami' as study shows nearly 270,000 people left Israel since 2023",
@@ -1528,22 +1559,13 @@
           "rating": "F2"
         },
         {
-          "title": "Board of Peace envoy arrives in Israel for talks on Gaza ceasefire phase 2",
-          "link": "https://www.aa.com.tr/en/middle-east/board-of-peace-envoy-arrives-in-israel-for-talks-on-gaza-ceasefire-phase-2/4017236",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "US signs deal to boost Patriot and THAAD missile parts production",
+          "link": "https://www.scmp.com/news/world/united-states-canada/article/3362841/us-signs-deal-boost-patriot-and-thaad-missile-parts-production?utm_source=rss_feed",
+          "source": "South China Morning Post",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "After deadly day, Gazans say Trump's touting of plan jars with grim reality",
-          "link": "https://www.dawn.com/news/2020367/after-deadly-day-gazans-say-trumps-touting-of-plan-jars-with-grim-reality",
-          "source": "Dawn (Pakistan)",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F1"
+          "rating": "A2"
         }
       ]
     },
@@ -1551,50 +1573,50 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 141,
+      "count": 152,
       "top": [
         {
-          "title": "Une géopolitique du mariage homosexuel sous Vladimir Poutine : le cas Zabiiako-Kasatkina",
-          "link": "https://www.iris-france.org/une-geopolitique-du-mariage-homosexuel-sous-vladimir-poutine-le-cas-zabiiako-kasatkina/",
-          "source": "IRIS France",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "A2"
+          "title": "La France donneuse de leçon en matière de liberté d’expression maintient l’expulsion de la chroniqueuse russe Xenia Fedorova",
+          "link": "https://www.aib.media/la-france-donneuse-de-lecon-en-matiere-de-liberte-dexpression-maintient-lexpulsion-de-la-chroniqueuse-russe-xenia-fedorova/",
+          "source": "AIB — Agence Information BF",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
         },
         {
-          "title": "L’administration Trump est en train de faire plier l’Université américaine",
-          "link": "https://legrandcontinent.eu/fr/2026/08/03/ladministration-trump-est-en-train-de-faire-plier-luniversite-americaine/",
-          "source": "Le Grand Continent",
+          "title": "Hivernage : l’anticipation des crues à l’épreuve",
+          "link": "https://journaldumali.com/hivernage-lanticipation-des-crues-a-lepreuve/",
+          "source": "Journal du Mali",
+          "zone": "9. Europe occidentale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Sahara : Le président Trump réitère au roi Mohammed VI le soutien des États-Unis à la proposition marocaine d’autonomie",
+          "link": "https://atop.tg/sahara-le-president-trump-reitere-au-roi-mohammed-vi-le-soutien-des-etats-unis-a-la-proposition-marocaine-dautonomie/",
+          "source": "ATOP (Togo)",
           "zone": "16. Amérique du Nord",
           "theme": "P",
           "relevance": "L",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
-          "title": "Économie russe : la crise des carburants s’approfondit et les exportations chutent",
-          "link": "https://legrandcontinent.eu/fr/2026/08/03/economie-russe-la-crise-des-carburants-sapprofondit-et-les-exportations-chutent/",
-          "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
+          "title": "Cuba, sous blocus américain, frappée par une panne de courant généralisée",
+          "link": "https://www.france24.com/fr/vid%C3%A9o/20260803-cuba-sous-blocus-am%C3%A9ricain-frapp%C3%A9e-par-une-panne-de-courant-g%C3%A9n%C3%A9ralis%C3%A9e",
+          "source": "France 24",
+          "zone": "17. Amérique C. & Caraïbes",
           "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
+          "relevance": "L",
+          "rating": "C2"
         },
         {
-          "title": "EN DIRECT, guerre en Ukraine : les dernières informations",
-          "link": "https://www.lemonde.fr/international/live/2026/08/03/en-direct-guerre-en-ukraine-les-dernieres-informations_6737250_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "PM Shehbaz congratulates PML-N after party maintains lead in second phase of AJK polls",
-          "link": "https://www.dawn.com/news/2020320/pm-shehbaz-congratulates-pml-n-after-party-maintains-lead-in-second-phase-of-ajk-polls",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "P",
+          "title": "What ‘America First’ Means for Global Health",
+          "link": "https://www.theatlantic.com/podcasts/2026/08/ra-ebola/688140/?utm_source=feed",
+          "source": "The Atlantic",
+          "zone": "16. Amérique du Nord",
+          "theme": "H",
           "relevance": "L",
           "rating": "F2"
         }
@@ -1605,7 +1627,8 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1613,42 +1636,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-03T15:15:24.698Z",
+      "at": "2026-08-03T17:20:28.751Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-03T15:15:24.705Z",
+      "at": "2026-08-03T17:20:28.757Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-03T15:16:01.118Z",
+      "at": "2026-08-03T17:20:59.862Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1928 articles"
+      "message": "107/170 flux OK, 1894 articles"
     },
     {
-      "at": "2026-08-03T15:16:04.295Z",
+      "at": "2026-08-03T17:21:02.414Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-03T15:16:04.651Z",
+      "at": "2026-08-03T17:21:02.693Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-03T15:16:04.656Z",
+      "at": "2026-08-03T17:21:02.697Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 8 alertes"
     },
     {
-      "at": "2026-08-03T15:16:04.656Z",
+      "at": "2026-08-03T17:21:02.697Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-03T15:16:04.657Z",
+      "at": "2026-08-03T17:21:02.697Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
