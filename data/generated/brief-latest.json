@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T03:54:39.204Z",
+  "generatedAt": "2026-08-03T10:05:35.629Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 112,
-    "failed": 58,
-    "articles": 1931,
+    "ok": 111,
+    "failed": 59,
+    "articles": 1897,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -25,7 +25,7 @@
       {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
-        "count": 19
+        "count": 18
       },
       {
         "id": "rss_wakatsera",
@@ -38,14 +38,9 @@
         "count": 12
       },
       {
-        "id": "rss_eco_faso",
-        "name": "L'Économiste du Faso",
-        "count": 10
-      },
-      {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -103,6 +98,11 @@
         "count": 10
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -138,11 +138,6 @@
         "count": 12
       },
       {
-        "id": "rss_guineenews",
-        "name": "Guineenews",
-        "count": 30
-      },
-      {
         "id": "rss_mediaguinee",
         "name": "Mediaguinee",
         "count": 20
@@ -176,11 +171,6 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -300,7 +290,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 25
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -410,7 +400,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 24
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -430,7 +420,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -500,7 +490,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 28
+        "count": 26
       },
       {
         "id": "rss_tehran",
@@ -520,7 +510,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -558,6 +548,11 @@
         "count": 0
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "count": 20
+      },
+      {
         "id": "rss_worldbank",
         "name": "Banque Mondiale",
         "count": 0
@@ -569,6 +564,11 @@
       }
     ],
     "failedSources": [
+      {
+        "id": "rss_eco_faso",
+        "name": "L'Économiste du Faso",
+        "error": "HTTP 500"
+      },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
@@ -603,11 +603,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -665,6 +660,11 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_guineenews",
+        "name": "Guineenews",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -673,6 +673,11 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -757,7 +762,7 @@
       {
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_apa",
@@ -835,11 +840,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -852,7 +852,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_imf",
@@ -863,12 +863,45 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 61,
-    "alerts": 13,
+    "bfAes": 66,
+    "alerts": 8,
     "criticalAlerts": 7,
-    "sourcesDistinct": 68
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
+    {
+      "title": "Climate Change is making malaria worse in parts of Africa while wiping it out in others, new study finds",
+      "link": "https://www.myjoyonline.com/climate-change-is-making-malaria-worse-in-parts-of-africa-while-wiping-it-out-in-others-new-study-finds/",
+      "pubDate": "2026-08-03T09:00:01.000Z",
+      "description": "A major new study published in the journal Nature has found that climate change is redrawing the malaria map across Africa, making the disease worse in cooler regions like southern and East Africa, while pushing it toward elimination in some of today’s hottest malaria hotspots, including much of West Africa and the Sahel. The research was led by Colin J. Carlson (Yale University), Tamma Carleton, Romaric C. Odoulami, Cullen D. Molitor, and Christopher H. Trisos, with major involvement from the Climate Impact Lab at the University of Chicago and the African Climate and Development Initiative at the University of Cape Town. The team analysed more than 50,000 medical surveys spanning 116 years (1900–2016) to measure how much human-caused climate change has already changed malaria’s spread, and where it’s headed next. Malaria remains one of the world’s biggest killers. According to the World Health Organisation’s most recent World Malaria Report, there were an estimated 282 million malaria cases globally in 2024, and about 610,000 deaths. Roughly 95% of those cases and deaths occurred in Africa, and children under five accounted for about 76% of malaria deaths on the continent. Why Temperature Controls Malaria Malaria is spread by mosquitoes, and both the mosquitoes and the parasite they carry are very sensitive to temperature. The study found the disease spreads best around 25°C (77°F) and becomes far less likely once temperatures drop below about 16°C (61°F) or rise above about 34°C (93°F). That means a warming climate doesn’t just make malaria “worse everywhere”, it pushes some places into the mosquito’s ideal zone, and pushes other places out of it entirely. What’s Already Happened Since 1901, climate change has caused a small overall increase in malaria across the continent, researchers estimate about 1 extra case for every 1,000 children aged 2 to 10. That tiny continent-wide number hides two very different stories happening side by side: rising heat has already started pushing conditions past the mosquito’s comfort zone in hot West African and Sahelian countries, while warming has made previously cool, high-altitude places like the Ethiopian highlands and parts of southern Africa newly suitable for mosquitoes. “Climate change isn’t just making malaria worse or better, it’s moving it. Whether a place sees elevated malaria risks or reduced burdens under climate change depends on how hot it is today. We see relief in the current hotspots and new risk nearly everywhere else.” – Tamma Carleton, Faculty Head of Research, Climate Impact Lab, and Assistant Professor, University of California, Berkeley The Data, Country by Country The study includes detailed country-level projections of how malaria prevalence (cases per 1,000 children) has changed already, and how it’s projected to change by 2050 and by 2100. Country Historical impact Projected by 2050 Projected by 2100 Ghana -4.94 -7.85 -15.12 Nigeria -3.53 -6.26 -14.14 Burkina Faso -7.04 -9.68 -20.71 Mali -7.8 -10.29 -23.55 Niger -8.69 -9.97 -23.62 Mauritania -8.06 -10.37 -23.5 Sudan -5.62 -8.21 -17.41 Benin -4.96 -7.94 -15.77 Senegal -4.5 -7.34 -15 Kenya +6.64 +3.99 +6.88 Ethiopia +5.33 +1.7 +2.44 Burundi +9.87 +6.2 +10.56 Swaziland +8.14 +7.19 +12.72 Rwanda +13.52 +8.81 +16.11 South Africa +10.79 +9.96 +17.78 A negative number means fewer cases of malaria per 1,000 children (improvement); a positive number means more cases (worsening). Countries Projected to Be Hit Hardest South Africa faces the largest projected increase of any country in the study, at 17.78 additional cases per 1,000 children by 2100, followed by Rwanda (+16.11), Swaziland (+12.72), and Burundi (+10.56). These are largely cooler, higher-altitude, or more southerly countries where malaria has historically been less established, meaning health systems there may be less experienced at fighting it. Chart: Projected change in childhood malaria prevalence (cases per 1,000 children), historical vs. 2050 vs. 2100, for the countries facing the sharpest rises and the sharpest falls. Ghana is highlighted in bold blue. Countries Projected to See the Biggest Improvements Niger is projected to see the largest drop of any country, with prevalence falling by 23.62 cases per 1,000 children by 2100, closely followed by Mali (−23.55) and Mauritania (−23.5), then Burkina Faso (−20.71). These are mostly hot West African and Sahelian nations where temperatures are already pushing past what mosquitoes can tolerate, consistent with the study’s finding that malaria could be nearly eliminated in some of today’s most extreme hotspots by the century’s end. What This Means for Ghana Ghana’s numbers put it firmly among the countries expected to benefit from rising heat. Climate change has already reduced malaria prevalence in Ghana by an estimated 4.94 cases per 1,000 children compared to a world without human-caused warming. That reduction is projected to grow to 7.85 cases per 1,000 by 2050, and to 15.12 cases per 1,000 by 2100, a bigger drop than Nigeria’s projected decline (−14.14), though smaller than Burkina Faso’s (−20.71), Mali’s (−23.55), or Niger’s (−23.62). It’s worth being clear about what this does and doesn’t mean. This is a projection of climate’s effect on malaria transmission specifically, not a prediction that malaria will disappear in Ghana on its own. The researchers are explicit that climate change is a modest factor next to the impact of malaria control efforts: bed nets, treatment access, vaccines, and vector control have historically reduced malaria far more than climate change has increased or decreased it. A Second Report Adds a Warning: Heat Is Still Deadly, Even Where Malaria Falls A separate Climate Impact Lab report from March 2026, Adaptation Roadmap: Human Health, authored by Emily Grover-Kopec, Tamma Carleton, and Michael Greenstone, adds an important caution to this story. That report found that climate-driven temperature changes could cause about 430,000 additional deaths globally each year by 2050, with heat-related deaths projected to be roughly 10 times higher in poor countries than in wealthy ones. Ghana appears in that report too: it’s projected to see about 19 additional heat-related deaths per 100,000 people by 2050. That means even as Ghana may see some relief from malaria as temperatures rise, the same heat is expected to bring other serious health risks. The Human Health report found some of the sharpest increases in heat deaths concentrated in Niger (+68 deaths per 100,000), Burkina Faso (+60), Djibouti (+55), Chad (+47), and Mauritania (+42), several of which also show up among the countries seeing the biggest malaria improvements in the new Nature study, including Niger and Mauritania. Why This Matters for Communities Not Used to Malaria According to the researchers, the places expected to see the biggest malaria increases, southern and East Africa, are not as used to dealing with the disease as West African countries are. “Governments, health systems and communities must adapt to the evolving malaria threat. That means getting ready now to implement more aggressive anti-malaria programs in cooler regions of sub-Saharan Africa where malaria risk is growing, and which can be less experienced at tackling it.” – Christopher Trisos, Director, Climate Risk Lab, and Principal Research Officer, African Climate and Development Initiative, University of Cape Town Can This Still Be Changed? Emissions choices matter, according to the study. If the world manages to keep warming below 2°C (the key target under the Paris Agreement), it could prevent about 5 excess cases of malaria per 1,000 children in southern Africa, and even more in the East African highlands, compared to a hotter future. But cutting emissions alone won’t be enough; the study stresses that strong healthcare systems, disease surveillance, and continued economic development remain far more powerful tools than climate alone. “Malaria was one of the first health outcomes linked to climate change, but it’s taken a quarter century to be sure which direction things are headed. The big story here is the opportunity for action: so far, elimination efforts have counteracted climate change impacts by nearly 200-fold. Malaria elimination within a generation is not only possible, but one of the best ways to protect frontline populations from climate change impacts.” – Colin Carlson, Assistant Professor of Epidemiology, Yale University END.",
+      "_source": "MyJoyOnline (Ghana)",
+      "_sourceId": "rss_myjoyonline",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "C",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
     {
       "title": "Université Thomas-Sankara: la fin des retards académiques célébrée",
       "link": "https://www.sidwaya.info/universite-thomas-sankara-la-fin-des-retards-academiques-celebree/",
@@ -892,9 +925,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
+      "_rating": "C2",
       "_score": 127,
       "_zone": 1,
       "_theme": "E",
@@ -970,42 +1003,10 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina : Amidou Bissiri élevé au rang de Grand ambassadeur de la paix par le MPAP lors de la 6e édition des APA",
-      "link": "https://www.aib.media/burkina-amidou-bissiri-eleve-au-rang-de-grand-ambassadeur-de-la-paix-par-le-mpap-lors-de-la-6e-edition-des-apa/",
-      "pubDate": "2026-08-02T21:13:25.000Z",
-      "description": "Burkina : Amidou Bissiri élevé au rang de Grand ambassadeur de la paix par le MPAP lors de la 6e édition des APA Ouagadougou, 31 juil. 2026 (AIB) – Le Mouvement pour la culture de la paix et l'amour de la patrie (MPAP) a décerné vendredi à Ouagadougou, le prix du grand ambassadeur de la paix au tradipraticien Amidou Bissiri pour ses multiples actions remarques en faveur de la paix au Burkina Faso. Lors des son gala caricatif organisé dans le carde de la 6e édition des Ambassadeurs de paix awards (APA), le Mouvement pour la culture de la paix et l’amour de la patrie (MPAP) a distingué Amidou Bissiri, originaire de la région du Yatenga, grand APA 2025, pour son engagement en faveur de la paix. Agriculteur et guérisseur traditionnel, le lauréat a exprimé sa gratitude aux organisateurs ainsi qu'aux autorités administratives et coutumières ayant contribué à la réussite de la cérémonie. Il a annoncé avoir décidé de consacrer l'intégralité de son prix aux personnes vulnérables, avant de lancer un appel à l’unité pour le retour de la paix au « pays des hommes intègres ». Placée sous le thème « Face au défi sécuritaire, l'amour de la patrie comme force d'unité et de cohésion sociale », cette édition a rassemblé des invités d'honneur venus du Mali, du Niger, de la Côte d'Ivoire et du Bénin, une présence saluée par les organisateurs comme un symbole de fraternité africaine. Le président du MPAP a d'abord a rendu hommage aux Forces de défense et de sécurité, des Volontaires pour la défense de la patrie (VDP) et des civils tombés sous les balles du terrorisme. Il a ensuite insisté sur le fait que l'amour de la patrie se traduit par des actes concrets de solidarité et de civisme, et non par de simples discours, appelant chaque Burkinabè à devenir « artisan de paix » à son niveau. Pour sa part, le fondateur du MPAP, Dr Samuel Kalkoumdo, a indiqué que la mobilisation enregistrée autour de cette édition, ainsi que la présence des invités venus des pays amis, témoignent du succès de l'événement. Au total, une dizaine d'invités d'honneur ont reçu des trophées et des attestations de reconnaissance, tandis que 12 personnalités ont été primées dans plusieurs catégories, notamment APA patriote, leadership, AES, prix spéciaux. Agence d'information du Burkina NAK/yos",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Pourquoi certains États veulent quitter la Cour Pénale internationale",
+      "title": "Pourquoi certains États veulent quitter la Cour pénale internationale",
       "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260802-pourquoi-certains-%C3%A9tats-veulent-quitter-la-cour-p%C3%A9nale-internationale",
       "pubDate": "2026-08-02T20:36:31.000Z",
-      "description": "Après le Burkina Faso, le Mali et le Niger, le Tchad a annoncé le 27 juillet son retrait de la Cour pénale internationale. C’est une nouvelle étape dans la stratégie diplomatique de ces États du Sahel. Après leur départ de la CEDEAO et de l'OIF, les Etats de l’AES dénoncent désormais une institution qu'elles jugent instrumentalisée par les puissances occidentales.",
+      "description": "Après le Burkina Faso, le Mali et le Niger, le Tchad a annoncé le 27 juillet son retrait de la Cour pénale internationale. C’est une nouvelle étape dans la stratégie diplomatique de ces États du Sahel. Après leur départ de la Cédéao et de l'OIF, les Etats de l'AES dénoncent désormais une institution qu'elles jugent instrumentalisée par les puissances occidentales.",
       "_source": "France 24",
       "_sourceId": "rss_f24fr",
       "_sourceCat": "geopol",
@@ -1027,25 +1028,24 @@
       "_rating": "A1",
       "_score": 123,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "J",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "E-verbalisation : 1 099 infractions relevées en seulement 12 heures de fonctionnement",
-      "link": "https://netafrique.net/e-verbalisation-1-099-infractions-relevees-en-seulement-12-heures-de-fonctionnement/",
-      "pubDate": "2026-08-03T02:19:03.000Z",
-      "description": "C’est une révolution silencieuse mais redoutable qui s'est emparée des carrefours. Depuis le 1er août 2026 à minuit, le Burkina Faso est officiellement entré dans l’ère de la e-verbalisation des infractions routières. Le ministre de la Sécurité, Mahamadou Sana, s’est rendu au Centre de supervision de la vidéoprotection pour constater l'implacable efficacité du nouveau dispositif. Le bilan des douze premières heures de fonctionnement est sans appel : 1 099 infractions ont été détectées par les caméras de surveillance, marquant un tournant décisif vers une gestion automatisée, transparente et équitable de la sécurité routière sur l'ensemble du territoire. Le sifflet de l'agent de police pourrait bien devenir un souvenir lointain au profit de l'objectif infrarouge des caméras de surveillance. Ce samedi 1er août, le ministre de la Sécurité a marqué de sa présence le Centre de supervision de la vidéoprotection, marquant ainsi l’aboutissement d’un projet majeur de modernisation des services de sécurité. Accueilli par Zakaria Hebie, Directeur général des Transmissions et de l'Informatique, le ministre a pu suivre en direct la chaîne de traitement. Le dispositif est d'une précision chirurgicale : la caméra détecte l'anomalie, les équipes techniques valident le dossier et une notification de contravention est instantanément expédiée au contrevenant. Ce passage au numérique vise non seulement à fluidifier le travail des forces de l'ordre, mais aussi à garantir une application plus juste de la loi, loin de toute subjectivité humaine. Les statistiques compilées entre minuit et midi ce samedi révèlent l'ampleur du chantier du civisme routier. Sur les 1 099 manquements enregistrés, les fautes les plus récurrentes demeurent le non-port de la ceinture de sécurité, le franchissement des feux tricolores, les excès de vitesse et l'usage dangereux du téléphone portable au volant. La réaction ne s'est pas fait attendre du côté des citoyens : à la mi-journée, cinq conducteurs avaient déjà régularisé leur situation en payant leurs amendes via la plateforme Faso Arzeka. Pour Mahamadou Sana, ce déploiement n'est pas une simple opération de répression, mais un levier de prévention. « La e-verbalisation est avant tout un outil au service d'une route plus sûre », rappelle le ministère. L'objectif affiché est clair : inciter chaque usager à l'autodiscipline pour éviter la sanction automatique. Alors que le système continue de monter en puissance, les autorités rappellent les règles d'or pour préserver son portefeuille : respecter la signalisation et les limitations de vitesse. En s’appuyant sur ces innovations numériques, le gouvernement burkinabè entend transformer durablement le paysage routier national, faisant du respect du Code de la route une norme incontournable plutôt qu'une option. L’article E-verbalisation : 1 099 infractions relevées en seulement 12 heures de fonctionnement est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "‘We will come back stronger’ – Konadu targets Ghana revival after WAFU setback",
+      "link": "https://www.myjoyonline.com/we-will-come-back-stronger-konadu-targets-ghana-revival-after-wafu-setback/",
+      "pubDate": "2026-08-03T09:35:43.000Z",
+      "description": "Ghana’s Black Satellites have been eliminated from the 2026 WAFU B U-20 Championship after a goalless draw with Togo in their final Group B match. Ghana needed a victory against Togo at the Charles Konan Banny Stadium in Yamoussoukro, Côte d’Ivoire, to keep their semi-final hopes alive. However, despite controlling long periods of the match and creating several opportunities, the Black Satellites could not find the decisive goal. The result left Ghana third in Group B with two points from three matches, ending their campaign at the regional tournament. The Black Satellites began the competition with defeat against Nigeria before drawing with Burkina Faso in their second encounter. Although Ghana failed to progress, head coach Maxwell Konadu believes the experience gained in Côte d’Ivoire will help shape a stronger team ahead of the 2027 CAF U-20 Africa Cup of Nations, where Ghana will participate as hosts. “The team came here to compete and to win. Having said that, we also know there were one or two things that didn’t go according to plan. In football, you don’t always get everything 100 percent.” “This is not going to demotivate us. Rather, it will encourage us to give our best. We have to move on, reorganise ourselves and come back stronger.” “We came here to win, but it didn’t work out. We will reorganise ourselves. Definitely, we will not present the same team for the AFCON next year.”",
+      "_source": "MyJoyOnline (Ghana)",
+      "_sourceId": "rss_myjoyonline",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1054,21 +1054,21 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "F2"
       },
-      "_rating": "F1",
+      "_rating": "F2",
       "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
+      "_zone": 2,
+      "_theme": "T",
+      "_zoneShort": "2. AO anglo. & côtière",
+      "_relevance": "L",
+      "_desk": "A2"
     },
     {
-      "title": "Guerre et défense patriotique : renforcer les stratégies opérationnelles pour plus de résultats",
-      "link": "https://www.sidwaya.info/guerre-et-defense-patriotique-renforcer-les-strategies-operationnelles-pour-plus-de-resultats/",
-      "pubDate": "2026-08-03T00:29:24.000Z",
-      "description": "Le ministère de la Guerre et de la Défense patriotique a tenu la première session ordinaire 2026 de son conseil d’administration du secteur ministériel, le vendredi 31 juillet 2026 à Ouagadougou, sur le thème : « L’emploi des Volontaires pour la défense de la patrie (VDP) dans la lutte contre le terrorisme ». La marche courageuse des forces combattantes du Burkina Faso vers l’extinction du terrorisme poursuit son bonhomme de chemin. Ce combat historique vise à préserver l’intégrité territoriale, la protection des populations et la restauration pleine et entière de l’autorité de l’Etat sur l’ensemble du territoire national. Pour consolider la vision éclairée du Président du Faso, le capitaine Ibrahim Traoré, le ministère de la Guerre et de la Défense patriotique a tenu la première session ordinaire 2026 de son Conseil d’administration du secteur ministériel (CASEM), le vendredi 31 juillet 2026 à Ouagadougou, sur le thème : « L’emploi des Volontaires pour la défense de la patrie (VDP) dans la lutte contre le terrorisme ». En effet, lors de ce Conseil d’administration, instance de gouvernance stratégique, le ministre de la Guerre et de la Défense patriotique, le général de division Célestin Simporé, s’est réjoui des acquis réalisés par son département. Selon lui, ces acquis, fruits d’une volonté politique affirmée et d’une mobilisation nationale, imposent davantage de rigueur, de discipline, de cohérence et d’efficacité dans la conduite des missions administratives et opérationnelles. Pour le général Célestin Simporé, la présente session du Conseil d’administration du secteur ministériel s’inscrit dans la dynamique d’offrir aux différents responsables, l’opportunité d’apprécier objectivement les progrès accomplis, d’identifier les difficultés rencontrées et de définir les mesures correctives nécessaires afin d’améliorer durablement la capacité de réponse aux défis. « Au cours de cette session, nous examinerons successivement le niveau de mise en œuvre des recommandations et résolutions issues de la deuxième session du CASEM de l’année 2025, le bilan des activités au 30 juin 2026, le niveau d’exécution du Plan de travail annuel budgétisé et les ajustements éventuels apportés au programme d’activités afin d’assurer une meilleure atteinte de nos objectifs stratégiques », a-t-il confié. Du reste, les participants ont été invités d’une part à formuler des analyses pertinentes ainsi que des recommandations réalistes, ambitieuses et directement opérationnelles et d’autre part, apporter des contributions permettant d’améliorer significativement les mécanismes de planification, de suivi-évaluation et de gouvernance stratégique. Enfin, outre l’examen des performances du département, cette session a été enrichie par deux communications : la première sur « l’emploi des volontaires pour la défense de la patrie dans la lutte contre le terrorisme : état des lieux et perspectives » et la seconde sur « la loi portant statut de la réserve militaire au Burkina Faso ». Emmanuel BICABA Mari Bénédicte KAHOUN (Stagiaire)",
+      "title": "Promotion de la paix et de la cohésion sociale : la contribution de Cheikh Tang Zoug Moré",
+      "link": "https://www.sidwaya.info/promotion-de-la-paix-et-de-la-cohesion-sociale-la-contribution-de-cheikh-tang-zoug-more/",
+      "pubDate": "2026-08-03T09:34:00.000Z",
+      "description": "Le guide religieux Redwane Pougda dit Cheikh Tang Zoug Moré a animé une conférence de presse, mercredi 22 juillet 2026, à Ouagadougou. Devant les journalistes, il a partagé son parcours, sa vision, ses expériences et actions en tant que guide religieux dans la promotion de la paix, du vivre ensemble et de l’acceptation de l’autre. Dans le contexte marqué par les défis sécuritaires, les tensions communautaires et la nécessité du vivre-ensemble, le guide religieux Cheikh Tang Zoug Moré œuvre pour rapprocher les communautés. Au cours d’une conférence de presse, tenue mercredi 22 juillet 2026 à Ouagadougou, le guide religieux a confié que la foi doit être vécue à travers les actes avant les paroles. Reconnu comme étant un homme de dialogue, d'écoute et de proximité, il encourage chacun à devenir un acteur de paix dans son environnement à travers ses enseignements. Pour lui, la religion constitue un facteur de rassemblement pour prôner la paix, la cohésion sociale, le dialogue interreligieux. A cet effet, il lutte contre les divisions religieuses, encourage la tolérance religieuse et développe la solidarité à travers des valeurs morales. « Les différences religieuses ne doivent jamais devenir des motifs de conflit mais des occasions de mieux se connaître », a-t-il dit. Le guide religieux a ajouté qu’aucune religion ne peut justifier la haine. La foi doit rapprocher les hommes plutôt que les opposer. Car tous les êtres humains sont égaux devant Dieu et le jugement appartient uniquement au créateur et non aux hommes. A travers son association « Djamiyatoul Filoul Kayraat », Cheikh Tang Zoug Moré développe plusieurs initiatives visant à renforcer des œuvres sociales en aidant les personnes vulnérables de sa communauté. Originaire du village Yourga dans la commune de Sangha, province du Koulpélogo, région du Nakambé, le guide religieux Cheikh Tang Zoug a été marqué par la visite d'un maître venu enseigner la religion dans son village en 2006. Il décide, avec l'accord de son père, d'abandonner l'école classique afin de se consacrer aux études islamiques où il découvre très tôt sa vocation religieuse. Sa formation le conduit à Nakiboane dans la région de Fada N'Gourma, à Bobo-Dioulasso, en Egypte, au Niger et au Ghana. Ces années d'apprentissage lui ont permis d'acquérir une solide formation en langue arabe, en sciences islamiques et en enseignement religieux. A son retour au Burkina Faso, il devient guide religieux et forme de nombreux élèves participant à la promotion des valeurs de paix et de cohésion sociale. Gbetcheni Constantin Bertrand KAMBIRE",
       "_source": "Sidwaya",
       "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
@@ -1076,9 +1076,7 @@
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1092,18 +1090,18 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": null,
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
+      "_relevance": ".",
       "_desk": "A1"
     },
     {
-      "title": "Concert de la résilience et du triomphe : une soirée de communion patriotique",
-      "link": "https://www.sidwaya.info/concert-de-la-resilience-et-du-triomphe-une-soiree-de-communion-patriotique/",
-      "pubDate": "2026-08-03T00:27:02.000Z",
-      "description": "L’orchestre de la Présidence du Faso a organisé, samedi 31 juillet 2026, à la place de la Nation de Manga, dans le Nazinon, un concert de la résilience et du triomphe. La Place de la Nation de Manga a vibré au rythme des instruments musicaux dans la soirée du samedi 31 juillet 2026. L’orchestre de la Présidence du Faso s’y est installé pour animer le concert de la résilience et du triomphe. Cette soirée qui a réuni autorités administratives, populations, familles et invités, se tient en marge de la cérémonie de sortie de la 25e promotion des élèves-officiers d’actives de l’Académie militaire Georges Namoano (AMGN). Elle a mis en lumière le talent d’artistes burkinabè de renom, notamment Mariah Bissongo, Zédess, Bil Aka Kora et Smarty. A travers des prestations mêlant sonorités traditionnelles et modernes, les artistes ont rendu hommage aux forces combattantes, aux populations résilientes et à tous ceux qui œuvrent pour la paix et le développement du Burkina Faso. Au fil des prestations, le public a repris en chœur plusieurs chansons aux messages de courage, d’unité et de solidarité. Les rythmes musicaux entraînant les ovations ont transformé le concert en un véritable moment de communion entre les artistes et les spectateurs. Le chef de l’orchestre de la Présidence du Faso, le commandant Aimé Césaire Ouédraogo, a indiqué que cette soirée n’a pas mobilisé le public pour la seule célébration de l’art musical. « Nous sommes rassemblés pour magnifier ce qui fait la grandeur d’un peuple et sa capacité à espérer lorsque les circonstances semblent contraires », a-t-il précisé. Selon lui, la musique est la plus universelle des langages. Le commandant Aimé Césaire Ouédraogo a informé que les œuvres présentées retracent un itinéraire fait de courage, de sacrifice, de persévérance et de victoire. Le chef de l’orchestre de la Présidence du Faso a également relevé que cette soirée célèbre la lumière qui triomphe de l’obscurité, la dignité qui emporte sur la résignation et l’espérance qui demeure envers et contre tout le ferment des grandes destinées. « Dans la cité de l’épervier, ces mélodies qui prennent une résonance plus particulière rendent hommage à celles et ceux qui ont choisi de servir la Nation avec honneur, loyauté et abnégation. « Consolider la paix par la culture » La soirée, riche en couleurs et en émotions, a réuni autorités administratives, populations, familles et invités. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/1-2.jpeg\" class=\"size-medium wp-image-166851\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/1-2-300x232.jpeg\" alt=\"\" width=\"300\" height=\"232\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/1-2-300x232.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/1-2-543x420.jpeg 543w, https://www.sidwaya.info/wp-content/uploads/2026/08/1-2-150x116.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/1-2-696x538.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/1-2.jpeg 720w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> La soirée, riche en couleurs et en émotions, a réuni autorités administratives, populations, familles et invités. Elles traduisent également l’attachement indéfectible de notre peuple aux valeurs de solidarité, de courage, de patriotisme et de souveraineté », a souligné Aimé Césaire Ouédraogo. Tout en saluant avec une profonde admiration les musiciens de l’orchestre de la Présidence du Faso dont le talent, la discipline et l’excellence artistique porte avec éclat les idéaux de la Nation, il a formulé le vœu que cette soirée musicale demeure dans les mémoires comme une célébration de la fraternité et de la grandeur du peuple. « Le chef de l’Etat, a l’intime conviction que l’on va gagner la guerre par les armes, la paix par la communication et consolider la paix par la culture. C’est pourquoi dans le manifeste de la Révolution progressiste populaire (RPP), le capitaine Ibrahim Traoré, a invité le peuple burkinabè à un réarmement culturel », a déclaré le ministre de la Communication, de la Culture, des Arts et du Tourisme, Pingdwendé Gilbert Ouédraogo. Pour lui, l’orchestre de la Présidence du Faso est aujourd’hui un organe qui doit assumer ce rôle de promotion des arts et de la culture. « L’orchestre, comme bien d’autres entités, doit être l’ambassadeur de nos valeurs culturelles aussi bien à l’intérieur qu’à l’international », a-t-il clarifié. Le ministre chargé de la Culture a rappelé que le passage de l’orchestre en terre russe en août 2025 reste un souvenir vivace. Pingdwendé Gilbert Ouédraogo a, par ailleurs, affirmé que la RPP est en train de convaincre définitivement les sceptiques. « Tout le monde se convainc de la justesse du choix qui a été fait par le chef de l’Etat de nous engager tous dans la révolution », a-t-il conclu. Noufou SAWADOGO",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Zoundwéogo/Éducation: Tinrtinga célèbre l’excellence scolaire sous le thème « Tous unis pour une éducation de qualité »",
+      "link": "https://www.aib.media/zoundweogo-education-tinrtinga-celebre-lexcellence-scolaire-sous-le-theme-tous-unis-pour-une-education-de-qualite/",
+      "pubDate": "2026-08-03T09:09:40.000Z",
+      "description": "Zoundwéogo/Éducation: Tinrtinga célèbre l'excellence scolaire sous le thème « Tous unis pour une éducation de qualité » Guiba, 1er août 2026 (AIB) – La communauté de Tinrtinga, dans la commune de Guiba, a célébré samedi les meilleurs élèves ainsi que les acteurs de l'école primaire publique du village, à l'occasion d'une journée dédiée à l'excellence scolaire, placée sous le thème: « Tous unis pour une éducation de qualité ». La cérémonie a réuni les autorités coutumières et religieuses, les autorités communales ainsi que les fils et filles du village, venus témoigner leur engagement en faveur de la promotion de l'éducation. Dans son intervention, le directeur de l'école primaire publique de Tinrtinga, Singo Sawadogo, a présenté les performances de son établissement. Au titre de l'année scolaire 2025-2026, l'école a enregistré un effectif de 205 élèves, dont 108 filles. Le conseil de décision a affiché un taux de passage en classe supérieure de 98,53 %. Au Certificat d'études primaires (CEP), supervisé par la camarade Rihanatou Ouédraogo, les 41 candidats présentés ont tous été admis, soit un taux de réussite de 100 %. Ils ont également tous réussi le concours d'entrée en classe de sixième. Le directeur n'a toutefois pas occulté les difficultés auxquelles l'établissement reste confronté. Il a notamment cité la baisse progressive des effectifs, les absences répétées de certains élèves au cours de l'année scolaire ainsi que la vétusté des latrines. Selon lui, ces défis nécessitent une mobilisation accrue de l'ensemble des acteurs afin d'améliorer les conditions d'apprentissage et de garantir le maintien des enfants à l'école. Le parrain de la cérémonie, Tasseré Zoungrana, a invité les parents d'élèves à faire de l'éducation « une priorité communautaire », estimant que « chaque leçon apprise, chaque livre lu rapproche les enfants de leur réussite ». Il s'est dit convaincu qu'avec l'engagement des familles et de toute la communauté éducative, l'école continuera de former des citoyens capables de contribuer au développement local et national. Le chef de la Circonscription d'éducation de base (CEB) de Guiba, Joachim Compaoré, a salué cette initiative qui valorise le mérite scolaire. Il a félicité les enseignants, les élèves et les parents pour les résultats obtenus, rappelant que la CEB de Guiba a enregistré un taux de succès de 98,90 % au CEP, session de 2026. Au terme de la cérémonie, les cinq meilleurs élèves de chaque classe ont reçu des kits scolaires et divers présents offerts par les parents d'élèves. Les meilleurs admis au CEP ont, quant à eux, été récompensés par des vélos neufs. La camarade Ouédraogo a également reçu un ordinateur en reconnaissance de son engagement et de sa contribution aux excellents résultats de l'établissement. Agence d'information du Burkina SM/BGB/bak",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1119,18 +1117,82 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C2"
+        "rating": "C1"
       },
-      "_rating": "C2",
+      "_rating": "C1",
       "_score": 115,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Un séisme de magnitude 5,6 frappe l’Egypte sans faire de victimes",
+      "link": "https://www.liberation.fr/international/afrique/un-seisme-de-magnitude-56-frappe-legypte-sans-faire-de-victimes-20260803_XREUBI4YP5G5RAZFVWRGEIXIV4/",
+      "source": "Libération International",
+      "date": "2026-08-03T09:23:57.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Bamako : six suspects arrêtés à Hippodrome pour assassinat, vol et braquage",
+      "link": "https://malijet.com/les_faits_divers_au_mali/310932-bamako-six-suspects-arretes-a-hippodrome-pour-assassinat.html",
+      "source": "Malijet",
+      "date": "2026-08-03T08:36:25.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ]
+    },
+    {
+      "title": "Saudi oil port sees busiest day since Houthi blockade: Report",
+      "link": "https://www.aa.com.tr/en/middle-east/saudi-oil-port-sees-busiest-day-since-houthi-blockade-report/4016800",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-08-03T08:24:57.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "US, Iran to focus on Strait of Hormuz, lifting blockade during talks — media",
+      "link": "https://tass.com/world/2168277",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-08-03T07:19:25.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
     {
       "title": "Bar Asraf found deceased in apparent suicide at grave of girlfriend killed in October 7 massacre",
       "link": "https://www.jpost.com/israel-news/article-904382",
@@ -1164,22 +1226,6 @@
       ]
     },
     {
-      "title": "Trump says Iran talks to resume after US called off major attack",
-      "link": "https://www.ft.com/content/c9bd508c-2915-4b34-a5a5-553bff9548a5?syn-25a6b1a6=1",
-      "source": "Financial Times World",
-      "date": "2026-08-03T01:24:32.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "major attack"
-        }
-      ]
-    },
-    {
       "title": "UK graduate job openings fall to lowest level since pandemic",
       "link": "https://www.ft.com/content/5391353e-3e03-4170-a289-497019a5d615?syn-25a6b1a6=1",
       "source": "Financial Times World",
@@ -1192,22 +1238,6 @@
         {
           "type": "crise",
           "keyword": "pandemic"
-        }
-      ]
-    },
-    {
-      "title": "Israeli strikes kill civilians, destroy medical supplies after Gaza ceasefire roadmap: Peace Board envoy",
-      "link": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-civilians-destroy-medical-supplies-after-gaza-ceasefire-roadmap-peace-board-envoy/4016541",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-02T20:19:12.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
         }
       ]
     },
@@ -1226,160 +1256,48 @@
           "keyword": "red line"
         }
       ]
-    },
-    {
-      "title": "Egyptian foreign minister, Board of Peace envoy discuss next phase of Gaza ceasefire",
-      "link": "https://www.aa.com.tr/en/middle-east/egyptian-foreign-minister-board-of-peace-envoy-discuss-next-phase-of-gaza-ceasefire/4016462",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-02T16:41:16.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "35 vessels redirected by US military since resumption of blockade of Iran — CENTCOM",
-      "link": "https://tass.com/world/2168167",
-      "source": "TASS (Russie, EN)",
-      "date": "2026-08-02T16:12:07.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "Hamas says Israel escalating Gaza attacks to derail ceasefire understandings",
-      "link": "https://www.aa.com.tr/en/middle-east/hamas-says-israel-escalating-gaza-attacks-to-derail-ceasefire-understandings/4016451",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-02T16:11:33.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "‘US has taken global food security hostage by naval blockade of Iran’",
-      "link": "https://www.tehrantimes.com/news/528803/US-has-taken-global-food-security-hostage-by-naval-blockade",
-      "source": "Tehran Times",
-      "date": "2026-08-02T15:27:03.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "Contre l’oubli : la RDC commémore ses morts et œuvre à faire reconnaître le «génocide économique au Congo» à l’international",
-      "link": "https://francais.rt.com/afrique/136777-contre-oubli-rdc-commemore-morts-%C5%93uvre-faire-reconnaitre-genocide-economique-congo-international",
-      "source": "RT en français",
-      "date": "2026-08-02T13:43:56.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "Accord de cessez-le-feu sur Gaza: après les annonces de Donald Trump, Israël n'a toujours pas réagi",
-      "link": "https://www.rfi.fr/fr/moyen-orient/20260802-accord-de-cessez-le-feu-sur-gaza-apr%C3%A8s-les-annonces-de-donald-trump-isra%C3%ABl-n-a-toujours-pas-r%C3%A9agi",
-      "source": "RFI Moyen-Orient",
-      "date": "2026-08-02T12:26:31.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Zidane sélectionneur des Bleus, séisme au Japon, afflux de migrants à Ceuta : la semaine en images",
-      "link": "https://www.france24.com/fr/europe/20260802-zidane-s%C3%A9lectionneur-des-bleus-s%C3%A9isme-au-japon-afflux-de-migrants-%C3%A0-ceuta-la-semaine-en-images",
-      "source": "France 24",
-      "date": "2026-08-02T10:24:19.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      210
-    ],
-    [
-      "autre",
-      119
+      190
     ],
     [
       "occident_fr",
-      96
+      136
+    ],
+    [
+      "autre",
+      118
     ],
     [
       "occident_us",
-      82
+      94
     ],
     [
       "golfe_mo",
-      80
+      65
     ],
     [
       "bf_local",
-      56
+      54
     ],
     [
       "turquie",
-      52
+      44
     ],
     [
       "russie",
-      47
+      43
     ],
     [
       "chine",
-      36
+      32
     ],
     [
       "sahel",
-      22
+      24
     ]
   ],
   "desks": [
@@ -1387,8 +1305,17 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 116,
+      "count": 106,
       "top": [
+        {
+          "title": "Climate Change is making malaria worse in parts of Africa while wiping it out in others, new study finds",
+          "link": "https://www.myjoyonline.com/climate-change-is-making-malaria-worse-in-parts-of-africa-while-wiping-it-out-in-others-new-study-finds/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Université Thomas-Sankara: la fin des retards académiques célébrée",
           "link": "https://www.sidwaya.info/universite-thomas-sankara-la-fin-des-retards-academiques-celebree/",
@@ -1396,7 +1323,7 @@
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "C2"
         },
         {
           "title": "Gestion et états financiers des EPE 2025: 518,6 milliards F CFA de recettes mobilisées",
@@ -1417,20 +1344,11 @@
           "rating": "A2"
         },
         {
-          "title": "Burkina : Amidou Bissiri élevé au rang de Grand ambassadeur de la paix par le MPAP lors de la 6e édition des APA",
-          "link": "https://www.aib.media/burkina-amidou-bissiri-eleve-au-rang-de-grand-ambassadeur-de-la-paix-par-le-mpap-lors-de-la-6e-edition-des-apa/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Pourquoi certains États veulent quitter la Cour Pénale internationale",
+          "title": "Pourquoi certains États veulent quitter la Cour pénale internationale",
           "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260802-pourquoi-certains-%C3%A9tats-veulent-quitter-la-cour-p%C3%A9nale-internationale",
           "source": "France 24",
           "zone": "1. Sahel & AO franco.",
-          "theme": "D",
+          "theme": "J",
           "relevance": "A",
           "rating": "A1"
         }
@@ -1440,50 +1358,50 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 56,
+      "count": 59,
       "top": [
         {
-          "title": "Border security gets €7.3m boost as Ghana launches major West Africa Anti-Terror project",
-          "link": "https://www.myjoyonline.com/border-security-gets-e7-3m-boost-as-ghana-launches-major-west-africa-anti-terror-project/",
+          "title": "‘We will come back stronger’ – Konadu targets Ghana revival after WAFU setback",
+          "link": "https://www.myjoyonline.com/we-will-come-back-stronger-konadu-targets-ghana-revival-after-wafu-setback/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
+          "theme": "T",
+          "relevance": "L",
           "rating": "F2"
         },
         {
-          "title": "La BIDC soutient la transformation agricole en Gambie avec un financement de 10,04 millions USD en faveur de G FARMS LIMITED",
-          "link": "https://malijet.com/actualite_economique_du_mali/310923-la-bidc-soutient-la-transformation-agricole-en-gambie-avec-u.html",
-          "source": "Malijet",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "Govs don’t regard tackling insecurity as priority — Folarin, Afenifere scribe",
-          "link": "https://www.vanguardngr.com/2026/08/govs-dont-regard-tackling-insecurity-as-priority-folarin-afenifere-scribe/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Parents are behind exam malpractice, not students — Oloyede",
-          "link": "https://www.vanguardngr.com/2026/08/parents-are-behind-exam-malpractice-not-students-oloyede/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "African markets rally with Nigeria’s stock exchange leading the world",
-          "link": "https://www.myjoyonline.com/african-markets-rally-with-nigerias-stock-exchange-leading-the-world/",
+          "title": "Ghana’s climate future brings less malaria but more deadly heat, new research shows",
+          "link": "https://www.myjoyonline.com/ghanas-climate-future-brings-less-malaria-but-more-deadly-heat-new-research-shows/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "N10trn investments in 13 years fail to lift power supply",
+          "link": "https://www.vanguardngr.com/2026/08/n10trn-investments-in-13-years-fail-to-lift-power-supply/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Onaiyekan: Northern Christians, Atiku, Senator Shehu Sani defend Catholic Bishops",
+          "link": "https://www.vanguardngr.com/2026/08/onaiyekan-northern-christians-atiku-senator-shehu-sani-defend-catholic-bishops/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Troops exhume remains of community leader allegedly murdered in Imo",
+          "link": "https://www.vanguardngr.com/2026/08/troops-exhume-remains-of-community-leader-allegedly-murdered-in-imo/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "J",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1493,7 +1411,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 32,
+      "count": 38,
       "top": [
         {
           "title": "Société commerciale pour le Mondial: l’UEFA sort le carton rouge, Infantino recule, la Caf encore hors-jeu!",
@@ -1514,31 +1432,31 @@
           "rating": "A2"
         },
         {
-          "title": "Congo’s Ebola outbreak is second-largest on record, latest data shows",
-          "link": "https://www.myjoyonline.com/congos-ebola-outbreak-is-second-largest-on-record-latest-data-shows/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "RDC: au Mémorial du Genocost, Félix Tshisekedi annonce un musée national et une politique de mémoire renforcée",
+          "link": "https://www.rfi.fr/fr/afrique/20260803-rdc-au-m%C3%A9morial-du-genocost-f%C3%A9lix-tshisekedi-annonce-un-mus%C3%A9e-national-et-une-politique-de-m%C3%A9moire-renforc%C3%A9e",
+          "source": "RFI Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Centrafrique: un ressortissant suisse et un soldat tués dans une attaque au nord de Bangui",
+          "link": "https://www.rfi.fr/fr/afrique/20260803-centrafrique-un-ressortissant-suisse-et-un-soldat-tu%C3%A9s-dans-une-attaque-au-nord-de-bangui",
+          "source": "RFI Afrique",
           "zone": "3. Afrique centrale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Soudan : une ONG accuse l’armée d’avoir tué 35 personnes dans une frappe de drone sur un tribunal du Darfour",
           "link": "https://www.lemonde.fr/afrique/article/2026/08/03/soudan-une-ong-accuse-l-armee-d-avoir-tue-35-personnes-dans-une-frappe-de-drone-sur-un-tribunal-du-darfour_6737320_3212.html",
-          "source": "Le Monde International",
+          "source": "Le Monde Afrique",
           "zone": "5. Corne de l’Afrique",
           "theme": "S",
           "relevance": "A",
           "rating": "B1"
-        },
-        {
-          "title": "Poste S.A dans le Moyen-Ogooué : entre services dynamiques et conditions de travail alarmantes",
-          "link": "https://www.gabonreview.com/poste-s-a-dans-le-moyen-ogooue-entre-services-dynamiques-et-conditions-de-travail-alarmantes/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1546,24 +1464,33 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 32,
+      "count": 38,
       "top": [
         {
-          "title": "CAN féminine Maroc: Les Camerounaises battent les Ghanéennes (1-0)",
-          "link": "https://fr.hespress.com/483851-can-feminine-maroc-les-camerounaises-battent-les-ghaneennes-1-0.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Crise de Ceuta, quel impact sur l’Algérie ? Le décryptage d’Abdelaziz Rahabi",
+          "link": "https://www.tsa-algerie.com/crise-de-ceuta-quel-impact-sur-lalgerie-le-decryptage-dabdelaziz-rahabi/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": null,
-          "relevance": ".",
+          "theme": "S",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Crise de Ceuta : l’Europe couvre le Maroc, et si c’était l’Algérie ?",
-          "link": "https://www.tsa-algerie.com/crise-de-ceuta-leurope-couvre-le-maroc-et-si-cetait-lalgerie/",
-          "source": "TSA — Tout sur l'Algérie",
+          "title": "Un séisme de magnitude 5,6 frappe l’Egypte sans faire de victimes",
+          "link": "https://www.liberation.fr/international/afrique/un-seisme-de-magnitude-56-frappe-legypte-sans-faire-de-victimes-20260803_XREUBI4YP5G5RAZFVWRGEIXIV4/",
+          "source": "Libération International",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "WAFCON Maroc 2026 : les Aigles Dames se relancent avec une première victoire",
+          "link": "https://malijet.com/actualite_sportive_au_mali/310934-wafcon-maroc-2026-les-aigles-dames-se-relancent-avec-une-p.html",
+          "source": "Malijet",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
@@ -1576,20 +1503,11 @@
           "rating": "A2"
         },
         {
-          "title": "La crise de Ceuta est-elle la première ruée algorithmique de l’histoire ?",
-          "link": "https://legrandcontinent.eu/fr/2026/08/02/la-crise-de-ceuta-est-elle-la-premiere-ruee-algorithmique-de-lhistoire/",
-          "source": "Le Grand Continent",
+          "title": "Expats, seul votre argent compte pour l’État tunisien !",
+          "link": "https://kapitalis.com/tunisie/2026/08/03/expats-seul-votre-argent-compte-pour-letat-tunisien/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Sebta : L'Intérieur attribue la vague migratoire à la désinformation et aux trafiquants d'êtres humains",
-          "link": "https://fr.hespress.com/483837-sebta-linterieur-attribue-la-vague-migratoire-a-la-desinformation-et-aux-trafiquants-detres-humains.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1599,11 +1517,20 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 115,
+      "count": 93,
       "top": [
         {
-          "title": "Accord de cessez-le-feu sur Gaza: après les annonces de Donald Trump, Israël n'a toujours pas réagi",
-          "link": "https://www.rfi.fr/fr/moyen-orient/20260802-accord-de-cessez-le-feu-sur-gaza-apr%C3%A8s-les-annonces-de-donald-trump-isra%C3%ABl-n-a-toujours-pas-r%C3%A9agi",
+          "title": "Bulls in charge as PSX opens week by gaining 1,700 points during intraday trade",
+          "link": "https://www.dawn.com/news/2020325/bulls-in-charge-as-psx-opens-week-by-gaining-1700-points-during-intraday-trade",
+          "source": "Dawn (Pakistan)",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Gaza : le désarmement du Hamas peut-il entraîner le retrait d’Israël?",
+          "link": "https://www.rfi.fr/fr/podcasts/appels-sur-l-actualit%C3%A9/20260803-gaza-le-d%C3%A9sarmement-du-hamas-peut-il-entra%C3%AEner-le-retrait-d-isra%C3%ABl",
           "source": "RFI Moyen-Orient",
           "zone": "8. Moyen-Orient",
           "theme": "S",
@@ -1611,40 +1538,31 @@
           "rating": "C2"
         },
         {
-          "title": "Israeli strikes kill civilians, destroy medical supplies after Gaza ceasefire roadmap: Peace Board envoy",
-          "link": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-civilians-destroy-medical-supplies-after-gaza-ceasefire-roadmap-peace-board-envoy/4016541",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Israel conveys 'comments, concerns' to US on Gaza plan, says version made public does not reflect its position",
+          "link": "https://www.dawn.com/news/2020337/israel-conveys-comments-concerns-to-us-on-gaza-plan-says-version-made-public-does-not-reflect-its-position",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F1"
-        },
-        {
-          "title": "Trump says Iran talks to resume after US called off major attack",
-          "link": "https://www.ft.com/content/c9bd508c-2915-4b34-a5a5-553bff9548a5?syn-25a6b1a6=1",
-          "source": "Financial Times World",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Pétrole : l'Opep+ augmente à nouveau ses quotas de production",
-          "link": "https://fr.hespress.com/483823-petrole-lopep-augmente-a-nouveau-ses-quotas-de-production.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "8. Moyen-Orient",
-          "theme": "E",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Egyptian foreign minister, Board of Peace envoy discuss next phase of Gaza ceasefire",
-          "link": "https://www.aa.com.tr/en/middle-east/egyptian-foreign-minister-board-of-peace-envoy-discuss-next-phase-of-gaza-ceasefire/4016462",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Iran executes two men convicted of spying for Israel",
+          "link": "https://www.vanguardngr.com/2026/08/iran-executes-two-men-convicted-of-spying-for-israel/",
+          "source": "Vanguard (Nigeria)",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
           "rating": "F1"
+        },
+        {
+          "title": "Guerre au Moyen-Orient : l’Iran dément la reprise des négociations annoncée par Donald Trump",
+          "link": "https://www.liberation.fr/international/moyen-orient/donald-trump-annonce-une-reprise-des-negociations-avec-liran-ce-lundi-20260803_EBTNTDBRD5GXDPVVDKGYAMSYBU/",
+          "source": "Libération International",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C1"
         }
       ]
     },
@@ -1652,7 +1570,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 164,
+      "count": 154,
       "top": [
         {
           "title": "Iran’s red line holds: Trump forced into humiliating retreat",
@@ -1664,40 +1582,40 @@
           "rating": "F2"
         },
         {
-          "title": "Le Canada attache une grande importance à son partenariat avec le Maroc et entend approfondir la coopération",
-          "link": "https://fr.hespress.com/483846-le-canada-attache-une-grande-importance-a-son-partenariat-avec-le-maroc-et-entend-approfondir-la-cooperation.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "EN DIRECT, guerre au Moyen-Orient : « Nous ne négocions pas avec les Etats-Unis », assure la diplomatie iranienne, contredisant des propos tenus par Donald Trump dimanche",
+          "link": "https://www.lemonde.fr/international/live/2026/08/03/en-direct-guerre-au-moyen-orient-nous-ne-negocions-pas-avec-les-etats-unis-assure-la-diplomatie-iranienne-contredisant-des-propos-tenus-par-donald-trump-dimanche_6737099_3210.html",
+          "source": "Le Monde International",
           "zone": "16. Amérique du Nord",
           "theme": "D",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "B2"
         },
         {
-          "title": "La plus grande victoire de la mafia est d’avoir cessé de ressembler à la mafia",
-          "link": "https://legrandcontinent.eu/fr/2026/08/02/la-plus-grande-victoire-de-la-mafia-est-davoir-cesse-de-ressembler-a-la-mafia/",
+          "title": "Économie russe : la crise des carburants s’approfondit et les exportations chutent",
+          "link": "https://legrandcontinent.eu/fr/2026/08/03/economie-russe-la-crise-des-carburants-sapprofondit-et-les-exportations-chutent/",
           "source": "Le Grand Continent",
-          "zone": "9. Europe occidentale",
+          "zone": "10. Europe orient. & Balkans",
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Zidane sélectionneur des Bleus, séisme au Japon, afflux de migrants à Ceuta : la semaine en images",
-          "link": "https://www.france24.com/fr/europe/20260802-zidane-s%C3%A9lectionneur-des-bleus-s%C3%A9isme-au-japon-afflux-de-migrants-%C3%A0-ceuta-la-semaine-en-images",
-          "source": "France 24",
-          "zone": "9. Europe occidentale",
+          "title": "L’administration Trump est en train de faire plier l’Université américaine",
+          "link": "https://legrandcontinent.eu/fr/2026/08/03/ladministration-trump-est-en-train-de-faire-plier-luniversite-americaine/",
+          "source": "Le Grand Continent",
+          "zone": "16. Amérique du Nord",
           "theme": "P",
           "relevance": "L",
-          "rating": "C2"
+          "rating": "A2"
         },
         {
-          "title": "Scuffle and chaos mar MQM-P meeting as two groups clash at party's office in Karachi's Bahadurabad",
-          "link": "https://www.dawn.com/news/2020162/scuffle-and-chaos-mar-mqm-p-meeting-as-two-groups-clash-at-partys-office-in-karachis-bahadurabad",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "title": "Ahmad Massoud et Aurélien Pradié : « Les citoyens d’Afghanistan qui arrivent aux frontières de l’Europe fuient la menace ; ils ne la portent pas »",
+          "link": "https://www.lemonde.fr/idees/article/2026/08/03/ahmad-massoud-et-aurelien-pradie-les-citoyens-d-afghanistan-qui-arrivent-aux-frontieres-de-l-europe-fuient-la-menace-ils-ne-la-portent-pas_6737333_3232.html",
+          "source": "Le Monde International",
+          "zone": "11. Asie centrale",
+          "theme": "L",
+          "relevance": "L",
+          "rating": "B2"
         }
       ]
     }
@@ -1714,42 +1632,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-03T03:53:54.027Z",
+      "at": "2026-08-03T10:05:01.239Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-03T03:53:54.034Z",
+      "at": "2026-08-03T10:05:01.246Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-03T03:54:35.891Z",
+      "at": "2026-08-03T10:05:32.076Z",
       "agent": "Agent Collecte RSS",
-      "message": "112/170 flux OK, 1931 articles"
+      "message": "111/170 flux OK, 1897 articles"
     },
     {
-      "at": "2026-08-03T03:54:38.877Z",
+      "at": "2026-08-03T10:05:35.275Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-03T03:54:39.202Z",
+      "at": "2026-08-03T10:05:35.627Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-03T03:54:39.206Z",
+      "at": "2026-08-03T10:05:35.632Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 13 alertes"
+      "message": "8 developpements, 8 alertes"
     },
     {
-      "at": "2026-08-03T03:54:39.207Z",
+      "at": "2026-08-03T10:05:35.632Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-03T03:54:39.207Z",
+      "at": "2026-08-03T10:05:35.632Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
