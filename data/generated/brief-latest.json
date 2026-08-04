@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-04T09:07:09.826Z",
+  "generatedAt": "2026-08-04T09:44:38.965Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 113,
-    "failed": 57,
-    "articles": 1952,
+    "ok": 112,
+    "failed": 58,
+    "articles": 1942,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -161,11 +161,6 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -410,7 +405,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 27
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -520,7 +515,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -612,7 +607,7 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
-        "error": "fetch failed"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -677,7 +672,12 @@
       {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -852,7 +852,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_imf",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 73,
-    "alerts": 6,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 75
+    "bfAes": 70,
+    "alerts": 8,
+    "criticalAlerts": 3,
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
@@ -1093,9 +1093,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "F1"
       },
-      "_rating": "F2",
+      "_rating": "F1",
       "_score": 115,
       "_zone": 7,
       "_theme": null,
@@ -1138,6 +1138,38 @@
     }
   ],
   "alerts": [
+    {
+      "title": "Alpinisme : à 15 ans, le Marocain Youssef Tazi atteint le sommet du Kang Yatse II",
+      "link": "https://telquel.ma/instant-t/2026/08/04/alpinisme-a-15-ans-le-marocain-youssef-tazi-atteint-le-sommet-du-kang-yatse-ii_2001991/",
+      "source": "TelQuel (Maroc)",
+      "date": "2026-08-04T09:43:06.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Double séisme au Venezuela : le bilan officiel dépasse les 6.000 morts",
+      "link": "https://fr.hespress.com/484040-double-seisme-au-venezuela-le-bilan-officiel-depasse-les-6-000-morts.html",
+      "source": "Hespress (Maroc, FR)",
+      "date": "2026-08-04T09:04:13.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
     {
       "title": "One week on, disaster response in Kumamoto shifts to helping survivors",
       "link": "https://www.japantimes.co.jp/news/2026/08/04/japan/quake-disaster-related-casualties/",
@@ -1238,35 +1270,35 @@
   "narrativesByBloc": [
     [
       "afrique",
-      191
+      200
     ],
     [
       "occident_fr",
-      116
+      119
     ],
     [
       "autre",
-      116
+      114
     ],
     [
       "occident_us",
-      108
-    ],
-    [
-      "bf_local",
-      57
+      107
     ],
     [
       "golfe_mo",
-      55
+      56
+    ],
+    [
+      "bf_local",
+      51
     ],
     [
       "turquie",
-      53
+      49
     ],
     [
       "russie",
-      47
+      43
     ],
     [
       "chine",
@@ -1274,7 +1306,7 @@
     ],
     [
       "sahel",
-      25
+      29
     ]
   ],
   "desks": [
@@ -1282,7 +1314,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 117,
+      "count": 118,
       "top": [
         {
           "title": "« La réforme sur la Tva dans l’agriculture doit ouvrir une réflexion plus large sur toutes les incohérences du système » (2/3)",
@@ -1335,7 +1367,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 62,
+      "count": 61,
       "top": [
         {
           "title": "Ghana processes less than 6% of cashew output as farmers face price plunge",
@@ -1356,6 +1388,15 @@
           "rating": "F2"
         },
         {
+          "title": "Nigeria : plus de 60 combattants tués lors d’une opération à Katsina",
+          "link": "https://malijet.com/actualite-sur-afrique/310965-nigeria-plus-de-60-combattants-tues-lors-dune-operation-a.html",
+          "source": "Malijet",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
           "title": "Nigeria: 52 personnes enlevées dans un village de l'État de Zamfara",
           "link": "https://www.rfi.fr/fr/afrique/20260803-nigeria-52-personnes-enlev%C3%A9es-dans-un-village-de-l-%C3%A9tat-de-zamfara",
           "source": "RFI Afrique",
@@ -1372,15 +1413,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "F2"
-        },
-        {
-          "title": "US introduces new asylum rule affecting Nigerians, other foreigners",
-          "link": "https://www.vanguardngr.com/2026/08/us-introduces-new-asylum-rule-affecting-nigerians-other-foreigners/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1388,7 +1420,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 27,
+      "count": 25,
       "top": [
         {
           "title": "Cameroun : Le gouvernement assure que Paul Biya est vivant et annonce son retour « très bientôt »",
@@ -1441,7 +1473,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 29,
+      "count": 30,
       "top": [
         {
           "title": "CAN 2026 féminine, Algérie : un but magique et une qualification en quarts !",
@@ -1450,7 +1482,7 @@
           "zone": "7. Maghreb & Afr. Nord",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "Crise de Ceuta : pourquoi le Maroc n’est pas un pays fiable",
@@ -1471,12 +1503,12 @@
           "rating": "F2"
         },
         {
-          "title": "Dans la ville frontalière de Fnideq, le Maroc s’efforce de faire oublier la crise de Ceuta",
-          "link": "https://www.lefigaro.fr/international/dans-la-ville-frontaliere-de-fnideq-le-maroc-s-efforce-de-faire-oublier-la-crise-de-ceuta-20260803",
-          "source": "Le Figaro International",
+          "title": "Ceuta : plus de 2 500 migrants toujours sur place, ils témoignent de leur précarité",
+          "link": "https://www.france24.com/fr/vid%C3%A9o/20260804-ceuta-plus-de-2-500-migrants-toujours-sur-place-ils-t%C3%A9moignent-de-leur-pr%C3%A9carit%C3%A9",
+          "source": "France 24",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": null,
-          "relevance": ".",
+          "theme": "L",
+          "relevance": "A",
           "rating": "C2"
         },
         {
@@ -1494,7 +1526,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 89,
+      "count": 85,
       "top": [
         {
           "title": "Révolution démocratique et populaire : 43 ans après, la flamme révolutionnaire toujours vive",
@@ -1547,7 +1579,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 161,
+      "count": 165,
       "top": [
         {
           "title": "Les États-Unis mettent en place un système de garanties financières pour les visas imposées à certains pays dont des états africains",
@@ -1559,11 +1591,20 @@
           "rating": "F2"
         },
         {
-          "title": "What ‘America First’ Means for Global Health",
-          "link": "https://www.theatlantic.com/podcasts/2026/08/ra-ebola/688140/?utm_source=feed",
-          "source": "The Atlantic",
-          "zone": "16. Amérique du Nord",
-          "theme": "H",
+          "title": "Double séisme au Venezuela : le bilan officiel dépasse les 6.000 morts",
+          "link": "https://fr.hespress.com/484040-double-seisme-au-venezuela-le-bilan-officiel-depasse-les-6-000-morts.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "18. Amérique du Sud",
+          "theme": "P",
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Dans les entrailles du plus long ouvrage autoroutier de ce genre au monde",
+          "link": "https://lesoleil.sn/international/dans-les-entrailles-du-plus-long-ouvrage-autoroutier-de-ce-genre-au-monde/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "14. Extrême-Orient",
+          "theme": "L",
           "relevance": "L",
           "rating": "F2"
         },
@@ -1584,15 +1625,6 @@
           "theme": "S",
           "relevance": "L",
           "rating": "F2"
-        },
-        {
-          "title": "L’interventionnisme économique des États reprend de plus belle !",
-          "link": "https://kapitalis.com/tunisie/2026/08/04/linterventionnisme-economique-des-etats-reprend-de-plus-belle/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "9. Europe occidentale",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     }
@@ -1605,48 +1637,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-08-04T09:06:31.597Z",
+      "at": "2026-08-04T09:43:57.747Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-04T09:06:31.604Z",
+      "at": "2026-08-04T09:43:57.755Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-04T09:07:06.572Z",
+      "at": "2026-08-04T09:44:35.683Z",
       "agent": "Agent Collecte RSS",
-      "message": "113/170 flux OK, 1952 articles"
+      "message": "112/170 flux OK, 1942 articles"
     },
     {
-      "at": "2026-08-04T09:07:09.510Z",
+      "at": "2026-08-04T09:44:38.668Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-04T09:07:09.823Z",
+      "at": "2026-08-04T09:44:38.962Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-04T09:07:09.829Z",
+      "at": "2026-08-04T09:44:38.967Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 6 alertes"
+      "message": "8 developpements, 8 alertes"
     },
     {
-      "at": "2026-08-04T09:07:09.829Z",
+      "at": "2026-08-04T09:44:38.968Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-08-04T09:07:09.829Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
