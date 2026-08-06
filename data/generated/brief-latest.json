@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T09:05:33.317Z",
+  "generatedAt": "2026-08-06T09:46:11.565Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
     "ok": 112,
     "failed": 58,
-    "articles": 1946,
+    "articles": 1934,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -100,6 +100,11 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
+        "count": 10
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -285,7 +290,7 @@
       {
         "id": "rss_f24afr",
         "name": "France 24 Afrique",
-        "count": 30
+        "count": 29
       },
       {
         "id": "rss_jeuneafr",
@@ -380,7 +385,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 3
+        "count": 2
       },
       {
         "id": "rss_fp",
@@ -405,7 +410,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 29
+        "count": 30
       },
       {
         "id": "rss_bbc_africa",
@@ -425,7 +430,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 12
       },
       {
         "id": "rss_tass",
@@ -553,11 +558,6 @@
         "count": 0
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "count": 20
-      },
-      {
         "id": "rss_worldbank",
         "name": "Banque Mondiale",
         "count": 0
@@ -603,11 +603,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "fetch failed"
       },
       {
         "id": "rss_cridem",
@@ -762,7 +757,7 @@
       {
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_apa",
@@ -840,6 +835,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -866,7 +866,7 @@
     "bfAes": 40,
     "alerts": 5,
     "criticalAlerts": 3,
-    "sourcesDistinct": 70
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
@@ -1217,43 +1217,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      174
+      182
     ],
     [
       "occident_fr",
-      120
+      121
     ],
     [
       "autre",
-      118
+      116
     ],
     [
       "occident_us",
-      115
+      108
     ],
     [
       "golfe_mo",
-      68
+      64
     ],
     [
       "turquie",
-      52
+      54
     ],
     [
       "russie",
-      49
+      47
+    ],
+    [
+      "bf_local",
+      38
     ],
     [
       "chine",
       37
     ],
     [
-      "bf_local",
-      37
-    ],
-    [
       "sahel",
-      30
+      33
     ]
   ],
   "desks": [
@@ -1314,7 +1314,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 62,
+      "count": 60,
       "top": [
         {
           "title": "Navy recovers 85,000 litres of stolen crude products in Niger Delta",
@@ -1367,7 +1367,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 32,
+      "count": 33,
       "top": [
         {
           "title": "AfroBasket U18 (F) : le Sénégal défait par le Cameroun",
@@ -1406,13 +1406,13 @@
           "rating": "A2"
         },
         {
-          "title": "Cameroun : l’absence prolongée de Paul Biya embarrasse les milieux diplomatiques",
-          "link": "https://www.jeuneafrique.com/1829234/politique/cameroun-labsence-prolongee-de-paul-biya-embarrasse-les-milieux-diplomatiques/",
+          "title": "36 migrants africains expulsés des États-Unis vers Yaoundé saisissent la justice camerounaise",
+          "link": "https://www.jeuneafrique.com/1830183/politique/36-migrants-africains-expulses-des-etats-unis-vers-yaounde-saisissent-la-justice-camerounaise/",
           "source": "Jeune Afrique",
           "zone": "3. Afrique centrale",
-          "theme": "D",
+          "theme": "J",
           "relevance": "A",
-          "rating": "B1"
+          "rating": "A2"
         }
       ]
     },
@@ -1420,7 +1420,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 32,
+      "count": 36,
       "top": [
         {
           "title": "Polisario : les divisions étalées au grand jour",
@@ -1473,7 +1473,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 85,
+      "count": 80,
       "top": [
         {
           "title": "Burkina : Un Centre Che Guevara pour prolonger l’héritage de Thomas Sankara",
@@ -1503,6 +1503,15 @@
           "rating": "F2"
         },
         {
+          "title": "Italy removes Israeli companies, including Rafael, from Rome airport's counter-drone project",
+          "link": "https://www.jpost.com/defense-and-tech/article-904752",
+          "source": "Jerusalem Post",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "La reconversion des chefs du Mossad dans les multinationales !",
           "link": "https://kapitalis.com/tunisie/2026/08/06/la-reconversion-des-chefs-du-mossad-dans-les-multinationales/",
           "source": "Kapitalis (Tunisie)",
@@ -1510,15 +1519,6 @@
           "theme": "T",
           "relevance": "L",
           "rating": "F2"
-        },
-        {
-          "title": "Mort d’Amal Khalil, journaliste tuée par l’armée israélienne dans le sud du Liban : Amnesty International et Human Rights Watch réclament une enquête pour crime de guerre",
-          "link": "https://www.lemonde.fr/international/article/2026/08/06/mort-d-une-journaliste-tuee-par-l-armee-israelienne-dans-le-sud-du-liban-amnesty-international-et-human-rights-watch-reclament-une-enquete-pour-crime-de-guerre_6739724_3210.html",
-          "source": "Le Monde International",
-          "zone": "8. Moyen-Orient",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "B2"
         }
       ]
     },
@@ -1526,7 +1526,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 191,
+      "count": 197,
       "top": [
         {
           "title": "Thaïlande : Un footballeur tué par la foudre en plein match, 12 autres personnes blessées",
@@ -1556,21 +1556,21 @@
           "rating": "A2"
         },
         {
+          "title": "La loi de programmation militaire validée par le Conseil constitutionnel, sans réserve",
+          "link": "https://www.lemonde.fr/societe/article/2026/08/06/la-loi-de-programmation-militaire-validee-par-le-conseil-constitutionnel-sans-reserve_6739833_3224.html",
+          "source": "Le Monde International",
+          "zone": "9. Europe occidentale",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "B2"
+        },
+        {
           "title": "La rougeole explose aux États-Unis de Donald Trump",
           "link": "https://legrandcontinent.eu/fr/2026/08/06/la-rougeole-explose-aux-etats-unis-de-donald-trump/",
           "source": "Le Grand Continent",
           "zone": "16. Amérique du Nord",
           "theme": "H",
           "relevance": "L",
-          "rating": "A2"
-        },
-        {
-          "title": "L’Ukraine peut-elle gagner la guerre aux entrepôts ?",
-          "link": "https://legrandcontinent.eu/fr/2026/08/06/lukraine-peut-elle-gagner-la-guerre-aux-entrepots/",
-          "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
-          "relevance": "A",
           "rating": "A2"
         }
       ]
@@ -1584,48 +1584,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-08-06T09:04:58.172Z",
+      "at": "2026-08-06T09:45:34.624Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-06T09:04:58.179Z",
+      "at": "2026-08-06T09:45:34.633Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-06T09:05:29.830Z",
+      "at": "2026-08-06T09:46:08.383Z",
       "agent": "Agent Collecte RSS",
-      "message": "112/170 flux OK, 1946 articles"
+      "message": "112/170 flux OK, 1934 articles"
     },
     {
-      "at": "2026-08-06T09:05:32.966Z",
+      "at": "2026-08-06T09:46:11.286Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-06T09:05:33.314Z",
+      "at": "2026-08-06T09:46:11.562Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-06T09:05:33.319Z",
+      "at": "2026-08-06T09:46:11.568Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-08-06T09:05:33.319Z",
+      "at": "2026-08-06T09:46:11.568Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-08-06T09:05:33.319Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
