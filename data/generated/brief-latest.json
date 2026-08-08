@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-08T15:45:44.747Z",
+  "generatedAt": "2026-08-08T18:58:11.709Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1919,
+    "ok": 103,
+    "failed": 67,
+    "articles": 1823,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -55,16 +55,6 @@
       {
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
-        "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
         "count": 10
       },
       {
@@ -103,16 +93,6 @@
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -136,6 +116,11 @@
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
         "count": 20
+      },
+      {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "count": 12
       },
       {
         "id": "rss_guineenews",
@@ -223,18 +208,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -298,11 +273,6 @@
         "count": 30
       },
       {
-        "id": "rss_lmd",
-        "name": "Le Monde Diplomatique",
-        "count": 20
-      },
-      {
         "id": "rss_bbc_afr",
         "name": "BBC Afrique (FR)",
         "count": 30
@@ -343,11 +313,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -356,11 +321,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -400,7 +360,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
@@ -570,6 +530,16 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -600,6 +570,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -608,6 +583,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -647,17 +627,12 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
-      },
-      {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "error": "fetch failed"
       },
       {
         "id": "rss_saharang",
@@ -712,7 +687,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -727,12 +702,17 @@
       {
         "id": "rss_libya_obs",
         "name": "Libya Observer",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
+      },
+      {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -750,6 +730,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_friedrich",
         "name": "Friedrich Ebert Stiftung Afrique",
         "error": "HTTP 404"
@@ -763,6 +748,11 @@
         "id": "rss_tv5afr",
         "name": "TV5 Monde Afrique",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_lmd",
+        "name": "Le Monde Diplomatique",
+        "error": "fetch failed"
       },
       {
         "id": "rss_apa",
@@ -793,6 +783,16 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,46 +863,12 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 63,
-    "alerts": 4,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 66
+    "bfAes": 62,
+    "alerts": 6,
+    "criticalAlerts": 3,
+    "sourcesDistinct": 62
   },
   "topDevelopments": [
-    {
-      "title": "« À chacun son dioula ? » : Quand l'histoire, la langue et la politique se disputent un nom",
-      "link": "https://lefaso.net/spip.php?article148477",
-      "pubDate": "2026-08-08T12:49:12.000Z",
-      "description": "Le débat sur l'existence d'une « ethnie dioula » en Côte d'Ivoire dépasse largement la seule question de la définition d'un mot. Entre son sens historique lié au commerce, son usage comme ethnonyme, son extension comme langue véhiculaire et ses multiples appropriations sociales et politiques, le terme « Dioula » recouvre des réalités différentes. Dans cette tribune, Mamadou Lamine Sanogo, Directeur de recherches en sociolinguistique, invite à dépasser les lectures simplistes et les querelles identitaires pour interroger, à la lumière de l'histoire et de la linguistique, une question essentielle : qui appelle qui « Dioula », dans quel contexte et avec quelle signification ? Le débat qui agite actuellement les réseaux sociaux ivoiriens autour de l'existence ou non d'une « ethnie dioula » mérite mieux que les invectives auxquelles il donne parfois lieu. Une prise de position du professeur René Allou Kouamé, historien, rappelant notamment le sens historiquement associé à jula/dyula, « commerçant », et contestant l'existence d'une ethnie dioula au sens où cette expression est couramment comprise, a suscité de nombreuses réactions. La controverse aurait même donné lieu à des menaces contre certains protagonistes. Il faut donc commencer par l'essentiel : on ne répond pas à une thèse scientifique par une menace. On lui oppose des sources, des faits, une méthode et des arguments. Le professeur Allou Kouamé a le droit de défendre sa lecture historique. Ses contradicteurs ont tout autant le droit d'en discuter les fondements et les conclusions. C'est précisément dans cet esprit que je voudrais apporter une contribution de linguiste. La question qui me paraît fondamentale est la suivante : peut-on partir du sens ancien d'un mot pour décider définitivement de tout ce qu'il peut ou ne peut pas désigner plusieurs siècles plus tard ? À mon sens, la linguistique oblige à répondre par la négative. Un mot n'est pas condamné à son premier sens Que jula/dyula ait historiquement été associé au commerce est suffisamment documenté pour qu'il soit inutile de le nier. Mais savoir ce qu'un mot signifiait à une période donnée ne suffit pas à déterminer ce qu'il est devenu. Les mots ont une histoire. Ils naissent, circulent, changent de sens, connaissent des extensions et des restrictions sémantiques. Ils peuvent perdre certaines acceptions et en acquérir d'autres. Ils passent parfois d'une langue à une autre, éventuellement par l'intermédiaire de ce que l'on pourrait appeler une langue filtre. Leur forme, leur prononciation et leur sens peuvent alors se transformer profondément. L'étymologie est donc fondamentale, mais elle constitue un point de départ de l'enquête et non nécessairement son point d'arrivée. Si un terme désigne d'abord une profession, rien n'interdit qu'il finisse par désigner ceux qui l'exercent, puis certains réseaux familiaux et sociaux associés à cette activité, et enfin des communautés historiquement constituées. L'histoire des sociétés est pleine de transformations de cette nature. Louis-Jean Calvet a justement insisté sur la nécessité de considérer l'histoire des langues comme l'un des versants de l'histoire des sociétés. Les mots changent parce que les sociétés qui les emploient changent elles-mêmes. Le commerçant, la communauté et la langue La controverse contemporaine donne parfois l'impression qu'il faudrait choisir entre deux affirmations : « Dioula signifie commerçant » ou « Dioula désigne une communauté ». Or les travaux scientifiques ont depuis longtemps montré que ces réalités ne sont pas nécessairement incompatibles. Dès 1974, B. Marie Perinbam, dans ses travaux sur les origines et la nomenclature dyula, distinguait plusieurs niveaux : le dyula comme commerçant professionnel ou semi-professionnel, les Dyula comme ensemble ethnosociologique lié notamment aux migrations mandingues, et le dyula comme catégorie linguistique. Cette distinction mérite d'être méditée. Elle signifie que la pluralité des référents du mot n'a pas été inventée aujourd'hui pour répondre à une polémique ivoirienne. Robert Launay apporte une démonstration encore plus directement liée à la Côte d'Ivoire. Son ouvrage publié en 1982 porte un titre particulièrement suggestif : Traders Without Trade, littéralement « des commerçants sans commerce ». Launay étudie des communautés Dyula du nord ivoirien dont les membres ne vivent plus tous du commerce. Une question devient alors inévitable : si Dyula n'était rien d'autre que le nom du métier de commerçant, que devient un Dyula qui cesse de commercer ? Disparaît-il comme Dyula ? L'observation anthropologique montre évidemment une réalité plus complexe. Les réseaux commerciaux ont pu produire des quartiers, des alliances matrimoniales, des solidarités, des structures familiales, des institutions religieuses et une mémoire collective. Ces structures peuvent survivre à la transformation de l'activité économique. C'est précisément ce que permet de penser la notion d'ethnogenèse. Une communauté peut se former historiquement. Dire qu'une identité a une histoire ne revient donc nullement à nier son existence. Mais tous ceux qu'on appelle Dioula ne forment pas une seule ethnie Il faut immédiatement ajouter la précaution inverse. Reconnaître que des communautés ont historiquement été décrites et se sont identifiées comme Dyula ne permet pas d'affirmer que tous ceux que l'on appelle Dioula en Côte d'Ivoire constituent une même ethnie. C'est là que la situation ivoirienne devient particulièrement intéressante. Le terme a connu une extension considérable. Un Sénoufo peut être appelé Dioula. Un musulman peut être appelé Dioula. Un ressortissant du Nord peut être appelé Dioula. Pendant certaines périodes de crise politique, l'appellation a même pu être associée à l'idée d'une origine malienne, burkinabè ou guinéenne. À ce stade, nous ne sommes évidemment plus dans une classification ethnographique rigoureuse. Nous sommes devant une macro-catégorie sociale. Quand un Sénoufo est appelé Dioula Prenons une situation très simple. Un homme affirme : « Je suis Sénoufo. » Un interlocuteur lui répond : « Mais vous êtes Dioula. » La première tentation serait de demander lequel des deux a raison. Or ils ne parlent probablement pas de la même chose. Le premier évoque son identité ethnolinguistique. Le second utilise peut-être Dioula comme grande catégorie englobant Nordiste, musulman ou locuteur du dioula. Le mot nous renseigne alors autant sur la personne qui l'emploie que sur celle qu'il prétend désigner. C'est précisément là qu'intervient une question sociolinguistique fondamentale : Qui appelle qui Dioula ? Il faut immédiatement lui adjoindre d'autres interrogations : Qui se dit lui-même Dioula ? Qui accepte l'appellation ? Qui la refuse ? Dans quelle situation ? Avec quel interlocuteur ? Et à quelle époque ? Voilà des questions beaucoup plus fécondes que la simple distribution de certificats d'ethnicité. Parler dioula ne suffit pas à être Dioula Une autre confusion vient de la langue. Le dioula est une importante langue véhiculaire. Des personnes appartenant à de très nombreuses communautés le parlent quotidiennement dans les marchés, les transports, les villes et les échanges intercommunautaires. Un Sénoufo peut parfaitement parler dioula. Un Baoulé peut parler dioula. Au Burkina Faso, des personnes appartenant à de nombreuses communautés utilisent également le dioula sans se considérer comme appartenant à une ethnie dioula. Il faut donc distinguer l'ethnonyme, qui nomme une communauté, et le glossonyme, qui nomme une langue. Les deux peuvent partager une histoire sans conserver les mêmes frontières. Le caractère véhiculaire du dioula rend cette distinction indispensable. Dioula et Bousmani : quand deux mots partageaient presque le pays Les Ivoiriens connaissent également une autre vieille opposition : Dioula/Bousmani. D'un côté, les Dioula. De l'autre, les Bousmani. Mais qui trouvait-on sous l'appellation Bousmani ? Des Baoulé, Agni, Bété, Dida, Gouro et bien d'autres populations pourtant différentes. Et sous Dioula ? Des populations du Nord tout aussi diverses. Cette opposition ne constituait donc pas une classification ethnographique. Elle correspondait davantage à une grande représentation relationnelle de l'espace social ivoirien. Le problème apparaît lorsque l'on attache à de telles catégories des conséquences en matière de nationalité, d'autochtonie, de droits politiques ou d'accès à la citoyenneté. À partir de ce moment, le mot cesse d'être seulement une approximation familière. Il devient politiquement chargé. Quand « Dioula » devient Nordiste, musulman et parfois étranger Les recherches consacrées aux crises ivoiriennes ont précisément montré cette transformation. Katja Werthmann a souligné combien « Dioula » avait pu devenir, dans certains discours, pratiquement synonyme de Nordiste et de musulman, avec le soupçon supplémentaire d'une origine étrangère. Nous sommes ici très loin du seul commerçant. Un même mot a donc pu parcourir une trajectoire étonnante : commerçant → communauté → langue → Nordiste → musulman → catégorie politiquement suspecte. Que toutes ces valeurs aient existé ne signifie évidemment pas qu'elles soient légitimes ou scientifiquement équivalentes. Cela montre simplement combien il serait dangereux de prétendre qu'un seul sens suffit à expliquer toute l'histoire du mot. Le Malinké n'est pas une nouvelle identité Une autre question mérite aujourd'hui d'être examinée : celle de l'identité malinké. Il serait historiquement faux de considérer Malinké comme une nouvelle identité qui apparaîtrait seulement à la faveur des controverses actuelles. Ahmadou Kourouma suffit à rappeler le contraire. Dans Les Soleils des indépendances, l'univers de Fama Doumbouya est profondément malinké. La généalogie, la culture, le rapport au pouvoir, la langue et l'imaginaire du personnage s'inscrivent dans cet univers. Jean Derive a d'ailleurs parlé de la « posture malinké » de l'œuvre de Kourouma. L'identité malinké était donc parfaitement disponible et fortement affirmée dès les premières décennies de l'indépendance. La vraie question contemporaine est différente : certaines populations préféreraient-elles aujourd'hui se présenter comme Malinké plutôt que Dioula ? La question mérite d'être posée, mais elle ne doit pas être transformée prématurément en certitude. Il faudrait mener une enquête. On peut néanmoins formuler l'hypothèse que Malinké soit perçu, dans certains contextes, comme une identité plus précise et plus clairement inscrite dans la nomenclature ethnoculturelle ivoirienne, tandis que Dioula reste chargé de son extension au Nord, à l'islam et, dans les périodes de crise, à l'étranger. Quand le Sénoufo veut simplement être Sénoufo La même prudence s'impose pour les autres populations du Nord. Les initiatives contemporaines de valorisation de la culture sénoufo témoignent d'une forte volonté de mettre en avant une langue, un patrimoine, une histoire et des pratiques particulières. Il serait abusif de soutenir que ce réveil culturel se fait contre les Dioula. L'identité sénoufo possède évidemment sa propre histoire. Mais sa mise en visibilité produit nécessairement un effet : plus les Sénoufo affirment eux-mêmes publiquement leur identité, moins il devient pertinent pour un observateur extérieur de les englober indistinctement sous le terme Dioula. Le même raisonnement pourrait être proposé pour les Koyaka, les Mahou et d'autres communautés. Nous passerions alors progressivement d'un régime dans lequel l'identité est principalement attribuée — « Vous êtes du Nord, vous êtes donc Dioula » — à un régime dans lequel les acteurs prennent davantage la parole sur leur propre nomination : « Je suis Sénoufo », « Je suis Malinké », « Je suis Koyaka », « Je suis Mahou ». L'ancienne grande catégorie pourrait ainsi perdre une partie de sa capacité à absorber toutes les identités du Nord. Jago, jagokɛla et Dioula Un petit fait linguistique mérite d'être signalé. Dans le dioula contemporain, jago désigne le commerce et jagokɛla le commerçant, autrement dit celui qui exerce le commerce. Cette observation ne doit surtout pas être utilisée pour prétendre que jula n'a jamais signifié commerçant. Ce serait reproduire l'erreur consistant à opposer brutalement les différents états historiques d'une langue. En revanche, elle nous renseigne sur le système actuel. Aujourd'hui, le locuteur peut nommer explicitement jago, le commerce, et jagokɛla, celui qui exerce le commerce. Cela permet de distinguer synchroniquement le métier du vaste ensemble de significations désormais associé à Dioula. Autrement dit, le commerçant d'aujourd'hui peut être nommé sans qu'il soit nécessaire de lui attribuer une identité ethnique. L'ancienne opposition Dioula/Bousmani est-elle en train de s'effacer ? Cette question mérite désormais d'être posée. À mesure que les populations mettent davantage en avant leurs identités spécifiques, les anciennes macro-catégories pourraient devenir moins efficaces. La société ivoirienne ne serait plus seulement symboliquement divisée entre Dioula et Bousmani. Elle ferait davantage apparaître les identités particulières qui avaient toujours existé derrière ces deux grandes étiquettes. Cela peut être interprété comme une reconnaissance plus précise de la diversité ivoirienne. Mais la transformation mérite aussi d'être observée politiquement. Ethnie et politique : ne pas tomber d'un excès dans l'autre Les appartenances ethniques jouent, sous nos tropiques comme ailleurs, un rôle possible dans la compétition politique. Mais deux erreurs doivent être évitées. La première serait de penser que tout réveil culturel cache une stratégie électorale. Un festival sénoufo n'est pas une campagne politique. Une association malinké n'est pas nécessairement un instrument de conquête du pouvoir. Une initiative culturelle koyaka n'est pas un parti politique clandestin. La seconde erreur serait de croire qu'une identité culturelle ne peut jamais être transformée en ressource politique. Les travaux de John McCauley, notamment en Côte d'Ivoire et au Ghana, montrent que la mise en saillance des appartenances ethniques ou religieuses peut influer sur les préférences politiques. La formulation la plus prudente est donc la suivante : une identité culturelle n'est pas nécessairement politique, mais elle peut devenir politiquement mobilisable. Si l'ancienne bipolarité Dioula/Bousmani perd de son efficacité, de nouvelles formes de coalition identitaire pourraient apparaître. Il faut les observer. Il serait prématuré de les annoncer comme un fait accompli. Alors, existe-t-il une ethnie dioula ? Nous pouvons maintenant revenir à la question initiale. La réponse scientifique exige plusieurs propositions simultanées. Non, toutes les personnes appelées Dioula en Côte d'Ivoire ne constituent pas une seule ethnie. Un Sénoufo ne devient pas ethniquement Dioula parce qu'un autre Ivoirien le classe ainsi. Oui, la littérature historique et anthropologique documente des communautés Dyula historiquement constituées. Oui, le terme possède une histoire étroitement liée au commerce. Oui, il a également donné son nom à une langue dont l'extension véhiculaire dépasse considérablement toute communauté ethnique. Oui enfin, la Côte d'Ivoire a produit des usages sociaux et politiques du mot qui dépassent largement les communautés historiques concernées. Toutes ces propositions peuvent être vraies simultanément. Le problème vient de leur confusion. À chacun son Dioula ? Jean Bazin avait intitulé l'une de ses études devenues classiques : « À chacun son Bambara ». La formule mérite peut-être d'être transposée. Car il existe le Dioula de l'histoire du commerce ; le Dioula de l'anthropologue ; le Dioula du linguiste ; le Dioula comme langue véhiculaire ; le Dioula-Nordiste ; le Dioula-musulman ; le Dioula assigné par l'autre ; et le Dioula qui revendique lui-même cette identité. La science ne doit pas choisir arbitrairement l'un d'eux et supprimer tous les autres. Elle doit préciser de quel Dioula elle parle. Voilà pourquoi la meilleure question n'est peut-être plus : « L'ethnie dioula existe-t-elle ? » Elle serait plutôt : Qui appelle qui Dioula ? Qui s'est appelé Dioula ? Qui se dit encore Dioula ? Qui refuse aujourd'hui cette appellation ? Dans quel espace ? Depuis quand ? Et pourquoi ? Voilà un programme de recherche plus fécond que la distribution de brevets d'ethnicité. Et surtout, voilà un débat qui peut parfaitement être mené sans menace, sans insulte et sans transformer une controverse scientifique en procès en ivoirité. À chacun son Dioula, peut-être. Mais à la science revient la responsabilité de dire précisément de quel Dioula chacun parle. Lire aussi : Le Dioula : Langue et ethnie ? Repères bibliographiques AMSELLE, Jean-Loup et M'BOKOLO, Elikia (dir.), 1985, Au cœur de l'ethnie. Ethnies, tribalisme et État en Afrique, Paris, La Découverte. BAZIN, Jean, 1985, « À chacun son Bambara », dans Jean-Loup Amselle et Elikia M'Bokolo (dir.), Au cœur de l'ethnie. Ethnies, tribalisme et État en Afrique, Paris, La Découverte, p. 87-127. CALVET, Louis-Jean, 1987, La guerre des langues et les politiques linguistiques, Paris, Payot. CAPO, Hounkpatin B. C., 1983, « Le Gbe est une langue unique », Africa : Journal of the International African Institute, vol. 53, no 2, p. 47-57. DERIVE, Jean, 2013, « Le jeu du dedans et du dehors : les ruses de la posture malinké dans Les Soleils des indépendances », Textuel, no 70, p. 63-78. KOUROUMA, Ahmadou, 1968, Les Soleils des indépendances, Montréal, Presses de l'Université de Montréal ; édition parisienne, Paris, Seuil, 1970. LAFAGE, Suzanne, 1991, « L'argot des jeunes Ivoiriens, marque d'appropriation du français ? », Langue française, no 90, p. 95-105. LAUNAY, Robert, 1982, Traders Without Trade : Responses to Change in Two Dyula Communities, Cambridge, Cambridge University Press. LAUNAY, Robert et MIRAN, Marie, 2000, « Beyond Mande “mory” : Islam and Ethnicity in Côte d'Ivoire », Paideuma, vol. 46, p. 63-84. McCAULEY, John F., 2014, « The Political Mobilization of Ethnic and Religious Identities in Africa », American Political Science Review, vol. 108, no 4, p. 801-816. MIMPONGO, Mpoke, 2025, « L'origine et la signification du glossonyme lingala », Afrikanistik-Aegyptologie-Online. DOI : 10.18716/ojs/aaeo/2025_11566. PERINBAM, B. Marie, 1974, « Notes on Dyula Origins and Nomenclature », Bulletin de l'Institut Fondamental d'Afrique Noire, Série B : Sciences humaines, vol. 36, no 4, p. 676-690. PERSON, Yves, 1968-1975, Samori. Une révolution dyula, Dakar, IFAN, Mémoire no 80, 3 vol. SANOGO, Mamadou Lamine, 2024, « Le Dioula : langue et ethnie ? », LeFaso.net, 28 mars 2024. WERTHMANN, Katja, 2005, « Wer sind die Dyula ? Ethnizität und Bürgerkrieg in der Côte d'Ivoire », Afrika Spectrum, vol. 40, no 2, p. 221-240.",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
     {
       "title": "Situation sécuritaire dans l’AES : La Confédération des États du Sahel regrettent les propos du président nigérian",
       "link": "https://netafrique.net/situation-securitaire-dans-laes-la-confederation-des-etats-du-sahel-regrettent-les-propos-du-president-nigerian/",
@@ -930,40 +896,6 @@
       },
       "_rating": "F2",
       "_score": 127,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou",
-      "link": "https://www.minute.bf/lutte-antiterroriste-le-fonds-de-soutien-patriotique-constate-limpact-de-ses-investissements-aux-vdp-dans-la-region-du-goulmou/",
-      "pubDate": "2026-08-08T12:40:32.000Z",
-      "description": "Une délégation du Fonds de soutien patriotique (FSP) s’est rendue à Fada N’Gourma, dans la région du Goulmou, le vendredi 7 août 2026. Cette immersion sur le terrain visait à permettre aux membres du Conseil d’orientation et du Comité de gestion du FSP d’évaluer concrètement les réalisations et les moyens déployés en faveur des Volontaires pour la défense de la patrie (VDP). Accueillie par le Gouverneur de la région du Goulmou et accompagnée par la Brigade de veille et de défense patriotique (BVDP), la délégation a notamment visité le Bataillon mixte de marche Fantôme 1 et 2. La délégation était conduite par le secrétaire général du FSP, Vieux Abdoul Rachid Soulama Selon le secrétaire général du FSP, Vieux Abdoul Rachid Soulama, cette visite répond à une instruction du Premier ministre, président du Conseil d’orientation du FSP. L’objectif est de permettre aux instances du fonds de mieux apprécier, sur le terrain, l’utilisation des ressources mobilisées. Des équipements de grande envergure Au cours de cette visite, la délégation a pu constater l’acquisition d’un important lot de logistique et d’armement, ainsi que de tentes individuelles destinées à chaque VDP. Elle a également observé les moyens roulants financés par le FSP, composés notamment de motos Aloba, dont certaines ont été adaptées aux contraintes du terrain, de tricycles ordinaires ou modifiés, de pick-up et d’ambulances. Vieux Abdoul Rachid Soulama mobilisant les soldats Par ailleurs, les visiteurs ont découvert l’infirmerie aménagée au sein du bataillon, équipée de kits de premiers secours et dotée d’infirmiers et d’aides-soignants issus des rangs des VDP. À l’issue de la visite, Vieux Abdoul Rachid Soulama, représentant du président du Conseil d’orientation du FSP, s’est déclaré satisfait des réalisations constatées. « Nous sommes vraiment émerveillés par ce qui a été fait, par les résultats qui nous ont été présentés et par les perspectives. Surtout, nous avons pu constater de visu le travail gigantesque accompli », a-t-il affirmé. Du matériel acquis grâce au FSP Vieux Abdoul Rachid Soulama a souligné que les ressources du FSP contribuent de manière décisive à l’opérationnalisation et au fonctionnement du bataillon. « Les matériels que nous venons de voir, notamment les armements, les moyens roulants et les équipements adaptés à chaque VDP, représentent un investissement évalué à près d’un milliard de francs CFA », a-t-il précisé. Le secrétaire général du FSP a également indiqué que les dépenses mensuelles consacrées à la prise en charge des VDP de ce bataillon s’élèvent à plus de 700 millions de francs CFA, couvrant l’entretien des hommes, la santé, les primes et l’alimentation. Une satisfaction partagée par les bénéficiaires La délégation a également constaté que des actions de renforcement du bataillon sont en cours, notamment à travers la formation de plusieurs centaines de VDP. Des tentes individuelles pour les VDP Le commandant de la BVDP, le lieutenant-colonel Mahamadi Sawadogo, a souligné que ces efforts témoignent de l’importance de la contribution des Burkinabè au FSP. « Chaque franc injecté dans le Fonds de soutien patriotique contribue à renforcer les capacités opérationnelles de nos VDP et de nos forces de défense et de sécurité sur le terrain », a-t-il déclaré. Lors de la visite, la délégation a pu observer également la restauration servie aux hommes qui combattent pour la reconquête du territoire national. Plaisantant sur le menu du jour, le commandant de la BVDP a lancé : « Vous voyez, secrétaire général, ce plat, riche en minéraux et en vitamines, est l’un des grands bienfaits du FSP. Nous ne cesserons de saluer l’élan des populations. Nous les invitons à continuer à nous soutenir, car chaque franc qu’elles versent contribue à nourrir efficacement nos hommes sur le terrain ». Visite dans une infirmerie des VDP Un appel renouvelé à la mobilisation Au regard des résultats observés à Fada N’Gourma, la délégation a renouvelé son appel à la mobilisation autour du FSP. Elle a, par ailleurs, félicité la BVDP, les VDP et le personnel d’encadrement pour le travail accompli. Selon le représentant du Conseil d’orientation du FSP, cette immersion a permis de mesurer concrètement l’impact des ressources mobilisées et de constater les efforts engagés pour renforcer les capacités opérationnelles sur le terrain. Les bénéficiaires de ces fonds ont d’ailleurs témoigné leur satisfaction à l’égard de la délégation par des chants, des danses et des cris de joie. Un aperçu des soldats Créé le 23 janvier 2023, le FSP a pour mission de financer et d’intensifier la lutte contre le terrorisme au Burkina Faso, d’assurer la prise en charge et l’équipement des VDP, et de renforcer la souveraineté financière de l’armée nationale face à l’insuffisance des aides extérieures. Au premier trimestre 2026, les recettes mobilisées en sa faveur ont atteint plus de 45 milliards de francs CFA, en hausse de 28 % par rapport à la même période en 2025. Lire aussi : Fonds de soutien patriotique : Près de 500 milliards mobilisés en trois ans Nadège KINDA Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
       "_zone": 1,
       "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -1035,18 +967,20 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina Faso : Eau Vive Internationale renforce l’accès à l’eau et améliore le cadre d’apprentissage à l’école primaire de Beun",
-      "link": "https://faso7.com/2026/08/08/burkina-faso-eau-vive-internationale-renforce-lacces-a-leau-et-ameliore-le-cadre-dapprentissage-a-lecole-primaire-de-beun/",
-      "pubDate": "2026-08-08T14:36:23.000Z",
-      "description": "À Beun, dans la commune de To, les élèves de l'école primaire publique apprennent désormais dans de meilleures conditions grâce aux investissements réalisés par Eau Vive Internationale (EVI). Accès à l'eau potable, réhabilitation et équipement d'un bâtiment scolaire et développement d'un jardin pédagogique contribuent aujourd'hui à améliorer leur quotidien. Le 22 juin 2026, des journalistes ont pris connaissance de l’impact de ces réalisations sur le milieu scolaire. Ces investissements entrent en droite ligne du projet « Améliorer les conditions d’études des élèves et de travail des enseignants du village de Beun dans la commune rurale de To située dans la région du Nando (Burkina Faso) » de Eau Vive Internationale (EVI). Depuis 2023, l'ONG a transformé une Pompe à motricité humaine (PMH) en un Poste d'eau autonome (PEA), équipé de cinq (05) robinets au profit des élèves de l'Ecole primaire Beun « A » et réalisé un PEA de même standard à l’Ecole primaire publique Beun « B ». Trois années après, le calvaire lié à l'absence d'un point d'eau à proximité demeure dans l'esprit des élèves et de la direction de l'école primaire. En effet, les élèves parcouraient plusieurs kilomètres pour se procurer de l'eau de boisson. Ils étaient notamment confrontés à un problème d'eau après les cours d'Education physique et sportive (EPS). Ces difficultés ont pris fin avec l'intervention de EVI. « Maintenant, avec la réalisation de toutes les têtes de robinet, les élèves arrivent facilement à se désaltérer, à se débarbouiller et à continuer tranquillement les cours en classe. De ce fait, nous pouvons dire que Eau Vive Internationale fait un grand travail pour les élèves et pour les enseignants et pour toute l'école », a témoigné Bangnoaga SAWADOGO, directeur de l'Ecole primaire publique Beun « A ». Un bâtiment et le jardin de l’école remis à neuf et équipés Eau Vive Internationale a procédé à la réhabilitation d'un bâtiment de l’école©️Faso7 Par ailleurs, l’ONG a procédé à la réhabilitation d'un bâtiment de l’école qui ne respectait pas les normes de superficie des salles de classe. Après avoir remis le bâtiment aux normes, EVI l’a équipé de quarante (40) tables bancs, de trois (03) armoires, de trois (03) bureaux et de six (06) chaises. « L'agrandissement du bâtiment a permis d'accueillir un grand nombre d'élèves, car il y a eu des années où nous étions obligés de délocaliser certaines classes pour pouvoir contenir tous les élèves. Mais maintenant, nous pouvons accueillir assez d'élèves dans les différentes classes réaménagées et équipées », a indiqué Bangnoaga SAWADOGO. Les actions de l'ONG ont également eu un impact sur la cantine scolaire. À travers le projet Beun, EVI a augmenté la superficie du jardin potager de l'école qui est passé de 144 m² à 1300 m². Aussi, le jardin a été clôturé avec un grillage et équipé d'un bassin de stockage d'eau de 10 m³. De plus, les élèves ont reçu du matériel de jardinage et des semences pour les pépinières. Tout ceci a non seulement permis aux élèves d’apprendre en cultivant, mais aussi à approvisionner la cantine en légumes. Le jardin scolaire©️Faso7 « Nous sommes contents de toutes ces réalisations de Eau Vive Internationale qui ont permis d’améliorer nos conditions d’apprentissage. Nous remercions l’ONG pour cela », s'est réjoui Safiatou ZIBA, élève de l'école primaire Beun « A » au nom de ses camarades. Le projet Beun de Eau Vive Internationale est mis en œuvre avec le soutien de GSTM Strasbourg. Il vise à améliorer les conditions de vie et d’études des élèves et enseignants de l’Ecole primaire Beun « A ». Faso7 L’article Burkina Faso : Eau Vive Internationale renforce l'accès à l'eau et améliore le cadre d'apprentissage à l'école primaire de Beun est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé",
+      "link": "https://www.aib.media/le-compte-a-rebours-de-la-33e-super-coupe-ajsb-officiellement-lance/",
+      "pubDate": "2026-08-08T17:52:31.000Z",
+      "description": "SPORT-BFA-AJSB-SUPERCOUPE-LANCEMENT Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé Ouagadougou, 8 août 2026 (AIB)- Le comité d’organisation de la 33e édition de la Super Coupe de l’Association des journalistes sportifs du Burkina (AJSB) a officiellement lancé, samedi à Ouagadougou, le compte à rebours de cette manifestation sportive, au cours d’une conférence de presse. « Devenue, au fil des années, un rendez-vous incontournable du calendrier sportif national, la Super Coupe AJSB constitue à la fois une célébration du football et un moment privilégié de rassemblement de la grande famille sportive, de la presse et des populations », a déclaré d’emblée le président du comité d’organisation (PCO), Luc Pagbelem, par ailleurs vice-président du bureau de l’AJSB. La finale de cette 33e édition mettra aux prises, le samedi 22 août 2026 au stade Wobi de Bobo-Dioulasso, le Rahimo FC, champion en titre du Fasofoot Ligue 1, au Vitesse FC, vainqueur de la Coupe du Faso. En prélude à cette affiche, plusieurs activités sont prévues du jeudi 20 au samedi 22 août dans la cité de Sya. Pour cette édition, les organisateurs entendent inscrire la Super Coupe dans une dynamique dépassant le seul cadre de la compétition footballistique. « Cette année, le rendez-vous est donné à Bobo-Dioulasso, du jeudi 20 au samedi 22 août 2026, avec un programme à la hauteur de l’événement. Pour la troisième année consécutive, le Village de la Super Coupe ouvrira ses portes durant ces trois jours », a annoncé Luc Pagbelem. Cet espace se veut un véritable lieu de rencontres, d’animations, d’exposition, de vente et de convivialité. Il sera notamment animé par un plateau artistique, des prestations de DJ, des jeux ainsi que des stands dédiés aux différents partenaires de l’événement. L’AJSB y installera également un stand consacré à son histoire. À travers des archives, des photographies et des contenus audiovisuels, les visiteurs pourront revisiter quelques-unes des grandes étapes de l’évolution de l’association et de la Super Coupe. Cette 33e édition entend également mettre l’accent sur la solidarité et le renforcement du lien entre les différentes composantes de la société. Ainsi, le 20 août, un cross populaire, suivi d’une séance d’aérobic, réunira les Forces de défense et de sécurité (FDS), les journalistes, les sportifs et les populations. Cette initiative vise notamment à contribuer au raffermissement du lien armée-nation dans le contexte de reconquête du territoire national. Le volet social sera davantage renforcé le 22 août avec l’organisation d’une opération de don de sang sur le site du Village de la Super Coupe. « À travers ces différentes initiatives, l’AJSB souhaite faire de cette Super Coupe un rendez-vous qui dépasse le seul cadre du football, en réunissant autour du sport les médias, les acteurs du mouvement sportif, les partenaires et le grand public », a souligné le PCO. La 33e édition de la Super Coupe AJSB est placée sous la caution morale de leurs Majestés le Mogho Naaba Baongo et le chef des Bobo Mandarè. Elle bénéficie du patronage du ministre d’État, ministre de l’Agriculture, de l’Eau, des Ressources animales et halieutiques, le commandant Ismaël Sombié, et se tient sous la présidence du ministre des Sports, de la Jeunesse et de l’Emploi, Annick Pikbougoum. La co-présidence de l’événement est assurée par Oumarou Sawadogo, président de la Fédération burkinabè de football, tandis que Bachirou Tera, président de la Délégation consulaire régionale du Guiriko, en est le parrain. Sur le plan sportif, la manifestation bénéficie également du parrainage de Boureima Maïga, ancien international burkinabè, et d’Ousmane Zoungrana, meilleur buteur sur une saison du Fasofoot, avec 26 réalisations inscrites en 1984 sous les couleurs de l’ASFB. Agence d’information du Burkina as/ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "military"
+        "diplomatic",
+        "military",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -1055,12 +989,45 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A2"
+        "rating": "C2"
       },
-      "_rating": "A2",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando",
+      "link": "https://www.aib.media/koudougou-coup-denvoi-des-journees-nationales-de-lutte-anti-vectorielle-dans-la-region-de-nando/",
+      "pubDate": "2026-08-08T15:55:45.000Z",
+      "description": "BURKINA-NANDO-SANTE-JOURNEES-LUTTE-ANTI-VECTORIELLE-LANCEMENT Koudougou : Coup d'envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando Koudougou, 8 août 2026 (AIB) – La région de Nando a officiellement lancé samedi, à Koudougou, le tout premier passage des Journées nationales de lutte anti-vectorielle (JNLAV), a constaté l’AIB sur place. Placée sous la présidence du gouverneur de la région, Adama Jean Yves Béré, cette initiative majeure vise à réduire durablement la densité vectorielle du paludisme pour espérer l'élimination de la maladie d'ici à l'horizon 2030. Malgré les efforts consentis à travers la distribution de moustiquaires imprégnées, la chimio-prévention du paludisme saisonnier (CPS) et la prise en charge médicale, le paludisme demeure un problème de santé publique majeur au Burkina Faso. Il reste la première cause de consultation, d'hospitalisation et de mortalité, en particulier chez les enfants de moins de cinq ans et les femmes enceintes. Présentant le contexte, le Médecin chef du district (MCD) de Koudougou, Dr Fatimata Hié, représentant le directeur régional de la santé de Nando, a rappelé que les eaux stagnantes, les caniveaux obstrués et les pneus usagés favorisent la prolifération des moustiques anophèles. Face à cette situation, les autorités sanitaires et administratives misent sur une action préventive et multisectorielle. Procédant au lancement officiel, le gouverneur de la région, Adama Jean Yves Béré, a souligné que cette offensive nationale s'articule autour de sept composantes stratégiques : la surveillance entomologique, la mobilisation communautaire, la gestion des pneus usagés, l'assainissement environnemental avec le curage des caniveaux, la pulvérisation spatiale ciblée, la coordination rigoureuse, ainsi que le plaidoyer permanent. Cette cérémonie de lancement a bénéficié des bénédictions des notabilités coutumières représentées par Naaba Baongo, chef de Dapoya. Prévu du 8 au 9 août 2026, ce premier passage de quatre éditions programmées entre août et novembre mobilise l'ensemble des forces vives de la région. Le gouverneur a ainsi exhorté les collectivités territoriales, les services techniques, les organisations de la société civile et les citoyens à s'engager résolument pour faire de chaque ménage un acteur clé de la salubrité publique et de la prévention sanitaire. Agence d'information du Burkina PB/AS/ATA",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1128,15 +1095,96 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
+    },
+    {
+      "title": "Elhadj Bobo Barry de la FECATRAG : « Nous avons besoin du Président Doumbouya pour le bien de notre peuple »",
+      "link": "https://mediaguinee.com/2026/08/elhadj-bobo-barry-de-la-fecatrag-nous-avons-besoin-du-president-doumbouya-pour-le-bien-de-notre-peuple/",
+      "pubDate": "2026-08-08T09:27:21.000Z",
+      "description": "Connu pour ses nombreuses sorties médiatiques en soutien aux actions gouvernementales notamment dans le secteur portuaire et de transit, le Secrétaire administratif de la FECATRAG, Elhadj Bobo Barry a affirmé que le peuple de Guinée a plus que jamais besoin du Président de la République pour le bien de sa jeunesse, la bonne marche des affaires et pour le bien être du peuple en Général. Cette déclaration du Secrétaire administratif de la Fédération des Commissionnaires agrées et Transitaires de Guinée intervient en un moment où les commentaires sur les congés annuels du Président Doumbouya en Grèce vont bon train. C’est dans cette optique qu’il a tenu à rappeler les nombreux bienfaits des actions du Président dans la décongestion du Port de Conakry et sur la fluidité des affaires en Guinée. Face à la crise de congestion qui avait frappé pendant un certain temps le Port Autonome de Conakry, le Président de la République, le Général Mamadi Doumbouya , a vait pris une mesure exceptionnelle en ordonnant la suspension de toutes les surestaries pour la période allant du 15 décembre 2025 au 31 janvier 2026 puis l’ a prorogé par la suite jusqu’au 31 mars 2026. L’annonce de cette décision à l’époque par le Ministre Porte-parole du Gouvernement, Ousmane Gaoual Diallo, avait suscité un soulagement sans précédent chez les acteurs économiques aux dires d u , Secrétaire administratif de la FECATRAG . Un « ouf de soulagement » pour l’import-export Pour Elhadj Bobo Barry, cette mesure était venue à point nommé pour préserver la santé financière des entreprises guinéennes: « Cette décision du Président de la République a été un grand ouf de soulagement pour tous les acteurs évoluant dans l’import et l’export. Il faut rappeler que ce n’ était pas une première. Soucieux de la santé économique de notre pays, le Chef de l’État avait déjà pris des dispositions pour désengorger le port. » Il souligne par ailleurs que cette saturation était a conséquence directe du dynamisme économique de la Guinée : « Depuis trois ans, le boom économique fait que notre port est saturé, mais cela n’empêche pas les opérateurs de venir faire des affaires ici. » Amélioration de la fluidité portuaire Selon le Secrétaire administratif de la ‘’ Fédération des Commissionnaires agrées et Transitaires de Guinée'’ , les réformes précédentes avaient déjà porté leurs fruits, notamment par l’élargissement des zones de débarquement des conteneurs vides et les pressions exercées sur les sociétés de consignation pour accélérer l’évacuation des marchandises. Cette gestion rigoureuse attire désormais les pays voisins sans façade maritime. « Des pays continentaux tels que le Mali, le Burkina et même le Niger cherchent à utiliser notre port, car ils y voient de la sérénité et du sérieux. Dans le monde des affaires, ce sont les clés de la prospérité », affirme-t-il. L’impact direct des décisions présidentielles sur le panier de la ménagère Expliquant l’aspect technique, Elhadj Bobo Barry rappelle que les surestaries sont des pénalités financières payées aux armateurs lorsqu’un conteneur dépasse le délai de franchise au port. « Ces charges supplémentaires sont extrêmement coûteuses et imprévues pour les importateurs. Elles s’ajoutent aux droits de douane, aux frais de consignation et de manutention. Lorsqu’un opérateur subit ces surcoûts, il est obligé de les répercuter sur le prix de vente, ce qui impacte directement le consommateur final. » En suspendant ces frais, le Président Doumbouya protège donc indirectement le pouvoir d’achat des Guinéens et favorise automatiquement : – l’ Allègement des frais de stationnement – La d élivrance rapide des bons – Le r établissement de la fluidité de circulation des marchandises. – La circulation permanente des gros porteurs – La livraison régulière des marchandises . A conclu Elhadj Bobo, qui estime que de tels chefs, méritent les prières de son peuple pour la continuité de ses actions salvatrice. Amadou Sylla L’article Elhadj Bobo Barry de la FECATRAG : « Nous avons besoin du Président Doumbouya pour le bien de notre peuple » est apparu en premier sur Mediaguinee.com .",
+      "_source": "Mediaguinee",
+      "_sourceId": "rss_mediaguinee",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "After October 7 and Bondi massacre, seven Australian friends answered Israel's call to serve",
+      "link": "https://www.jpost.com/aliyah/article-904751",
+      "source": "Jerusalem Post",
+      "date": "2026-08-08T19:50:20.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "massacre"
+        }
+      ]
+    },
+    {
+      "title": "Georgia calls on Russia to implement obligations under EU-mediated 2008 ceasefire",
+      "link": "https://www.aa.com.tr/en/eurasia/georgia-calls-on-russia-to-implement-obligations-under-eu-mediated-2008-ceasefire/4021946",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-08-08T16:15:52.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "GENOCOST : la RDC veut renforcer son plaidoyer international pour la reconnaissance des crimes commis sur son territoire",
+      "link": "https://actualite.cd/2026/08/08/genocost-la-rdc-veut-renforcer-son-plaidoyer-international-pour-la-reconnaissance-des",
+      "source": "ActualitéCD (RDC)",
+      "date": "2026-08-08T15:52:39.000Z",
+      "rating": "A1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
+        }
+      ]
+    },
     {
       "title": "GENOCOST : Tshisekedi réaffirme la détermination de la RDC à obtenir la reconnaissance des crimes de masse",
       "link": "https://actualite.cd/2026/08/08/genocost-tshisekedi-reaffirme-la-determination-de-la-rdc-obtenir-la-reconnaissance-des",
       "source": "ActualitéCD (RDC)",
       "date": "2026-08-08T15:42:58.000Z",
-      "rating": "A2",
+      "rating": "A1",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1164,22 +1212,6 @@
       ]
     },
     {
-      "title": "Israeli army continues attacks across southern Lebanon despite ceasefire, talks",
-      "link": "https://www.aa.com.tr/en/middle-east/israeli-army-continues-attacks-across-southern-lebanon-despite-ceasefire-talks/4021772",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-08T10:50:42.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Sécheresse et canicules : les agriculteurs, qui font face à une « catastrophe climatique » inédite, ont besoin « de milliards d’euros » d’aides, selon la FNSEA",
       "link": "https://www.lemonde.fr/economie/article/2026/08/08/secheresse-et-canicules-les-agriculteurs-qui-font-face-a-une-une-catastrophe-climatique-inedite-ont-besoin-de-milliards-d-euros-d-aides-selon-la-fnsea_6741127_3234.html",
       "source": "Le Monde Économie",
@@ -1199,11 +1231,11 @@
   "narrativesByBloc": [
     [
       "afrique",
-      176
+      183
     ],
     [
       "occident_fr",
-      126
+      130
     ],
     [
       "autre",
@@ -1211,23 +1243,23 @@
     ],
     [
       "occident_us",
-      99
+      87
     ],
     [
       "golfe_mo",
-      69
+      78
     ],
     [
       "russie",
-      51
-    ],
-    [
-      "bf_local",
-      47
+      53
     ],
     [
       "turquie",
-      47
+      45
+    ],
+    [
+      "bf_local",
+      39
     ],
     [
       "chine",
@@ -1243,17 +1275,8 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 104,
+      "count": 114,
       "top": [
-        {
-          "title": "« À chacun son dioula ? » : Quand l'histoire, la langue et la politique se disputent un nom",
-          "link": "https://lefaso.net/spip.php?article148477",
-          "source": "Lefaso.net",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "Situation sécuritaire dans l’AES : La Confédération des États du Sahel regrettent les propos du président nigérian",
           "link": "https://netafrique.net/situation-securitaire-dans-laes-la-confederation-des-etats-du-sahel-regrettent-les-propos-du-president-nigerian/",
@@ -1262,15 +1285,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou",
-          "link": "https://www.minute.bf/lutte-antiterroriste-le-fonds-de-soutien-patriotique-constate-limpact-de-ses-investissements-aux-vdp-dans-la-region-du-goulmou/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
         },
         {
           "title": "Sissili/Orpaillage : Le gouverneur du Nando engage le processus de formalisation du site artisanal de Sao/Lama dans la commune de Silly",
@@ -1289,6 +1303,24 @@
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé",
+          "link": "https://www.aib.media/le-compte-a-rebours-de-la-33e-super-coupe-ajsb-officiellement-lance/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando",
+          "link": "https://www.aib.media/koudougou-coup-denvoi-des-journees-nationales-de-lutte-anti-vectorielle-dans-la-region-de-nando/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C1"
         }
       ]
     },
@@ -1298,15 +1330,6 @@
       "transverse": false,
       "count": 45,
       "top": [
-        {
-          "title": "Finale UFOA-B U20 : Oscar Barro veut conduire les Étalons à la CAN en battant le Nigeria",
-          "link": "https://burkina24.com/2026/08/07/finale-ufoa-b-u20-oscar-barro-veut-conduire-les-etalons-a-la-can-en-battant-le-nigeria/",
-          "source": "Burkina24",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "Nigeria: le vrai-faux Conseil présidentiel des investissements étrangers a pu agir grâce à des défaillances et collusions, selon un rapport",
           "link": "https://www.rfi.fr/fr/afrique/20260808-nigeria-le-vrai-faux-conseil-pr%C3%A9sidentiel-des-investissements-%C3%A9trangers-a-pu-agir-gr%C3%A2ce-%C3%A0-des-d%C3%A9faillances-et-collusions-selon-un-rapport",
@@ -1326,17 +1349,26 @@
           "rating": "F2"
         },
         {
-          "title": "IMF-backed reforms must tackle Ghana’s long-running energy crisis – Prof. Bokpin warns",
-          "link": "https://www.myjoyonline.com/imf-backed-reforms-must-tackle-ghanas-long-running-energy-crisis-prof-bokpin-warns/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Police arrest 10 suspected cultists, recover gun, cannabis seeds",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/901543-police-arrest-10-suspected-cultists-recover-gun-cannabis-seeds.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Nigeria’s 2027 Election Will Be Fought in the Age of AI. Is the Country Ready?",
+          "link": "https://www.premiumtimesng.com/features-and-interviews/901533-nigerias-2027-election-will-be-fought-in-the-age-of-ai-is-the-country-ready.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Prof Bokpin urges transparency on ECG reforms, warns of fiscal risks",
-          "link": "https://www.myjoyonline.com/prof-bokpin-urges-transparency-on-ecg-reforms-warns-of-fiscal-risks/",
+          "title": "IMF-backed reforms must tackle Ghana’s long-running energy crisis – Prof. Bokpin warns",
+          "link": "https://www.myjoyonline.com/imf-backed-reforms-must-tackle-ghanas-long-running-energy-crisis-prof-bokpin-warns/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
@@ -1349,8 +1381,26 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 15,
+      "count": 22,
       "top": [
+        {
+          "title": "Rwanda : Kigali confirme des discussions avec des pays européens sur le transit de migrants expulsés",
+          "link": "https://burkina24.com/2026/08/08/rwanda-kigali-confirme-des-discussions-avec-des-pays-europeens-sur-le-transit-de-migrants-expulses/",
+          "source": "Burkina24",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "GENOCOST : la RDC veut renforcer son plaidoyer international pour la reconnaissance des crimes commis sur son territoire",
+          "link": "https://actualite.cd/2026/08/08/genocost-la-rdc-veut-renforcer-son-plaidoyer-international-pour-la-reconnaissance-des",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A1"
+        },
         {
           "title": "GENOCOST : Tshisekedi réaffirme la détermination de la RDC à obtenir la reconnaissance des crimes de masse",
           "link": "https://actualite.cd/2026/08/08/genocost-tshisekedi-reaffirme-la-determination-de-la-rdc-obtenir-la-reconnaissance-des",
@@ -1358,43 +1408,25 @@
           "zone": "4. Grands Lacs",
           "theme": "D",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "A1"
         },
         {
-          "title": "RDC : l’épidémie d’Ebola ne montre « aucun signe de ralentissement », alerte MSF",
-          "link": "https://actualite.cd/2026/08/08/rdc-lepidemie-debola-ne-montre-aucun-signe-de-ralentissement-alerte-msf",
-          "source": "ActualitéCD (RDC)",
+          "title": "Le Rwanda dit discuter avec des pays européens pour recevoir en transit des migrants expulsés",
+          "link": "https://lesoleil.sn/international/infos-afrique/le-rwanda-dit-discuter-avec-des-pays-europeens-pour-recevoir-en-transit-des-migrants-expulses/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "A2"
+          "theme": "L",
+          "relevance": "L",
+          "rating": "F1"
         },
         {
-          "title": "Soudan: l’armée affiche des blindés à l’aide de l’Arabie saoudite pour son offensive au Kordofan et au Darfour",
-          "link": "https://www.rfi.fr/fr/afrique/20260808-soudan-l-arm%C3%A9e-affiche-des-blind%C3%A9s-%C3%A0-l-aide-de-l-arabie-saoudite-pour-son-offensive-au-kordofan-et-au-darfour",
-          "source": "RFI Afrique",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Affaire Rebo Tchulo : 14 mois de servitude pénale et 250 000 USD de dommages et intérêts requis contre la chanteuse",
-          "link": "https://www.radiookapi.net/2026/08/07/actualite/justice/affaire-rebo-tchulo-14-mois-de-servitude-penale-et-250-000-usd-de",
-          "source": "Radio Okapi (RDC)",
+          "title": "Kalehe : au moins trois morts dans des affrontements entre l’AFC/M23 et les Wazalendo à Bundje",
+          "link": "https://actualite.cd/2026/08/08/kalehe-au-moins-trois-morts-dans-des-affrontements-entre-lafcm23-et-les-wazalendo-bundje",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Ebola en RDC, une épidémie hors de contrôle ?",
-          "link": "https://www.crisisgroup.org/fr/pod/africa/democratic-republic-congo/ebola-en-rdc-une-epidemie-hors-de-controle",
-          "source": "ICG — International Crisis Group",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "A3"
         }
       ]
     },
@@ -1432,18 +1464,18 @@
           "rating": "F2"
         },
         {
-          "title": "Téléphonie mobile | Comparaison entre l’Italie, l’Europe et la Tunisie",
-          "link": "https://kapitalis.com/tunisie/2026/08/08/telephonie-mobile-comparaison-entre-litalie-leurope-et-la-tunisie/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Élections 2026 : un mémorandum amazigh met les partis face à leurs engagements",
+          "link": "https://fr.hespress.com/484571-elections-2026-un-memorandum-amazigh-met-les-partis-face-a-leurs-engagements.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
-          "title": "Nouveau BMS canicule en Algérie : jusqu’à 45°C, les régions concernées",
-          "link": "https://www.tsa-algerie.com/nouveau-bms-canicule-en-algerie-jusqua-45c-les-regions-concernees/",
-          "source": "TSA — Tout sur l'Algérie",
+          "title": "CAN Féminine 2026 : le onze de départ du Maroc devant l'Afrique du Sud",
+          "link": "https://fr.hespress.com/484619-can-feminine-2026-le-onze-de-depart-du-maroc-devant-lafrique-du-sud.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
           "relevance": "A",
@@ -1455,8 +1487,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 92,
+      "count": 91,
       "top": [
+        {
+          "title": "After October 7 and Bondi massacre, seven Australian friends answered Israel's call to serve",
+          "link": "https://www.jpost.com/aliyah/article-904751",
+          "source": "Jerusalem Post",
+          "zone": "8. Moyen-Orient",
+          "theme": "H",
+          "relevance": "L",
+          "rating": "F2"
+        },
         {
           "title": "Years of disaster drills kept Israeli hospitals running - until Oct. 7 exposed the gaps",
           "link": "https://www.jpost.com/israel-news/article-904739",
@@ -1467,22 +1508,22 @@
           "rating": "F2"
         },
         {
-          "title": "Iranian missile targets UAE tanker despite talks to reopen strait",
-          "link": "https://www.ft.com/content/9a1ab09b-82d7-43c2-b44a-ebb41d352dab?syn-25a6b1a6=1",
-          "source": "Financial Times World",
+          "title": "UAE says Iran attacked ADNOC vessel with missile in Strait of Hormuz",
+          "link": "https://www.al-monitor.com/originals/2026/08/uae-says-iran-attacked-adnoc-vessel-missile-strait-hormuz",
+          "source": "Al-Monitor",
           "zone": "8. Moyen-Orient",
           "theme": "M",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "A1"
         },
         {
-          "title": "EN DIRECT, guerre en Ukraine : le drone qui s’est écrasé samedi en Bulgarie est de type « largement utilisé par les forces armées ukrainiennes », affirme le ministre de la défense bulgare",
-          "link": "https://www.lemonde.fr/international/live/2026/08/08/en-direct-guerre-en-ukraine-kiev-n-a-quasiment-aucune-centrale-thermique-intacte-a-cause-des-attaques-russes-selon-volodymyr-zelensky_6737250_3210.html",
+          "title": "Au Liban, l’armée israélienne a pénétré dans un village malgré le déploiement des forces libanaises",
+          "link": "https://www.lemonde.fr/international/article/2026/08/08/au-liban-l-armee-israelienne-a-penetre-dans-un-village-malgre-le-deploiement-de-l-armee-libanaise_6741367_3210.html",
           "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "B1"
         },
         {
           "title": "L’homme à abattre pour le lobby pro-israélien américain",
@@ -1492,15 +1533,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "À Gaza, les frappes israéliennes réduisent les égouts et les infrastructures civiles au néant",
-          "link": "https://www.rfi.fr/fr/moyen-orient/20260808-%C3%A0-gaza-les-frappes-isra%C3%A9liennes-r%C3%A9duisent-les-%C3%A9gouts-et-les-infrastructures-civiles-au-n%C3%A9ant",
-          "source": "RFI Moyen-Orient",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1508,8 +1540,17 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 192,
+      "count": 184,
       "top": [
+        {
+          "title": "Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation",
+          "link": "https://legrandcontinent.eu/fr/2026/08/08/groenland-energy-trump/",
+          "source": "Le Grand Continent",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A1"
+        },
         {
           "title": "Économie russe : les drones ukrainiens font flamber l’exportation de brut",
           "link": "https://legrandcontinent.eu/fr/2026/08/08/economie-russe-les-drones-ukrainiens-font-flamber-lexportation-de-brut/",
@@ -1520,40 +1561,31 @@
           "rating": "A2"
         },
         {
-          "title": "GNV : lancement d’une nouvelle ligne maritime entre l’Italie et l’Algérie",
-          "link": "https://www.tsa-algerie.com/gnv-lancement-dune-nouvelle-ligne-maritime-entre-litalie-et-lalgerie/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Rana Sanaullah says PML-N will form govt in AJK with two-thirds majority",
-          "link": "https://www.dawn.com/news/2021480/rana-sanaullah-says-pml-n-will-form-govt-in-ajk-with-two-thirds-majority",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "How Beijing’s hypersonic ‘carrier killers’ could distract US forces in a Taiwan conflict",
-          "link": "https://www.scmp.com/news/china/military/article/3363386/how-chinas-hypersonic-carrier-killers-could-distract-us-forces-taiwan-conflict?utm_source=rss_feed",
-          "source": "South China Morning Post",
-          "zone": "14. Extrême-Orient",
+          "title": "'Baby killer': Fight breaks out in Manila airport over antisemitic insults - report",
+          "link": "https://www.jpost.com/diaspora/antisemitism/article-904907",
+          "source": "Jerusalem Post",
+          "zone": "13. Asie du Sud-Est",
           "theme": null,
           "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Child among three killed in Russian missile attacks near Kyiv",
-          "link": "https://www.bbc.co.uk/news/articles/cz7dy8gq99eo?at_medium=RSS&at_campaign=rss",
-          "source": "BBC World",
-          "zone": "10. Europe orient. & Balkans",
+          "title": "Washington annonce une aide d'un milliard de dollars pour la Colombie",
+          "link": "https://fr.hespress.com/484546-washington-annonce-une-aide-dun-milliard-de-dollars-pour-la-colombie.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "16. Amérique du Nord",
           "theme": "P",
           "relevance": "L",
-          "rating": "B2"
+          "rating": "F1"
+        },
+        {
+          "title": "PSG : Ibrahim Mbaye buteur face à Manchester United",
+          "link": "https://lesoleil.sn/actualites/sports/psg-ibrahim-mbaye-buteur-face-a-manchester-united/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "9. Europe occidentale",
+          "theme": "H",
+          "relevance": "L",
+          "rating": "F2"
         }
       ]
     }
@@ -1562,7 +1594,8 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1570,42 +1603,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-08T15:45:08.076Z",
+      "at": "2026-08-08T18:57:33.695Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-08T15:45:08.083Z",
+      "at": "2026-08-08T18:57:33.702Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-08T15:45:41.286Z",
+      "at": "2026-08-08T18:58:08.253Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1919 articles"
+      "message": "103/170 flux OK, 1823 articles"
     },
     {
-      "at": "2026-08-08T15:45:44.420Z",
+      "at": "2026-08-08T18:58:11.386Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-08T15:45:44.744Z",
+      "at": "2026-08-08T18:58:11.706Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-08T15:45:44.749Z",
+      "at": "2026-08-08T18:58:11.711Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 4 alertes"
+      "message": "8 developpements, 6 alertes"
     },
     {
-      "at": "2026-08-08T15:45:44.749Z",
+      "at": "2026-08-08T18:58:11.711Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-08T15:45:44.749Z",
+      "at": "2026-08-08T18:58:11.711Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
