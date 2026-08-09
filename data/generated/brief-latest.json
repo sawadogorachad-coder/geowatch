@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T09:56:41.191Z",
+  "generatedAt": "2026-08-09T13:16:00.944Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1934,
+    "ok": 106,
+    "failed": 64,
+    "articles": 1887,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -43,6 +43,11 @@
         "count": 10
       },
       {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "count": 0
+      },
+      {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
@@ -51,11 +56,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -103,11 +103,6 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -121,11 +116,6 @@
         "id": "rss_myjoyonline",
         "name": "MyJoyOnline (Ghana)",
         "count": 30
-      },
-      {
-        "id": "rss_citi",
-        "name": "Citi Newsroom (Ghana)",
-        "count": 0
       },
       {
         "id": "rss_beninwebtv",
@@ -161,6 +151,11 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -223,18 +218,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -290,7 +275,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -343,11 +328,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -356,11 +336,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -400,7 +375,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
@@ -565,14 +540,14 @@
     ],
     "failedSources": [
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -615,6 +590,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -650,6 +630,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_citi",
+        "name": "Citi Newsroom (Ghana)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
         "error": "HTTP 404"
@@ -668,11 +653,6 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -712,7 +692,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -730,9 +710,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -742,12 +727,17 @@
       {
         "id": "rss_clingendael",
         "name": "Clingendael — Sahel research",
-        "error": "fetch failed"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -793,6 +783,16 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 53,
-    "alerts": 2,
+    "bfAes": 51,
+    "alerts": 1,
     "criticalAlerts": 1,
-    "sourcesDistinct": 67
+    "sourcesDistinct": 65
   },
   "topDevelopments": [
     {
@@ -1002,6 +1002,38 @@
       "_desk": "A1"
     },
     {
+      "title": "Supercoupe AJSB 2026 | Rahimo FC – Vitesse FC : Cap sur Bobo-Dioulasso le 22 août pour un derby mémorable",
+      "link": "https://www.minute.bf/supercoupe-ajsb-2026-rahimo-fc-vitesse-fc-cap-sur-bobo-dioulasso-le-22-aout-pour-un-derby-memorable/",
+      "pubDate": "2026-08-09T11:30:00.000Z",
+      "description": "L’Association des Journalistes Sportifs du Burkina (AJSB) a procédé, le samedi 8 août 2026, au lancement officiel de la 33e édition de la Supercoupe AJSB. La compétition se tiendra à Bobo-Dioulasso le samedi 22 août, précédée d'une série d'activités à partir du jeudi 20 août 2026. La 33e Supercoupe AJSB pose ses valises à Bobo-Dioulasso du 20 au 22 août 2026. Placée sous la caution morale du Mogho Naaba Baongo et du chef des Bobo Mandarè, cette édition bénéficie du patronage du ministre d’État, commandant Ismaël Sombie, et de la présidence de la ministre des Sports, de la Jeunesse et de l’Emploi, Annick Lydie Djouma Pikbougoum/Zingué Ouattara. Elle est également co-présidée par le président de la Fédération burkinabè de football, Oumarou Sawadogo, et parrainée par Bachirou Tera, président de la Délégation consulaire régionale du Guiriko. Les parrainages sportifs sont assurés par Boureima Maïga, ancien international burkinabè et fondateur de l’Académie sportive AD-DUHA, ainsi que par Ousmane Zoungrana, meilleur buteur d’une saison du Fasofoot avec 26 réalisations inscrites en 1984 sous les couleurs de l’ASFB. Luc Pagbelem président du comité d'organisation Devenue un rendez-vous incontournable du calendrier sportif national, la Supercoupe AJSB célèbre le football tout en rassemblant la famille sportive, les médias et les populations. L’affiche de cette finale est inédite. Elle opposera Rahimo FC, champion du Burkina Faso, à Vitesse FC, vainqueur de la Coupe du Faso. Ces deux formations bobolaises se connaissent parfaitement et auront à cœur de s’imposer dans ce derby pour marquer l’histoire. Selon le Président du Comité d'organisation Luc Pagbelem, actuellement en stage en Côte d’Ivoire, elles disputent des matches amicaux pour peaufiner leurs stratégies, aborder la Supercoupe avec ambition et préparer au mieux leurs campagnes africaines respectives. « Comme lors des deux éditions précédentes, le Village de la Supercoupe ouvrira ses portes du 20 au 22 août 2026. Ce espace convivial accueillera des animations, des expositions, des stands de vente, un plateau artistique, des prestations de DJ et des jeux pour le public » a confié Luc Pagbelem. L’AJSB y tiendra un stand dédié à son histoire, avec des archives, des photographies et des contenus audiovisuels permettant de retracer les grandes étapes de l’association et de la compétition. Le comité d'organisation a fait savoir que cette édition mettra également l’accent sur la solidarité. A en croire Luc Pagbelem, le 20 août, un cross populaire suivi d’une séance d’aérobic réunira les Forces de défense et de sécurité, les journalistes, les sportifs et la population, afin de renforcer le lien armée-nation dans le contexte actuel de reconquête du territoire. Le 22 août, une opération de don de sang sera organisée sur le site du Village, affirmant la dimension sociale de l’événement. Un aperçu du public et des partenaires À travers ces initiatives, l’AJSB entend faire de cette Supercoupe un moment de rassemblement qui dépasse le cadre strictement sportif, en associant médias, acteurs du mouvement sportif, partenaires et grand public. L’association a salué l’engagement de ses partenaires et leur a renouvelé sa gratitude pour leur accompagnement. Les organisateurs invitent les populations de Bobo-Dioulasso, les amateurs de football et l’ensemble du public à participer en nombre aux différentes activités et à vivre, le 22 août, la grande finale entre Rahimo FC et Vitesse FC, deux clubs de la ville de Sya. Lire aussi : Football : Rahimo FC remporte la Super Coupe 2025 pour lancer parfaitement sa saison Mathias KAM Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés",
       "link": "https://www.minute.bf/camp-vacances-faso-mebo-2026-le-calendrier-et-les-lieux-devoiles/",
       "pubDate": "2026-08-09T09:50:22.000Z",
@@ -1053,39 +1085,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "F2"
       },
-      "_rating": "F1",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": null,
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
-      "_desk": "A1"
-    },
-    {
-      "title": "F’Eagles coach Maikaba eyes victory against Burkina Faso",
-      "link": "https://punchng.com/feagles-coach-maikaba-eyes-victory-against-burkina-faso/?utm_source=rss.punchng.com&utm_medium=web",
-      "pubDate": "2026-08-09T03:12:28.000Z",
-      "description": "Flying Eagles coach Maikaba and defender Wahab are confident of victory against Burkina Faso in the WAFU Zone B U-20 Championship final. Nigeria aims to re Read More: https://punchng.com/feagles-coach-maikaba-eyes-victory-against-burkina-faso/",
-      "_source": "Punch (Nigeria)",
-      "_sourceId": "rss_punch",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
+      "_rating": "F2",
       "_score": 107,
       "_zone": 1,
       "_theme": null,
@@ -1141,28 +1143,12 @@
           "keyword": "red line"
         }
       ]
-    },
-    {
-      "title": "UNICEF : près de 300 enfants tués à Gaza en 300 jours malgré le cessez-le-feu",
-      "link": "https://fr.hespress.com/484482-unicef-pres-de-300-enfants-tues-a-gaza-en-300-jours-malgre-le-cessez-le-feu.html",
-      "source": "Hespress (Maroc, FR)",
-      "date": "2026-08-09T03:55:05.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      209
+      188
     ],
     [
       "autre",
@@ -1170,23 +1156,23 @@
     ],
     [
       "occident_fr",
-      121
+      126
     ],
     [
       "golfe_mo",
-      74
+      76
     ],
     [
       "occident_us",
-      74
+      76
+    ],
+    [
+      "turquie",
+      57
     ],
     [
       "russie",
       56
-    ],
-    [
-      "turquie",
-      39
     ],
     [
       "bf_local",
@@ -1198,7 +1184,7 @@
     ],
     [
       "sahel",
-      28
+      22
     ]
   ],
   "desks": [
@@ -1206,7 +1192,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 120,
+      "count": 93,
       "top": [
         {
           "title": "Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1",
@@ -1245,8 +1231,8 @@
           "rating": "C1"
         },
         {
-          "title": "Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés",
-          "link": "https://www.minute.bf/camp-vacances-faso-mebo-2026-le-calendrier-et-les-lieux-devoiles/",
+          "title": "Supercoupe AJSB 2026 | Rahimo FC – Vitesse FC : Cap sur Bobo-Dioulasso le 22 août pour un derby mémorable",
+          "link": "https://www.minute.bf/supercoupe-ajsb-2026-rahimo-fc-vitesse-fc-cap-sur-bobo-dioulasso-le-22-aout-pour-un-derby-memorable/",
           "source": "Minute BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
@@ -1259,7 +1245,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 66,
+      "count": 61,
       "top": [
         {
           "title": "NADMO sounds flood alert ahead of Bagre Dam spillage",
@@ -1280,8 +1266,8 @@
           "rating": "F2"
         },
         {
-          "title": "Army rescues 33 kidnapped passengers in Zamfara",
-          "link": "https://www.vanguardngr.com/2026/08/army-rescues-33-kidnapped-passengers-in-zamfara/",
+          "title": "‎Police, army comb forests for Kogi kidnapped victims, destroy suspected hideouts",
+          "link": "https://www.vanguardngr.com/2026/08/police-army-comb-forests-for-kogi-kidnapped-victims-destroy-suspected-hideouts/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "S",
@@ -1289,22 +1275,22 @@
           "rating": "F2"
         },
         {
-          "title": "Nigeria may lose out on fresh $1.4bn US health aid over Christians persecution",
-          "link": "https://www.vanguardngr.com/2026/08/nigeria-may-lose-out-on-fresh-1-4bn-us-health-aid-over-christians-persecution/",
+          "title": "NDLEA busts drug syndicates shipping cocaine in phone chargers, backpacks to Saudi Arabia, Europe",
+          "link": "https://www.vanguardngr.com/2026/08/ndlea-busts-drug-syndicates-shipping-cocaine-in-phone-chargers-backpacks-to-saudi-arabia-europe/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
-          "title": "GNAT issues September 7 deadline over unresolved teachers’ concerns, threatens strike",
-          "link": "https://www.myjoyonline.com/gnat-issues-september-7-deadline-over-unresolved-teachers-concerns-threatens-strike/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Soldiers kill kidnapper, rescue abducted farmer in Edo",
+          "link": "https://punchng.com/soldiers-kill-kidnapper-rescue-abducted-farmer-in-edo/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "A2"
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
         }
       ]
     },
@@ -1312,7 +1298,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 30,
+      "count": 29,
       "top": [
         {
           "title": "Rwanda : Kigali confirme des discussions avec des pays européens sur le transit de migrants expulsés",
@@ -1333,6 +1319,15 @@
           "rating": "A2"
         },
         {
+          "title": "A l’ONU, la RDC alerte sur les attaques des ADF : « Ce groupe armé continue de semer la terreur, d’affaiblir l’autorité de l’État et de compromettre la stabilité de la région des Grands Lacs »",
+          "link": "https://actualite.cd/2026/08/09/lonu-la-rdc-alerte-sur-les-attaques-des-adf-ce-groupe-arme-continue-de-semer-la-terreur",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Terrorisme : à l’ONU, la RDC plaide pour une réponse globale face aux exactions des ADF",
           "link": "https://actualite.cd/2026/08/09/terrorisme-lonu-la-rdc-plaide-pour-une-reponse-globale-face-aux-exactions-des-adf",
           "source": "ActualitéCD (RDC)",
@@ -1349,15 +1344,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "B2"
-        },
-        {
-          "title": "Est de la RDC: au moins 13 civils tués et tout un village incendié lors d’une attaque des ADF dans l’Ituri",
-          "link": "https://www.rfi.fr/fr/afrique/20260809-est-de-la-rdc-au-moins-13-civils-tu%C3%A9s-et-tout-un-village-incendi%C3%A9-lors-d-une-attaque-des-adf-dans-l-ituri",
-          "source": "RFI Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1365,8 +1351,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 23,
+      "count": 28,
       "top": [
+        {
+          "title": "L’Algérie et le Mali accélèrent leur rapprochement",
+          "link": "https://www.tsa-algerie.com/lalgerie-et-le-mali-accelerent-leur-rapprochement/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Tunisie – Algérie | Non à la spoliation, à l’intimidation et à la vassalisation !",
           "link": "https://kapitalis.com/tunisie/2026/08/09/tunisie-algerie-non-a-la-spoliation-a-lintimidation-et-a-la-vassalisation/",
@@ -1402,15 +1397,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "SNCFT | Retour à la normale sur la ligne de la banlieue sud et les grandes lignes à Tunis",
-          "link": "https://kapitalis.com/tunisie/2026/08/08/sncft-retour-a-la-normale-sur-la-ligne-de-la-banlieue-sud-et-les-grandes-lignes-a-tunis/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
         }
       ]
     },
@@ -1418,34 +1404,25 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 107,
+      "count": 124,
       "top": [
         {
-          "title": "UNICEF : près de 300 enfants tués à Gaza en 300 jours malgré le cessez-le-feu",
-          "link": "https://fr.hespress.com/484482-unicef-pres-de-300-enfants-tues-a-gaza-en-300-jours-malgre-le-cessez-le-feu.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Sephora to open six stores across Israel, including in Azrieli mall, Malha - report",
+          "link": "https://www.jpost.com/israel-news/article-904975",
+          "source": "Jerusalem Post",
           "zone": "8. Moyen-Orient",
-          "theme": "H",
-          "relevance": "L",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Iran issues demands for reopening of Hormuz",
-          "link": "https://www.vanguardngr.com/2026/08/iran-issues-demands-for-reopening-of-hormuz/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Les rebelles houthistes du Yémen affirment avoir frappé une raffinerie saoudienne sur la côte de la mer Rouge",
-          "link": "https://www.lemonde.fr/international/article/2026/08/09/les-rebelles-houthistes-du-yemen-affirment-avoir-frappe-une-raffinerie-saoudienne-sur-la-cote-de-la-mer-rouge_6742168_3210.html",
-          "source": "Le Monde International",
+          "title": "Fire extinguished at Aramco refinery in Saudi Arabia's Jazan; Yemen's Houthis claim attack",
+          "link": "https://www.dawn.com/news/2021681/fire-extinguished-at-aramco-refinery-in-saudi-arabias-jazan-yemens-houthis-claim-attack",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F1"
         },
         {
           "title": "Congrès américain : le 3è projet de loi contre le polisario gagne des soutiens",
@@ -1457,11 +1434,20 @@
           "rating": "F2"
         },
         {
-          "title": "Moyen-Orient en direct : l'Iran pose ses conditions à toute réouverture du détroit d'Ormuz",
-          "link": "https://www.france24.com/fr/moyen-orient/20260809-moyen-orient-en-direct-l-iran-pose-ses-conditions-%C3%A0-toute-r%C3%A9ouverture-du-d%C3%A9troit-d-ormuz",
-          "source": "France 24",
+          "title": "Les rebelles houthistes du Yémen affirment avoir frappé une raffinerie saoudienne sur la côte de la mer Rouge",
+          "link": "https://www.lemonde.fr/international/article/2026/08/09/les-rebelles-houthistes-du-yemen-affirment-avoir-frappe-une-raffinerie-saoudienne-sur-la-cote-de-la-mer-rouge_6742168_3210.html",
+          "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
-          "theme": "M",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B1"
+        },
+        {
+          "title": "DIRECT - Moyen-Orient: les Houthis disent avoir frappé une raffinerie en Arabie saoudite",
+          "link": "https://www.rfi.fr/fr/moyen-orient/20260809-direct-moyen-orient-l-iran-pose-ses-conditions-pour-la-r%C3%A9ouverture-du-d%C3%A9troit-d-ormuz-%C3%A9tats-unis",
+          "source": "RFI Moyen-Orient",
+          "zone": "8. Moyen-Orient",
+          "theme": "L",
           "relevance": "A",
           "rating": "C1"
         }
@@ -1471,8 +1457,17 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 164,
+      "count": 155,
       "top": [
+        {
+          "title": "Canada : La réalité virtuelle plonge au cœur d’une opération obstétricale rare",
+          "link": "https://burkina24.com/2026/08/09/canada-la-realite-virtuelle-plonge-au-coeur-dune-operation-obstetricale-rare/",
+          "source": "Burkina24",
+          "zone": "16. Amérique du Nord",
+          "theme": null,
+          "relevance": ".",
+          "rating": "C2"
+        },
         {
           "title": "États-Unis : Donald Trump veut limiter le « tourisme des naissances »",
           "link": "https://burkina24.com/2026/08/08/etats-unis-donald-trump-veut-limiter-le-tourisme-des-naissances/",
@@ -1501,22 +1496,13 @@
           "rating": "A2"
         },
         {
-          "title": "Japon : 81 ans après Hiroshima, la question de la dissuasion nucléaire sur la table",
+          "title": "Japon : 81 ans après Hiroshima et Nagasaki, la question de la dissuasion nucléaire sur la table",
           "link": "https://www.france24.com/fr/asie-pacifique/20260809-japon-81-ans-apr%C3%A8s-hiroshima-la-question-de-la-dissuasion-nucl%C3%A9aire-de-nouveau-sur-la-table",
           "source": "France 24",
           "zone": "14. Extrême-Orient",
           "theme": "N",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "Egypt could join Pak-Saudi-Turkiye defence pact once technical issues resolved, says Turkish foreign minister",
-          "link": "https://www.dawn.com/news/2021671/egypt-could-join-pak-saudi-turkiye-defence-pact-once-technical-issues-resolved-says-turkish-foreign-minister",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A1"
         }
       ]
     }
@@ -1525,7 +1511,8 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1533,42 +1520,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-09T09:55:52.866Z",
+      "at": "2026-08-09T13:15:22.926Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-09T09:55:52.873Z",
+      "at": "2026-08-09T13:15:22.932Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-09T09:56:37.714Z",
+      "at": "2026-08-09T13:15:57.594Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1934 articles"
+      "message": "106/170 flux OK, 1887 articles"
     },
     {
-      "at": "2026-08-09T09:56:40.819Z",
+      "at": "2026-08-09T13:16:00.533Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-09T09:56:41.188Z",
+      "at": "2026-08-09T13:16:00.941Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-09T09:56:41.193Z",
+      "at": "2026-08-09T13:16:00.946Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 2 alertes"
+      "message": "8 developpements, 1 alertes"
     },
     {
-      "at": "2026-08-09T09:56:41.193Z",
+      "at": "2026-08-09T13:16:00.947Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-09T09:56:41.193Z",
+      "at": "2026-08-09T13:16:00.947Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
