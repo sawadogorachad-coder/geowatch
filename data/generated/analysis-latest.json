@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-09T08:03:12.054Z",
+  "generatedAt": "2026-08-09T10:02:40.112Z",
   "stats": {
     "analysed": 800,
     "windowHours": 168,
-    "sources": 69
+    "sources": 67
   },
   "findings": {
     "tendancesLourdes": [
@@ -11,31 +11,31 @@
         "axe": "thematique",
         "cle": "P",
         "libelle": "Politique interne & gouvernance",
-        "volume": 98,
-        "base": 109.2,
-        "direction": "stable"
-      },
-      {
-        "axe": "thematique",
-        "cle": "E",
-        "libelle": "Économie & ressources",
-        "volume": 79,
-        "base": 88.5,
+        "volume": 90,
+        "base": 110.3,
         "direction": "stable"
       },
       {
         "axe": "thematique",
         "cle": "S",
         "libelle": "Sécurité & défense",
-        "volume": 61,
-        "base": 65.1,
+        "volume": 72,
+        "base": 64.3,
+        "direction": "stable"
+      },
+      {
+        "axe": "thematique",
+        "cle": "E",
+        "libelle": "Économie & ressources",
+        "volume": 72,
+        "base": 87.8,
         "direction": "stable"
       },
       {
         "axe": "thematique",
         "cle": "D",
         "libelle": "Diplomatie & alliances",
-        "volume": 44,
+        "volume": 42,
         "base": 46.8,
         "direction": "stable"
       },
@@ -43,44 +43,60 @@
         "axe": "thematique",
         "cle": "M",
         "libelle": "Maritime & océanique",
-        "volume": 29,
-        "base": 20.1,
+        "volume": 34,
+        "base": 20.6,
         "direction": "hausse"
       },
       {
         "axe": "zone",
         "cle": 1,
         "libelle": "1. Sahel & AO franco.",
-        "volume": 131,
-        "base": 106.7,
+        "volume": 120,
+        "base": 107.7,
         "direction": "stable"
       },
       {
         "axe": "zone",
         "cle": 2,
         "libelle": "2. AO anglo. & côtière",
-        "volume": 68,
-        "base": 59.5,
+        "volume": 66,
+        "base": 59.8,
         "direction": "stable"
       },
       {
         "axe": "zone",
         "cle": 7,
         "libelle": "7. Maghreb & Afr. Nord",
-        "volume": 26,
-        "base": 31.2,
-        "direction": "stable"
+        "volume": 23,
+        "base": 31,
+        "direction": "baisse"
       },
       {
         "axe": "zone",
         "cle": 4,
         "libelle": "4. Grands Lacs",
-        "volume": 12,
-        "base": 16.6,
-        "direction": "baisse"
+        "volume": 20,
+        "base": 16.4,
+        "direction": "stable"
       }
     ],
     "signauxFaibles": [
+      {
+        "zone": "14. Extrême-Orient",
+        "thematique": "Nucléaire & prolifération",
+        "code": "N",
+        "volume": 1,
+        "pertinence": "●",
+        "exemple": "Japon : 81 ans après Hiroshima, la question de la dissuasion nucléaire sur la table"
+      },
+      {
+        "zone": "6. Afrique australe",
+        "thematique": "Humanitaire & social",
+        "code": "H",
+        "volume": 1,
+        "pertinence": "○",
+        "exemple": "Afrique du Sud: 70 ans après la marche de Pretoria, les droits femmes noires restent très fragiles"
+      },
       {
         "zone": "11. Asie centrale",
         "thematique": "Sécurité & défense",
@@ -122,30 +138,47 @@
         "exemple": "Inde : des jeunes de la Gen Z menacés sur les réseaux sociaux"
       }
     ],
-    "ruptures": [],
+    "ruptures": [
+      {
+        "type": "evenement",
+        "zone": "Zone null",
+        "thematique": "Logistique & corridors",
+        "titre": "Karachi's Red Line suffers another blow as decision to cancel Mosamiyat-to-Numaish contract declared ‘invalid’",
+        "source": "Dawn (Pakistan)",
+        "cote": "F2",
+        "lien": "https://www.dawn.com/news/2021591/karachis-red-line-suffers-another-blow-as-decision-to-cancel-mosamiyat-to-numaish-contract-declared-invalid"
+      },
+      {
+        "type": "pic",
+        "zone": "4. Grands Lacs",
+        "thematique": "Sécurité & défense",
+        "volume": 6,
+        "base": 1.9
+      },
+      {
+        "type": "pic",
+        "zone": "3. Afrique centrale",
+        "thematique": "Économie & ressources",
+        "volume": 6,
+        "base": 2.4
+      }
+    ],
     "recompositions": []
   },
   "notesParZone": [
     {
       "zone": "1. Sahel & AO franco.",
       "thematiquesDominantes": [
-        "Sécurité & défense",
         "Politique interne & gouvernance",
-        "Économie & ressources"
+        "Économie & ressources",
+        "Sécurité & défense"
       ],
       "faits": [
         {
-          "titre": "Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou",
-          "source": "Minute BF",
-          "cote": "A1",
-          "lien": "https://www.minute.bf/lutte-antiterroriste-le-fonds-de-soutien-patriotique-constate-limpact-de-ses-investissements-aux-vdp-dans-la-region-du-goulmou/",
-          "theme": "S"
-        },
-        {
-          "titre": "Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma",
-          "source": "Faso7",
-          "cote": "F1",
-          "lien": "https://faso7.com/2026/08/08/faso7-fonds-de-soutien-patriotique-limpact-des-contributions-evalue-au-bataillon-mixte-de-marche-fantome-1-a-fada-ngourma/",
+          "titre": "Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1",
+          "source": "AIB — Agence Information BF",
+          "cote": "C2",
+          "lien": "https://www.aib.media/burkina-le-fsp-mobilise-plus-de-700-millions-fcfa-par-mois-pour-le-bataillon-mixte-de-marche-fantome-1/",
           "theme": "E"
         },
         {
@@ -168,17 +201,24 @@
           "cote": "C1",
           "lien": "https://www.aib.media/koudougou-coup-denvoi-des-journees-nationales-de-lutte-anti-vectorielle-dans-la-region-de-nando/",
           "theme": "S"
+        },
+        {
+          "titre": "Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés",
+          "source": "Minute BF",
+          "cote": "F2",
+          "lien": "https://www.minute.bf/camp-vacances-faso-mebo-2026-le-calendrier-et-les-lieux-devoiles/",
+          "theme": "P"
         }
       ],
-      "lectureStructuree": "Faits marquants : « Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou » (Minute BF) ; « Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma » (Faso7) ; « Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé » (AIB — Agence Information BF).\nThématiques actives : Sécurité & défense, Politique interne & gouvernance, Économie & ressources (131 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
+      "lectureStructuree": "Faits marquants : « Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1 » (AIB — Agence Information BF) ; « Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé » (AIB — Agence Information BF) ; « Lancement officiel des JNLAV 2026 : « La lutte contre le paludisme commence par la destruction des gîtes larvaires » » (Minute BF).\nThématiques actives : Politique interne & gouvernance, Économie & ressources, Sécurité & défense (120 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
       "confiance": "eleve",
       "proseIA": null
     },
     {
       "zone": "2. AO anglo. & côtière",
       "thematiquesDominantes": [
+        "Justice & droit international",
         "Sécurité & défense",
-        "Économie & ressources",
         "Politique interne & gouvernance"
       ],
       "faits": [
@@ -190,46 +230,53 @@
           "theme": null
         },
         {
-          "titre": "Insecurity: Scores of schools in 40 LGAs shut down",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/08/insecurity-scores-of-schools-in-40-lgas-shut-down/",
-          "theme": "S"
-        },
-        {
-          "titre": "Another Lagos bridge badly vandalised as Sanwo-Olu allays safety concerns",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/08/another-lagos-bridge-badly-vandalised-as-sanwo-olu-allays-safety-concerns/",
-          "theme": "E"
-        },
-        {
-          "titre": "Interior Minister’s achievements have projected youths positively",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/08/interior-ministers-achievements-have-projected-youths-positively/",
-          "theme": "P"
-        },
-        {
           "titre": "Sir Sam Jonah takes Abuja land dispute with Nigeria to ICC arbitration",
           "source": "MyJoyOnline (Ghana)",
           "cote": "F2",
           "lien": "https://www.myjoyonline.com/sir-sam-jonah-takes-abuja-land-dispute-with-nigeria-to-icc-arbitration/",
           "theme": "J"
+        },
+        {
+          "titre": "Army rescues 33 kidnapped passengers in Zamfara",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/08/army-rescues-33-kidnapped-passengers-in-zamfara/",
+          "theme": "S"
+        },
+        {
+          "titre": "Nigeria may lose out on fresh $1.4bn US health aid over Christians persecution",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/08/nigeria-may-lose-out-on-fresh-1-4bn-us-health-aid-over-christians-persecution/",
+          "theme": "P"
+        },
+        {
+          "titre": "GNAT issues September 7 deadline over unresolved teachers’ concerns, threatens strike",
+          "source": "MyJoyOnline (Ghana)",
+          "cote": "A2",
+          "lien": "https://www.myjoyonline.com/gnat-issues-september-7-deadline-over-unresolved-teachers-concerns-threatens-strike/",
+          "theme": "J"
         }
       ],
-      "lectureStructuree": "Faits marquants : « NADMO sounds flood alert ahead of Bagre Dam spillage » (MyJoyOnline (Ghana)) ; « Insecurity: Scores of schools in 40 LGAs shut down » (Vanguard (Nigeria)) ; « Another Lagos bridge badly vandalised as Sanwo-Olu allays safety concerns » (Vanguard (Nigeria)).\nThématiques actives : Sécurité & défense, Économie & ressources, Politique interne & gouvernance (68 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
+      "lectureStructuree": "Faits marquants : « NADMO sounds flood alert ahead of Bagre Dam spillage » (MyJoyOnline (Ghana)) ; « Sir Sam Jonah takes Abuja land dispute with Nigeria to ICC arbitration » (MyJoyOnline (Ghana)) ; « Army rescues 33 kidnapped passengers in Zamfara » (Vanguard (Nigeria)).\nThématiques actives : Justice & droit international, Sécurité & défense, Politique interne & gouvernance (66 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
       "confiance": "eleve",
       "proseIA": null
     },
     {
       "zone": "7. Maghreb & Afr. Nord",
       "thematiquesDominantes": [
+        "Économie & ressources",
         "Diplomatie & alliances",
-        "Technologie & cyber",
-        "Économie & ressources"
+        "Technologie & cyber"
       ],
       "faits": [
+        {
+          "titre": "Tunisie – Algérie | Non à la spoliation, à l’intimidation et à la vassalisation !",
+          "source": "Kapitalis (Tunisie)",
+          "cote": "F2",
+          "lien": "https://kapitalis.com/tunisie/2026/08/09/tunisie-algerie-non-a-la-spoliation-a-lintimidation-et-a-la-vassalisation/",
+          "theme": "E"
+        },
         {
           "titre": "Tunisie – Algérie | Le litige frontalier entre l’histoire et le droit",
           "source": "Kapitalis (Tunisie)",
@@ -252,13 +299,6 @@
           "theme": "E"
         },
         {
-          "titre": "Jorge Vilda se félicite de la qualification pour le Mondial 2027",
-          "source": "Hespress (Maroc, FR)",
-          "cote": "F2",
-          "lien": "https://fr.hespress.com/484639-jorge-vilda-se-felicite-de-la-qualification-pour-le-mondial-2027.html",
-          "theme": "P"
-        },
-        {
           "titre": "SNCFT | Retour à la normale sur la ligne de la banlieue sud et les grandes lignes à Tunis",
           "source": "Kapitalis (Tunisie)",
           "cote": "A2",
@@ -266,7 +306,7 @@
           "theme": null
         }
       ],
-      "lectureStructuree": "Faits marquants : « Tunisie – Algérie | Le litige frontalier entre l’histoire et le droit » (Kapitalis (Tunisie)) ; « “L’Odyssée” de Nolan | Violence perpétuelle et culpabilité éternelle de l’homme » (Kapitalis (Tunisie)) ; « Céréales : pourquoi l’Algérie continue d’importer du blé, malgré une récolte exceptionnelle » (TSA — Tout sur l'Algérie).\nThématiques actives : Diplomatie & alliances, Technologie & cyber, Économie & ressources (26 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
+      "lectureStructuree": "Faits marquants : « Tunisie – Algérie | Non à la spoliation, à l’intimidation et à la vassalisation ! » (Kapitalis (Tunisie)) ; « Tunisie – Algérie | Le litige frontalier entre l’histoire et le droit » (Kapitalis (Tunisie)) ; « “L’Odyssée” de Nolan | Violence perpétuelle et culpabilité éternelle de l’homme » (Kapitalis (Tunisie)).\nThématiques actives : Économie & ressources, Diplomatie & alliances, Technologie & cyber (23 signaux sur la période).\nLecture : la zone pèse sur l'AES via ces dynamiques ; surveiller les signaux de bascule et leurs effets directs/indirects (sécurité, corridors, diplomatie, prix).",
       "confiance": "eleve",
       "proseIA": null
     }
@@ -298,7 +338,7 @@
     },
     {
       "zone": "7. Maghreb & Afr. Nord",
-      "hypothese": "Si la dynamique « 7. Maghreb & Afr. Nord » (stable) se poursuit a 3-6 mois, l'impact sur l'AES s'accentue.",
+      "hypothese": "Si la dynamique « 7. Maghreb & Afr. Nord » (baisse) se poursuit a 3-6 mois, l'impact sur l'AES s'accentue.",
       "signauxASurveiller": [
         "Frequence et localisation des incidents",
         "Reactions diplomatiques (CEDEAO/UA/ONU)",
@@ -313,7 +353,7 @@
     {
       "code": "P",
       "libelle": "Politique interne & gouvernance",
-      "volume": 98,
+      "volume": 90,
       "direction": "stable",
       "faitsSaillants": [
         {
@@ -329,6 +369,12 @@
           "lien": "https://www.minute.bf/lancement-officiel-des-jnlav-2026-la-lutte-contre-le-paludisme-commence-par-la-destruction-des-gites-larvaires/"
         },
         {
+          "titre": "Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés",
+          "source": "Minute BF",
+          "cote": "F2",
+          "lien": "https://www.minute.bf/camp-vacances-faso-mebo-2026-le-calendrier-et-les-lieux-devoiles/"
+        },
+        {
           "titre": "Football/Ligue 3 : les acteurs posent les bases d’une réforme à Koudougou",
           "source": "AIB — Agence Information BF",
           "cote": "C2",
@@ -339,47 +385,88 @@
           "source": "ATOP (Togo)",
           "cote": "F2",
           "lien": "https://atop.tg/ogou-le-peuple-ife-celebre-la-53eme-edition-de-sa-fete-traditionnelle-odon-itsu/"
-        },
-        {
-          "titre": "Nandiala : mobilisation communautaire pour la lutte anti-moustique et l’immersion patriotique",
-          "source": "AIB — Agence Information BF",
-          "cote": "C2",
-          "lien": "https://www.aib.media/nandiala-mobilisation-communautaire-pour-la-lutte-anti-moustique-et-limmersion-patriotique/"
         }
       ],
-      "lecture": "Politique interne & gouvernance : 98 signaux sur la période (tendance stable). Faits marquants : « Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé » (AIB — Agence Information BF) ; « Lancement officiel des JNLAV 2026 : « La lutte contre le paludisme commence par la destruction des gîtes larvaires » » (Minute BF) ; « Football/Ligue 3 : les acteurs posent les bases d’une réforme à Koudougou » (AIB — Agence Information BF).",
+      "lecture": "Politique interne & gouvernance : 90 signaux sur la période (tendance stable). Faits marquants : « Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé » (AIB — Agence Information BF) ; « Lancement officiel des JNLAV 2026 : « La lutte contre le paludisme commence par la destruction des gîtes larvaires » » (Minute BF) ; « Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés » (Minute BF).",
       "blocs": [
-        "afrique (42)",
+        "afrique (35)",
+        "autre (10)",
         "bf_local (9)",
-        "autre (9)",
         "golfe_mo (9)"
       ],
       "sources": [
         "Vanguard (Nigeria)",
-        "MyJoyOnline (Ghana)",
         "Punch (Nigeria)",
+        "MyJoyOnline (Ghana)",
         "Al Jazeera English",
-        "AIB — Agence Information BF"
+        "Dawn (Pakistan)"
+      ],
+      "proseIA": null
+    },
+    {
+      "code": "S",
+      "libelle": "Sécurité & défense",
+      "volume": 72,
+      "direction": "stable",
+      "faitsSaillants": [
+        {
+          "titre": "Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando",
+          "source": "AIB — Agence Information BF",
+          "cote": "C1",
+          "lien": "https://www.aib.media/koudougou-coup-denvoi-des-journees-nationales-de-lutte-anti-vectorielle-dans-la-region-de-nando/"
+        },
+        {
+          "titre": "L’Algérie ramène un ressortissant allemand enlevé au Niger",
+          "source": "TSA — Tout sur l'Algérie",
+          "cote": "A2",
+          "lien": "https://www.tsa-algerie.com/lalgerie-ramene-un-ressortissant-allemand-enleve-au-niger/"
+        },
+        {
+          "titre": "Une violente collision entre deux bus au Niger fait au moins 22 morts dont 17 militaires",
+          "source": "Le Monde International",
+          "cote": "B2",
+          "lien": "https://www.lemonde.fr/international/article/2026/08/09/une-violente-collision-entre-deux-bus-au-niger-fait-au-moins-22-morts-dont-17-militaires_6741681_3210.html"
+        },
+        {
+          "titre": "Opération « Dougoukoloko » : les FAMa neutralisent plusieurs groupes terroristes dans le nord du Mali.",
+          "source": "Malijet",
+          "cote": "F2",
+          "lien": "https://malijet.com/actualte_dans_les_regions_du_mali/311068-operation-dougoukoloko-les-fama-neutralisent-plusieurs.html"
+        },
+        {
+          "titre": "Nigeria : les forces armées ont secouru 308 victimes d'enlèvements",
+          "source": "France 24",
+          "cote": "C2",
+          "lien": "https://www.france24.com/fr/vid%C3%A9o/20260808-nigeria-les-forces-arm%C3%A9es-ont-secouru-308-victimes-d-enl%C3%A8vements"
+        }
+      ],
+      "lecture": "Sécurité & défense : 72 signaux sur la période (tendance stable). Faits marquants : « Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando » (AIB — Agence Information BF) ; « L’Algérie ramène un ressortissant allemand enlevé au Niger » (TSA — Tout sur l'Algérie) ; « Une violente collision entre deux bus au Niger fait au moins 22 morts dont 17 militaires » (Le Monde International).",
+      "blocs": [
+        "occident_fr (18)",
+        "afrique (16)",
+        "russie (12)",
+        "autre (10)"
+      ],
+      "sources": [
+        "Le Monde International",
+        "France 24",
+        "Dawn (Pakistan)",
+        "Anadolu Agency (Turquie)",
+        "TASS (Russie, EN)"
       ],
       "proseIA": null
     },
     {
       "code": "E",
       "libelle": "Économie & ressources",
-      "volume": 79,
+      "volume": 72,
       "direction": "stable",
       "faitsSaillants": [
         {
-          "titre": "Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma",
-          "source": "Faso7",
-          "cote": "F1",
-          "lien": "https://faso7.com/2026/08/08/faso7-fonds-de-soutien-patriotique-limpact-des-contributions-evalue-au-bataillon-mixte-de-marche-fantome-1-a-fada-ngourma/"
-        },
-        {
-          "titre": "Burkina Faso : Eau Vive Internationale renforce l’accès à l’eau et améliore le cadre d’apprentissage à l’école primaire de Beun",
-          "source": "Faso7",
-          "cote": "A2",
-          "lien": "https://faso7.com/2026/08/08/burkina-faso-eau-vive-internationale-renforce-lacces-a-leau-et-ameliore-le-cadre-dapprentissage-a-lecole-primaire-de-beun/"
+          "titre": "Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1",
+          "source": "AIB — Agence Information BF",
+          "cote": "C2",
+          "lien": "https://www.aib.media/burkina-le-fsp-mobilise-plus-de-700-millions-fcfa-par-mois-pour-le-bataillon-mixte-de-marche-fantome-1/"
         },
         {
           "titre": "Burkina : L’hôpital Bogodogo célèbre le premier anniversaire des quintuplés nés dans ses services",
@@ -394,85 +481,38 @@
           "lien": "https://netafrique.net/burkina-faso-alain-camille-ouedraogo-nomme-dg-de-la-banque-commerciale-du-burkina-bcb/"
         },
         {
-          "titre": "Burkina Faso : Le CEGECI reboise la Cité des Artistes à Bobo-Dioulasso",
-          "source": "Faso7",
-          "cote": "F1",
-          "lien": "https://faso7.com/2026/08/08/burkina-faso-le-cegeci-reboise-la-cite-des-artistes-a-bobo-dioulasso/"
+          "titre": "Burkina/Camp vacances lecture : La 7ᵉ édition a réuni 600 campeurs",
+          "source": "Lefaso.net",
+          "cote": "C2",
+          "lien": "https://lefaso.net/spip.php?article148484"
+        },
+        {
+          "titre": "Siglé/Lutte contre le paludisme : mobilisation des acteurs locaux pour les premières JNLAV",
+          "source": "AIB — Agence Information BF",
+          "cote": "C2",
+          "lien": "https://www.aib.media/sigle-lutte-contre-le-paludisme-mobilisation-des-acteurs-locaux-pour-les-premieres-jnlav/"
         }
       ],
-      "lecture": "Économie & ressources : 79 signaux sur la période (tendance stable). Faits marquants : « Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma » (Faso7) ; « Burkina Faso : Eau Vive Internationale renforce l’accès à l’eau et améliore le cadre d’apprentissage à l’école primaire de Beun » (Faso7) ; « Burkina : L’hôpital Bogodogo célèbre le premier anniversaire des quintuplés nés dans ses services » (AIB — Agence Information BF).",
+      "lecture": "Économie & ressources : 72 signaux sur la période (tendance stable). Faits marquants : « Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1 » (AIB — Agence Information BF) ; « Burkina : L’hôpital Bogodogo célèbre le premier anniversaire des quintuplés nés dans ses services » (AIB — Agence Information BF) ; « Burkina Faso: Alain Camille OUEDRAOGO nommé DG de la Banque Commerciale du Burkina (BCB) » (Net Afrique (BF)).",
       "blocs": [
-        "afrique (36)",
-        "bf_local (12)",
+        "afrique (35)",
+        "bf_local (9)",
         "occident_fr (9)",
-        "sahel (9)"
+        "autre (8)"
       ],
       "sources": [
         "MyJoyOnline (Ghana)",
         "Le Soleil (Sénégal)",
-        "Dawn (Pakistan)",
         "Sahara Médias",
+        "Dawn (Pakistan)",
         "Bénin Web TV"
-      ],
-      "proseIA": null
-    },
-    {
-      "code": "S",
-      "libelle": "Sécurité & défense",
-      "volume": 61,
-      "direction": "stable",
-      "faitsSaillants": [
-        {
-          "titre": "Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou",
-          "source": "Minute BF",
-          "cote": "A1",
-          "lien": "https://www.minute.bf/lutte-antiterroriste-le-fonds-de-soutien-patriotique-constate-limpact-de-ses-investissements-aux-vdp-dans-la-region-du-goulmou/"
-        },
-        {
-          "titre": "Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando",
-          "source": "AIB — Agence Information BF",
-          "cote": "C1",
-          "lien": "https://www.aib.media/koudougou-coup-denvoi-des-journees-nationales-de-lutte-anti-vectorielle-dans-la-region-de-nando/"
-        },
-        {
-          "titre": "Diapaga : marché central et caniveaux assainis dans la lutte contre le paludisme",
-          "source": "AIB — Agence Information BF",
-          "cote": "C2",
-          "lien": "https://www.aib.media/diapaga-marche-central-et-caniveaux-assainis-dans-la-lutte-contre-le-paludisme/"
-        },
-        {
-          "titre": "L’Algérie ramène un ressortissant allemand enlevé au Niger",
-          "source": "TSA — Tout sur l'Algérie",
-          "cote": "A2",
-          "lien": "https://www.tsa-algerie.com/lalgerie-ramene-un-ressortissant-allemand-enleve-au-niger/"
-        },
-        {
-          "titre": "Insecurity: Scores of schools in 40 LGAs shut down",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/08/insecurity-scores-of-schools-in-40-lgas-shut-down/"
-        }
-      ],
-      "lecture": "Sécurité & défense : 61 signaux sur la période (tendance stable). Faits marquants : « Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou » (Minute BF) ; « Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando » (AIB — Agence Information BF) ; « Diapaga : marché central et caniveaux assainis dans la lutte contre le paludisme » (AIB — Agence Information BF).",
-      "blocs": [
-        "occident_fr (15)",
-        "afrique (11)",
-        "russie (9)",
-        "autre (7)"
-      ],
-      "sources": [
-        "Anadolu Agency (Turquie)",
-        "TASS (Russie, EN)",
-        "Le Monde International",
-        "France 24",
-        "Jerusalem Post"
       ],
       "proseIA": null
     },
     {
       "code": "D",
       "libelle": "Diplomatie & alliances",
-      "volume": 44,
+      "volume": 42,
       "direction": "stable",
       "faitsSaillants": [
         {
@@ -506,12 +546,12 @@
           "lien": "https://malijet.com/actualite_economique_du_mali/311075-agriculture-le-mali-renforce-sa-cooperation-avec-le-congo.html"
         }
       ],
-      "lecture": "Diplomatie & alliances : 44 signaux sur la période (tendance stable). Faits marquants : « Burkina Faso: De retour des États-Unis, Le PDS Maurice Konaté s’inspire du modèle américain pour transformer Ouagadougou » (Net Afrique (BF)) ; « Rwanda : Kigali confirme des discussions avec des pays européens sur le transit de migrants expulsés » (Burkina24) ; « Camp Vacances Lecture : Le ministre Jacques Sosthène Dingara appelle à un retour aux valeurs pour forger le citoyen moderne » (Minute BF).",
+      "lecture": "Diplomatie & alliances : 42 signaux sur la période (tendance stable). Faits marquants : « Burkina Faso: De retour des États-Unis, Le PDS Maurice Konaté s’inspire du modèle américain pour transformer Ouagadougou » (Net Afrique (BF)) ; « Rwanda : Kigali confirme des discussions avec des pays européens sur le transit de migrants expulsés » (Burkina24) ; « Camp Vacances Lecture : Le ministre Jacques Sosthène Dingara appelle à un retour aux valeurs pour forger le citoyen moderne » (Minute BF).",
       "blocs": [
-        "afrique (16)",
-        "bf_local (5)",
-        "sahel (5)",
-        "autre (5)"
+        "afrique (15)",
+        "autre (5)",
+        "bf_local (4)",
+        "sahel (4)"
       ],
       "sources": [
         "Dawn (Pakistan)",
@@ -527,25 +567,18 @@
     "c_aes": {
       "id": "c_aes",
       "name": "Sahel/AES",
-      "volume": 117,
+      "volume": 109,
       "themesDominants": [
-        "Sécurité & défense",
+        "Politique interne & gouvernance",
         "Économie & ressources",
-        "Politique interne & gouvernance"
+        "Sécurité & défense"
       ],
       "faits": [
         {
-          "titre": "Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou",
-          "source": "Minute BF",
-          "cote": "A1",
-          "lien": "https://www.minute.bf/lutte-antiterroriste-le-fonds-de-soutien-patriotique-constate-limpact-de-ses-investissements-aux-vdp-dans-la-region-du-goulmou/",
-          "theme": "S"
-        },
-        {
-          "titre": "Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma",
-          "source": "Faso7",
-          "cote": "F1",
-          "lien": "https://faso7.com/2026/08/08/faso7-fonds-de-soutien-patriotique-limpact-des-contributions-evalue-au-bataillon-mixte-de-marche-fantome-1-a-fada-ngourma/",
+          "titre": "Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1",
+          "source": "AIB — Agence Information BF",
+          "cote": "C2",
+          "lien": "https://www.aib.media/burkina-le-fsp-mobilise-plus-de-700-millions-fcfa-par-mois-pour-le-bataillon-mixte-de-marche-fantome-1/",
           "theme": "E"
         },
         {
@@ -570,16 +603,23 @@
           "theme": "S"
         },
         {
-          "titre": "Burkina Faso : Eau Vive Internationale renforce l’accès à l’eau et améliore le cadre d’apprentissage à l’école primaire de Beun",
-          "source": "Faso7",
-          "cote": "A2",
-          "lien": "https://faso7.com/2026/08/08/burkina-faso-eau-vive-internationale-renforce-lacces-a-leau-et-ameliore-le-cadre-dapprentissage-a-lecole-primaire-de-beun/",
-          "theme": "E"
+          "titre": "Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés",
+          "source": "Minute BF",
+          "cote": "F2",
+          "lien": "https://www.minute.bf/camp-vacances-faso-mebo-2026-le-calendrier-et-les-lieux-devoiles/",
+          "theme": "P"
+        },
+        {
+          "titre": "WAFU B U-20 Preview: Flying Eagles seek revenge against Burkina Faso in showdown",
+          "source": "Premium Times (Nigeria)",
+          "cote": "F1",
+          "lien": "https://www.premiumtimesng.com/news/top-news/901620-wafu-b-u-20-preview-flying-eagles-seek-revenge-against-burkina-faso-in-showdown.html",
+          "theme": null
         }
       ],
       "enjeu": "Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.",
       "consequencesAES": "Maximale (priorité 1) : Le Burkina Faso EST le théâtre central de ce conflit. Toute analyse sahélienne est de facto une analyse burkinabè. : Le BF est l'État le plus exposé du trio AES en termes de pression jihadiste : ~40 % du territoire hors contrôle effectif, attaques mensuelles record en glissem…",
-      "lectureStructuree": "SITUATION (live) — 117 dépêches sur la période, dominante : Sécurité & défense, Économie & ressources, Politique interne & gouvernance.\nFaits saillants : « Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou » (Minute BF, cote A1) ; « Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma » (Faso7, cote F1) ; « Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé » (AIB — Agence Information BF, cote C2).\n\nENJEU CENTRAL — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n\nPOURQUOI — C'est la rupture géopolitique africaine la plus profonde depuis les indépendances. Elle redistribue les cartes de l'influence en Afrique de l'Ouest, fragilise la CEDEAO, ouvre la voie à de nouveaux partenaires (Russie, Chine, Iran, Turquie, Émirats), et pose la question de la viabilité du modèle militaro-plébiscitaire face à une menace jihadiste qui continue de progresser.\n\nIMPACT POUR L'AES — Maximale (priorité 1) : Le Burkina Faso EST le théâtre central de ce conflit. Toute analyse sahélienne est de facto une analyse burkinabè. : Le BF est l'État le plus exposé du trio AES en termes de pression jihadiste : ~40 % du territoire hors contrôle effectif, attaques mensuelles record en glissem…\n\nSCÉNARIOS —\n• Tendanciel — érosion lente (55%) : Les transitions tiennent par la force et la popularité urbaine, mais perdent du territoire rural. Wagner reste mais ne stabilise pas. JNIM consolide ses émirats. Attaques sur capitales sans les prendre. Sortie partielle F CFA, instabilité monétaire gérée.\n• Rupture — chute d'un État (25%) : Un État (probablement BF ou Mali) bascule : prise de capitale ou effondrement militaire complet. Gouvernement transitionnel forcé d'inclure jihadistes. Onde de choc régionale, exode massif, intervention extérieure non-occidentale possible (Égypte, Algérie).\n\nÀ SURVEILLER — Une attaque réussie sur Ouagadougou-centre ou Bamako (rupture systémique). ; L'extension côtière de la guerre (Bénin, Togo, Côte d'Ivoire). ; La sortie effective du F CFA et la naissance d'une monnaie AES.",
+      "lectureStructuree": "SITUATION (live) — 109 dépêches sur la période, dominante : Politique interne & gouvernance, Économie & ressources, Sécurité & défense.\nFaits saillants : « Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1 » (AIB — Agence Information BF, cote C2) ; « Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé » (AIB — Agence Information BF, cote C2) ; « Lancement officiel des JNLAV 2026 : « La lutte contre le paludisme commence par la destruction des gîtes larvaires » » (Minute BF, cote F2).\n\nENJEU CENTRAL — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n\nPOURQUOI — C'est la rupture géopolitique africaine la plus profonde depuis les indépendances. Elle redistribue les cartes de l'influence en Afrique de l'Ouest, fragilise la CEDEAO, ouvre la voie à de nouveaux partenaires (Russie, Chine, Iran, Turquie, Émirats), et pose la question de la viabilité du modèle militaro-plébiscitaire face à une menace jihadiste qui continue de progresser.\n\nIMPACT POUR L'AES — Maximale (priorité 1) : Le Burkina Faso EST le théâtre central de ce conflit. Toute analyse sahélienne est de facto une analyse burkinabè. : Le BF est l'État le plus exposé du trio AES en termes de pression jihadiste : ~40 % du territoire hors contrôle effectif, attaques mensuelles record en glissem…\n\nSCÉNARIOS —\n• Tendanciel — érosion lente (55%) : Les transitions tiennent par la force et la popularité urbaine, mais perdent du territoire rural. Wagner reste mais ne stabilise pas. JNIM consolide ses émirats. Attaques sur capitales sans les prendre. Sortie partielle F CFA, instabilité monétaire gérée.\n• Rupture — chute d'un État (25%) : Un État (probablement BF ou Mali) bascule : prise de capitale ou effondrement militaire complet. Gouvernement transitionnel forcé d'inclure jihadistes. Onde de choc régionale, exode massif, intervention extérieure non-occidentale possible (Égypte, Algérie).\n\nÀ SURVEILLER — Une attaque réussie sur Ouagadougou-centre ou Bamako (rupture systémique). ; L'extension côtière de la guerre (Bénin, Togo, Côte d'Ivoire). ; La sortie effective du F CFA et la naissance d'une monnaie AES.",
       "prospective": "12-24 mois : statu quo dégradé probable, perte de territoires ruraux, popularité urbaine maintenue.",
       "confiance": "eleve",
       "proseIA": null
@@ -587,20 +627,13 @@
     "c_iran_il": {
       "id": "c_iran_il",
       "name": "Iran-Israël",
-      "volume": 115,
+      "volume": 121,
       "themesDominants": [
         "Diplomatie & alliances",
         "Sécurité & défense",
-        "Politique interne & gouvernance"
+        "Économie & ressources"
       ],
       "faits": [
-        {
-          "titre": "ICC oversight body urges Chad and Venezuela to reverse withdrawal",
-          "source": "CGTN (Chine, EN)",
-          "cote": "D4",
-          "lien": "https://newsaf.cgtn.com/news/2026-08-08/ICC-oversight-body-urges-Chad-and-Venezuela-to-reverse-withdrawal-1Pru8eVsUtG/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "theme": "P"
-        },
         {
           "titre": "Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral)",
           "source": "Le Grand Continent",
@@ -609,11 +642,25 @@
           "theme": "E"
         },
         {
+          "titre": "Iran issues demands for reopening of Hormuz",
+          "source": "Vanguard (Nigeria)",
+          "cote": "A1",
+          "lien": "https://www.vanguardngr.com/2026/08/iran-issues-demands-for-reopening-of-hormuz/",
+          "theme": "M"
+        },
+        {
           "titre": "Egypt could join Pak-Saudi-Turkiye defence pact once technical issues resolved, says Turkish foreign minister",
           "source": "Dawn (Pakistan)",
           "cote": "A1",
           "lien": "https://www.dawn.com/news/2021671/egypt-could-join-pak-saudi-turkiye-defence-pact-once-technical-issues-resolved-says-turkish-foreign-minister",
           "theme": "D"
+        },
+        {
+          "titre": "Les rebelles houthistes du Yémen affirment avoir frappé une raffinerie saoudienne sur la côte de la mer Rouge",
+          "source": "Le Monde International",
+          "cote": "B2",
+          "lien": "https://www.lemonde.fr/international/article/2026/08/09/les-rebelles-houthistes-du-yemen-affirment-avoir-frappe-une-raffinerie-saoudienne-sur-la-cote-de-la-mer-rouge_6742168_3210.html",
+          "theme": "S"
         },
         {
           "titre": "Congrès américain : le 3è projet de loi contre le polisario gagne des soutiens",
@@ -628,18 +675,11 @@
           "cote": "F2",
           "lien": "https://kapitalis.com/tunisie/2026/08/09/tunisie-algerie-le-litige-frontalier-entre-lhistoire-et-le-droit/",
           "theme": "D"
-        },
-        {
-          "titre": "IDF withheld Hezbollah explosive drone attack near troops in southern Lebanon - report",
-          "source": "Jerusalem Post",
-          "cote": "F2",
-          "lien": "https://www.jpost.com/israel-news/defense-news/article-904925",
-          "theme": "S"
         }
       ],
       "enjeu": "La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.",
       "consequencesAES": "Élevée (impact indirect majeur) : Le BF n'est pas acteur direct mais subit la totalité des chocs économiques et géopolitiques de l'embrasement moyen-oriental. : Réseaux jihadistes sahéliens (JNIM, EIGS) bénéficient indirectement de l'effervescence post-Gaza : recrutement, financement Golfe, diffusio…",
-      "lectureStructuree": "SITUATION (live) — 115 dépêches sur la période, dominante : Diplomatie & alliances, Sécurité & défense, Politique interne & gouvernance.\nFaits saillants : « ICC oversight body urges Chad and Venezuela to reverse withdrawal » (CGTN (Chine, EN), cote D4) ; « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Egypt could join Pak-Saudi-Turkiye defence pact once technical issues resolved, says Turkish foreign minister » (Dawn (Pakistan), cote A1).\n\nENJEU CENTRAL — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n\nPOURQUOI — Le Moyen-Orient connaît sa plus profonde recomposition depuis 1979. L'affaiblissement de l'arc chiite ouvre une fenêtre incertaine : soit un nouvel ordre stable autour des puissances du Golfe, soit une escalade directe Iran-Israël-USA. Les chocs pétroliers potentiels via le détroit d'Ormuz frappent directement les économies importatrices comme le Burkina Faso. ⚠️ Certains éléments de cette analyse sont prospectifs — vérifiez avec les dernières sources IRIS/ICG.\n\nIMPACT POUR L'AES — Élevée (impact indirect majeur) : Le BF n'est pas acteur direct mais subit la totalité des chocs économiques et géopolitiques de l'embrasement moyen-oriental. : Réseaux jihadistes sahéliens (JNIM, EIGS) bénéficient indirectement de l'effervescence post-Gaza : recrutement, financement Golfe, diffusio…\n\nSCÉNARIOS —\n• Tendanciel — Iran affaibli, ordre US-saoudien (40%) : Régime iranien survit mais affaibli. Reconstruction proxies lente. Saoudiens dominent OPEC+ et arbitrent Levant. Israël intègre normalisation arabe (extension Abraham). Sahel et Russie reviennent par défaut.\n• Rupture — transition Pasdaran nucléaire (25%) : CGRI prend le pouvoir, sortie TNP, accélération bombe. Sanctions totales mais marché chinois maintenu. Course aux armements régionale (Saoudite, Turquie). Risque frappes israéliennes répétées.\n\nÀ SURVEILLER — L'état réel du programme nucléaire iranien (enrichissement résiduel ?). ; Le détroit d'Ormuz : toute fermeture déclencherait un choc pétrolier mondial. ; Le sort des sites nucléaires Fordo/Natanz : capacité résiduelle d'enrichir ?",
+      "lectureStructuree": "SITUATION (live) — 121 dépêches sur la période, dominante : Diplomatie & alliances, Sécurité & défense, Économie & ressources.\nFaits saillants : « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Iran issues demands for reopening of Hormuz » (Vanguard (Nigeria), cote A1) ; « Egypt could join Pak-Saudi-Turkiye defence pact once technical issues resolved, says Turkish foreign minister » (Dawn (Pakistan), cote A1).\n\nENJEU CENTRAL — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n\nPOURQUOI — Le Moyen-Orient connaît sa plus profonde recomposition depuis 1979. L'affaiblissement de l'arc chiite ouvre une fenêtre incertaine : soit un nouvel ordre stable autour des puissances du Golfe, soit une escalade directe Iran-Israël-USA. Les chocs pétroliers potentiels via le détroit d'Ormuz frappent directement les économies importatrices comme le Burkina Faso. ⚠️ Certains éléments de cette analyse sont prospectifs — vérifiez avec les dernières sources IRIS/ICG.\n\nIMPACT POUR L'AES — Élevée (impact indirect majeur) : Le BF n'est pas acteur direct mais subit la totalité des chocs économiques et géopolitiques de l'embrasement moyen-oriental. : Réseaux jihadistes sahéliens (JNIM, EIGS) bénéficient indirectement de l'effervescence post-Gaza : recrutement, financement Golfe, diffusio…\n\nSCÉNARIOS —\n• Tendanciel — Iran affaibli, ordre US-saoudien (40%) : Régime iranien survit mais affaibli. Reconstruction proxies lente. Saoudiens dominent OPEC+ et arbitrent Levant. Israël intègre normalisation arabe (extension Abraham). Sahel et Russie reviennent par défaut.\n• Rupture — transition Pasdaran nucléaire (25%) : CGRI prend le pouvoir, sortie TNP, accélération bombe. Sanctions totales mais marché chinois maintenu. Course aux armements régionale (Saoudite, Turquie). Risque frappes israéliennes répétées.\n\nÀ SURVEILLER — L'état réel du programme nucléaire iranien (enrichissement résiduel ?). ; Le détroit d'Ormuz : toute fermeture déclencherait un choc pétrolier mondial. ; Le sort des sites nucléaires Fordo/Natanz : capacité résiduelle d'enrichir ?",
       "prospective": "6-12 mois : crise économique aiguë en Iran, possible accélération nucléaire clandestine.",
       "confiance": "eleve",
       "proseIA": null
@@ -647,7 +687,7 @@
     "c_ukr": {
       "id": "c_ukr",
       "name": "Ukraine-Russie",
-      "volume": 55,
+      "volume": 58,
       "themesDominants": [
         "Sécurité & défense",
         "Économie & ressources",
@@ -676,6 +716,13 @@
           "theme": "P"
         },
         {
+          "titre": "Five dead in new Russia, Ukraine strikes",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F1",
+          "lien": "https://www.vanguardngr.com/2026/08/five-dead-in-new-russia-ukraine-strikes/",
+          "theme": "S"
+        },
+        {
           "titre": "EN DIRECT, guerre en Ukraine : après l’explosion en Bulgarie d’un drone correspondant à ceux utilisés par Kiev, l’ambassadrice ukrainienne à Sofia convoquée",
           "source": "Le Monde International",
           "cote": "B1",
@@ -688,18 +735,11 @@
           "cote": "A2",
           "lien": "https://sputnikglobe.com/20260809/ukraine-fails-to-stop-russias-fastest-missiles--report-1124551815.html",
           "theme": null
-        },
-        {
-          "titre": "Guerre en Ukraine : le drone qui s’est écrasé samedi en Bulgarie est d’un type « largement utilisé par les forces armées ukrainiennes ». Retrouvez les informations du 2 au 8 août.",
-          "source": "Le Monde International",
-          "cote": "B1",
-          "lien": "https://www.lemonde.fr/international/live/2026/08/09/en-direct-guerre-en-ukraine-le-drone-qui-s-est-ecrase-samedi-en-bulgarie-est-d-un-type-largement-utilise-par-les-forces-armees-ukrainiennes_6737250_3210.html",
-          "theme": "S"
         }
       ],
       "enjeu": "L'Ukraine est trop grande pour être conquise et trop importante pour être abandonnée. Le conflit tend vers un blocage prolongé que personne ne sait résoudre.",
       "consequencesAES": "Élevée (Russie = partenaire stratégique BF) : La guerre russe en Ukraine engage directement le partenaire militaire principal du BF (Africa Corps) et structure ses capacités. : Africa Corps (héritier Wagner) : ~1 200-2 000 instructeurs/combattants au Mali, présence BF moins documentée mais croissant…",
-      "lectureStructuree": "SITUATION (live) — 55 dépêches sur la période, dominante : Sécurité & défense, Économie & ressources, Justice & droit international.\nFaits saillants : « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Pourquoi la France est-elle devenue la puissance la moins populaire au Gabon ? » (Gabon Review, cote A2) ; « Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation » (Le Grand Continent, cote A1).\n\nENJEU CENTRAL — L'Ukraine est trop grande pour être conquise et trop importante pour être abandonnée. Le conflit tend vers un blocage prolongé que personne ne sait résoudre.\n\nPOURQUOI — C'est la première guerre européenne de haute intensité depuis 1945 et le test décisif de l'ordre international post-Guerre froide. Si la Russie obtient des concessions par la force, la frontière taïwanaise, sahélienne et caucasienne deviennent négociables par les armes. C'est aussi un test pour le réarmement européen et la crédibilité de l'OTAN sans soutien américain.\n\nIMPACT POUR L'AES — Élevée (Russie = partenaire stratégique BF) : La guerre russe en Ukraine engage directement le partenaire militaire principal du BF (Africa Corps) et structure ses capacités. : Africa Corps (héritier Wagner) : ~1 200-2 000 instructeurs/combattants au Mali, présence BF moins documentée mais croissant…\n\nSCÉNARIOS —\n• Tendanciel — gel armé (40%) : Trump impose cessez-le-feu sur ligne actuelle. Pas de reconnaissance Crimée/Donbass. Pas de garanties OTAN. Conflit gelé type Coréen. Reconstruction lente, militarisation pérenne.\n• Rupture — effondrement russe (20%) : Crise économique aiguë + défaite militaire ponctuelle + crise succession ouvrent transition. Risque mais aussi opportunité historique.\n\nÀ SURVEILLER — Les décrets de Trump sur l'aide militaire (effectif effectif sur 6 mois). ; L'évolution du front : reprise russe ou ukrainienne dans Sumy/Kharkiv/Donetsk. ; Les capacités économiques russes après 4 ans d'économie de guerre (taux d'intérêt 21%, démographie négative).",
+      "lectureStructuree": "SITUATION (live) — 58 dépêches sur la période, dominante : Sécurité & défense, Économie & ressources, Justice & droit international.\nFaits saillants : « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Pourquoi la France est-elle devenue la puissance la moins populaire au Gabon ? » (Gabon Review, cote A2) ; « Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation » (Le Grand Continent, cote A1).\n\nENJEU CENTRAL — L'Ukraine est trop grande pour être conquise et trop importante pour être abandonnée. Le conflit tend vers un blocage prolongé que personne ne sait résoudre.\n\nPOURQUOI — C'est la première guerre européenne de haute intensité depuis 1945 et le test décisif de l'ordre international post-Guerre froide. Si la Russie obtient des concessions par la force, la frontière taïwanaise, sahélienne et caucasienne deviennent négociables par les armes. C'est aussi un test pour le réarmement européen et la crédibilité de l'OTAN sans soutien américain.\n\nIMPACT POUR L'AES — Élevée (Russie = partenaire stratégique BF) : La guerre russe en Ukraine engage directement le partenaire militaire principal du BF (Africa Corps) et structure ses capacités. : Africa Corps (héritier Wagner) : ~1 200-2 000 instructeurs/combattants au Mali, présence BF moins documentée mais croissant…\n\nSCÉNARIOS —\n• Tendanciel — gel armé (40%) : Trump impose cessez-le-feu sur ligne actuelle. Pas de reconnaissance Crimée/Donbass. Pas de garanties OTAN. Conflit gelé type Coréen. Reconstruction lente, militarisation pérenne.\n• Rupture — effondrement russe (20%) : Crise économique aiguë + défaite militaire ponctuelle + crise succession ouvrent transition. Risque mais aussi opportunité historique.\n\nÀ SURVEILLER — Les décrets de Trump sur l'aide militaire (effectif effectif sur 6 mois). ; L'évolution du front : reprise russe ou ukrainienne dans Sumy/Kharkiv/Donetsk. ; Les capacités économiques russes après 4 ans d'économie de guerre (taux d'intérêt 21%, démographie négative).",
       "prospective": "12-24 mois : forte probabilité de gel imposé par Trump sur la ligne actuelle, sans paix.",
       "confiance": "eleve",
       "proseIA": null
@@ -707,20 +747,13 @@
     "c_gaza": {
       "id": "c_gaza",
       "name": "Gaza-Liban",
-      "volume": 56,
+      "volume": 52,
       "themesDominants": [
-        "Sécurité & défense",
+        "Diplomatie & alliances",
         "Humanitaire & social",
-        "Politique interne & gouvernance"
+        "Économie & ressources"
       ],
       "faits": [
-        {
-          "titre": "Insecurity: Scores of schools in 40 LGAs shut down",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/08/insecurity-scores-of-schools-in-40-lgas-shut-down/",
-          "theme": "S"
-        },
         {
           "titre": "UNICEF : près de 300 enfants tués à Gaza en 300 jours malgré le cessez-le-feu",
           "source": "Hespress (Maroc, FR)",
@@ -729,18 +762,18 @@
           "theme": "H"
         },
         {
-          "titre": "ICC oversight body urges Chad and Venezuela to reverse withdrawal",
-          "source": "CGTN (Chine, EN)",
-          "cote": "D4",
-          "lien": "https://newsaf.cgtn.com/news/2026-08-08/ICC-oversight-body-urges-Chad-and-Venezuela-to-reverse-withdrawal-1Pru8eVsUtG/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "theme": "P"
-        },
-        {
           "titre": "Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral)",
           "source": "Le Grand Continent",
           "cote": "A2",
           "lien": "https://legrandcontinent.eu/fr/2026/08/09/tucker-carlson-il-est-temps-de-sauver-lamerique-discours-integral/",
           "theme": "E"
+        },
+        {
+          "titre": "Iran issues demands for reopening of Hormuz",
+          "source": "Vanguard (Nigeria)",
+          "cote": "A1",
+          "lien": "https://www.vanguardngr.com/2026/08/iran-issues-demands-for-reopening-of-hormuz/",
+          "theme": "M"
         },
         {
           "titre": "Egypt could join Pak-Saudi-Turkiye defence pact once technical issues resolved, says Turkish foreign minister",
@@ -755,11 +788,18 @@
           "cote": "F2",
           "lien": "https://fr.hespress.com/484590-congres-americain-le-3e-projet-de-loi-contre-le-polisario-gagne-des-soutiens.html",
           "theme": "S"
+        },
+        {
+          "titre": "Tunisie – Algérie | Le litige frontalier entre l’histoire et le droit",
+          "source": "Kapitalis (Tunisie)",
+          "cote": "F2",
+          "lien": "https://kapitalis.com/tunisie/2026/08/09/tunisie-algerie-le-litige-frontalier-entre-lhistoire-et-le-droit/",
+          "theme": "D"
         }
       ],
       "enjeu": "Sans horizon politique palestinien crédible (deux États ou alternative), aucun cessez-le-feu ne sera durable. Le « jour d'après » est la vraie question, pas le « jour pendant ».",
       "consequencesAES": "Modérée (impact diplomatique et symbolique) : Le BF n'est pas acteur direct mais la cause palestinienne structure la rhétorique anti-occidentale du régime et l'imaginaire panafricain. : Pas d'impact sécuritaire direct. Mais radicalisation idéologique via réseaux numériques mobilise jihadistes sahéli…",
-      "lectureStructuree": "SITUATION (live) — 56 dépêches sur la période, dominante : Sécurité & défense, Humanitaire & social, Politique interne & gouvernance.\nFaits saillants : « Insecurity: Scores of schools in 40 LGAs shut down » (Vanguard (Nigeria), cote F2) ; « UNICEF : près de 300 enfants tués à Gaza en 300 jours malgré le cessez-le-feu » (Hespress (Maroc, FR), cote F2) ; « ICC oversight body urges Chad and Venezuela to reverse withdrawal » (CGTN (Chine, EN), cote D4).\n\nENJEU CENTRAL — Sans horizon politique palestinien crédible (deux États ou alternative), aucun cessez-le-feu ne sera durable. Le « jour d'après » est la vraie question, pas le « jour pendant ».\n\nPOURQUOI — Au-delà du drame humanitaire (~50 000 morts à Gaza, famine documentée), cette guerre teste la crédibilité du droit international (procès CIJ, plaintes CPI), polarise les opinions occidentales et du Sud global, et reconfigure le Moyen-Orient. Elle bloque la normalisation arabe d'Israël et alimente partout les récits anti-impérialistes — y compris au Burkina Faso.\n\nIMPACT POUR L'AES — Modérée (impact diplomatique et symbolique) : Le BF n'est pas acteur direct mais la cause palestinienne structure la rhétorique anti-occidentale du régime et l'imaginaire panafricain. : Pas d'impact sécuritaire direct. Mais radicalisation idéologique via réseaux numériques mobilise jihadistes sahéli…\n\nSCÉNARIOS —\n• Tendanciel — guerre prolongée à intensité variable (45%) : Pas de cessez-le-feu durable. Opérations IDF récurrentes Gaza et Cisjordanie. Tirs sporadiques Sud-Liban. Hamas se reconstitue lentement. Reconstruction quasi-nulle. Crise humanitaire chronique.\n• Recomposition — plan régional Trump/Saoudien (25%) : Force internationale arabe (saoudienne, EAU, Égypte) à Gaza. Réforme Autorité palestinienne. Reconstruction financée Golfe. Normalisation saoudienne phase 1. Cisjordanie en attente.\n\nÀ SURVEILLER — Le plan régional Trump-Saoudien (force internationale arabe à Gaza ?). ; L'évolution Cisjordanie : risque de 3e Intifada. ; La survie de la coalition Netanyahou (otages, procès, élections).",
+      "lectureStructuree": "SITUATION (live) — 52 dépêches sur la période, dominante : Diplomatie & alliances, Humanitaire & social, Économie & ressources.\nFaits saillants : « UNICEF : près de 300 enfants tués à Gaza en 300 jours malgré le cessez-le-feu » (Hespress (Maroc, FR), cote F2) ; « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Iran issues demands for reopening of Hormuz » (Vanguard (Nigeria), cote A1).\n\nENJEU CENTRAL — Sans horizon politique palestinien crédible (deux États ou alternative), aucun cessez-le-feu ne sera durable. Le « jour d'après » est la vraie question, pas le « jour pendant ».\n\nPOURQUOI — Au-delà du drame humanitaire (~50 000 morts à Gaza, famine documentée), cette guerre teste la crédibilité du droit international (procès CIJ, plaintes CPI), polarise les opinions occidentales et du Sud global, et reconfigure le Moyen-Orient. Elle bloque la normalisation arabe d'Israël et alimente partout les récits anti-impérialistes — y compris au Burkina Faso.\n\nIMPACT POUR L'AES — Modérée (impact diplomatique et symbolique) : Le BF n'est pas acteur direct mais la cause palestinienne structure la rhétorique anti-occidentale du régime et l'imaginaire panafricain. : Pas d'impact sécuritaire direct. Mais radicalisation idéologique via réseaux numériques mobilise jihadistes sahéli…\n\nSCÉNARIOS —\n• Tendanciel — guerre prolongée à intensité variable (45%) : Pas de cessez-le-feu durable. Opérations IDF récurrentes Gaza et Cisjordanie. Tirs sporadiques Sud-Liban. Hamas se reconstitue lentement. Reconstruction quasi-nulle. Crise humanitaire chronique.\n• Recomposition — plan régional Trump/Saoudien (25%) : Force internationale arabe (saoudienne, EAU, Égypte) à Gaza. Réforme Autorité palestinienne. Reconstruction financée Golfe. Normalisation saoudienne phase 1. Cisjordanie en attente.\n\nÀ SURVEILLER — Le plan régional Trump-Saoudien (force internationale arabe à Gaza ?). ; L'évolution Cisjordanie : risque de 3e Intifada. ; La survie de la coalition Netanyahou (otages, procès, élections).",
       "prospective": "12-24 mois : probable statu quo dégradé, occupation militaire permanente Gaza, raids Cisjordanie.",
       "confiance": "eleve",
       "proseIA": null
@@ -767,19 +807,12 @@
     "c_sdn": {
       "id": "c_sdn",
       "name": "Soudan",
-      "volume": 40,
+      "volume": 32,
       "themesDominants": [
         "Logistique & corridors",
         "Économie & ressources"
       ],
       "faits": [
-        {
-          "titre": "Burkina Faso : Eau Vive Internationale renforce l’accès à l’eau et améliore le cadre d’apprentissage à l’école primaire de Beun",
-          "source": "Faso7",
-          "cote": "A2",
-          "lien": "https://faso7.com/2026/08/08/burkina-faso-eau-vive-internationale-renforce-lacces-a-leau-et-ameliore-le-cadre-dapprentissage-a-lecole-primaire-de-beun/",
-          "theme": "E"
-        },
         {
           "titre": "Modernisation de l’Aéroport international de Bobo-Dioulasso : Le Ministre d’Etat, Emile ZERBO salue l’évolution des travaux et exige le respect des délais",
           "source": "Minute BF",
@@ -814,11 +847,18 @@
           "cote": "F6",
           "lien": "https://www.myjoyonline.com/nadmo-sounds-flood-alert-ahead-of-bagre-dam-spillage/",
           "theme": null
+        },
+        {
+          "titre": "Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral)",
+          "source": "Le Grand Continent",
+          "cote": "A2",
+          "lien": "https://legrandcontinent.eu/fr/2026/08/09/tucker-carlson-il-est-temps-de-sauver-lamerique-discours-integral/",
+          "theme": "E"
         }
       ],
       "enjeu": "Le Soudan est trop grand et trop divers pour qu'une victoire militaire d'un camp permette de gouverner. Toute issue militaire produira un État défaillant. Mais aucune négociation ne marche.",
       "consequencesAES": "Modérée (effet rebond Sahel) : Le BF subit la déstabilisation régionale et la concurrence pour l'attention humanitaire. : Aucun impact sécuritaire direct (distance géographique Soudan-BF ~3 500 km). · Possible diffusion modèle RSF/Janjaweed vers groupes sahéliens ? Pas documenté. · Réfugiés soudanai…",
-      "lectureStructuree": "SITUATION (live) — 40 dépêches sur la période, dominante : Logistique & corridors, Économie & ressources.\nFaits saillants : « Burkina Faso : Eau Vive Internationale renforce l’accès à l’eau et améliore le cadre d’apprentissage à l’école primaire de Beun » (Faso7, cote A2) ; « Modernisation de l’Aéroport international de Bobo-Dioulasso : Le Ministre d’Etat, Emile ZERBO salue l’évolution des travaux et exige le respect des délais » (Minute BF, cote F1) ; « Modernisation de l’Aéroport international de Bobo-Dioulasso: le Ministre Zerbo exige le respect des délais » (Wakat Séra, cote C1).\n\nENJEU CENTRAL — Le Soudan est trop grand et trop divers pour qu'une victoire militaire d'un camp permette de gouverner. Toute issue militaire produira un État défaillant. Mais aucune négociation ne marche.\n\nPOURQUOI — C'est la guerre la plus meurtrière du moment (~150 000 morts, 10 millions de déplacés, famine déclarée IPC 5) et pourtant la moins couverte. Elle illustre l'effondrement total d'un État de 48 millions d'habitants, alimenté par des sponsors régionaux (EAU vs Égypte/Arabie). Sa persistance déstabilise la mer Rouge, le Tchad, le Sud-Soudan, et révèle la faillite des médiations africaines et arabes.\n\nIMPACT POUR L'AES — Modérée (effet rebond Sahel) : Le BF subit la déstabilisation régionale et la concurrence pour l'attention humanitaire. : Aucun impact sécuritaire direct (distance géographique Soudan-BF ~3 500 km). · Possible diffusion modèle RSF/Janjaweed vers groupes sahéliens ? Pas documenté. · Réfugiés soudanai…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (50%) : SAF tient Nord/Centre/Est avec capitale Khartoum reprise. RSF tient Darfour/Kordofan-Sud. Pas d'accord politique. Économie effondrée. Crise humanitaire chronique. Pas de service public.\n• Recomposition — médiation Trump-Saoudite (20%) : Pression US (sanctions, déclaration génocide) force EAU à lâcher RSF. Médiation Saoudite-Égypte. Cessez-le-feu, cantonnement RSF. Transition militaire-civile négociée.\n\nÀ SURVEILLER — L'évolution du soutien émirien aux RSF face aux pressions US (génocide reconnu jan. 2025). ; Le sort d'El Fasher au Darfour (massacres documentés). ; La possibilité d'une base navale russe à Port-Soudan (recomposition mer Rouge).",
+      "lectureStructuree": "SITUATION (live) — 32 dépêches sur la période, dominante : Logistique & corridors, Économie & ressources.\nFaits saillants : « Modernisation de l’Aéroport international de Bobo-Dioulasso : Le Ministre d’Etat, Emile ZERBO salue l’évolution des travaux et exige le respect des délais » (Minute BF, cote F1) ; « Modernisation de l’Aéroport international de Bobo-Dioulasso: le Ministre Zerbo exige le respect des délais » (Wakat Séra, cote C1) ; « Modernisation de l’Aéroport international de Bobo-Dioulasso : Le Ministre d’Etat, Emile ZERBO salue l’évolution des travaux et exige le respect des délais » (AIB — Agence Information BF, cote C1).\n\nENJEU CENTRAL — Le Soudan est trop grand et trop divers pour qu'une victoire militaire d'un camp permette de gouverner. Toute issue militaire produira un État défaillant. Mais aucune négociation ne marche.\n\nPOURQUOI — C'est la guerre la plus meurtrière du moment (~150 000 morts, 10 millions de déplacés, famine déclarée IPC 5) et pourtant la moins couverte. Elle illustre l'effondrement total d'un État de 48 millions d'habitants, alimenté par des sponsors régionaux (EAU vs Égypte/Arabie). Sa persistance déstabilise la mer Rouge, le Tchad, le Sud-Soudan, et révèle la faillite des médiations africaines et arabes.\n\nIMPACT POUR L'AES — Modérée (effet rebond Sahel) : Le BF subit la déstabilisation régionale et la concurrence pour l'attention humanitaire. : Aucun impact sécuritaire direct (distance géographique Soudan-BF ~3 500 km). · Possible diffusion modèle RSF/Janjaweed vers groupes sahéliens ? Pas documenté. · Réfugiés soudanai…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (50%) : SAF tient Nord/Centre/Est avec capitale Khartoum reprise. RSF tient Darfour/Kordofan-Sud. Pas d'accord politique. Économie effondrée. Crise humanitaire chronique. Pas de service public.\n• Recomposition — médiation Trump-Saoudite (20%) : Pression US (sanctions, déclaration génocide) force EAU à lâcher RSF. Médiation Saoudite-Égypte. Cessez-le-feu, cantonnement RSF. Transition militaire-civile négociée.\n\nÀ SURVEILLER — L'évolution du soutien émirien aux RSF face aux pressions US (génocide reconnu jan. 2025). ; Le sort d'El Fasher au Darfour (massacres documentés). ; La possibilité d'une base navale russe à Port-Soudan (recomposition mer Rouge).",
       "prospective": "12-24 mois : partition de fait probable. SAF contrôle Khartoum/Nord/Est, RSF contrôle Darfour/Kordofan-Sud.",
       "confiance": "eleve",
       "proseIA": null
@@ -826,11 +866,11 @@
     "c_tai": {
       "id": "c_tai",
       "name": "Taïwan",
-      "volume": 70,
+      "volume": 79,
       "themesDominants": [
         "Économie & ressources",
         "Logistique & corridors",
-        "Justice & droit international"
+        "Maritime & océanique"
       ],
       "faits": [
         {
@@ -846,6 +886,13 @@
           "cote": "A2",
           "lien": "https://legrandcontinent.eu/fr/2026/08/09/tucker-carlson-il-est-temps-de-sauver-lamerique-discours-integral/",
           "theme": "E"
+        },
+        {
+          "titre": "Iran issues demands for reopening of Hormuz",
+          "source": "Vanguard (Nigeria)",
+          "cote": "A1",
+          "lien": "https://www.vanguardngr.com/2026/08/iran-issues-demands-for-reopening-of-hormuz/",
+          "theme": "M"
         },
         {
           "titre": "SN BRAFASO : Le Ministre Serge Poda sur le terrain pour booster la relance industrielle",
@@ -867,18 +914,11 @@
           "cote": "A1",
           "lien": "https://legrandcontinent.eu/fr/2026/08/08/groenland-energy-trump/",
           "theme": "P"
-        },
-        {
-          "titre": "SMOKERS’ CORNER: THE OUTRAGE MACHINE",
-          "source": "Dawn (Pakistan)",
-          "cote": "F2",
-          "lien": "https://www.dawn.com/news/2021603/smokers-corner-the-outrage-machine",
-          "theme": null
         }
       ],
       "enjeu": "TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.",
       "consequencesAES": "Élevée (impact macro mondial) : Une crise Taïwan = choc économique global qui frapperait le BF de plein fouet via les puces, l'inflation et le dollar. : Impact sécuritaire direct nul (Asie Pacifique). · Mais : crise Taïwan distrait attention US/UE → désengagement d'autres théâtres (Sahel, Sahel orie…",
-      "lectureStructuree": "SITUATION (live) — 70 dépêches sur la période, dominante : Économie & ressources, Logistique & corridors, Justice & droit international.\nFaits saillants : « Modernisation de l’aéroport de Bobo-Dioulasso : 79 milliards de FCFA pour transformer Sya en un hub aéroportuaire international » (Net Afrique (BF), cote F1) ; « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « SN BRAFASO : Le Ministre Serge Poda sur le terrain pour booster la relance industrielle » (Net Afrique (BF), cote F2).\n\nENJEU CENTRAL — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.\n\nPOURQUOI — Une crise Taïwan ne serait pas régionale : ce serait l'équivalent de COVID + crise de 2008 combinés. Sans TSMC, l'IA, les smartphones, les voitures, la défense s'arrêtent en quelques mois. C'est aussi le test ultime de la primauté américaine en Pacifique : si Pékin gagne, la première chaîne d'îles tombe et l'ordre indo-pacifique bascule pour 50 ans.\n\nIMPACT POUR L'AES — Élevée (impact macro mondial) : Une crise Taïwan = choc économique global qui frapperait le BF de plein fouet via les puces, l'inflation et le dollar. : Impact sécuritaire direct nul (Asie Pacifique). · Mais : crise Taïwan distrait attention US/UE → désengagement d'autres théâtres (Sahel, Sahel orie…\n\nSCÉNARIOS —\n• Tendanciel — pression militaire constante, pas d'invasion (50%) : Pékin maintient pression militaire/économique/diplomatique. Taïwan se réarme. Économie mondiale absorbe coût continu de la « zone grise ». USA maintiennent ambiguïté.\n• Rupture — crise majeure non-cinétique (25%) : Blocus partiel ou « quarantaine » sanitaire/douanière. Test résolution US/alliés. Crise économique aiguë. Pas de guerre directe mais redéfinition règles.\n\nÀ SURVEILLER — Les exercices PLA majeurs (encerclement, blocus simulés). ; La position de Trump sur l'engagement militaire en cas d'invasion. ; Les avancées de TSMC en Arizona (relocalisation 100 Mds USD).",
+      "lectureStructuree": "SITUATION (live) — 79 dépêches sur la période, dominante : Économie & ressources, Logistique & corridors, Maritime & océanique.\nFaits saillants : « Modernisation de l’aéroport de Bobo-Dioulasso : 79 milliards de FCFA pour transformer Sya en un hub aéroportuaire international » (Net Afrique (BF), cote F1) ; « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Iran issues demands for reopening of Hormuz » (Vanguard (Nigeria), cote A1).\n\nENJEU CENTRAL — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.\n\nPOURQUOI — Une crise Taïwan ne serait pas régionale : ce serait l'équivalent de COVID + crise de 2008 combinés. Sans TSMC, l'IA, les smartphones, les voitures, la défense s'arrêtent en quelques mois. C'est aussi le test ultime de la primauté américaine en Pacifique : si Pékin gagne, la première chaîne d'îles tombe et l'ordre indo-pacifique bascule pour 50 ans.\n\nIMPACT POUR L'AES — Élevée (impact macro mondial) : Une crise Taïwan = choc économique global qui frapperait le BF de plein fouet via les puces, l'inflation et le dollar. : Impact sécuritaire direct nul (Asie Pacifique). · Mais : crise Taïwan distrait attention US/UE → désengagement d'autres théâtres (Sahel, Sahel orie…\n\nSCÉNARIOS —\n• Tendanciel — pression militaire constante, pas d'invasion (50%) : Pékin maintient pression militaire/économique/diplomatique. Taïwan se réarme. Économie mondiale absorbe coût continu de la « zone grise ». USA maintiennent ambiguïté.\n• Rupture — crise majeure non-cinétique (25%) : Blocus partiel ou « quarantaine » sanitaire/douanière. Test résolution US/alliés. Crise économique aiguë. Pas de guerre directe mais redéfinition règles.\n\nÀ SURVEILLER — Les exercices PLA majeurs (encerclement, blocus simulés). ; La position de Trump sur l'engagement militaire en cas d'invasion. ; Les avancées de TSMC en Arizona (relocalisation 100 Mds USD).",
       "prospective": "12-36 mois : pression militaire constante mais pas d'invasion immédiate. Risque crise non-cinétique (blocus, quarantaine).",
       "confiance": "eleve",
       "proseIA": null
@@ -886,7 +926,7 @@
     "c_cod": {
       "id": "c_cod",
       "name": "RDC-Est",
-      "volume": 18,
+      "volume": 23,
       "themesDominants": [
         "Diplomatie & alliances",
         "Sécurité & défense",
@@ -908,6 +948,13 @@
           "theme": "D"
         },
         {
+          "titre": "Terrorisme : à l’ONU, la RDC plaide pour une réponse globale face aux exactions des ADF",
+          "source": "ActualitéCD (RDC)",
+          "cote": "F2",
+          "lien": "https://actualite.cd/2026/08/09/terrorisme-lonu-la-rdc-plaide-pour-une-reponse-globale-face-aux-exactions-des-adf",
+          "theme": "S"
+        },
+        {
           "titre": "Est de la RDC: au moins 13 civils tués et tout un village incendié lors d’une attaque des ADF dans l’Ituri",
           "source": "RFI Afrique",
           "cote": "C2",
@@ -927,18 +974,11 @@
           "cote": "A2",
           "lien": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260808-les-autorit%C3%A9s-congolaises-remettent-15-prisonniers-aux-rebelles-de-l-afc-m23",
           "theme": "J"
-        },
-        {
-          "titre": "RDC: l’arrivée à Kinshasa de Miguel Masaisai, le «cycliste pour la paix» dépasse toutes les attentes",
-          "source": "RFI Afrique",
-          "cote": "C2",
-          "lien": "https://www.rfi.fr/fr/afrique/20260808-rdc-l-arriv%C3%A9e-%C3%A0-kinshasa-de-miguel-masaisai-le-cycliste-pour-la-paix-d%C3%A9passe-toutes-les-attentes",
-          "theme": "S"
         }
       ],
       "enjeu": "La RDC ne peut pas reconquérir le Kivu militairement seule. Le Rwanda ne peut pas annexer ouvertement sans crise diplomatique majeure. C'est un statu quo violent durable.",
       "consequencesAES": "Modérée (effet ressources critiques) : Le BF subit indirectement la crise du coltan et des minerais critiques, et observe avec intérêt le modèle d'État défaillant. : Pas d'impact sécuritaire direct (RDC à 2 500 km). · Mais : effet de précédent. Captation territoriale par voisin (Rwanda) sans réactio…",
-      "lectureStructuree": "SITUATION (live) — 18 dépêches sur la période, dominante : Diplomatie & alliances, Sécurité & défense, Logistique & corridors.\nFaits saillants : « Rwanda : Kigali confirme des discussions avec des pays européens sur le transit de migrants expulsés » (Burkina24, cote C1) ; « Agriculture : le Mali renforce sa coopération avec le Congo et mobilise sa diaspora » (Malijet, cote F2) ; « Est de la RDC: au moins 13 civils tués et tout un village incendié lors d’une attaque des ADF dans l’Ituri » (RFI Afrique, cote C2).\n\nENJEU CENTRAL — La RDC ne peut pas reconquérir le Kivu militairement seule. Le Rwanda ne peut pas annexer ouvertement sans crise diplomatique majeure. C'est un statu quo violent durable.\n\nPOURQUOI — C'est le théâtre de la longue guerre des Grands Lacs (~6 millions de morts cumulés depuis 1996). Au-delà de la dimension humanitaire (~7 millions de déplacés), le coltan congolais (70% production mondiale) est indispensable à toute l'industrie tech mondiale. La crise illustre aussi la captation des ressources africaines par procuration et l'échec total des médiations EAC, SADC, UA face à un agresseur — le Rwanda — protégé par sa mémoire post-génocide.\n\nIMPACT POUR L'AES — Modérée (effet ressources critiques) : Le BF subit indirectement la crise du coltan et des minerais critiques, et observe avec intérêt le modèle d'État défaillant. : Pas d'impact sécuritaire direct (RDC à 2 500 km). · Mais : effet de précédent. Captation territoriale par voisin (Rwanda) sans réactio…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (45%) : Kivu sous contrôle M23/Rwanda. Kinshasa garde reste mais perd autorité Est. Économie de prédation continue. ~7-10 M déplacés. Pas d'accord politique.\n• Escalade — guerre régionale (Burundi-Rwanda) (25%) : Engagement direct Burundi-Rwanda autour Sud-Kivu. Risque Ouganda en bascule. Lac Tanganyika nœud. ~5 M réfugiés supplémentaires. Implication EAC.\n\nÀ SURVEILLER — Les mouvements vers Bukavu et au-delà (Sud-Kivu vers Burundi). ; Les sanctions Trump sur le Rwanda (déclaration soutien M23 ?). ; Le sort de la MONUSCO (retrait achevé) et l'éventuelle nouvelle force africaine.",
+      "lectureStructuree": "SITUATION (live) — 23 dépêches sur la période, dominante : Diplomatie & alliances, Sécurité & défense, Logistique & corridors.\nFaits saillants : « Rwanda : Kigali confirme des discussions avec des pays européens sur le transit de migrants expulsés » (Burkina24, cote C1) ; « Agriculture : le Mali renforce sa coopération avec le Congo et mobilise sa diaspora » (Malijet, cote F2) ; « Terrorisme : à l’ONU, la RDC plaide pour une réponse globale face aux exactions des ADF » (ActualitéCD (RDC), cote F2).\n\nENJEU CENTRAL — La RDC ne peut pas reconquérir le Kivu militairement seule. Le Rwanda ne peut pas annexer ouvertement sans crise diplomatique majeure. C'est un statu quo violent durable.\n\nPOURQUOI — C'est le théâtre de la longue guerre des Grands Lacs (~6 millions de morts cumulés depuis 1996). Au-delà de la dimension humanitaire (~7 millions de déplacés), le coltan congolais (70% production mondiale) est indispensable à toute l'industrie tech mondiale. La crise illustre aussi la captation des ressources africaines par procuration et l'échec total des médiations EAC, SADC, UA face à un agresseur — le Rwanda — protégé par sa mémoire post-génocide.\n\nIMPACT POUR L'AES — Modérée (effet ressources critiques) : Le BF subit indirectement la crise du coltan et des minerais critiques, et observe avec intérêt le modèle d'État défaillant. : Pas d'impact sécuritaire direct (RDC à 2 500 km). · Mais : effet de précédent. Captation territoriale par voisin (Rwanda) sans réactio…\n\nSCÉNARIOS —\n• Tendanciel — partition de fait (45%) : Kivu sous contrôle M23/Rwanda. Kinshasa garde reste mais perd autorité Est. Économie de prédation continue. ~7-10 M déplacés. Pas d'accord politique.\n• Escalade — guerre régionale (Burundi-Rwanda) (25%) : Engagement direct Burundi-Rwanda autour Sud-Kivu. Risque Ouganda en bascule. Lac Tanganyika nœud. ~5 M réfugiés supplémentaires. Implication EAC.\n\nÀ SURVEILLER — Les mouvements vers Bukavu et au-delà (Sud-Kivu vers Burundi). ; Les sanctions Trump sur le Rwanda (déclaration soutien M23 ?). ; Le sort de la MONUSCO (retrait achevé) et l'éventuelle nouvelle force africaine.",
       "prospective": "12-36 mois : partition de fait du Kivu. Kinshasa contrôle le reste mais perd autorité dans l'Est.",
       "confiance": "eleve",
       "proseIA": null
@@ -946,7 +986,7 @@
     "c_yem": {
       "id": "c_yem",
       "name": "Mer Rouge",
-      "volume": 42,
+      "volume": 51,
       "themesDominants": [
         "Maritime & océanique",
         "Logistique & corridors",
@@ -968,37 +1008,37 @@
           "theme": "E"
         },
         {
+          "titre": "Iran issues demands for reopening of Hormuz",
+          "source": "Vanguard (Nigeria)",
+          "cote": "A1",
+          "lien": "https://www.vanguardngr.com/2026/08/iran-issues-demands-for-reopening-of-hormuz/",
+          "theme": "M"
+        },
+        {
+          "titre": "Publish your assets, reject vote-buying, SERAP to Tinubu, Atiku, Obi, 16 others",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F1",
+          "lien": "https://www.vanguardngr.com/2026/08/publish-your-assets-reject-vote-buying-serap-to-tinubu-atiku-obi-16-others/",
+          "theme": "P"
+        },
+        {
+          "titre": "Les rebelles houthistes du Yémen affirment avoir frappé une raffinerie saoudienne sur la côte de la mer Rouge",
+          "source": "Le Monde International",
+          "cote": "B2",
+          "lien": "https://www.lemonde.fr/international/article/2026/08/09/les-rebelles-houthistes-du-yemen-affirment-avoir-frappe-une-raffinerie-saoudienne-sur-la-cote-de-la-mer-rouge_6742168_3210.html",
+          "theme": "S"
+        },
+        {
           "titre": "Moyen-Orient en direct : l'Iran pose ses conditions à toute réouverture du détroit d'Ormuz",
           "source": "France 24",
-          "cote": "C2",
+          "cote": "C1",
           "lien": "https://www.france24.com/fr/moyen-orient/20260809-moyen-orient-en-direct-l-iran-pose-ses-conditions-%C3%A0-toute-r%C3%A9ouverture-du-d%C3%A9troit-d-ormuz",
-          "theme": "M"
-        },
-        {
-          "titre": "DIRECT - Moyen-Orient: les Houthis disent avoir frappé une raffinerie en Arabie saoudite",
-          "source": "RFI Moyen-Orient",
-          "cote": "C2",
-          "lien": "https://www.rfi.fr/fr/moyen-orient/20260809-direct-moyen-orient-l-iran-pose-ses-conditions-pour-la-r%C3%A9ouverture-du-d%C3%A9troit-d-ormuz-%C3%A9tats-unis",
-          "theme": "L"
-        },
-        {
-          "titre": "Fire extinguished at Aramco refinery in Jazan, Saudi Arabia says",
-          "source": "Dawn (Pakistan)",
-          "cote": "F1",
-          "lien": "https://www.dawn.com/news/2021681/fire-extinguished-at-aramco-refinery-in-jazan-saudi-arabia-says",
-          "theme": "M"
-        },
-        {
-          "titre": "UAE says Iran attacked ADNOC vessel with missile in Strait of Hormuz",
-          "source": "Al-Monitor",
-          "cote": "A2",
-          "lien": "https://www.al-monitor.com/originals/2026/08/uae-says-iran-attacked-adnoc-vessel-missile-strait-hormuz",
           "theme": "M"
         }
       ],
       "enjeu": "Un acteur asymétrique armé de drones à 30 000 USD peut paralyser le commerce maritime mondial pendant des mois. C'est une révolution de l'asymétrie qui change toutes les doctrines navales.",
       "consequencesAES": "",
-      "lectureStructuree": "SITUATION (live) — 42 dépêches sur la période, dominante : Maritime & océanique, Logistique & corridors, Économie & ressources.\nFaits saillants : « Modernisation de l’aéroport de Bobo-Dioulasso : 79 milliards de FCFA pour transformer Sya en un hub aéroportuaire international » (Net Afrique (BF), cote F1) ; « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Moyen-Orient en direct : l'Iran pose ses conditions à toute réouverture du détroit d'Ormuz » (France 24, cote C2).\n\nENJEU CENTRAL — Un acteur asymétrique armé de drones à 30 000 USD peut paralyser le commerce maritime mondial pendant des mois. C'est une révolution de l'asymétrie qui change toutes les doctrines navales.\n\nPOURQUOI — Bab el-Mandeb verrouille le passage entre Suez et l'océan Indien. Sa fermeture force les navires à contourner par le cap de Bonne-Espérance (+10-14 jours, +30% coût). Les frappes US-UK ne font pas reculer les Houthis, qui sortent renforcés (popularité gonflée, légitimité régionale, leçon utile pour tout acteur asymétrique). Cela impacte directement le commerce du Burkina Faso (importations Asie) et tous les pays enclavés du Sahel.\n\nÀ SURVEILLER — Le maintien ou la levée du blocus mer Rouge. ; Les négociations saoudo-houthies (gel possible ?). ; Le transfert de technologies iraniennes après l'effondrement de l'arc chiite.",
+      "lectureStructuree": "SITUATION (live) — 51 dépêches sur la période, dominante : Maritime & océanique, Logistique & corridors, Économie & ressources.\nFaits saillants : « Modernisation de l’aéroport de Bobo-Dioulasso : 79 milliards de FCFA pour transformer Sya en un hub aéroportuaire international » (Net Afrique (BF), cote F1) ; « Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral) » (Le Grand Continent, cote A2) ; « Iran issues demands for reopening of Hormuz » (Vanguard (Nigeria), cote A1).\n\nENJEU CENTRAL — Un acteur asymétrique armé de drones à 30 000 USD peut paralyser le commerce maritime mondial pendant des mois. C'est une révolution de l'asymétrie qui change toutes les doctrines navales.\n\nPOURQUOI — Bab el-Mandeb verrouille le passage entre Suez et l'océan Indien. Sa fermeture force les navires à contourner par le cap de Bonne-Espérance (+10-14 jours, +30% coût). Les frappes US-UK ne font pas reculer les Houthis, qui sortent renforcés (popularité gonflée, légitimité régionale, leçon utile pour tout acteur asymétrique). Cela impacte directement le commerce du Burkina Faso (importations Asie) et tous les pays enclavés du Sahel.\n\nÀ SURVEILLER — Le maintien ou la levée du blocus mer Rouge. ; Les négociations saoudo-houthies (gel possible ?). ; Le transfert de technologies iraniennes après l'effondrement de l'arc chiite.",
       "prospective": "6-18 mois : maintien du harcèlement maritime probable, sauf accord régional global.",
       "confiance": "eleve",
       "proseIA": null
@@ -1006,19 +1046,33 @@
     "c_kor": {
       "id": "c_kor",
       "name": "Corée",
-      "volume": 10,
+      "volume": 13,
       "themesDominants": [
-        "Maritime & océanique",
         "Sécurité & défense",
-        "Technologie & cyber"
+        "Maritime & océanique",
+        "Justice & droit international"
       ],
       "faits": [
+        {
+          "titre": "Five dead in new Russia, Ukraine strikes",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F1",
+          "lien": "https://www.vanguardngr.com/2026/08/five-dead-in-new-russia-ukraine-strikes/",
+          "theme": "S"
+        },
         {
           "titre": "Fire extinguished at Aramco refinery in Jazan, Saudi Arabia says",
           "source": "Dawn (Pakistan)",
           "cote": "F1",
           "lien": "https://www.dawn.com/news/2021681/fire-extinguished-at-aramco-refinery-in-jazan-saudi-arabia-says",
           "theme": "M"
+        },
+        {
+          "titre": "10 countries where getting citizenship is difficult for Nigerians, others",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F2",
+          "lien": "https://www.vanguardngr.com/2026/08/10-countries-where-getting-citizenship-is-difficult-for-nigerians-others/",
+          "theme": "J"
         },
         {
           "titre": "Pakistan's Muhammad Zubair becomes Tekken 8 champion at Esports World Cup in Paris",
@@ -1035,30 +1089,16 @@
           "theme": "S"
         },
         {
-          "titre": "South Korea to launch nationwide crackdown on organized crime",
-          "source": "Anadolu Agency (Turquie)",
+          "titre": "At least 12 taken to hospital after fire breaks out at Taikoo Shing flat",
+          "source": "South China Morning Post",
           "cote": "F2",
-          "lien": "https://www.aa.com.tr/en/asia-pacific/south-korea-to-launch-nationwide-crackdown-on-organized-crime/4022278",
+          "lien": "https://www.scmp.com/news/hong-kong/society/article/3363441/least-12-taken-hospital-after-fire-breaks-out-taikoo-shing-flat?utm_source=rss_feed",
           "theme": null
-        },
-        {
-          "titre": "Ukraine seeking air defense systems from South Korea",
-          "source": "The Japan Times",
-          "cote": "F2",
-          "lien": "https://www.japantimes.co.jp/news/2026/08/09/asia-pacific/ukraine-zelenskyy-south-korea-air-defense/",
-          "theme": null
-        },
-        {
-          "titre": "OpenAI flags possible critical cybersecurity risk in upcoming model Astra, tightens controls",
-          "source": "Dawn (Pakistan)",
-          "cote": "F2",
-          "lien": "https://www.dawn.com/news/2021506/openai-flags-possible-critical-cybersecurity-risk-in-upcoming-model-astra-tightens-controls",
-          "theme": "T"
         }
       ],
       "enjeu": "L'axe Russie-Corée du Nord brise les sanctions internationales et démontre qu'un État-paria peut sortir de l'isolement en s'alignant sur une grande puissance révisionniste.",
       "consequencesAES": "",
-      "lectureStructuree": "SITUATION (live) — 10 dépêches sur la période, dominante : Maritime & océanique, Sécurité & défense, Technologie & cyber.\nFaits saillants : « Fire extinguished at Aramco refinery in Jazan, Saudi Arabia says » (Dawn (Pakistan), cote F1) ; « Pakistan's Muhammad Zubair becomes Tekken 8 champion at Esports World Cup in Paris » (Dawn (Pakistan), cote F2) ; « Initial findings of second post-mortem show multiple injuries on Mir Raza Ali, police surgeon says » (Dawn (Pakistan), cote F2).\n\nENJEU CENTRAL — L'axe Russie-Corée du Nord brise les sanctions internationales et démontre qu'un État-paria peut sortir de l'isolement en s'alignant sur une grande puissance révisionniste.\n\nPOURQUOI — Le pacte Russie-Corée du Nord (juin 2024) est la première véritable alliance entre une puissance nucléaire et un État-paria depuis longtemps. ~12 000 soldats nord-coréens en Koursk = première projection terrestre de Pyongyang depuis 1953. En échange, Moscou transfère des technologies qui font sauter les verrous sur le programme nord-coréen, augmentant directement la menace pour le Japon, la Corée du Sud et les États-Unis.\n\nÀ SURVEILLER — Les tirs balistiques de nouvelle génération. ; La diplomatie Trump-Kim (sommet possible ?). ; Le retour des troupes nord-coréennes de Russie avec expérience combat.",
+      "lectureStructuree": "SITUATION (live) — 13 dépêches sur la période, dominante : Sécurité & défense, Maritime & océanique, Justice & droit international.\nFaits saillants : « Five dead in new Russia, Ukraine strikes » (Vanguard (Nigeria), cote F1) ; « Fire extinguished at Aramco refinery in Jazan, Saudi Arabia says » (Dawn (Pakistan), cote F1) ; « 10 countries where getting citizenship is difficult for Nigerians, others » (Vanguard (Nigeria), cote F2).\n\nENJEU CENTRAL — L'axe Russie-Corée du Nord brise les sanctions internationales et démontre qu'un État-paria peut sortir de l'isolement en s'alignant sur une grande puissance révisionniste.\n\nPOURQUOI — Le pacte Russie-Corée du Nord (juin 2024) est la première véritable alliance entre une puissance nucléaire et un État-paria depuis longtemps. ~12 000 soldats nord-coréens en Koursk = première projection terrestre de Pyongyang depuis 1953. En échange, Moscou transfère des technologies qui font sauter les verrous sur le programme nord-coréen, augmentant directement la menace pour le Japon, la Corée du Sud et les États-Unis.\n\nÀ SURVEILLER — Les tirs balistiques de nouvelle génération. ; La diplomatie Trump-Kim (sommet possible ?). ; Le retour des troupes nord-coréennes de Russie avec expérience combat.",
       "prospective": "12-24 mois : poursuite du rapprochement RU-PRK, renforcement programmes, peut-être test nucléaire.",
       "confiance": "eleve",
       "proseIA": null
@@ -1066,26 +1106,18 @@
     "c_syr": {
       "id": "c_syr",
       "name": "Syrie",
-      "volume": 41,
+      "volume": 40,
       "themesDominants": [
         "Politique interne & gouvernance",
-        "Économie & ressources",
-        "Sécurité & défense"
+        "Économie & ressources"
       ],
       "faits": [
         {
-          "titre": "Interior Minister’s achievements have projected youths positively",
-          "source": "Vanguard (Nigeria)",
-          "cote": "F2",
-          "lien": "https://www.vanguardngr.com/2026/08/interior-ministers-achievements-have-projected-youths-positively/",
-          "theme": "P"
-        },
-        {
-          "titre": "Ibadan meeting: Atiku, Obi, Kwankwaso still have opportunity for grand alliance — Ologbondiyan",
-          "source": "Vanguard (Nigeria)",
-          "cote": "A2",
-          "lien": "https://www.vanguardngr.com/2026/08/ibadan-meeting-atiku-obi-kwankwaso-still-have-opportunity-for-grand-alliance-ologbondiyan/",
-          "theme": "P"
+          "titre": "WAFU B U-20 Preview: Flying Eagles seek revenge against Burkina Faso in showdown",
+          "source": "Premium Times (Nigeria)",
+          "cote": "F1",
+          "lien": "https://www.premiumtimesng.com/news/top-news/901620-wafu-b-u-20-preview-flying-eagles-seek-revenge-against-burkina-faso-in-showdown.html",
+          "theme": null
         },
         {
           "titre": "Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation",
@@ -1093,6 +1125,20 @@
           "cote": "A1",
           "lien": "https://legrandcontinent.eu/fr/2026/08/08/groenland-energy-trump/",
           "theme": "P"
+        },
+        {
+          "titre": "Publish your assets, reject vote-buying, SERAP to Tinubu, Atiku, Obi, 16 others",
+          "source": "Vanguard (Nigeria)",
+          "cote": "F1",
+          "lien": "https://www.vanguardngr.com/2026/08/publish-your-assets-reject-vote-buying-serap-to-tinubu-atiku-obi-16-others/",
+          "theme": "P"
+        },
+        {
+          "titre": "Tunisie – Algérie | Non à la spoliation, à l’intimidation et à la vassalisation !",
+          "source": "Kapitalis (Tunisie)",
+          "cote": "F2",
+          "lien": "https://kapitalis.com/tunisie/2026/08/09/tunisie-algerie-non-a-la-spoliation-a-lintimidation-et-a-la-vassalisation/",
+          "theme": "E"
         },
         {
           "titre": "Céréales : pourquoi l’Algérie continue d’importer du blé, malgré une récolte exceptionnelle",
@@ -1107,42 +1153,19 @@
           "cote": "F2",
           "lien": "https://www.vanguardngr.com/2026/08/tinubus-reforms-fuel-nasarawas-n90bn-infrastructure-boom-gov-sule/",
           "theme": "P"
-        },
-        {
-          "titre": "EN DIRECT, guerre en Ukraine : après l’explosion en Bulgarie d’un drone correspondant à ceux utilisés par Kiev, l’ambassadrice ukrainienne à Sofia convoquée",
-          "source": "Le Monde International",
-          "cote": "B1",
-          "lien": "https://www.lemonde.fr/international/live/2026/08/09/en-direct-guerre-en-ukraine-apres-l-explosion-en-bulgarie-d-un-drone-correspondant-a-ceux-utilises-par-kiev-l-ambassadrice-ukrainienne-a-sofia-convoquee_6741928_3210.html",
-          "theme": "S"
         }
       ],
       "enjeu": "La transition syrienne peut reconstruire un État viable (rare) ou se fragmenter en libanisation (probable). La gestion de la question kurde et le retour des réfugiés sont les vraies épreuves.",
       "consequencesAES": "",
-      "lectureStructuree": "SITUATION (live) — 41 dépêches sur la période, dominante : Politique interne & gouvernance, Économie & ressources, Sécurité & défense.\nFaits saillants : « Interior Minister’s achievements have projected youths positively » (Vanguard (Nigeria), cote F2) ; « Ibadan meeting: Atiku, Obi, Kwankwaso still have opportunity for grand alliance — Ologbondiyan » (Vanguard (Nigeria), cote A2) ; « Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation » (Le Grand Continent, cote A1).\n\nENJEU CENTRAL — La transition syrienne peut reconstruire un État viable (rare) ou se fragmenter en libanisation (probable). La gestion de la question kurde et le retour des réfugiés sont les vraies épreuves.\n\nPOURQUOI — La Syrie était le pilier oriental de l'arc chiite iranien et de la projection russe en Méditerranée (base Tartous). Sa chute reconfigure tout le Levant : Iran isolé, Russie affaiblie, Hezbollah privé de corridor logistique, Turquie en position de force. Mais HTS reste suspect (passé jihadiste), la question kurde non résolue, Israël a détruit 80% des capacités militaires syriennes en 48h post-Assad.\n\nÀ SURVEILLER — Les négociations HTS-SDF sur l'avenir des Kurdes. ; La levée ou non des sanctions occidentales sur le nouveau régime. ; Le retour des réfugiés syriens depuis Turquie/Liban (~6 millions).",
+      "lectureStructuree": "SITUATION (live) — 40 dépêches sur la période, dominante : Politique interne & gouvernance, Économie & ressources.\nFaits saillants : « WAFU B U-20 Preview: Flying Eagles seek revenge against Burkina Faso in showdown » (Premium Times (Nigeria), cote F1) ; « Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation » (Le Grand Continent, cote A1) ; « Publish your assets, reject vote-buying, SERAP to Tinubu, Atiku, Obi, 16 others » (Vanguard (Nigeria), cote F1).\n\nENJEU CENTRAL — La transition syrienne peut reconstruire un État viable (rare) ou se fragmenter en libanisation (probable). La gestion de la question kurde et le retour des réfugiés sont les vraies épreuves.\n\nPOURQUOI — La Syrie était le pilier oriental de l'arc chiite iranien et de la projection russe en Méditerranée (base Tartous). Sa chute reconfigure tout le Levant : Iran isolé, Russie affaiblie, Hezbollah privé de corridor logistique, Turquie en position de force. Mais HTS reste suspect (passé jihadiste), la question kurde non résolue, Israël a détruit 80% des capacités militaires syriennes en 48h post-Assad.\n\nÀ SURVEILLER — Les négociations HTS-SDF sur l'avenir des Kurdes. ; La levée ou non des sanctions occidentales sur le nouveau régime. ; Le retour des réfugiés syriens depuis Turquie/Liban (~6 millions).",
       "prospective": "6-12 mois : stabilisation fragile ou fragmentation. Décision cruciale sur Kurdes.",
       "confiance": "eleve",
       "proseIA": null
     }
   },
-  "syntheseExecutive": "Sur la période, 800 dépêches ont été classées et cotées. Priorité géographique : 1. Sahel & AO franco. (131 signaux, tendance stable). Signaux faibles émergents à surveiller : 11. Asie centrale · Sécurité & défense ; 14. Extrême-Orient · Maritime & océanique ; 5. Corne de l’Afrique · Humanitaire & social.\n\nSujets chauds de la période :\n• Sahel/AES (117 signaux) — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n• Iran-Israël (115 signaux) — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n• Taïwan (70 signaux) — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.",
+  "syntheseExecutive": "Sur la période, 800 dépêches ont été classées et cotées. Priorité géographique : 1. Sahel & AO franco. (120 signaux, tendance stable). Ruptures repérées : Karachi's Red Line suffers another blow as decision to cancel Mosamiyat-to-Numaish contract declared ‘invalid’ ; 4. Grands Lacs · Sécurité & défense. Signaux faibles émergents à surveiller : 14. Extrême-Orient · Nucléaire & prolifération ; 6. Afrique australe · Humanitaire & social ; 11. Asie centrale · Sécurité & défense.\n\nSujets chauds de la période :\n• Iran-Israël (121 signaux) — La question nucléaire iranienne et la survie du régime des Pasdaran détermineront la stabilité régionale pour 20 ans.\n• Sahel/AES (109 signaux) — Inventer un modèle politique africain qui combine souveraineté affichée et efficacité sécuritaire — sans y être encore parvenu.\n• Taïwan (79 signaux) — TSMC fait de Taïwan un nœud systémique de l'économie mondiale. Cela renforce la dissuasion (« bouclier de silicium ») mais aussi l'enjeu, donc la tentation chinoise de neutraliser cet avantage par la force.",
   "llmUsed": false,
   "achSuggestions": [
-    {
-      "conflictId": "c_aes",
-      "name": "Sahel/AES",
-      "hypotheses": [
-        "Sahel/AES : escalade / aggravation a 3-6 mois",
-        "Sahel/AES : statu quo instable",
-        "Sahel/AES : desescalade / reglement partiel"
-      ],
-      "evidence": [
-        "Lutte antiterroriste : Le comité de gestion du Fonds de soutien patriotique constate l’impact de ses investissements aux VDP dans la région du Goulmou",
-        "Fonds de soutien patriotique : L’impact des contributions évalué au Bataillon mixte de marche Fantôme 1 à Fada N’Gourma",
-        "Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé",
-        "Lancement officiel des JNLAV 2026 : « La lutte contre le paludisme commence par la destruction des gîtes larvaires »",
-        "Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando"
-      ]
-    },
     {
       "conflictId": "c_iran_il",
       "name": "Iran-Israël",
@@ -1152,11 +1175,27 @@
         "Iran-Israël : desescalade / reglement partiel"
       ],
       "evidence": [
-        "ICC oversight body urges Chad and Venezuela to reverse withdrawal",
         "Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral)",
+        "Iran issues demands for reopening of Hormuz",
         "Egypt could join Pak-Saudi-Turkiye defence pact once technical issues resolved, says Turkish foreign minister",
-        "Congrès américain : le 3è projet de loi contre le polisario gagne des soutiens",
-        "Tunisie – Algérie | Le litige frontalier entre l’histoire et le droit"
+        "Les rebelles houthistes du Yémen affirment avoir frappé une raffinerie saoudienne sur la côte de la mer Rouge",
+        "Congrès américain : le 3è projet de loi contre le polisario gagne des soutiens"
+      ]
+    },
+    {
+      "conflictId": "c_aes",
+      "name": "Sahel/AES",
+      "hypotheses": [
+        "Sahel/AES : escalade / aggravation a 3-6 mois",
+        "Sahel/AES : statu quo instable",
+        "Sahel/AES : desescalade / reglement partiel"
+      ],
+      "evidence": [
+        "Burkina : Le FSP mobilise plus de 700 millions FCFA par mois pour le Bataillon Mixte de Marche Fantôme 1",
+        "Le compte à rebours de la 33e Super Coupe AJSB officiellement lancé",
+        "Lancement officiel des JNLAV 2026 : « La lutte contre le paludisme commence par la destruction des gîtes larvaires »",
+        "Koudougou : Coup d’envoi des Journées nationales de lutte anti-vectorielle dans la région de Nando",
+        "Camp Vacances Faso Mêbo 2026 : Le calendrier et les lieux dévoilés"
       ]
     },
     {
@@ -1170,40 +1209,40 @@
       "evidence": [
         "Modernisation de l’aéroport de Bobo-Dioulasso : 79 milliards de FCFA pour transformer Sya en un hub aéroportuaire international",
         "Tucker Carlson : « Il est temps de sauver l’Amérique » (discours intégral)",
+        "Iran issues demands for reopening of Hormuz",
         "SN BRAFASO : Le Ministre Serge Poda sur le terrain pour booster la relance industrielle",
-        "Pourquoi la France est-elle devenue la puissance la moins populaire au Gabon ?",
-        "Une entreprise pétrolière proche de Trump se prépare à forer le Groenland sans autorisation"
+        "Pourquoi la France est-elle devenue la puissance la moins populaire au Gabon ?"
       ]
     }
   ],
   "agentLog": [
     {
-      "at": "2026-08-09T08:03:12.018Z",
+      "at": "2026-08-09T10:02:40.079Z",
       "agent": "Agent Analyste",
       "message": "Demarrage (IA: non, mode structure)"
     },
     {
-      "at": "2026-08-09T08:03:12.045Z",
+      "at": "2026-08-09T10:02:40.105Z",
       "agent": "Agent Analyste",
       "message": "10 conflits charges"
     },
     {
-      "at": "2026-08-09T08:03:12.046Z",
+      "at": "2026-08-09T10:02:40.106Z",
       "agent": "Agent Analyste",
       "message": "800 articles dans la fenetre (168 h)"
     },
     {
-      "at": "2026-08-09T08:03:12.054Z",
+      "at": "2026-08-09T10:02:40.112Z",
       "agent": "Agent Analyste",
-      "message": "Detection: 9 tendances, 5 signaux faibles, 0 ruptures, 0 recompositions"
+      "message": "Detection: 9 tendances, 7 signaux faibles, 3 ruptures, 0 recompositions"
     },
     {
-      "at": "2026-08-09T08:03:12.151Z",
+      "at": "2026-08-09T10:02:40.223Z",
       "agent": "Agent Analyste",
       "message": "10 conflits analyses, 3 suggestions ACH"
     },
     {
-      "at": "2026-08-09T08:03:12.152Z",
+      "at": "2026-08-09T10:02:40.223Z",
       "agent": "Agent Analyste",
       "message": "Productions: 3 notes zone, 3 prospectives, 4 etudes"
     }
