@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-12T02:44:20.216Z",
+  "generatedAt": "2026-08-12T05:02:31.310Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
     "ok": 109,
     "failed": 61,
-    "articles": 1927,
+    "articles": 1924,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -63,6 +63,11 @@
         "count": 0
       },
       {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "count": 10
+      },
+      {
         "id": "rss_maliweb",
         "name": "Maliweb",
         "count": 0
@@ -95,6 +100,11 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
+        "count": 10
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -136,11 +146,6 @@
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
-      },
-      {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "count": 20
       },
       {
         "id": "rss_premiumng",
@@ -201,11 +206,6 @@
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
-      },
-      {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "count": 0
       },
       {
         "id": "rss_madamasr",
@@ -285,7 +285,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 26
+        "count": 23
       },
       {
         "id": "rss_rfimo",
@@ -390,7 +390,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 26
+        "count": 25
       },
       {
         "id": "rss_bbc_africa",
@@ -500,7 +500,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -560,11 +560,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_bf24",
         "name": "Faso24",
         "error": "HTTP 403"
@@ -593,11 +588,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -647,12 +637,17 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
+      },
+      {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "error": "fetch failed"
       },
       {
         "id": "rss_saharang",
@@ -667,7 +662,7 @@
       {
         "id": "rss_journ_cam",
         "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
+        "error": "fetch failed"
       },
       {
         "id": "rss_7sur7",
@@ -718,6 +713,11 @@
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_libya_obs",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 69,
-    "alerts": 19,
-    "criticalAlerts": 12,
-    "sourcesDistinct": 69
+    "bfAes": 62,
+    "alerts": 16,
+    "criticalAlerts": 11,
+    "sourcesDistinct": 68
   },
   "topDevelopments": [
     {
@@ -1132,10 +1132,26 @@
   ],
   "alerts": [
     {
+      "title": "DIRECT - Moyen-Orient: les États-Unis tirent sur un navire qui violait son blocus des ports iraniens",
+      "link": "https://www.rfi.fr/fr/moyen-orient/20260812-direct-moyen-orient-les-%C3%A9tats-unis-tirent-sur-un-navire-qui-violait-son-blocus-des-ports-iraniens",
+      "source": "RFI Moyen-Orient",
+      "date": "2026-08-12T04:18:30.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
       "title": "West Asia war LIVE: U.S. helicopter fired on ship that tried to break Iran ports blockade",
       "link": "https://www.thehindu.com/news/international/iran-us-war-live-updates-august-12-2026/article71334841.ece",
       "source": "The Hindu (Inde)",
-      "date": "2026-08-12T01:15:53.000Z",
+      "date": "2026-08-12T04:07:00.000Z",
       "rating": "F6",
       "evidence": "Source unique",
       "level": "high",
@@ -1144,6 +1160,22 @@
         {
           "type": "rupture",
           "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "En direct : l'armée américaine tire sur un navire qui violait son blocus des ports iraniens",
+      "link": "https://www.france24.com/fr/moyen-orient/20260812-en-direct-moyen-orient-iran-etats-unis-detroit-ormuz-donald-trump-houthis",
+      "source": "France 24",
+      "date": "2026-08-12T02:58:43.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
         }
       ]
     },
@@ -1212,22 +1244,6 @@
       ]
     },
     {
-      "title": "US fires on ship it says violated Iran blockade",
-      "link": "https://www.ft.com/content/ac651a05-9285-4020-85e2-47fcd8936320?syn-25a6b1a6=1",
-      "source": "Financial Times World",
-      "date": "2026-08-11T20:51:47.000Z",
-      "rating": "B3",
-      "evidence": "Source fiable unique",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
       "title": "CENTCOM reports disabling ship that attempted to breach blockade on Iran",
       "link": "https://tass.com/world/2171589",
       "source": "TASS (Russie, EN)",
@@ -1280,7 +1296,7 @@
       "link": "https://www.lemonde.fr/international/article/2026/08/11/l-armee-americaine-dit-avoir-tire-sur-un-navire-qui-violait-son-blocus-des-ports-iraniens_6744297_3210.html",
       "source": "Le Monde International",
       "date": "2026-08-11T19:38:57.000Z",
-      "rating": "B2",
+      "rating": "B1",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1308,23 +1324,7 @@
       ]
     },
     {
-      "title": "Tightened blockade on Gaza causes prices to soar",
-      "link": "https://www.aljazeera.com/video/newsfeed/2026/8/11/tightened-blockade-on-gaza-causes-prices-to-soar?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "date": "2026-08-11T18:45:26.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "Séisme en Colombie : au moins 240 morts et plus de 1 600 blessés, selon un nouveau bilan",
+      "title": "Séisme en Colombie : 216 morts et plus de 1 600 blessés, selon un nouveau bilan",
       "link": "https://www.lemonde.fr/international/article/2026/08/11/seisme-en-colombie-au-moins-240-morts-et-plus-de-600-blesses-selon-un-nouveau-bilan_6743869_3211.html",
       "source": "Le Monde International",
       "date": "2026-08-11T17:31:11.000Z",
@@ -1352,22 +1352,6 @@
         {
           "type": "crise",
           "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Hafia 1 : les cinq victimes de l’effondrement de l’immeuble R+5 identifiées",
-      "link": "https://mediaguinee.com/2026/08/hafia-1-les-cinq-victimes-de-leffondrement-de-limmeuble-r5-identifiees/",
-      "source": "Mediaguinee",
-      "date": "2026-08-11T17:02:32.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "effondrement"
         }
       ]
     },
@@ -1402,80 +1386,48 @@
           "keyword": "reconnaissance"
         }
       ]
-    },
-    {
-      "title": "Effondrement d’un immeuble à Hafia 1 : Lamine Cissé affirme avoir signalé des fissures avant le drame",
-      "link": "https://mediaguinee.com/2026/08/effondrement-dun-immeuble-a-hafia-1-lamine-cisse-affirme-avoir-signale-des-fissures-avant-le-drame/",
-      "source": "Mediaguinee",
-      "date": "2026-08-11T14:52:31.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "effondrement"
-        }
-      ]
-    },
-    {
-      "title": "Que sait-on du séisme de magnitude 7,4 qui a fait plus d'une centaine de morts et causé d'importants dégâts en Colombie ?",
-      "link": "https://www.bbc.com/afrique/articles/cqlx7gdxxx4o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Afrique (FR)",
-      "date": "2026-08-11T13:41:38.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      226
+      193
     ],
     [
       "occident_us",
-      111
+      114
     ],
     [
       "occident_fr",
-      96
+      111
     ],
     [
       "autre",
-      89
+      109
     ],
     [
       "bf_local",
-      59
+      57
     ],
     [
       "golfe_mo",
-      54
-    ],
-    [
-      "turquie",
-      46
+      55
     ],
     [
       "russie",
-      45
-    ],
-    [
-      "sahel",
       44
     ],
     [
+      "turquie",
+      42
+    ],
+    [
+      "sahel",
+      39
+    ],
+    [
       "chine",
-      30
+      36
     ]
   ],
   "desks": [
@@ -1483,7 +1435,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 132,
+      "count": 112,
       "top": [
         {
           "title": "Journée internationale de la jeunesse : « Les jeunes doivent se focaliser sur leur formation et saisir les opportunités qui se présentent à eux », Michel Sawadogo",
@@ -1536,7 +1488,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 55,
+      "count": 62,
       "top": [
         {
           "title": "Le Ghana et le Burkina Faso ont signé un accord de coopération en matière de défense",
@@ -1548,11 +1500,11 @@
           "rating": "F1"
         },
         {
-          "title": "Bagre Dam spillage: 68 communities in Northern region alerted as Burkina Faso monitors water levels",
-          "link": "https://www.myjoyonline.com/bagre-dam-spillage-68-communities-in-northern-region-alerted-as-burkina-faso-monitors-water-levels/",
+          "title": "Ghana’s tomato, ginger shortfalls deepen import bill, CSIR researchers say",
+          "link": "https://www.myjoyonline.com/ghanas-tomato-ginger-shortfalls-deepen-import-bill-csir-researchers-say/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "H",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1566,22 +1518,22 @@
           "rating": "F2"
         },
         {
-          "title": "2025 Agreement: NANS warns governors against another ASUU strike",
-          "link": "https://www.vanguardngr.com/2026/08/2025-agreement-nans-warns-governors-against-another-asuu-strike/",
+          "title": "Osun election: Adeyanju writes US, UK to sanction Fadaunsi over alleged threat",
+          "link": "https://www.vanguardngr.com/2026/08/osun-election-adeyanju-writes-us-uk-to-sanction-fadaunsi-over-alleged-threat/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Osun’s APC senator seen in viral video issuing death threat to Accord Party members",
-          "link": "https://www.premiumtimesng.com/news/top-news/902207-osuns-apc-senator-seen-in-viral-video-issuing-death-threat-to-accord-party-members.html",
-          "source": "Premium Times (Nigeria)",
+          "title": "Infrastructure terrorism: How scavengers wreak havoc on public facilities",
+          "link": "https://www.vanguardngr.com/2026/08/infrastructure-terrorism-how-scavengers-wreak-havoc-on-public-facilities/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1589,7 +1541,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 27,
+      "count": 26,
       "top": [
         {
           "title": "Business, fortune, pouvoir et soupçons : le procès permanent des hommes d’affaires",
@@ -1619,6 +1571,15 @@
           "rating": "B2"
         },
         {
+          "title": "New transmission from animals likely caused Congo-Uganda Ebola outbreak, study says",
+          "link": "https://www.myjoyonline.com/new-transmission-from-animals-likely-caused-congo-uganda-ebola-outbreak-study-says/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "3. Afrique centrale",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A2"
+        },
+        {
           "title": "Félix Tshisekedi lance les travaux du boulevard Docteur Étienne Tshisekedi wa Mulumba à Kinshasa",
           "link": "https://www.radiookapi.net/2026/08/11/actualite/societe/felix-tshisekedi-lance-les-travaux-du-boulevard-docteur-etienne",
           "source": "Radio Okapi (RDC)",
@@ -1626,15 +1587,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F1"
-        },
-        {
-          "title": "Football : privé de Mondial, le Somalien Omar Artan s'apprête à arbitrer la Supercoupe d'Europe",
-          "link": "https://www.france24.com/fr/sports/20260811-football-priv%C3%A9-mondial-arbitre-somalien-omar-artan-supercoupe-europe-uefa",
-          "source": "France 24",
-          "zone": "5. Corne de l’Afrique",
-          "theme": null,
-          "relevance": ".",
-          "rating": "C2"
         }
       ]
     },
@@ -1642,7 +1594,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 33,
+      "count": 30,
       "top": [
         {
           "title": "Sebta : 11.000 personnes dans les rues, Juan Vivas réclame une réponse d'urgence",
@@ -1672,22 +1624,22 @@
           "rating": "F2"
         },
         {
-          "title": "Incendies : des centaines d’hectares de forêt ravagés à Sefrou et Chefchaouen",
-          "link": "https://fr.hespress.com/484899-incendies-des-centaines-dhectares-de-foret-ravages-a-sefrou-et-chefchaouen.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Désinformation, IA, harcèlement : L’ONU appelle à mieux protéger les jeunes en ligne",
-          "link": "https://fr.hespress.com/484851-desinformation-ia-harcelement-lonu-appelle-a-mieux-proteger-les-jeunes-en-ligne.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Tivaouane : un Salon international du livre islamique pour valoriser le patrimoine manuscrit",
+          "link": "https://lesoleil.sn/actualites/societe-fait-divers/religion/tivaouane-un-salon-international-du-livre-islamique-pour-valoriser-le-patrimoine-manuscrit/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "T",
           "relevance": "L",
           "rating": "F2"
+        },
+        {
+          "title": "Investissement des MRE : les CRI mobilisés pour transformer les projets en réalisations",
+          "link": "https://fr.hespress.com/484868-investissement-des-mre-les-cri-mobilises-pour-transformer-les-projets-en-realisations.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1695,7 +1647,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 90,
+      "count": 89,
       "top": [
         {
           "title": "Syrie : Bachar al-Assad condamné à mort par contumace pour crimes de guerre",
@@ -1713,7 +1665,7 @@
           "zone": "8. Moyen-Orient",
           "theme": "M",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "B1"
         },
         {
           "title": "US says helicopter fired missiles to disable ship breaking Iran blockade",
@@ -1748,7 +1700,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 168,
+      "count": 178,
       "top": [
         {
           "title": "FIFA : Donald Trump prend la défense de Gianni Infantino, fragilisé par la polémique",
@@ -1769,31 +1721,31 @@
           "rating": "A2"
         },
         {
-          "title": "Séisme en Colombie : au moins 240 morts et plus de 1 600 blessés, selon un nouveau bilan",
+          "title": "DIRECT - Moyen-Orient: les États-Unis tirent sur un navire qui violait son blocus des ports iraniens",
+          "link": "https://www.rfi.fr/fr/moyen-orient/20260812-direct-moyen-orient-les-%C3%A9tats-unis-tirent-sur-un-navire-qui-violait-son-blocus-des-ports-iraniens",
+          "source": "RFI Moyen-Orient",
+          "zone": "16. Amérique du Nord",
+          "theme": "L",
+          "relevance": "L",
+          "rating": "C1"
+        },
+        {
+          "title": "En direct : l'armée américaine tire sur un navire qui violait son blocus des ports iraniens",
+          "link": "https://www.france24.com/fr/moyen-orient/20260812-en-direct-moyen-orient-iran-etats-unis-detroit-ormuz-donald-trump-houthis",
+          "source": "France 24",
+          "zone": "16. Amérique du Nord",
+          "theme": "L",
+          "relevance": "L",
+          "rating": "C1"
+        },
+        {
+          "title": "Séisme en Colombie : 216 morts et plus de 1 600 blessés, selon un nouveau bilan",
           "link": "https://www.lemonde.fr/international/article/2026/08/11/seisme-en-colombie-au-moins-240-morts-et-plus-de-600-blesses-selon-un-nouveau-bilan_6743869_3211.html",
           "source": "Le Monde International",
           "zone": "18. Amérique du Sud",
           "theme": null,
           "relevance": ".",
           "rating": "B1"
-        },
-        {
-          "title": "Que sait-on du séisme de magnitude 7,4 qui a fait plus d'une centaine de morts et causé d'importants dégâts en Colombie ?",
-          "link": "https://www.bbc.com/afrique/articles/cqlx7gdxxx4o?at_medium=RSS&at_campaign=rss",
-          "source": "BBC Afrique (FR)",
-          "zone": "18. Amérique du Sud",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Petroleum dealers issue 72-hour ultimatum",
-          "link": "https://www.dawn.com/news/2022267/petroleum-dealers-issue-72-hour-ultimatum",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     }
@@ -1811,42 +1763,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-12T02:43:34.413Z",
+      "at": "2026-08-12T05:01:52.160Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-12T02:43:34.421Z",
+      "at": "2026-08-12T05:01:52.167Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-12T02:44:16.804Z",
+      "at": "2026-08-12T05:02:28.070Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1927 articles"
+      "message": "109/170 flux OK, 1924 articles"
     },
     {
-      "at": "2026-08-12T02:44:19.866Z",
+      "at": "2026-08-12T05:02:30.975Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-12T02:44:20.212Z",
+      "at": "2026-08-12T05:02:31.307Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-12T02:44:20.218Z",
+      "at": "2026-08-12T05:02:31.312Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 19 alertes"
+      "message": "8 developpements, 16 alertes"
     },
     {
-      "at": "2026-08-12T02:44:20.218Z",
+      "at": "2026-08-12T05:02:31.312Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-12T02:44:20.218Z",
+      "at": "2026-08-12T05:02:31.313Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
