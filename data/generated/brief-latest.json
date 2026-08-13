@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-13T02:47:14.454Z",
+  "generatedAt": "2026-08-13T05:04:30.297Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1938,
+    "ok": 111,
+    "failed": 59,
+    "articles": 1935,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -103,6 +103,11 @@
         "count": 10
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -150,7 +155,7 @@
       {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
-        "count": 15
+        "count": 0
       },
       {
         "id": "rss_vanguard",
@@ -161,11 +166,6 @@
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -400,7 +400,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 28
+        "count": 30
       },
       {
         "id": "rss_bbc_africa",
@@ -548,6 +548,11 @@
         "count": 0
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "count": 20
+      },
+      {
         "id": "rss_worldbank",
         "name": "Banque Mondiale",
         "count": 0
@@ -593,11 +598,6 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -663,6 +663,11 @@
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -835,11 +840,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -852,7 +852,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_imf",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 72,
-    "alerts": 12,
-    "criticalAlerts": 8,
-    "sourcesDistinct": 74
+    "bfAes": 63,
+    "alerts": 13,
+    "criticalAlerts": 9,
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
@@ -1133,6 +1133,22 @@
   ],
   "alerts": [
     {
+      "title": "Russian Blockade of Major Ukrainian Ports Threatens Global Grain Supplies",
+      "link": "https://www.nytimes.com/2026/08/13/world/europe/russia-ukraine-ports-odesa-cargo-ship-attacks.html",
+      "source": "NYT World",
+      "date": "2026-08-13T04:01:08.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
       "title": "En Colombie, la fenêtre de tir pour retrouver des survivants du séisme se referme",
       "link": "https://www.france24.com/fr/am%C3%A9riques/20260813-colombie-seisme-retrouver-survivants-cali-pereira-deuil",
       "source": "France 24",
@@ -1328,43 +1344,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      210
-    ],
-    [
-      "occident_us",
-      116
-    ],
-    [
-      "autre",
-      99
+      177
     ],
     [
       "occident_fr",
-      96
+      122
     ],
     [
-      "bf_local",
-      58
+      "occident_us",
+      120
+    ],
+    [
+      "autre",
+      108
     ],
     [
       "golfe_mo",
-      56
+      58
     ],
     [
-      "turquie",
-      49
+      "bf_local",
+      54
     ],
     [
       "russie",
-      48
+      49
     ],
     [
-      "sahel",
-      38
+      "turquie",
+      44
     ],
     [
       "chine",
-      30
+      35
+    ],
+    [
+      "sahel",
+      33
     ]
   ],
   "desks": [
@@ -1372,7 +1388,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 121,
+      "count": 108,
       "top": [
         {
           "title": "Journée internationale de la jeunesse : A Fada N’Gourma, l’évènement commémoré sous le signe de l’engagement patriotique",
@@ -1425,7 +1441,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 51,
+      "count": 40,
       "top": [
         {
           "title": "Pétrole : pourquoi le Nigeria se tourne de plus en plus vers la mer",
@@ -1437,9 +1453,18 @@
           "rating": "B2"
         },
         {
-          "title": "Ghana–TradeMark Africa partnership renewal to boost trade and exports — Trade Minister",
-          "link": "https://www.myjoyonline.com/ghana-trademark-africa-partnership-renewal-to-boost-trade-and-exports-trade-minister/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Osun Election: Accord alleges 29 deaths, seeks EU intervention",
+          "link": "https://www.vanguardngr.com/2026/08/osun-election-accord-alleges-29-deaths-seeks-eu-intervention/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Nigeria fails fiscal transparency test for 2nd year — US Report",
+          "link": "https://www.vanguardngr.com/2026/08/nigeria-fails-fiscal-transparency-test-for-2nd-year-us-report/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
@@ -1462,15 +1487,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Nigeria : 10 policiers tués dans un affrontement à Kebbi",
-          "link": "https://malijet.com/actualite-sur-afrique/311179-nigeria-10-policiers-tues-dans-un-affrontement-a-kebbi.html",
-          "source": "Malijet",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1478,7 +1494,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 31,
+      "count": 25,
       "top": [
         {
           "title": "Gabon : 51 milliards de FCFA débloqués pour apurer la dette intérieure envers les entreprises",
@@ -1499,15 +1515,6 @@
           "rating": "F2"
         },
         {
-          "title": "Cameroun/ CAN féminine : le Minsep s’explique sur la gestion des primes des Lionnes indomptables seniors",
-          "link": "https://fr.journalducameroun.com/cameroun-can-feminine-le-minsep-sexplique-sur-la-gestion-des-primes-des-lionnes-indomptables-seniors/",
-          "source": "Journal du Cameroun",
-          "zone": "3. Afrique centrale",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
           "title": "Global South Utilities réalise le plus grand projet d’infrastructure de l’histoire de la République centrafricaine",
           "link": "https://fr.saharamedias.net/global-south-utilities-realise-le-plus-grand-projet-dinfrastructure-de-lhistoire-de-la-republique-centrafricaine/",
           "source": "Sahara Médias",
@@ -1524,6 +1531,15 @@
           "theme": "J",
           "relevance": "L",
           "rating": "F2"
+        },
+        {
+          "title": "SAF accused of civilian killings as RSF drones strike three states",
+          "link": "https://www.dabangasudan.org/en/all-news/article/saf-accused-of-civilian-killings-as-rsf-drones-strike-three-states",
+          "source": "Dabanga Sudan",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1531,7 +1547,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 29,
+      "count": 27,
       "top": [
         {
           "title": "CAN Féminine 2026 : le calendrier complet et les résultats",
@@ -1584,7 +1600,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 62,
+      "count": 67,
       "top": [
         {
           "title": "Trump says ceasefire in Lebanon is working. For residents, it’s a ‘prison.’",
@@ -1637,7 +1653,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 192,
+      "count": 202,
       "top": [
         {
           "title": "CNT : la Suisse et le volontariat au cœur des échanges avec Malick Diaw",
@@ -1667,6 +1683,15 @@
           "rating": "C2"
         },
         {
+          "title": "Russian ghost fleet tankers use ‘Mad Max’ nets to fend off Ukraine’s drones",
+          "link": "https://www.ft.com/content/f2f2a881-1d4d-47db-a7d9-c6c50ee29a6a?syn-25a6b1a6=1",
+          "source": "Financial Times World",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
           "title": "En Colombie, la fenêtre de tir pour retrouver des survivants du séisme se referme",
           "link": "https://www.france24.com/fr/am%C3%A9riques/20260813-colombie-seisme-retrouver-survivants-cali-pereira-deuil",
           "source": "France 24",
@@ -1674,15 +1699,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "Zimbabwe ferry accident death toll rises to 44, president declares state of disaster",
-          "link": "https://www.aa.com.tr/en/africa/zimbabwe-ferry-accident-death-toll-rises-to-44-president-declares-state-of-disaster/4025810",
-          "source": "Anadolu Agency (Turquie)",
-          "zone": "6. Afrique australe",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     }
@@ -1691,8 +1707,7 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
-    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
@@ -1700,42 +1715,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-13T02:46:33.513Z",
+      "at": "2026-08-13T05:03:52.072Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-13T02:46:33.521Z",
+      "at": "2026-08-13T05:03:52.079Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-13T02:47:11.166Z",
+      "at": "2026-08-13T05:04:26.834Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1938 articles"
+      "message": "111/170 flux OK, 1935 articles"
     },
     {
-      "at": "2026-08-13T02:47:14.141Z",
+      "at": "2026-08-13T05:04:29.950Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-13T02:47:14.452Z",
+      "at": "2026-08-13T05:04:30.294Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-13T02:47:14.456Z",
+      "at": "2026-08-13T05:04:30.299Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 12 alertes"
+      "message": "8 developpements, 13 alertes"
     },
     {
-      "at": "2026-08-13T02:47:14.457Z",
+      "at": "2026-08-13T05:04:30.299Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-13T02:47:14.457Z",
+      "at": "2026-08-13T05:04:30.299Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
