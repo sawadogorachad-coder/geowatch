@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-13T22:02:47.123Z",
+  "generatedAt": "2026-08-14T02:45:59.946Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1946,
+    "ok": 103,
+    "failed": 67,
+    "articles": 1889,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -43,11 +43,6 @@
         "count": 10
       },
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "count": 10
-      },
-      {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
@@ -55,16 +50,6 @@
       {
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
-        "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
         "count": 10
       },
       {
@@ -105,11 +90,6 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -233,18 +213,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -348,11 +318,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -361,11 +326,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -380,7 +340,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 12
+        "count": 9
       },
       {
         "id": "rss_fp",
@@ -515,7 +475,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -553,6 +513,11 @@
         "count": 0
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "count": 20
+      },
+      {
         "id": "rss_iaea",
         "name": "AIEA — Top News (nucléaire)",
         "count": 15
@@ -560,8 +525,23 @@
     ],
     "failedSources": [
       {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -605,6 +585,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -642,7 +627,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
@@ -697,7 +682,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -715,9 +700,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -735,9 +725,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_friedrich",
         "name": "Friedrich Ebert Stiftung Afrique",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_frs",
@@ -785,6 +780,16 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
         "error": "HTTP 403"
@@ -830,11 +835,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 404"
@@ -863,22 +863,92 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 98,
-    "alerts": 11,
-    "criticalAlerts": 9,
-    "sourcesDistinct": 80
+    "bfAes": 90,
+    "alerts": 12,
+    "criticalAlerts": 10,
+    "sourcesDistinct": 74
   },
   "topDevelopments": [
     {
-      "title": "S. Moussa Sigué : Du Ouahigouya natal aux USA, l'ancien infirmier militaire capitalise à travers sa société spécialisée, Faucon Pèlerin Security",
-      "link": "https://lefaso.net/spip.php?article148586",
-      "pubDate": "2026-08-13T21:18:00.000Z",
-      "description": "En dépit de la distance, de nombreux Burkinabè de la diaspora ne tarissent pas d'initiatives concrètes pour renforcer leur attachement continu à la mère-patrie, contribuant également aux dynamiques nationales. De ceux-là, S. Moussa Sigué, Burkinabè résidant aux USA. De son Ouahigouya natal, il a servi pendant plusieurs années en qualité d'infirmier militaire, carrière au cours de laquelle il a participé à plusieurs missions, aussi bien sur le territoire national qu'à l'international. Perfectionniste animé d'esprit de rigueur, comme aiment à le présenter amis et connaissances, M. Moussa Sigué a, dans cette quête constante d'excellence, poursuivi ses études au pays de l'Oncle Sam, où il évolue dans le domaine médical. L'attachement de M. Sigué à son pays, le Burkina Faso, se traduit par plusieurs approches. C'est dans cet esprit qu'il a bien voulu, à travers cette interview réalisée en ligne, présenter « Faucon Pèlerin Security », une société spécialisée de sécurité, avec plusieurs axes d'intervention. Au-delà du national, « Faucon Pèlerin Security » œuvre à se positionner comme une référence dans l'espace de l'Alliance des États du Sahel (AES). Interview ! Lefaso.net : Pouvez-vous nous en dire davantage sur votre entreprise spécialisée, Faucon Pèlerin Security ? S. Moussa Sigué : Faucon Pèlerin Security est une société burkinabè de sécurité privée, créée le 4 août 2025. Elle a pour mission d'assurer la protection des personnes et de leurs biens, en proposant des prestations de sécurité fiables, professionnelles et adaptées aux besoins de chaque client. D'où tenez-vous la motivation de création d'une entreprise dans ce domaine, très exigeant ? La création de Faucon Pèlerin Security est née de ma passion de longue date pour les métiers de la sécurité. Face aux défis sécuritaires auxquels notre sous-région est confrontée, j'ai estimé qu'il était temps de concrétiser ce rêve et d'apporter, à mon humble niveau, une contribution à la construction et à la sécurisation de notre chère patrie, le Burkina Faso. Quelles sont les principales prestations qu'offre la société et la zone d'intervention (représentativité territoriale) ? Faucon Pèlerin Security intervient sur l'ensemble du territoire national. Elle propose notamment le gardiennage et la surveillance ; la sécurité rapprochée ; la sécurité événementielle ; la formation des agents de sécurité ; les enquêtes privées (détective privé) ; le transfert de fonds ; les services de maître-chien ; l'installation et la maintenance de systèmes de vidéosurveillance. À quelles entités s'adressent (ou prioritairement) vos prestations ? Comme on peut le constater, au regard des axes d'intervention, les prestations de Faucon Pèlerin Security s'adressent à tout le monde, à toutes les entités. Tout est fait de sorte à pouvoir prendre en compte les besoins spécifiques du client ; qu'il soit individuel ou collectif, personne physique ou morale (entreprises, institutions, organisations, etc.). Notre priorité absolue, c'est la satisfaction de nos clients. De ce fait, nous nous engageons à répondre efficacement à leurs besoins, tout en leur offrant des prestations de qualité, fondées sur le professionnalisme, la réactivité et la confiance. On constate que le secteur est en plein essor, qu'est-ce qui fait la particularité de votre société ? Notre différence repose sur trois piliers essentiels : – une grande rigueur opérationnelle ; – la formation continue de nos agents ; – un système de suivi qualité impliquant directement nos clients. À cet effet, chaque client dispose d'une fiche d'évaluation hebdomadaire des agents affectés à son site, ainsi que d'une boîte à suggestions. Ces outils nous permettent de recueillir leurs observations et d'améliorer continuellement la qualité de nos prestations. Quel est le processus de recrutement de vos hommes/agents et les exigences générales à même de vous permettre d'atteindre l'efficacité et la notoriété que vous recherchez ? Nous recrutons des personnes de bonne moralité, ayant idéalement des connaissances dans le domaine de la sécurité. Après leur recrutement, elles suivent un programme de formation continue, afin de maintenir un niveau élevé de compétence et de professionnalisme. Quels sont les mécanismes mis en place pour parvenir à la performance et garder le cap dans ce secteur qui connaît la concurrence et de nombreux autres défis ? Nous investissons constamment dans le renforcement des capacités de nos agents à travers des formations portant notamment sur : – le secourisme ; – la self-défense ; – la prévention des risques ; – la gestion de crise ; – l'utilisation des nouveaux équipements de sécurité. Cette démarche nous permet d'assurer des prestations conformes aux standards professionnels. À tort ou à raison, le secteur est assimilé à la précarité de ses agents sur le terrain. Quel va être votre positionnement par rapport à cette perception, quand on sait que les conditions ont un lien avec la qualité du travail ? Notre vision est claire : nous misons avant tout sur la formation et la professionnalisation de nos propres agents, afin qu'ils répondent pleinement aux exigences de notre entreprise ainsi qu'aux attentes de nos clients. La vision de Faucon Pèlerin Security prend donc en compte tous ces aspects, car c'est tout cela qui fait la professionnalisation. De l'extérieur, comment rassureriez-vous que tout fonctionne bien et efficacement comme vous le souhaitez ? Même en étant à l'extérieur du pays, j'ai constitué une équipe dirigeante expérimentée, compétente et partageant la même vision que moi. Grâce à cette organisation, Faucon Pèlerin Security connaît une évolution constante et intervient déjà, en moins d'une année d'existence, aussi bien auprès de clients privés que d'institutions publiques. Quelles sont vos perspectives pour les prochaines années ? Notre ambition est de devenir une référence de la sécurité privée au Burkina Faso, en étendant progressivement notre présence sur l'ensemble du territoire national. Nous envisageons également de nous développer dans les pays membres de l'Alliance des États du Sahel (AES). Quel message vous reste-t-il pour clore ? Le message que je souhaite adresser est avant tout un message de paix. Je formule le vœu que notre sous-région retrouve durablement la paix, et le plus rapidement possible. C'est sur elle que repose tout développement. Sans paix, il est impossible de bâtir un avenir solide, de concrétiser nos projets ou d'atteindre nos ambitions. Ensemble, œuvrons, chacun à son niveau, pour la paix, gage de stabilité, de progrès et de prospérité pour tous. Adresse : Ouagadougou, Marcoussis, Secteur 37 Téléphones : +226 76 20 12 67 +226 70 70 98 91 E-mail : fauconpelerin25@gmail.com Réseaux sociaux : Facebook – TikTok – Instagram : Faucon Pèlerin Security Interview réalisée en ligne par O. L. Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
+      "title": "Burkina Faso: plusieurs personnalités devront répondre d'assassinat dans l'affaire Norbert Zongo",
+      "link": "https://www.rfi.fr/fr/afrique/20260814-burkina-faso-plusieurs-personnalit%C3%A9s-devront-r%C3%A9pondre-d-assassinat-dans-l-affaire-norbert-zongo",
+      "pubDate": "2026-08-14T00:56:27.000Z",
+      "description": "Au Burkina Faso, nouveau développement dans l’affaire Norbert Zongo, du nom de ce journaliste d’investigation assassiné le 13 décembre 1998 avec trois de ses compagnons alors qu’il enquêtait sur la mort suspecte du chauffeur du petit frère de l’ancien président Blaise Compaoré. Dans un communiqué, le procureur général près la cour d’appel d Ouagadougou informe que trois personnes, dont François Compaoré, le frère cadet de l’ex-président Blaise Compaoré devront comparaitre devant le tribunal pour répondre des faits d’assassinat, de destruction volontaire aggravées de biens et de complicité d’assassinat. Mais un avocat d’un des accusés a déposé un recours contre l’arrêt de la chambre d’instruction, entrainant un report de l’ouverture du procès.",
+      "_source": "RFI Afrique",
+      "_sourceId": "rss_rfiafr",
+      "_sourceCat": "africa",
+      "_sourceBloc": "occident_fr",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 132,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Souveraineté énergétique et minière : faire des ressources naturelles, la force motrice d’un Sahel nouveau",
+      "link": "https://www.sidwaya.info/souverainete-energetique-et-miniere-faire-des-ressources-naturelles-la-force-motrice-dun-sahel-nouveau/",
+      "pubDate": "2026-08-14T00:03:14.000Z",
+      "description": "La première rencontre des ministres chargés de l’Energie, des Mines et du Pétrole des pays de la Confédération des Etats du Sahel s’est tenue sous le patronage du Premier ministre, Rimtalba Jean Emmanuel Ouédraogo, jeudi 13 août 2026 à Ouagadougou. La révolution que portent les pays de la Confédération des Etats du Sahel (AES) ne saurait être complète sans une révolution dans la gouvernance des ressources naturelles. C’est conscient de cela que les ministres chargés de l’Energie, des Mines et du Pétrole des pays membres ont tenu leur première rencontre, jeudi 13 août 2026 à Ouagadougou. Présidée par le Premier ministre, Rimtalba Jean Emmanuel Ouédraogo, elle a regroupé des délégations du Burkina Faso, du Mali et du Niger. Selon le chef du gouvernement, hauts fonctionnaires et experts des trois pays ont travaillé du 10 août au 13 août 2026 sur des documents structurants pour donner un contenu réel, concret et opérationnel à la souveraineté sur les ressources énergétiques, minières et pétrolières de l'espace AES. Il s'agit notamment du cadre général d’exploitation des ressources énergétiques et minières, des cadres harmonisés des politiques énergétiques et minières, ainsi qu’un mémorandum d’entente relatif à l’institution de la Semaine de l’énergie et des mines de l’AES. Pour le ministre nigérien des Mines, le commissaire-colonel Abarchi Ousmane, le véritable défi est de transformer davantage. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-1024x884.jpeg\" class=\"size-medium wp-image-167553\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-300x259.jpeg\" alt=\"\" width=\"300\" height=\"259\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-300x259.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-1024x884.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-768x663.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-1536x1326.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-487x420.jpeg 487w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-150x129.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-696x601.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-1068x922.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16-534x462.jpeg 534w, https://www.sidwaya.info/wp-content/uploads/2026/08/2-16.jpeg 1600w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Pour le ministre nigérien des Mines, le commissaire-colonel Abarchi Ousmane, le véritable défi est de transformer davantage. « Je voudrais saluer l’engagement, la rigueur et le sens élevé de l'intérêt confédéral qui ont guidé les travaux », a confié le chef du gouvernement. Il a précisé que ces textes ne doivent pas être perçus comme de simples documents administratifs ou comme des actes protocolaires. « Ils doivent être des instruments d’action économique, des outils de souveraineté et des repères pour l’édification d’un Sahel nouveau », a-t-il déclaré. Pour lui, l’ambition est de bâtir un Sahel où l’électricité éclaire les villes comme les villages, l’énergie alimente les unités de production, les écoles, les centres de santé et les infrastructures de sécurité et les ressources minières transformés au bénéfice des peuples. Transformer davantage Le Premier ministre a indiqué que dans le domaine pétrolier, l’aspiration est de sécuriser les corridors d’approvisionnement ; mutualiser les capacités de stockage, de transport, de raffinage ; renforcer la transparence de la chaîne de distribution et réduire durablement l’exposition aux chocs extérieurs. Pour atteindre cet objectif, il a appelé les Etats à combattre les pratiques de prédation, les trafics illicites, la fraude, l’évasion des revenus et toutes les formes de spoliation des patrimoines nationaux. Le ministre des Mines du Niger, le commissaire-colonel Abarchi Ousmane, a fait savoir que le véritable défi n'est pas d’extraire davantage mais de transformer plus. Pour le ministre nigérien des Mines, le commissaire-colonel Abarchi Ousmane, le véritable défi est de transformer davantage. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-683x1024.jpg\" class=\"size-medium wp-image-167556\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-200x300.jpg\" alt=\"\" width=\"200\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-200x300.jpg 200w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-683x1024.jpg 683w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-768x1152.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-1024x1536.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-280x420.jpg 280w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-150x225.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-300x450.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5-696x1044.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-5.jpg 1067w\" sizes=\"(max-width: 200px) 100vw, 200px\" /> Pour le ministre nigérien des Mines, le commissaire-colonel Abarchi Ousmane, le véritable défi est de transformer davantage. De sa conviction, les ressources doivent être pensées comme un patrimoine commun de développement et l’énergie doit être la véritable monnaie du développement. Le ministre des Mines du Mali, Amadou Keïta, a souligné la nécessité de doter l’AES de projets structurants et intégrateurs dans les secteurs stratégiques comme l’énergie, le pétrole et les mines permettant de soutenir sa souveraineté économique. Le Mali s’inscrit dans la dynamique de cadrage en vue de bâtir un socle solide à la coopération au sein de l’AES dans le secteur des mines et de l’énergie, a affirmé le ministre malien. Il a notifié que la transformation économique doit s’accompagner d’une gouvernance plus rigoureuse. Aly SAWADOGO Martin OUEDRAOGO (Stagiaire)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Construction d’un espace AES souverain : la jeunesse de la confédération invitée à s’engager",
+      "link": "https://www.sidwaya.info/construction-dun-espace-aes-souverain-la-jeunesse-de-la-confederation-invitee-a-sengager/",
+      "pubDate": "2026-08-13T23:40:07.000Z",
+      "description": "La Journée internationale de la jeunesse (JIJ), a été célébrée, mercredi 12 août 2026, à Manga, dans la province du Zoundwéogo. Elle a été marquée par un panel autour du thème : « Une vie de révolutionnaire » et une marche de soutien à la Révolution progressiste populaire (RPP). La province du Zoundwéogo, dans le Nazinon, n’est pas restée en marge de la Journée internationale de la jeunesse, célébrée le 12 août de chaque année par la communauté internationale. Elle l’a commémorée à travers un panel autour du thème : « Une vie de révolutionnaire » et une marche de soutien à la Révolution progressiste populaire (RPP). Présidée par le haut-commissaire du Zoundwéogo, Julien Ouédraogo, cette célébration, tenue le mercredi 12 août 2026, à Manga, a réuni un parterre de jeunes venus de plusieurs localités de la province. La journée, débutée par le panel, a permis de mettre en lumière les fondements d’une vie de révolutionnaire, la jeunesse face à sa responsabilité et le rôle que doit jouer les jeunes dans la consolidation de la souveraineté nationale et de l’espace confédéral de l’Alliance des Etats du Sahel (AES). Dans son exposé, Dominique Dipama, inspecteur de l’enseignement primaire et de l’éducation non formelle, a défini la révolution comme étant un changement profond dans la conduite des affaires de l’Etat. Selon lui, un révolutionnaire doit avoir le sens du sacrifice et incarner les valeurs d’intégrité, de patriotisme, de solidarité et d’intransigeance lorsqu’il s’agit de défendre les intérêts de sa nation. Il a également ajouté que le révolutionnaire doit respecter les règles édictées par les autorités de son pays, participer aux activités, contribuer volontairement pour la construction de sa patrie, encourager les forces combattantes et s’engager dans les organisations de veilles citoyennes. M. Dipama a par ailleurs invité la jeunesse à se positionner comme acteur de premier plan pour accompagner le chef de l’Etat, le capitaine Ibrahim Traoré, car, à son avis, celui-ci est venu pour redonner une véritable indépendance au pays des Hommes intègres. A son tour, Miguel Kouama, écrivain et enseignant de philosophie, a abordé le sujet sur le rôle que doit jouer les jeunes dans la consolidation de la souveraineté nationale et de l’espace confédéral de l’AES. A cet effet, il a précisé que la jeunesse doit s’occuper de la mobilisation. Il a aussi indiqué qu’elle doit être à l’avant-garde et une force de proposition et de réflexion. Selon M. Kouama, pour que le pays soit indépendant et souverain, il faut que la jeunesse se forme et conquière l’univers technologique. Elle doit bannir, d’après lui, un certain nombre de comportements tels que la lâcheté et développer ses compétences techniques pour être une véritable force de transformation sociale. « Garantir la cohésion sociale » Emmanuel Gnoumou, participant, a salué l’initiative du panel. « J’ai été édifié à travers les échanges », s’est-il réjoui avant d’être persuadé que la jeunesse sortira grandi de ce rendez-vous. M. Gnoumou a appelé ses concitoyens à participer à écrire l’histoire du pays en apportant leur soutien à la RPP. Le haut-commissaire du Zoundwéogo, Julien Ouédraogo, a rappelé que la JIJ, instituée en 1999, vise à marquer un arrêt pour magnifier la jeunesse et organiser des activités promotionnelles et d’appels de fonds pour soutenir les initiatives en faveur des jeunes. A l’écouter, cette année, l’esprit de la journée tranche avec les précédentes. Il est empreint, a-t-il dit, d’espoir, de positivité et d’assurance en la RPP, au regard de l’engagement des jeunes et des victoires d’étapes engrangées sur les plans économique, sécuritaire et humanitaire. M. Ouédraogo a également fait savoir que la célébration de la JIJ cadre avec les grandes orientations révolutionnaires. A ce titre, il a soutenu qu’elle magnifie l’engagement de toute une jeunesse pour la consolidation d’un espace confédéral. La journée a aussi été mise à profit pour une marche de soutien à la RPP en hommage aux héros de la révolution du Burkina Faso. Pour le directeur provincial chargé de la jeunesse du Zoundwéogo, Sékou Sabo, cette marche qui a impliqué toutes les couches socioprofessionnelles vise à garantir la cohésion sociale et le vivre-ensemble. Toute chose, selon lui, qui concourt à bâtir un pays prospère. La JIJ est célébrée cette année sur le thème : « Rôle, responsabilité et engagement de la jeunesse burkinabè dans la construction d’un espace confédéral souverain ». Noufou SAWADOGO",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
@@ -897,7 +967,40 @@
       "_rating": "C2",
       "_score": 127,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Kénédougou : Une opération spéciale de délivrance de la CNIB-AES au profit des populations de Morolaba",
+      "link": "https://www.aib.media/kenedougou-une-operation-speciale-de-delivrance-de-la-cnib-aes-au-profit-des-populations-de-morolaba/",
+      "pubDate": "2026-08-13T22:22:45.000Z",
+      "description": "Kénédougou : Une opération spéciale de délivrance de la CNIB-AES au profit des populations de Morolaba Morolaba, 13 août 2026 (AIB) – Le Président de la délégation spéciale (PDS) de la commune de Morolaba, Germain Mien, a procédé, le lundi 10 août 2026, au lancement officiel d’une opération spéciale de délivrance de la Carte nationale d’identité biométrique de l’Alliance des États du Sahel (CNIB-AES) au profit des populations de la commune. Prévue pour une durée de 48 heures, cette opération s’inscrit dans le cadre des actions civilo-militaires conduites par le Groupement de Forces pour la Sécurisation de l’Ouest (GFSO) Guiriko, en collaboration avec le Centre de Traitement Intermédiaire des Données (CTID) du Kénédougou basé à Orodara et le détachement mixte de Morolaba. L’initiative vise à rapprocher davantage les services administratifs des citoyens, tout en consolidant les liens de confiance et de collaboration entre les Forces de Défense et de Sécurité (FDS), les Volontaires pour la Défense de la Patrie (VDP) et les populations. Dans son intervention, le PDS Germain Mien a salué cette action de proximité qui permet aux habitants de Morolaba d’accéder plus facilement aux services d’établissement de la CNIB-AES. Il a invité les populations à se mobiliser massivement afin de profiter de cette opportunité. Agence d’information du Burkina BK/AK/wis",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -929,73 +1032,6 @@
       "_score": 127,
       "_zone": 1,
       "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina Faso : Fin des travaux du 2ᵉ Forum humanitaire et genre des pays de l’AES",
-      "link": "https://faso7.com/2026/08/13/burkina-faso-fin-des-travaux-du-2%e1%b5%89-forum-humanitaire-et-genre-des-pays-de-laes/",
-      "pubDate": "2026-08-13T17:04:16.000Z",
-      "description": "Les travaux du 2ᵉ Forum des ministres chargés de l’Action humanitaire, couplé à la 2ᵉ réunion des ministres chargés du Genre de la Confédération des États du Sahel (AES) se sont achevés le 12 août 2026 à Ouagadougou. Pendant trois jours, les experts ont passé en revue la mise en œuvre de la feuille de route de la réunion de Niamey et abordé les thématiques relatives aux questions humanitaires et du genre. Le point notable de cette rencontre a été la signature conjointe de la déclaration de Ouagadougou des ministres chargés de la Promotion de la femme et du genre et de celle du forum humanitaire de l’AES. Le lieutenant-colonel Pélagie Kaboré, ministre burkinabè de la Famille et de la Solidarité, a expliqué que les ministres de l'espace confédéral ont été satisfaits de voir la mise en œuvre effective des recommandations issues de la déclaration de Niamey qui s'est tenue le 17 juillet 2025. Par ailleurs, les recommandations de la réunion des ministres du Genre ont trouvé une issue favorable à la réunion de Ouagadougou. Cependant, les échanges du 2ᵉ forum humanitaire se sont penchés sur les questions d'actualité. À tous les niveaux, les résolutions ont porté principalement sur le passage de l'urgence vers la résilience des populations. « Vous savez que les trois pays sont confrontés au même défi sécuritaire, auquel viennent s'ajouter certains défis climatiques qui aggravent la vulnérabilité de nos populations. Il était temps pour nous de pouvoir prendre des résolutions fortes pour que l'action humanitaire ne se résume pas seulement à lever l'urgence, mais que l'action humanitaire passe progressivement de l'urgence vers la mise en place d'actions ou de politiques concrètes pour permettre aux populations de se relever, de s'autonomiser et de se prendre en charge, et surtout d'éviter le piège dangereux de l'assistanat », a-t-elle expliqué. Les ministres chargés de l’Action humanitaire et du Genre de l'AES©️Faso7 De leur côté, les ministres chargés du Genre de l'AES ont réfléchi sur la prise en compte des femmes dans la mise en place des politiques nationales de développement. Il s'agit de leur permettre d'être des actrices du développement et de participer à l'autonomisation et à la résilience des peuples des trois pays. Cette vision s'est traduite par le lancement de la plateforme régionale des organisations féminines de l'AES. Elle a pour mission de fédérer les organisations féminines qui assurent la sensibilisation sur la protection et la promotion des femmes et du genre. Elle prendra en compte également les associations qui s'investissent pour permettre aux femmes d’accéder à des moyens de financement et aux compétences nécessaires pour entreprendre des activités rémunératrices de revenus. « Vous savez que les femmes sont braves, elles produisent, mais malheureusement l'accès au marché reste un défi. Donc, ces résolutions vont nous permettre de voir comment est-ce qu'on explore et on ouvre des marchés pour les productions de ces femmes », a ajouté le lieutenant-colonel Pélagie Kaboré. Par ailleurs, les travaux ont abouti à la signature des déclarations dites de Ouagadougou. Pour le compte des ministères de l'Action humanitaire, ‎le Pr Sidikou Ramatou Djermakoye SEYNI, ministre de la Population, de l'Action sociale et de la Solidarité du Niger, a expliqué que les acteurs ont affiché leur ambition de construire un modèle humanitaire qui reflète la réalité des trois pays de l’AES. Cette vision s'est articulée autour de cinq points. Photo de famille des ministres et des partenaires©️Faso7 Il s'agit de la souveraineté des États dans la définition et la conduite des politiques humanitaires, du renforcement de la gouvernance et de la coordination efficace des interventions, la complémentarité entre action humanitaire, développement, paix, adaptation climatique et réduction des risques de catastrophes. A cela s'ajoutent la participation active des communautés, des collectivités territoriales, des femmes, des jeunes et des personnes en situation de vulnérabilité, ainsi que l'utilisation des innovations scientifiques, technologiques et numériques au service des populations. Face aux enjeux, la communauté humanitaire a réaffirmé sa disponibilité à renforcer sa collaboration avec les États de l’AES et leurs partenaires, et à instaurer un dialogue permanent et un partenariat stratégique pour transformer l’urgence humanitaire en résilience. Cheick Habib Désiré BAYILI Faso7 L’article Burkina Faso : Fin des travaux du 2ᵉ Forum humanitaire et genre des pays de l'AES est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "H",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Mali: le Général d’Armée Assimi Goïta accorde la grâce présidentielle au français Yann Christian Bernard Vezilier",
-      "link": "https://www.aib.media/mali-le-general-darmee-assimi-goita-accorde-la-grace-presidentielle-au-francais-yann-christian-bernard-vezilier/",
-      "pubDate": "2026-08-13T16:54:50.000Z",
-      "description": "Mali: le Général d’Armée Assimi Goïta accorde la grâce présidentielle au français Yann Christian Bernard Vezilier Ouagadougou, 13 août 2026 (AIB) – Le Président de la Transition malienne, le Général d’Armée Assimi Goïta, a accordé, par décret n°0503/PT-RM du 13 août 2026, la grâce présidentielle à Yann Christian Bernard Vézilier, de nationalité française, condamné par la justice malienne à vingt (20) années de réclusion criminelle pour atteinte à la sûreté extérieure de l’État, a annoncé le ministre de l’Administration territoriale et de la Décentralisation, le Général de Brigade Issa Ousmane Coulibaly, dans un communiqué lu à la télévision nationale malienne, jeudi 13 août 2026. Selon le communiqué N°2026-004 du Gouvernement de la Transition, cette mesure de grâce « ne remet pas en cause les faits établis par un jugement contradictoire » rendu au cours d’un procès durant lequel « tous les droits de la défense ont été respectés ». La grâce est assortie de l’éloignement immédiat de l’intéressé du territoire national, précise le communiqué. Le Gouvernement de la Transition souligne que M. Vezilier a été jugé et condamné à l’issue d’un « procès équitable, sans aucune interférence », conformément à la vision du Président de la Transition de promouvoir la bonne gouvernance dans le cadre de la refondation de l’État, de respecter l’État de droit, la séparation des pouvoirs et l’indépendance de la justice. À cette occasion, le Gouvernement de la Transition a salué « un pays frère » dont les bons offices, exercés avec discrétion et dans le respect scrupuleux de la souveraineté du Mali, ont contribué à l’obtention de cette grâce. Le Gouvernement et le peuple maliens ont également remercié le Général d’armée Assimi Goïta pour ce geste de clémence, présenté comme témoignant de son attachement à la paix et au dialogue, ainsi qu’aux valeurs ancestrales de pardon, d’hospitalité et de grandeur qui caractérisent la culture malienne. Le Gouvernement de la Transition rappelle, par ailleurs, que la justice poursuit son rôle dans toutes les procédures en cours, dans le strict respect des règles de l’État de droit. Pour rappel, Yann Christian Bernard Vézilier, lieutenant-colonel français accrédité auprès de l’ambassade de France à Bamako et présenté par les autorités maliennes comme un agent de la Direction générale de la sécurité extérieure (DGSE), avait été interpellé en août 2025 pour avoir participé à une tentative de déstabilisation des institutions de la Transition malienne, selon les autorités. Il a été jugé et condamné, le jeudi 4 juin 2026 à Bamako, à 20 ans de réclusion criminelle pour atteinte à la sûreté de l’État Agence d’information du Burkina",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1069,19 +1105,18 @@
       "_desk": "A1"
     },
     {
-      "title": "Ouagadougou : L’association Jeunes faiseurs de paix fait escale à Karpala pour promouvoir la cohésion sociale",
-      "link": "https://faso7.com/2026/08/13/ouagadougou-lassociation-jeunes-faiseurs-de-paix-fait-escale-a-karpala-pour-promouvoir-la-cohesion-sociale/",
-      "pubDate": "2026-08-13T12:57:38.000Z",
-      "description": "L’association Jeunes faiseurs de paix a organisé la 8e étape de sa caravane de paix, ce 12 août 2026, au quartier Karpala, dans l’arrondissement n°11 de la commune de Ouagadougou. À cette occasion, le Dr Koudbi Kaboré, maître de conférences en histoire contemporaine, a partagé une expérience de cohésion entre communautés religieuses vécue à Dori, dans le Sahel burkinabè. Devant les participants, l’enseignant-chercheur a raconté une initiative née d’un épisode de solidarité entre chrétiens et musulmans lors des famines des années 1970. Il a expliqué que, lorsqu’il était affecté à Dori, il avait été témoin d’une scène qui avait particulièrement retenu son attention. Des musulmans s’étaient rendus dans une église à l’occasion de la fête de Noël pour saluer les fidèles catholiques. Cherchant à comprendre l’origine de cette démarche, le Dr Kaboré a indiqué avoir appris qu’elle remontait à la période des grandes famines des années 1970. À cette époque, l’Église catholique avait apporté son soutien aux populations sans distinction de religion. Selon son récit, certains musulmans avaient alors conseillé à leurs coreligionnaires de ne pas accepter les vivres distribués, au motif qu’ils provenaient de personnes d’une autre religion. Informé de la situation, le grand imam a réuni un comité afin d’examiner la question à la lumière des textes islamiques. Les recherches menées ont finalement conclu qu’il n’était pas interdit aux musulmans de bénéficier de vivres provenant de personnes qui ne pratiquent pas l’islam. Les populations musulmanes ont alors accepté l’aide apportée par l’Église catholique. De cette expérience de solidarité est née, après la famine, une volonté de consolider les relations entre les deux communautés. Chrétiens et musulmans ont ainsi décidé de mettre en place l’Union fraternelle des croyants (UFC), avec l’objectif de mieux se connaître, de se respecter et de rester unis face aux crises. L'enseignant-chercheur a expliqué que les membres de cette union ont également convenu de travailler ensemble pour faire face aux difficultés communes, notamment les questions liées à la famine et à la sécurité. Ils ont aussi voulu faire de cette dynamique une démarche durable, au-delà de la seule ville de Dori. « La tolérance ne suffit pas » Pour le Dr Koudbi Kaboré, cette expérience montre l’importance de dépasser la simple tolérance entre les communautés religieuses. « C’est un dialogue interreligieux qui va au-delà de la tolérance. La tolérance ne suffit pas. Quand vous allez au-delà de la tolérance, le dialogue veut dire que vous voulez vivre ensemble, travailler ensemble pour relever des défis communs » , a-t-il déclaré. Il estime que les initiatives locales de ce type existent dans plusieurs régions du Burkina Faso et méritent d’être encouragées, particulièrement par les responsables religieux. Pour lui, la paix doit également être construite à travers des actes concrets. « Les appels à la paix ne suffisent pas. Il faut aussi le montrer par l’exemple » , a-t-il soutenu. Cette cohésion, selon lui, doit surtout démontrer sa solidité lorsque les communautés sont confrontées à des périodes difficiles. « Les crises, c’est permanent. Et les crises viennent d’ailleurs nous mettre à l’épreuve. Quand on dit qu’on est tolérant et quand une crise arrive pendant dix ans et que la méfiance continue, où est notre tolérance ? Donc la crise doit nous permettre de consolider nos liens pour montrer qu’on est vraiment tolérants et qu’on va au-delà de la tolérance pour nous supporter » , a-t-il ajouté. Participant à la rencontre, l'imam Alidou Ilboudo, président du Centre Culturel Islamique du Burkina, a également insisté sur la responsabilité des leaders religieux dans le contexte actuel. Il a appelé ces derniers à contribuer à la construction de la nation par leurs discours, mais aussi par leur engagement personnel. « On doit éviter l’instrumentalisation de la religion à des fins de division ou pour assouvir ses désirs ou ses passions. La religion doit nous relier autant à Dieu, mais quand nous sommes reliés à Dieu, nous sortons avec une lumière qui doit profiter à la création de Dieu » , a-t-il déclaré. Pour prolonger cette dynamique dans l’arrondissement n°11, l’association Jeunes faiseurs de paix prévoit la mise en place d’une cellule de paix composée de jeunes. Cette structure devrait contribuer à maintenir les acquis de la caravane et à poursuivre les actions de sensibilisation au dialogue interculturel et interreligieux. « C’est toujours continuer à la promotion de la paix, à travers justement la sensibilisation pour le dialogue interculturel et interreligieux et continuer à promouvoir en tout cas tout ce qui peut nous permettre, en tant que Burkinabè, de coexister ensemble et vivre de façon pacifique » , a déclaré Hermann Guingané, président de l’association Jeunes faiseurs de paix. Le président de la délégation spéciale de l’arrondissement n°11 a, pour sa part, salué l’initiative et exprimé la disponibilité de l’administration locale à accompagner les actions de l’association en faveur de la paix, dans un contexte sécuritaire difficile. Josué TIENDREBEOGO Faso7 L’article Ouagadougou : L’association Jeunes faiseurs de paix fait escale à Karpala pour promouvoir la cohésion sociale est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "Première commission mixte de coopération Burkina-Burundi : 14 accords signés",
+      "link": "https://www.sidwaya.info/premiere-commission-mixte-de-cooperation-burkina-burundi-14-accords-signes/",
+      "pubDate": "2026-08-13T23:56:07.000Z",
+      "description": "C'est avec une grande satisfaction que s'est achevée la toute première session de la commission mixte de coopération entre le Burkina Faso et la République du Burundi, le 13 août 2026 dans la capitale burundaise. Les travaux intenses et interactifs des experts se sont soldés par 14 accords de coopération, signés par les ministres des Affaires étrangères burkinabè et burundais lors de la cérémonie de clôture. Il s'agit de l’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi en matière d’agriculture et d’élevage, d’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi en matière de sécurité, l’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi dans le domaine de la protection civile, l’accord de coopération relatif aux services aériens entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi, l’accord de coopération en matière de santé entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi, l’accord de coopération en matière d’emploi entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi, l’accord de coopération en matière de travail et de protection sociale entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi, l’accord de coopération en matière de jeunesse entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi, l’accord de coopération dans le domaine du sport et des loisirs entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi, l’accord entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi portant suppression de visa en faveur des ressortissants des deux pays titulaires de passeport diplomatique, de passeport de service ou de passeport ordinaire, l’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi en matière de prévention des risques et gestion des catastrophes, l’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi en matière d’enseignement et de formation techniques et professionnels, l’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi dans les domaines de l'enseignement supérieur et de la recherche et l’accord de coopération entre le gouvernement du Burkina Faso et le gouvernement de la République du Burundi sur la reconnaissance réciproque et l’échange de permis de conduire nationaux. Insuffler une dynamique nouvelle Ces nouveaux instruments juridiques contribueront à insuffler une dynamique nouvelle à une coopération scellée depuis près de trois décennies, pour davantage d'actions de développement au profit des peuples burundais et burkinabè. Dans une convergence de vues, les deux chefs de délégations se sont réjouis de cette nouvelle étape qui vient d'être amorcée et ont émis le vœu qu' elle se consolide dans la durée. Pour le chef de la diplomatie burkinabè, après cette étape, c'est maintenant que le vrai travail commence à travers des actions concrètes sur le terrain. « La signature de ce jour n'est pas un aboutissement : c'est un point de départ. Nous devons poursuivre, sans relâche, les concertations, en vue d'une bonne mise en œuvre des instruments juridiques qui viennent d'être signés. Une Commission mixte n'est pas une simple formalité diplomatique : c'est un outil de gouvernance de la coopération, l'instance où l'intention politique de nos chefs d'Etat se transforme en programmes concrets, en projets mesurables, en résultats tangibles pour nos populations », soutient le camarade ministre des Affaires étrangères burkinabè, Karamoko Jean Marie Traoré. Reconnaissant également la nécessité d'aller vite et bien dans la concrétisation des accords signés, le ministre des Affaires de la République du Burundi encourage son pays et le Burkina Faso à dorénavant compter l’un sur l’autre et explorer les possibilités d’une coopération Sud-Sud fondée sur la confiance, le respect mutuel, la solidarité et la recherche d’intérêts communs. « Nous devons engager des échanges entre opérateurs économiques, promouvoir les investissements réciproques, développer les partenariats entre les secteurs privés, faciliter la circulation des biens et des services et mieux faire connaître les opportunités qu’offrent nos deux économies. Nous devons également accorder une place de choix à la jeunesse qui constitue à la fois la principale force vive de nos nations et le moteur de leur avenir », a indiqué le ministre Edouard Bizimana. Rappelons que c'est en droite ligne des très hautes instructions données par les Présidents Ibrahim Traoré du Burkina Faso et Evariste Ndayishimiyé du Burundi que s'est tenue la présente session de la commission de Coopération entre les deux pays. Elle traduit ainsi une ambition claire et partagée de faire de la coopération entre le Burundi et le Burkina Faso une référence de la coopération Sud-Sud, bâtie sur les fondamentaux que sont l'intégration régionale et la paix. Pour une mise en œuvre effective des accords signés, les deux parties ont décidé de la formalisation diligente des comités sectoriels de suivi des engagements. DCRP/MAE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
         "humanitarian",
         "political"
       ],
@@ -1092,43 +1127,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "A1"
       },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "H",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Sissili/JIJ 2026 : La jeunesse de la Sissili appelée à s’approprier le développement et à se mobiliser pour la souveraineté nationale et confédérale",
-      "link": "https://www.aib.media/sissili-jij-2026-la-jeunesse-de-la-sissili-appelee-a-sapproprier-le-developpement-et-a-se-mobiliser-pour-la-souverainete-nationale-et-confederale/",
-      "pubDate": "2026-08-13T18:45:37.000Z",
-      "description": "Sissili/JIJ 2026 : La jeunesse de la Sissili appelée à s’approprier le développement et à se mobiliser pour la souveraineté nationale et confédérale Léo, 12 août 2026 (AIB) – La province de la Sissili a célébré, ce mercredi 12 août 2026 à Léo, la Journée internationale de la jeunesse (JIJ). Placée sous la présidence du haut-commissaire de la province, Téwindé Isaac Sia, cette journée a été marquée par une marche à travers les grandes artères de la ville, des hommages aux figures historiques locales, des panels de réflexion et des activités sportives, le tout axé sur l’engagement patriotique et la souveraineté. C’est par une marche de soutien à la RPP à travers les grandes artères du centre-ville de Léo que les forces vives de la province ont lancé les activités de la Journée internationale de la jeunesse, placée cette année sous le thème « Rôle, responsabilité et engagement de la jeunesse burkinabè dans la construction d’un espace confédéral souverain ». Livrant le message officiel de la ministre de la Jeunesse, des Sports et de l’Emploi, camarade Annick Lydie Djouma Pikbougoum/Zingué Ouattara, le premier responsable de la province a transmis les hommages de la Nation à la jeunesse burkinabè, des villes comme des campagnes, y compris les élèves, étudiants, travailleurs et Volontaires pour la Défense de la Patrie (VDP). À travers ce message, l’exécutif a salué la résilience et l’engagement constant de la jeunesse depuis les luttes historiques jusqu’à l’avènement de la Révolution progressiste et populaire (RPP). Le gouvernement a rappelé la mise en place du Plan RELANCE 2026-2030 et de l’initiative « Jeunesse Révolutionnaire en Marche » (JeRM), tout en invitant les jeunes à porter les valeurs de l’espace confédéral et à lutter contre la lâcheté, la traîtrise et l’incompétence. Pour le haut-commissaire Téwindé Isaac Sia, cette célébration invite la jeunesse à s’investir concrètement dans le développement local. Il a exhorté les jeunes à « s’organiser activement autour des actions communautaires », citant notamment la réparation des routes et la gestion des infrastructures. L’objectif étant, selon lui, « que ces initiatives soient prises en main directement par les jeunes » afin de faire barrière aux manœuvres de déstabilisation. Dans le même esprit, le directeur provincial du Sport, de la Jeunesse et de l’Emploi, Denis Nikièma, s’est félicité de la forte mobilisation des forces vives. Soulignant qu’il faut cesser de « tout attendre de nos parents », Camarade Nikièma a affirmé que « le développement appartient à la jeunesse » qui doit prendre des initiatives sans attendre l’extérieur, tout en plaidant pour la mise en place de mécanismes de financement adaptés pour les porteurs de projets. Prenant la parole au nom de la tradition, Sa Majesté Lio-Pio Dan-Zwè, Chef de Canton de Léo, a rappelé le rôle protecteur dévolu aux jeunes en période de crise : « Lorsque la patrie risque de s’échapper, c’est à la jeunesse de courir pour la rattraper », a-t-il affirmé. Insistant sur la valeur du travail et de l’autonomie financière, le souverain coutumier a rappelé qu’« une jeunesse autonome est une jeunesse qu’on ne peut plus corrompre », avant d’appeler les jeunes à se mettre au travail « à la sueur de leur front ». Sa Majesté a conclu en formulant des bénédictions pour la jeunesse et pour le président du Faso, le Capitaine Ibrahim Traoré. Au-delà des allocutions, la journée a été marquée par un hommage solennel aux figures historiques de la Sissili, notamment Bamina Georges Nébié, premier ministre de la Défense de Haute-Volta, et les anciens CDR Lady Ziba et Mamouna Yago. L’ancien CDR Ladji Saïdou Nébié a également été présenté et ovationné par le public. Les participants ont ensuite pris part à des panels consacrés à la vie du Capitaine Thomas Sankara et aux similitudes entre la Révolution démocratique et populaire (RDP) et la RPP impulsée par le Capitaine Ibrahim Traoré. Les manifestations se sont achevées dans une ambiance conviviale par une séance d’aérobic sur le plateau de la Maison des Jeunes de Léo. Agence d’Information du Burkina BAN/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
+      "_rating": "A1",
       "_score": 123,
       "_zone": 1,
       "_theme": "P",
@@ -1138,6 +1139,54 @@
     }
   ],
   "alerts": [
+    {
+      "title": "Burkina Faso: plusieurs personnalités devront répondre d'assassinat dans l'affaire Norbert Zongo",
+      "link": "https://www.rfi.fr/fr/afrique/20260814-burkina-faso-plusieurs-personnalit%C3%A9s-devront-r%C3%A9pondre-d-assassinat-dans-l-affaire-norbert-zongo",
+      "source": "RFI Afrique",
+      "date": "2026-08-14T00:56:27.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": true,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ]
+    },
+    {
+      "title": "Iran war live: US eyes indefinite Iran naval blockade",
+      "link": "https://www.aljazeera.com/news/liveblog/2026/8/14/iran-war-live-us-eyes-indefinite-iran-naval-blockade?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-08-14T00:00:00.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "US says it can keep naval blockade on Iran 'indefinitely,' vows more economic pressure",
+      "link": "https://www.al-monitor.com/originals/2026/08/us-says-it-can-keep-naval-blockade-iran-indefinitely-vows-more-economic-pressure",
+      "source": "Al-Monitor",
+      "date": "2026-08-13T22:46:34.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
     {
       "title": "US can maintain Iran blockade ‘indefinitely,' says defense chief",
       "link": "https://www.aa.com.tr/en/us-israel-iran-war/us-can-maintain-iran-blockade-indefinitely-says-defense-chief/4026987",
@@ -1281,38 +1330,6 @@
           "keyword": "séisme"
         }
       ]
-    },
-    {
-      "title": "\"Territoire oublié de l’État\" : après le séisme en Colombie, le Choco face à ses vieilles blessures",
-      "link": "https://www.france24.com/fr/am%C3%A9riques/20260813-seisme-colombie-temoignages-recit-territoire-oublie-choco-traumatisme-tremblement-terre",
-      "source": "France 24",
-      "date": "2026-08-13T12:09:10.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Gaza: Destruction of buildings rises by nearly 10 per cent since ceasefire",
-      "link": "https://news.un.org/feed/view/en/story/2026/08/1168138",
-      "source": "ONU News (EN)",
-      "date": "2026-08-13T12:00:00.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
@@ -1326,35 +1343,35 @@
     ],
     [
       "occident_fr",
-      94
+      96
     ],
     [
       "autre",
-      80
+      88
     ],
     [
       "bf_local",
-      67
+      64
     ],
     [
       "golfe_mo",
-      57
+      60
     ],
     [
       "turquie",
-      57
+      51
     ],
     [
       "russie",
-      48
-    ],
-    [
-      "sahel",
-      42
+      47
     ],
     [
       "chine",
-      20
+      30
+    ],
+    [
+      "sahel",
+      29
     ]
   ],
   "desks": [
@@ -1362,14 +1379,41 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 149,
+      "count": 142,
       "top": [
         {
-          "title": "S. Moussa Sigué : Du Ouahigouya natal aux USA, l'ancien infirmier militaire capitalise à travers sa société spécialisée, Faucon Pèlerin Security",
-          "link": "https://lefaso.net/spip.php?article148586",
-          "source": "Lefaso.net",
+          "title": "Burkina Faso: plusieurs personnalités devront répondre d'assassinat dans l'affaire Norbert Zongo",
+          "link": "https://www.rfi.fr/fr/afrique/20260814-burkina-faso-plusieurs-personnalit%C3%A9s-devront-r%C3%A9pondre-d-assassinat-dans-l-affaire-norbert-zongo",
+          "source": "RFI Afrique",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Souveraineté énergétique et minière : faire des ressources naturelles, la force motrice d’un Sahel nouveau",
+          "link": "https://www.sidwaya.info/souverainete-energetique-et-miniere-faire-des-ressources-naturelles-la-force-motrice-dun-sahel-nouveau/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "Construction d’un espace AES souverain : la jeunesse de la confédération invitée à s’engager",
+          "link": "https://www.sidwaya.info/construction-dun-espace-aes-souverain-la-jeunesse-de-la-confederation-invitee-a-sengager/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Kénédougou : Une opération spéciale de délivrance de la CNIB-AES au profit des populations de Morolaba",
+          "link": "https://www.aib.media/kenedougou-une-operation-speciale-de-delivrance-de-la-cnib-aes-au-profit-des-populations-de-morolaba/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
           "relevance": "A",
           "rating": "C2"
         },
@@ -1381,33 +1425,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "B2"
-        },
-        {
-          "title": "Burkina Faso : Fin des travaux du 2ᵉ Forum humanitaire et genre des pays de l’AES",
-          "link": "https://faso7.com/2026/08/13/burkina-faso-fin-des-travaux-du-2%e1%b5%89-forum-humanitaire-et-genre-des-pays-de-laes/",
-          "source": "Faso7",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Mali: le Général d’Armée Assimi Goïta accorde la grâce présidentielle au français Yann Christian Bernard Vezilier",
-          "link": "https://www.aib.media/mali-le-general-darmee-assimi-goita-accorde-la-grace-presidentielle-au-francais-yann-christian-bernard-vezilier/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "Le passif humanitaire de la crise sécuritaire au Sahel (Par Oumar NDIAYE)",
-          "link": "https://lesoleil.sn/le-decodeur/chronique/le-passif-humanitaire-de-la-crise-securitaire-au-sahel-par-oumar-ndiaye/",
-          "source": "Le Soleil (Sénégal)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1415,11 +1432,20 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 60,
+      "count": 64,
       "top": [
         {
-          "title": "Sheikh Yahaya-Jingir working for his pocket – Kwankwaso",
-          "link": "https://www.vanguardngr.com/2026/08/sheikh-yahaya-jingir-working-for-his-pocket-kwankwaso/",
+          "title": "Osun election: Factors that’ll decide Adeleke, Oyebamiji, Salaam, others’ fate tomorrow",
+          "link": "https://www.vanguardngr.com/2026/08/osun-election-factors-thatll-decide-adeleke-oyebamiji-salaam-others-fate-tomorrow/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Police mopped up 34 illegal weapons in Osun ahead poll – Force PRO",
+          "link": "https://www.vanguardngr.com/2026/08/police-mopped-up-34-illegal-weapons-in-osun-ahead-poll-force-pro/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1433,33 +1459,24 @@
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
-          "rating": "A1"
+          "rating": "A2"
         },
         {
-          "title": "Nigeria’s refineries will soon bounce back — Tinubu",
-          "link": "https://www.vanguardngr.com/2026/08/tinubu-vows-to-revive-govt-refineries-expand-cng-initiative/",
-          "source": "Vanguard (Nigeria)",
+          "title": "Military launches fresh offensive against N’West terrorists",
+          "link": "https://punchng.com/military-launches-fresh-offensive-against-nwest-terrorists/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Presidency extends policing bill submission deadline by eight days",
-          "link": "https://www.premiumtimesng.com/news/top-news/902723-presidency-extends-policing-bill-submission-deadline-by-eight-days.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "MFM choir returns home after winning World Choir Games in Sweden",
-          "link": "https://www.vanguardngr.com/2026/08/mfm-choir-returns-home-after-winning-world-choir-games-in-sweden/",
+          "title": "Nigeria, US reinforce strategic defence, security partnership at Washington talks",
+          "link": "https://www.vanguardngr.com/2026/08/nigeria-us-reinforce-strategic-defence-security-partnership-at-washington-talks/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
+          "theme": "D",
+          "relevance": "A",
           "rating": "F2"
         }
       ]
@@ -1468,17 +1485,8 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 41,
+      "count": 35,
       "top": [
-        {
-          "title": "Réseaux sociaux : la CNDPC réclame des poursuites et un durcissement de la législation",
-          "link": "https://www.gabonreview.com/reseaux-sociaux-la-cndpc-reclame-des-poursuites-et-un-durcissement-de-la-legislation/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
-        },
         {
           "title": "Vingt-cinq tonnes d’espoir : quand nos déchets deviennent des emplois",
           "link": "https://www.gabonreview.com/vingt-cinq-tonnes-despoir-quand-nos-dechets-deviennent-des-emplois/",
@@ -1514,6 +1522,15 @@
           "theme": null,
           "relevance": ".",
           "rating": "A2"
+        },
+        {
+          "title": "Cameroun – BID : Yaoundé prépare deux grands rendez-vous pour booster le partenariat",
+          "link": "https://fr.journalducameroun.com/cameroun-bid-yaounde-prepare-deux-grands-rendez-vous-pour-booster-le-partenariat/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1521,34 +1538,16 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 30,
+      "count": 29,
       "top": [
         {
-          "title": "Tunisie | Hausse des prix des logements en Tunisie",
-          "link": "https://kapitalis.com/tunisie/2026/08/13/tunisie-hausse-des-prix-des-logements-en-tunisie/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Sebta : L’Espagne renforce ses effectifs pour traiter 5.000 dossiers de migrants",
+          "link": "https://fr.hespress.com/485084-sebta-lespagne-renforce-ses-effectifs-pour-traiter-5-000-dossiers-de-migrants.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": null,
-          "relevance": ".",
+          "theme": "D",
+          "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Manuels scolaires : En raison de la baisse des marges, les libraires envisagent un boycott des ouvrages des Écoles pionnières",
-          "link": "https://fr.hespress.com/485080-manuels-scolaires-en-raison-de-la-baisse-des-marges-les-libraires-envisagent-un-boycott-des-ouvrages-des-ecoles-pionnieres.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "CAN féminine : malgré l’élimination, les Lionnes de l’Atlas confirment leur montée en puissance",
-          "link": "https://fr.hespress.com/485100-can-feminine-malgre-lelimination-les-lionnes-de-latlas-confirment-leur-montee-en-puissance.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
         },
         {
           "title": "Alger : mort d’un supporter du CRB, les autorités s’attaquent aux fresques des ultras",
@@ -1567,6 +1566,24 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Équipe d’Algérie : Luca Zidane rompt le silence sur le Mondial 2026",
+          "link": "https://www.tsa-algerie.com/equipe-dalgerie-luca-zidane-rompt-le-silence-sur-le-mondial-2026/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Air Algérie s’allie à Oman Airports et annonce une ligne Alger-Mascate en 2027",
+          "link": "https://www.tsa-algerie.com/air-algerie-sallie-a-oman-airports-et-annonce-une-ligne-alger-mascate-en-2027/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1574,7 +1591,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 71,
+      "count": 80,
       "top": [
         {
           "title": "Maisons assiégées en Cisjordanie occupée : Israël envoie des troupes après les critiques inhabituelles de l’ambassadeur américain",
@@ -1595,6 +1612,15 @@
           "rating": "A2"
         },
         {
+          "title": "US says it can keep naval blockade on Iran 'indefinitely,' vows more economic pressure",
+          "link": "https://www.al-monitor.com/originals/2026/08/us-says-it-can-keep-naval-blockade-iran-indefinitely-vows-more-economic-pressure",
+          "source": "Al-Monitor",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "US can keep naval blockade on Iranian ports \"indefinitely,\" Pentagon chief says",
           "link": "https://www.al-monitor.com/originals/2026/08/us-can-keep-naval-blockade-iranian-ports-indefinitely-pentagon-chief-says",
           "source": "Al-Monitor",
@@ -1604,20 +1630,11 @@
           "rating": "F1"
         },
         {
-          "title": "Gaza: Destruction of buildings rises by nearly 10 per cent since ceasefire",
-          "link": "https://news.un.org/feed/view/en/story/2026/08/1168138",
-          "source": "ONU News (EN)",
+          "title": "Govt raises petrol price by Rs0.45, high-speed diesel by Rs1.16",
+          "link": "https://www.dawn.com/news/2022604/govt-raises-petrol-price-by-rs045-high-speed-diesel-by-rs116",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "US could not verify Israeli warnings of Iran plots against Trump, sources say",
-          "link": "https://www.al-monitor.com/originals/2026/08/us-could-not-verify-israeli-warnings-iran-plots-against-trump-sources-say",
-          "source": "Al-Monitor",
-          "zone": "8. Moyen-Orient",
-          "theme": "P",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1627,17 +1644,8 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 152,
+      "count": 155,
       "top": [
-        {
-          "title": "L’ambassadeur de France en Centrafrique au cœur d’un scandale sexuel",
-          "link": "https://www.aib.media/lambassadeur-de-france-en-centrafrique-au-coeur-dun-scandale-sexuel/",
-          "source": "AIB — Agence Information BF",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "Corée du Sud : Séoul mise sur les technologies de pointe et vise la Lune d’ici 2030",
           "link": "https://burkina24.com/2026/08/13/coree-du-sud-seoul-mise-sur-les-technologies-de-pointe-et-vise-la-lune-dici-2030/",
@@ -1646,6 +1654,15 @@
           "theme": "E",
           "relevance": "A",
           "rating": "C6"
+        },
+        {
+          "title": "Transporters’ issues almost resolved: Sindh CM",
+          "link": "https://www.dawn.com/news/2022659/transporters-issues-almost-resolved-sindh-cm",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Pakistan Army major general appointed new force commander of UN mission in Western Sahara",
@@ -1666,13 +1683,13 @@
           "rating": "A2"
         },
         {
-          "title": "L’administration Trump a-t-elle recours à des corsaires au large de l’Amérique latine ?",
-          "link": "https://legrandcontinent.eu/fr/2026/08/13/administration-trump-a-t-elle-recours-a-des-corsaires-au-large-de-lamerique-latine/",
-          "source": "Le Grand Continent",
+          "title": "Les Etats-Unis et le Mexique mènent des exercices à leur frontière commune, là où opère le cartel de Juarez",
+          "link": "https://www.lemonde.fr/international/article/2026/08/14/les-etats-unis-et-le-mexique-menent-des-exercices-a-leur-frontiere-commune-la-ou-opere-le-cartel-de-juarez_6745939_3210.html",
+          "source": "Le Monde International",
           "zone": "16. Amérique du Nord",
-          "theme": "S",
+          "theme": "L",
           "relevance": "L",
-          "rating": "A2"
+          "rating": "B2"
         }
       ]
     }
@@ -1690,42 +1707,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-13T22:02:09.106Z",
+      "at": "2026-08-14T02:45:24.945Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-13T22:02:09.114Z",
+      "at": "2026-08-14T02:45:24.952Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-13T22:02:43.750Z",
+      "at": "2026-08-14T02:45:56.592Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1946 articles"
+      "message": "103/170 flux OK, 1889 articles"
     },
     {
-      "at": "2026-08-13T22:02:46.823Z",
+      "at": "2026-08-14T02:45:59.639Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-13T22:02:47.120Z",
+      "at": "2026-08-14T02:45:59.943Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-13T22:02:47.125Z",
+      "at": "2026-08-14T02:45:59.949Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 11 alertes"
+      "message": "8 developpements, 12 alertes"
     },
     {
-      "at": "2026-08-13T22:02:47.125Z",
+      "at": "2026-08-14T02:45:59.949Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-13T22:02:47.125Z",
+      "at": "2026-08-14T02:45:59.949Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
