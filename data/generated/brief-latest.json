@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-14T08:23:24.880Z",
+  "generatedAt": "2026-08-14T10:16:06.076Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
     "ok": 110,
     "failed": 60,
-    "articles": 1950,
+    "articles": 1949,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,6 +40,11 @@
       {
         "id": "rss_eco_faso",
         "name": "L'Économiste du Faso",
+        "count": 10
+      },
+      {
+        "id": "rss_faso7",
+        "name": "Faso7",
         "count": 10
       },
       {
@@ -95,11 +100,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -160,7 +160,7 @@
       {
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
-        "count": 29
+        "count": 30
       },
       {
         "id": "rss_journ_cam",
@@ -295,7 +295,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 25
       },
       {
         "id": "rss_rfimo",
@@ -400,7 +400,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 29
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
@@ -510,7 +510,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -560,11 +560,6 @@
     ],
     "failedSources": [
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
@@ -598,6 +593,11 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -847,7 +847,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_imf",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 78,
-    "alerts": 8,
-    "criticalAlerts": 7,
-    "sourcesDistinct": 73
+    "bfAes": 74,
+    "alerts": 11,
+    "criticalAlerts": 9,
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
     {
@@ -961,9 +961,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C2"
+        "rating": "C1"
       },
-      "_rating": "C2",
+      "_rating": "C1",
       "_score": 127,
       "_zone": 1,
       "_theme": "E",
@@ -1135,6 +1135,54 @@
   ],
   "alerts": [
     {
+      "title": "Séisme en Colombie : les recherches continuent jusqu'au bout",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260814-s%C3%A9isme-en-colombie-les-recherches-continuent-jusqu-au-bout",
+      "source": "France 24",
+      "date": "2026-08-14T09:15:20.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "What is a ‘ceasefire’ supposed to achieve?",
+      "link": "https://www.aljazeera.com/video/by-the-numbers-3/2026/8/14/what-is-a-ceasefire-supposed-to-achieve?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-08-14T09:00:51.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Cisjordanie occupée : que fait l’armée israélienne face au blocus de maisons palestiniennes?",
+      "link": "https://www.rfi.fr/fr/podcasts/appels-sur-l-actualit%C3%A9/20260814-cisjordanie-occup%C3%A9e-comment-l-arm%C3%A9e-isra%C3%A9lienne-g%C3%A8re-t-elle-le-blocus-de-maisons-palestiniennes",
+      "source": "RFI Moyen-Orient",
+      "date": "2026-08-14T08:44:22.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
       "title": "3 Palestinian fishermen injured by Israeli naval fire off Gaza City despite ceasefire",
       "link": "https://www.aa.com.tr/en/middle-east/3-palestinian-fishermen-injured-by-israeli-naval-fire-off-gaza-city-despite-ceasefire/4027178",
       "source": "Anadolu Agency (Turquie)",
@@ -1179,6 +1227,22 @@
         {
           "type": "rupture",
           "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "The U.S. ammo crunch is a global disaster",
+      "link": "https://www.japantimes.co.jp/commentary/2026/08/14/world/us-ammo-crunch/",
+      "source": "The Japan Times",
+      "date": "2026-08-14T06:41:00.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
         }
       ]
     },
@@ -1245,64 +1309,48 @@
           "keyword": "franchissement"
         }
       ]
-    },
-    {
-      "title": "US can keep naval blockade on Iranian ports \"indefinitely,\" Pentagon chief says",
-      "link": "https://www.al-monitor.com/originals/2026/08/us-can-keep-naval-blockade-iranian-ports-indefinitely-pentagon-chief-says",
-      "source": "Al-Monitor",
-      "date": "2026-08-13T16:46:36.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      196
+      191
     ],
     [
       "occident_fr",
-      119
+      128
     ],
     [
       "autre",
-      116
+      114
     ],
     [
       "occident_us",
-      103
+      104
     ],
     [
       "bf_local",
-      66
+      62
     ],
     [
       "golfe_mo",
-      58
-    ],
-    [
-      "turquie",
-      47
+      55
     ],
     [
       "russie",
-      41
+      47
+    ],
+    [
+      "turquie",
+      46
     ],
     [
       "chine",
-      36
+      34
     ],
     [
       "sahel",
-      18
+      19
     ]
   ],
   "desks": [
@@ -1310,7 +1358,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 125,
+      "count": 120,
       "top": [
         {
           "title": "Burkina Faso: plusieurs personnalités devront répondre d'assassinat dans l'affaire Norbert Zongo",
@@ -1337,7 +1385,7 @@
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "C1"
         },
         {
           "title": "Construction d’un espace AES souverain : la jeunesse de la confédération invitée à s’engager",
@@ -1363,8 +1411,26 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 61,
+      "count": 55,
       "top": [
+        {
+          "title": "Veep commissions five envoys, charges them to advance Ghana’s interests abroad",
+          "link": "https://www.myjoyonline.com/veep-commissions-five-envoys-charges-them-to-advance-ghanas-interests-abroad/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "2027: APC youths demand more recognition, vow 10m votes",
+          "link": "https://www.vanguardngr.com/2026/08/2027-apc-youths-demand-more-recognition-vow-10m-votes/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Onion traders hail Trade Minister’s intervention as Ghana-Nigeria trade dispute eases",
           "link": "https://www.myjoyonline.com/onion-traders-hail-trade-ministers-intervention-as-ghana-nigeria-trade-dispute-eases/",
@@ -1375,40 +1441,22 @@
           "rating": "F2"
         },
         {
-          "title": "Troops bomb scores of terrorists, nab top leader, 60 collaborators",
-          "link": "https://www.vanguardngr.com/2026/08/troops-bomb-scores-of-terrorists-nab-top-leader-60-collaborators/",
+          "title": "2027 Presidency: ADP candidate raises concern over possible substitution",
+          "link": "https://www.vanguardngr.com/2026/08/2027-presidency-adp-candidate-raises-concern-over-possible-substitution/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Navy rescues 22 sea robbery victims, recovers hijacked boat in Akwa Ibom",
-          "link": "https://www.vanguardngr.com/2026/08/navy-rescues-22-sea-robbery-victims-recovers-hijacked-boat-in-akwa-ibom/",
+          "title": "World Cup, Super Eagles’, AFCON heartbreak dominate google searches",
+          "link": "https://www.vanguardngr.com/2026/08/world-cup-super-eagles-afcon-heartbreak-dominate-google-searches/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "M",
           "relevance": "L",
           "rating": "F2"
-        },
-        {
-          "title": "Access Bank Ghana secures certification as a Carbon Credit Broker",
-          "link": "https://www.myjoyonline.com/access-bank-ghana-secures-certification-as-a-carbon-credit-broker/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "C",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Osun Election: FRSC Deploys 2,500 Personnel, 50 Vehicles for Traffic Management",
-          "link": "https://www.vanguardngr.com/2026/08/osun-election-frsc-deploys-2500-personnel-50-vehicles-for-traffic-management/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     },
@@ -1416,8 +1464,26 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 28,
+      "count": 26,
       "top": [
+        {
+          "title": "Mali-Rwanda : Abdoulaye Diop et Olivier Nduhungirehe échangent sur le renforcement de la coopération",
+          "link": "https://malijet.com/actualite-politique-au-mali/311213-mali-rwanda-abdoulaye-diop-et-olivier-nduhungirehe-echange.html",
+          "source": "Malijet",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "RDC: le Conseil national de cyberdéfense au cœur du procès de l'ancien chef de l’armée",
+          "link": "https://www.rfi.fr/fr/afrique/20260814-rdc-le-conseil-national-de-cyberd%C3%A9fense-au-c%C5%93ur-du-proc%C3%A8s-de-l-ancien-chef-de-l-arm%C3%A9e",
+          "source": "RFI Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
         {
           "title": "Centrafrique : 12 ans après, les musulmans de retour à Sibut",
           "link": "https://lesoleil.sn/international/infos-afrique/centrafrique-12-ans-apres-les-musulmans-de-retour-a-sibut/",
@@ -1444,24 +1510,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Kalehe : cinq civils tués et quatre militaires blessés dans des bombardements attribués à l'AFC/M23 à Lumbishi et Chambombo",
-          "link": "https://actualite.cd/2026/08/14/kalehe-cinq-civils-tues-et-quatre-militaires-blesses-dans-des-bombardements-attribues",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Cameroun: poursuite des procès des violences pos-életorales d'octobre 2025",
-          "link": "https://www.rfi.fr/fr/afrique/20260814-cameroun-poursuite-des-proc%C3%A8s-des-violences-pos-%C3%A9letorales-d-octobre-2025",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1469,8 +1517,26 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 31,
+      "count": 30,
       "top": [
+        {
+          "title": "Anglais, français : l’Algérie n’a pas besoin d’une guerre des langues",
+          "link": "https://www.tsa-algerie.com/anglais-francais-lalgerie-na-pas-besoin-dune-guerre-des-langues/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Etude : Comment Facebook et TikTok ont amplifié la vague de passages vers Sebta",
+          "link": "https://fr.hespress.com/485061-etude-comment-facebook-et-tiktok-ont-amplifie-la-vague-de-passages-vers-sebta.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "I",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Prix et stocks : le MEF renforce sa veille",
           "link": "https://fr.hespress.com/485113-prix-et-stocks-le-mef-renforce-sa-veille.html",
@@ -1490,29 +1556,11 @@
           "rating": "F2"
         },
         {
-          "title": "Sebta : L’Espagne renforce ses effectifs pour traiter 5.000 dossiers de migrants",
-          "link": "https://fr.hespress.com/485084-sebta-lespagne-renforce-ses-effectifs-pour-traiter-5-000-dossiers-de-migrants.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Alger : mort d’un supporter du CRB, les autorités s’attaquent aux fresques des ultras",
           "link": "https://www.tsa-algerie.com/alger-mort-dun-supporter-du-crb-les-autorites-sattaquent-aux-fresques-des-ultras/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Équipe d’Algérie : Luca Zidane rompt le silence sur le Mondial 2026",
-          "link": "https://www.tsa-algerie.com/equipe-dalgerie-luca-zidane-rompt-le-silence-sur-le-mondial-2026/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1522,8 +1570,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 76,
+      "count": 72,
       "top": [
+        {
+          "title": "Cisjordanie occupée : que fait l’armée israélienne face au blocus de maisons palestiniennes?",
+          "link": "https://www.rfi.fr/fr/podcasts/appels-sur-l-actualit%C3%A9/20260814-cisjordanie-occup%C3%A9e-comment-l-arm%C3%A9e-isra%C3%A9lienne-g%C3%A8re-t-elle-le-blocus-de-maisons-palestiniennes",
+          "source": "RFI Moyen-Orient",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C1"
+        },
         {
           "title": "En Israël, une « Kill List » du Shin Beth pour tuer tous les Palestiniens impliqués dans le massacre du 7 octobre",
           "link": "https://www.lefigaro.fr/international/en-israel-une-kill-list-du-shin-beth-pour-tuer-tous-les-palestiniens-impliques-dans-le-massacre-du-7-octobre-20260814",
@@ -1552,22 +1609,13 @@
           "rating": "F2"
         },
         {
-          "title": "US can keep naval blockade on Iranian ports \"indefinitely,\" Pentagon chief says",
-          "link": "https://www.al-monitor.com/originals/2026/08/us-can-keep-naval-blockade-iranian-ports-indefinitely-pentagon-chief-says",
-          "source": "Al-Monitor",
+          "title": "DIRECT - Guerre au Moyen-Orient: l'Iran menacée de nouvelles sanctions par les États-Unis",
+          "link": "https://www.rfi.fr/fr/moyen-orient/20260814-direct-guerre-au-moyen-orient-l-iran-menac%C3%A9e-de-nouvelles-sanctions-par-les-%C3%A9tats-unis",
+          "source": "RFI Moyen-Orient",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
+          "theme": "M",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Israeli-American defense startup launches new Anthem cruise missile in Morocco military test",
-          "link": "https://www.jpost.com/defense-and-tech/article-905512",
-          "source": "Jerusalem Post",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "rating": "C2"
         }
       ]
     },
@@ -1575,7 +1623,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 156,
+      "count": 151,
       "top": [
         {
           "title": "Corée du Sud : Séoul mise sur les technologies de pointe et vise la Lune d’ici 2030",
@@ -1634,43 +1682,48 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-08-14T08:22:50.619Z",
+      "at": "2026-08-14T10:15:30.571Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-14T08:22:50.627Z",
+      "at": "2026-08-14T10:15:30.579Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-14T08:23:21.572Z",
+      "at": "2026-08-14T10:16:02.754Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1950 articles"
+      "message": "110/170 flux OK, 1949 articles"
     },
     {
-      "at": "2026-08-14T08:23:24.567Z",
+      "at": "2026-08-14T10:16:05.752Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-14T08:23:24.877Z",
+      "at": "2026-08-14T10:16:06.073Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-14T08:23:24.882Z",
+      "at": "2026-08-14T10:16:06.078Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 8 alertes"
+      "message": "8 developpements, 11 alertes"
     },
     {
-      "at": "2026-08-14T08:23:24.882Z",
+      "at": "2026-08-14T10:16:06.078Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-08-14T10:16:06.078Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
