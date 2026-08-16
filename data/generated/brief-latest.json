@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-16T03:59:08.857Z",
+  "generatedAt": "2026-08-16T06:59:02.559Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1956,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1955,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -103,6 +103,11 @@
         "count": 10
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -178,11 +183,6 @@
         "count": 30
       },
       {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
-      },
-      {
         "id": "rss_standard_ke",
         "name": "The Standard (Kenya)",
         "count": 30
@@ -211,11 +211,6 @@
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
-      },
-      {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "count": 0
       },
       {
         "id": "rss_madamasr",
@@ -295,7 +290,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -380,7 +375,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_fp",
@@ -405,7 +400,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -515,7 +510,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -600,14 +595,9 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_alakhbar",
@@ -670,6 +660,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_7sur7",
         "name": "7sur7.cd (RDC)",
         "error": "HTTP 404"
@@ -718,6 +713,11 @@
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "error": "fetch failed"
       },
       {
         "id": "rss_libya_obs",
@@ -864,9 +864,9 @@
   "stats": {
     "articles": 800,
     "bfAes": 72,
-    "alerts": 11,
-    "criticalAlerts": 7,
-    "sourcesDistinct": 67
+    "alerts": 10,
+    "criticalAlerts": 6,
+    "sourcesDistinct": 66
   },
   "topDevelopments": [
     {
@@ -1131,11 +1131,59 @@
   ],
   "alerts": [
     {
+      "title": "Séisme en Indonésie : au moins 48 morts, des milliers d'évacués en attente d'aide",
+      "link": "https://www.france24.com/fr/asie-pacifique/20260816-s%C3%A9isme-en-indon%C3%A9sie-au-moins-48-morts-des-milliers-d-%C3%A9vacu%C3%A9s-en-attente-d-aide",
+      "source": "France 24",
+      "date": "2026-08-16T06:28:56.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "La Colombie demande à Trump de suspendre les droits de douane après le séisme meurtrier",
+      "link": "https://www.france24.com/fr/am%C3%A9riques/20260816-la-colombie-demande-%C3%A0-trump-de-suspendre-les-droits-de-douane-apr%C3%A8s-le-s%C3%A9isme-meurtrier",
+      "source": "France 24",
+      "date": "2026-08-16T05:43:26.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Iran Demands Compensation, End to US Blockade Before Hormuz Reopens — MFA Spox",
+      "link": "https://sputnikglobe.com/20260816/iran-demands-compensation-end-to-us-blockade-before-hormuz-reopens--mfa-spox-1124584478.html",
+      "source": "RIA Novosti (EN)",
+      "date": "2026-08-16T04:48:47.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
       "title": "Le nouveau président colombien demande à son allié Donald Trump de suspendre les droits de douane après le séisme",
       "link": "https://www.lemonde.fr/international/article/2026/08/16/le-nouveau-president-colombien-demande-a-son-allie-donald-trump-de-suspendre-les-droits-de-douane-apres-le-seisme_6747018_3210.html",
       "source": "Le Monde International",
       "date": "2026-08-16T02:42:59.000Z",
-      "rating": "B2",
+      "rating": "B1",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1159,22 +1207,6 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Death toll from Zimbabwe ferry disaster rises to 72",
-      "link": "https://www.aljazeera.com/news/2026/8/15/death-toll-from-zimbabwe-ferry-disaster-rises-to-69?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "date": "2026-08-15T19:10:06.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
         }
       ]
     },
@@ -1257,92 +1289,44 @@
           "keyword": "séisme"
         }
       ]
-    },
-    {
-      "title": "Les images du séisme qui a frappé l’est de l’Indonésie et fait au moins 38 morts",
-      "link": "https://www.lemonde.fr/international/video/2026/08/15/les-images-du-seisme-qui-a-frappe-l-est-de-l-indonesie-et-fait-au-moins-38-morts_6746657_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-08-15T10:07:52.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Séisme en Indonésie : des milliers d'habitants évacués par crainte d'une montée des eaux",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260815-s%C3%A9isme-en-indon%C3%A9sie-des-milliers-d-habitants-%C3%A9vacu%C3%A9s-par-crainte-d-une-mont%C3%A9e-des-eaux",
-      "source": "France 24",
-      "date": "2026-08-15T09:39:47.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Iran tells US to ‘accept defeat’ amid Strait of Hormuz blockade",
-      "link": "https://www.dailysabah.com/world/mid-east/iran-tells-us-to-accept-defeat-amid-strait-of-hormuz-blockade",
-      "source": "Daily Sabah (Turquie)",
-      "date": "2026-08-15T09:17:00.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      199
+      184
     ],
     [
       "autre",
-      107
-    ],
-    [
-      "occident_us",
-      89
+      118
     ],
     [
       "occident_fr",
-      89
+      106
+    ],
+    [
+      "occident_us",
+      90
     ],
     [
       "golfe_mo",
-      80
+      77
     ],
     [
       "russie",
-      57
+      55
     ],
     [
       "bf_local",
-      52
-    ],
-    [
-      "turquie",
-      46
+      51
     ],
     [
       "chine",
-      44
+      41
+    ],
+    [
+      "turquie",
+      41
     ],
     [
       "sahel",
@@ -1354,7 +1338,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 127,
+      "count": 119,
       "top": [
         {
           "title": "Ambassadeurs de paix awards 2026 : Le Grand APA décerné au Cheick Amidou Bissiri pour ses actions sociales",
@@ -1407,7 +1391,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 58,
+      "count": 59,
       "top": [
         {
           "title": "Nigeria: nouveaux affrontements intercommunautaires meurtriers dans le centre du pays",
@@ -1425,11 +1409,11 @@
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
-          "title": "In Ekiti, students abandon school for online scam as mums form ‘Iya Omo Ologo Association’",
-          "link": "https://www.vanguardngr.com/2026/08/in-ekiti-students-abandon-school-for-online-scam-as-mums-form-iya-omo-ologo-association/",
+          "title": "BLACK JULY:Benue killings worsen after Miyetti Allah leader shot dead",
+          "link": "https://www.vanguardngr.com/2026/08/black-julybenue-killings-worsen-after-miyetti-allah-leader-shot-dead/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
@@ -1437,17 +1421,17 @@
           "rating": "F2"
         },
         {
-          "title": "Inside Lagos’ waste, flood crisis (2): LAWMA, refuse collectors shift blame",
-          "link": "https://www.vanguardngr.com/2026/08/inside-lagos-waste-flood-crisis-2-lawma-refuse-collectors-shift-blame/",
-          "source": "Vanguard (Nigeria)",
+          "title": "#OsunDecides2026: It’s Official: INEC declares Accord’s Ademola Adeleke winner of governorship election",
+          "link": "https://www.premiumtimesng.com/news/top-news/903305-osundecides2026-its-official-inec-declares-accords-ademola-adeleke-winner-of-governorship-election.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
-          "title": "Election rigging: Universities should reply Obi, by Tonnie Iredia",
-          "link": "https://www.vanguardngr.com/2026/08/election-rigging-universities-should-reply-obi-by-tonnie-iredia/",
+          "title": "N24BN DELTA LG MONEY: My blackmailers claimed to have EFCC, ICPC in their pockets – Burutu council chair",
+          "link": "https://www.vanguardngr.com/2026/08/n24bn-delta-lg-money-my-blackmailers-claimed-to-have-efcc-icpc-in-their-pockets-burutu-council-chair/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1460,7 +1444,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 18,
+      "count": 12,
       "top": [
         {
           "title": "L'Ouganda maintiendra des troupes en Somalie, annonce Kampala",
@@ -1470,15 +1454,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "Ebola/RDC : cinq pays renforcent leur coordination face au risque de propagation transfrontalière",
-          "link": "https://actualite.cd/2026/08/15/ebolardc-cinq-pays-renforcent-leur-coordination-face-au-risque-de-propagation",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
         },
         {
           "title": "Former rebel fighters join campaign against Ebola in the DR Congo",
@@ -1506,6 +1481,15 @@
           "theme": null,
           "relevance": ".",
           "rating": "F2"
+        },
+        {
+          "title": "Jeux de hasard : 13,8 milliards sur la table, l’État abat-il ses cartes ?",
+          "link": "https://www.gabonreview.com/jeux-de-hasard-138-milliards-sur-la-table-letat-abat-il-ses-cartes/",
+          "source": "Gabon Review",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1513,7 +1497,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 30,
+      "count": 28,
       "top": [
         {
           "title": "Badou Zaki à la tête de la sélection jordanienne pour préparer la Coupe d’Asie 2027",
@@ -1531,7 +1515,7 @@
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "Violence numérique : Un climat préoccupant pour les candidates aux législatives de 2026",
@@ -1543,20 +1527,20 @@
           "rating": "F2"
         },
         {
-          "title": "Les Algériens dominent la route migratoire vers l’Espagne",
-          "link": "https://fr.hespress.com/485199-les-algeriens-dominent-la-route-migratoire-vers-lespagne.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Tamanrasset : 31 kg de cocaïne découverts dans un véhicule transporté par semi-remorque",
           "link": "https://www.tsa-algerie.com/tamanrasset-31-kg-de-cocaine-decouverts-dans-un-vehicule-transporte-par-semi-remorque/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Français, éducation islamique, école algérienne : les réponses sans tabou d’Ahmed Tessa",
+          "link": "https://www.tsa-algerie.com/francais-education-islamique-ecole-algerienne-les-reponses-sans-tabou-dahmed-tessa/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1566,7 +1550,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 100,
+      "count": 104,
       "top": [
         {
           "title": "Mali, Liel Yahalomi's AI search history helped authorities track them down in Argentina - report",
@@ -1596,15 +1580,6 @@
           "rating": "F2"
         },
         {
-          "title": "Iran tells US to ‘accept defeat’ amid Strait of Hormuz blockade",
-          "link": "https://www.dailysabah.com/world/mid-east/iran-tells-us-to-accept-defeat-amid-strait-of-hormuz-blockade",
-          "source": "Daily Sabah (Turquie)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Qatar denies capturing three Iranian pilots after downing fighter jets",
           "link": "https://www.myjoyonline.com/qatar-denies-capturing-three-iranian-pilots-after-downing-fighter-jets/",
           "source": "MyJoyOnline (Ghana)",
@@ -1612,6 +1587,15 @@
           "theme": null,
           "relevance": ".",
           "rating": "F1"
+        },
+        {
+          "title": "L’Iran dénonce la détention de trois pilotes de chasse par le Qatar, qui dément les avoir capturés",
+          "link": "https://www.lemonde.fr/international/article/2026/08/16/l-iran-denonce-la-detention-de-trois-pilotes-de-chasse-par-le-qatar-qui-dement-les-avoir-captures_6746919_3210.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B1"
         }
       ]
     },
@@ -1619,7 +1603,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 153,
+      "count": 156,
       "top": [
         {
           "title": "Zonsé : l’association NOVI NEXI renforce les capacités d’une couturière",
@@ -1646,7 +1630,7 @@
           "zone": "18. Amérique du Sud",
           "theme": "P",
           "relevance": ".",
-          "rating": "B2"
+          "rating": "B1"
         },
         {
           "title": "Espagne : Grenade secouée par un rare séisme de magnitude 5, pas de victimes",
@@ -1658,13 +1642,13 @@
           "rating": "B1"
         },
         {
-          "title": "Les images du séisme qui a frappé l’est de l’Indonésie et fait au moins 38 morts",
-          "link": "https://www.lemonde.fr/international/video/2026/08/15/les-images-du-seisme-qui-a-frappe-l-est-de-l-indonesie-et-fait-au-moins-38-morts_6746657_3210.html",
-          "source": "Le Monde International",
-          "zone": "13. Asie du Sud-Est",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B1"
+          "title": "Ukraine : faute de missiles Patriot, Kiev limite les informations sur les missiles russes qu’elle ne parvient pas à intercepter",
+          "link": "https://francais.rt.com/international/137087-ukraine-faute-missile-patriot-kiev-limite-informations-missiles-russes-elle-parvient-pas-intercepter",
+          "source": "RT en français",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A1"
         }
       ]
     }
@@ -1673,7 +1657,8 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
@@ -1681,42 +1666,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-16T03:58:33.855Z",
+      "at": "2026-08-16T06:58:26.815Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-16T03:58:33.861Z",
+      "at": "2026-08-16T06:58:26.822Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-16T03:59:06.064Z",
+      "at": "2026-08-16T06:58:59.310Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1956 articles"
+      "message": "110/170 flux OK, 1955 articles"
     },
     {
-      "at": "2026-08-16T03:59:08.532Z",
+      "at": "2026-08-16T06:59:02.199Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-16T03:59:08.854Z",
+      "at": "2026-08-16T06:59:02.555Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-16T03:59:08.858Z",
+      "at": "2026-08-16T06:59:02.562Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 11 alertes"
+      "message": "8 developpements, 10 alertes"
     },
     {
-      "at": "2026-08-16T03:59:08.859Z",
+      "at": "2026-08-16T06:59:02.562Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-16T03:59:08.859Z",
+      "at": "2026-08-16T06:59:02.562Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
