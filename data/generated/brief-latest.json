@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-17T13:05:32.141Z",
+  "generatedAt": "2026-08-17T15:40:03.255Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 109,
-    "failed": 61,
-    "articles": 1911,
+    "ok": 103,
+    "failed": 67,
+    "articles": 1845,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -53,9 +53,9 @@
         "count": 0
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
+        "count": 10
       },
       {
         "id": "rss_maliweb",
@@ -95,11 +95,6 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -146,11 +141,6 @@
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
-      },
-      {
-        "id": "rss_vanguard",
-        "name": "Vanguard (Nigeria)",
-        "count": 20
       },
       {
         "id": "rss_punch",
@@ -223,18 +213,8 @@
         "count": 0
       },
       {
-        "id": "rss_acss",
-        "name": "Africa Center for Strategic Studies",
-        "count": 0
-      },
-      {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -343,11 +323,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -356,11 +331,6 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -420,7 +390,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 12
       },
       {
         "id": "rss_tass",
@@ -565,9 +535,9 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "error": "fetch failed"
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -610,6 +580,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -647,7 +622,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
@@ -658,6 +633,11 @@
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_vanguard",
+        "name": "Vanguard (Nigeria)",
+        "error": "HTTP 500"
       },
       {
         "id": "rss_camer",
@@ -702,7 +682,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -720,9 +700,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_acss",
+        "name": "Africa Center for Strategic Studies",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -738,6 +723,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -783,6 +773,16 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,49 +863,17 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 51,
-    "alerts": 7,
-    "criticalAlerts": 3,
-    "sourcesDistinct": 68
+    "bfAes": 71,
+    "alerts": 5,
+    "criticalAlerts": 2,
+    "sourcesDistinct": 69
   },
   "topDevelopments": [
-    {
-      "title": "Kénédougou : Les jeunes appelés à jouer pleinement leur rôle dans l’espace confédéral",
-      "link": "https://www.aib.media/kenedougou-les-jeunes-appeles-a-jouer-pleinement-leur-role-dans-lespace-confederal/",
-      "pubDate": "2026-08-17T12:34:18.000Z",
-      "description": "Kénédougou : Les jeunes appelés à jouer pleinement leur rôle dans l'espace confédéral Orodara, 17 août 2026 (AIB) – Le Secrétaire général de la province du Kénédougou, Bassanma Ko, représentant le Haut-Commissaire, a présidé le mercredi 12 août 2026 à la salle des fêtes de la mairie de Orodara, la cérémonie officielle de commémoration de la Journée internationale de la jeunesse, célébrée cette année sous le thème : « Rôle, responsabilité et engagement de la jeunesse dans la construction d’un espace confédéral souverain ». À l’occasion, le Secrétaire général de la province a transmis aux jeunes le message de la ministre des Sports, de la Jeunesse et de l’Emploi. Dans cette adresse, la ministre a rappelé que la célébration de cette journée intervient dans un contexte marqué par l’affirmation de la souveraineté des États de la Confédération de l’Alliance des États du Sahel (AES) et par la volonté commune de bâtir un espace intégré, prospère et sécurisé. Selon elle, le thème retenu met en lumière le rôle central de la jeunesse dans la consolidation du projet confédéral. Il traduit également l’engagement des jeunes à accompagner les efforts des États membres dans la préservation de la paix, le renforcement de la cohésion sociale et la défense des intérêts des peuples de l’espace AES. La ministre a par ailleurs souligné que cette célébration se tient à la veille du Forum confédéral de la jeunesse et du volontariat que le Burkina Faso s’apprête à accueillir, une initiative destinée à promouvoir le volontariat, le leadership et la participation citoyenne des jeunes à l’échelle confédérale. Dans son intervention, Bassanma Ko a invité la jeunesse du Kénédougou à demeurer une force de proposition et d’action au service du développement. Il l’a exhortée à faire preuve de responsabilité, de patriotisme et d’engagement afin d’apporter sa contribution à l’édification d’un espace confédéral souverain, stable et résilient. « Les défis auxquels nos nations sont confrontées exigent une jeunesse consciente, disciplinée et engagée. Vous avez un rôle déterminant à jouer dans la construction d’un avenir de paix, de sécurité et de prospérité pour nos populations », a-t-il indiqué. Dans la province du Kénédougou, la célébration de la Journée internationale de la jeunesse a été marquée par plusieurs activités, notamment une marche de soutien et d’hommage aux héros de la Révolution, une séance de sport pour tous, ainsi que des panels. Agence d'information du Burkina AK/wis",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
     {
       "title": "Immersion patriotique obligatoire Dr Robert Lucien Jean Claude Kargougou, ministre de la santé : « Camarades appelés de Fada N’Gourma, vous êtes la cohorte de la résilience »",
       "link": "https://www.sidwaya.info/immersion-patriotique-obligatoire-dr-robert-lucien-jean-claude-kargougou-ministre-de-la-sante-camarades-appeles-de-fada-ngourma-vous-etes-la-cohorte-de-la-resilience/",
       "pubDate": "2026-08-17T11:07:33.000Z",
-      "description": "Une délégation gouvernementale, conduite par le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou, a rendu visite, hier dimanche 16 août 2026, à Fada N'Gourma, aux appelés de l'Immersion patriotique obligatoire (IPO) et aux jeunes campeurs de l'initiative présidentielle « Camp vacances Faso Mêbo », en pleine formation civique et patriotique. A quelques jours de la clôture de l'Immersion patriotique obligatoire (IPO), une délégation gouvernementale, conduite par le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou et accompagnée des autorités administratives, militaires et paramilitaires régionales, a rendu visite, le dimanche 16 août 2026, aux appelés de Fada N'Gourma. De l’Institut national de formation du personnel de l’éducation (INFPE) au Lycée Diaba Lompo (LDL) en passant par le Lycée professionnel régional Yendabili (LPRY), le camarade Kargougou, qui avait à ses côtés le ministre délégué chargé des ressources animales, Dr Amadou Dicko, était porteur d’un message de félicitations et d’encouragement du gouvernement aux immergés. « Les camarades Président du Faso et Premier ministre nous ont mandatés de venir ici à Fada pour vous transmettre toutes leurs admirations et saluer cette mobilisation exceptionnelle », a-t-il déclaré. La délégation a visité également le « Camp vacances Faso Mêbo ». \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1024x502.jpeg\" class=\"size-full wp-image-167675\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-scaled.jpeg\" alt=\"La délégation a visité également le « Camp vacances Faso Mêbo ».\" width=\"2560\" height=\"1254\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-scaled.jpeg 2560w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-300x147.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1024x502.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-768x376.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1536x752.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-2048x1003.jpeg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-857x420.jpeg 857w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-150x73.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-696x341.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1068x523.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1920x940.jpeg 1920w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-324x160.jpeg 324w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-533x261.jpeg 533w\" sizes=\"(max-width: 2560px) 100vw, 2560px\" /> La délégation a visité également le « Camp vacances Faso Mêbo ». Selon lui, l’IPO s’inscrit dans la vision du chef de l’Etat de « forger des citoyens nouveaux », pleinement conscients de leurs responsabilités et des enjeux du moment. Il a souligné que cette formation vise notamment à inculquer aux jeunes les valeurs de patriotisme, de discipline, d’intégrité, de souveraineté nationale, de développement endogène et de cohésion sociale. Au terme de la visite des trois sites, marquée notamment par un repas communautaire qu’il a partagé avec les immergés au LDL, le ministre a affirmé que cette formation civique et patriotique d’un mois a commencé déjà à porter fruit. « En effet, nous avons constaté que les appelés ont d’ores et déjà intégré ces valeurs cardinales tant prônées dans le cadre de la Révolution progressiste populaire (RPP). Nous repartons véritablement très satisfaits de ce que nous avons vu et entendu », a-t-il apprécié. A ce propos, l’appelée de l’IPO Prisca Balma a témoigné que cette expérience lui a permis de mieux comprendre le sens du patriotisme et du vivre-ensemble. « Durant mon séjour au LDL, j’ai appris que la patrie passe avant tout. J’ai également compris le sens du vivre-ensemble, de la solidarité et l’importance de l’activité sportive », a-t-elle dit. « Soyez des ambassadeurs de la santé » Le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou a exhorté les appelés à demeurer des citoyens responsables et conscients des enjeux du moment. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1018x1024.jpeg\" class=\"size-full wp-image-167676\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG.jpeg\" alt=\"Le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou a exhorté les appelés à demeurer des citoyens responsables et conscients des enjeux du moment.\" width=\"1973\" height=\"1984\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG.jpeg 1973w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-298x300.jpeg 298w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1018x1024.jpeg 1018w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-150x151.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-768x772.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1527x1536.jpeg 1527w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-418x420.jpeg 418w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-300x302.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-696x700.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1068x1074.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1920x1931.jpeg 1920w\" sizes=\"(max-width: 1973px) 100vw, 1973px\" /> Le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou a exhorté les appelés à demeurer des citoyens responsables et conscients des enjeux du moment. Pour Dr Kargougou, l’enjeu de l’IPO va au-delà de l’acquisition de connaissances théoriques et pratiques. Il s’agit, surtout, de préparer une jeunesse consciente, disciplinée et prête à assumer progressivement des responsabilités majeures dans l’édification de la nation. « Une jeunesse consciente et résolument engagée constitue une force motrice », a-t-il soutenu. Aussi, le camarade Kargougou a souligné que si les appelés de l’IPO sont en passe de devenir des citoyens nouveaux, c’est grâce à des encadreurs professionnels, dévoués et attentifs qui les accompagnent. « Je voudrais féliciter les encadreurs pour le travail professionnel et remarquable abattu », a-t-il salué. Par ailleurs, en sa qualité de ministre de la Santé, Dr Kargougou a exhorté les jeunes à devenir de véritables « ambassadeurs de la santé ». Il les a invités, notamment, à faire de l’hygiène et de l’assainissement des réflexes quotidiens, en veillant à la propreté de leur cadre de vie et en sensibilisant leur entourage sur les bonnes pratiques d’hygiène. Du côté des appelés qui ont entonné fièrement le Ditanyè et l’hymne de la Conféderation des Etats du Sahel dénommée « Sahel Benkan », à chaque étape, l’ambiance était chaleureuse, ce dimanche bien arrosé par une pluie matinale. Au nom de ses camarades, l’appelée Prisca Balma a salué cette démarche des autorités et les a remerciées pour les messages de félicitations et d’encouragement. « Nous sommes conscients des attentes des autorités vis-à-vis de nous. Nous tacherons de demeurer des citoyens exemplaires au-delà de l’immersion », a-t-elle promis. Après les trois sites de l’IPO, où sont répartis les 1 773 appelés de Fada N’Gourma, la délégation ministérielle a mis le cap sur le « Camp vacances Faso Mêbo ». Là également, le ministre Kargougou a invité les jeunes campeurs, en formation civique et patriotique depuis le 13 août dernier, à cultiver le patriotisme, la discipline, le civisme, la solidarité et le sens de la responsabilité, afin de contribuer, chacun à son niveau, à l’édification d’un Burkina Faso plus résilient et souverain. Joanny SOW",
+      "description": "Une délégation gouvernementale, conduite par le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou, a rendu visite, hier dimanche 16 août 2026, à Fada N'Gourma, aux appelés de l'Immersion patriotique obligatoire (IPO) et aux jeunes campeurs de l'initiative présidentielle « Camp vacances Faso Mêbo », en pleine formation civique et patriotique. A quelques jours de la clôture de l'Immersion patriotique obligatoire (IPO), une délégation gouvernementale, conduite par le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou et accompagnée des autorités administratives, militaires et paramilitaires régionales, a rendu visite, le dimanche 16 août 2026, aux appelés de Fada N'Gourma. De l’Institut national de formation du personnel de l’éducation (INFPE) au Lycée Diaba Lompo (LDL) en passant par le Lycée professionnel régional Yendabili (LPRY), le camarade Kargougou, qui avait à ses côtés le ministre délégué chargé des ressources animales, Dr Amadou Dicko, était porteur d’un message de félicitations et d’encouragement du gouvernement aux immergés. « Les camarades Président du Faso et Premier ministre nous ont mandatés de venir ici à Fada pour vous transmettre toutes leurs admirations et saluer cette mobilisation exceptionnelle », a-t-il déclaré. La délégation a visité également le « Camp vacances Faso Mêbo ». \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1024x502.jpeg\" class=\"size-full wp-image-167675\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-scaled.jpeg\" alt=\"La délégation a visité également le « Camp vacances Faso Mêbo ».\" width=\"2560\" height=\"1254\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-scaled.jpeg 2560w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-300x147.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1024x502.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-768x376.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1536x752.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-2048x1003.jpeg 2048w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-857x420.jpeg 857w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-150x73.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-696x341.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1068x523.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-1920x940.jpeg 1920w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-324x160.jpeg 324w, https://www.sidwaya.info/wp-content/uploads/2026/08/2.JPG-1-533x261.jpeg 533w\" sizes=\"auto, (max-width: 2560px) 100vw, 2560px\" /> La délégation a visité également le « Camp vacances Faso Mêbo ». Selon lui, l’IPO s’inscrit dans la vision du chef de l’Etat de « forger des citoyens nouveaux », pleinement conscients de leurs responsabilités et des enjeux du moment. Il a souligné que cette formation vise notamment à inculquer aux jeunes les valeurs de patriotisme, de discipline, d’intégrité, de souveraineté nationale, de développement endogène et de cohésion sociale. Au terme de la visite des trois sites, marquée notamment par un repas communautaire qu’il a partagé avec les immergés au LDL, le ministre a affirmé que cette formation civique et patriotique d’un mois a commencé déjà à porter fruit. « En effet, nous avons constaté que les appelés ont d’ores et déjà intégré ces valeurs cardinales tant prônées dans le cadre de la Révolution progressiste populaire (RPP). Nous repartons véritablement très satisfaits de ce que nous avons vu et entendu », a-t-il apprécié. A ce propos, l’appelée de l’IPO Prisca Balma a témoigné que cette expérience lui a permis de mieux comprendre le sens du patriotisme et du vivre-ensemble. « Durant mon séjour au LDL, j’ai appris que la patrie passe avant tout. J’ai également compris le sens du vivre-ensemble, de la solidarité et l’importance de l’activité sportive », a-t-elle dit. « Soyez des ambassadeurs de la santé » Le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou a exhorté les appelés à demeurer des citoyens responsables et conscients des enjeux du moment. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1018x1024.jpeg\" class=\"size-full wp-image-167676\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG.jpeg\" alt=\"Le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou a exhorté les appelés à demeurer des citoyens responsables et conscients des enjeux du moment.\" width=\"1973\" height=\"1984\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG.jpeg 1973w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-298x300.jpeg 298w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1018x1024.jpeg 1018w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-150x151.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-768x772.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1527x1536.jpeg 1527w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-418x420.jpeg 418w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-300x302.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-696x700.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1068x1074.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/3.JPG-1920x1931.jpeg 1920w\" sizes=\"auto, (max-width: 1973px) 100vw, 1973px\" /> Le ministre de la santé, Dr Robert Lucien Jean Claude Kargougou a exhorté les appelés à demeurer des citoyens responsables et conscients des enjeux du moment. Pour Dr Kargougou, l’enjeu de l’IPO va au-delà de l’acquisition de connaissances théoriques et pratiques. Il s’agit, surtout, de préparer une jeunesse consciente, disciplinée et prête à assumer progressivement des responsabilités majeures dans l’édification de la nation. « Une jeunesse consciente et résolument engagée constitue une force motrice », a-t-il soutenu. Aussi, le camarade Kargougou a souligné que si les appelés de l’IPO sont en passe de devenir des citoyens nouveaux, c’est grâce à des encadreurs professionnels, dévoués et attentifs qui les accompagnent. « Je voudrais féliciter les encadreurs pour le travail professionnel et remarquable abattu », a-t-il salué. Par ailleurs, en sa qualité de ministre de la Santé, Dr Kargougou a exhorté les jeunes à devenir de véritables « ambassadeurs de la santé ». Il les a invités, notamment, à faire de l’hygiène et de l’assainissement des réflexes quotidiens, en veillant à la propreté de leur cadre de vie et en sensibilisant leur entourage sur les bonnes pratiques d’hygiène. Du côté des appelés qui ont entonné fièrement le Ditanyè et l’hymne de la Conféderation des Etats du Sahel dénommée « Sahel Benkan », à chaque étape, l’ambiance était chaleureuse, ce dimanche bien arrosé par une pluie matinale. Au nom de ses camarades, l’appelée Prisca Balma a salué cette démarche des autorités et les a remerciées pour les messages de félicitations et d’encouragement. « Nous sommes conscients des attentes des autorités vis-à-vis de nous. Nous tacherons de demeurer des citoyens exemplaires au-delà de l’immersion », a-t-elle promis. Après les trois sites de l’IPO, où sont répartis les 1 773 appelés de Fada N’Gourma, la délégation ministérielle a mis le cap sur le « Camp vacances Faso Mêbo ». Là également, le ministre Kargougou a invité les jeunes campeurs, en formation civique et patriotique depuis le 13 août dernier, à cultiver le patriotisme, la discipline, le civisme, la solidarité et le sens de la responsabilité, afin de contribuer, chacun à son niveau, à l’édification d’un Burkina Faso plus résilient et souverain. Joanny SOW",
       "_source": "Sidwaya",
       "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
@@ -935,10 +903,10 @@
       "_desk": "A1"
     },
     {
-      "title": "Nayala: le haut-commissaire rend hommage à son ancien enseignant, admis à la retraite après environ 40 ans de service",
-      "link": "https://www.aib.media/nayala-le-haut-commissaire-rend-hommage-a-son-ancien-enseignant-admis-a-la-retraite-apres-environ-40-ans-de-service/",
-      "pubDate": "2026-08-17T12:40:22.000Z",
-      "description": "BURKINA-NAYALA-TOMA-EDUCATION-HOMMAGE Nayala: le haut-commissaire rend hommage à son ancien enseignant, admis à la retraite après environ 40 ans de service Toma, 15 août 2026 (AIB)- Le haut-commissaire du Nayala, Honoré Frédéric Paré, a rendu hommage, vendredi à Toma, à son ancien enseignant de CM1, Boureima Claude Golbert Dalla dit « Maradona », admis à la retraite après environ 40 ans de service dans l’éducation. « Un bon enseignant ne quitte jamais véritablement ses élèves », a déclaré le Camarade Paré, soulignant que l’enseignant demeure présent dans la mémoire, le comportement et les réussites de ceux qu’il a formés. Ancien élève de Boureima Claude Golbert Dalla en classe de CM1 durant l’année scolaire 1988-1989, le haut-commissaire a salué les valeurs transmises par son maître, notamment la rigueur, la discipline, la ponctualité, la persévérance et le sens du devoir. La cérémonie, organisée par les anciens élèves de l’école Toma Centre A à l’occasion de son admission à la retraite, a réuni parents, amis et anciens élèves. Le haut-commissaire a invité les anciens élèves à formaliser leur organisation et à poursuivre les actions en faveur des écoles et de l’éducation dans la province. Le représentant du directeur provincial de l’Éducation préscolaire, primaire et non formelle du Nayala, Charles Alain Zanté, également ancien élève, a salué le parcours et le dévouement de l’enseignant retraité. Ému, Boureima Claude Golbert Dalla a remercié ses anciens élèves pour cette marque de reconnaissance et évoqué son parcours professionnel, de ses débuts dans l’enseignement à ses fonctions d’inspecteur de l’enseignement primaire. La cérémonie s’est achevée par des témoignages et la remise de cadeaux à l’enseignant retraité. Agence d’Information du Burkina KTA/bak",
+      "title": "La Russie va signer un mémorandum de coopération avec la CEDEAO",
+      "link": "https://www.aib.media/la-russie-va-signer-un-memorandum-de-cooperation-avec-la-cedeao/",
+      "pubDate": "2026-08-17T15:14:52.000Z",
+      "description": "RUSSIE-CEDEAO-SIGNATURE-MEMORANDUM La Russie va signer un mémorandum de coopération avec la CEDEAO Ouagadougou, 17 août 2026 (AIB) – La Russie va prochainement signer un mémorandum de coopération avec la Communauté économique des États de l’Afrique de l’Ouest (CEDEAO), a déclaré lundi à Moscou le ministre russe des Affaires étrangères, Sergueï Lavrov, lors d’une conférence de presse à l’issue de ses négociations avec son homologue ghanéen, Samuel Okudzeto Ablakwa. Sergueï Lavrov a indiqué que la Russie entretient des relations régulières avec les dirigeants de la CEDEAO et œuvre au renforcement de ces relations. Il a annoncé la signature prochaine d’un mémorandum avec l’organisation, notamment dans le domaine de la sécurité, précisant que cette coopération suscitait de l’intérêt et avait été confirmée par son homologue ghanéen. « À mon avis, il serait donc dans l’intérêt de tous, en partant des besoins quotidiens actuels en matière de sécurité des populations des pays d’Afrique de l’Ouest, de jeter des ponts et d’élaborer des mesures concrètes entre la CEDEAO et l’Alliance des États du Sahel (AES). Nous sommes prêts à y contribuer », a précisé le chef de la diplomatie russe. Le ministre russe a souligné que le renforcement de la sécurité en Afrique de l’Ouest nécessite la coopération de tous les États de la région. Sergueï Lavrov a salué l’attention particulière accordée par le président ghanéen John Dramani Mahama à la normalisation des relations entre la CEDEAO et l’Alliance des États du Sahel (AES), une position que la Russie partage pleinement Agence d’information du Burkina Source : Tass",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -946,38 +914,7 @@
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Sissili/Léo : La police municipale et les Koglwéogos saisissent des boissons frelatées et des produits prohibés",
-      "link": "https://www.aib.media/sissili-leo-la-police-municipale-et-les-koglweogos-saisissent-des-boissons-frelatees-et-des-produits-prohibes/",
-      "pubDate": "2026-08-17T12:31:58.000Z",
-      "description": "Sissili/Léo : La police municipale et les Koglwéogos saisissent des boissons frelatées et des produits prohibés Léo, 15 août 2026 (AIB) – La police municipale de Léo a mené, ce samedi 15 août 2026, une opération coup de poing ciblée contre la vente de boissons frelatées et de substances prohibées. Déployée en cinq équipes appuyées par les Initiatives locales de sécurité (Koglwéogos), cette patrouille a permis d’inspecter 17 débits de boissons et boutiques dans la commune. Le bilan officiel fait état d’une saisie importante de produits illicites et hors normes, à savoir 82 cartons de liqueur de toutes marques, 119 cartons de vin contrefait Châteaux de France, 6 cartons de 48 canettes de bière Faxe, 12 plaquettes de Desperados, un pack de Zozo (ex-Vody), 10 packs d’autres boissons périmées, ainsi qu’un sac contenant divers comprimés psychotropes interdits par la législation burkinabè. Selon le commandant de la police municipale de Léo, Moumini Traoré, cette descente inopinée répond à une recrudescence des plaintes citoyennes. « Depuis un certain temps, nous recevons de nombreuses plaintes concernant la consommation de produits prohibés, notamment certaines liqueurs ainsi que des substances psychotropes », explique-t-il, précisant que la démarche vise avant tout à protéger la santé publique et à vérifier la détention des licences d’exploitation requises par la réglementation sur la vente d’alcool. Face à la porosité de la zone frontalière qui facilite l’infiltration de ce trafic malgré la vigilance des Forces de défense et de sécurité (FDS), le commandant Traoré a lancé un appel à la vigilance et au civisme. « Les FDS ne peuvent pas vaincre ce fléau seules. J’invite les propriétaires de débits de boissons à se conformer à la loi et j’exhorte les consommateurs à la plus grande prudence. Ne sacrifiez pas votre santé pour un plaisir instantané qui peut causer des dégâts irrémédiables », s’est indigné le commandant, visiblement découragé. L’ensemble du matériel saisi fera l’objet d’un rapport transmis aux autorités judiciaires compétentes, seules habilitées à décider de la suite légale à donner. Agence d’information du Burkina BAN/yos",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
+        "diplomatic",
         "political"
       ],
       "_majors": [],
@@ -990,49 +927,18 @@
         "rating": "A2"
       },
       "_rating": "A2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
+      "_score": 123,
+      "_zone": 10,
+      "_theme": "D",
+      "_zoneShort": "10. Europe orient. & Balkans",
       "_relevance": "A",
-      "_desk": "A1"
+      "_desk": "A6"
     },
     {
-      "title": "Zoundwéogo/Journée internationale de la jeunesse: les jeunes de la province marchent pour réaffirmer leur engagement en faveur de la RPP",
-      "link": "https://www.aib.media/zoundweogo-journee-internationale-de-la-jeunesse-les-jeunes-de-la-province-marchent-pour-reaffirmer-leur-engagement-en-faveur-de-la-rpp/",
-      "pubDate": "2026-08-17T11:38:21.000Z",
-      "description": "BURKINA-ZOUNDWEOGO-JOURNEE-INTERNATIONALE-JEUNESSE-CELEBRATION Zoundwéogo/Journée internationale de la jeunesse: les jeunes de la province marchent pour réaffirmer leur engagement en faveur de la RPP Manga, 13 août 2026 (AIB)- Les activités commémoratives de la Journée internationale de la jeunesse se sont achevées, jeudi à Manga, par une marche de soutien à la Révolution progressiste populaire (RPP), en hommage aux héros de la Révolution burkinabè, suivie d’une séance d’aérobic. La marche a mobilisé plusieurs composantes de la population, notamment des jeunes, des forces de défense et de sécurité (FDS) ainsi que des acteurs de la veille citoyenne. Le haut-Commissaire de la province du Zoundwéogo, Julien Ouédraogo, a salué la mobilisation des jeunes, estimant qu’elle traduit leur engagement en faveur de la réussite de la RPP. Il a invité les jeunes à renforcer leur engagement pour la réussite de la RPP, qu’il a présentée comme déterminante pour le Burkina Faso et la Confédération des Etats du Sahel (AES). Pour le directeur provincial en charge des sports, de la jeunesse et de l’emploi du Zoundwéogo, Sékou Sabo, la marche constituait le prolongement des activités de la Journée internationale de la jeunesse, après un panel organisé dans la matinée sur le thème « Vie d’un révolutionnaire ». Selon lui, cette mobilisation visait à permettre à la jeunesse de manifester son soutien à la RPP, présentée comme une orientation destinée à tracer le chemin du développement du Burkina Faso. M. Sabo a également souligné l’apport de la marche à la cohésion sociale, au regard de la participation de différentes composantes de la population. « Sans cohésion et sans discipline, nous ne pouvons pas bâtir un pays prospère », a-t-il affirmé. Pour Bouda Isidore, jeune participant à la marche, la mobilisation observée à Manga témoigne de l’engagement de la jeunesse. Il a appelé ses camarades à cultiver le patriotisme et à accompagner davantage les actions des autorités. Il a également exhorté les jeunes à rester mobilisés et soudés autour de la dynamique de la RPP, estimant que l’engagement de chacun est indispensable pour accélérer l’atteinte des résultats. Agence d’information du Burkina BGB/bak",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": null,
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
-      "_desk": "A1"
-    },
-    {
-      "title": "Nahouri : Le secteur n°6 remporte la première édition du tournoi «Pour la révolution, je m’engage »",
-      "link": "https://www.aib.media/nahouri-le-secteur-n6-remporte-la-premiere-edition-du-tournoi-pour-la-revolution-je-mengage/",
-      "pubDate": "2026-08-17T11:38:12.000Z",
-      "description": "BURKINA -NAHOURI- SPORT – LANCEMENT Nahouri : Le secteur n°6 remporte la première édition du tournoi «Pour la révolution, je m’engage » Pô, 16 août 2026 (AIB)-Le Président de la délégation spéciale (PDS) de la commune de Pô, Ilassa Dianda a lancé ce samedi 15 août 2026 au stade municipal de Pô, la première édition du tournoi de football dénommé : « Pour la révolution, je m'engage ». Pour cette première édition, l'équipe du secteur n°6 est venue à bout du secteur n°3 par le score de 1 but à 0. Le top de départ de la première édition du tournoi de football dénommé « Pour la révolution, je m’engage » a été donné ce samedi 15 août 2026 au stade municipal de Pô, avec le match d'ouverture qui a opposé le secteur N°6 au secteur N°3. Portée par le ministre de l'Enseignement de base et lancée par le Président de la délégation spéciale (PDS) de la commune de Pô, Ilassa Dianda, cette compétition vise à impliquer les jeunes dans la dynamique révolutionnaire tout en renforçant la cohésion sociale. Au-delà de l'enjeu sportif, le tournoi entend utiliser le sport comme un canal privilégié de sensibilisation civique et patriotique Durant deux semaines, huit formations représentant les huit secteurs de la commune de Pô s'affronteront dans un esprit de fraternité et de fair-play. Pour le PDS de Pô, des séances d'information et de diffusion des idéaux de la Révolution seront organisées avant chaque rencontre. En match d'ouverture, l'équipe du secteur 6 est venue à bout de l'équipe du secteur 3 avec un score de 1 but à 0. Après le lancement, Ilassa Dianda, a salué cette initiative qui offre une plateforme de fraternisation à la jeunesse et mobilise la jeunesse autour des objectifs de la Révolution progressiste populaire (RPP). Pour lui, cet tourna permettra également de renforcer le vivre-ensemble, la cohésion sociale et la solidarité inter-quartiers de Pô. « J'invite les jeunes à s'investir activement dans l'ensemble des initiatives patriotiques à venir », a conclu l'autorité communale. La grande finale de cette compétition sportive et citoyenne est programmée pour le vendredi 28 août 2026 au stade municipal. Agence d’information du Burkina HKO/HB/OO",
+      "title": "Kanyalé se dote d’une nouvelle infrastructure scolaire et célèbre l’excellence",
+      "link": "https://www.aib.media/kanyale-se-dote-dune-nouvelle-infrastructure-scolaire-et-celebre-lexcellence/",
+      "pubDate": "2026-08-17T15:13:30.000Z",
+      "description": "BURKINA-BOULKIEMDE-IMASGO-KANYALE-EDUCATION-INFRASTRUCTURE-INAUGURATION Kanyalé se dote d'une nouvelle infrastructure scolaire et célèbre l’excellence Imasgo, 17 août 2026 (AIB) – La localité de Kanyalé, située dans la commune d'Imasgo, a abrité le samedi une importante cérémonie d’inauguration d’un bâtiment scolaire flambant neuf et de célébration de l’Excellence scolaire. Cet événement marquant s'est déroulé dans une atmosphère de solennité et de fierté partagée. Placée sous le patronage du Coordonnateur national de l’Initiative présidentielle pour le développement communautaire, le Commandant Marcel Medah, empêché et représenté par Pema Neya, chargé de mission à la Présidence du Faso auprès de la région de Nando, la cérémonie a été présidée par la Présidente de la délégation spéciale de la commune d’Imasgo, Aminata Kaboré. Le nouveau joyau scolaire comprend une salle de classe et un bureau pour les enseignants. Il vient renforcer les capacités de l'école primaire locale, qui ne disposait auparavant que de deux salles de classe, mettant ainsi fin aux conditions d'apprentissage difficiles sous paillote. Cette réalisation concrétise la vision portée par le Capitaine Ibrahim Traoré, qui exhorte les citoyens à devenir les acteurs de leur propre développement à travers l'Initiative présidentielle pour le développement communautaire. Le principal donateur de cette œuvre est le Cabinet d’études STAT-DES, dirigé par Dr Babou Bako et Boubié Bako, tous deux Ingénieurs statisticiens économistes et fils du village de Kanyalé. Leur investissement, conjugué à la mobilisation des forces vives locales qui ont fourni les agrégats nécessaires, illustre la force du partenariat entre le secteur privé et les populations. Le Chef de la circonscription d'éducation de base (CCeb) d'Imasgo a salué la qualité de cette réalisation achevée dans les délais. Exprimant sa profonde gratitude aux autorités présentes, il a rappelé que la circonscription a enregistré un taux de réussite de 93,14% au CEP cette année, l’école de Kanyalé y ayant largement contribué. Il a également émis le vœu de voir cet exemple se multiplier dans d'autres écoles confrontées à un manque cruel d'infrastructures de base. La Présidente de la délégation spéciale, Aminata Kaboré a, pour sa part, invité les parents d'élèves et les enseignants à veiller jalousement sur ce patrimoine commun. Elle a exhorté les élèves à faire preuve de persévérance, rappelant qu'ils constituent la relève et les futurs bâtisseurs de la nation. Cette journée mémorable s'est achevée par des hommages appuyés aux personnalités présentes, notamment l'honorable député Marc A. Gamsoré, aux ressortissants de Kanyalé regroupés au sein de l'Association de développement (CRDL), ainsi qu'à l'ensemble des partenaires et bonnes volontés dont l'engagement indéfectible permet de hisser haut le flambeau de l'éducation dans la commune d’Imasgo. A noter que les meilleurs élèves ont été récompensés avec des kits scolaires et des vélos. Agence d'Information du Burkina JIB/PB/AS/ATA",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -1054,6 +960,139 @@
         "rating": "C2"
       },
       "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Gourma : La communauté des cousins et cousines Manli remet 100 000 F CFA à Faso Mêbo et participe aux travaux sur le site",
+      "link": "https://www.aib.media/gourma-la-communaute-des-cousins-et-cousines-manli-remet-100-000-f-cfa-a-faso-mebo-et-participe-aux-travaux-sur-le-site/",
+      "pubDate": "2026-08-17T14:46:01.000Z",
+      "description": "BURKINA -GOURMA -ASSAINISSEMENT-DON Gourma : La communauté des cousins et cousines Manli remet 100 000 F CFA à Faso Mêbo et participe aux travaux sur le site Fada N’Gourma, 17 août 2026 (AIB)-La communauté des cousins et cousines Manli de Fada N’Gourma a remis ce lundi 17 août 2026 de Fada N’Gourma, une enveloppe financière de 100 000 F CFA à l'agence Faso Mêbo et a contribué aux travaux de ramassage et de rangement de pavés. Dans le cadre de la consolidation de la paix et du vivre-ensemble dans la région du Goulmou, la communauté des cousins et cousines Manli a joué sa partition en participant ce lundi 17 août 2026 à Fada N'Gourma sur le chantier de l'agence Faso Mêbo, au ramassage et à l'organisation des pavés destinés à l'aménagement du site « Cette action citoyenne s'est accompagnée d'une contribution financière de 100 000 F CFA», a déclaré Diony Armiyao, commerçant et porte-parole du groupe. Selon lui, cette démarche fait suite à une dynamique d'union impulsée par leur président, Thiombiano Bontiellimani. L'initiative vise à réunir, sans distinction, les membres des quatre grandes familles Manli pour faire face aux défis majeurs de la localité. « Vous savez ce que traverse Fada N’Gourma. Il y a le tissu social qui est beaucoup déchiré et l'insécurité qui nous frappe », a-t-il expliqué pour justifier ce regroupement fraternel. Pour les participants, l'engagement en faveur de la patrie doit primer sur la recherche de bénéfices personnels ou immédiats. Le porte-parole a rappelé que la construction de la nation incombe à l'ensemble de ses fils et filles. « Si on veut bâtir le pays et que tu es un digne fils du pays, quelles que soient les difficultés, tu dois aussi mûrir la réflexion et aider à bâtir le pays. Il ne faut pas que d'autres bâtissent et que toi tu meures dedans», a indiqué Diony Armiyao. A travers ce geste, la communauté des cousins et cousines Manli espère inspirer d'autres acteurs locaux et susciter un élan de solidarité plus large au sein des populations pour la reconstruction du tissu social et le retour définitif de la paix au Burkina Faso. Agence d’information du Burkina LNY/HB/OO",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Goulmou/Immersion patriotique à Fada N’Gourma : Le ministre de la Santé partage un repas communautaire avec les appelés",
+      "link": "https://www.aib.media/goulmou-immersion-patriotique-a-fada-ngourma-le-ministre-de-la-sante-partage-un-repas-communautaire-avec-les-appeles/",
+      "pubDate": "2026-08-17T14:17:21.000Z",
+      "description": "BURKINA-GOURMA-IMMERSION-PARTAGE-REPAS-MINISTRE-SANTE Goulmou/Immersion patriotique à Fada N’Gourma : Le ministre de la Santé partage un repas communautaire avec les appelés Fada N’Gourma, 16 août 2026 (AIB)-Le ministre de la Santé, Dr Robert Lucien Jean-Claude Kargougou, accompagné du ministre délégué chargé des Ressources animales, Dr Amadou Dicko, et des autorités administratives, militaires et paramilitaires, a partagé ce dimanche 16 août 2026 à Fada N’Gourma, un repas communautaire avec les appelés de la 2e édition de l’Immersion patriotique obligatoire (IPO), à l’issue d’une visite de terrain sur trois sites de formation. Ce moment de partage, placé sous le signe de la convivialité et de la cohésion, a permis aux membres du gouvernement de se rapprocher davantage des jeunes appelés, d’échanger directement avec eux et de s’enquérir de leurs conditions de vie et de formation. Autour du repas, ministres, encadreurs et appelés ont partagé les mêmes plats dans une ambiance fraternelle. Pour le ministre de la Santé, Dr Robert Lucien Jean-Claude Kargougou, ce geste traduit l’importance accordée à la jeunesse et à sa formation civique et patriotique. « Le camarade Président du Faso, le Capitaine Ibrahim Traoré et le camarade Premier ministre, Rimtalba Jean Emmanuel Ouédraogo, nous ont demandé de venir à Fada N’Gourma, de venir voir comment votre camp se passe », a déclaré Dr Kargougou. A l’issue du repas communautaire, le ministre s’est réjoui de la mobilisation et de l’engagement des pensionnaires, estimant que les premiers effets de l’immersion sont déjà perceptibles. « Ce sont des appelés qui ont déjà intégré des valeurs de discipline, de patriotisme, d’organisation et de cohésion sociale », a-t-il indiqué, qualifiant ces valeurs de « cardinales » pour la construction de la nation. Le partage du repas a également constitué un cadre d’échanges directs entre les membres du gouvernement et les appelés. Ces derniers ont exprimé leur satisfaction de recevoir la visite de la délégation et de pouvoir échanger avec elle dans une atmosphère détendue. Pour Wend-Benedo Prisca Balma, appelée de l’IPO 2026, 4e compagnie, 1ère section, la visite a été particulièrement appréciée. « Je suis très contente parce que c’est la première fois que je vois un ministre. L’ambiance a été chaleureuse », a-t-elle confié. Elle a expliqué que la formation avait déjà contribué à modifier son comportement, notamment en matière de solidarité et d’écoute des autres. « Grâce à l’IPO, la solidarité a augmenté chez moi et maintenant j’écoute plus mes camarades », a ajouté Wend-Benedo Prisca Balma. De son côté, Azad Yassia Savadogo, appelé de l’IPO 2026, a salué cette démarche de proximité des autorités. « Nous sommes heureux de voir que les responsables se déplacent vers nous. Cela montre qu’ils pensent vraiment à nous et qu’ils se préoccupent de la situation de tous les appelés », a-t-il déclaré. Selon lui, l’immersion commence déjà à produire des changements dans le comportement des jeunes. « A notre arrivée, il y avait beaucoup d’indiscipline, mais aujourd’hui, nous sommes disciplinés et nous respectons les ordres », a-t-il témoigné. Le ministre de la Santé a par ailleurs invité les appelés à devenir des «ambassadeurs de la santé » dans leurs communautés, en faisant notamment de l’hygiène, de l’assainissement et de la prévention des maladies une priorité. La délégation gouvernementale, qui s’est rendue sur trois sites de formation à Fada N’Gourma, a exprimé sa satisfaction quant au déroulement de cette deuxième édition de l’Immersion patriotique obligatoire et encouragé les appelés à poursuivre leurs efforts pour devenir des citoyens responsables, disciplinés et engagés au service du Burkina Faso. Agence d’information du Burkina KAC/HB/OO",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Koulpélogo/Yargatenga : Le tournoi inter-métiers démarre par un match nul",
+      "link": "https://www.aib.media/koulpelogo-yargatenga-le-tournoi-inter-metiers-demarre-par-un-match-nul/",
+      "pubDate": "2026-08-17T13:52:21.000Z",
+      "description": "Koulpélogo/Yargatenga : Le tournoi inter-métiers démarre par un match nul Yargatenga, 15 août 2026 (AIB)-Le coup d’envoi de la 3ᵉ édition de la coupe inter-métiers a été donné samedi 15 août 2026 sur le terrain communal de Cinkansé, dans la commune de Yargatenga, sous la présidence du représentant du Président de la délégation spéciale (PDS), en présence du Directeur provincial des Sports, de la Jeunesse et de l’Emploi et des autorités militaires et paramilitaires de la province. Pour ce match d’ouverture, l’équipe des « Serviteurs du peuple » a affronté celle des « Commerçants ». Les deux formations se sont séparées sur un score nul et vierge de 0-0. Au nom du PDS de Yargatenga, Panguiyan Abraham Diessongo a souhaité la bienvenue aux participants et remercié le ministère ainsi que la Direction provinciale des Sports, de la Jeunesse et de l’Emploi pour l’organisation de cette compétition qui réunit les différents corps de métier de la commune. Il s’est également réjoui de la mobilisation des responsables du sport, de la jeunesse et de l’emploi, des entraîneurs, des joueurs, des arbitres et des supporters. Selon M. Diessongo, cette compétition ne vise pas uniquement la pratique sportive et la promotion de la santé. Elle constitue également un cadre de renforcement de la cohésion sociale, de l’union et du vivre-ensemble entre les différents corps de métier. « Il faut vraiment la tolérance. Bonne compétition et que le meilleur gagne », a-t-il déclaré avant de donner officiellement le coup d’envoi du tournoi. Le Directeur provincial des Sports, de la Jeunesse et de l’Emploi par intérim du Koulpélogo, Moustapha Yangané, a rappelé le succès et l’engouement suscités par les deux premières éditions. Pour cette troisième édition, sept équipes sont engagées. Elles disputeront au total 25 matchs sous forme de championnat, sur une période d’environ un mois. La finale est prévue pour le 12 septembre 2026. Moustapha Yangané a invité les joueurs, entraîneurs et supporters à faire preuve de fair-play et à respecter les règles du jeu. « Vous avez vos métiers mais vous vous êtes retrouvés sur le terrain pour communier. Donc, c’est le sport pour tous », a-t-il souligné. Lancé sous de bons auspices, le tournoi inter-métiers de Yargatenga entend ainsi offrir aux travailleurs un espace de détente, de fraternité et de renforcement de la cohésion sociale. Agence d’Information du Burkina LM/bp/yos",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Bam : Une semaine après avoir cultivé aux côtés de Korotoumou, le Ministre Passowendé transforme un geste de solidarité en soutien durable",
+      "link": "https://www.minute.bf/bam-une-semaine-apres-avoir-cultive-aux-cotes-de-korotoumou-le-ministre-passowende-transforme-un-geste-de-solidarite-en-soutien-durable/",
+      "pubDate": "2026-08-17T10:31:12.000Z",
+      "description": "Le 4 août dernier, une image a marqué les esprits. Sur le chemin du retour d'une mission dans les villages réinstallés de la province du Bam, le Camarade Ministre de la Famille et de la Solidarité, le Lieutenant-colonel Passowendé Pélagie KABORE, faisait arrêter son cortège pour rejoindre une femme en plein labour. Daba en main, elle partageait quelques instants de travail avec cette cultivatrice, lui transmettant un message; celui du soutien du Camarade President du Faso et de son Gouvernement aux populations qui ont choisi de revenir reconstruire leur vie. Cette femme, c'était Korotoumou. Veuve et mère de six enfants, elle a perdu son époux lors d'une attaque terroriste. Malgré cette épreuve, elle a fait le choix du retour. Pour elle, comme pour tant d'autres, cultiver sa terre est bien plus qu'une activité agricole; c'est reprendre possession de sa vie, retrouver sa dignité et preparer l'avenir de ses enfants. Ce jour-la, le geste du Camarade Ministre était spontané. Mais les échanges avec Korotoumou ont profondément touché la première responsable du departement. Sans rien laisser paraître, elle a décidé que ce soutien ne s'arrêterait pas à quelques coups de daba. Quelques jours plus tard, fidèle à la vision portée par le Camarade Président du Faso, le Capitaine Ibrahim TRAORE, qui prône le passage de l'assistance au relèvement durable par l'autonomisation des populations affectées, le Lieutenant-colonel Passowendé Pélagie KABORE a transformé cet encouragement en une action concrète. Sur ses instructions, une équipe de la Direction provinciale de la Famille et de la Solidarité du Bam, accompagnée des autorités locales, reprend la route vers le village de Korotoumou. Cette fois, il ne s'agit plus d'un geste symbolique. Il s'agit d'un engagement concret. Comme lors de leur première rencontre, Korotoumou est retrouvée dans son champ, sans imaginer un seul instant ce qui l'attend. Quelques instants plus tard, un motoculteur lui est remis. L'émotion est immense. Le sourire qui illumine son visage en dit plus que les mots. Celle qui, quelques jours plus tôt, labourait courageusement à la daba découvre un outil capable de transformer durablement son travail et d'alléger ses efforts. Après les premières explications, Korotoumou prend elle-même les commandes de son motoculteur. Les premiers mètres sont hésitants. Puis la machine avance, sous les applaudissements et les regards émerveillés de toute la délégation. Il y a une semaine, le Camarade Ministre travaillait la terre avec elle. Aujourd'hui, Korotoumou dispose des moyens de la travailler plus vite, plus facilement et avec davantage d'espoir. Entre ces deux images se dessine toute la philosophie de l'action du Ministère de la Famille et de la Solidarite : être présent auprès des populations dans les moments d'épreuves, mais surtout leur donner les moyens de se relever durablement. DCRP/MFS Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
       "_score": 115,
       "_zone": 1,
       "_theme": "P",
@@ -1094,47 +1133,46 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Koulpélogo/Lalgaye : Un fils de la commune offre 250 imperméables et 300 000 F CFA de carburant offerts aux VDP",
-      "link": "https://www.aib.media/koulpelogo-lalgaye-un-fils-de-la-commune-offre-250-impermeables-et-300-000-f-cfa-de-carburant-offerts-aux-vdp/",
-      "pubDate": "2026-08-17T12:40:10.000Z",
-      "description": "Koulpélogo/Lalgaye : Un fils de la commune offre 250 imperméables et 300 000 F CFA de carburant offerts aux VDP Ouargaye, 16 août 2026 (AIB)- Les Volontaires pour la défense de la Patrie (VDP) de Lalgaye, dans la province du Koulpélogo, ont reçu, dimanche 16 août 2026, un appui composé de 250 imperméables et d’un bon de carburant d’une valeur de 300 000 F CFA, offert par un fils de la commune, Koudougou Hamidou, dit Yanna Koudougou. Le don a été fait au nom de l’Association des jeunes pour la solidarité et le développement de Lalgaye. Il vise notamment à améliorer les conditions de travail des VDP durant leurs missions en cette période de pluies. La cérémonie de remise s’est déroulée en présence du camarade adjudant Kiswensida Ouédraogo, chef du détachement militaire de Lalgaye. Saluant le geste du donateur, il l’a remercié pour son engagement aux côtés des combattants et a invité les bénéficiaires à faire un bon usage du matériel et du carburant reçus. Représentant le président de la délégation spéciale de Lalgaye, la première adjointe, Clarisse Koudougou Moumla, a également exprimé sa satisfaction. Elle a estimé que ce soutien arrive à point nommé, compte tenu des difficultés particulières liées à la saison des pluies. Elle a par ailleurs félicité Yanna Koudougou et son équipe pour leur engagement en faveur de la commune. Selon elle, ce geste s’inscrit dans la continuité des actions déjà menées par ce fils de Lalgaye au profit des populations. Prenant la parole, Yanna Koudougou a expliqué que son engagement repose sur sa volonté de contribuer, à la hauteur de ses moyens, à la protection et au bien-être de sa communauté. « Il n’y aura pas de fatigue si c’est pour aider les combattants de ma commune et même la population », a-t-il affirmé, assurant qu’il restera disponible pour accompagner les VDP et les populations de Lalgaye aussi longtemps que ses moyens le lui permettront. À travers ce don, l’Association des jeunes pour la solidarité et le développement de Lalgaye entend ainsi apporter sa contribution à l’accompagnement des forces engagées sur le terrain et renforcer la solidarité communautaire autour des acteurs de la défense de la commune. Agence d'Information du Burkina BP/yos",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Trump's adviser, Board of Peace chair meet with Israeli premier for Gaza ceasefire talks",
-      "link": "https://www.aa.com.tr/en/americas/trumps-adviser-board-of-peace-chair-meet-with-israeli-premier-for-gaza-ceasefire-talks/4029530",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-17T11:57:40.000Z",
+      "title": "Ebola en RDC: au Sommet de la SADC, Cyril Ramaphosa appelle à renforcer la solidarité régionale, à concrétiser les promesses financières et à instaurer un cessez-le-feu pour faciliter la riposte",
+      "link": "https://actualite.cd/2026/08/17/ebola-en-rdc-au-sommet-de-la-sadc-cyril-ramaphosa-appelle-renforcer-la-solidarite",
+      "source": "ActualitéCD (RDC)",
+      "date": "2026-08-17T15:31:54.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "La RDC au centre des discussions au 46ᵉme Sommet de la SADC à Durban",
+      "link": "https://www.radiookapi.net/2026/08/17/actualite/politique/la-rdc-au-centre-des-discussions-au-46me-sommet-de-la-sadc-durban",
+      "source": "Radio Okapi (RDC)",
+      "date": "2026-08-17T15:31:52.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "US general meets Lebanon’s army chief as ceasefire with Israel teeters",
+      "link": "https://www.al-monitor.com/originals/2026/08/us-general-meets-lebanons-army-chief-ceasefire-israel-teeters",
+      "source": "Al-Monitor",
+      "date": "2026-08-17T12:53:11.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1177,92 +1215,28 @@
           "keyword": "séisme"
         }
       ]
-    },
-    {
-      "title": "Ni rébellion, ni coup d'État : ce que l'article 64 autorise réellement, selon un constitutionnaliste",
-      "link": "https://actualite.cd/2026/08/17/ni-rebellion-ni-coup-detat-ce-que-larticle-64-autorise-reellement-selon-un",
-      "source": "ActualitéCD (RDC)",
-      "date": "2026-08-17T08:55:58.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "coup d'état"
-        }
-      ]
-    },
-    {
-      "title": "46ᵉ Sommet de la SADC: la RDC défend quatre priorités pour renforcer la réponse régionale face à la crise sécuritaire",
-      "link": "https://actualite.cd/2026/08/17/46-sommet-de-la-sadc-la-rdc-defend-quatre-priorites-pour-renforcer-la-reponse-regionale",
-      "source": "ActualitéCD (RDC)",
-      "date": "2026-08-17T08:00:30.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Au Liban, des frappes israéliennes meurtrières fragilisent un peu plus le cessez-le-feu avec le Hezbollah",
-      "link": "https://www.lemonde.fr/international/article/2026/08/17/au-liban-des-frappes-israeliennes-meurtrieres-fragilisent-un-peu-plus-le-cessez-le-feu-avec-le-hezbollah_6747969_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-08-17T04:15:08.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Afrique du Sud: sommet de la SADC sur fond de tensions migratoires et politiques dans la sous-région",
-      "link": "https://www.rfi.fr/fr/afrique/20260816-afrique-du-sud-sommet-de-la-sadc-sur-fond-de-tensions-migratoires-et-politiques-dans-la-sous-r%C3%A9gion",
-      "source": "RFI Afrique",
-      "date": "2026-08-16T23:41:18.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      204
+      218
     ],
     [
       "occident_fr",
-      112
+      100
     ],
     [
       "occident_us",
-      97
+      83
     ],
     [
       "autre",
-      92
+      78
     ],
     [
       "golfe_mo",
-      61
+      72
     ],
     [
       "russie",
@@ -1270,19 +1244,19 @@
     ],
     [
       "turquie",
-      59
-    ],
-    [
-      "sahel",
-      40
+      60
     ],
     [
       "bf_local",
-      39
+      52
+    ],
+    [
+      "sahel",
+      46
     ],
     [
       "chine",
-      35
+      30
     ]
   ],
   "desks": [
@@ -1290,17 +1264,8 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 97,
+      "count": 124,
       "top": [
-        {
-          "title": "Kénédougou : Les jeunes appelés à jouer pleinement leur rôle dans l’espace confédéral",
-          "link": "https://www.aib.media/kenedougou-les-jeunes-appeles-a-jouer-pleinement-leur-role-dans-lespace-confederal/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "Immersion patriotique obligatoire Dr Robert Lucien Jean Claude Kargougou, ministre de la santé : « Camarades appelés de Fada N’Gourma, vous êtes la cohorte de la résilience »",
           "link": "https://www.sidwaya.info/immersion-patriotique-obligatoire-dr-robert-lucien-jean-claude-kargougou-ministre-de-la-sante-camarades-appeles-de-fada-ngourma-vous-etes-la-cohorte-de-la-resilience/",
@@ -1311,30 +1276,39 @@
           "rating": "C1"
         },
         {
-          "title": "Nayala: le haut-commissaire rend hommage à son ancien enseignant, admis à la retraite après environ 40 ans de service",
-          "link": "https://www.aib.media/nayala-le-haut-commissaire-rend-hommage-a-son-ancien-enseignant-admis-a-la-retraite-apres-environ-40-ans-de-service/",
+          "title": "Kanyalé se dote d’une nouvelle infrastructure scolaire et célèbre l’excellence",
+          "link": "https://www.aib.media/kanyale-se-dote-dune-nouvelle-infrastructure-scolaire-et-celebre-lexcellence/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "C2"
         },
         {
-          "title": "Sissili/Léo : La police municipale et les Koglwéogos saisissent des boissons frelatées et des produits prohibés",
-          "link": "https://www.aib.media/sissili-leo-la-police-municipale-et-les-koglweogos-saisissent-des-boissons-frelatees-et-des-produits-prohibes/",
+          "title": "Gourma : La communauté des cousins et cousines Manli remet 100 000 F CFA à Faso Mêbo et participe aux travaux sur le site",
+          "link": "https://www.aib.media/gourma-la-communaute-des-cousins-et-cousines-manli-remet-100-000-f-cfa-a-faso-mebo-et-participe-aux-travaux-sur-le-site/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "E",
+          "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "C2"
         },
         {
-          "title": "Zoundwéogo/Journée internationale de la jeunesse: les jeunes de la province marchent pour réaffirmer leur engagement en faveur de la RPP",
-          "link": "https://www.aib.media/zoundweogo-journee-internationale-de-la-jeunesse-les-jeunes-de-la-province-marchent-pour-reaffirmer-leur-engagement-en-faveur-de-la-rpp/",
+          "title": "Goulmou/Immersion patriotique à Fada N’Gourma : Le ministre de la Santé partage un repas communautaire avec les appelés",
+          "link": "https://www.aib.media/goulmou-immersion-patriotique-a-fada-ngourma-le-ministre-de-la-sante-partage-un-repas-communautaire-avec-les-appeles/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": null,
-          "relevance": ".",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "Koulpélogo/Yargatenga : Le tournoi inter-métiers démarre par un match nul",
+          "link": "https://www.aib.media/koulpelogo-yargatenga-le-tournoi-inter-metiers-demarre-par-un-match-nul/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
           "rating": "C2"
         }
       ]
@@ -1343,8 +1317,26 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 55,
+      "count": 49,
       "top": [
+        {
+          "title": "Adeleke-aligned LG chairman seeks to occupy council secretariat after Accord’s governorship victory",
+          "link": "https://www.premiumtimesng.com/news/more-news/903580-adeleke-aligned-lg-chairman-seeks-to-occupy-council-secretariat-after-accords-governorship-victory.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Mahama announces new strategy to keep galamseyers out of reclaimed forest reserves",
+          "link": "https://www.myjoyonline.com/mahama-announces-new-strategy-to-keep-galamseyers-out-of-reclaimed-forest-reserves/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Rabiu contre Dangote : deux milliardaires à la lutte pour bâtir l’avenir industriel du Nigeria",
           "link": "https://www.jeuneafrique.com/1831025/economie-entreprises/rabiu-contre-dangote-deux-milliardaires-a-la-lutte-pour-batir-lavenir-industriel-du-nigeria/",
@@ -1355,38 +1347,20 @@
           "rating": "B2"
         },
         {
-          "title": "‘No safe haven’ – Army draws battle line against Lakurawa terrorists",
-          "link": "https://www.vanguardngr.com/2026/08/no-safe-haven-army-draws-battle-line-against-lakurawa-terrorists/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "‘Babangida impacted Nigeria distinctly’ – Tinubu celebrates ex-leader at 85",
-          "link": "https://www.vanguardngr.com/2026/08/babangida-impacted-nigeria-distinctly-tinubu-celebrates-ex-leader-at-85/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "BBNaija: ‘Pressing personal issues’ – Big Brother confirms Neche’s voluntary exit",
-          "link": "https://www.vanguardngr.com/2026/08/bbnaija-pressing-personal-issues-big-brother-confirms-neches-voluntary-exit/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "Before the Next Jason: When seniority becomes a weapon against young academics",
-          "link": "https://www.myjoyonline.com/before-the-next-jason-when-seniority-becomes-a-weapon-against-young-academics/",
+          "title": "Fighting fires, fighting for breath: The hidden health toll on Ghana’s firefighters – and the support that still falls short",
+          "link": "https://www.myjoyonline.com/fighting-fires-fighting-for-breath-the-hidden-health-toll-on-ghanas-firefighters-and-the-support-that-still-falls-short/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "#OsunDecides2026: ‘Internal divisions cost APC victory’ – Party chieftain",
+          "link": "https://www.premiumtimesng.com/news/more-news/903609-osundecides2026-internal-divisions-cost-apc-victory-party-chieftain.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1396,11 +1370,11 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 48,
+      "count": 52,
       "top": [
         {
-          "title": "46ᵉ Sommet de la SADC: la RDC défend quatre priorités pour renforcer la réponse régionale face à la crise sécuritaire",
-          "link": "https://actualite.cd/2026/08/17/46-sommet-de-la-sadc-la-rdc-defend-quatre-priorites-pour-renforcer-la-reponse-regionale",
+          "title": "Ebola en RDC: au Sommet de la SADC, Cyril Ramaphosa appelle à renforcer la solidarité régionale, à concrétiser les promesses financières et à instaurer un cessez-le-feu pour faciliter la riposte",
+          "link": "https://actualite.cd/2026/08/17/ebola-en-rdc-au-sommet-de-la-sadc-cyril-ramaphosa-appelle-renforcer-la-solidarite",
           "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "D",
@@ -1408,13 +1382,13 @@
           "rating": "F2"
         },
         {
-          "title": "«La SADC est devenue quasi impuissante», selon Al Kitenge, expert en stratégie économique et en innovation",
-          "link": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20260817-la-sadc-est-devenue-quasi-impuissante-selon-al-kitenge-expert-en-strat%C3%A9gie-%C3%A9conomique-et-en-innovation",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
+          "title": "La RDC au centre des discussions au 46ᵉme Sommet de la SADC à Durban",
+          "link": "https://www.radiookapi.net/2026/08/17/actualite/politique/la-rdc-au-centre-des-discussions-au-46me-sommet-de-la-sadc-durban",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
           "theme": "D",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
           "title": "Gabon: le président annonce des restrictions pour les bourses attribuées aux étudiants suivant un cursus en Europe",
@@ -1435,12 +1409,12 @@
           "rating": "F2"
         },
         {
-          "title": "Des combats entre l’AFC-M23 et les Wazalendo provoquent de nouveaux déplacements à Masisi",
-          "link": "https://www.radiookapi.net/2026/08/17/actualite/securite/des-combats-entre-lafc-m23-et-les-wazalendo-provoquent-de-nouveaux",
-          "source": "Radio Okapi (RDC)",
+          "title": "RDC : plus de 50 820 cas suspects de rougeole signalés au Nord-Kivu et au Sud-Kivu entre janvier et juillet 2026",
+          "link": "https://actualite.cd/2026/08/17/rdc-plus-de-50-820-cas-suspects-de-rougeole-signales-au-nord-kivu-et-au-sud-kivu-entre",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         }
       ]
@@ -1451,6 +1425,33 @@
       "transverse": false,
       "count": 23,
       "top": [
+        {
+          "title": "Météo au Maroc : chaleur, orages et baisse progressive des températures cette semaine",
+          "link": "https://fr.hespress.com/485417-meteo-au-maroc-chaleur-orages-et-baisse-progressive-des-temperatures-cette-semaine.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "AADL 3 : Belaribi dévoile la date de la remise des premiers logements",
+          "link": "https://www.tsa-algerie.com/aadl-3-belaribi-devoile-la-date-de-la-remise-des-premiers-logements/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Naufrage en Méditerranée : 7 migrants sont morts et 50 autres ont été secourus au large de la Libye",
+          "link": "https://www.lemonde.fr/international/article/2026/08/17/naufrage-en-mediterranee-7-migrants-sont-morts-et-50-autres-secourus-au-large-de-la-libye_6748360_3210.html",
+          "source": "Le Monde International",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "L",
+          "relevance": "A",
+          "rating": "B2"
+        },
         {
           "title": "Imad Faraj renforce la ligne offensive de l’Espérance de Tunis",
           "link": "https://kapitalis.com/tunisie/2026/08/17/imad-faraj-renforce-la-ligne-offensive-de-lesperance-de-tunis/",
@@ -1468,33 +1469,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "B2"
-        },
-        {
-          "title": "Commerce Maroc-États-Unis : l'excédent américain se creuse",
-          "link": "https://fr.hespress.com/484187-commerce-maroc-etats-unis-lexcedent-americain-se-creuse.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Retour à la normale aux frontières avec Sebta et Melilia après l'opération de sécurité marocaine",
-          "link": "https://telquel.ma/instant-t/2026/08/17/retour-a-la-normale-aux-frontieres-avec-sebta-et-melilia-apres-loperation-de-securite-marocaine_2003425/",
-          "source": "TelQuel (Maroc)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Hausse du prix du carburant: les chauffeurs redoutent un manque à gagner",
-          "link": "https://lesoleil.sn/actualites/societe-fait-divers/hausse-du-prix-du-carburant-les-chauffeurs-redoutent-un-manque-a-gagner/",
-          "source": "Le Soleil (Sénégal)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1502,16 +1476,16 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 89,
+      "count": 109,
       "top": [
         {
-          "title": "Au Liban, des frappes israéliennes meurtrières fragilisent un peu plus le cessez-le-feu avec le Hezbollah",
-          "link": "https://www.lemonde.fr/international/article/2026/08/17/au-liban-des-frappes-israeliennes-meurtrieres-fragilisent-un-peu-plus-le-cessez-le-feu-avec-le-hezbollah_6747969_3210.html",
-          "source": "Le Monde International",
+          "title": "Trump envoy Kushner arrives in Israel after rare Hamas talks on Gaza peace plan",
+          "link": "https://www.myjoyonline.com/trump-envoy-kushner-arrives-in-israel-after-rare-hamas-talks-on-gaza-peace-plan/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         },
         {
           "title": "US Military Claims Legal Compliance Amid Unlawful Killings",
@@ -1523,27 +1497,27 @@
           "rating": "F2"
         },
         {
-          "title": "Trump's adviser, Board of Peace chair meet with Israeli premier for Gaza ceasefire talks",
-          "link": "https://www.aa.com.tr/en/americas/trumps-adviser-board-of-peace-chair-meet-with-israeli-premier-for-gaza-ceasefire-talks/4029530",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Dans le sud du Liban, la peur des incendies causés par des frappes israéliennes",
+          "link": "https://www.lemonde.fr/international/article/2026/08/17/dans-le-sud-du-liban-la-peur-des-incendies-causes-par-des-frappes-israeliennes_6748396_3210.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Pentagon inks Tomahawk deal amid reports of missile shortfall",
+          "link": "https://www.al-monitor.com/originals/2026/08/pentagon-inks-tomahawk-deal-amid-reports-missile-shortfall",
+          "source": "Al-Monitor",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
+          "rating": "A1"
         },
         {
-          "title": "Moyen-Orient en direct : Trump menace de bombarder Oman s'il entrave un accord sur le détroit d'Ormuz",
-          "link": "https://www.france24.com/fr/moyen-orient/20260817-en-direct-jared-kushner-va-rencontrer-benjamin-netanyahu-relancer-plan-de-paix-gaza-israel-etats-unis-iran-liban-detroit-ormuz",
-          "source": "France 24",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "DIRECT - Moyen-Orient: Donald Trump menace de bombarder Oman s'il entrave un accord sur le détroit d'Ormuz",
-          "link": "https://www.rfi.fr/fr/moyen-orient/20260817-direct-moyen-orient-le-bureau-du-premier-ministre-du-kurdistan-irakien-vis%C3%A9-par-une-attaque-de-drones",
-          "source": "RFI Moyen-Orient",
+          "title": "«On va leur bombarder la gueule» : Donald Trump menace Oman, son allié, en cas d’opposition sur le détroit Ormuz",
+          "link": "https://www.liberation.fr/international/moyen-orient/on-va-leur-bombarder-la-gueule-donald-trump-menace-oman-son-allie-en-cas-dopposition-sur-le-detroit-ormuz-20260817_DFORGTJ4V5DMFGWECBAC6KQRPU/",
+          "source": "Libération International",
           "zone": "8. Moyen-Orient",
           "theme": "M",
           "relevance": "A",
@@ -1555,8 +1529,26 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 143,
+      "count": 144,
       "top": [
+        {
+          "title": "La Russie va signer un mémorandum de coopération avec la CEDEAO",
+          "link": "https://www.aib.media/la-russie-va-signer-un-memorandum-de-cooperation-avec-la-cedeao/",
+          "source": "AIB — Agence Information BF",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "France: Sébastien Lecornu hué par des habitants sinistrés très en colère au Porge",
+          "link": "https://www.aib.media/france-sebastien-lecornu-hue-par-des-habitants-sinistres-tres-en-colere-au-porge/",
+          "source": "AIB — Agence Information BF",
+          "zone": "9. Europe occidentale",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "C2"
+        },
         {
           "title": "Shaoshan/Hunan : sur les traces de Mao Zedong, père de la Chine nouvelle",
           "link": "https://faso7.com/2026/08/17/shaoshan-hunan-sur-les-traces-de-mao-zedong-pere-de-la-chine-nouvelle/",
@@ -1576,25 +1568,7 @@
           "rating": "A2"
         },
         {
-          "title": "Afrique du Sud: sommet de la SADC sur fond de tensions migratoires et politiques dans la sous-région",
-          "link": "https://www.rfi.fr/fr/afrique/20260816-afrique-du-sud-sommet-de-la-sadc-sur-fond-de-tensions-migratoires-et-politiques-dans-la-sous-r%C3%A9gion",
-          "source": "RFI Afrique",
-          "zone": "6. Afrique australe",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "CAN féminine 2026: les Lionnes indomptables tuent le miracle malawite!",
-          "link": "https://www.wakatsera.com/can-feminine-2026-les-lionnes-indomptables-tuent-le-miracle-malawite/",
-          "source": "Wakat Séra",
-          "zone": "6. Afrique australe",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Donald Trump menace de bombarder Oman si le sultanat entrave un accord sur le détroit d’Ormuz",
+          "title": "Donald Trump menace de bombarder Oman si le sultanat entrave un accord sur le détroit d’Ormuz, selon Fox News",
           "link": "https://www.lemonde.fr/international/article/2026/08/17/donald-trump-menace-de-bombarder-oman-si-le-sultanat-entrave-un-accord-sur-le-detroit-d-ormuz_6748219_3210.html",
           "source": "Le Monde International",
           "zone": "16. Amérique du Nord",
@@ -1618,42 +1592,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-17T13:04:53.358Z",
+      "at": "2026-08-17T15:39:30.955Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-17T13:04:53.366Z",
+      "at": "2026-08-17T15:39:30.963Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-17T13:05:28.937Z",
+      "at": "2026-08-17T15:39:59.706Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1911 articles"
+      "message": "103/170 flux OK, 1845 articles"
     },
     {
-      "at": "2026-08-17T13:05:31.845Z",
+      "at": "2026-08-17T15:40:02.912Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-17T13:05:32.138Z",
+      "at": "2026-08-17T15:40:03.252Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-17T13:05:32.143Z",
+      "at": "2026-08-17T15:40:03.257Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-08-17T13:05:32.143Z",
+      "at": "2026-08-17T15:40:03.257Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-17T13:05:32.143Z",
+      "at": "2026-08-17T15:40:03.258Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
