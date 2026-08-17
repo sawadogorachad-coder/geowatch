@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-17T07:16:03.841Z",
+  "generatedAt": "2026-08-17T07:57:20.266Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1925,
+    "ok": 106,
+    "failed": 64,
+    "articles": 1873,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -103,11 +103,6 @@
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -138,11 +133,6 @@
         "count": 20
       },
       {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "count": 12
-      },
-      {
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
@@ -168,11 +158,6 @@
         "count": 30
       },
       {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "count": 10
-      },
-      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -181,6 +166,11 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -211,11 +201,6 @@
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
-      },
-      {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "count": 0
       },
       {
         "id": "rss_madamasr",
@@ -443,11 +428,6 @@
         "count": 30
       },
       {
-        "id": "rss_ria",
-        "name": "RIA Novosti (EN)",
-        "count": 30
-      },
-      {
         "id": "rss_xinhua",
         "name": "Xinhua (EN)",
         "count": 20
@@ -595,6 +575,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -650,6 +635,11 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -660,8 +650,8 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
         "error": "This operation was aborted"
       },
       {
@@ -672,7 +662,7 @@
       {
         "id": "rss_adiac",
         "name": "ADIAC — Dépêches Brazzaville",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_dailynation",
@@ -713,6 +703,11 @@
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_libya_obs",
@@ -783,6 +778,11 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ria",
+        "name": "RIA Novosti (EN)",
+        "error": "fetch failed"
       },
       {
         "id": "rss_alarabiya",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 59,
-    "alerts": 7,
-    "criticalAlerts": 3,
-    "sourcesDistinct": 68
+    "bfAes": 58,
+    "alerts": 8,
+    "criticalAlerts": 4,
+    "sourcesDistinct": 67
   },
   "topDevelopments": [
     {
@@ -1247,12 +1247,28 @@
           "keyword": "ceasefire"
         }
       ]
+    },
+    {
+      "title": "Article 64 : le Professeur Raoul Ngebas exclut la rébellion et le coup d'État du champ du « devoir de faire échec »",
+      "link": "https://actualite.cd/2026/08/16/article-64-le-professeur-raoul-ngebas-exclut-la-rebellion-et-le-coup-detat-du-champ-du",
+      "source": "ActualitéCD (RDC)",
+      "date": "2026-08-16T19:49:43.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "coup d'état"
+        }
+      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      168
+      177
     ],
     [
       "occident_fr",
@@ -1264,7 +1280,7 @@
     ],
     [
       "autre",
-      97
+      100
     ],
     [
       "golfe_mo",
@@ -1272,11 +1288,7 @@
     ],
     [
       "bf_local",
-      57
-    ],
-    [
-      "russie",
-      51
+      55
     ],
     [
       "turquie",
@@ -1287,8 +1299,12 @@
       41
     ],
     [
+      "russie",
+      40
+    ],
+    [
       "sahel",
-      35
+      36
     ]
   ],
   "desks": [
@@ -1349,21 +1365,12 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 72,
+      "count": 71,
       "top": [
         {
           "title": "Growing menace of infrastructure vandalism",
           "link": "https://www.vanguardngr.com/2026/08/growing-menace-of-infrastructure-vandalism/",
           "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Ghana, Netherlands deepen cooperation to tackle illicit drug trade",
-          "link": "https://www.myjoyonline.com/ghana-netherlands-deepen-cooperation-to-tackle-illicit-drug-trade/",
-          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "D",
           "relevance": "A",
@@ -1388,6 +1395,15 @@
           "rating": "F2"
         },
         {
+          "title": "Ghana, Netherlands deepen cooperation to tackle illicit drug trade",
+          "link": "https://www.myjoyonline.com/ghana-netherlands-deepen-cooperation-to-tackle-illicit-drug-trade/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Itsekiri global homecoming",
           "link": "https://www.vanguardngr.com/2026/08/itsekiri-global-homecoming/",
           "source": "Vanguard (Nigeria)",
@@ -1402,7 +1418,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 35,
+      "count": 42,
       "top": [
         {
           "title": "CAN féminine 2026 : Les Lionnes indomptables du Cameroun championnes d’Afrique pour la première fois",
@@ -1441,11 +1457,11 @@
           "rating": "A2"
         },
         {
-          "title": "Beni : les victimes des massacres réclament justice",
-          "link": "https://www.radiookapi.net/2026/08/17/actualite/justice/beni-les-victimes-des-massacres-reclament-justice",
-          "source": "Radio Okapi (RDC)",
+          "title": "Walikale : accalmie à Mindjendje après des tirs attribués à l’AFC/M23",
+          "link": "https://actualite.cd/2026/08/17/walikale-accalmie-mindjendje-apres-des-tirs-attribues-lafcm23",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
-          "theme": "H",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1455,7 +1471,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 22,
+      "count": 24,
       "top": [
         {
           "title": "Sebta : 531 candidats à l’émigration irrégulière regagnent volontairement le Maroc durant la seule journée de jeudi",
@@ -1485,6 +1501,15 @@
           "rating": "A2"
         },
         {
+          "title": "Chômage des jeunes : L’Afrique du Nord affiche un taux de 22,6 %, parmi les plus élevés au monde",
+          "link": "https://fr.hespress.com/485310-chomage-des-jeunes-lafrique-du-nord-affiche-un-taux-de-226-parmi-les-plus-eleves-au-monde.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Attentat de Skhirat, « coup d’État des aviateurs »… La malédiction d’Azrou",
           "link": "https://www.jeuneafrique.com/1832144/politique/attentat-de-skhirat-coup-detat-des-aviateurs-la-malediction-dazrou/",
           "source": "Jeune Afrique",
@@ -1492,15 +1517,6 @@
           "theme": "S",
           "relevance": "A",
           "rating": "B2"
-        },
-        {
-          "title": "Hausse du prix du carburant: les chauffeurs redoutent un manque à gagner",
-          "link": "https://lesoleil.sn/actualites/societe-fait-divers/hausse-du-prix-du-carburant-les-chauffeurs-redoutent-un-manque-a-gagner/",
-          "source": "Le Soleil (Sénégal)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1508,7 +1524,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 109,
+      "count": 105,
       "top": [
         {
           "title": "Iran : Une prime de 30 000 dollars annoncée pour tuer ou capturer un soldat américain",
@@ -1547,13 +1563,13 @@
           "rating": "C1"
         },
         {
-          "title": "Israel strikes Lebanon as U.S. prepares fresh Iran sanctions",
-          "link": "https://www.japantimes.co.jp/news/2026/08/17/world/israel-lebanon-us-iran-sanctions/",
-          "source": "The Japan Times",
+          "title": "Gaza : l’émissaire américain Jared Kushner attendu en Israël pour rencontrer Benyamin Nétanyahou et tenter de faire avancer le plan de paix",
+          "link": "https://www.lemonde.fr/international/article/2026/08/17/gaza-l-emissaire-americain-jared-kushner-en-israel-pour-rencontrer-benyamin-netanyahou-et-tenter-de-faire-avancer-le-plan-de-paix_6747971_3210.html",
+          "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A2"
         }
       ]
     },
@@ -1561,7 +1577,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 150,
+      "count": 142,
       "top": [
         {
           "title": "France: Pendant que le pays brûle, Macron profite du jet-ski, l’opposition s’indigne et dénonce un président déconnecté de la réalité",
@@ -1620,48 +1636,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-08-17T07:15:31.244Z",
+      "at": "2026-08-17T07:56:36.324Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-17T07:15:31.251Z",
+      "at": "2026-08-17T07:56:36.331Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-17T07:16:00.685Z",
+      "at": "2026-08-17T07:57:16.836Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1925 articles"
+      "message": "106/170 flux OK, 1873 articles"
     },
     {
-      "at": "2026-08-17T07:16:03.552Z",
+      "at": "2026-08-17T07:57:19.950Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-17T07:16:03.838Z",
+      "at": "2026-08-17T07:57:20.263Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-17T07:16:03.843Z",
+      "at": "2026-08-17T07:57:20.268Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 8 alertes"
     },
     {
-      "at": "2026-08-17T07:16:03.843Z",
+      "at": "2026-08-17T07:57:20.268Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-08-17T07:16:03.843Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
