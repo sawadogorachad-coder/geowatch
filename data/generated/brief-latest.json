@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-20T03:58:37.694Z",
+  "generatedAt": "2026-08-20T07:05:56.924Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 109,
-    "failed": 61,
-    "articles": 1927,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1937,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,6 +40,11 @@
       {
         "id": "rss_eco_faso",
         "name": "L'Économiste du Faso",
+        "count": 10
+      },
+      {
+        "id": "rss_faso7",
+        "name": "Faso7",
         "count": 10
       },
       {
@@ -158,6 +163,11 @@
         "count": 30
       },
       {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
+      },
+      {
         "id": "rss_gabonreview",
         "name": "Gabon Review",
         "count": 30
@@ -176,11 +186,6 @@
         "id": "rss_standard_ke",
         "name": "The Standard (Kenya)",
         "count": 30
-      },
-      {
-        "id": "rss_dabanga",
-        "name": "Dabanga Sudan",
-        "count": 12
       },
       {
         "id": "rss_tsa",
@@ -285,7 +290,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 25
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -395,7 +400,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_bbc_africa",
@@ -415,7 +420,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 13
       },
       {
         "id": "rss_tass",
@@ -555,11 +560,6 @@
     ],
     "failedSources": [
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "error": "This operation was aborted"
@@ -665,11 +665,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_7sur7",
         "name": "7sur7.cd (RDC)",
         "error": "HTTP 404"
@@ -693,6 +688,11 @@
         "id": "rss_sudan_trib",
         "name": "Sudan Tribune",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_dabanga",
+        "name": "Dabanga Sudan",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_news24",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 45,
-    "alerts": 7,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 71
+    "bfAes": 43,
+    "alerts": 5,
+    "criticalAlerts": 0,
+    "sourcesDistinct": 69
   },
   "topDevelopments": [
     {
@@ -1213,72 +1213,40 @@
           "keyword": "sommet"
         }
       ]
-    },
-    {
-      "title": "Al Haouz : trois ans après le séisme, les sinistrés haussent le ton face à Akhannouch",
-      "link": "https://telquel.ma/instant-t/2026/08/19/al-haouz-trois-ans-apres-le-seisme-les-sinistres-haussent-le-ton-face-a-akhannouch_2003812/",
-      "source": "TelQuel (Maroc)",
-      "date": "2026-08-19T14:15:24.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Israel publishes internal war crimes probe, in first since October 7 Massacre",
-      "link": "https://www.jpost.com/israel-news/defense-news/article-906005",
-      "source": "Jerusalem Post",
-      "date": "2026-08-19T14:00:12.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "massacre"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      199
-    ],
-    [
-      "occident_us",
-      126
+      187
     ],
     [
       "autre",
-      103
+      121
+    ],
+    [
+      "occident_us",
+      119
     ],
     [
       "occident_fr",
-      93
+      111
     ],
     [
       "golfe_mo",
-      85
-    ],
-    [
-      "bf_local",
-      46
+      72
     ],
     [
       "russie",
-      43
+      45
     ],
     [
       "turquie",
-      42
+      43
+    ],
+    [
+      "bf_local",
+      41
     ],
     [
       "chine",
@@ -1286,7 +1254,7 @@
     ],
     [
       "sahel",
-      30
+      28
     ]
   ],
   "desks": [
@@ -1294,7 +1262,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 113,
+      "count": 102,
       "top": [
         {
           "title": "Bama-Taxi : Carnet de voyage à bord de ces véhicules qui défient le temps",
@@ -1347,8 +1315,44 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 70,
+      "count": 78,
       "top": [
+        {
+          "title": "GIPA, GUTA agree measures to protect Ghana’s retail sector",
+          "link": "https://www.myjoyonline.com/gipa-guta-agree-measures-to-protect-ghanas-retail-sector/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Moniepoint, Funke Akindele launch savings drive",
+          "link": "https://www.vanguardngr.com/2026/08/moniepoint-funke-akindele-launch-savings-drive/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "2027: I pity Tinubu because they’ll say he rigged after he wins - Sowunmi",
+          "link": "https://www.vanguardngr.com/2026/08/2027-i-pity-tinubu-because-theyll-say-he-rigged-after-he-wins-sowunmi/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Accolades for Vanguard, Uncle Sam as ex-staff launch book, reunite, plan media library",
+          "link": "https://www.vanguardngr.com/2026/08/accolades-for-vanguard-uncle-sam-as-ex-staff-launch-book-reunite-plan-media-library/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Osun election: Matters arising, by Ikechukwu Amaechi",
           "link": "https://www.vanguardngr.com/2026/08/osun-election-matters-arising-by-ikechukwu-amaechi/",
@@ -1357,42 +1361,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Education: When high fee doesn’t mean better academic performance",
-          "link": "https://www.vanguardngr.com/2026/08/education-when-high-fee-doesnt-mean-better-academic-performance/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "IOC divestments: Job security, welfare of workers our priority — PENGASSAN",
-          "link": "https://www.vanguardngr.com/2026/08/ioc-divestments-job-security-welfare-of-workers-our-priority-pengassan/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "‘I was born in South Africa’, says beauty queen Chidimma Adetshina facing legal bid to deport her",
-          "link": "https://www.myjoyonline.com/i-was-born-in-south-africa-says-beauty-queen-chidimma-adetshina-facing-legal-bid-to-deport-her/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F1"
-        },
-        {
-          "title": "Unemployment: Fubara urges shift to vocational, technical education",
-          "link": "https://punchng.com/unemployment-fubara-urges-shift-to-vocational-technical-education/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
         }
       ]
     },
@@ -1400,7 +1368,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 24,
+      "count": 32,
       "top": [
         {
           "title": "Afrique du Sud: deux membres de la délégation congolaise au sommet de la SADC interpellés, Kinshasa rassure sur la régularité de leur séjour",
@@ -1410,6 +1378,24 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Est de la RDC : l’usage croissant des drones expose davantage les civils et les humanitaires, plus de 200 incidents et six morts enregistrés entre janvier et juin 2026 (ONU)",
+          "link": "https://actualite.cd/2026/08/20/est-de-la-rdc-lusage-croissant-des-drones-expose-davantage-les-civils-et-les",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Éboulement meutrier de Zamboï: «Le débat au Cameroun pour assainir le secteur minier va reprendre de plus belle»",
+          "link": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20260820-eboulement-meutrier-zambo%C3%AF-le-d%C3%A9bat-au-cameroun-pour-assainir-le-secteur-minier-va-reprendre-de-plus-belle",
+          "source": "RFI Afrique",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A1"
         },
         {
           "title": "L'éboulement d'une mine fait plus d'une centaine de morts à la frontière entre le Cameroun et la RCA",
@@ -1428,24 +1414,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "B1"
-        },
-        {
-          "title": "RDC : Joseph Kabila riposte à Washington après les sanctions du Trésor américain",
-          "link": "https://www.jeuneafrique.com/1836157/politique/rdc-joseph-kabila-riposte-a-washington-apres-les-sanctions-du-tresor-americain/",
-          "source": "Jeune Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Faut-il fermer ou restreindre l’accès à TikTok en RDC ?",
-          "link": "https://www.radiookapi.net/2026/08/19/emissions/okapi-service/faut-il-fermer-ou-restreindre-lacces-tiktok-en-rdc",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "L",
-          "relevance": "L",
-          "rating": "A2"
         }
       ]
     },
@@ -1453,8 +1421,26 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 19,
+      "count": 18,
       "top": [
+        {
+          "title": "Maroc : l’extrême précarité du Rif, l’autre face cachée de la crise de Ceuta",
+          "link": "https://www.tsa-algerie.com/maroc-lextreme-precarite-du-rif-lautre-face-cachee-de-la-crise-de-ceuta/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Sebta : les migrantes face à la précarité et aux risques d’agressions sexuelles",
+          "link": "https://fr.hespress.com/485672-sebta-les-migrantes-face-a-la-precarite-et-aux-risques-dagressions-sexuelles.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Rapport OMS-Unicef : Seuls 11 % des établissements de santé au Maroc disposent d’un accès basique à l’eau",
           "link": "https://fr.hespress.com/485653-rapport-oms-unicef-seuls-11-des-etablissements-de-sante-au-maroc-disposent-dun-acces-basique-a-leau.html",
@@ -1474,30 +1460,12 @@
           "rating": "F2"
         },
         {
-          "title": "Droits d’auteur : Le Maroc renforce son arsenal juridique contre le piratage numérique",
-          "link": "https://fr.hespress.com/485637-droits-dauteur-le-maroc-renforce-son-arsenal-juridique-contre-le-piratage-numerique.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Marruecos exime de visado a países africanos mientras cuestiona el “efecto llamada” de la regularización en España",
+          "link": "https://elpais.com/espana/2026-08-20/marruecos-exime-de-visado-a-paises-africanos-mientras-cuestiona-el-efecto-llamada-de-la-regularizacion-en-espana.html",
+          "source": "El País (Espagne, ES)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "F2"
-        },
-        {
-          "title": "Sebta : un rapport analyse le rôle d’un numéro algérien dans l’organisation des tentatives d’entrée",
-          "link": "https://fr.hespress.com/485625-sebta-un-rapport-analyse-le-role-dun-numero-algerien-dans-lorganisation-des-tentatives-dentree.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "F2"
-        },
-        {
-          "title": "Tebboune : la Révolution algérienne a ébranlé le système colonial dans le monde entier",
-          "link": "https://www.tsa-algerie.com/tebboune-la-revolution-algerienne-a-ebranle-le-systeme-colonial-dans-le-monde-entier/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         }
       ]
@@ -1506,7 +1474,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 118,
+      "count": 108,
       "top": [
         {
           "title": "Les Émirats en Afrique : une enquête du Financial Times confirme les accusations de l’Algérie",
@@ -1518,13 +1486,13 @@
           "rating": "F2"
         },
         {
-          "title": "Israel publishes internal war crimes probe, in first since October 7 Massacre",
-          "link": "https://www.jpost.com/israel-news/defense-news/article-906005",
-          "source": "Jerusalem Post",
+          "title": "L’extrême droite mondiale, grande amie d’Israël !",
+          "link": "https://kapitalis.com/tunisie/2026/08/20/lextreme-droite-mondiale-grande-amie-disrael/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "8. Moyen-Orient",
-          "theme": "H",
-          "relevance": "L",
-          "rating": "F2"
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
           "title": "Pourquoi Israël a-t-il interdit les ventes d’armes au Qatar ?",
@@ -1536,6 +1504,15 @@
           "rating": "A2"
         },
         {
+          "title": "Israeli warplanes launch overnight strikes on southern Lebanon",
+          "link": "https://www.aa.com.tr/en/middle-east/israeli-warplanes-launch-overnight-strikes-on-southern-lebanon/4032335",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
           "title": "'Tremendous consequences': Trump threatens economic punishment on 'any country' helping Iran",
           "link": "https://www.dawn.com/news/2024083/tremendous-consequences-trump-threatens-economic-punishment-on-any-country-helping-iran",
           "source": "Dawn (Pakistan)",
@@ -1543,15 +1520,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F1"
-        },
-        {
-          "title": "Diesel price nose-dives by Rs32.63, petrol registers Rs2.97 increase",
-          "link": "https://www.dawn.com/news/2023932/diesel-price-nose-dives-by-rs3263-petrol-registers-rs297-increase",
-          "source": "Dawn (Pakistan)",
-          "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1571,12 +1539,21 @@
           "rating": "C2"
         },
         {
-          "title": "As US funding cut for AU mission looms, Somalia faces reckoning it isn’t ready for",
-          "link": "https://www.madamasr.com/en/2026/08/19/feature/politics/as-us-funding-cut-for-au-mission-looms-somalia-faces-reckoning-it-isnt-ready-for/",
-          "source": "Mada Masr (Égypte)",
-          "zone": "16. Amérique du Nord",
-          "theme": "P",
+          "title": "Le monde est-il vraiment redevenu impérial ?",
+          "link": "https://legrandcontinent.eu/fr/2026/08/20/le-monde-est-il-vraiment-redevenu-imperial/",
+          "source": "Le Grand Continent",
+          "zone": "9. Europe occidentale",
+          "theme": "S",
           "relevance": "L",
+          "rating": "A2"
+        },
+        {
+          "title": "Économie russe : deux tiers de la population estime que les moments les plus difficiles pour le pays sont encore à venir",
+          "link": "https://legrandcontinent.eu/fr/2026/08/20/economie-russe-deux-tiers-de-la-population-estime-que-les-moments-les-plus-difficiles-pour-le-pays-sont-encore-a-venir/",
+          "source": "Le Grand Continent",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "E",
+          "relevance": "A",
           "rating": "A2"
         },
         {
@@ -1586,31 +1563,21 @@
           "zone": "12. Asie du Sud",
           "theme": "D",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "A1"
         },
         {
-          "title": "EN DIRECT, guerre en Ukraine : au moins six morts à Kiev et sa région dans des bombardements russes",
-          "link": "https://www.lemonde.fr/international/live/2026/08/20/en-direct-guerre-en-ukraine-au-moins-six-morts-a-kiev-et-sa-region-dans-des-bombardements-russes_6746952_3210.html",
-          "source": "Le Monde International",
+          "title": "Captured Ukrainian-born soldiers tell BBC why they fought for Russia",
+          "link": "https://www.bbc.co.uk/news/articles/cn9nr195drzo?at_medium=RSS&at_campaign=rss",
+          "source": "BBC World",
           "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B1"
-        },
-        {
-          "title": "Un commerce mauritanien vendu à quatre personnes remet la xénophobie au premier plan en Afrique du Sud",
-          "link": "https://fr.saharamedias.net/un-commerce-mauritanien-vendu-a-quatre-personnes-remet-la-xenophobie-au-premier-plan-en-afrique-du-sud/",
-          "source": "Sahara Médias",
-          "zone": "6. Afrique australe",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
         }
       ]
     }
   ],
   "indicators": [
-    "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
     "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
@@ -1622,42 +1589,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-20T03:57:56.616Z",
+      "at": "2026-08-20T07:05:19.758Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-20T03:57:56.623Z",
+      "at": "2026-08-20T07:05:19.766Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-20T03:58:34.230Z",
+      "at": "2026-08-20T07:05:53.734Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1927 articles"
+      "message": "110/170 flux OK, 1937 articles"
     },
     {
-      "at": "2026-08-20T03:58:37.354Z",
+      "at": "2026-08-20T07:05:56.619Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-20T03:58:37.691Z",
+      "at": "2026-08-20T07:05:56.922Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-20T03:58:37.697Z",
+      "at": "2026-08-20T07:05:56.926Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-08-20T03:58:37.698Z",
+      "at": "2026-08-20T07:05:56.927Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-20T03:58:37.698Z",
+      "at": "2026-08-20T07:05:56.927Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
