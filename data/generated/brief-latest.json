@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-20T09:50:08.132Z",
+  "generatedAt": "2026-08-20T13:10:46.870Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 104,
-    "failed": 66,
-    "articles": 1858,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1934,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -43,13 +43,23 @@
         "count": 10
       },
       {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "count": 10
+      },
+      {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
       },
       {
-        "id": "rss_netafrique",
-        "name": "Net Afrique (BF)",
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "count": 0
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "count": 10
       },
       {
@@ -88,8 +98,8 @@
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -223,6 +233,11 @@
         "count": 10
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "count": 10
+      },
+      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -328,6 +343,11 @@
         "count": 0
       },
       {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "count": 25
+      },
+      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -336,6 +356,11 @@
         "id": "rss_atlantic",
         "name": "Atlantic Council",
         "count": 30
+      },
+      {
+        "id": "rss_crisisgroup",
+        "name": "ICG — International Crisis Group",
+        "count": 10
       },
       {
         "id": "rss_sipri",
@@ -350,7 +375,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 3
+        "count": 6
       },
       {
         "id": "rss_fp",
@@ -375,7 +400,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 27
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -485,7 +510,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 25
+        "count": 22
       },
       {
         "id": "rss_nikkei",
@@ -523,6 +548,11 @@
         "count": 0
       },
       {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "count": 20
+      },
+      {
         "id": "rss_iaea",
         "name": "AIEA — Top News (nucléaire)",
         "count": 15
@@ -530,23 +560,13 @@
     ],
     "failedSources": [
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
+        "id": "rss_netafrique",
+        "name": "Net Afrique (BF)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
-        "error": "fetch failed"
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "error": "HTTP 415"
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -580,6 +600,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -588,11 +613,6 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -632,7 +652,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "fetch failed"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_togoinfos",
@@ -687,7 +707,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "HTTP 415"
+        "error": "fetch failed"
       },
       {
         "id": "rss_le360",
@@ -707,7 +727,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 415"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_moibrahim",
@@ -723,11 +743,6 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -775,16 +790,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "error": "HTTP 415"
-      },
-      {
-        "id": "rss_crisisgroup",
-        "name": "ICG — International Crisis Group",
-        "error": "HTTP 415"
-      },
-      {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
         "error": "HTTP 403"
@@ -830,11 +835,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_amnesty",
         "name": "Amnesty International",
         "error": "HTTP 403"
@@ -863,19 +863,19 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 46,
+    "bfAes": 30,
     "alerts": 3,
     "criticalAlerts": 1,
-    "sourcesDistinct": 66
+    "sourcesDistinct": 73
   },
   "topDevelopments": [
     {
-      "title": "Ouagadougou : 100 tonnes de riz saisies dans une habitation clandestine, la BMCRF frappe fort",
-      "link": "https://netafrique.net/ouagadougou-100-tonnes-de-riz-saisies-dans-une-habitation-clandestine-la-bmcrf-frappe-fort/",
-      "pubDate": "2026-08-20T07:22:58.000Z",
-      "description": "Nouveau coup d’éclat pour la Brigade Mobile de Contrôle Économique et de la Répression des Fraudes (BMCRF). En étroite collaboration avec l’ABNORM, la brigade a mis au jour un impressionnant stock clandestin de 100 tonnes de riz , dissimulé dans une simple habitation transformée en entrepôt de fortune. Cette saisie spectaculaire, opérée ce mercredi 19 août 2026 , s’inscrit dans le cadre d’une vaste opération d'assainissement du marché de la capitale, marquée par la fermeture immédiate de plusieurs commerces spéculatifs et la traque des produits impropres à la consommation. La lutte contre la vie chère et les pratiques commerciales déloyales vient de franchir un nouveau palier à Ouagadougou. Lors d'une série de contrôles intensifs menés à travers plusieurs quartiers de la capitale, les inspecteurs de la BMCRF, appuyés par l’Agence burkinabè de normalisation (ABNORM), ont réalisé un coup de filet retentissant en démantelant un réseau de stockage illégal d'envergure. C'est au cœur d'une zone résidentielle que les enquêteurs ont fait la découverte la plus frappante de cette opération : une maison d'habitation entièrement détournée de sa fonction d'origine pour servir de dépôt clandestin. À l'intérieur, pas moins de 100 tonnes de riz y étaient stockées de manière illégale. Cette dissimulation de stocks, généralement orchestrée pour provoquer une rareté artificielle sur le marché et faire grimper artificiellement les cours, a été immédiatement stoppée net par les agents de contrôle. Au-delà de cette saisie massive, l'opération a mis en lumière une multitude d'infractions d'ordre économique et sanitaire. Les contrôleurs ont en effet constaté des ventes de denrées de première nécessité — notamment le riz, l’huile alimentaire et la farine de blé — à des tarifs s'élevant bien au-delà des prix plafonds réglementés par l'État. Plus inquiétant encore pour la santé des consommateurs, de nombreux lots de produits périmés ont dû être retirés d'urgence du marché. Les enquêteurs de la BMCRF ont également mis au jour des cas de reconditionnement frauduleux de riz , un procédé illégal visant à tromper l'acheteur sur la qualité ou l'origine de la marchandise. La réponse de l'administration a été immédiate et sans concession : plusieurs boutiques et magasins pris en flagrant délit ont été scellés, et l'ensemble des produits non conformes a été immédiatement saisi. En réaffirmant sa ferme volonté d'assainir le secteur commercial, la BMCRF rappelle qu'elle ne tolérera aucune entrave aux règles de régulation. L'institution reste pleinement déterminée à poursuivre sa mission pour garantir une concurrence saine et loyale sur l'ensemble du territoire. L’article Ouagadougou : 100 tonnes de riz saisies dans une habitation clandestine, la BMCRF frappe fort est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
+      "title": "AES: La conquête de la souveraineté au cœur d’une conférence animée par Bassolma Bazié à Niamey",
+      "link": "https://www.aib.media/aes-la-conquete-de-la-souverainete-au-coeur-dune-conference-animee-par-bassolma-bazie-a-niamey/",
+      "pubDate": "2026-08-20T11:23:37.000Z",
+      "description": "AES-CONFERENCE-NIGER AES: La conquête de la souveraineté au cœur d’une conférence animée par Bassolma Bazié à Niamey Ouagadougou, 20 août 2026 (AIB)- Le président de la Commission nationale de la Confédération de l’Alliance des États du Sahel (AES) du Burkina Faso, Bassolma Bazié, a animé, mercredi 19 août 2026 à Niamey, une conférence sur le thème : « La bataille pour la conquête de la souveraineté dans le contexte de la Confédération des États du Sahel (AES) : regard historique et prospectif », à l’intention de la population nigérienne. Pour Bassolma Bazié, la souveraineté est un combat qui exige de la lutte, des sacrifices et de l’engagement. Au cours de son intervention, il a évoqué les souffrances endurées par les Africains, particulièrement les populations des pays de l’AES, sous la domination et l’influence des puissances occidentales. Le président de la Commission nationale AES du Burkina Faso a insisté sur l’unité et la solidarité entre le Mali, le Burkina Faso et le Niger, appelés à se soutenir en toutes circonstances. Il a également mis en avant les richesses dont disposent les trois pays, la mobilisation des populations en soutien à leurs dirigeants ainsi que les sacrifices consentis par les Forces de défense et de sécurité pour assurer la souveraineté et la sécurité des États. Le conférencier a surtout insisté sur la nécessité de traduire la souveraineté par des conséquences concrètes dans la vie quotidienne des populations. Il a, à ce titre, appelé au renforcement des hôpitaux, de l’accès aux soins, du personnel médical et des infrastructures sanitaires. Il a également souligné l’importance de l’éducation et de la création d’emplois, estimant que ces secteurs doivent occuper une place importante dans la concrétisation de la souveraineté. Le panéliste Nouhou Arzika, conseiller au Conseil consultatif de la Refondation du Niger, a, pour sa part, retracé les tournants décisifs du 26 juillet 2023 au Niger. Il a notamment évoqué l’intervention des Forces de défense et de sécurité (FDS), présentée comme ayant mis fin à une situation qu’il considère comme un soulagement. Il a souligné la solidarité manifestée par le Mali et le Burkina Faso dès les premières heures, ainsi que la résistance du peuple nigérien face aux sanctions imposées par la CEDEAO. Il a également insisté sur l’unité des FDS et sur le départ des forces étrangères du Niger, intervenu entre le 2 septembre et le 22 décembre 2023, présenté comme un moment désormais gravé dans l’histoire. Nouhou Arzika a par ailleurs détaillé les motivations des trois chefs d’État ayant conduit à la création de l’Alliance des États du Sahel, ainsi que leur vision et leur volonté de renforcer cette organisation. En introduisant la conférence, le modérateur, l’ambassadeur Illo Adani, a rappelé que la quête de la souveraineté constitue une revendication constante des peuples africains depuis les indépendances, particulièrement dans les pays regroupés au sein de l’AES. Il a évoqué plusieurs étapes de cette quête, notamment les combats de Patrice Lumumba et Thomas Sankara, les coups d’État et les conférences nationales. Selon lui, le processus engagé au Mali en 2021, au Burkina Faso en 2022 et au Niger en 2023 constitue une étape déterminante. L’ambassadeur Adani a souligné que cette dynamique, portée par des régimes militaires de type patriotique, souverainiste et panafricaniste, s’est renforcée avec la création de l’AES, suivie de la signature, le 6 juillet 2024 à Niamey, du traité portant création de la Confédération des États du Sahel. La rencontre, organisée dans la salle des conférences du Palais des Congrès, visait à apporter des réponses sur les ressorts, la nature, l’originalité et les enjeux de la dynamique de souveraineté portée par la Confédération. Elle s’est également intéressée à son impact sur le panafricanisme et la lutte contre l’impérialisme, ainsi qu’aux leçons à tirer pour l’Afrique. À la fin des exposés, plusieurs questions et recommandations ont été adressées aux organisateurs, qui ont assuré en prendre bonne note. Agence d'information du Burkina Source: ANP",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -892,42 +892,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Bénin: Le président français Emmanuel Macron sera en visite officielle à Cotonou fin octobre",
-      "link": "https://netafrique.net/benin-le-president-francais-emmanuel-macron-sera-en-visite-officielle-a-cotonou-fin-octobre/",
-      "pubDate": "2026-08-20T06:29:28.000Z",
-      "description": "Quatre ans après son dernier déplacement à Cotonou, le chef de l’État français Emmanuel Macron pourrait se rendre de nouveau au Bénin d’ici la fin de l’année 2026. Selon les informations rapportées par Financial Afrik, cette étape béninoise s’inscrirait dans le cadre d’une tournée ouest-africaine devant également le conduire au Sénégal, en Côte d’Ivoire et au Nigeria. ​ Un premier contact avec l’exécutif de Romuald Wadagni ​Si elle se confirme, il s’agira de la première visite officielle d’Emmanuel Macron au Bénin depuis l’investiture, en mai 2026, du président Romuald Wadagni. CommuniquésBénin Lors de sa précédente venue en juillet 2022 sous la présidence de Patrice Talon, le dirigeant français avait scellé le réchauffement des relations bilatérales à travers des accords de coopération portant sur la sécurité, l’économie, la culture et la restitution du patrimoine culturel béninois. ​ Une diplomatie béninoise redéployée et offensive ​Cette perspective de rencontre intervient alors que le président Romuald Wadagni déploie une diplomatie offensive visant à diversifier ses partenaires internationaux et à consolider ses alliances régionales. Depuis son accession au pouvoir, le chef de l’État béninois a multiplié les déplacements stratégiques, se rendant notamment dans les trois pays de l’Alliance des États du Sahel (Niger, Burkina Faso, Mali), ainsi qu’au Togo, en Côte d’Ivoire, en Guinée-Bissau, au Sénégal et en Mauritanie, sans oublier un récent voyage à Bruxelles. L’article Bénin: Le président français Emmanuel Macron sera en visite officielle à Cotonou fin octobre est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
+      "_rating": "C2",
       "_score": 127,
       "_zone": 1,
       "_theme": "D",
@@ -936,20 +903,18 @@
       "_desk": "A1"
     },
     {
-      "title": "Contrebande aux frontières : Près de 44 tonnes d’intrants agricoles frauduleux saisies par la Gendarmerie nationale à Ouessa",
-      "link": "https://netafrique.net/contrebande-aux-frontieres-pres-de-44-tonnes-dintrants-agricoles-frauduleux-saisies-par-la-gendarmerie-nationale-a-ouessa/",
-      "pubDate": "2026-08-20T07:49:03.000Z",
-      "description": "La lutte contre le trafic d'intrants agricoles vient de marquer un point décisif à la frontière du Burkina Faso. Fruit d’un partenariat stratégique entre la Direction Générale des Productions Végétales (DGPV) et la Gendarmerie Nationale, la Brigade Territoriale de Ouessa a mené, entre mai et juin 2026, deux opérations d'envergure dans les environs du village frontalier de Hamélé. Au total, 42,5 tonnes d’engrais et plus d’une tonne de pesticides illicites , d’une valeur marchande cumulée de près de 22 millions de francs CFA , ont été interceptées. Ce coup de filet salvateur sécurise l'économie agricole locale à l'orée d'une saison hivernale cruciale. La vigilance des forces de sécurité et la collaboration des populations locales portent leurs fruits sur le front de la protection de nos ressources agricoles. Dans la bande frontalière de Hamélé, les réseaux de contrebande d’intrants chimiques viennent de subir un revers financier et logistique majeur sous l'action rigoureuse de la gendarmerie nationale. Le dispositif de surveillance, activé sous l'impulsion du Commandant de la Brigade Territoriale de Ouessa grâce à un réseau de renseignement performant, a permis de cibler précisément les circuits d'approvisionnement clandestins. La première phase de l'offensive a conduit les forces de l'ordre à la découverte d'une cachette stratégique. À l'intérieur, les gendarmes ont saisi cinquante (50) cartons de pesticides non homologués , des substances chimiques hautement suspectes d'une valeur estimée à deux millions (2 000 000) de francs CFA . Ces produits, introduits sans aucun contrôle sanitaire, présentaient un risque direct pour les sols et la santé des consommateurs. Loin de s'arrêter à ce premier succès, les enquêteurs ont poursuivi leurs investigations. Lors d'une seconde opération menée sous la direction du Commandant de Brigade adjoint, une unité d'intervention a intercepté un véhicule de transport de marchandises suspect. La fouille minutieuse du camion a révélé une cargaison frauduleuse massive : 1 700 sacs d’engrais ainsi que soixante-neuf (69) autres cartons de pesticides interdits . La valeur de cette seule prise est estimée à près de vingt millions (20 000 000) de francs CFA . Le véhicule et l'ensemble de sa cargaison illicite ont été immédiatement saisis et conduits à la sous-unité de gendarmerie pour l'ouverture d'une procédure judiciaire. Au total, cette double opération aura permis de retirer du circuit clandestin 42,5 tonnes d'engrais et 1,290 tonne de pesticides toxiques . Au-delà du succès matériel, cette opération illustre l'efficacité du renseignement de proximité. La Gendarmerie Nationale a tenu à saluer chaleureusement « la parfaite intelligence et la collaboration exemplaire » des populations locales, dont les signalements précis ont rendu ces saisies possibles. Alors que la période hivernale bat son plein, les autorités militaires et agricoles exhortent les agriculteurs et les citoyens à maintenir une vigilance maximale. L'objectif est clair : faire bloc pour barrer définitivement la route aux trafiquants qui menacent directement la souveraineté économique et le potentiel agricole du pays. L’article Contrebande aux frontières : Près de 44 tonnes d’intrants agricoles frauduleux saisies par la Gendarmerie nationale à Ouessa est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "Ségou : le nouveau gouverneur prend fonction",
+      "link": "https://www.studiotamani.org/206680-segou-le-nouveau-gouverneur-prend-fonction",
+      "pubDate": "2026-08-20T12:52:58.000Z",
+      "description": "a Segou, le nouveau gouverneur, Chiaka Magassa, a prete serment hier 19 ao&ucirc;t devant le Tribunal de grande instance. Ancien conseiller technique au ministere de l'Administration territoriale, il succede au commissaire general de brigade de police Soula&iuml;mane Traore. Apres la ceremonie, le nouveau gouverneur est alle a la rencontre des notabilites de la ville pour renforcer les liens avec les autorites traditionnelles. L’article Ségou : le nouveau gouverneur prend fonction est apparu en premier sur Studio Tamani - Informations, débats, magazines : toute l’actualité du Mali, en 5 langues .",
+      "_source": "Studio Tamani (Mali)",
+      "_sourceId": "rss_studio_tam",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -958,32 +923,29 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "F2"
       },
-      "_rating": "F1",
+      "_rating": "F2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "J",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Bama-Taxi : Carnet de voyage à bord de ces véhicules qui défient le temps",
-      "link": "https://www.sidwaya.info/bama-taxi-carnet-de-voyage-a-bord-de-ces-vehicules-qui-defient-le-temps/",
-      "pubDate": "2026-08-19T23:36:16.000Z",
-      "description": "Sur l’axe Bobo-Dioulasso/Bama, défilent, tout au long de la journée, des véhicules aussi atypiques par leur état que par l’usage qui en est fait. Sur cette liaison, les vieux « breaks » sont devenus une sorte de paysage roulant. Ils font partie du décor de l’axe. Des véhicules que l’on croise encore ici alors qu’ils sont quasi absents sur d’autres axes. Marqués par le poids des années, ces engins continuent pourtant de sillonner la trentaine de kilomètres en aller-retour. Pour 500 F CFA, le passager et les marchandises embarquent à destination, dans des conditions de transport qu’il faut vivre pour apprécier. C’est à bord de l’un de ces vieux véhicules, communément appelés « Bama-taxi », que nous prenons place, ce jeudi 6 août 2026, pour une aventure d’une demi-heure, à la découverte du quotidien de ces chauffeurs et passagers qui ont fait de ces automobiles vétustes, leurs compagnons. Midi approche à peine ! Les nuages commencent déjà à envelopper le ciel bobolais en cette fin de matinée du jeudi 6 août 2026. A la gare des véhicules en partance pour Bama, commune rurale de la province du Houet, région du Guiriko, l’animation ne faiblit pas. Des passagers arrivent avec leurs bagages. Des sacs de céréales et autres marchandises sont déposés çà et là au sol. Les rabatteurs lancent leurs appels. Dans cette agitation, une catégorie de véhicules attire particulièrement l’attention. Ils sont alignés les uns après les autres. Des modèles qui ont traversé au moins cinq décennies et qui, pourtant, s’apprêtent encore à prendre la route. Comme tous les jours. Sur le flanc du véhicule, une inscription manuscrite attire notre attention : « L’aventurier n’a pas de choix ». En tout cas, la nôtre l’est. Mais, la phrase résume tout le sens de la mise en route de ces véhicules plus vieux que la plupart de leurs conducteurs et passagers. C’est à bord de cette Peugeot cinquantenaire que nous avons vécu en une matinée, le quotidien des passagers et conducteurs des « Bama taxi ». \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01.jpg\" class=\"size-medium wp-image-167871\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01-300x291.jpg\" alt=\"\" width=\"300\" height=\"291\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01-300x291.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01-768x745.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01-433x420.jpg 433w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01-150x145.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01-696x675.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_01.jpg 993w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> C’est à bord de cette Peugeot cinquantenaire que nous avons vécu en une matinée, le quotidien des passagers et conducteurs des « Bama taxi ». C’est à bord de l’un de ces véhicules des années 70 que nous décidons de faire le voyage. De loin, la voiture semble avoir déjà beaucoup vécu. De près, le constat est encore plus saisissant. La peinture est écaillée. La carrosserie porte des traces de rouille. Les phares tout comme les clignotants ont perdu leur transparence ou sont inexistants. Le pare-brise n’est pas épargné par la longévité de l’engin. Le coffre, lui, ne tient plus fermé sans l’aide d’un dispositif de fortune. Une corde fait office de verrou ou un bois, de cale pour le maintenir. Nous regardons la voiture, puis notre montre. Le départ est imminent. « Bama ! Bama ! » L’appel du rabatteur retentit. Le prix annoncé est de 500 F CFA. Pas un franc de moins. Nous montons. Le premier contact avec l’intérieur du véhicule donne une autre image de cette voiture qui, extérieurement, paraît déjà bien fatiguée. Les sièges sont affaissés, ils grincent lorsqu’on s’assoit. Nous nous installons et observons. Le conducteur s’affaire autour du véhicule. Il vérifie quelques éléments, ouvre puis referme le capot. Le moteur finit par démarrer après quelques gymnastiques. Le bruit mécanique annonce le départ. Dans le véhicule, chacun prend ses habitudes. Pour certains, ce trajet est une routine. Pour d’autres, il s’agit simplement du moyen le plus accessible pour rejoindre Bama. A côté de nous, un passager, Issouf Coulibaly. Orpailleur, il ne semble pas inquiet. « J’ai choisi Bama-Taxi parce que c’est le plus facile d’accès, moins cher et une fois démarré on arrive rapidement », explique l’orpailleur. Le véhicule commence à avancer. A peine avons-nous quitté la gare que l’impression d’être dans une voiture d’une autre époque s’installe véritablement. Le moteur ronronne. La carrosserie vibre. A chaque mouvement, les sièges grincent. Nous regardons autour de nous. Tout rappelle l’âge avancé du véhicule. Le tableau de bord ainsi que les portières témoignent du temps traversé et de l’usure qui va avec. La voiture continue son chemin. Dans l’habitacle, la séparation entre les passagers et les marchandises est parfois difficile à établir. Les sacs occupent l’espace disponible. Les colis sont placés là où il reste une place. Par moments, marchandises et voyageurs se bousculent. Les bonbonnes de gaz, notamment, voyagent parfois à quelques centimètres des passagers. La scène peut surprendre. Mais pour les habitués, elle semble presque ordinaire. La raison est simple : le transporteur doit vivre de son activité. Ainsi, le passager doit arriver à destination, la marchandise aussi. Tout le monde trouve sa place dans ce désordre entretenu depuis des lustres. La surcharge peut parfois s’inviter dans le voyage. Nous comprenons alors que le véritable défi n’est pas seulement de faire rouler ces voitures anciennes. Il faut aussi les faire travailler suffisamment pour permettre à ceux qui en vivent de nourrir leurs familles. Malgré le poids des années, cette vieille carcasse continue de sillonner l’axe Bobo-Dioulasso / Bama, chargée de marchandises. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-770x1024.jpeg\" class=\"size-medium wp-image-167874\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-226x300.jpeg\" alt=\"\" width=\"226\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-226x300.jpeg 226w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-770x1024.jpeg 770w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-768x1021.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-316x420.jpeg 316w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-150x199.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-300x399.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04-696x925.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_04.jpeg 963w\" sizes=\"(max-width: 226px) 100vw, 226px\" /> Malgré le poids des années, cette vieille carcasse continue de sillonner l’axe Bobo-Dioulasso / Bama, chargée de marchandises. Au volant, Issa Ouédraogo garde les yeux fixés sur la route. Il connaît parfaitement cette liaison. Il conduit depuis 20 ans. Pour lui, le véhicule représente avant tout un outil de travail. « C’est à travers ce travail que nous arrivons à subvenir à nos besoins et prendre en charge nos familles », confie-t-il. Nous découvrons alors une autre dimension de cette voiture cinquantenaire. Derrière sa carrosserie rouillée, il y a une économie. Derrière le volant, il y a un homme qui travaille. Derrière chaque départ, il y a une recette qui permettra de faire vivre une famille. Le véhicule est vieux, mais son utilité demeure intacte. Le gaz pour maintenir le prix du trajet Sur la route, Issa Ouédraogo explique également que son véhicule fonctionne au gaz. Le choix, précise-t-il, est d’abord économique. Le gaz coûte moins cher que l’essence et permet aux conducteurs de maintenir le tarif du trajet à 500 F CFA, l’une des raisons d’attractions des passagers. « On nous dit que le gaz est interdit pour faire rouler les véhicules. Alors que si nous devons utiliser l’essence en lieu et place du gaz, il nous sera difficile de maintenir le prix du trajet à 500 F CFA », soutient-il. Nous regardons alors ce vieux véhicule autrement. Elle n’est pas seulement une relique automobile. Elle est aussi le résultat d’une adaptation permanente aux difficultés économiques. A mesure que nous avançons, une évidence s’impose : ces véhicules ont beaucoup servi. Le temps a laissé ses marques. La carrosserie est fatiguée. Les éléments de sécurité sont loin des standards des véhicules modernes. Et les difficultés ne s’arrêtent pas à l’état mécanique. Ces véhicules ne disposent pas de documents en règle. « Nos véhicules, au regard de leur âge très avancé, ne peuvent plus avoir accès aux visites techniques. Lors des contrôles, par faute de documents, nous sommes contraints de tout faire pour éviter de nous faire épingler », confie le conducteur avec désolation. Chargée à l’extrême, cette vieille Peugeot qui fait office de véhicule de transport et de véritable porte-bagages ambulant, s’apprête à prendre la route de Bama. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-1024x770.jpg\" class=\"size-medium wp-image-167875\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-300x226.jpg\" alt=\"\" width=\"300\" height=\"226\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-300x226.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-1024x770.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-768x578.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-558x420.jpg 558w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-80x60.jpg 80w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-150x113.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-696x524.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05-1068x804.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_05.jpg 1280w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Chargée à l’extrême, cette vieille Peugeot qui fait office de véhicule de transport et de véritable porte-bagages ambulant, s’apprête à prendre la route de Bama. Nous sommes toujours à bord. Le moteur continue de tourner. Nous approchons Bama. A l’intérieur du véhicule, les passagers commencent à se préparer. Certains récupèrent leurs affaires. L’arrivée se fait dans des conditions moins organisées qu’au départ de Bobo-Dioulasso. A Bama, les transporteurs ne disposent pas toujours d’un véritable espace de stationnement. Notre chauffeur raconte qu’ils sont parfois contraints de s’arrêter au bord des routes d’où les « autorités » viennent souvent les déloger. Le vieux véhicule ralentit. Puis s’arrête. Nous sommes arrivés. Une voiture qui refuse de prendre sa retraite Notre aventure s’achève. La première chose qui nous frappe, après cette courte traversée, est que le véhicule est encore prêt à repartir. Il n’a pas l’air de vouloir prendre sa retraite. Pourtant, il aurait des raisons de le faire. Son âge. Son état. Ses difficultés d’obtention de documents en règle. Les contraintes liées au transport des marchandises. Les risques liés à la surcharge. Mais il est toujours là. Et demain, probablement, il reprendra le même chemin. Bama-Bobo-Dioulasso/Bama. Encore et encore. Ce voyage laisse une impression particulière. D’un côté, il y a ces bus plus modernes, plus confortables, avec leurs sièges plus stables, leur climatisation et leurs équipements plus récents. De l’autre, il y a ces vieux « breaks » sans document règlementaire requis. Ils sont moins confortables. Ils sont marqués par le temps. Leur état technique soulève des interrogations. Mais ils ont un avantage, ils sont accessibles : 500 F CFA le trajet. Et ils ne font pas trainer les passagers. Une fois le véhicule rempli, il reprend la route. Cette Issa Ouédraogo, conducteur de Bama taxi : « C’est à travers ce travail que nous arrivons à prendre en charge nos familles ». \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-770x1024.jpg\" class=\"size-medium wp-image-167873\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-226x300.jpg\" alt=\"\" width=\"226\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-226x300.jpg 226w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-770x1024.jpg 770w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-768x1021.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-316x420.jpg 316w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-150x199.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-300x399.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1-696x925.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/BAMA_03-1.jpg 963w\" sizes=\"auto, (max-width: 226px) 100vw, 226px\" /> Issa Ouédraogo, conducteur de Bama taxi : « C’est à travers ce travail que nous arrivons à prendre en charge nos familles ». souplesse constitue l’un de leurs principaux atouts. Pour Issouf Coulibaly, le souhait est simple : arriver à destination. « J’ai emprunté ce taxi parce que je suis pressé de rejoindre ma destination. Son état ne m’inquiète pas, j’ai confiance que nous allons arriver à bon port », nous disait-il tout confiant. « J’ai choisi Bama-taxi parce que c’est le plus facile d’accès, moins chère et une fois démarré on arrive rapidement », renchérissait Ousséni Koutou. Des propos qui résument à eux seuls le rapport des usagers à ces véhicules. Ils voient leur état. Ils connaissent leurs limites. Mais ils montent quand-même. Le vieux véhicule repartira bientôt. D’autres passagers monteront. D’autres sacs seront chargés. D’autres marchandises prendront place. Le moteur sera remis en marche. Et la vieille Peugeot reprendra la route. Sur l’axe Bobo-Dioulasso/Bama, ces voitures semblent avoir trouvé une forme d’éternité. Elles appartiennent à une génération automobile révolue, mais continuent de participer pleinement à la vie quotidienne des populations. Elles transportent ceux qui vont au marché, ceux qui se rendent à Bama ou à la capitale économique du Burkina Faso pour leurs activités, ceux qui n’ont pas les moyens de choisir un transport plus confortable. Elles transportent aussi les rêves modestes de ceux qui les conduisent. Car derrière chaque voiture fatiguée se trouve un chauffeur qui doit gagner sa journée. Derrière chaque trajet à 500 F CFA, une famille attend peut-être la recette du soir. Et derrière chaque passager, une destination à atteindre. Le voyage à bord de ces véhicules d’un autre âge est plus qu’un déplacement entre Bobo-Dioulasso et Bama. C’est une plongée dans une réalité quotidienne où la nécessité économique maintient en circulation des voitures qui auraient, ailleurs, rejoint les cimetières automobiles, depuis longtemps. Le dernier regard que nous jetons sur la Peugeot est révélateur. La carrosserie est toujours aussi fatiguée. Les tôles portent les stigmates du temps. Le coffre tient grâce à son système de fortune. Mais le moteur tourne. Et tant qu’il tournera, le vieux véhicule continuera de prendre la route. Direction Bama. Ou retour vers Bobo-Dioulasso. Toujours sur cette route où les voitures d’un autre âge ont décidé de défier le temps. Kamélé FAYAMA Cache-cache avec les forces de sécurité Derrière le volant des « Bama-taxi », les conducteurs font face à de nombreuses difficultés. Le vieillissement des véhicules complique l’entretien et l’accès aux documents de la visite technique (CCVA). A cela s’ajoutent les problèmes liés aux documents réglementaires, qui les exposent lors des contrôles routiers. Certains sont contraints d’immobiliser leurs véhicules pour éviter les sanctions. Sans documents règlementaires pour ces vieux breaks, les conducteurs, aux dires de Lassina Barro, un chauffeur, jouent au cache-cache avec les forces de sécurité lorsqu’ils ont des rumeurs de contrôle routier. Le manque d’espace de stationnement à Bama, précise-t-il, constitue également une préoccupation. Les chauffeurs doivent parfois s’arrêter au bord des routes avant d’être délogés par les « autorités ». Malgré ces contraintes, ils continuent leur activité qui constitue leur principal moyen de subsistance et de prise en charge de leurs familles. K.F Des bus SOTRACO pour moderniser la mobilité Face au vieillissement des véhicules qui assurent le transport sur l’axe Bobo-Dioulasso/Bama, l’arrivée des bus de la SOTRACO constitue une alternative appréciable pour les usagers. L’acquisition en nombre de ces bus par l’Etat traduit la volonté des pouvoirs publics d’améliorer les conditions de mobilité des populations et de proposer un transport collectif plus moderne, plus confortable et mieux adapté aux exigences actuelles. Sur cet axe, ces bus offrent ainsi une solution aux passagers qui doivent encore composer avec les vieux « Bama-taxi », dont certains véhicules ont traversé plusieurs décennies. En renforçant l’offre de transport collectif, les bus SOTRACO contribuent à faciliter les déplacements quotidiens entre Bobo-Dioulasso et Bama, tout en accompagnant progressivement la modernisation du parc automobile affecté au transport des personnes. K.F",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Ouagadougou: contrôles musclés dans plusieurs quartiers",
+      "link": "https://www.wakatsera.com/ouagadougou-controles-muscles-dans-plusieurs-quartiers/",
+      "pubDate": "2026-08-20T12:39:27.000Z",
+      "description": "En collaboration avec l’Agence Burkinabè de Normalisation, de la Métrologie et de la Qualité (ABNORM), la Brigade Mobile de Contrôle Économique et de la Répression des Fraudes (BMCRF) a mené, le mercredi 19 août 2026, une opération de contrôles musclés dans plusieurs quartiers de Ouagadougou. Plusieurs quartiers de la ville de Ouagadougou ont reçu, le mercredi 19 août 2026, la visite des agents de la BMCRF et de l’ABNORM pour des opérations de contrôles dans les commerces. Cette sortie terrain visait à «traquer les commerçants véreux qui bafouent les mesures récemment annoncées par le ministère en charge du Commerce pour réguler les marchés et protéger les consommateurs», selon un écrit de la BMCRF sur son réseau social Facebook. Lors des contrôles, «100 tonnes de riz» ont été «découvertes dans une habitation transformée en lieu de stockage clandestin», déclare la BMCRF qui affirme que «de nombreux produits périmés» ont été retiré du marché. Les agents sur le terrain ont, aussi fait le constat de la «vente de riz, d’huile et de farine de blé au-delà des prix réglementaires» et du «reconditionnement frauduleux de riz dans des sacs douteux». «Face à ces dérives, plusieurs boutiques et magasins ont été scellés, les produits périmés saisis, et les commerçants fautifs soumis aux sanctions prévues par la loi, notamment des amendes et des travaux d’intérêt général», informe dans son écrit la BMCRF. C’est une opération qui s’inscrit, selon le coordonnateur général de la BMCRF, Sanibé Faho, dans le cadre de l’intensification des mesures annoncées par le ministre en charge du Commerce. Ces mesures visent à juguler l’inflation, réguler les marchés et lutter contre la fraude commerciale. Par Wakat Séra L’article Ouagadougou: contrôles musclés dans plusieurs quartiers est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1003,18 +965,47 @@
       "_desk": "A1"
     },
     {
-      "title": "Remi Zoéringré, chef de service photojournalisme des Editions Sidwaya : « La photographie donne de la crédibilité à l’information rendue »",
-      "link": "https://www.sidwaya.info/remi-zoeringre-chef-de-service-photojournalisme-des-editions-sidwaya-la-photographie-donne-de-la-credibilite-a-linformation-rendue/",
-      "pubDate": "2026-08-19T23:15:59.000Z",
-      "description": "La communauté internationale a célébré, le 19 août 2026, la journée internationale de la photographie. Dans cette interview, le chef de service photojournalisme des Editions Sidwaya nous explique l’importance de la photo dans l’univers médiatique, son rôle dans la valorisation de la destination Burkina et surtout sa contribution à la paix au Faso. Sidwaya (S.) : Le monde a célèbré hier la Journée internationale de la photographie. Que représente pour vous cette commémoration ? Remi Zoéringré (R.Z.) : A l’image de toute date commémorative, elle est un moment de célébration, de bilan et de perspectives et la date du 19 août instituée en 2010, rend hommage à l’art, à l’histoire et à la science de la photographie. En rappel, c’est en 1839 que le brevet de création de la photographie a été octroyé à Louis Daguerre. Cette date me rappelle le premier procédé de capture d’image permanente. Elle est pour moi, une occasion de rendre hommage aux devanciers et de prendre conscience de la situation de notre profession et d’envisager l’avenir avec bien entendu les collègues et tous les amoureux de la photographie. S. : Comment analysez-vous la contribution de la photo à l’information des lecteurs de Sidwaya ? R.Z. : La photographie a toujours été au service de l’information et de la communication. En ce sens, elle joue un rôle dans le traitement de l’information. Dans le temps, l’information était plutôt constituée de photographies et de légendes bien avant que le Carrefour africain et Sidwaya ne naissent. De nos jours, la photographie joue le rôle d’illustration et d’information dans les colonnes du quotidien et des autres titres des Editions Sidwaya à savoir le Carrefour africain et Sidwaya Sport. Pour ma part, la photographie donne de l’assurance de la crédibilité de l’information rendue par Sidwaya, qui le lui rend très bien, en ayant le plus grand nombre de photographes professionnels à son service. S. : A l’ère du tout numérique, quelle est la place de la photographie ? R.Z. : Naturellement, cette question est sur toutes les lèvres et reste pour nous une préoccupation à quelques détails près. Surtout que l’IA vient réduire le temps de traitement et minimiser la frontière entre le réel et le virtuel. Il est essentiel de voir l’IA non pas comme une menace mais une chance d’évoluer. Elle permet d’explorer un autre monde et pour les photographies commerciales, l’IA offre une belle occasion de diversifier les productions pour les clients. Cependant, la photographie de presse a besoin de crédibilité, tandis que la photographie d’art, elle a besoin d’émotions. En somme, la sensibilité artistique et le savoir-faire du photographe professionnel, telles que la narration, l’émotion et l’interprétation artistique, ne peuvent pas être imités par une machine. S. : Quels sont les défis pour les photoreporters en général et ceux de Sidwaya dans le contexte de reconquête du territoire ? R.Z. : Le défi pour chacun de nous c’est de contribuer au retour de la paix. Suivant la déontologie de la profession et la ligne éditoriale de Sidwaya, le leitmotiv c’est de communiquer à travers les images pour une assurance dans ce contexte que nous vivons. A travers la rubrique «L’image de la cité», nous visons des faits de société à bannir et nous contribuons à la promotion du patrimoine culturel du Burkina. S. : De plus en plus les autorités prônent la destination Burkina et la valorisation des sites touristiques du pays. Quelle peut-être la contribution des photographes à cette invite ? R.Z. : Lorsque vous suivez les publicités sur les smartphones et autres portables androïd la photographie est de mise, c’est-à-dire que la qualité de l’image que peut rendre l’appareil est plus mise en vigueur. La réponse, elle est simple: la contribution incompressible de l’image dans la promotion d’un outil, d’une personne voire d’une Nation. D’ailleurs, ne dit-on pas qu’une photographie vaut mille mots. Nous saluons à cet effet, le concours organisé chaque année par Faso Tourisme, dont l’objectif est de valoriser la contribution de la photographie dans la promotion de la destination Burkina. Reconnue comme un art visuel à part entière, la photographie reste le miroir de la société et les photographes qui captent et diffusent les émotions et les sites sont un maillon essentiel dans la promotion du patrimoine culturel. S. : Quelle anecdote vous a le plus marqué lors de vos reportages ? R.Z. : Nous étions dans un hôtel de la place pour une cérémonie dont la photo de famille devait se faire au bord de la piscine. A force de vouloir faire une bonne composition, nous avons dû repêcher un collègue dans la piscine. Mais tenez-vous bien que l’appareil seul est resté dans sa main hors de l’eau. S. : Quel message avez-vous pour tous les professionnels de l’image du pays ? R.Z. : Bonne fête à toutes et à tous ! C’est toujours une occasion de partage, de connexion et de création. Nous avons le devoir de montrer un Burkina vivant, résilient à travers toutes ses couches sociales et en ce sens, il n’y a jamais une image de trop. A vos objectifs et clic : faite une photo et une histoire s’offre à vous ! Interview réalisée par Nadège YE",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Répression de la fraude commerciale à Ouagadougou : Plusieurs commerces mis sous scellés",
+      "link": "https://burkina24.com/2026/08/20/repression-de-la-fraude-commerciale-a-ouagadougou-plusieurs-commerces-mis-sous-scelles/",
+      "pubDate": "2026-08-20T11:11:25.000Z",
+      "description": "Une équipe mixte de contrôle, composée de la Brigade mobile de contrôle économique et de la répression des fraudes (BMCRF) et de l’Agence burkinabè de normalisation, de la métrologie et de la qualité (ABNORM), accompagnées de leur partenaire, la Brigade Laabal, a effectué une sortie de terrain le mercredi 19 août 2026 dans plusieurs commerces … The post Répression de la fraude commerciale à Ouagadougou : Plusieurs commerces mis sous scellés appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Ouessa : Plus de 43 tonnes d’intrants agricoles de contrebande saisies par la Gendarmerie",
+      "link": "https://burkina24.com/2026/08/20/ouessa-plus-de-43-tonnes-dintrants-agricoles-de-contrebande-saisies-par-la-gendarmerie/",
+      "pubDate": "2026-08-20T08:56:02.000Z",
+      "description": "La lutte contre la contrebande des intrants agricoles se poursuit dans les zones frontalières du Burkina Faso. À Ouessa, dans la province du Ioba, la Brigade territoriale de gendarmerie a réalisé deux importantes saisies au cours des mois de mai et juin 2026, dans le cadre d’une collaboration avec la Direction générale des productions végétales … The post Ouessa : Plus de 43 tonnes d’intrants agricoles de contrebande saisies par la Gendarmerie appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
         "military"
       ],
       "_majors": [],
@@ -1027,7 +1018,38 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 115,
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Forum Médias Chine – Afrique : Le Burkina Faso mise sur l’innovation des contenus pour rapprocher les peuples",
+      "link": "https://burkina24.com/2026/08/20/forum-medias-chine-afrique-le-burkina-faso-mise-sur-linnovation-des-contenus-pour-rapprocher-les-peuples/",
+      "pubDate": "2026-08-20T12:54:10.000Z",
+      "description": "Le Burkina Faso est au rendez-vous du 7e Forum sur la coopération des médias sino-africains, ouvert ce jeudi 20 août 2026 à Pékin, en République populaire de Chine. Le pays y est représenté par une forte délégation de journalistes, de communicants et de responsables de médias publics et privés, conduite par le ministre de la … The post Forum Médias Chine – Afrique : Le Burkina Faso mise sur l’innovation des contenus pour rapprocher les peuples appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 103,
       "_zone": 1,
       "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -1035,10 +1057,10 @@
       "_desk": "A1"
     },
     {
-      "title": "Clôture de la IIe édition du camp vacances Faso Mêbo : près de 1 500 campeurs initiés aux valeurs patriotiques et civiques",
-      "link": "https://www.sidwaya.info/cloture-de-la-iie-edition-du-camp-vacances-faso-mebo-pres-de-1-500-campeurs-inities-aux-valeurs-patriotiques-et-civiques/",
-      "pubDate": "2026-08-19T22:58:19.000Z",
-      "description": "La IIe édition du camp vacances Faso Mêbo de Ouagadougou a refermé ses portes, mercredi 19 août 2026, à Ouagadougou. La 3e région militaire, à l’instar des autres régions, a accueilli, du 10 au 19 août 2026, la IIe édition du camp vacances Faso Mêbo au profit des élèves venus de différentes communes de la région du Kadiogo. La cérémonie de clôture a été présidée par le commandant de la 3e région militaire, le lieutenant-colonel Armand Michel Ouédraogo, par ailleurs, parrain régional, représentant celui national, mercredi 19 août 2026, à Ouagadougou. C’était en présence de la ministre des Sports, de la Jeunesse et de l’Emploi, Annick Pikbougoum, du ministre secrétaire général de la Présidence du Faso, Zakaria Soré, du gouverneur de la région du Kadiogo, Abdoulaye Bassinga, du Directeur général (DG) de l’Agence Faso Mêbo, le commandant Zoodnoma Ahmed Sakandé, des invités et des parents des campeurs. Après avoir chanté l’hymne national lors de la montée des couleurs, les campeurs ont présenté leur savoir-faire en technique d’intervention « opération rapprochée », en pièce théâtrale et en ballet artistique sous la pluie. Ils ont reçu le nom de baptême « Promotion Toyiro » qui veut dire « l’avenir vous appartient, en langue Bwamu ». Le DG de l’Agence Faso Mêbo, le commandant Zoodnoma Ahmed Sakandé : « chers parents, Faso Mêbo a semé, les encadreurs ont arrosé et c’est dans vos familles que cette semence devra continuer à grandir ». \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-1024x988.jpeg\" class=\"size-medium wp-image-167856\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-300x289.jpeg\" alt=\"\" width=\"300\" height=\"289\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-300x289.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-1024x988.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-768x741.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-435x420.jpeg 435w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-150x145.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-696x672.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6-1068x1030.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/08/4-6.jpeg 1080w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Le DG de l’Agence Faso Mêbo, le commandant Zoodnoma Ahmed Sakandé : « chers parents, Faso Mêbo a semé, les encadreurs ont arrosé et c’est dans vos familles que cette semence devra continuer à grandir ». Pour le lieutenant-colonel Armand Michel Ouédraogo, ce nom de promotion est unique et commun à toutes les promotions des six régions militaires du Burkina Faso. Le représentant des campeurs, Guidado Habdine Diallo, a fait le bilan de leur apprentissage au cours des 10 jours de camp. Il a confié avoir appris l’instruction militaire, le parcours d’obstacles, l’éducation civique, le vivre-ensemble et la solidarité entre les peuples. « Nous avons compris que la discipline n’est pas une punition, mais une école de caractère et de force mentale », a-t-il dit. Guidado Habdine Diallo a confié avoir pris connaissance du drapeau, symbole du sang versé par les aînés pour la liberté. « En apprenant notre vraie histoire, celle qu’on nous a toujours cachée, nous avons compris qu’un peuple qui ne décide pas pour lui-même n’est pas encore libre », a-t-il avoué. Il a ajouté avoir appris aussi à confectionner et poser des pavés, planter des arbres et embellir la ville. Une formation commune dans les six régions militaires Le représentant du parrain national, le lieutenant-colonel Armand Michel Ouédraogo, a exhorté les campeurs à être des modèles dans leur entourage. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-920x1024.jpeg\" class=\"size-medium wp-image-167855\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-269x300.jpeg\" alt=\"\" width=\"269\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-269x300.jpeg 269w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-920x1024.jpeg 920w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-768x855.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-377x420.jpeg 377w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-150x167.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-300x334.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12-696x775.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/08/3-12.jpeg 970w\" sizes=\"auto, (max-width: 269px) 100vw, 269px\" /> Le représentant du parrain national, le lieutenant-colonel Armand Michel Ouédraogo, a exhorté les campeurs à être des modèles dans leur entourage. Le représentant des campeurs a mentionné que lui et ses camarades ont pris l’engagement d’être disciplinés et solidaires à l’école, à la maison, comme dans la vie en société avec la même rigueur apprise sur le « parcours du combattant ». Le DG de l’Agence Faso Mêbo a révélé que cette IIe édition revêt une dimension historique particulière. « L’ordre a été donné par le Président du Faso, le capitaine Ibrahim Traoré, pour que le camp vacances Faso Mêbo se déroule au niveau des six régions militaires », a-t-il dit. Le commandant Zoodnoma Ahmed Sakandé a expliqué que les enfants des six régions militaires ont vécu la même expérience, reçu les mêmes enseignements fondamentaux et partagé les mêmes idéaux. Il a demandé aux campeurs de porter avec fierté leur nom de promotion et d’en être des exemples parfaits. En remerciant les parents pour avoir accepté confier leurs enfants au camp vacances Faso Mêbo, il les a invités à respecter et à prendre en compte le patriotisme de leur enfant au quotidien. Après avoir conseillé ses filleuls, le lieutenant-colonel Armand Michel Ouédraogo, a mis en lumière la tenue du camp Faso Mêbo dans l’histoire de la Révolution progressiste populaire (RPP). Le représentant des parents des campeurs, Oumarou Guira, a salué l’Agence Faso Mêbo pour l’organisation du camp en faveur des enfants. « Nous formulons le vœu que cette belle initiative se poursuive et se renforce au fil des années au profit de nombreux enfants », a-t-il souhaité. Gbetcheni Constantin Bertrand KAMBIRE",
+      "title": "Football féminin : l’AS Police renforce l’autonomisation de 110 jeunes filles",
+      "link": "https://www.sidwaya.info/football-feminin-las-police-renforce-lautonomisation-de-110-jeunes-filles/",
+      "pubDate": "2026-08-20T12:38:14.000Z",
+      "description": "L’AS Police a lancé, jeudi 20 août 2026 à Ouagadougou, un atelier de formation consacré à l’« Autonomisation de la jeune fille à travers le football ». Pendant 48 heures, 110 jeunes filles issues de différents clubs sont outillées sur des questions liées à la santé, à l’éducation, à l’hygiène, à la discipline et à la prévention des violences basées sur le genre. Faire du football un outil d’éducation et d’autonomisation au-delà de la performance sportive. C’est l’objectif de cette initiative de l’AS Police, qui entend accompagner les jeunes joueuses dans leur parcours sportif, scolaire et social. A l’ouverture des travaux, la responsable de l’équipe féminine de l’AS Police, Isabelle Ouangraoua née Sawadogo, a souligné que l’autonomisation ne se limite pas à être une bonne footballeuse. Elle passe également, selon elle, par la connaissance de soi, la discipline, le sens des responsabilités et la capacité à faire de bons choix. La marraine de l’activité, la commissaire divisionnaire de Police Natacha Sawadogo née Zoungrana, a présenté le football comme une « véritable école de vie ». Elle a invité les jeunes filles à croire en leurs capacités, à poursuivre leurs études et à oser prendre des responsabilités. La patronne de la cérémonie, l’inspectrice générale de Police Marie Denise Drabo née Sebgo, a, quant à elle, insisté sur la nécessité de concilier pratique sportive, études, santé, vie familiale et vie sociale. Elle a également mis en avant les enjeux liés à la santé sexuelle et reproductive et à l’hygiène menstruelle. Des échanges avec des personnes-ressources et un mentorat sont prévus durant les deux jours de formation afin de permettre aux participantes de bénéficier de conseils et d’expériences utiles à leur parcours. Pengdwendé Achille OUEDRAOGO",
       "_source": "Sidwaya",
       "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
@@ -1046,9 +1068,7 @@
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1060,27 +1080,26 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 115,
+      "_score": 103,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": null,
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
+      "_relevance": ".",
       "_desk": "A1"
     },
     {
-      "title": "Gourma/Journée mondiale de l’aide humanitaire : Les acteurs humanitaires appellent à renforcer l’accompagnement des populations retournées",
-      "link": "https://www.aib.media/gourma-journee-mondiale-de-laide-humanitaire-les-acteurs-humanitaires-appellent-a-renforcer-laccompagnement-des-populations-retournees/",
-      "pubDate": "2026-08-19T19:21:47.000Z",
-      "description": "BURKINA-GOURMA-JOURNEE-MONDIALE-AIDE-HUMANITAIRE Gourma/Journée mondiale de l’aide humanitaire : Les acteurs humanitaires appellent à renforcer l’accompagnement des populations retournées Fada N’Gourma, 19 août 2026 (AIB)-La région du Goulmou a commémoré, le mercredi 19 août 2026 à Fada N’Gourma, la Journée mondiale de l’aide humanitaire sous le thème « Agir pour l’humanité ». Les acteurs humanitaires ont appelé à renforcer l’accompagnement des populations retournées. La cérémonie a réuni les autorités administratives, militaires, religieuses et coutumières, les acteurs humanitaires ainsi que les représentants des populations bénéficiaires. La commémoration de la Journée mondiale de l’aide humanitaire a été marquée par plusieurs activités, notamment des panels consacrés à l’aide humanitaire, des expositions sur les interventions des différents acteurs, des prestations de santé au profit des populations et une opération de collecte de sang. Au nom des hôtes, Tarladia Thiombiano a exprimé sa gratitude à l’Etat burkinabè et à l’ensemble des partenaires humanitaires intervenant dans les zones affectées par la crise sécuritaire depuis la recrudescence du terrorisme. « Leurs interventions ont permis à beaucoup de personnes en détresse de trouver le sourire », a-t-il souligné. M. Thiombiano a toutefois invité les partenaires humanitaires à multiplier leurs interventions en faveur des Personnes déplacées internes (PDI) ayant regagné leurs villages respectifs, afin de faciliter leur insertion et leur permettre de reconstruire durablement leurs moyens de subsistance. « Aujourd’hui, je voudrais demander à ces partenaires de multiplier leurs interventions envers ces personnes déplacées internes qui ont regagné leurs villages respectifs pour faciliter leur insertion », a-t-il déclaré. S’adressant à l’Etat burkinabè, le représentant des hôtes a également plaidé pour la libération des principaux axes routiers reliant Fada N’Gourma à Bogandé, Fada N’Gourma à Kantchari et Fada N’Gourma à Pama. Selon lui, la sécurisation de ces axes permettra à de nombreuses personnes déplacées internes de rejoindre plus facilement leurs localités d’origine. « C’est à ce prix que beaucoup d’entre ces personnes déplacées internes pourront rejoindre aisément leurs villages respectifs », a-t-il laissé entendre. Pour sa part, le représentant d’OCHA et porte-parole des partenaires humanitaires, Lazare Koussougo, a salué l’engagement des acteurs de première ligne, notamment les agents de santé, les enseignants, les travailleurs sociaux et les volontaires communautaires. Il a également rendu hommage aux ONG locales, nationales et internationales et aux mouvements de la Croix-Rouge pour leur contribution à la réponse humanitaire. Une minute de silence a été observée à la mémoire des victimes du terrorisme, des forces de défense et de sécurité ainsi que des travailleurs humanitaires tombés dans l’exercice de leur mission. Livrant le message officiel de la ministre chargée de la Famille et de la Solidarité, le Gouverneur de la région du Goulmou, Ram Joseph Kafando, a rappelé la nécessité de faire évoluer l’action humanitaire vers davantage d’autonomisation et de relèvement économique. Il a notamment cité les localités de Nadiagou et de Pama, où des familles retournées dans leurs villages ont repris leurs activités agricoles. Les différents panels organisés au cours de la commémoration ont permis aux participants d’échanger sur les enjeux de l’aide humanitaire, les défis liés au retour des populations déplacées et les perspectives d’une réponse davantage axée sur la résilience. Les expositions ont, quant à elles, permis aux populations de découvrir les actions menées par les organisations humanitaires et leurs partenaires dans la région. En marge des échanges, des équipes sanitaires ont offert des prestations de santé aux populations, tandis qu’une opération de collecte de sang a été organisée afin de contribuer au renforcement des réserves de produits sanguins. La cérémonie s’est achevée par une séance de plantation d’arbres, symbole de l’engagement des participants en faveur de la résilience, de la reconstruction, de la paix et de la préservation de l’environnement. Agence d’information du Burkina HKO/HB/OO",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Médias : Le Burkina Faso plaide pour des contenus innovants au service du rapprochement sino-africain",
+      "link": "https://lefaso.net/spip.php?article148714",
+      "pubDate": "2026-08-20T12:34:53.000Z",
+      "description": "Le Burkina Faso prend part à la 7e édition du Forum sur la coopération des médias sino-africains, ouverte officiellement ce jeudi 20 août 2026 à Beijing, en Chine. Placée sous le thème « Partager de nouvelles opportunités de développement, bâtir conjointement un nouvel avenir audiovisuel », la rencontre réunit des responsables gouvernementaux, des professionnels des médias et des acteurs de l'audiovisuel chinois et africains. À la tribune, le ministre burkinabè en charge de la Communication, Pengdwendé Gilbert Ouédraogo, a appelé à faire des contenus médiatiques un véritable pont entre les deux espaces. De nouveaux contenus pour rapprocher davantage les peuples chinois et africains. C'est l'un des principaux enjeux de la 7e édition du Forum sur la coopération des médias sino-africains qui se tient du 19 au 21 août 2026 à Beijing. Dans un contexte marqué par l'accélération du numérique et l'essor de l'intelligence artificielle (IA), les participants réfléchissent aux nouvelles perspectives de collaboration dans les secteurs des médias, de l'audiovisuel et des industries culturelles et créatives. Le Burkina Faso, représenté par une importante délégation conduite par le ministre en charge de la Communication, Pengdwendé Gilbert Ouédraogo, entend saisir cette tribune pour renforcer ses relations avec la Chine, notamment dans le domaine médiatique. « Faire de nos contenus un véritable pont entre la Chine et l'Afrique » Dans son intervention, le ministre burkinabè a placé la question de l'innovation dans les contenus au cœur de son propos. Pour lui, les transformations numériques ont profondément réduit les distances entre les peuples. « Une histoire racontée à Ouagadougou peut désormais être découverte à Beijing en quelques secondes. Une musique africaine peut toucher un public chinois, aussi bien qu'une création chinoise peut inspirer un jeune africain », a-t-il relevé. Cette nouvelle réalité constitue, selon le ministre, à la fois une opportunité et une responsabilité pour les médias. Il estime que les contenus produits doivent contribuer à une meilleure connaissance réciproque des peuples, de leurs cultures, de leurs valeurs et de leurs aspirations. Dans cette perspective, il a appelé à dépasser une coopération limitée aux échanges économiques, aux infrastructures ou aux relations institutionnelles. La coopération sino-africaine doit également, selon lui, s'appuyer sur une dynamique culturelle plus forte, fondée sur le partage d'expériences, la création et le respect des différences. Le ministre Ouédraogo s'est félicité des résultats déjà enregistrés dans la coopération entre le Burkina Faso et la Chine dans le domaine des médias. Il a notamment cité les formations et les immersions de professionnels burkinabè en Chine. « Depuis plusieurs années, le nombre de professionnels effectue régulièrement des immersions ici et en revient profondément enrichi », a-t-il souligné, rappelant qu'une vingtaine de journalistes et de communicants burkinabè séjournent actuellement en Chine dans le cadre d'une session de renforcement de capacités. Au-delà de la formation, Ouagadougou souhaite désormais approfondir les échanges de technologies et de programmes audiovisuels, mais également développer des projets de coproduction avec des médias chinois. Pour le ministre, l'objectif est de permettre aux deux parties de « co-créer » des contenus afin que les réalités culturelles chinoises soient mieux connues au Burkina Faso et que la culture burkinabè puisse également trouver une plus grande visibilité en Chine. Produire et raconter les réalités africaines Dans son discours, Pengdwendé Gilbert Ouédraogo a insisté sur la nécessité pour les pays africains de ne plus être uniquement des consommateurs de contenus produits ailleurs. Il a encouragé la réalisation de documentaires, films, séries, podcasts, créations musicales et productions numériques consacrés aux réalités africaines et à la diversité des identités du continent. Il a également plaidé pour une meilleure prise en compte des langues nationales africaines et du mandarin dans les productions audiovisuelles. Les technologies de traduction, de doublage et de sous-titrage pourraient, selon lui, faciliter la circulation des œuvres entre les différents espaces linguistiques. Le Burkina Faso dispose, à ses yeux, de nombreux atouts pour prendre part à cette dynamique : une jeunesse créative, un patrimoine culturel riche et des rendez-vous culturels de portée internationale, parmi lesquels la Semaine nationale de la culture et le Festival panafricain du cinéma et de la télévision de Ouagadougou (FESPACO), dont la 30e édition est annoncée du 20 au 27 mars 2027. Le développement des coproductions sino-africaines, des formations conjointes, des résidences artistiques, des programmes universitaires, des incubateurs et des laboratoires d'innovation pourrait permettre de faire émerger une nouvelle génération de créateurs capables de conquérir de nouveaux publics. L'intelligence artificielle, une opportunité à encadrer L'intelligence artificielle occupe également une place importante dans les réflexions du forum. Le ministre burkinabè reconnaît les possibilités offertes par cette technologie, notamment dans la traduction, le doublage, la production et la diffusion des contenus. Mais il appelle à la vigilance afin que l'innovation technologique ne conduise pas à une uniformisation culturelle. « L'innovation ne doit pas uniformiser nos cultures. Elle doit permettre à chacune d'elles de mieux faire entendre sa voix », a-t-il insisté. Pour le ministre, les technologies doivent donc rester au service de la diversité culturelle et contribuer à déconstruire les préjugés et les représentations réductrices des peuples. En marge de son intervention, le ministre a également expliqué les attentes particulières de Ouagadougou à l'occasion de ce forum. Il estime que la rencontre constitue une tribune pour faire connaître les choix opérés par le Burkina Faso et sa vision de la communication dans le contexte actuel.« Il était donc important pour nous d'être à cette tribune pour porter la voix du Burkina Faso, pour expliquer la vision de la révolution progressiste populaire portée par le camarade Capitaine Ibrahim Traoré », a-t-il déclaré. Le ministre voit également dans le partenariat avec la Chine, une occasion de consolider les échanges entre les deux pays. Il a notamment évoqué les discussions engagées avec certains médias chinois en vue d'établir des relations de coproduction et d'échange de contenus. Pour le Burkina Faso, cette coopération doit reposer sur une logique de partenariat « gagnant-gagnant », avec pour finalité de faire bénéficier les populations des retombées des échanges. Pour le ministre burkinabè, la jeunesse doit occuper une place centrale dans cette coopération. Connectée, créative et ouverte aux échanges interculturels, elle représente un levier majeur pour le développement des industries culturelles et créatives. Il préconise ainsi la multiplication des programmes d'échanges, des ateliers de création, des concours, des festivals numériques et des formations conjointes dans les métiers du cinéma, de l'audiovisuel et du numérique. Au terme de son intervention, Pengdwendé Gilbert Ouédraogo a appelé à transformer l'innovation des contenus en un instrument de rapprochement entre les peuples. « L'innovation des contenus est finalement une innovation du dialogue », a-t-il résumé, invitant les acteurs chinois et africains à faire de chaque œuvre et de chaque histoire racontée une occasion de renforcer la compréhension mutuelle, la diversité culturelle et la prospérité commune. Romuald Dofini depuis Beijing en Chine, Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
+      "_sourceVerified": true,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
         "humanitarian",
         "political"
       ],
@@ -1094,94 +1113,60 @@
         "rating": "C1"
       },
       "_rating": "C1",
-      "_score": 115,
+      "_score": 103,
       "_zone": 1,
-      "_theme": "H",
+      "_theme": "T",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "France/Promulgation de la loi sur l’aide à mourir : « Macron aura probablement sa première euthanasie avant la fin de son mandat », ironise un avocat",
-      "link": "https://www.aib.media/france-promulgation-de-la-loi-sur-laide-a-mourir-macron-aura-probablement-sa-premiere-euthanasie-avant-la-fin-de-son-mandat-ironise-un-avocat/",
-      "pubDate": "2026-08-19T18:35:09.000Z",
-      "description": "FRANCE-PROMULGATION-LOI-AIDE-MOURRIR France/Promulgation de la loi sur l’aide à mourir : « Macron aura probablement sa première euthanasie avant la fin de son mandat », ironise un avocat Ouagadougou, 19 août 2026 (AIB) — « Promulgation de la loi « aide à mourir ». Normal. Emmanuel Macron aura probablement sa première euthanasie avant la fin de son mandat. De quoi parachever l’ambiance crépusculaire ordinaire d’une fin de règne », ironise l’avocat et chroniqueur média, Erwan Le Morhedec sur son compte X, après la promulgation, mercredi 19 août 2026, de la loi créant un droit à « l’aide à mourir » en France par le président Macron. Malgré la controverse et trois rejets successifs du texte par le Sénat, l’Assemblée nationale a définitivement adopté la loi le 15 juillet 2026. Le Conseil constitutionnel l’a ensuite validée, sous plusieurs réserves d’interprétation, avant sa promulgation ce mercredi par Emmanuel Macron. Le nouveau dispositif permet, sous certaines conditions, à une personne atteinte d’une affection grave et incurable, dont le pronostic vital est engagé, d’obtenir une aide à mourir. Selon les circonstances, la substance létale peut être administrée par le patient lui-même ou, lorsqu’il n’est pas physiquement en mesure de le faire, par un médecin ou un infirmier. Pour les opposants au texte, ces dispositions constituent une rupture majeure dans l’approche française de la fin de vie et font peser un risque particulier sur les personnes vulnérables. L’ancien président du Comité consultatif national d’éthique (CCNE), Didier Sicard, s’est montré particulièrement critique. Dans un entretien, il estime que la loi « bureaucratise l’euthanasie pour la rendre acceptable ». Il redoute notamment que des personnes âgées, isolées ou dépendantes puissent être conduites à considérer la mort comme une solution à leur souffrance ou à leur sentiment d’être une charge pour leurs proches. Même inquiétude chez Claire Fourcade, médecin en soins palliatifs, pour qui « donner la mort ne peut pas être un soin ». Elle défend le renforcement des soins palliatifs et met en garde contre une société qui pourrait progressivement considérer l’aide à mourir comme une réponse à certaines situations de vulnérabilité. Quelques jours avant le vote définitif, huit personnalités du monde de la santé avaient d’ailleurs appelé les députés à rejeter un texte jugé « imprécis » et « imprudent », en invoquant notamment la protection des « personnes les plus fragiles ». La Fondation Jérôme Lejeune s’est également déclarée « indignée », tandis que l’association Les Éligibles et leurs Aidants dénonce le « danger total » que représente, selon elle, la loi pour les personnes vulnérables. La contestation gagne désormais le terrain politique. Pascale Morinière, présidente de la Confédération nationale des Associations familiales catholiques, appelle déjà à faire de l’abrogation du texte un enjeu de la prochaine présidentielle. « Prochaine étape : enjoindre les candidats à l’élection présidentielle d’abroger cette loi euthanasie et suicide assisté ». La promulgation ne met donc pas fin à la bataille sur la fin de vie. Elle ouvre une nouvelle phase, dans laquelle les opposants entendent surveiller l’application du dispositif et maintenir la pression sur les futurs candidats à l’Élysée. Pour ses défenseurs, la loi consacre au contraire une nouvelle liberté individuelle pour des patients confrontés à des souffrances jugées insupportables. Selon ses adversaires, elle franchit une ligne rouge en faisant de la mort provoquée une possibilité encadrée par la loi. Le débat français sur la fin de vie est ainsi loin d’être clos. Agence d'information du Burkina",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 9,
-      "_theme": "P",
-      "_zoneShort": "9. Europe occidentale",
       "_relevance": "L",
-      "_desk": "A6"
+      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Lubero : l’effondrement du pont 105 paralyse le trafic entre Manguredjipa et Bandulu",
-      "link": "https://actualite.cd/2026/08/20/lubero-leffondrement-du-pont-105-paralyse-le-trafic-entre-manguredjipa-et-bandulu",
-      "source": "ActualitéCD (RDC)",
-      "date": "2026-08-20T07:13:59.000Z",
-      "rating": "F2",
+      "title": "Turkey, Egypt, Qatar condemn Israeli attacks on Gaza, call on Israel to comply with ceasefire obligations",
+      "link": "https://www.al-monitor.com/originals/2026/08/turkey-egypt-qatar-condemn-israeli-attacks-gaza-call-israel-comply-ceasefire",
+      "source": "Al-Monitor",
+      "date": "2026-08-20T12:46:34.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Türkiye, Egypt, Qatar condemn Israeli attacks in Gaza, urge compliance with ceasefire",
+      "link": "https://www.aa.com.tr/en/middle-east/turkiye-egypt-qatar-condemn-israeli-attacks-in-gaza-urge-compliance-with-ceasefire/4032923",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-08-20T12:37:36.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Colombie : trois cents morts et 9,5 milliards de dégâts après le séisme",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260820-colombie-trois-cents-morts-et-9-5-milliards-de-d%C3%A9g%C3%A2ts-apr%C3%A8s-le-s%C3%A9isme",
+      "source": "France 24",
+      "date": "2026-08-20T10:26:40.000Z",
+      "rating": "C2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
       "majors": [
         {
-          "type": "rupture",
-          "keyword": "effondrement"
-        }
-      ]
-    },
-    {
-      "title": "‘Tsunami’ of emigration reshapes Israel’s future, experts warn",
-      "link": "https://www.aljazeera.com/news/2026/8/20/tsunami-of-emigration-reshapes-israels-future-experts-warn?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "date": "2026-08-20T00:26:59.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
           "type": "crise",
-          "keyword": "tsunami"
-        }
-      ]
-    },
-    {
-      "title": "Centrafrique : au moins 100 morts après l'effondrement d'une mine d'or dans l'ouest du pays",
-      "link": "https://www.france24.com/fr/afrique/20260819-centrafrique-au-moins-100-morts-apr%C3%A8s-l-effondrement-d-une-mine-d-or-dans-l-ouest-du-pays",
-      "source": "France 24",
-      "date": "2026-08-19T19:28:56.000Z",
-      "rating": "C6",
-      "evidence": "Source unique",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "effondrement"
+          "keyword": "séisme"
         }
       ]
     }
@@ -1189,43 +1174,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      195
-    ],
-    [
-      "autre",
-      118
+      198
     ],
     [
       "occident_fr",
-      117
+      127
+    ],
+    [
+      "autre",
+      116
     ],
     [
       "occident_us",
-      108
-    ],
-    [
-      "golfe_mo",
-      61
-    ],
-    [
-      "russie",
-      51
+      112
     ],
     [
       "turquie",
-      49
+      60
     ],
     [
-      "bf_local",
-      46
+      "golfe_mo",
+      57
+    ],
+    [
+      "russie",
+      53
     ],
     [
       "chine",
-      33
+      31
+    ],
+    [
+      "bf_local",
+      23
     ],
     [
       "sahel",
-      22
+      23
     ]
   ],
   "desks": [
@@ -1233,50 +1218,50 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 102,
+      "count": 78,
       "top": [
         {
-          "title": "Ouagadougou : 100 tonnes de riz saisies dans une habitation clandestine, la BMCRF frappe fort",
-          "link": "https://netafrique.net/ouagadougou-100-tonnes-de-riz-saisies-dans-une-habitation-clandestine-la-bmcrf-frappe-fort/",
-          "source": "Net Afrique (BF)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Bénin: Le président français Emmanuel Macron sera en visite officielle à Cotonou fin octobre",
-          "link": "https://netafrique.net/benin-le-president-francais-emmanuel-macron-sera-en-visite-officielle-a-cotonou-fin-octobre/",
-          "source": "Net Afrique (BF)",
+          "title": "AES: La conquête de la souveraineté au cœur d’une conférence animée par Bassolma Bazié à Niamey",
+          "link": "https://www.aib.media/aes-la-conquete-de-la-souverainete-au-coeur-dune-conference-animee-par-bassolma-bazie-a-niamey/",
+          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
           "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Ségou : le nouveau gouverneur prend fonction",
+          "link": "https://www.studiotamani.org/206680-segou-le-nouveau-gouverneur-prend-fonction",
+          "source": "Studio Tamani (Mali)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "J",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Contrebande aux frontières : Près de 44 tonnes d’intrants agricoles frauduleux saisies par la Gendarmerie nationale à Ouessa",
-          "link": "https://netafrique.net/contrebande-aux-frontieres-pres-de-44-tonnes-dintrants-agricoles-frauduleux-saisies-par-la-gendarmerie-nationale-a-ouessa/",
-          "source": "Net Afrique (BF)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "Bama-Taxi : Carnet de voyage à bord de ces véhicules qui défient le temps",
-          "link": "https://www.sidwaya.info/bama-taxi-carnet-de-voyage-a-bord-de-ces-vehicules-qui-defient-le-temps/",
-          "source": "Sidwaya",
+          "title": "Ouagadougou: contrôles musclés dans plusieurs quartiers",
+          "link": "https://www.wakatsera.com/ouagadougou-controles-muscles-dans-plusieurs-quartiers/",
+          "source": "Wakat Séra",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "Remi Zoéringré, chef de service photojournalisme des Editions Sidwaya : « La photographie donne de la crédibilité à l’information rendue »",
-          "link": "https://www.sidwaya.info/remi-zoeringre-chef-de-service-photojournalisme-des-editions-sidwaya-la-photographie-donne-de-la-credibilite-a-linformation-rendue/",
-          "source": "Sidwaya",
+          "title": "Répression de la fraude commerciale à Ouagadougou : Plusieurs commerces mis sous scellés",
+          "link": "https://burkina24.com/2026/08/20/repression-de-la-fraude-commerciale-a-ouagadougou-plusieurs-commerces-mis-sous-scelles/",
+          "source": "Burkina24",
           "zone": "1. Sahel & AO franco.",
-          "theme": "D",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Ouessa : Plus de 43 tonnes d’intrants agricoles de contrebande saisies par la Gendarmerie",
+          "link": "https://burkina24.com/2026/08/20/ouessa-plus-de-43-tonnes-dintrants-agricoles-de-contrebande-saisies-par-la-gendarmerie/",
+          "source": "Burkina24",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
           "relevance": "A",
           "rating": "C2"
         }
@@ -1286,29 +1271,29 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 68,
+      "count": 59,
       "top": [
         {
-          "title": "GIPA, GUTA outline roadmap to protect informal retail space for Ghanaians",
-          "link": "https://www.myjoyonline.com/gipa-guta-outline-roadmap-to-protect-informal-retail-space-for-ghanaians/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Security, others consumed 70% of Borno’s budget in 7 years — Zulum",
+          "link": "https://www.vanguardngr.com/2026/08/security-others-consumed-70-of-bornos-budget-in-7-years-zulum/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "D",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "GIPA, GUTA agree measures to protect Ghana’s retail sector",
-          "link": "https://www.myjoyonline.com/gipa-guta-agree-measures-to-protect-ghanas-retail-sector/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Illicit Arms: Ribadu backs fresh national survey, says 2016 data outdated",
+          "link": "https://www.vanguardngr.com/2026/08/illicit-arms-ribadu-backs-fresh-national-survey-says-2016-data-outdated/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "D",
-          "relevance": "A",
+          "theme": "N",
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Ndume seeks rescue of abducted Mussa, Lassa schoolchildren, others",
-          "link": "https://www.vanguardngr.com/2026/08/ndume-seeks-rescue-of-abducted-mussa-lassa-schoolchildren-others/",
+          "title": "Army recovers arms cache in Mangu, hunts cattle rustling suspects",
+          "link": "https://www.vanguardngr.com/2026/08/army-recovers-arms-cache-in-mangu-hunts-cattle-rustling-suspects/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "S",
@@ -1316,21 +1301,21 @@
           "rating": "F2"
         },
         {
-          "title": "The Algorithmic Gavel: Analysing automated customs valuation, ICUMS and the rule of law in international trade",
-          "link": "https://www.myjoyonline.com/the-algorithmic-gavel-analysing-automated-customs-valuation-icums-and-the-rule-of-law-in-international-trade/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Illicit arms fueling banditry, terrorism, communal violence — Ribadu",
+          "link": "https://www.vanguardngr.com/2026/08/illicit-arms-fueling-banditry-terrorism-communal-violence-ribadu/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
+          "theme": "N",
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Moniepoint, Funke Akindele launch savings drive",
-          "link": "https://www.vanguardngr.com/2026/08/moniepoint-funke-akindele-launch-savings-drive/",
+          "title": "Lagos police detain Chinese national over alleged sexual assault of employee",
+          "link": "https://www.vanguardngr.com/2026/08/lagos-police-detain-chinese-national-over-alleged-sexual-assault-of-employee/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
+          "theme": "D",
+          "relevance": "A",
           "rating": "F2"
         }
       ]
@@ -1339,25 +1324,34 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 21,
+      "count": 32,
       "top": [
         {
-          "title": "Est de la RDC : l’usage croissant des drones expose davantage les civils et les humanitaires, plus de 200 incidents et six morts enregistrés entre janvier et juin 2026 (ONU)",
-          "link": "https://actualite.cd/2026/08/20/est-de-la-rdc-lusage-croissant-des-drones-expose-davantage-les-civils-et-les",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
+          "title": "MINPROFF : un accord avec Afaird pour déployer le modèle « transform-elles » à grande échelle",
+          "link": "https://fr.journalducameroun.com/minproff-un-accord-avec-afaird-pour-deployer-le-modele-transform-elles-a-grande-echelle/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Lubero : l’effondrement du pont 105 paralyse le trafic entre Manguredjipa et Bandulu",
-          "link": "https://actualite.cd/2026/08/20/lubero-leffondrement-du-pont-105-paralyse-le-trafic-entre-manguredjipa-et-bandulu",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": null,
-          "relevance": ".",
+          "title": "Ka’a ndeh mu’nka 2027 : le MINAC adoube la 6e édition du festival du groupement Bameka",
+          "link": "https://fr.journalducameroun.com/kaa-ndeh-munka-2027-le-minac-adoube-la-6e-edition-du-festival-du-groupement-bameka/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "D",
+          "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Ce que l'on sait de l'éboulement meurtrier d'une mine d'or à la frontière entre le Cameroun et la République centrafricaine",
+          "link": "https://www.bbc.com/afrique/articles/cnvn07r4q6go?at_medium=RSS&at_campaign=rss",
+          "source": "BBC Afrique (FR)",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "B2"
         },
         {
           "title": "Éboulement meutrier de Zamboï: «Le débat au Cameroun pour assainir le secteur minier va reprendre de plus belle»",
@@ -1369,22 +1363,13 @@
           "rating": "A1"
         },
         {
-          "title": "Une centaine de morts dans l'éboulement d'une mine à la frontière entre Cameroun et Centrafrique",
-          "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260819-l-%C3%A9boulement-d-une-mine-fait-plus-d-une-centaine-de-morts-%C3%A0-la-fronti%C3%A8re-entre-le-cameroun-et-la-rca",
-          "source": "France 24",
+          "title": "Éboulement dans une mine d’or: le ministre centrafricain des Mines revient sur les circonstances du drame",
+          "link": "https://www.rfi.fr/fr/afrique/20260820-%C3%A9boulement-dans-une-mine-d-or-le-ministre-centrafricain-des-mines-revient-sur-les-circonstances-du-drame",
+          "source": "RFI Afrique",
           "zone": "3. Afrique centrale",
-          "theme": "L",
+          "theme": "E",
           "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "RDC : Joseph Kabila riposte à Washington après les sanctions du Trésor américain",
-          "link": "https://www.jeuneafrique.com/1836157/politique/rdc-joseph-kabila-riposte-a-washington-apres-les-sanctions-du-tresor-americain/",
-          "source": "Jeune Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "B2"
+          "rating": "C2"
         }
       ]
     },
@@ -1392,7 +1377,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 21,
+      "count": 28,
       "top": [
         {
           "title": "Les exportations turques vers le Maroc bondissent de 11,7 %",
@@ -1400,6 +1385,15 @@
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Stratégie de puissance du Maroc : Amar Belani alerte sur les risques d’un conflit régional",
+          "link": "https://www.tsa-algerie.com/strategie-de-puissance-du-maroc-amar-belani-alerte-sur-les-risques-dun-conflit-regional/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
           "relevance": "A",
           "rating": "A2"
         },
@@ -1413,29 +1407,20 @@
           "rating": "B2"
         },
         {
+          "title": "Fête de la Jeunesse : Les jeunes, priorité Royale pour un Maroc émergent, fort et résilient",
+          "link": "https://fr.hespress.com/485681-fete-de-la-jeunesse-les-jeunes-priorite-royale-pour-un-maroc-emergent-fort-et-resilient.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "René De Maximy | Rencontre autour d’une mémoire partagée",
           "link": "https://kapitalis.com/tunisie/2026/08/20/rene-de-maximy-rencontre-autour-dune-memoire-partagee/",
           "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Climat : L’UNICEF veut faire des enfants un axe central des politiques d’adaptation au Maroc",
-          "link": "https://fr.hespress.com/485659-climat-lunicef-veut-faire-des-enfants-un-axe-central-des-politiques-dadaptation-au-maroc.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "C",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "«Lettre à Ayachi Hammami, prisonnier politique à Mornaguia»",
-          "link": "https://kapitalis.com/tunisie/2026/08/20/lettre-a-ayachi-hammami-prisonnier-politique-a-mornaguia/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1445,8 +1430,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 91,
+      "count": 93,
       "top": [
+        {
+          "title": "Turkey, Egypt, Qatar condemn Israeli attacks on Gaza, call on Israel to comply with ceasefire obligations",
+          "link": "https://www.al-monitor.com/originals/2026/08/turkey-egypt-qatar-condemn-israeli-attacks-gaza-call-israel-comply-ceasefire",
+          "source": "Al-Monitor",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F1"
+        },
         {
           "title": "L’extrême droite mondiale, grande amie d’Israël !",
           "link": "https://kapitalis.com/tunisie/2026/08/20/lextreme-droite-mondiale-grande-amie-disrael/",
@@ -1457,26 +1451,17 @@
           "rating": "A2"
         },
         {
-          "title": "Trump durcit le ton contre l’Iran et annonce une « guerre économique »",
-          "link": "https://fr.hespress.com/485666-trump-durcit-le-ton-contre-liran-et-annonce-une-guerre-economique.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Türkiye, Egypt, Qatar condemn Israeli attacks in Gaza, urge compliance with ceasefire",
+          "link": "https://www.aa.com.tr/en/middle-east/turkiye-egypt-qatar-condemn-israeli-attacks-in-gaza-urge-compliance-with-ceasefire/4032923",
+          "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Trump announces ‘most crushing’ economic sanctions on Iran",
-          "link": "https://www.premiumtimesng.com/news/headlines/904175-trump-announces-most-crushing-economic-sanctions-on-iran.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F1"
         },
         {
-          "title": "Israeli warplanes launch overnight strikes on southern Lebanon",
-          "link": "https://www.aa.com.tr/en/middle-east/israeli-warplanes-launch-overnight-strikes-on-southern-lebanon/4032335",
+          "title": "Yemeni military says it carried out 81 operations against Houthis in 24 hours",
+          "link": "https://www.aa.com.tr/en/middle-east/yemeni-military-says-it-carried-out-81-operations-against-houthis-in-24-hours/4032896",
           "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
           "theme": null,
@@ -1484,13 +1469,13 @@
           "rating": "F2"
         },
         {
-          "title": "'Tremendous consequences': Trump threatens economic punishment on 'any country' helping Iran",
-          "link": "https://www.dawn.com/news/2024083/tremendous-consequences-trump-threatens-economic-punishment-on-any-country-helping-iran",
-          "source": "Dawn (Pakistan)",
+          "title": "Bande de Gaza : l’Australie « outrée » par la décision d’Israël de clore une enquête sur la mort d’humanitaires",
+          "link": "https://www.lemonde.fr/guerre-au-proche-orient/video/2026/08/20/bande-de-gaza-l-australie-outree-par-la-decision-d-israel-de-clore-une-enquete-sur-la-mort-d-humanitaires_6750861_6325529.html",
+          "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
+          "theme": "S",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "B2"
         }
       ]
     },
@@ -1498,15 +1483,15 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 181,
+      "count": 185,
       "top": [
         {
-          "title": "France/Promulgation de la loi sur l’aide à mourir : « Macron aura probablement sa première euthanasie avant la fin de son mandat », ironise un avocat",
-          "link": "https://www.aib.media/france-promulgation-de-la-loi-sur-laide-a-mourir-macron-aura-probablement-sa-premiere-euthanasie-avant-la-fin-de-son-mandat-ironise-un-avocat/",
-          "source": "AIB — Agence Information BF",
-          "zone": "9. Europe occidentale",
-          "theme": "P",
-          "relevance": "L",
+          "title": "7e forum sur la coopération des Médias Sino-Africains: le Burkina Faso est au rendez-vous",
+          "link": "https://www.sidwaya.info/7e-forum-sur-la-cooperation-des-medias-sino-africains-le-burkina-faso-est-au-rendez-vous/",
+          "source": "Sidwaya",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
+          "relevance": "A",
           "rating": "C2"
         },
         {
@@ -1519,6 +1504,15 @@
           "rating": "C2"
         },
         {
+          "title": "In the bear’s paw: How Europeans can loosen Russia’s grip on Belarus",
+          "link": "https://ecfr.eu/publication/in-the-bears-paw-how-europeans-can-loosen-russias-grip-on-belarus/",
+          "source": "ECFR — European Council on Foreign Relations",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
           "title": "Le monde est-il vraiment redevenu impérial ?",
           "link": "https://legrandcontinent.eu/fr/2026/08/20/le-monde-est-il-vraiment-redevenu-imperial/",
           "source": "Le Grand Continent",
@@ -1528,22 +1522,13 @@
           "rating": "A2"
         },
         {
-          "title": "La Russie détruit des cibles de l'industrie ukrainienne des drones et des missiles, à Kiev et dans sa région",
-          "link": "https://francais.rt.com/russie/137231-russie-detruit-cibles-industrie-ukrainienne-drones-missiles-kiev",
-          "source": "RT en français",
-          "zone": "10. Europe orient. & Balkans",
+          "title": "Défense : les exportations d’armes françaises encore à des sommets en 2025",
+          "link": "https://www.lemonde.fr/economie/article/2026/08/20/defense-les-exportations-d-armes-francaises-encore-a-des-sommets-en-2025_6750975_3234.html",
+          "source": "Le Monde International",
+          "zone": "12. Asie du Sud",
           "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Économie russe : deux tiers de la population estime que les moments les plus difficiles pour le pays sont encore à venir",
-          "link": "https://legrandcontinent.eu/fr/2026/08/20/economie-russe-deux-tiers-de-la-population-estime-que-les-moments-les-plus-difficiles-pour-le-pays-sont-encore-a-venir/",
-          "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
+          "relevance": "L",
+          "rating": "B2"
         }
       ]
     }
@@ -1561,42 +1546,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-08-20T09:49:37.073Z",
+      "at": "2026-08-20T13:10:10.448Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-20T09:49:37.081Z",
+      "at": "2026-08-20T13:10:10.454Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-20T09:50:04.932Z",
+      "at": "2026-08-20T13:10:44.201Z",
       "agent": "Agent Collecte RSS",
-      "message": "104/170 flux OK, 1858 articles"
+      "message": "110/170 flux OK, 1934 articles"
     },
     {
-      "at": "2026-08-20T09:50:07.844Z",
+      "at": "2026-08-20T13:10:46.614Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-20T09:50:08.129Z",
+      "at": "2026-08-20T13:10:46.868Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-20T09:50:08.134Z",
+      "at": "2026-08-20T13:10:46.872Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 3 alertes"
     },
     {
-      "at": "2026-08-20T09:50:08.134Z",
+      "at": "2026-08-20T13:10:46.872Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-08-20T09:50:08.134Z",
+      "at": "2026-08-20T13:10:46.872Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
