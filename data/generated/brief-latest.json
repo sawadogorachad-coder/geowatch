@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-20T07:05:56.924Z",
+  "generatedAt": "2026-08-20T07:49:08.496Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1937,
+    "ok": 109,
+    "failed": 61,
+    "articles": 1925,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,11 +40,6 @@
       {
         "id": "rss_eco_faso",
         "name": "L'Économiste du Faso",
-        "count": 10
-      },
-      {
-        "id": "rss_faso7",
-        "name": "Faso7",
         "count": 10
       },
       {
@@ -95,11 +90,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -186,6 +176,11 @@
         "id": "rss_standard_ke",
         "name": "The Standard (Kenya)",
         "count": 30
+      },
+      {
+        "id": "rss_dabanga",
+        "name": "Dabanga Sudan",
+        "count": 12
       },
       {
         "id": "rss_tsa",
@@ -400,7 +395,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 29
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
@@ -510,7 +505,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -560,6 +555,11 @@
     ],
     "failedSources": [
       {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "error": "This operation was aborted"
@@ -598,6 +598,11 @@
         "id": "rss_alwihda",
         "name": "Alwihda Info (Tchad)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_cridem",
@@ -688,11 +693,6 @@
         "id": "rss_sudan_trib",
         "name": "Sudan Tribune",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_dabanga",
-        "name": "Dabanga Sudan",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_news24",
@@ -827,7 +827,7 @@
       {
         "id": "rss_jakartap",
         "name": "Jakarta Post",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_folha",
@@ -863,9 +863,9 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 43,
-    "alerts": 5,
-    "criticalAlerts": 0,
+    "bfAes": 40,
+    "alerts": 6,
+    "criticalAlerts": 1,
     "sourcesDistinct": 69
   },
   "topDevelopments": [
@@ -992,9 +992,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
       "_theme": "H",
@@ -1135,6 +1135,22 @@
   ],
   "alerts": [
     {
+      "title": "Lubero : l’effondrement du pont 105 paralyse le trafic entre Manguredjipa et Bandulu",
+      "link": "https://actualite.cd/2026/08/20/lubero-leffondrement-du-pont-105-paralyse-le-trafic-entre-manguredjipa-et-bandulu",
+      "source": "ActualitéCD (RDC)",
+      "date": "2026-08-20T07:13:59.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "effondrement"
+        }
+      ]
+    },
+    {
       "title": "Trump says blockade of Hormuz Strait was successful, now it is open",
       "link": "https://tass.com/world/2175391",
       "source": "TASS (Russie, EN)",
@@ -1222,19 +1238,19 @@
     ],
     [
       "autre",
-      121
+      122
     ],
     [
       "occident_us",
-      119
+      115
     ],
     [
       "occident_fr",
-      111
+      113
     ],
     [
       "golfe_mo",
-      72
+      77
     ],
     [
       "russie",
@@ -1242,11 +1258,11 @@
     ],
     [
       "turquie",
-      43
+      42
     ],
     [
       "bf_local",
-      41
+      39
     ],
     [
       "chine",
@@ -1254,7 +1270,7 @@
     ],
     [
       "sahel",
-      28
+      27
     ]
   ],
   "desks": [
@@ -1262,7 +1278,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 102,
+      "count": 97,
       "top": [
         {
           "title": "Bama-Taxi : Carnet de voyage à bord de ces véhicules qui défient le temps",
@@ -1298,7 +1314,7 @@
           "zone": "1. Sahel & AO franco.",
           "theme": "H",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "C2"
         },
         {
           "title": "Guiriko : Les acteurs du tourisme en concertation pour une meilleure structuration du secteur",
@@ -1315,7 +1331,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 78,
+      "count": 75,
       "top": [
         {
           "title": "GIPA, GUTA agree measures to protect Ghana’s retail sector",
@@ -1323,6 +1339,15 @@
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "The Algorithmic Gavel: Analysing automated customs valuation, ICUMS and the rule of law in international trade",
+          "link": "https://www.myjoyonline.com/the-algorithmic-gavel-analysing-automated-customs-valuation-icums-and-the-rule-of-law-in-international-trade/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1347,15 +1372,6 @@
         {
           "title": "Accolades for Vanguard, Uncle Sam as ex-staff launch book, reunite, plan media library",
           "link": "https://www.vanguardngr.com/2026/08/accolades-for-vanguard-uncle-sam-as-ex-staff-launch-book-reunite-plan-media-library/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Osun election: Matters arising, by Ikechukwu Amaechi",
-          "link": "https://www.vanguardngr.com/2026/08/osun-election-matters-arising-by-ikechukwu-amaechi/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1389,6 +1405,15 @@
           "rating": "A2"
         },
         {
+          "title": "Lubero : l’effondrement du pont 105 paralyse le trafic entre Manguredjipa et Bandulu",
+          "link": "https://actualite.cd/2026/08/20/lubero-leffondrement-du-pont-105-paralyse-le-trafic-entre-manguredjipa-et-bandulu",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
           "title": "Éboulement meutrier de Zamboï: «Le débat au Cameroun pour assainir le secteur minier va reprendre de plus belle»",
           "link": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20260820-eboulement-meutrier-zambo%C3%AF-le-d%C3%A9bat-au-cameroun-pour-assainir-le-secteur-minier-va-reprendre-de-plus-belle",
           "source": "RFI Afrique",
@@ -1405,15 +1430,6 @@
           "theme": "L",
           "relevance": "A",
           "rating": "A1"
-        },
-        {
-          "title": "Ce que l'on sait de l'éboulement meurtrier d'une mine d'or à la frontière entre le Cameroun et la République centrafricaine",
-          "link": "https://www.bbc.com/afrique/articles/cnvn07r4q6go?at_medium=RSS&at_campaign=rss",
-          "source": "BBC Afrique (FR)",
-          "zone": "3. Afrique centrale",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "B1"
         }
       ]
     },
@@ -1421,8 +1437,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 18,
+      "count": 17,
       "top": [
+        {
+          "title": "Les exportations turques vers le Maroc bondissent de 11,7 %",
+          "link": "https://fr.hespress.com/485645-les-exportations-turques-vers-le-maroc-bondissent-de-117.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
         {
           "title": "Maroc : l’extrême précarité du Rif, l’autre face cachée de la crise de Ceuta",
           "link": "https://www.tsa-algerie.com/maroc-lextreme-precarite-du-rif-lautre-face-cachee-de-la-crise-de-ceuta/",
@@ -1451,15 +1476,6 @@
           "rating": "A2"
         },
         {
-          "title": "Révolution du Roi et du Peuple : 73 ans de symbiose entre le Trône et la Nation",
-          "link": "https://fr.hespress.com/485649-revolution-du-roi-et-du-peuple-73-ans-de-symbiose-entre-le-trone-et-la-nation.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Marruecos exime de visado a países africanos mientras cuestiona el “efecto llamada” de la regularización en España",
           "link": "https://elpais.com/espana/2026-08-20/marruecos-exime-de-visado-a-paises-africanos-mientras-cuestiona-el-efecto-llamada-de-la-regularizacion-en-espana.html",
           "source": "El País (Espagne, ES)",
@@ -1474,17 +1490,8 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 108,
+      "count": 104,
       "top": [
-        {
-          "title": "Les Émirats en Afrique : une enquête du Financial Times confirme les accusations de l’Algérie",
-          "link": "https://www.tsa-algerie.com/les-emirats-en-afrique-une-enquete-du-financial-times-confirme-les-accusations-de-lalgerie/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "L’extrême droite mondiale, grande amie d’Israël !",
           "link": "https://kapitalis.com/tunisie/2026/08/20/lextreme-droite-mondiale-grande-amie-disrael/",
@@ -1502,6 +1509,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Trump durcit le ton contre l’Iran et annonce une « guerre économique »",
+          "link": "https://fr.hespress.com/485666-trump-durcit-le-ton-contre-liran-et-annonce-une-guerre-economique.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "Israeli warplanes launch overnight strikes on southern Lebanon",
@@ -1527,7 +1543,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 175,
+      "count": 184,
       "top": [
         {
           "title": "France/Promulgation de la loi sur l’aide à mourir : « Macron aura probablement sa première euthanasie avant la fin de son mandat », ironise un avocat",
@@ -1566,18 +1582,19 @@
           "rating": "A1"
         },
         {
-          "title": "Captured Ukrainian-born soldiers tell BBC why they fought for Russia",
-          "link": "https://www.bbc.co.uk/news/articles/cn9nr195drzo?at_medium=RSS&at_campaign=rss",
-          "source": "BBC World",
-          "zone": "10. Europe orient. & Balkans",
+          "title": "Arsenal can become world’s best club – Arteta",
+          "link": "https://www.vanguardngr.com/2026/08/arsenal-can-become-worlds-best-club-arteta/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "9. Europe occidentale",
           "theme": null,
           "relevance": ".",
-          "rating": "B2"
+          "rating": "F2"
         }
       ]
     }
   ],
   "indicators": [
+    "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
     "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
@@ -1585,48 +1602,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-08-20T07:05:19.758Z",
+      "at": "2026-08-20T07:48:22.087Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-20T07:05:19.766Z",
+      "at": "2026-08-20T07:48:22.095Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-20T07:05:53.734Z",
+      "at": "2026-08-20T07:49:05.233Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1937 articles"
+      "message": "109/170 flux OK, 1925 articles"
     },
     {
-      "at": "2026-08-20T07:05:56.619Z",
+      "at": "2026-08-20T07:49:08.193Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-20T07:05:56.922Z",
+      "at": "2026-08-20T07:49:08.493Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-20T07:05:56.926Z",
+      "at": "2026-08-20T07:49:08.499Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 5 alertes"
+      "message": "8 developpements, 6 alertes"
     },
     {
-      "at": "2026-08-20T07:05:56.927Z",
+      "at": "2026-08-20T07:49:08.499Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-08-20T07:05:56.927Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
