@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-24T07:20:37.217Z",
+  "generatedAt": "2026-08-24T08:01:35.364Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 111,
-    "failed": 59,
-    "articles": 1911,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1905,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -130,7 +130,7 @@
       {
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
-        "count": 20
+        "count": 19
       },
       {
         "id": "rss_atop",
@@ -150,7 +150,7 @@
       {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
-        "count": 15
+        "count": 0
       },
       {
         "id": "rss_vanguard",
@@ -245,11 +245,6 @@
       {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
-        "count": 10
-      },
-      {
-        "id": "rss_iris",
-        "name": "IRIS France",
         "count": 10
       },
       {
@@ -445,7 +440,7 @@
       {
         "id": "rss_ria",
         "name": "RIA Novosti (EN)",
-        "count": 0
+        "count": 30
       },
       {
         "id": "rss_xinhua",
@@ -750,6 +745,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_iris",
+        "name": "IRIS France",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_frs",
         "name": "FRS — Fondation Recherche Stratégique",
         "error": "fetch failed"
@@ -864,8 +864,8 @@
   "stats": {
     "articles": 800,
     "bfAes": 52,
-    "alerts": 3,
-    "criticalAlerts": 0,
+    "alerts": 4,
+    "criticalAlerts": 1,
     "sourcesDistinct": 68
   },
   "topDevelopments": [
@@ -1136,6 +1136,22 @@
   ],
   "alerts": [
     {
+      "title": "India's hydropower push raises natural disaster fears in Kashmir",
+      "link": "https://asia.nikkei.com/economy/natural-disasters/india-s-hydropower-push-raises-natural-disaster-fears-in-kashmir",
+      "source": "Nikkei Asia",
+      "date": "2026-08-24T08:01:25.284Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
       "title": "Processus de Doha: une première mission de vérification du cessez-le-feu annoncée ce lundi",
       "link": "https://actualite.cd/2026/08/24/processus-de-doha-une-premiere-mission-de-verification-du-cessez-le-feu-annoncee-ce",
       "source": "ActualitéCD (RDC)",
@@ -1187,23 +1203,27 @@
   "narrativesByBloc": [
     [
       "afrique",
-      193
+      182
     ],
     [
       "autre",
-      121
+      119
     ],
     [
       "occident_fr",
-      121
+      119
     ],
     [
       "occident_us",
-      92
+      91
     ],
     [
       "golfe_mo",
-      83
+      85
+    ],
+    [
+      "russie",
+      57
     ],
     [
       "bf_local",
@@ -1211,19 +1231,15 @@
     ],
     [
       "turquie",
-      44
-    ],
-    [
-      "russie",
       42
     ],
     [
       "chine",
-      37
+      36
     ],
     [
       "sahel",
-      21
+      23
     ]
   ],
   "desks": [
@@ -1231,7 +1247,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 107,
+      "count": 114,
       "top": [
         {
           "title": "Session inaugurale du Parlement de l’AES: Arrivée à Niamey des présidents des institutions soeurs du Burkina et du Mali",
@@ -1284,8 +1300,17 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 67,
+      "count": 54,
       "top": [
+        {
+          "title": "NAF intensifies air strikes against terrorists in Sokoto",
+          "link": "https://www.vanguardngr.com/2026/08/naf-intensifies-air-strikes-against-terrorists-in-sokoto/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Retirees draw battle line with Lagos government over pension enhancement",
           "link": "https://www.vanguardngr.com/2026/08/retirees-draw-battle-line-with-lagos-government-over-pension-enhancement/",
@@ -1305,15 +1330,6 @@
           "rating": "F2"
         },
         {
-          "title": "Penalty at the gate: Lagos private schools fine late-pickup parents",
-          "link": "https://www.vanguardngr.com/2026/08/penalty-at-the-gate-lagos-private-schools-fine-late-pickup-parents/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Families protest in Nigeria over children abducted nearly 100 days ago",
           "link": "https://www.myjoyonline.com/families-protest-in-nigeria-over-children-abducted-nearly-100-days-ago/",
           "source": "MyJoyOnline (Ghana)",
@@ -1323,11 +1339,11 @@
           "rating": "F2"
         },
         {
-          "title": "Ogogo’s death a great loss to creative, cultural community — Lagos Govt",
-          "link": "https://www.vanguardngr.com/2026/08/ogogos-death-a-great-loss-to-creative-cultural-community-lagos-govt/",
+          "title": "Atiku’s subsidy proposal designed to make petrol affordable — Okonkwo",
+          "link": "https://www.vanguardngr.com/2026/08/atikus-subsidy-proposal-designed-to-make-petrol-affordable-okonkwo/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1337,7 +1353,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 30,
+      "count": 28,
       "top": [
         {
           "title": "Processus de Doha: une première mission de vérification du cessez-le-feu annoncée ce lundi",
@@ -1376,13 +1392,13 @@
           "rating": "C1"
         },
         {
-          "title": "Pope Leo urges global action to confront Congo’s Ebola outbreak",
-          "link": "https://www.myjoyonline.com/pope-leo-urges-global-action-to-confront-congos-ebola-outbreak/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "3. Afrique centrale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "title": "SAISINE DE LA JUSTICE AMERICAINE PAR KABILA FACE AUX SANCTIONS PRISES A SON ENCONTRE : Sera-t-il entendu ?",
+          "link": "https://lepays.bf/saisine-de-la-justice-americaine-par-kabila-face-aux-sanctions-prises-a-son-encontrasaisine-de-la-justice-americaine-par-kabila-face-aux-sanctions-prises-a-son-encontre-sera-t-il-entendu-e/",
+          "source": "Le Pays (BF)",
+          "zone": "4. Grands Lacs",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1390,7 +1406,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 25,
+      "count": 23,
       "top": [
         {
           "title": "Futsal: Le Maroc s’impose en amical face à l’Arabie saoudite",
@@ -1398,15 +1414,6 @@
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Défense : Rafael avance ses pions au Maroc",
-          "link": "https://fr.hespress.com/485201-defense-rafael-avance-ses-pions-au-maroc.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1436,6 +1443,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Mustapha Derkaoui : la disparition d’un cinéaste, le miroir d’un cinéma",
+          "link": "https://fr.hespress.com/485937-mustapha-derkaoui-la-disparition-dun-cineaste-le-miroir-dun-cinema.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1443,7 +1459,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 104,
+      "count": 112,
       "top": [
         {
           "title": "Turquie-Israël : Ankara lance un mandat d’arrêt contre Benyamin Netanyahu",
@@ -1496,7 +1512,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 161,
+      "count": 159,
       "top": [
         {
           "title": "États-Unis : La justice déclare illégal le gel des visas imposé par Donald Trump à 75 pays",
@@ -1526,6 +1542,15 @@
           "rating": "F2"
         },
         {
+          "title": "KARACHI’S UNSOLVED HOUSING CRISIS",
+          "link": "https://www.dawn.com/news/2024631/karachis-unsolved-housing-crisis",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
           "title": "Colombia: Armed Groups Expand Child Recruitment",
           "link": "https://www.hrw.org/news/2026/08/24/colombia-armed-groups-expand-child-recruitment",
           "source": "Human Rights Watch",
@@ -1533,68 +1558,56 @@
           "theme": "J",
           "relevance": "L",
           "rating": "F2"
-        },
-        {
-          "title": "La dérive des comptes publics américains se poursuit",
-          "link": "https://legrandcontinent.eu/fr/2026/08/24/la-derive-des-comptes-publics-americains-se-poursuit/",
-          "source": "Le Grand Continent",
-          "zone": "16. Amérique du Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     }
   ],
   "indicators": [
+    "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-08-24T07:20:01.052Z",
+      "at": "2026-08-24T08:01:01.591Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-24T07:20:01.059Z",
+      "at": "2026-08-24T08:01:01.598Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-24T07:20:33.751Z",
+      "at": "2026-08-24T08:01:31.939Z",
       "agent": "Agent Collecte RSS",
-      "message": "111/170 flux OK, 1911 articles"
+      "message": "110/170 flux OK, 1905 articles"
     },
     {
-      "at": "2026-08-24T07:20:36.919Z",
+      "at": "2026-08-24T08:01:35.038Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-24T07:20:37.214Z",
+      "at": "2026-08-24T08:01:35.361Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-24T07:20:37.219Z",
+      "at": "2026-08-24T08:01:35.366Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 3 alertes"
+      "message": "8 developpements, 4 alertes"
     },
     {
-      "at": "2026-08-24T07:20:37.219Z",
+      "at": "2026-08-24T08:01:35.366Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-08-24T07:20:37.219Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
