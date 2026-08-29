@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-08-29T13:08:05.183Z",
+  "generatedAt": "2026-08-29T16:43:22.942Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 112,
-    "failed": 58,
-    "articles": 1958,
+    "ok": 106,
+    "failed": 64,
+    "articles": 1857,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -58,11 +53,6 @@
         "count": 10
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
         "id": "rss_minute_bf",
         "name": "Minute BF",
         "count": 10
@@ -105,11 +95,6 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -188,11 +173,6 @@
         "count": 10
       },
       {
-        "id": "rss_standard_ke",
-        "name": "The Standard (Kenya)",
-        "count": 30
-      },
-      {
         "id": "rss_dabanga",
         "name": "Dabanga Sudan",
         "count": 12
@@ -243,11 +223,6 @@
         "count": 10
       },
       {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "count": 10
-      },
-      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -285,7 +260,7 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 22
+        "count": 23
       },
       {
         "id": "rss_f24afr",
@@ -300,7 +275,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 25
       },
       {
         "id": "rss_rfimo",
@@ -353,11 +328,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -385,7 +355,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 11
+        "count": 9
       },
       {
         "id": "rss_fp",
@@ -430,7 +400,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 11
+        "count": 12
       },
       {
         "id": "rss_tass",
@@ -520,7 +490,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 25
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -570,9 +540,19 @@
     ],
     "failedSources": [
       {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -613,6 +593,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -685,6 +670,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_standard_ke",
+        "name": "The Standard (Kenya)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_addis_std",
         "name": "Addis Standard (Éthiopie)",
         "error": "HTTP 403"
@@ -707,7 +697,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -727,7 +717,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -743,6 +733,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -788,6 +783,11 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,12 +863,45 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 90,
-    "alerts": 11,
-    "criticalAlerts": 10,
-    "sourcesDistinct": 66
+    "bfAes": 81,
+    "alerts": 9,
+    "criticalAlerts": 7,
+    "sourcesDistinct": 61
   },
   "topDevelopments": [
+    {
+      "title": "Clashes rock Niger capital, junta says back in control",
+      "link": "https://www.vanguardngr.com/2026/08/clashes-rock-niger-capital-junta-says-back-in-control/",
+      "pubDate": "2026-08-29T14:20:36.000Z",
+      "description": "Niger’s ruling junta said Saturday it “gradually took back control” after mutinying soldiers attacked key sites around the capital including the presidential palace, after the city was rocked by hours of heavy gunfire. As the clashes broke out, soldiers blocked access to the presidential palace and national television, with Tele Sahel going off air for just over an hour on Saturday morning before being restored around 10:00 am (0900 GMT). “There was an attempt by insurgents from the Nigerien armed forces to enter the presidential palace,” a security source told AFP, adding that “they were pushed back by the presidential guard”. Niger’s defence minister, General Salifou Mody, in a statement read on state television, said a group of soldiers held some troops hostage at a barracks in Niamey and opened fire at “certain sensitive sites” in the city, without naming them. “The prompt reaction of the defence and security forces made it possible to contain this heated moment and they gradually took back control of these sites,” he added. Mody’s statement called on the population to “remain calm and freely go about their business”. Niger has been ruled for three years by a military junta that has struggled to contain jihadist violence flaring in the west African country for around a decade. An African diplomat in Niamey said that for now the presidential guard was still loyal to ruler General Abdourahamane Tiani. “Everything is calm again, we can’t hear any more shooting,” a resident of the Yantala district close to the presidential palace said late Saturday morning. Gunfire began in the early hours of Saturday morning, prompting the military to issue a statement on its social media pages urging people to stay calm and “avoid sharing unverified information”. “Our defence and security forces have been mobilised for the defence of the homeland,” the statement said. One local resident told AFP that there was “heavy gunfire and explosions” at Base 101 in Niamey, a claim confirmed by several other witnesses. The first shots were heard at about 1:00 am local time and continued until daybreak, according to a video published by a local journalist filming the area around the airport. Another local resident said he heard “bursts of gunfire” at about 7:00 am local time, adding that the weapons heard ” are not the kind that terrorists on motorbikes can carry”. “I went to get credit for my phone. I saw a military vehicle heading towards the base that had to turn back,” he said. Another resident in the west of Niamey said he heard sporadic small arms fire at about 5:00 am. Videos online showed armoured vehicles deployed to reinforce the neighbourhood near the airport. – Rival jihadist groups – Niamey airport has been targeted twice this year by jihadists, first by the Islamic State in the Sahel (EIS) in January, then in late June by its rival, the Group for the Support of Islam and Muslims (JNIM), the Sahel branch of Al-Qaeda. The jihadist groups not only target civilians and the military but are also struggling for dominance over each other in the Sahel, and especially in Niger. Twenty assailants were killed and four soldiers wounded in the January assault, authorities said at the time. In June, at least 11 soldiers and two civilians were killed, as well as 22 attackers, according to the defence ministry. Both attacks were repelled by the army. The EIS and JNIM are also active in neighbouring Burkina Faso and Mali, allies of Niger that are also ruled by military juntas that seized power in coups. The three countries quit the Economic Community of West African States (ECOWAS) bloc, turned their backs on traditional Western partners in the fight against jihadist violence, especially France, and sought closer ties with Russia. Air Force Base 101, located within the international airport complex, is home to the headquarters of Russia’s Africa Corps in Niamey and the command of the unified force of the Alliance of Sahel States, of which Niger is a member with Burkina Faso and Mali. The site is sensitive. Between December and January, it hosted a large shipment of uranium concentrate, which was held up while awaiting export. No movement of the shipment has been identified since. The post Clashes rock Niger capital, junta says back in control appeared first on Vanguard News .",
+      "_source": "Vanguard (Nigeria)",
+      "_sourceId": "rss_vanguard",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
     {
       "title": "Clashes in Niger's Niamey after troops attempt to storm presidential palace",
       "link": "https://www.dawn.com/news/2025966/clashes-in-nigers-niamey-after-troops-attempt-to-storm-presidential-palace",
@@ -936,39 +969,6 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina : Le Commissaire principal Issa Zongo prend la tête du GSIPN",
-      "link": "https://www.minute.bf/burkina-le-commissaire-principal-issa-zongo-prend-la-tete-du-gsipn/",
-      "pubDate": "2026-08-28T18:58:26.000Z",
-      "description": "Le Commissaire principal de police Issa Zongo a officiellement pris le commandement du Groupe spécial d’intervention de la Police nationale (GSIPN), ce jeudi 27 août 2026, à Badnoogo. Il a reçu le drapeau national des mains du Directeur général de la police nationale, Thierry Dofizouho Tuina, qui présidait la cérémonie. Nommé à ce poste lors du Conseil des ministres du 18 juin 2026, il succède ainsi à la tête de cette unité d’élite. Dans sa prise de parole, le nouveau commandant a affirmé placer son mandat sous le signe de l’engagement, du professionnalisme et de la continuité. Pour lui, cette nomination constitue avant tout une responsabilité confiée par les autorités. « C’est donc un sentiment de joie et de fierté qui nous anime ce jour », a-t-il déclaré, avant de souligner que les résultats obtenus lors des opérations précédentes ont renforcé la confiance des autorités envers son équipe. « Cette bataille va donc se poursuivre, car la lutte contre l’insécurité est loin d’être gagnée », a-t-il averti. Afin de faire face aux défis à venir, Issa Zongo entend renforcer les capacités opérationnelles de son unité et intensifier les missions sur le terrain. « Nous allons nous affûter, renforcer nos capacités et reprendre le combat pour aller davantage de l’avant », a-t-il assuré. Le commandant a par ailleurs rappelé que la mission du GSIPN ne constitue pas une nouveauté pour lui et ses hommes, l’unité ayant déjà été engagée dans plusieurs zones du Burkina Faso. « On ne change pas une équipe qui gagne », a-t-il martelé, mettant en avant la solidité et l’expérience du groupe. La nouvelle tenue de cette Unité Insistant sur les qualités requises au sein de cette unité d’intervention, le Commissaire principal Zongo a évoqué la force mentale, l’engagement et le professionnalisme. Il s’est dit confiant quant aux missions à venir, estimant que le personnel du GSIPN est déjà aguerri aux réalités opérationnelles, aussi bien en milieu urbain qu’en milieu rural. Créé en novembre 2023 en remplacement de l’Unité d’intervention polyvalente de la police nationale (UIP-PN), le GSIPN est chargé de gérer les situations de crise sécuritaire complexes et les opérations d’intérêt stratégique. Sidziguin Irène Corinne SAWADOGO (Stagiaire) Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": null,
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
-      "_desk": "A1"
-    },
-    {
       "title": "Burkina : 500 jeunes du CIE-MIA participent à la confection des pavés à l’Agence Faso Mêbo",
       "link": "https://www.aib.media/burkina-500-jeunes-du-cie-mia-participent-a-la-confection-des-paves-a-lagence-faso-mebo/",
       "pubDate": "2026-08-29T11:18:32.000Z",
@@ -996,6 +996,38 @@
       "_score": 119,
       "_zone": 1,
       "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Djôrô/Immersion patriotique : « Faites du patriotisme, de l’intégrité, du travail et de la solidarité vos valeurs quotidiennes », Siaka Barro",
+      "link": "https://www.aib.media/djoro-immersion-patriotique-faites-du-patriotisme-de-lintegrite-du-travail-et-de-la-solidarite-vos-valeurs-quotidiennes-siaka-barro/",
+      "pubDate": "2026-08-29T14:49:08.000Z",
+      "description": "BURKINA – DJÔRÔ – IMMERSION – PATRIOTIQUE Djôrô/Immersion patriotique : « Faites du patriotisme, de l’intégrité, du travail et de la solidarité vos valeurs quotidiennes », Siaka Barro Gaoua, 27 août 2026 (AIB) – Les 2 211 appelés à l’immersion patriotique obligatoire, session 2026, dans la région du Djôrô, ont achevé ce jeudi leur formation de 30 jours, au cours d’une cérémonie présidée par le gouverneur de la région, Siaka Barro. Accueillis le 27 juillet 2026 dans les centres de Gaoua et de Dano, les appelés, dont 920 filles et 1 291 garçons, ont été formés durant un mois sur 13 modules portant notamment sur le patriotisme, le civisme, la discipline, l’histoire du Burkina Faso, l’identité nationale, les enjeux géopolitiques, l’extrémisme violent et les réflexes à adopter en cas d’attaque. La formation a alterné enseignements théoriques et exercices pratiques, avec pour objectif de renforcer chez les jeunes la discipline, la vigilance, la maîtrise de soi, la solidarité et le sens de la responsabilité. Se disant satisfait de l’aboutissement de cette session, le gouverneur Siaka Barro a invité les appelés à mettre en pratique les connaissances et valeurs acquises durant leur immersion et à les partager avec leurs familles et leurs communautés. Le gouverneur a également salué l’engagement des autorités, des encadreurs, des forces de défense et de sécurité, des agents de santé ainsi que de l’ensemble des acteurs ayant contribué à la réussite de la session. Prenant la parole au nom des appelés, Wend-Raabo Syntiche Koadima a exprimé leur reconnaissance aux autorités et aux différents acteurs impliqués dans leur formation. Elle a expliqué qu’au début de l’immersion, certains appelés avaient éprouvé des difficultés liées notamment à l’éloignement de leurs familles, à la privation des téléphones et à la rupture avec leurs habitudes quotidiennes. « Au fil des jours, nous avons découvert et renforcé des valeurs telles que la solidarité, le vivre-ensemble, la discipline, le respect et le partage».a-t-elle poursuivi. Les appelés se sont engagés à mettre ces valeurs au service de leurs études, de leurs futurs emplois, de leurs familles et de leurs communautés, afin de contribuer au développement d’un Burkina Faso meilleur, souverain et prospère. La cérémonie de sortie a également été marquée par des défilés, des démonstrations de techniques de défense et de secourisme, ainsi que des prestations de danses traditionnelles. Elle a suscité à la fois un sentiment de satisfaction et une certaine tristesse chez les appelés qui, après un mois de vie en communauté, ont affirmé avoir formé « une véritable famille ». Agence d'Information du Burkina MS/ ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1094,38 +1126,6 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Camp international de Jeunesse Leo 2026: un week-end pour servir, apprendre et grandir ensemble",
-      "link": "https://www.wakatsera.com/camp-international-de-jeunesse-leo-2026-un-week-end-pour-servir-apprendre-et-grandir-ensemble/",
-      "pubDate": "2026-08-28T21:24:33.000Z",
-      "description": "Le Camp International de Jeunesse Leo 2026 a officiellement ouvert ses portes ce jeudi 27 août à l’Oasis Saint-Michel de Tintilou. Venus de plusieurs pays africains, les Leo se sont rassemblés autour du thème: «Jeunesse sans frontières: servir, apprendre et grandir ensemble». Les Leos posent avec le gouverneur du District 403 A3 (veste et cravate), le Lion Arouna Nikiema Placée sous le patronage du Gouverneur du District 403 A3, le Lion Arouna Nikiema , et sous le parrainage du Camarade Ministre en charge de la Culture, porte-parole du gouvernement burkinabè, Pingdwendé Gilbert Ouédraogo, cette édition est marquée du sceau du leadership de la PCL Aïssatou Nikiema Guira, présidente du comité d’organisation de cet événement, attendue chaque année par une jeunesse dynamique, fer de lance de la société. La cérémonie d’ouverture a réuni, autour des jeunes Leos et campeurs venus du Burkina Faso et d’ailleurs, les officiels et responsables Lions, et différentes personnalités présentes pour accompagner cette initiative qui permet aux participants de vivre des moments heureux de partage d’expériences, tout en renforçant leur formation pour faire face aux aléas de la vie. Après les différentes allocutions et messages d’encouragement, les campeurs ont entamé une journée riche en apprentissages et en échanges avec la présentation du thème général, suivie de formations sur la Bourse régionale des valeurs mobilières (BRVM), puis de deux panels consacrés à l’intelligence artificielle et à la santé mentale et la prévention sanitaire. Un programme bien pensé pour nourrir une jeunesse en quête de savoir et de savoir-être. La journée s’est poursuivie dans une ambiance de découverte et de fraternité avec la visite aux autorités coutumières, en caravane et au son de la fanfare, avant les premières activités récréatives. L'ouverture en images L’article Camp international de Jeunesse Leo 2026: un week-end pour servir, apprendre et grandir ensemble est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
@@ -1133,7 +1133,7 @@
       "title": "Nepal-Tibet flood catastrophe hints at Himalayas' warmer future",
       "link": "https://asia.nikkei.com/spotlight/environment/climate-change/nepal-tibet-flood-catastrophe-hints-at-himalayas-warmer-future",
       "source": "Nikkei Asia",
-      "date": "2026-08-29T13:07:56.342Z",
+      "date": "2026-08-29T16:43:15.275Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1142,6 +1142,22 @@
         {
           "type": "crise",
           "keyword": "catastrophe"
+        }
+      ]
+    },
+    {
+      "title": "Avé : Togbui Kodjo Agbeko Atsakpa Tengué IV reçoit son décret de reconnaissance",
+      "link": "https://atop.tg/ave-togbui-kodjo-agbeko-atsakpa-tengue-iv-recoit-son-decret-de-reconnaissance/",
+      "source": "ATOP (Togo)",
+      "date": "2026-08-29T14:04:23.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
         }
       ]
     },
@@ -1194,7 +1210,7 @@
       ]
     },
     {
-      "title": "Les inondations au Népal et au Tibet, une catastrophe naturelle racontée en carte et en images par satellite",
+      "title": "Les inondations au Népal et au Tibet, une catastrophe racontée en carte et en images par satellite",
       "link": "https://www.lemonde.fr/planete/article/2026/08/29/les-inondations-au-nepal-et-au-tibet-une-catastrophe-naturelle-racontee-en-carte-et-en-images_6759987_3244.html",
       "source": "Le Monde International",
       "date": "2026-08-29T10:59:09.000Z",
@@ -1226,22 +1242,6 @@
       ]
     },
     {
-      "title": "US naval blockade put Iran under ‘exceptional’ conditions during war: Tehran governor",
-      "link": "https://www.aa.com.tr/en/middle-east/us-naval-blockade-put-iran-under-exceptional-conditions-during-war-tehran-governor/4040806",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-29T08:09:30.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
       "title": "Afrique du Sud: la nouvelle enquête sur l'assassinat de Steve Biko a débuté",
       "link": "https://www.rfi.fr/fr/afrique/20260829-afrique-du-sud-nouvelle-enqu%C3%AAte-assassinat-steve-biko-a-d%C3%A9but%C3%A9",
       "source": "RFI Afrique",
@@ -1254,22 +1254,6 @@
         {
           "type": "rupture",
           "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "Iran transfers $7.5B in oil revenues to central bank despite US naval blockade: Report",
-      "link": "https://www.aa.com.tr/en/middle-east/iran-transfers-75b-in-oil-revenues-to-central-bank-despite-us-naval-blockade-report/4040754",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-08-29T06:45:34.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
         }
       ]
     },
@@ -1288,55 +1272,39 @@
           "keyword": "disaster"
         }
       ]
-    },
-    {
-      "title": "China Offers Condolences to Nepal While Emphasizing Disaster Began There",
-      "link": "https://www.nytimes.com/2026/08/28/world/asia/china-nepal-floods-xi-jinping.html",
-      "source": "NYT World",
-      "date": "2026-08-28T20:12:33.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      172
+      190
     ],
     [
       "occident_fr",
-      129
+      135
     ],
     [
       "autre",
-      126
+      128
     ],
     [
       "occident_us",
-      116
-    ],
-    [
-      "bf_local",
-      52
-    ],
-    [
-      "turquie",
-      50
+      98
     ],
     [
       "russie",
-      49
+      51
     ],
     [
       "golfe_mo",
+      48
+    ],
+    [
+      "turquie",
+      48
+    ],
+    [
+      "bf_local",
       46
     ],
     [
@@ -1345,7 +1313,7 @@
     ],
     [
       "sahel",
-      23
+      19
     ]
   ],
   "desks": [
@@ -1353,8 +1321,17 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 123,
+      "count": 125,
       "top": [
+        {
+          "title": "Clashes rock Niger capital, junta says back in control",
+          "link": "https://www.vanguardngr.com/2026/08/clashes-rock-niger-capital-junta-says-back-in-control/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Clashes in Niger's Niamey after troops attempt to storm presidential palace",
           "link": "https://www.dawn.com/news/2025966/clashes-in-nigers-niamey-after-troops-attempt-to-storm-presidential-palace",
@@ -1374,15 +1351,6 @@
           "rating": "A2"
         },
         {
-          "title": "Burkina : Le Commissaire principal Issa Zongo prend la tête du GSIPN",
-          "link": "https://www.minute.bf/burkina-le-commissaire-principal-issa-zongo-prend-la-tete-du-gsipn/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
           "title": "Burkina : 500 jeunes du CIE-MIA participent à la confection des pavés à l’Agence Faso Mêbo",
           "link": "https://www.aib.media/burkina-500-jeunes-du-cie-mia-participent-a-la-confection-des-paves-a-lagence-faso-mebo/",
           "source": "AIB — Agence Information BF",
@@ -1392,13 +1360,13 @@
           "rating": "C2"
         },
         {
-          "title": "Sissili / IPO 2026: Trente jours de métamorphose pour forger la « pépinière » de la Nation à Léo",
-          "link": "https://www.aib.media/sissili-ipo-2026-trente-jours-de-metamorphose-pour-forger-la-pepiniere-de-la-nation-a-leo/",
+          "title": "Djôrô/Immersion patriotique : « Faites du patriotisme, de l’intégrité, du travail et de la solidarité vos valeurs quotidiennes », Siaka Barro",
+          "link": "https://www.aib.media/djoro-immersion-patriotique-faites-du-patriotisme-de-lintegrite-du-travail-et-de-la-solidarite-vos-valeurs-quotidiennes-siaka-barro/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "C2"
         }
       ]
     },
@@ -1406,11 +1374,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 55,
+      "count": 59,
       "top": [
         {
-          "title": "Nigeria will not miss World Cup for 8yrs if I become president — Sowore",
-          "link": "https://www.vanguardngr.com/2026/08/nigeria-will-not-miss-world-cup-for-8yrs-if-i-become-president-sowore/",
+          "title": "Why labour movement will miss Ugboaja — NLC",
+          "link": "https://www.vanguardngr.com/2026/08/why-labour-movement-will-miss-ugboaja-nlc/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1418,22 +1386,13 @@
           "rating": "A2"
         },
         {
-          "title": "Nigeria’s borders not closed, Tunji-Ojo tells Atiku",
-          "link": "https://www.vanguardngr.com/2026/08/nigerias-borders-not-closed-tunji-ojo-tells-atiku/",
+          "title": "JAMB gives candidates final 30-day window to salvage old admissions",
+          "link": "https://www.vanguardngr.com/2026/08/jamb-gives-candidates-final-30-day-window-to-salvage-old-admissions/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "J",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Health minister seeks increased investment in radiopharmaceutical cancer therapy",
-          "link": "https://www.premiumtimesng.com/health/health-news/906126-health-minister-seeks-increased-investment-in-radiopharmaceutical-cancer-therapy.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
           "title": "Nigeria: des bandits attaquent des familles indemnisées après un naufrage dans l’État de Sokoto",
@@ -1452,6 +1411,15 @@
           "theme": "S",
           "relevance": "A",
           "rating": "C2"
+        },
+        {
+          "title": "Shettima departs Abuja for AU summit in Angola",
+          "link": "https://www.vanguardngr.com/2026/08/shettima-departs-abuja-for-au-summit-in-angola/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1459,14 +1427,14 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 23,
+      "count": 25,
       "top": [
         {
-          "title": "Cameroun : Eto’o-Mouelle Kombi, la guerre des clans par football interposé",
-          "link": "https://www.jeuneafrique.com/1837783/politique/cameroun-etoo-mouelle-kombi-la-guerre-des-clans-par-football-interpose/",
+          "title": "En RDC, quand les camps Kabila et Bemba s’affrontaient à Kinshasa en août 2006",
+          "link": "https://www.jeuneafrique.com/1805310/politique/en-rdc-quand-les-camps-kabila-et-bemba-saffrontaient-a-kinshasa-en-aout-2006/",
           "source": "Jeune Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "D",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
           "relevance": "A",
           "rating": "B2"
         },
@@ -1480,12 +1448,21 @@
           "rating": "B2"
         },
         {
-          "title": "Marc Alexandre Oho Bambe : un nouveau recueil de poésie et un nouvel album",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260828-marc-alexandre-oho-bambe-un-nouveau-recueil-de-po%C3%A9sie-et-un-nouvel-album",
-          "source": "France 24 Afrique",
+          "title": "Ouganda: un ancien proche du chef de l’armée ougandaise, bientôt extradé aux Etats-Unis pour trafic d’armes",
+          "link": "https://www.rfi.fr/fr/afrique/20260829-ouganda-un-ancien-proche-du-chef-de-l-arm%C3%A9e-ougandaise-bient%C3%B4t-extrad%C3%A9-aux-etats-unis-pour-trafic-d-armes",
+          "source": "RFI Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Cameroun: un collectif alerte sur les «recrutements» de jeunes aux côtés de l'armée russe",
+          "link": "https://www.rfi.fr/fr/afrique/20260829-cameroun-un-collectif-alerte-sur-les-recrutements-de-jeunes-aux-c%C3%B4t%C3%A9s-de-l-arm%C3%A9e-russe",
+          "source": "RFI Afrique",
           "zone": "3. Afrique centrale",
-          "theme": null,
-          "relevance": ".",
+          "theme": "S",
+          "relevance": "A",
           "rating": "C2"
         },
         {
@@ -1496,15 +1473,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Guerre au Soudan: ce qu'affirment les paramilitaires qui ont fait défection",
-          "link": "https://www.rfi.fr/fr/afrique/20260829-guerre-soudan-ce-qu-affirment-les-paramilitaires-fsr-qui-ont-fait-d%C3%A9fection",
-          "source": "RFI Afrique",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
         }
       ]
     },
@@ -1512,16 +1480,43 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 23,
+      "count": 25,
       "top": [
         {
-          "title": "Maroc : Rabat s’allie à l’Inde pour développer une intelligence artificielle adaptée aux langues nationales",
-          "link": "https://burkina24.com/2026/08/28/maroc-rabat-sallie-a-linde-pour-developper-une-intelligence-artificielle-adaptee-aux-langues-nationales/",
-          "source": "Burkina24",
+          "title": "Pourquoi le capitalisme n’arrive plus à penser un futur habitable ?",
+          "link": "https://legrandcontinent.eu/fr/2026/08/29/pourquoi-le-capitalisme-narrive-plus-a-penser-un-futur-habitable/",
+          "source": "Le Grand Continent",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "C2"
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Tunisie : plus de 1,6 million de bouteilles d’eau mises en vente dans le Grand Tunis face aux tensions d’approvisionnement",
+          "link": "https://francais.rt.com/afrique/137518-tunisie-plus-1-million-bouteilles-eau-mises-en-vente-grand-tunis-face-tensions-approvisionnement",
+          "source": "RT en français",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "L",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "À l’hôpital des Grands brûlés de Zéralda, Tebboune rassure les blessés des incendies",
+          "link": "https://www.tsa-algerie.com/a-lhopital-des-grands-brules-de-zeralda-tebboune-rassure-les-blesses-des-incendies/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Sebta : les violences contre les migrants suscitent l’inquiétude des défenseurs des droits humains",
+          "link": "https://fr.hespress.com/486426-sebta-les-violences-contre-les-migrants-suscitent-linquietude-des-defenseurs-des-droits-humains.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "Pénurie d’eau embouteillée | Mais que fait le gouvernement ?",
@@ -1531,33 +1526,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Khalti Malika, la « reine du désert » n’est plus",
-          "link": "https://www.tsa-algerie.com/khalti-malika-la-reine-du-desert-nest-plus/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Élections 2026 : une bataille électorale ouverte dans la circonscription d’Anfa, au cœur de Casablanca",
-          "link": "https://fr.hespress.com/486364-elections-2026-une-bataille-electorale-ouverte-dans-la-circonscription-danfa-au-coeur-de-casablanca.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Drame de Ben Guerdane | Rassemblement à Paris en solidarité avec les familles des victimes",
-          "link": "https://kapitalis.com/tunisie/2026/08/29/drame-de-ben-guerdane-rassemblement-a-paris-en-solidarite-avec-les-familles-des-victimes/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1565,25 +1533,25 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 53,
+      "count": 54,
       "top": [
         {
-          "title": "US naval blockade put Iran under ‘exceptional’ conditions during war: Tehran governor",
-          "link": "https://www.aa.com.tr/en/middle-east/us-naval-blockade-put-iran-under-exceptional-conditions-during-war-tehran-governor/4040806",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Bande de Gaza : trois morts signalés après des tirs de l’armée israélienne, qui dit avoir visé un cadre militaire du Hamas",
+          "link": "https://www.lemonde.fr/international/article/2026/08/29/trois-morts-sig-nales-dans-la-bande-de-gaza-apres-des-tirs-de-l-armee-israelienne-qui-dit-avoir-vise-un-cadre-militaire-du-hamas_6760165_3210.html",
+          "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
         },
         {
-          "title": "Iran transfers $7.5B in oil revenues to central bank despite US naval blockade: Report",
-          "link": "https://www.aa.com.tr/en/middle-east/iran-transfers-75b-in-oil-revenues-to-central-bank-despite-us-naval-blockade-report/4040754",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "War weighs on Iran's economy as US intensifies sanctions",
+          "link": "https://www.dawn.com/news/2025973/war-weighs-on-irans-economy-as-us-intensifies-sanctions",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "3 Palestinians killed in Israeli drone strike in occupied West Bank",
@@ -1595,15 +1563,6 @@
           "rating": "F1"
         },
         {
-          "title": "From Iranian missiles to menorahs, Israeli blacksmith forges trauma into works of art",
-          "link": "https://www.jpost.com/israel-news/culture/article-906744",
-          "source": "Jerusalem Post",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
           "title": "3 Palestinians injured in Israeli airstrike on Gaza hospital medicine warehouse",
           "link": "https://www.aa.com.tr/en/middle-east/3-palestinians-injured-in-israeli-airstrike-on-gaza-hospital-medicine-warehouse/4040999",
           "source": "Anadolu Agency (Turquie)",
@@ -1611,6 +1570,15 @@
           "theme": null,
           "relevance": ".",
           "rating": "F1"
+        },
+        {
+          "title": "US military families ride 'roller coaster of emotions' over six months of Iran war",
+          "link": "https://www.al-monitor.com/originals/2026/08/us-military-families-ride-roller-coaster-emotions-over-six-months-iran-war",
+          "source": "Al-Monitor",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
         }
       ]
     },
@@ -1618,17 +1586,8 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 236,
+      "count": 223,
       "top": [
-        {
-          "title": "Jeux mondiaux des robots humanoïdes : Des journalistes burkinabè saluent les exploits de l’industrie robotique chinoise",
-          "link": "https://www.sidwaya.info/jeux-mondiaux-des-robots-humanoides-des-journalistes-burkinabe-saluent-les-exploits-de-lindustrie-robotique-chinoise/",
-          "source": "Sidwaya",
-          "zone": "14. Extrême-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "États-Unis-Venezuela : Washington et Caracas annoncent un accord pétrolier « historique »",
           "link": "https://burkina24.com/2026/08/29/etats-unis-venezuela-washington-et-caracas-annoncent-un-accord-petrolier-historique/",
@@ -1639,11 +1598,11 @@
           "rating": "C1"
         },
         {
-          "title": "Les inondations au Népal et au Tibet, une catastrophe naturelle racontée en carte et en images par satellite",
+          "title": "Les inondations au Népal et au Tibet, une catastrophe racontée en carte et en images par satellite",
           "link": "https://www.lemonde.fr/planete/article/2026/08/29/les-inondations-au-nepal-et-au-tibet-une-catastrophe-naturelle-racontee-en-carte-et-en-images_6759987_3244.html",
           "source": "Le Monde International",
           "zone": "12. Asie du Sud",
-          "theme": "C",
+          "theme": "T",
           "relevance": "L",
           "rating": "B2"
         },
@@ -1664,6 +1623,15 @@
           "theme": "C",
           "relevance": "L",
           "rating": "B2"
+        },
+        {
+          "title": "Naissance des Constitutions | Quand les peuples ont voulu écrire les règles du pouvoir",
+          "link": "https://kapitalis.com/tunisie/2026/08/29/naissance-des-constitutions-quand-les-peuples-ont-voulu-ecrire-les-regles-du-pouvoir/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "9. Europe occidentale",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A2"
         }
       ]
     }
@@ -1672,47 +1640,53 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
+    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-08-29T13:07:33.902Z",
+      "at": "2026-08-29T16:42:49.062Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-08-29T13:07:33.910Z",
+      "at": "2026-08-29T16:42:49.070Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-08-29T13:08:01.958Z",
+      "at": "2026-08-29T16:43:19.417Z",
       "agent": "Agent Collecte RSS",
-      "message": "112/170 flux OK, 1958 articles"
+      "message": "106/170 flux OK, 1857 articles"
     },
     {
-      "at": "2026-08-29T13:08:04.888Z",
+      "at": "2026-08-29T16:43:22.590Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-08-29T13:08:05.180Z",
+      "at": "2026-08-29T16:43:22.938Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-08-29T13:08:05.185Z",
+      "at": "2026-08-29T16:43:22.944Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 11 alertes"
+      "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-08-29T13:08:05.186Z",
+      "at": "2026-08-29T16:43:22.944Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-08-29T16:43:22.944Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
