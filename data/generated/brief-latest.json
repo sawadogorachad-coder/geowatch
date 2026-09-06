@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-09-06T20:24:14.857Z",
+  "generatedAt": "2026-09-06T22:53:44.753Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 105,
-    "failed": 65,
-    "articles": 1830,
+    "ok": 111,
+    "failed": 59,
+    "articles": 1911,
     "okSources": [
+      {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "count": 30
+      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -40,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -51,6 +56,11 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -93,6 +103,11 @@
         "count": 10
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "count": 10
+      },
+      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -118,6 +133,11 @@
         "count": 20
       },
       {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "count": 12
+      },
+      {
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
@@ -130,7 +150,7 @@
       {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
-        "count": 15
+        "count": 0
       },
       {
         "id": "rss_vanguard",
@@ -215,6 +235,11 @@
       {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
+        "count": 10
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -323,6 +348,11 @@
         "count": 0
       },
       {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "count": 25
+      },
+      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -350,7 +380,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_fp",
@@ -535,19 +565,9 @@
     ],
     "failedSources": [
       {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "error": "HTTP 415"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -595,11 +615,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "error": "HTTP 415"
-      },
-      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -642,11 +657,6 @@
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
-        "error": "HTTP 500"
-      },
-      {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
         "error": "HTTP 500"
       },
       {
@@ -697,7 +707,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "HTTP 415"
+        "error": "fetch failed"
       },
       {
         "id": "rss_le360",
@@ -717,7 +727,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 415"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_moibrahim",
@@ -733,11 +743,6 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -783,11 +788,6 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,12 +863,44 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 35,
-    "alerts": 9,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 64
+    "bfAes": 50,
+    "alerts": 8,
+    "criticalAlerts": 1,
+    "sourcesDistinct": 68
   },
   "topDevelopments": [
+    {
+      "title": "Confédération des États du Sahel : Le Burkina Faso abrite les Jeux de l’AES",
+      "link": "https://netafrique.net/confederation-des-etats-du-sahel-le-burkina-faso-abrite-les-jeux-de-laes/",
+      "pubDate": "2026-09-06T22:36:30.000Z",
+      "description": "La 2 e édition des Jeux de l’Alliance des États du Sahel (JEAS) se tiendra du 07 au 16 septembre 2026 à Ouagadougou. Le comité d’organisation a rencontré la presse ce samedi 05 septembre 2026 pour parler de cet événement majeur de la Confédération. Cette 2 e édition prend en compte onze (11) disciplines sportives qui sont l’athlétisme, la boxe, le cyclisme, le football, le handball, le judo, le karaté, le kung-fu wushu, la lutte, le taekwondo et le tir à l’arc. À cela, s’ajoute le MMA dont une démonstration sera faite à la cérémonie de clôture. Ce qui équivaut à 376 d’athlètes, ainsi que 164 encadreurs et des officiels. Quant aux compétitions, elles se tiendront sur plusieurs sites de Ouagadougou. Ce sont le stade du 4-Août, le palais des sports de Ouaga 2000, la salle des arts martiaux du Comité National Olympique et des Sports Burkinabè (CNOSB), le centre national médico-sportif, le boulevard Capitaine Isidore-Noël-Thomas-SANKARA, l’hippodrome de Hamdalaye, ainsi que d’autres infrastructures complémentaires. Abdoulaye Ouattara est le principal animateur de cette conférence de presse. Pour lui, ces Jeux s’inscrivent dans la dynamique de construction de l’espace de la Confédération des États du Sahel, née de la volonté des Chefs d’État. Et ce, afin de bâtir, au-delà de la coopération politique, militaire et économique, un espace de fraternité entre les peuples. Le sport, langage universel, a été retenu comme l’un des vecteurs privilégiés de ce rapprochement entre les jeunesses de nos trois Nations >> explique le directeur de cabinet. Ces jeux à en croire le directeur de cabinet, poursuivent trois objectifs majeurs. Celui de renforcer la cohésion régionale entre les peuples du Sahel, de consolider par le sport la diplomatie et l’intégration de nos États, et d'offrir à la jeunesse sahélienne un cadre d’expression, de dépassement de soi et de rencontre fraternelle. Pour ce qui est du cas spécifique du football, le Burkina Faso pays hôte va présenter deux (02) équipes. Les lauréats Burkinabè recevront des primes en fonction de leur classement, rassure Abdoulaye Ouattara. La cérémonie d’ouverture est prévue pour ce mardi 08 septembre au Palais des Sports de Ouaga 2000. L’entrée à tous les sites de compétition est libre et gratuite pour le public. Jean Narcisse KOUDOU L’article Confédération des États du Sahel : Le Burkina Faso abrite les Jeux de l'AES est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
     {
       "title": "IIe Jeux de l’AES : Ouagadougou fin prête pour accueillir les trois nations du Sahel",
       "link": "https://www.sidwaya.info/iie-jeux-de-laes-ouagadougou-fin-prete-pour-accueillir-les-trois-nations-du-sahel/",
@@ -936,6 +968,72 @@
       "_desk": "A1"
     },
     {
+      "title": "Insertion socioprofessionnelle : l’ASVOVIG forme 470 victimes de guerre et leurs ayants droit",
+      "link": "https://www.sidwaya.info/insertion-socioprofessionnelle-lasvovig-forme-470-victimes-de-guerre-et-leurs-ayants-droit/",
+      "pubDate": "2026-09-06T22:36:27.000Z",
+      "description": "L’Agence de soutien aux veuves, orphelins et victimes de guerre (ASVOVIG) a clôturé la formation aux métiers de la 4e promotion des victimes de guerre et leurs ayants droit, vendredi 4 septembre 2026, à Ouagadougou. L’Agence de soutien aux veuves, orphelins et victimes de guerre (ASVOVIG) poursuit ses efforts d’autonomisation des bénéficiaires de ses actions. Pour la 4e fois, elle a organisé une formation au profit des Veuves, orphelins et victimes de guerre (VOVIG). La clôture de la session a eu lieu le vendredi 4 septembre 2026, à Ouagadougou. Ainsi, durant quatre mois de formation théorique, suivis de deux mois de stage, les 470 bénéficiaires, composés de 285 veuves et orphelins et 185 blessés de guerre, ont été outillés dans les domaines de la coupe-couture, la coiffure-esthétique, la cuisine-pâtisserie, la bureautique, l’aviculture, la saponification et la cosmétique. Selon le Directeur général (DG) de l’ASVOVIG, le médecin-colonel Lamine Ouédraogo, cette initiative favorisant la reconstruction et la réinsertion des VOVIG ne relève ni de la compassion ponctuelle ni de l’assistance circonstancielle. « Il s’agit d’un devoir de solidarité nationale et d’un investissement dans la reconstruction humaine, sociale et économique de celles et ceux dont la vie a été affectée par la défense du pays », a-t-il précisé. Le DG de l’ASVOVIG a également indiqué que le cursus de formation de la quatrième cohorte a pris en compte des modules tels que le développement personnel, l’initiative personnelle et l’éducation financière. « En effet, l’expérience nous enseigne que la maîtrise d’un savoir-faire technique, si indispensable soit-elle, ne garantit pas à elle seule la réussite d’un projet d’autonomisation », a-t-il poursuivi. Le médecin-colonel Lamine Ouédraogo a indiqué que l’objectif visé par le stage pratique et la remise des kits d’installation aux différents participants est de créer les conditions permettant de faire des compétences acquises, des activités économiques rentables et durables. Envisager l’avenir avec sérénité Ils sont au total 470 veuves, orphelins et victimes de guerre qui ont été formés à cette 4e promotion. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/09/5-1024x792.jpeg\" class=\"size-medium wp-image-168981\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/09/5-300x232.jpeg\" alt=\"\" width=\"300\" height=\"232\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/09/5-300x232.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-1024x792.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-768x594.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-1536x1189.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-543x420.jpeg 543w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-150x116.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-696x539.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/09/5-1068x827.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/09/5.jpeg 1654w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Ils sont au total 470 veuves, orphelins et victimes de guerre qui ont été formés à cette 4e promotion. Il a toutefois appelé à un renforcement des partenariats pour relever les différents défis notamment le renforcement du kit et l’extension de l’initiative sur le territoire. Le ministre d’Etat, ministre de la Guerre et de la Défense patriotique, le général de division Célestin Simporé, a salué le combat de l’ASVOVIG au profit des personnes envers qui la Nation a une responsabilité particulière. Selon lui, reconnaître le sacrifice consenti pour la Nation exige aussi d’accompagner une veuve vers l’autonomie, de permettre à un orphelin de construire son avenir, d’aider un combattant blessé à retrouver une nouvelle perspective professionnelle et soutenir les familles confrontées aux conséquences de la guerre. Le gal Simporé a exhorté l’ASVOVIG à faire en sorte que la formation ait des impacts. « Un certificat et un savoir-faire sont indispensables. Mais la finalité véritable de notre politique doit être qu’une veuve puisse tirer durablement un revenu de son activité, qu’un blessé puisse retrouver une place active dans son unité ou dans la société, qu’une famille puisse reconstruire progressivement sa stabilité et envisager l’avenir avec davantage de sérénité », a-t-il insisté. Le ministre d’Etat chargé de la Guerre a invité les bénéficiaires à faire fructifier cet investissement de la Nation. Ceux-ci, par les voix de l’adjudant de police Soungalo Traoré et Elisabeth Sebgo, ont salué l’initiative et exprimé leur satisfaction. « Nous avons acquis des compétences adaptées à nos capacités d’aujourd’hui et non à celles d’hier. Car il ne s’agit pas de renoncer à ce que nous avons été, il s’agit de continuer à avancer autrement », a confié Soungalo Traoré. Samira Alida KAMBOU Zourkanaï SANOGO (Stagiaire) Les mots d’encouragement du président du Faso « Bonjour camarades, j’espère que vous allez bien. J’ai tenu à passer vous dire bonjour et vous féliciter pour tout ce que vous avez appris ces derniers temps. Je suis passé voir les ateliers et les stands de saponification, de cuisine, de coupe-couture, de mécanique, d’agriculture et tout ce qui va avec. Félicitations pour ces mois de stage, pour tout le travail qui a été abattu. Ce n’est pas la fin de la vie, lorsqu’on est blessé ou lorsqu’on a perdu quelqu’un. C’est une guerre qui nous a été imposée et nous nous battons. Notre devoir c’est de faire en sorte que le sacrifice de ceux-là qui nous ont devancés ne soit pas vain et aussi, de prendre soin de tous ceux qu’ils ont laissés derrière eux. Il y a beaucoup de problèmes qu’on a essayé de résoudre, notamment répertorier tous ceux qui ont été blessés dans cette guerre et proposer toutes les formations nécessaires pour la reconversion. Il en a été de même au niveau des veuves, la délégation des sols et tout ce qui s’ensuit. Aujourd’hui, je peux vous garantir que ce que vous avez appris, c’est ce dont nous avons besoin au Burkina Faso. Nous voulons nous recentrer sur nous-mêmes, produire et transformer. Et, vous avez appris à transformer beaucoup de choses. Je disais aux dames qui ont fait la saponification, que plus nous avons des dames qui peuvent produire des produits cosmétiques, moins on aura à importer. D’autant plus qu’aujour-d’hui, quand vous écoutez en Europe, il y a un bon nombre de produits cosmétiques qui sont interdits, à cause d’une toxine qu’ils ont découverte eux-mêmes, qui est cancéreuse. Mais, ces produits vont être déversés en Afrique. Et nous, nous consommons tout. Mais, si vous arrivez à fabriquer ici à partir de nos plantes, à partir de tout ce qu’on a de naturel, c’est ce que nous voulons payer. Donc, ils mettront tout en œuvre pour pouvoir vous installer, vous permettre de produire et faire en sorte que notre production nous suffise. Il va de même que ceux qui font la couture. Aujourd’hui, Dieu merci, nous avons pu mettre en place une usine qui va produire tous les tissus dont vous avez besoin pour fabriquer les prêt-à-porter, coudre des chemises et tout ce que vous voulez. Et là, c’est encore un autre domaine qui se développe. Donc soyez sûrs, peu importe ce que chacun a appris, l’élevage, l’agriculture, la mécanique, la bureautique, personne ne doit chômer. Que ce soit indivi-duellement ou collectivement, on doit pouvoir mettre les énergies ensemble. Vous installer est une chose, mais vous offrir des débouchées est une autre. Nous ferons en sorte qu’une bonne part vous soit réservée. Félicitations une fois de plus. Continuez à prouver aux yeux de tout le monde que la vie ne s’arrête pas là et qu’il y a autre chose pour la Patrie et donner tout pour le développement de notre Patrie. Bonne chance à tous ceux qui ont fait aussi des formations sur l’agriculture, l’élevage. Je vous exhorte à rester concentrés, parce que c’est prometteur et c’est de cela qu’on a besoin. On ne peut pas continuer à importer des œufs, des poulets. Cela fait honte pour nous-mêmes. Bonne chance à tous et que Dieu vous accompagne. Je peux vous assurer d’une chose, les jours de cette guerre sont comptés, parce qu’elle va finir tout de suite. Nous attendons la fin de la saison pluvieuse et comme j’aime le dire, la poussière va se soulever en brousse et c’est sûr. La Patrie ou la Mort, nous Vaincrons ! »",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "6e Région militaire : le général de division Moussa Diallo exhorte les forces combattantes à rester soudées, engagées et disciplinées",
+      "link": "https://www.sidwaya.info/6e-region-militaire-le-general-de-division-moussa-diallo-exhorte-les-forces-combattantes-a-rester-soudees-engagees-et-disciplinees/",
+      "pubDate": "2026-09-06T22:32:03.000Z",
+      "description": "Le chef d’Etat-major général des armées, le général de division Moussa Diallo, a effectué une visite opérationnelle, du 1er au 3 septembre 2026, à Fada N’Gourma, dans la sixième Région militaire. Porteur d’un message de félicitations et d’encouragement du chef de l’Etat aux forces combattantes, il les a exhortées, surtout, à renforcer la cohésion, l’engagement et la discipline. « Vaillants comba- ttants de la 6e région militaire, je vous adresse, au nom du chef suprême des armées, le camarade capitaine Ibrahim Traoré, et au mien propre, mes vives félicitations et mes encouragements pour votre engagement constant et votre bravoure sur les lignes de front du Grand Est ». C’est en ces termes que le Chef d’Etat-major général des armées (CEMGA), le général de division Moussa Diallo, s’est adressé aux Forces de défense et de sécurité (FDS) ainsi qu’aux Volontaires pour la défense de la patrie (VDP), lors d’une visite opérationnelle qu’il a effectuée, du 1er au 3 septembre 2026, à Fada N’Gourma. Il a relevé que leur courage, leur abnégation et leur engagement « constituent une source d’espoir pour tout un peuple qui compte sur eux pour défendre son intégrité, sa dignité et sa liberté ». Ainsi, le général de division Moussa Diallo a exhorté les forces combattantes à maintenir ce cap, mais également à redoubler de vigilance et à demeurer unis. « Agissez de sorte à assurer une bonne collaboration avec la population et œuvrez à ce que la garnison de Fada N’Gourma reste le bouclier impénétrable contre l’hydre terroriste. Que la force de votre courage et la noblesse de votre serment continuent de faire trembler l’ennemi tout en honorant les sacrifices de nos martyrs jusqu’à la victoire finale », a-t-il dit. La discipline, le maître mot Aussi, le CEMGA a insisté sur la discipline, qu’il considère comme l’un des fondements de l’efficacité de l’institution militaire. « Dans l’armée, le maître mot, c’est la discipline », a-t-il rappelé. Pour lui, sans cette valeur, « rien de grand ne peut être accompli ». Par ailleurs, le général de division Moussa Diallo a appelé les forces combattantes à se départir de la trahison et à rester fidèles à la patrie. A l’entendre, la loyauté et le sens du devoir doivent demeurer des valeurs cardinales dans la conduite des opérations. Prenant la parole au nom des forces combattantes, le lieutenant-colonel Aboubacar Dadijan, commandant la 6e région militaire, a salué cette démarche du CEMGA. Selon lui, cette visite traduit la volonté de la hiérarchie de rester proche des forces engagées sur les différents théâtres des opérations. « Il faut dire que cette visite est une occasion qui est donnée au chef de communier avec la troupe et à la troupe aussi de communier avec le chef, toute chose qui contribue à rehausser le moral de la troupe et à la remobiliser davantage », a-t-il déclaré. Le lieutenant-colonel Aboubacar Dadijan a indiqué également que le CEMGA a donné des orientations et des consignes « claires et précises », au cours de cette visite. Des directives que le commandement régional entend traduire rapidement en actions sur le terrain. « Dans les prochains jours, nous allons travailler à les traduire en actions concrètes sur le terrain, de sorte à être le plus efficace possible dans le cadre de l’exécution de nos différentes missions pour le bonheur du peuple Burkinabè », a-t-il assuré. Joanny SOW",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Burkina : Le PDS de la commune de Bittou rend hommage aux Forces combattantes lors de la cérémonie de montée des couleurs",
       "link": "https://www.aib.media/burkina-le-pds-de-la-commune-de-bittou-rend-hommage-aux-forces-combattantes-lors-de-la-ceremonie-de-montee-des-couleurs/",
       "pubDate": "2026-09-06T17:34:41.000Z",
@@ -969,109 +1067,12 @@
       "_desk": "A1"
     },
     {
-      "title": "Noumbiel : le vivre-ensemble au cœur de la première session du cadre de concertation provincial (CCP) à Batié",
-      "link": "https://www.aib.media/noumbiel-le-vivre-ensemble-au-coeur-de-la-premiere-session-du-cadre-de-concertation-provincial-ccp-a-batie/",
-      "pubDate": "2026-09-06T09:35:36.000Z",
-      "description": "BURKINA-PROMOTION-COHESION-PROVINCE-NOUMBIEL Noumbiel : le vivre-ensemble au cœur de la première session du cadre de concertation provincial (CCP) à Batié Batié, 04 septembre 2026 (AIB) – La province du Noumbiel a tenu, vendredi 03 septembre 2026 à Batié, la première session du cadre de concertation provincial (CCP). Elle a réuni les autorités administratives, militaires et paramilitaires, coutumières et religieuses, les partenaires au développement, les ONG ainsi que les organisations de la société civile (OSC). Cette rencontre visait, d’une part, à analyser l'état des conflits, leurs mécanismes de prévention et de gestion, et d’autre part, de trouver des moyens pour maintenir le vivre-ensemble et la cohésion sociale. Le cadre de concertation provincial (CCP) est un espace de dialogue permettant d'assurer une synergie d'action entre les acteurs locaux, en vue d'asseoir une coordination optimale pour un développement local durable. Présidé par le premier responsable de la province, Drissa Hema, les travaux de cette première session ont été marqués par des communications sur l'état des lieux des conflits, leur mode de prévention et leur gestion ainsi que le maintien du vivre-ensemble et de la cohésion sociale. D’autres sujets ont également été abordés, notamment la journée nationale de lutte anti-vectorielle et l'Agence pour la promotion de l'entrepreneuriat communautaire (APEC) comme levier de financement du développement endogène. Les échanges ont permis aux participants de partager leurs expériences, témoignages et propositions, en vue de dégager des pistes de solutions pour renforcer la paix, la cohésion sociale et le vivre-ensemble. Pour camarade Drissa Hema, c'est vraiment le « cadre idéal » car, la mise en commun des sectoriels favorise une synergie qui permet de travailler en faveur du développement endogène. Agence d'information du Burkina HO/ata/zs",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Balé : Des leaders d’opinion formés pour sensibiliser la population sur l’enregistrement systématique des faits d’état civil à Poura",
-      "link": "https://www.aib.media/bale-des-leaders-dopinion-formes-pour-sensibiliser-la-population-sur-lenregistrement-systematique-des-faits-detat-civil-a-poura/",
-      "pubDate": "2026-09-06T17:19:48.000Z",
-      "description": "Burkina/Balé-Formation-Etat-Civil Balé : Des leaders d'opinion formés pour sensibiliser la population sur l'enregistrement systématique des faits d'état civil à Poura Poura, 3 septembre 2026 (AIB) – Le ministère de l'administration territoriale et de la mobilité (MATM), à travers la direction générale de la modernisation de l'état civil (DGMEC), a organisé dans le cadre du PREGOLS, un atelier de sensibilisation des leaders coutumiers et religieux, des associations féminines et de jeunesses, sur l'enregistrement systématique des faits d'état civil, le mercredi 2 septembre 2026. C'est dans le souci de permettre aux populations d'acquérir de bonnes connaissances sur les avantages liés à la déclaration de la naissance, que cet atelier a été organisé aux profits des leaders d'opinion, afin qu'ils servent de relais communautaires de mobilisation sociale en vue d'accompagner l'enregistrement systématique des faits d'état civil dans la commune. Le Président de la délégation spéciale (PDS), Momini Sawadogo, s'est réjoui du fait que la commune de Poura fasse parti des 30 communes pilotes dans ce programme au Burkina Faso, avant d'inviter l'assistance à être très attentif pour partager l'information autour d'eux et dans leurs structures respectives. En effet, les participants ont eu droit à trois communications livrées par le camarade Ali Sawadogo en service à la direction générale de la modernisation de l'état civil (DGMEC) au Ministère de l'administration territoriale et de la mobilité. Ces communications ont porté sur l'importance de la documentation civil ; la procédure d'enregistrement des naissances ; le rôle des femmes, des leaders coutumiers et religieux, et des jeunes dans la sensibilisation de la communauté sur l'importance de la documentation civil. En ce qui concerne la procédure d'enregistrement des naissances, le camarade Rasmané Kaboré en service à l'état civil de la mairie a été sollicité pour intervenir sur ce point avec plus de détails. Il est à noter que les différentes communications ont été suivies d'échanges très fructueux avec des témoignages émouvant. Aussi, les préoccupations soulevées ont eu des réponses satisfaisantes. Les leaders qui étaient présents à la rencontre, marquée par une forte mobilisation féminine, ont pris l'engagement d'être des relais autour d'eux et dans les groupes Watshapp afin que l'objectif fixé par le ministère de l'administration territoriale et de la mobilité puisse être atteint d'ici 2030. Agence d'information du Burkina MS-DNK",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 103,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Tuy : Le PDS de Founzan suit l’évolution de la campagne agricole 2026-2027",
-      "link": "https://www.aib.media/tuy-le-pds-de-founzan-suit-levolution-de-la-campagne-agricole-2026-2027/",
-      "pubDate": "2026-09-06T17:03:03.000Z",
-      "description": "Tuy : Le PDS de Founzan suit l’évolution de la campagne agricole 2026-2027 Founzan, 6 sept. 2026 (AIB) – Le président de la délégation spéciale (PDS) de la commune de Founzan, Wahabo Kaboré, accompagné de responsables des services techniques et de plusieurs acteurs locaux, a effectué le vendredi 4 septembre 2026 une tournée de suivi de la campagne agricole 2026-2027 dans les villages de Yehoun et de Yerfing. À Yehoun, la délégation a visité le champ scolaire de l’école primaire, d’une superficie d’environ 1,5 hectare, emblavé en niébé. Elle a également visité deux champs des VDP agricoles. Le premier, d’un hectare, est consacré au maïs. Le second, d’une superficie de huit hectares, est consacré au soja. À Yerfing, la délégation s’est rendue dans un bas-fond aménagé exploité pour la riziculture. La visite a permis d’apprécier l’état d’évolution des cultures. Le chef des VDP agricoles, Hamani Yé, a relevé des difficultés liées notamment au démarrage tardif de la saison hivernale et à l’irrégularité des pluies. Malgré ces contraintes, il a réaffirmé la détermination des VDP agricoles à poursuivre les travaux. A chaque étape, le chef du service communal de l'agriculture, Basile Togo, a encouragé les producteurs. Il leur a prodigué des conseils sur les pratiques agricoles et donné des orientations sur certaines insuffisances constatées sur les parcelles. Le PDS Wahabo Kaboré a, pour sa part, salué les efforts consentis par les producteurs et les VDP agricoles. Il les a encouragés à maintenir leur engagement en faveur du développement agricole et de la sécurité alimentaire dans la commune. Agence d’information du Burkina LDNP/BEB/wis",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 103,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Tuy : les populations mobilisées avec l’appui des AIPO contre le paludisme",
-      "link": "https://www.aib.media/tuy-les-populations-mobilisees-avec-lappui-des-aipo-contre-le-paludisme/",
-      "pubDate": "2026-09-06T16:56:27.000Z",
-      "description": "Tuy : les populations mobilisées avec l'appui des AIPO contre le paludisme Houndé, 6 sept. 2026 (AIB) – La deuxième phase des Journées nationales de lutte anti-vectorielle a été lancée le samedi 5 septembre 2026 à Houndé, sous la présidence du secrétaire général de la province du Tuy, Dieudonné Zeida, représentant le Haut-Commissaire. Le lancement a mobilisé les autorités administratives et sanitaires, ainsi que des représentants des jeunes et des femmes. Les appelés de l’immersion patriotique obligatoire 2026 du Tuy ont également participé à l’activité. Le top de départ a été donné au secteur 3 de la ville à travers une sensibilisation des ménages et la destruction des gîtes larvaires notamment le bourrage des points d'eau stagnante. Le secrétaire général de la province du Tuy, Dieudonné Zeida, a appelé les populations à assainir leurs cadres de vie et à détruire les gîtes larvaires, notamment les eaux stagnantes et autres récipients pouvant favoriser la prolifération des moustiques. « En détruisant ces gîtes larvaires, nous contribuons à réduire la population des moustiques et, par conséquent, les cas de paludisme au sein de nos communautés », a-t-il indiqué. Le camarade Zeida a invité les agents de santé, les acteurs communautaires, les leaders d'opinion, les responsables d'associations et l'ensemble des populations à s'impliquer davantage dans cette lutte. Il a également exhorté les appelés à l'immersion patriotique obligatoire, à mettre à profit les connaissances acquises au cours de leur formation. Selon lui, ces jeunes doivent poursuivre la sensibilisation dans leurs quartiers et communautés. « L'immersion est terminée, mais les responsabilités continuent sur le terrain », a souligné le secrétaire général de la province. Le médecin-chef du district sanitaire de Houndé, Dr Youssouf Ouédraogo, a, pour sa part, rappelé que malgré les efforts consentis par les autorités et le système sanitaire, le paludisme demeure un problème de santé publique. Il a insisté sur la nécessité d'une implication de toute la communauté dans l'identification et la destruction des gîtes larvaires. « La lutte contre le paludisme n'est pas seulement l'affaire des agents de santé. C'est l'affaire de toute la communauté », a-t-il affirmé. Pour cette deuxième phase à Houndé, des agents de santé à base communautaire (ASBC) et des volontaires sont mobilisés pour identifier et détruire les gîtes larvaires dans les ménages. Le Dr Ouédraogo a également annoncé des opérations de pulvérisation spatiale dans 16 zones identifiées, ainsi que des activités d'assainissement, notamment le curage de certains caniveaux. Représentant les appelés à l'immersion patriotique obligatoire 2026 du Tuy, Issa Sankara a assuré que ses camarades entendent jouer pleinement leur rôle dans la sensibilisation des populations. Selon lui, les appelés se considèrent comme des relais dans leurs différents quartiers afin de contribuer au succès de la lutte anti-vectorielle. Pour rappel cette deuxième phase des Journées nationales de lutte ant-vectorielle se déroule les 5 et 6 septembre 2026. Agence d'information du Burkina BEB/wis",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Saïdou Maïga livre son témoignage à travers l’ouvrage « Le Maire de Falagountou »",
+      "link": "https://faso7.com/2026/09/06/saidou-maiga-livre-son-temoignage-a-travers-louvrage-le-maire-de-falagountou/",
+      "pubDate": "2026-09-06T15:39:26.000Z",
+      "description": "Un nouvel ouvrage vient enrichir la littérature burkinabè sur la gouvernance locale. Saïdou Maïga, Ambassadeur du Burkina Faso auprès du Sénégal, de la Guinée-Bissau, du Cap-Vert et de la Gambie, publie bientôt « Le Maire de Falagountou », aux éditions Mercury. Dans ce récit autobiographique, l'auteur revient sur son mandat à la tête de la commune rurale de Falagountou, dans le Sahel burkinabè, de 2016 à 2020. Élu à l'issue d'une campagne fondée sur le franc-parler et le refus de l'achat des consciences, il raconte comment il a apaisé le conflit de la chefferie coutumière, restauré l'autorité municipale, assaini la gestion des ressources et négocié avec les sociétés minières pour financer l'eau, l'école, la santé et l'autonomisation des jeunes et des femmes. Loin de toute autocélébration, Saïdou Maïga aborde sans détour les résistances politiques et la montée de l'insécurité, posant une question qui dépasse le seul cas de Falagountou : comment gouverner utilement quand les ressources sont limitées et les attentes immenses ? Ancien enfant de troupe, inspecteur des Impôts de formation, titulaire d'un Master en science politique et relations internationales (option décentralisation et gouvernance territoriale, ISM Dakar) et doctorant en sciences politiques à l'Université Cheikh Anta Diop (UCAD) de Dakar, l'auteur a évolué entre administration publique, engagement politique et leadership territorial. Le rendez-vous pour la dédicace est pris pour le 15 septembre 2026. L’article Saïdou Maïga livre son témoignage à travers l'ouvrage « Le Maire de Falagountou » est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1086,28 +1087,30 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "F2"
       },
-      "_rating": "C1",
-      "_score": 103,
+      "_rating": "F2",
+      "_score": 115,
       "_zone": 1,
-      "_theme": "N",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
+      "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Grand Prix Mogho Naaba des gardiens de but : Moussa Traoré de CEFFEB reçoit le trophée du meilleur gardien",
-      "link": "https://burkina24.com/2026/09/06/grand-prix-mogho-naaba-des-gardiens-de-but-moussa-traore-de-ceffeb-recoit-le-trophee-du-meilleur-gardien/",
-      "pubDate": "2026-09-06T16:46:11.000Z",
-      "description": "A Ouagadougou, le Palais du Mogho Naaba Baongho a accueilli, ce dimanche 6 septembre 2026, la deuxième édition du Grand Prix des gardiens de but. Cette année, c’est Moussa Traoré, gardien de but de CEFFEB, qui a été désigné meilleur gardien de la saison. Il succède à Ladji Sanou, désormais ancien gardien de l’AS SONABEL, … The post Grand Prix Mogho Naaba des gardiens de but : Moussa Traoré de CEFFEB reçoit le trophée du meilleur gardien appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
+      "title": "Burkina Faso : 41 certifiés en diplomatie et en action humanitaire reçoivent leurs parchemins à l’IACDI",
+      "link": "https://faso7.com/2026/09/06/burkina-faso-41-certifies-en-diplomatie-et-en-action-humanitaire-recoivent-leurs-parchemins-a-liacdi/",
+      "pubDate": "2026-09-06T12:56:00.000Z",
+      "description": "L’Institut d’Accompagnement des Carrières Diplomatiques et Internationales (IACDI) a organisé, le 5 septembre 2026 à Ouagadougou, la cérémonie de sortie conjointe de plusieurs promotions de certification. Sur les 47 candidats inscrits, 41 ont été déclarés admis dans les domaines de la diplomatie et de l’action humanitaire, de la diplomatie sécuritaire ainsi que de la diplomatie environnementale et climatique. Placée sous le thème « Les nouvelles formes de diplomatie (climatique, numérique, sanitaire…) » , la cérémonie a mis en lumière les mutations qui touchent aujourd’hui le champ diplomatique. Face à l’évolution des enjeux internationaux, la diplomatie s’étend désormais à des problématiques liées notamment au climat, au numérique, à la santé, à la sécurité et à l’action humanitaire. À travers ses différents programmes, l’IACDI entend contribuer au renforcement des compétences des professionnels appelés à intervenir dans ces domaines. L’institut ambitionne également de développer une expertise adaptée aux réalités africaines et de permettre aux participants de mieux appréhender les défis liés aux relations internationales. « Le certificat que vous recevez aujourd’hui a été mérité » (Zakaria Ouédraogo) Le bilan présenté au cours de la cérémonie fait état de 47 candidats inscrits aux quatre certifications. Parmi eux, 41 ont été déclarés admis, tandis que trois ont été recalés et trois autres ont abandonné. Pour le directeur général de l’IACDI, Zakaria Ouédraogo, ces résultats sont le fruit d’un parcours marqué par la rigueur. Les différentes certifications se sont déroulées sur une période d’au moins douze semaines, principalement les week-ends, avec des enseignements, des évaluations, des travaux personnels de recherche ainsi que des soutenances devant des jurys. « Le certificat que vous recevez aujourd’hui a été mérité. À l’IACDI, nous assumons ce choix de la rigueur, car la crédibilité d’une institution ne se mesure pas au nombre de certificats qu’elle délivre, mais à la qualité des femmes et des hommes qu’elle contribue à former. Votre certification s’achève aujourd’hui ; votre réseau, lui, doit véritablement commencer aujourd’hui » , a-t-il déclaré. « La diplomatie est avant tout un art de la responsabilité … » (Jean Guy T. Ilboudo) Dans le contexte sécuritaire actuel du Burkina Faso, la Diplomatie sécuritaire occupe une place particulière. Au nom des impétrants de cette certification, Jean Guy T. Ilboudo a relevé l’importance du dialogue, de la négociation et de l’anticipation dans la gestion des enjeux sécuritaires. « La diplomatie est avant tout un art de la responsabilité, du dialogue, de la négociation, de l’anticipation et de la recherche de solutions dans des environnements souvent complexes. Et lorsqu’elle rencontre les enjeux de sécurité, cette responsabilité devient encore plus grande », a-t-il souligné. « La diplomatie est aussi une affaire de relations humaines » (Seydou Bouda) Parrain de la cérémonie, Seydou Bouda, ancien ministre de la Santé et ancien ambassadeur, a invité les nouveaux certifiés à valoriser le réseau constitué au cours de leur formation. Il a notamment souligné la diversité des promotions, composées de participants burkinabè, maliens, nigériens et sénégalais. «Je voudrais particulièrement attirer votre attention sur un capital que vous avez commencé à constituer pendant ces mois de formation et qu’aucun certificat ne pourra véritablement matérialiser : votre réseau. Dans ma carrière, j’ai appris une chose essentielle : la diplomatie est aussi une affaire de relations humaines » , a-t-il déclaré. Selon lui, ce réseau pourra constituer un véritable levier de collaboration et ouvrir des opportunités dans les administrations publiques, les organisations internationales, les représentations diplomatiques, les ONG, les entreprises et les institutions régionales. Silvyane Bazié (stagiaire) Faso7 L’article Burkina Faso : 41 certifiés en diplomatie et en action humanitaire reçoivent leurs parchemins à l’IACDI est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
-        "economic"
+        "economic",
+        "diplomatic",
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -1116,14 +1119,14 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A2"
+        "rating": "F2"
       },
-      "_rating": "A2",
-      "_score": 103,
+      "_rating": "F2",
+      "_score": 115,
       "_zone": 1,
-      "_theme": null,
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
+      "_relevance": "A",
       "_desk": "A1"
     }
   ],
@@ -1132,8 +1135,24 @@
       "title": "Hollow Promises: Resetting Gaza’s Ceasefire",
       "link": "https://www.crisisgroup.org/rpt/middle-east-north-africa/israelpalestine-united-states/257-hollow-promises-resetting-gazas-ceasefire",
       "source": "ICG — International Crisis Group",
-      "date": "2026-09-06T20:24:11.470Z",
+      "date": "2026-09-06T22:53:41.974Z",
       "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "US envoy Kushner calls Israeli government 'irrational' on Gaza amid ceasefire violations",
+      "link": "https://www.aa.com.tr/en/americas/us-envoy-kushner-calls-israeli-government-irrational-on-gaza-amid-ceasefire-violations/4049139",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-09-06T20:54:48.000Z",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1193,22 +1212,6 @@
       ]
     },
     {
-      "title": "Serie A : Juventus – Milan, choc au sommet entre deux équipes invaincues",
-      "link": "https://beninwebtv.com/serie-a-juventus-milan-choc-au-sommet-entre-deux-equipes-invaincues/",
-      "source": "Bénin Web TV",
-      "date": "2026-09-06T15:20:26.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
       "title": "US redirect 92 ships since resumption of naval blockade of Iran — CENTCOM",
       "link": "https://tass.com/world/2183331",
       "source": "TASS (Russie, EN)",
@@ -1216,22 +1219,6 @@
       "rating": "D4",
       "evidence": "Narrative a corroborer",
       "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "US forces redirect 92 vessels amid maritime blockade against Iran",
-      "link": "https://www.aa.com.tr/en/middle-east/us-forces-redirect-92-vessels-amid-maritime-blockade-against-iran/4048846",
-      "source": "Anadolu Agency (Turquie)",
-      "date": "2026-09-06T12:19:57.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
       "bf": false,
       "majors": [
         {
@@ -1259,7 +1246,7 @@
     {
       "title": "Cinq ans après le coup d'État en Guinée, quel bilan pour la junte ?",
       "link": "https://www.france24.com/fr/vid%C3%A9o/20260906-cinq-ans-apr%C3%A8s-le-coup-d-%C3%A9tat-en-guin%C3%A9e-quel-bilan-pour-la-junte",
-      "source": "France 24",
+      "source": "France 24 Afrique",
       "date": "2026-09-06T09:56:01.000Z",
       "rating": "C6",
       "evidence": "Source unique",
@@ -1276,11 +1263,11 @@
   "narrativesByBloc": [
     [
       "afrique",
-      183
+      174
     ],
     [
       "occident_fr",
-      128
+      119
     ],
     [
       "autre",
@@ -1288,11 +1275,11 @@
     ],
     [
       "occident_us",
-      97
+      96
     ],
     [
       "golfe_mo",
-      88
+      87
     ],
     [
       "turquie",
@@ -1300,11 +1287,11 @@
     ],
     [
       "russie",
-      55
+      52
     ],
     [
       "bf_local",
-      32
+      50
     ],
     [
       "chine",
@@ -1312,7 +1299,7 @@
     ],
     [
       "sahel",
-      18
+      23
     ]
   ],
   "desks": [
@@ -1320,8 +1307,17 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 93,
+      "count": 112,
       "top": [
+        {
+          "title": "Confédération des États du Sahel : Le Burkina Faso abrite les Jeux de l’AES",
+          "link": "https://netafrique.net/confederation-des-etats-du-sahel-le-burkina-faso-abrite-les-jeux-de-laes/",
+          "source": "Net Afrique (BF)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "IIe Jeux de l’AES : Ouagadougou fin prête pour accueillir les trois nations du Sahel",
           "link": "https://www.sidwaya.info/iie-jeux-de-laes-ouagadougou-fin-prete-pour-accueillir-les-trois-nations-du-sahel/",
@@ -1341,31 +1337,22 @@
           "rating": "A2"
         },
         {
-          "title": "Burkina : Le PDS de la commune de Bittou rend hommage aux Forces combattantes lors de la cérémonie de montée des couleurs",
-          "link": "https://www.aib.media/burkina-le-pds-de-la-commune-de-bittou-rend-hommage-aux-forces-combattantes-lors-de-la-ceremonie-de-montee-des-couleurs/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Noumbiel : le vivre-ensemble au cœur de la première session du cadre de concertation provincial (CCP) à Batié",
-          "link": "https://www.aib.media/noumbiel-le-vivre-ensemble-au-coeur-de-la-premiere-session-du-cadre-de-concertation-provincial-ccp-a-batie/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Balé : Des leaders d’opinion formés pour sensibiliser la population sur l’enregistrement systématique des faits d’état civil à Poura",
-          "link": "https://www.aib.media/bale-des-leaders-dopinion-formes-pour-sensibiliser-la-population-sur-lenregistrement-systematique-des-faits-detat-civil-a-poura/",
-          "source": "AIB — Agence Information BF",
+          "title": "Insertion socioprofessionnelle : l’ASVOVIG forme 470 victimes de guerre et leurs ayants droit",
+          "link": "https://www.sidwaya.info/insertion-socioprofessionnelle-lasvovig-forme-470-victimes-de-guerre-et-leurs-ayants-droit/",
+          "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
           "rating": "C2"
+        },
+        {
+          "title": "6e Région militaire : le général de division Moussa Diallo exhorte les forces combattantes à rester soudées, engagées et disciplinées",
+          "link": "https://www.sidwaya.info/6e-region-militaire-le-general-de-division-moussa-diallo-exhorte-les-forces-combattantes-a-rester-soudees-engagees-et-disciplinees/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C1"
         }
       ]
     },
@@ -1373,11 +1360,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 53,
+      "count": 39,
       "top": [
         {
-          "title": "Atiku faults Tinubu over rising fuel, fertiliser prices",
-          "link": "https://www.vanguardngr.com/2026/09/atiku-faults-tinubu-over-rising-fuel-fertiliser-prices/",
+          "title": "IGP Disu inspects 23 police barracks, pledges improved welfare",
+          "link": "https://www.vanguardngr.com/2026/09/igp-disu-inspects-23-police-barracks-pledges-improved-welfare/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1385,39 +1372,39 @@
           "rating": "F2"
         },
         {
-          "title": "Police barracks: IGP sets December-January target for officers’ return",
-          "link": "https://www.vanguardngr.com/2026/09/police-barracks-igp-sets-december-january-target-for-officers-return/",
+          "title": "2027: I know Tinubu’s mistakes, I won’t blame him when I become President — Adebayo",
+          "link": "https://www.vanguardngr.com/2026/09/2027-i-know-tinubus-mistakes-i-wont-blame-him-when-i-become-president-adebayo/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "Enforcing environmental laws carries political cost, while offenders go unpunished – Frimpong-Boateng",
-          "link": "https://www.myjoyonline.com/enforcing-environmental-laws-carries-political-cost-while-offenders-go-unpunished-frimpong-boateng/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Galamsey fight collapsed after safeguards introduced in 2018 were abandoned – Prof Frimpong-Boateng",
-          "link": "https://www.myjoyonline.com/galamsey-fight-collapsed-after-safeguards-introduced-in-2018-were-abandoned-prof-frimpong-boateng/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Osimhen suffers groin injury as Galatasaray confirm adductor strain",
+          "link": "https://www.vanguardngr.com/2026/09/osimhen-suffers-groin-injury-as-galatasaray-confirm-adductor-strain/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "J",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Nigerian-British businessman dies after penis enlargement procedure in Thailand",
-          "link": "https://www.myjoyonline.com/nigerian-british-businessman-dies-after-penis-enlargement-procedure-in-thailand/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "NELFUND debunks claim of life jail term over loan repayment",
+          "link": "https://www.vanguardngr.com/2026/09/nelfund-debunks-claim-of-life-jail-term-over-loan-repayment/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
+          "theme": "I",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Nigeria pretending to practise democracy – Donald Duke",
+          "link": "https://www.vanguardngr.com/2026/09/nigeria-pretending-to-practise-democracy-donald-duke/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
           "rating": "F2"
         }
       ]
@@ -1426,7 +1413,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 36,
+      "count": 33,
       "top": [
         {
           "title": "Guinée-Bissau : le Gabon salue l’adoption de la nouvelle Constitution, approuvée à 70 %",
@@ -1479,17 +1466,8 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 26,
+      "count": 25,
       "top": [
-        {
-          "title": "Dans une Libye divisée, Donald Trump mise sur son « art du deal » pour se poser en faiseur de paix",
-          "link": "https://www.lemonde.fr/afrique/article/2026/09/06/dans-une-libye-divisee-donald-trump-mise-sur-son-art-du-deal-pour-se-poser-en-faiseur-de-paix_6766778_3212.html",
-          "source": "Le Monde Afrique",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B2"
-        },
         {
           "title": "Guerre franco-allemande de 1870 : le triste sort des tirailleurs algériens",
           "link": "https://www.tsa-algerie.com/guerre-franco-allemande-de-1870-le-triste-sort-des-tirailleurs-algeriens/",
@@ -1509,20 +1487,29 @@
           "rating": "F2"
         },
         {
-          "title": "À l’USFP, la fin de l’ère où les militants syndicaux se « cachaient »",
-          "link": "https://fr.hespress.com/487359-a-lusfp-la-fin-de-lere-ou-les-militants-syndicaux-se-cachaient.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Treize pays à l’exercice Phoenix Express sur les côtes tunisiennes",
           "link": "https://kapitalis.com/tunisie/2026/09/06/treize-pays-a-lexercice-phoenix-express-sur-les-cotes-tunisiennes/",
           "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "M",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Messages de prison de Saâdia Mosbah",
+          "link": "https://kapitalis.com/tunisie/2026/09/06/messages-de-prison-de-saadia-mosbah/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Kmar Douagi crée les Éditions Métèque à Marseille",
+          "link": "https://kapitalis.com/tunisie/2026/09/06/kmar-douagi-cree-les-editions-meteque-a-marseille/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "L",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1532,7 +1519,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 118,
+      "count": 120,
       "top": [
         {
           "title": "Child among 2 Palestinians killed in Israeli strike in Gaza despite ceasefire",
@@ -1562,18 +1549,18 @@
           "rating": "A1"
         },
         {
-          "title": "US forces redirect 92 vessels amid maritime blockade against Iran",
-          "link": "https://www.aa.com.tr/en/middle-east/us-forces-redirect-92-vessels-amid-maritime-blockade-against-iran/4048846",
+          "title": "US envoy Kushner calls Israeli government 'irrational' on Gaza amid ceasefire violations",
+          "link": "https://www.aa.com.tr/en/americas/us-envoy-kushner-calls-israeli-government-irrational-on-gaza-amid-ceasefire-violations/4049139",
           "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
-          "theme": "M",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Iran warns of 'more painful response' if US launches further attacks",
-          "link": "https://www.dawn.com/news/2027938/iran-warns-of-more-painful-response-if-us-launches-further-attacks",
-          "source": "Dawn (Pakistan)",
+          "title": "Iran threatens greater force if US launches more attacks",
+          "link": "https://www.vanguardngr.com/2026/09/iran-threatens-greater-force-if-us-launches-more-attacks/",
+          "source": "Vanguard (Nigeria)",
           "zone": "8. Moyen-Orient",
           "theme": "M",
           "relevance": "A",
@@ -1585,7 +1572,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 172,
+      "count": 165,
       "top": [
         {
           "title": "Guerre en Ukraine : après la visite des émissaires américains, Zelensky assure que la question territoriale ne peut être «résolue» que lors de rencontres entre présidents",
@@ -1606,24 +1593,6 @@
           "rating": "A1"
         },
         {
-          "title": "Volcano eruption leaves 150,000 passengers stranded in Indonesia",
-          "link": "https://www.myjoyonline.com/volcano-eruption-leaves-150000-passengers-stranded-in-indonesia/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "13. Asie du Sud-Est",
-          "theme": "J",
-          "relevance": ".",
-          "rating": "A1"
-        },
-        {
-          "title": "Serie A : Juventus – Milan, choc au sommet entre deux équipes invaincues",
-          "link": "https://beninwebtv.com/serie-a-juventus-milan-choc-au-sommet-entre-deux-equipes-invaincues/",
-          "source": "Bénin Web TV",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Cartographie : l'ONU soutient l'initiative africaine pour rétablir la véritable taille du continent",
           "link": "https://fr.hespress.com/487267-cartographie-lonu-soutient-linitiative-africaine-pour-retablir-la-veritable-taille-du-continent.html",
           "source": "Hespress (Maroc, FR)",
@@ -1631,6 +1600,24 @@
           "theme": "J",
           "relevance": "L",
           "rating": "F2"
+        },
+        {
+          "title": "Security forces kill over 20 terrorists during multiple engagements in KP: ISPR",
+          "link": "https://www.dawn.com/news/2027892/security-forces-kill-over-20-terrorists-during-multiple-engagements-in-kp-ispr",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Germany's far-right AfD emerges as landslide winner in eastern state vote",
+          "link": "https://www.dawn.com/news/2027934/germanys-far-right-afd-emerges-as-landslide-winner-in-eastern-state-vote",
+          "source": "Dawn (Pakistan)",
+          "zone": "9. Europe occidentale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     }
@@ -1639,8 +1626,7 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
-    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
@@ -1648,42 +1634,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-06T20:23:41.816Z",
+      "at": "2026-09-06T22:53:09.184Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-06T20:23:41.824Z",
+      "at": "2026-09-06T22:53:09.189Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-06T20:24:11.440Z",
+      "at": "2026-09-06T22:53:41.948Z",
       "agent": "Agent Collecte RSS",
-      "message": "105/170 flux OK, 1830 articles"
+      "message": "111/170 flux OK, 1911 articles"
     },
     {
-      "at": "2026-09-06T20:24:14.531Z",
+      "at": "2026-09-06T22:53:44.450Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-06T20:24:14.854Z",
+      "at": "2026-09-06T22:53:44.751Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-06T20:24:14.859Z",
+      "at": "2026-09-06T22:53:44.755Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 9 alertes"
+      "message": "8 developpements, 8 alertes"
     },
     {
-      "at": "2026-09-06T20:24:14.859Z",
+      "at": "2026-09-06T22:53:44.755Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-06T20:24:14.859Z",
+      "at": "2026-09-06T22:53:44.755Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
