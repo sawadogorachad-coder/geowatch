@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-09-06T15:28:26.486Z",
+  "generatedAt": "2026-09-06T20:24:14.857Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1919,
+    "ok": 105,
+    "failed": 65,
+    "articles": 1830,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -43,6 +38,11 @@
         "count": 10
       },
       {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "count": 0
+      },
+      {
         "id": "rss_mutations",
         "name": "Mutations BF",
         "count": 0
@@ -51,11 +51,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -98,11 +93,6 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -126,11 +116,6 @@
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
         "count": 20
-      },
-      {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "count": 12
       },
       {
         "id": "rss_guineenews",
@@ -233,11 +218,6 @@
         "count": 10
       },
       {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "count": 10
-      },
-      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -290,7 +270,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 25
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -343,11 +323,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -375,7 +350,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 14
+        "count": 12
       },
       {
         "id": "rss_fp",
@@ -400,7 +375,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 29
+        "count": 30
       },
       {
         "id": "rss_bbc_africa",
@@ -560,14 +535,19 @@
     ],
     "failedSources": [
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -615,6 +595,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -657,6 +642,11 @@
       {
         "id": "rss_togoinfos",
         "name": "Togo Infos",
+        "error": "HTTP 500"
+      },
+      {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
         "error": "HTTP 500"
       },
       {
@@ -707,7 +697,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -727,7 +717,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -743,6 +733,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -788,6 +783,11 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,46 +863,12 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 36,
+    "bfAes": 35,
     "alerts": 9,
-    "criticalAlerts": 5,
+    "criticalAlerts": 2,
     "sourcesDistinct": 64
   },
   "topDevelopments": [
-    {
-      "title": "L'Afrique en quête d'une médecine souveraine : Soixante ans de combat pour les savoirs médicaux endogènes",
-      "link": "https://lefaso.net/spip.php?article149051",
-      "pubDate": "2026-09-06T14:38:00.000Z",
-      "description": "De la reconnaissance culturelle à la souveraineté sanitaire, les savoirs médicaux endogènes africains ont parcouru un long chemin depuis les indépendances. Dans cette tribune, Boureima Ouédraogo, docteur en histoire contemporaine, spécialité Économie, Population et Relations internationales, retrace plus de six décennies d'évolution des politiques africaines en matière de médecine traditionnelle. À travers l'expérience du Burkina Faso et l'exemple vietnamien, il interroge les enjeux de recherche, de preuve, de réglementation et de valorisation des savoirs médicaux endogènes, tout en plaidant pour une médecine souveraine, capable de conjuguer rigueur scientifique, innovation et maîtrise des connaissances produites sur le continent. Introduction À Manga, dans la région du Nazinon, la Semaine nationale de la médecine traditionnelle et alternative s'achève le 5 septembre 2026. Le 31 août constitue la date officielle de la Journée africaine de la médecine traditionnelle, dont la cérémonie commémorative burkinabè se tient cette année à Manga. Depuis 2003, l'Afrique consacre ainsi une journée à des pratiques que les États avaient longtemps regardées avec méfiance, dans le prolongement d'une histoire coloniale qui les avait souvent reléguées à la superstition ou à l'empirisme. Parler aujourd'hui de savoirs médicaux endogènes permet cependant de dépasser une opposition trop simple entre « médecine traditionnelle » et « médecine moderne ». Il s'agit d'un ensemble de connaissances, de pratiques, de techniques, de représentations et de rapports au corps, à la maladie et au soin, construits au sein des sociétés africaines et transmis de génération en génération. Ces savoirs ne se limitent pas aux plantes ou aux remèdes. Ils comprennent également des manières d'observer, de diagnostiquer, de prévenir, de conseiller et de prendre en charge une personne dans son environnement social et culturel. Le thème inaugural de 2003, « la médecine traditionnelle, notre culture, notre avenir », exprimait d'abord une volonté de réhabilitation. En 2026, le thème continental porte sur les efforts de recherche et de développement de la médecine traditionnelle en vue de contribuer à la couverture sanitaire universelle. Au Burkina Faso, la Semaine nationale est placée sous le signe de la souveraineté sanitaire. Entre ces deux formulations se lit une transformation importante : en un peu plus de deux décennies, la question est passée de la reconnaissance culturelle à celle de la recherche, de la preuve, de la réglementation, de l'intégration et de la capacité à produire localement des réponses sanitaires. Cette histoire ne commence pourtant pas en 2003. Elle remonte aux lendemains des indépendances et, pour certaines initiatives scientifiques, aux années 1960. Retracer ce chemin permet de comprendre ce qui a changé, mais aussi ce qui demeure inachevé. Car une interrogation traverse toute cette évolution : comment valoriser les savoirs médicaux endogènes sans les idéaliser, mais sans les réduire non plus à ce qui est immédiatement traduisible dans les catégories de la biomédecine ? I. Un demi-siècle de reconquête, des indépendances à l'institutionnalisation Au lendemain des indépendances, les États africains héritent de systèmes de santé construits dans le cadre colonial. Les infrastructures sont concentrées dans les centres urbains et la couverture sanitaire demeure faible dans les campagnes. Dans ces espaces, les populations continuent pourtant de consulter des guérisseurs, des herboristes, des devins et d'autres praticiens. Il ne s'agit donc pas d'un retour de pratiques disparues : elles n'avaient jamais cessé d'exister. Ce qui change progressivement, c'est le regard que les nouveaux États portent sur elles. Dès 1960, au Ghana, Kwame Nkrumah encourage l'organisation des praticiens et la réhabilitation de l'herboristerie. Cette démarche répond à la fois à des préoccupations sanitaires et à une volonté de décolonisation culturelle. Les jeunes États doivent en effet répondre à trois exigences : satisfaire des besoins sanitaires réels, construire une identité nationale affranchie du regard colonial et réhabiliter des pratiques longtemps disqualifiées. Il est donc plus juste de parler de réhabilitation que de renaissance. Les pratiques médicales endogènes avaient continué à vivre dans les familles, les villages et les communautés, souvent en marge des institutions officielles. Leur reconnaissance répond à un impératif sanitaire, puisque les infrastructures modernes restent insuffisantes, mais aussi à un impératif culturel et politique. Construire une nation indépendante signifie également reprendre possession de son histoire, de ses langues, de ses cultures et de ses savoirs. La question médicale rejoint ainsi celle, plus générale, de la hiérarchie des connaissances héritée de la colonisation. Le tournant se joue progressivement à l'échelle continentale. En 1964, l'Organisation de l'unité africaine met en place la Commission scientifique, technique et de la recherche (CSTR). En 1968, un symposium interafricain sur le développement des plantes médicinales est organisé à Dakar. Le regard évolue alors : il ne s'agit plus seulement d'affirmer que ces pratiques appartiennent à la culture africaine, mais de déterminer ce que la recherche peut en documenter, en étudier et en évaluer. La « scientifisation » des savoirs médicaux endogènes possède ainsi une généalogie africaine qui précède la conférence d'Alma-Ata de 1978. Dans les années 1970, les rencontres se multiplient et les ambitions s'élargissent : inventorier les plantes médicinales, étudier leurs propriétés, former des chercheurs et envisager leur transformation. La médecine traditionnelle devient progressivement un objet de recherche scientifique et un potentiel instrument d'autonomie sanitaire et économique. Une résolution de l'OUA en 1981 dénonce l'exploitation des plantes médicinales africaines par des firmes étrangères et appelle à leur valorisation sur le continent. Elle encourage notamment la constitution d'inventaires, la conservation des ressources, la coopération scientifique et le développement des capacités locales. Une question essentielle apparaît alors, qui demeure actuelle : qui possède les ressources ? Qui détient les connaissances ? Qui les étudie et les transforme ? Et qui bénéficie de la valeur créée à partir de ces connaissances ? En 1985 paraît un jalon considérable : la première Pharmacopée africaine, publiée sous l'égide de l'OUA et de sa Commission scientifique, technique et de la recherche (CSTR). Cette publication constitue une autre étape importante. La mise par écrit, l'identification botanique et la normalisation des plantes médicinales facilitent la conservation et la transmission des connaissances. Mais elles soulèvent également une difficulté qui deviendra centrale : documenter un savoir peut contribuer à le protéger, mais peut aussi faciliter son appropriation lorsqu'il est détaché des communautés qui l'ont produit et conservé. L'élan des années 1980 se heurte cependant à des obstacles persistants : faiblesse des financements, insuffisance des infrastructures de recherche, manque de personnels spécialisés et absence de cadres réglementaires suffisamment harmonisés. Les crises économiques et les politiques d'ajustement structurel des années 1980 et 1990 ralentissent également les ambitions. Le 31 août 2000, les ministres africains de la Santé réunis à Ouagadougou adoptent une stratégie régionale qui articule reconnaissance, recherche, preuve, réglementation, qualité, sécurité et intégration dans les systèmes de santé. La Décennie africaine de la médecine traditionnelle est ensuite proclamée pour 2001-2010, avant que la Journée africaine de la médecine traditionnelle ne soit célébrée pour la première fois le 31 août 2003. La Journée n'est donc pas un commencement. Elle constitue l'aboutissement d'un processus engagé plusieurs décennies auparavant. Elle donne toutefois à ce processus une visibilité politique et symbolique nouvelle. II. Vingt-quatre thèmes, vingt-trois ans : le miroir d'un regard qui change Suivre les thèmes successifs de la Journée africaine permet d'observer l'évolution du regard institutionnel porté sur les savoirs médicaux endogènes. Le thème de 2003, « la médecine traditionnelle, notre culture, notre avenir », appartient à une phase de légitimation par l'identité. Il fallait d'abord affirmer que ces savoirs appartenaient aux sociétés africaines et méritaient une place dans les politiques publiques. Les années suivantes déplacent progressivement l'accent vers leur contribution possible à la santé, notamment dans le contexte des grands problèmes sanitaires auxquels le continent est confronté. Le passage de la « culture » à la « santé » est révélateur. En 2003, il fallait encore affirmer : ces savoirs sont les nôtres. Les thèmes suivants demandent davantage : quelle contribution peuvent-ils apporter aux populations ? À partir de 2007, le vocabulaire évolue encore. Recherche-développement, sécurité des patients, conservation des plantes et mesure de l'impact deviennent des préoccupations majeures. Le thème de 2012, « quel impact ? », résume cette nouvelle exigence. Après une décennie de promotion, les institutions veulent désormais mesurer les résultats obtenus. Entre 2014 et 2019 s'affirme une phase d'organisation : réglementation des praticiens, normalisation des produits, intégration dans les systèmes de santé, fabrication locale et prise en compte dans les cursus universitaires. Les savoirs médicaux endogènes deviennent simultanément un objet administratif, juridique, scientifique, industriel et académique. Cette institutionnalisation a un double visage. Elle peut protéger les patients, améliorer la qualité, lutter contre les produits falsifiés et faciliter la collaboration avec les services de santé. Mais elle peut aussi favoriser les éléments du savoir les plus faciles à identifier, doser, standardiser et enregistrer, au détriment de dimensions plus difficiles à faire entrer dans les catégories administratives ou scientifiques. C'est ici que se referme un piège qu'il faut nommer précisément : celui que les théoriciens de la décolonialité, Aníbal Quijano et Walter Mignolo, appellent la « colonialité du savoir ». Même indépendante politiquement, l'Afrique continue de juger ses propres connaissances avec des lunettes façonnées ailleurs. Regardez de près les vingt-quatre thèmes de cette Journée célébrée en Afrique : ils sont adoptés par les États membres de la Région africaine de l'OMS, mais dans un cadre normatif largement défini par l'OMS elle-même, une organisation dont la gouvernance reste marquée par des rapports de force hérités de l'ordre international. Et les tradipraticiens eux-mêmes, qui détiennent ces savoirs, ne sont jamais les auteurs de ces thèmes. Ils sont nommés, réglementés, formés, contrôlés , rarement consultés comme les maîtres de leur propre discipline. On parle d'eux ; on ne les laisse pas énoncer les règles. Le sociologue Pierre Bourdieu offre un mot pour désigner ce mécanisme précis : la « violence symbolique », l'imposition de critères de validation à ceux qui pratiquent et utilisent ces médecines, au nom d'une prétendue neutralité scientifique. Or une politique de valorisation ne peut être pleinement endogène si les praticiens restent essentiellement des objets de réglementation plutôt que des acteurs de définition des priorités. La question est donc moins de choisir entre « science occidentale » et savoirs africains que de savoir dans quelles conditions ces connaissances peuvent dialoguer. La trajectoire n'est d'ailleurs pas linéaire. À mesure que les savoirs gagnent en reconnaissance, ils doivent devenir compatibles avec des procédures administratives et scientifiques. Cette compatibilité est nécessaire pour certains enjeux, notamment la sécurité des patients, mais elle produit aussi une sélection. Ce qui peut être identifié, dosé, standardisé et enregistré entre plus facilement dans l'institution que ce qui relève de l'expérience, de la relation, de la parole ou du contexte social. Les thèmes récents témoignent néanmoins d'un élargissement du regard. En 2020 vient le temps du bilan. En 2021, la pandémie de Covid-19 conduit à interroger la contribution potentielle de ces savoirs à la riposte sanitaire. En 2022, la couverture sanitaire universelle devient centrale. En 2023, la notion de santé « holistique » apparaît explicitement. Les éditions de 2024 et 2025 insistent davantage sur la qualité, la sécurité et la base factuelle. En 2026, la recherche-développement et la couverture sanitaire universelle reviennent au premier plan. Les trois dernières éditions referment la boucle sur ce que l'on pourrait nommer le régime de la preuve : qualité et sécurité en 2024, renforcement de la base factuelle en 2025, et, en 2026, réflexion sur la recherche-développement au service de la couverture sanitaire universelle. Le thème de 2025 mérite qu'on s'y arrête : « renforcer la base factuelle de la médecine traditionnelle » exige que ces savoirs passent devant le tribunal de la preuve biomédicale, essais cliniques randomisés, toxicologie moderne, molécules purifiées. Les historiens et les analystes critiques y voient une forme subtile mais dévastatrice de colonialité du savoir : qui a le pouvoir de décréter ce qui est « factuel » ? Exiger des essais cliniques hors de prix pour des remèdes utilisés depuis des générations revient à disqualifier l'immense validation empirique acquise par l'usage de longue durée. De plus, ces coûts prohibitifs excluent de fait les tradipraticiens et les communautés locales, les dépossédant de leur propre savoir au profit des laboratoires pharmaceutiques internationaux. Le sociologue Boaventura de Sousa Santos appelle cette hiérarchie la « pensée abyssale », l'acte de tracer une ligne imaginaire dans le monde de la connaissance. D'un côté de la ligne, la « vraie science », celle des éprouvettes occidentales, décrétée universelle. De l'autre, les savoirs ancestraux, relégués au rang de folklore ou de croyances à valider. Exiger des essais cliniques de pointe pour des plantes utilisées en toute sécurité depuis des générations est un double standard frappant : la médecine moderne elle-même produit des médicaments certifiés par la science qui finissent retirés du marché pour leur dangerosité ( le Vioxx, la thalidomide) preuve que les essais cliniques ne garantissent pas, eux non plus, une innocuité absolue. Cette chronologie peut ainsi être lue en quatre temps : faire reconnaître, étudier, réglementer et intégrer, puis démontrer la contribution à la santé publique. Elle révèle également la persistance des mêmes difficultés. La collaboration entre praticiens et professionnels de santé revient régulièrement ; la recherche-développement réapparaît sous différentes formulations ; l'intégration et la réglementation restent des objectifs récurrents. Lorsque les mêmes préoccupations reviennent pendant plus de vingt ans, leur répétition devient elle-même une information historique. Elle montre que certaines ambitions sont reconnues depuis longtemps, mais que leur traduction concrète demeure incomplète. III. Standardiser sans réduire : le problème de la preuve Derrière la question de la preuve se trouve une difficulté plus profonde : que perd-on lorsqu'un système de connaissances est traduit dans les catégories d'un autre ? La biomédecine travaille notamment par identification, classification, dosage, expérimentation et évaluation. Ces méthodes sont indispensables pour établir des connaissances précises sur l'efficacité, la qualité et la sécurité des produits. Mais elles ne rendent pas nécessairement compte de toutes les dimensions d'une pratique thérapeutique. Dans de nombreuses sociétés africaines, soigner ne consiste pas seulement à administrer une substance. Le soin peut mobiliser le corps, la parole, la relation avec la famille et la communauté, l'environnement, ainsi que des dimensions sociales, culturelles ou spirituelles. C'est pourquoi la notion de savoirs médicaux endogènes est plus large que celle de « médecine traditionnelle ». Elle englobe des manières d'observer les symptômes, d'identifier une maladie, de préparer un remède, de conseiller un malade, de prévenir certaines affections et d'organiser la relation entre praticien et patient. Le pluralisme thérapeutique quotidien le montre bien. Une même personne peut fréquenter un hôpital, utiliser un remède préparé à domicile et consulter un praticien endogène, sans percevoir nécessairement de contradiction entre ces recours. Les frontières entre « moderne » et « traditionnel » que l'on retrouve dans certaines politiques publiques correspondent donc imparfaitement aux pratiques réelles des populations. Il ne s'agit pas pour autant de rejeter la recherche scientifique. Un remède transmis depuis plusieurs générations peut comporter des risques : erreur de dosage, contamination, mauvaise identification botanique ou interaction avec d'autres traitements. La sécurité des patients exige donc une évaluation rigoureuse. De même, l'ancienneté d'une pratique ne constitue pas automatiquement une preuve d'efficacité ou d'innocuité. Mais l'inverse est également important. Un usage thérapeutique prolongé constitue une forme d'expérience sociale et empirique qu'il serait réducteur d'ignorer. Cette expérience peut constituer un point de départ pour la recherche plutôt qu'une raison de disqualifier immédiatement une pratique parce qu'elle ne correspond pas à la forme dominante de la preuve. La question est donc de savoir comment produire des preuves sans détruire le contexte dans lequel les connaissances ont été construites. La nouvelle stratégie mondiale de l'OMS pour la médecine traditionnelle 2025-2034 va dans cette direction en mettant l'accent sur les données probantes, la sécurité, la réglementation, l'intégration dans les systèmes de santé et la collaboration avec les praticiens et les communautés. Cette évolution est importante, mais sa portée dépendra de la manière dont cette collaboration sera concrètement organisée. Les communautés et les praticiens ne devraient pas seulement intervenir au moment où les chercheurs viennent recueillir des informations. Ils doivent pouvoir participer, autant que possible, à la définition des questions, à la conception des recherches et à la discussion des résultats. La question de la preuve rejoint également celle de la propriété. Lorsqu'un savoir thérapeutique ou une ressource biologique est extrait de son contexte, étudié, transformé en produit puis protégé par des mécanismes de propriété intellectuelle, les communautés qui ont conservé ce savoir peuvent ne pas bénéficier à proportion de la valeur créée. Les asymétries technologiques, scientifiques et juridiques peuvent accentuer ce déséquilibre. C'est dans ce contexte que la notion de biopiraterie prend toute son importance. La valorisation scientifique ne doit pas devenir une nouvelle forme de dépossession. Le défi est donc de produire de la preuve sans produire de dépossession. La pensée de Joseph Ki-Zerbo permet d'éclairer cette orientation. L'endogénéité ne signifie pas le repli sur soi. Elle invite à partir de ses propres réalités, de ses ressources et de ses expériences pour construire l'avenir tout en restant ouvert aux échanges. Appliquée à la santé, cette approche conduit à considérer les savoirs médicaux endogènes comme un point d'appui pour l'innovation, et non comme un vestige qu'il faudrait moderniser jusqu'à le rendre méconnaissable. L'enjeu est ainsi double : établir des preuves suffisamment solides pour protéger les populations et améliorer les soins, tout en garantissant aux détenteurs des connaissances une place réelle dans le processus de recherche et de valorisation. IV. Ce que vingt ans de politiques ont changé, et ce qu'elles n'ont pas résolu Sur le plan institutionnel, le bilan des politiques africaines n'est pas négligeable. Selon les données de l'OMS pour la Région africaine, plus de quarante pays disposaient en 2022 d'une politique nationale de médecine traditionnelle, contre huit en 2000. Trente pays l'avaient intégrée dans leurs politiques nationales de santé et trente-neuf disposaient d'un cadre réglementaire pour les praticiens. Dix-neuf pays avaient également mis en place des unités de fabrication locale de médicaments à base de plantes. Dans quatorze pays, le nombre de médicaments traditionnels enregistrés avait progressé d'une vingtaine à plus d'une centaine. Ces chiffres montrent que la médecine traditionnelle n'est plus seulement tolérée à la périphérie des systèmes de santé. Elle fait désormais l'objet de politiques, de réglementations, de recherches et, dans certains pays, de capacités de production. Le Burkina Faso illustre cette évolution. À la veille de la Semaine nationale de 2026, le pays comptait environ cinq cents praticiens officiellement reconnus et dix-huit médicaments traditionnels homologués ou bénéficiant d'une autorisation de mise sur le marché. La question n'est donc plus celle de l'existence du secteur, mais de sa place dans l'architecture sanitaire nationale. La reconnaissance ne signifie toutefois pas que les problèmes soient réglés. La mise en œuvre des politiques demeure inégale ; les financements et les compétences spécialisées restent insuffisants ; les données sur la sécurité et l'efficacité de nombreux remèdes demeurent limitées ; la protection des savoirs et des ressources constitue toujours une préoccupation majeure. Une difficulté plus discrète concerne la connaissance statistique du secteur. Depuis plusieurs décennies, les organisations africaines et internationales encouragent l'identification et l'enregistrement des praticiens. Pourtant, dans de nombreux pays, les recensements restent partiels ou ponctuels. Comment intégrer pleinement un secteur dans le système national de santé lorsque l'on connaît encore imparfaitement son ampleur, sa répartition territoriale et ses spécialités ....? Le contraste avec le secteur biomédical est révélateur. Les structures de santé produisent régulièrement des données sur les consultations, les hospitalisations, les pathologies, les décès et les médicaments. Pour les pratiques médicales endogènes, les informations sont plus souvent produites à l'occasion d'enquêtes ou de travaux universitaires. Il existe ainsi un paradoxe : les États demandent progressivement davantage de preuves scientifiques, alors qu'ils disposent encore de données régulières limitées sur l'utilisation réelle et la contribution du secteur. La production statistique devrait donc devenir une composante à part entière de l'information sanitaire nationale. Recenser les praticiens, documenter leurs pratiques, suivre leur évolution et connaître les recours des populations ne relève pas uniquement de l'administration. C'est une condition pour rendre le secteur visible dans la planification, l'évaluation et l'allocation des ressources publiques. Cette réflexion conduit également à interroger le rôle de la Direction de la médecine traditionnelle et alternative (DMTA). Faut-il continuer à la considérer comme un secteur spécialisé à l'intérieur de l'administration sanitaire, ou faut-il lui donner une capacité institutionnelle plus importante pour assumer les multiples fonctions qui lui sont attribuées ? On pourrait alors se demander si l'enjeu ne serait pas, à terme, de renforcer considérablement l'autonomie de la DMTA, voire de réfléchir à une évolution institutionnelle permettant de lui donner une responsabilité politique plus forte. L'hypothèse d'un ministère délégué chargé des savoirs médicaux endogènes, de leur recherche, de leur validation et de leur valorisation peut paraître ambitieuse. Elle aurait néanmoins le mérite de poser clairement la question de la place que l'État entend accorder à ce patrimoine sanitaire, scientifique, culturel et économique. Une telle évolution ne signifierait pas nécessairement la séparation de ce secteur du ministère de la Santé, mais pourrait permettre de disposer d'une structure dotée de moyens et de compétences suffisamment importants pour coordonner une politique nationale cohérente. La stratégie mondiale de l'OMS pour 2025-2034 confirme que la question est désormais entrée dans une nouvelle phase. Il ne suffit plus de reconnaître la médecine traditionnelle. Il faut produire des connaissances, garantir la sécurité, organiser la réglementation, favoriser l'intégration et développer les capacités locales. Pour le Burkina Faso, une question historique et politique demeure alors posée : sommes-nous seulement en train d'intégrer certains savoirs dans un cadre sanitaire préexistant, ou construisons-nous une capacité propre à les documenter, les rechercher, les valider, les produire et à décider de leur place dans le système de santé ? C'est cette interrogation qui donne tout son sens au thème de Manga 2026. V. Manga 2026 : la santé comme terrain de souveraineté La 24ᵉ Journée africaine de la médecine traditionnelle prend une résonance particulière au Burkina Faso. Elle se déroule sous le signe d'une volonté affichée de renforcer la souveraineté sanitaire. Ce thème, consacré à l'introduction des médicaments traditionnels améliorés dans les directives nationales de prise en charge des maladies, en dit long sur cette orientation : il ne s'agit plus seulement de faire reconnaître ces pratiques, mais de les inscrire directement au cœur des protocoles de soins du pays. Selon les autorités sanitaires burkinabè, ce patrimoine, à la fois sanitaire, scientifique, culturel et économique, impose à l'État une responsabilité claire : organiser le secteur, protéger les populations, améliorer la qualité et la sécurité des pratiques et des produits, tout en favorisant la recherche et l'innovation. Mais cette ambition appelle une distinction essentielle : un médicament traditionnel amélioré n'est qu'une partie des savoirs médicaux endogènes. La standardisation d'un produit ne doit pas être confondue avec la standardisation de l'ensemble d'un système de connaissances. Face à cette normalisation qui reste, malgré tout, en partie pilotée depuis l'extérieur, des pays comme le Burkina Faso tentent de tracer leur propre chemin. En s'emparant du terme de « souveraineté sanitaire » lors des célébrations de 2026 à Manga, le Burkina Faso amorce ce que Walter Mignolo nomme la « désobéissance épistémique » : définir lui-même son agenda, intégrer directement les médicaments traditionnels améliorés dans ses protocoles de soins primaires, sans attendre forcément que les normes internationales ou les exigences de l'industrie pharmaceutique ne lui dictent sa conduite. Il ne s'agit pas de rejeter l'exigence de preuve, mais de refuser qu'elle soit systématiquement pensée, financée et validée hors du continent. C'est peut-être là que réside l'enjeu le plus stimulant de cette édition 2026 : montrer qu'un pays peut, à la fois, exiger la rigueur scientifique pour protéger ses populations et revendiquer le droit de construire, avec ses propres praticiens et chercheurs, les normes qui permettront de reconnaître pleinement la valeur de ses savoirs médicaux endogènes. Le vocabulaire de la souveraineté sanitaire peut être compris comme la volonté de renforcer la capacité nationale à définir ses priorités, organiser la recherche, évaluer les produits et mobiliser les ressources disponibles. Il ne signifie pas qu'il faille rejeter les normes internationales ou les exigences scientifiques. Il pose plutôt une question de capacité : qui définit les priorités ? Qui finance la recherche ? Qui produit les connaissances ? Qui transforme les ressources ? Et qui conserve la valeur créée ? L'expérience vietnamienne constitue, à cet égard, un précédent particulièrement éclairant. Il ne s'agit évidemment pas de rechercher un modèle à copier : l'histoire du Vietnam n'est pas celle du Burkina Faso, et la guerre d'indépendance vietnamienne ne peut être assimilée à la crise sécuritaire que connaît aujourd'hui le Burkina Faso. Mais certaines similitudes historiques permettent une comparaison féconde. Dans les deux cas, la domination étrangère a profondément marqué les institutions, les représentations et les rapports aux savoirs ; dans les deux cas, la construction de l'autonomie nationale s'est trouvée confrontée à la nécessité de mobiliser des ressources propres dans des contextes de fortes contraintes. Au Vietnam, cette réflexion fut formulée avec une remarquable netteté par Hồ Chí Minh au lendemain de la victoire de Điện Biên Phủ contre la France. Dans une lettre adressée en février 1955 à une conférence de cadres de la santé, il appelait à « construire notre propre médecine », rappelant l'expérience thérapeutique des ancêtres et invitant à combiner les apports des médecines orientale et occidentale afin de mieux répondre aux besoins de la population. Il précisa cette position quelques années plus tard : lors d'une visite à l'hôpital de médecine orientale le 16 janvier 1961, il souligna que chacune des deux traditions médicales possédait ses avantages et ses limites, et qu'il fallait rechercher ce que leur association pouvait apporter à la santé de la population, en invitant les praticiens des deux traditions à étudier mutuellement leurs systèmes respectifs. L'idée est importante : il ne s'agissait pas de choisir entre une médecine « traditionnelle » et une médecine « moderne », mais de construire une capacité médicale nationale à partir de plusieurs sources de connaissances. L'intérêt de cette position ne réside donc pas seulement dans la volonté de faire coexister deux médecines. Elle réside dans l'idée de construire une médecine nationale à partir des ressources du pays, tout en restant ouverte aux connaissances venues d'ailleurs. Dans le Vietnam de l'après-colonisation, la médecine devenait ainsi aussi un élément de la construction de l'indépendance. La question médicale rejoignait alors une question politique plus large : comment accéder aux savoirs scientifiques modernes sans perdre la capacité de penser et d'organiser soi-même son avenir ? Le contexte de guerre renforça cette nécessité : pendant les années de résistance, les populations et les combattants vietnamiens ne pouvaient dépendre exclusivement d'un système médical reposant sur des ressources et des approvisionnements extérieurs. Les plantes médicinales, les praticiens et les connaissances thérapeutiques disponibles dans les communautés participèrent à la prise en charge sanitaire. Le savoir endogène n'était donc plus seulement un héritage culturel à préserver ; il devenait également une ressource mobilisable dans un contexte où l'autonomie pouvait conditionner la capacité de résistance et, parfois, la survie. Au Burkina Faso, les expériences récentes montrent toutefois que cette articulation reste encore largement à construire. Durant la pandémie de Covid-19, les recettes dites traditionnelles ont été largement subalternisées dans les réponses officielles, tandis que des tradipraticiens déploraient leur faible implication. Dans le contexte actuel de crise sécuritaire, ces acteurs restent également peu présents dans les politiques et les discours relatifs à la prise en charge sanitaire, alors même qu'ils constituent, pour une partie de la population, des acteurs de premier recours. Il faut évidemment éviter toute comparaison mécanique. Les contextes historiques, politiques et sanitaires diffèrent profondément. Mais une question commune demeure : lorsque les contraintes extérieures sont fortes et les ressources limitées, dans quelle mesure un pays peut-il mobiliser ses propres ressources humaines, scientifiques, naturelles et institutionnelles pour répondre à ses besoins essentiels ? L'expérience vietnamienne ne dit donc pas ce que le Burkina Faso doit reproduire. Elle rappelle plutôt la nécessité de construire sa propre voie. Celle-ci pourrait articuler les savoirs médicaux endogènes, la biomédecine, la recherche scientifique contemporaine et les besoins réels des populations. Cette ambition suppose également de dépasser une histoire longue de hiérarchisation des savoirs. La médecine occidentale a longtemps été présentée comme la forme scientifique et moderne du savoir médical, tandis que les pratiques africaines étaient renvoyées à la coutume, à l'empirisme ou à la croyance. Les politiques de réhabilitation ont progressivement corrigé cette marginalisation, mais les représentations qu'elle a produites ne disparaissent pas immédiatement. Les méfiances sont d'ailleurs réciproques. Dans le secteur biomédical, certains praticiens endogènes peuvent être perçus comme insuffisamment documentés ou contrôlés. Du côté des praticiens endogènes, la recherche peut être perçue comme une démarche qui recueille des connaissances sans garantir suffisamment leur reconnaissance, leur protection ou un retour aux communautés. Ces difficultés ne sont donc pas seulement techniques. Elles sont aussi historiques. La souveraineté sanitaire exige par conséquent davantage que la présence de plantes médicinales ou la reconnaissance de praticiens. Elle suppose de pouvoir documenter les savoirs, conduire les recherches, former les chercheurs et les praticiens, produire des médicaments, contrôler leur qualité, protéger les connaissances des communautés et conserver une partie de la valeur créée par leur transformation scientifique et industrielle. Les initiatives de Manga constituent dans cette perspective une étape importante, mais non un aboutissement. L'homologation, la recherche, la formation et l'intégration répondent à des préoccupations portées depuis plusieurs décennies par l'OUA et l'OMS. La question décisive est maintenant celle de la capacité durable à produire localement des connaissances, des normes, des innovations et des produits. La recherche elle-même devrait devenir davantage endogène. Les chercheurs africains ne devraient pas être seulement les utilisateurs de méthodes, de financements et de critères définis ailleurs. Ils doivent pouvoir définir leurs questions, travailler avec les praticiens et les communautés, adapter les protocoles aux réalités africaines et conserver sur le continent une part substantielle de la valeur scientifique et économique produite. Partir de soi ne signifie pas se fermer au monde. Cela signifie disposer d'un point d'appui propre pour dialoguer avec lui. Une Afrique sanitaire véritablement souveraine ne serait donc pas une Afrique qui refuse la biomédecine internationale, les essais cliniques ou les normes de sécurité. Ce serait une Afrique capable de les mobiliser sans renoncer à ses propres ressources, à ses savoirs et à sa capacité de définir ses priorités. Conclusion Vingt-trois ans séparent le premier thème de la Journée africaine de la médecine traditionnelle, centré sur la culture et l'avenir, de celui de 2026, consacré à la recherche-développement et à la couverture sanitaire universelle. Entre ces deux dates, l'Afrique a profondément transformé le statut institutionnel de ses savoirs médicaux endogènes. De pratiques longtemps marginalisées, ils sont devenus une composante reconnue de nombreuses politiques de santé, avec des cadres réglementaires, des activités de recherche et des capacités de production en développement. Mais reconnaissance institutionnelle et reconnaissance épistémologique ne sont pas exactement la même chose. Tant que les savoirs sont principalement jugés à partir de catégories définies ailleurs, sans participation suffisamment forte de ceux qui les détiennent et les pratiquent, l'intégration risque de rester partiellement à sens unique. L'enjeu des prochaines années dépasse donc la seule homologation de produits. Il concerne la capacité des sociétés africaines à produire elles-mêmes les connaissances, les normes et les innovations nécessaires, tout en restant ouvertes aux apports de la science mondiale. La valorisation ne devrait pas conduire à la dépossession des communautés qui ont conservé les savoirs ; la recherche doit pouvoir produire des preuves tout en protégeant les droits et les intérêts de ceux qui rendent cette recherche possible. C'est ici que la réflexion de Joseph Ki-Zerbo sur l'endogénéité prend tout son sens. Partir de ses propres ressources ne signifie pas se fermer au monde. Cela signifie disposer d'un point d'appui pour choisir, adapter, dialoguer et construire. Dans le domaine sanitaire, cette démarche pourrait conduire à un véritable pluralisme médical, dans lequel biomédecine et savoirs médicaux endogènes se rencontrent sans que l'un doive nécessairement se dissoudre dans les catégories de l'autre. Manga 2026 peut alors être comprise comme une étape d'un long processus. La souveraineté sanitaire n'implique ni le rejet de la science ni le refus des normes de sécurité. Elle signifie la capacité à mobiliser les connaissances venues d'ailleurs tout en développant ses propres capacités de recherche, de production, de réglementation et de décision. Au fond, l'enjeu peut se résumer en quatre exigences : valoriser sans déposséder, moderniser sans effacer, sécuriser sans réduire et intégrer sans absorber. En 2003, le mot d'ordre était : « la médecine traditionnelle, notre culture, notre avenir ». En 2026, l'avenir ne consiste plus seulement à faire reconnaître ces savoirs. Il consiste à créer les conditions pour qu'ils puissent contribuer à la santé des populations selon des règles auxquelles les sociétés africaines auront elles-mêmes participé. À Manga, il ne s'agit donc pas de tourner le dos à la science, mais de revendiquer la capacité d'écrire, avec elle, une nouvelle page de l'histoire sanitaire africaine. Boureima OUEDRAOGO , Docteur en Histoire contemporaine, spécialité Économie, Population et Relations internationales ORCID : 0009-0005-9008-9313 ResearchGate : 🔗 https://www.researchgate.net/profile/Boureima-Ouedraogo Lire aussi : [Dr Boureima Ouédraogo : « Le Burkina Faso doit désormais passer de la reconnaissance des médecines endogènes à leur véritable valorisation > https://lefaso.net/spip.php?article148671 ]",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
     {
       "title": "IIe Jeux de l’AES : Ouagadougou fin prête pour accueillir les trois nations du Sahel",
       "link": "https://www.sidwaya.info/iie-jeux-de-laes-ouagadougou-fin-prete-pour-accueillir-les-trois-nations-du-sahel/",
@@ -917,40 +883,6 @@
         "economic",
         "diplomatic",
         "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Niger: le gouvernement affirme avoir constitué une documentation sur la tentative de déstabilisation",
-      "link": "https://www.aib.media/niger-le-gouvernement-affirme-avoir-constitue-une-documentation-sur-la-tentative-de-destabilisation/",
-      "pubDate": "2026-09-05T21:36:31.000Z",
-      "description": "NIGER-TENTATIVE-DESTABILISATION Niger: le gouvernement affirme avoir constitué une documentation sur la tentative de déstabilisation Ouagadougou, 5 sept. (AIB)- Le gouvernement nigérien a affirmé avoir constitué une « documentation conséquente » sur la tentative de déstabilisation survenue dans la nuit du 28 au 29 août 2026 à la Base 101 de Niamey et indique se réserver le droit d’engager des actions devant la justice internationale, selon le communiqué du Conseil des ministres du vendredi 4 septembre 2026. Selon le communiqué, cette tentative aurait été orchestrée par des éléments du Bataillon spécial de renseignement du Commandement des opérations spéciales, notamment à la Base 101 de Niamey. « Le Niger ne porte la guerre à aucun pays et ne nourrit pas cette velléité », souligne le gouvernement, précisant qu’une documentation a été constituée sur ce qu’il qualifie d’« agression ». Le Conseil des ministres affirme que l’opération aurait eu des « ramifications internationales » et l’attribue à un réseau de connivences dont le gouvernement nigérien accuse le régime français de jouer un rôle central. Il estime que cette action s’inscrit dans la continuité d’initiatives visant, selon lui, à « ébranler la volonté » du peuple nigérien en faveur de la souveraineté et d’une plus grande maîtrise des ressources naturelles. Le gouvernement dénonce également le rôle que certains acteurs africains auraient joué comme « passerelles » à des actions déstabilisatrices. Il assure toutefois que ces manœuvres « échoueront toujours », mettant en avant la détermination des forces de défense et de sécurité ainsi que la mobilisation de la population. Le Conseil des ministres s’est félicité de la mobilisation des forces sociales et de l’élan patriotique manifesté en soutien aux forces de défense et de sécurité, avec la Garde présidentielle comme fer de lance. Le gouvernement a par ailleurs présenté ses condoléances aux familles des victimes civiles et militaires et souhaité un prompt rétablissement aux blessés. Il a exprimé sa reconnaissance aux pays ayant manifesté leur solidarité au Niger, notamment les Etats membres de l’Alliance des Etats du Sahel (AES), l’Algérie et la Russie. Le communiqué invite enfin les Oulémas et la population à renforcer les prières, notamment « Al Qunut », ainsi que la vigilance et la veille citoyenne face aux menaces évoquées par le gouvernement. Agence d'information du Burkina Source: ANP, AMAP",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -1004,6 +936,39 @@
       "_desk": "A1"
     },
     {
+      "title": "Burkina : Le PDS de la commune de Bittou rend hommage aux Forces combattantes lors de la cérémonie de montée des couleurs",
+      "link": "https://www.aib.media/burkina-le-pds-de-la-commune-de-bittou-rend-hommage-aux-forces-combattantes-lors-de-la-ceremonie-de-montee-des-couleurs/",
+      "pubDate": "2026-09-06T17:34:41.000Z",
+      "description": "Burkina/Bittou-Montée-Couleurs Burkina : Le PDS de la commune de Bittou rend hommage aux Forces combattantes lors de la cérémonie de montée des couleurs Bittou, 4 septembre 2026 (AIB) – Le Président de la délégation spéciale (PDS) de la commune de Bittou, Mohamed Lamine Diabaté, a présidé, le vendredi 4 septembre 2026, la cérémonie mensuelle de montée des couleurs nationales, organisée dans la cour de l’agence de l’Office national de l’eau et de l’assainissement (ONEA) de Bittou. Cette cérémonie patriotique a réuni les Forces vives de la commune, notamment les représentants de la société civile, les appelés de l’immersion patriotique obligatoire ainsi que les Forces de défense et de sécurité (FDS). À cette occasion, le camarade Diabaté a rendu un vibrant hommage aux Forces combattantes pour leur engagement dans la reconquête du territoire national et la protection des populations. « La montée des couleurs est un acte patriotique autour duquel nous nous sentons Burkinabè. D’abord, je rends hommage aux Forces de défense et de sécurité et aux Volontaires pour la défense de la patrie (VDP). Je félicite également les appelés de l’immersion patriotique obligatoire de l’année 2026 pour leur discipline remarquable », a déclaré a-t-il déclaré. Le PDS a, par ailleurs, invité les appelés de l’immersion patriotique obligatoire à préserver et à mettre en pratique les valeurs patriotiques, civiques et disciplinaires acquises durant leur formation. Pour sa part, le chef d’agence de l’ONEA de Bittou, Claude Fabrice Ouédraogo, s’est réjoui de la forte mobilisation autour de cette cérémonie mensuelle. Il a exprimé sa reconnaissance aux autorités communales pour le choix de son service comme cadre d’accueil de cette activité patriotique. En marge de la cérémonie, une personne de bonne volonté a fait un geste en faveur des acteurs engagés dans la sécurité locale. Elle a offert des lampes-torches aux groupes d’autodéfense, communément appelés « Koglweogo », afin de contribuer à leurs activités de surveillance et de protection des populations. La cérémonie s’est achevée dans une ambiance empreinte de patriotisme et d’engagement citoyen autour du drapeau national. Agence d'information du Burkina SK-DNK",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Noumbiel : le vivre-ensemble au cœur de la première session du cadre de concertation provincial (CCP) à Batié",
       "link": "https://www.aib.media/noumbiel-le-vivre-ensemble-au-coeur-de-la-premiere-session-du-cadre-de-concertation-provincial-ccp-a-batie/",
       "pubDate": "2026-09-06T09:35:36.000Z",
@@ -1036,74 +1001,10 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina: Salif Yoda annonce « Wɔdɔkurɛ », un single inspiré de la culture bissa pour promouvoir l’unité et la solidarité",
-      "link": "https://www.aib.media/burkina-salif-yoda-annonce-w%c9%94d%c9%94kur%c9%9b-un-single-inspire-de-la-culture-bissa-pour-promouvoir-lunite-et-la-solidarite/",
-      "pubDate": "2026-09-05T21:21:36.000Z",
-      "description": "BURKINA-CULTURE-MUSIQUE Burkina: Salif Yoda annonce « Wɔdɔkurɛ », un single inspiré de la culture bissa pour promouvoir l'unité et la solidarité Ouagadougou, 4 sept. 2026 (AIB)- L'artiste-musicien burkinabè Salif Yoda, alias Doundosy, a indiqué jeudi qu'il mettra prochainement sur le marché discographique un nouveau single intitulé « Wɔdɔkurɛ », un concept ancestral bissa qui prône l'unité, l'entraide, la solidarité et la force de l'action collective. Selon l'artiste-musicien Salif Yoda, alias Doundosy, le concept « Wɔdɔkurɛ » signifie littéralement, dans la culture bissa, « joindre les mains ». Il renvoie à une philosophie fondée sur l'alliance, l'unité, la réconciliation et la solidarité. A travers son futur single, Doundosy entend adresser un message à l'ensemble des Burkinabè, les invitant à privilégier l'union face aux défis actuels auxquels le pays est confronté. « Wɔdɔkurɛ » peut ainsi se traduire, dans la vie familiale et communautaire, par la réconciliation entre proches, la conclusion d'alliances, le dépassement des rivalités ou encore la recherche d'un intérêt commun, a-t-il soutenu. L'artiste a également relevé que cette forme d'alliance occupait une place importante dans certaines traditions au Burkina. Dans le passé, a-t-il expliqué, les mariages entre familles influentes pouvaient notamment contribuer à consolider les relations, à apaiser les tensions et à créer de nouveaux liens entre communautés. Pour Doundosy, les Burkinabè disposent d'un patrimoine culturel dont la transmission repose sur les anciens, les familles, les communautés et, de plus en plus, sur les artistes. À son avis, c'est dans cette perspective que la musique apparaît comme un moyen de valoriser et de transmettre cet héritage culturel aux nouvelles générations. En choisissant « Wɔdɔkurɛ » comme titre de son prochain single, Doundosy souhaite donner une nouvelle vie à ce concept transmis de génération en génération, dans un contexte de retour aux sources culturelles prôné par les autorités burkinabè. Prévu pour sortir au cours de ce mois de septembre 2026, « Wɔdɔkurɛ » se veut ainsi un trait d'union entre tradition et modernité, héritage et création, avec un message central : « Lorsque les mains se joignent, la force devient collective. » Agence d'information du Burkina NO/yos",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "humanitarian"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Ghana : L’armée libère le corridor de la future autoroute Accra-Kumasi",
-      "link": "https://burkina24.com/2026/09/06/ghana-larmee-libere-le-corridor-de-la-future-autoroute-accra-kumasi/",
-      "pubDate": "2026-09-06T10:17:54.000Z",
-      "description": "Les Forces armées ghanéennes ont presque achevé le dégagement du corridor réservé à la future autoroute Accra-Kumasi. Alors que cette phase préparatoire touche à sa fin, le gouvernement assure avancer parallèlement sur le financement d’un projet évalué à près de 4 milliards de dollars, avec l’ambition de le réaliser sans nouvel emprunt, rapporte Top Africa. … The post Ghana : L’armée libère le corridor de la future autoroute Accra-Kumasi appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 107,
-      "_zone": 2,
-      "_theme": "S",
-      "_zoneShort": "2. AO anglo. & côtière",
-      "_relevance": "A",
-      "_desk": "A2"
-    },
-    {
-      "title": "Houet : Des jeunes et des femmes mobilisés pour nettoyer la cour de la mairie de Satiri",
-      "link": "https://www.aib.media/164468-2/",
-      "pubDate": "2026-09-06T14:46:43.000Z",
-      "description": "Houet : Des jeunes et des femmes mobilisés pour nettoyer la cour de la mairie de Satiri Satiri, 6 sept. 2026 (AIB) – Des jeunes et des femmes de Satiri se sont mobilisés, samedi, pour une opération de nettoyage de la cour de la mairie, à l’appel du président du Conseil villageois de développement (CVD), Lagassane Traoré. À travers cette initiative, les organisateurs entendent contribuer à l’assainissement du cadre de vie et encourager davantage la participation des populations aux travaux d’intérêt collectif. Pour Lagassane Traoré, les populations de Satiri doivent prendre leurs responsabilités et ne pas attendre que d’autres viennent effectuer à leur place les travaux d’intérêt communautaire. Il a toutefois déploré la faible mobilisation des jeunes lors des travaux publics organisés dans la commune. « Personne ne doit venir nettoyer à notre place », a-t-il souligné, invitant les jeunes à changer de mentalité et à s’impliquer davantage dans les actions de développement de leur commune. De son côté, la coordinatrice des femmes, Assiatou Traoré, a appelé les femmes à participer pleinement aux travaux communautaires. Elle a insisté sur la nécessité d’une mobilisation collective pour maintenir les espaces publics propres et contribuer au développement de Satiri. Cette opération de nettoyage s’inscrit ainsi dans une dynamique de sensibilisation des populations sur leur rôle dans l’entretien des infrastructures publiques et l’amélioration du cadre de vie. Agence d'information du Burkina AAT/AB/wis",
+      "title": "Balé : Des leaders d’opinion formés pour sensibiliser la population sur l’enregistrement systématique des faits d’état civil à Poura",
+      "link": "https://www.aib.media/bale-des-leaders-dopinion-formes-pour-sensibiliser-la-population-sur-lenregistrement-systematique-des-faits-detat-civil-a-poura/",
+      "pubDate": "2026-09-06T17:19:48.000Z",
+      "description": "Burkina/Balé-Formation-Etat-Civil Balé : Des leaders d'opinion formés pour sensibiliser la population sur l'enregistrement systématique des faits d'état civil à Poura Poura, 3 septembre 2026 (AIB) – Le ministère de l'administration territoriale et de la mobilité (MATM), à travers la direction générale de la modernisation de l'état civil (DGMEC), a organisé dans le cadre du PREGOLS, un atelier de sensibilisation des leaders coutumiers et religieux, des associations féminines et de jeunesses, sur l'enregistrement systématique des faits d'état civil, le mercredi 2 septembre 2026. C'est dans le souci de permettre aux populations d'acquérir de bonnes connaissances sur les avantages liés à la déclaration de la naissance, que cet atelier a été organisé aux profits des leaders d'opinion, afin qu'ils servent de relais communautaires de mobilisation sociale en vue d'accompagner l'enregistrement systématique des faits d'état civil dans la commune. Le Président de la délégation spéciale (PDS), Momini Sawadogo, s'est réjoui du fait que la commune de Poura fasse parti des 30 communes pilotes dans ce programme au Burkina Faso, avant d'inviter l'assistance à être très attentif pour partager l'information autour d'eux et dans leurs structures respectives. En effet, les participants ont eu droit à trois communications livrées par le camarade Ali Sawadogo en service à la direction générale de la modernisation de l'état civil (DGMEC) au Ministère de l'administration territoriale et de la mobilité. Ces communications ont porté sur l'importance de la documentation civil ; la procédure d'enregistrement des naissances ; le rôle des femmes, des leaders coutumiers et religieux, et des jeunes dans la sensibilisation de la communauté sur l'importance de la documentation civil. En ce qui concerne la procédure d'enregistrement des naissances, le camarade Rasmané Kaboré en service à l'état civil de la mairie a été sollicité pour intervenir sur ce point avec plus de détails. Il est à noter que les différentes communications ont été suivies d'échanges très fructueux avec des témoignages émouvant. Aussi, les préoccupations soulevées ont eu des réponses satisfaisantes. Les leaders qui étaient présents à la rencontre, marquée par une forte mobilisation féminine, ont pris l'engagement d'être des relais autour d'eux et dans les groupes Watshapp afin que l'objectif fixé par le ministère de l'administration territoriale et de la mobilité puisse être atteint d'ici 2030. Agence d'information du Burkina MS-DNK",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -1126,9 +1027,103 @@
       "_rating": "C2",
       "_score": 103,
       "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Tuy : Le PDS de Founzan suit l’évolution de la campagne agricole 2026-2027",
+      "link": "https://www.aib.media/tuy-le-pds-de-founzan-suit-levolution-de-la-campagne-agricole-2026-2027/",
+      "pubDate": "2026-09-06T17:03:03.000Z",
+      "description": "Tuy : Le PDS de Founzan suit l’évolution de la campagne agricole 2026-2027 Founzan, 6 sept. 2026 (AIB) – Le président de la délégation spéciale (PDS) de la commune de Founzan, Wahabo Kaboré, accompagné de responsables des services techniques et de plusieurs acteurs locaux, a effectué le vendredi 4 septembre 2026 une tournée de suivi de la campagne agricole 2026-2027 dans les villages de Yehoun et de Yerfing. À Yehoun, la délégation a visité le champ scolaire de l’école primaire, d’une superficie d’environ 1,5 hectare, emblavé en niébé. Elle a également visité deux champs des VDP agricoles. Le premier, d’un hectare, est consacré au maïs. Le second, d’une superficie de huit hectares, est consacré au soja. À Yerfing, la délégation s’est rendue dans un bas-fond aménagé exploité pour la riziculture. La visite a permis d’apprécier l’état d’évolution des cultures. Le chef des VDP agricoles, Hamani Yé, a relevé des difficultés liées notamment au démarrage tardif de la saison hivernale et à l’irrégularité des pluies. Malgré ces contraintes, il a réaffirmé la détermination des VDP agricoles à poursuivre les travaux. A chaque étape, le chef du service communal de l'agriculture, Basile Togo, a encouragé les producteurs. Il leur a prodigué des conseils sur les pratiques agricoles et donné des orientations sur certaines insuffisances constatées sur les parcelles. Le PDS Wahabo Kaboré a, pour sa part, salué les efforts consentis par les producteurs et les VDP agricoles. Il les a encouragés à maintenir leur engagement en faveur du développement agricole et de la sécurité alimentaire dans la commune. Agence d’information du Burkina LDNP/BEB/wis",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 103,
+      "_zone": 1,
       "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Tuy : les populations mobilisées avec l’appui des AIPO contre le paludisme",
+      "link": "https://www.aib.media/tuy-les-populations-mobilisees-avec-lappui-des-aipo-contre-le-paludisme/",
+      "pubDate": "2026-09-06T16:56:27.000Z",
+      "description": "Tuy : les populations mobilisées avec l'appui des AIPO contre le paludisme Houndé, 6 sept. 2026 (AIB) – La deuxième phase des Journées nationales de lutte anti-vectorielle a été lancée le samedi 5 septembre 2026 à Houndé, sous la présidence du secrétaire général de la province du Tuy, Dieudonné Zeida, représentant le Haut-Commissaire. Le lancement a mobilisé les autorités administratives et sanitaires, ainsi que des représentants des jeunes et des femmes. Les appelés de l’immersion patriotique obligatoire 2026 du Tuy ont également participé à l’activité. Le top de départ a été donné au secteur 3 de la ville à travers une sensibilisation des ménages et la destruction des gîtes larvaires notamment le bourrage des points d'eau stagnante. Le secrétaire général de la province du Tuy, Dieudonné Zeida, a appelé les populations à assainir leurs cadres de vie et à détruire les gîtes larvaires, notamment les eaux stagnantes et autres récipients pouvant favoriser la prolifération des moustiques. « En détruisant ces gîtes larvaires, nous contribuons à réduire la population des moustiques et, par conséquent, les cas de paludisme au sein de nos communautés », a-t-il indiqué. Le camarade Zeida a invité les agents de santé, les acteurs communautaires, les leaders d'opinion, les responsables d'associations et l'ensemble des populations à s'impliquer davantage dans cette lutte. Il a également exhorté les appelés à l'immersion patriotique obligatoire, à mettre à profit les connaissances acquises au cours de leur formation. Selon lui, ces jeunes doivent poursuivre la sensibilisation dans leurs quartiers et communautés. « L'immersion est terminée, mais les responsabilités continuent sur le terrain », a souligné le secrétaire général de la province. Le médecin-chef du district sanitaire de Houndé, Dr Youssouf Ouédraogo, a, pour sa part, rappelé que malgré les efforts consentis par les autorités et le système sanitaire, le paludisme demeure un problème de santé publique. Il a insisté sur la nécessité d'une implication de toute la communauté dans l'identification et la destruction des gîtes larvaires. « La lutte contre le paludisme n'est pas seulement l'affaire des agents de santé. C'est l'affaire de toute la communauté », a-t-il affirmé. Pour cette deuxième phase à Houndé, des agents de santé à base communautaire (ASBC) et des volontaires sont mobilisés pour identifier et détruire les gîtes larvaires dans les ménages. Le Dr Ouédraogo a également annoncé des opérations de pulvérisation spatiale dans 16 zones identifiées, ainsi que des activités d'assainissement, notamment le curage de certains caniveaux. Représentant les appelés à l'immersion patriotique obligatoire 2026 du Tuy, Issa Sankara a assuré que ses camarades entendent jouer pleinement leur rôle dans la sensibilisation des populations. Selon lui, les appelés se considèrent comme des relais dans leurs différents quartiers afin de contribuer au succès de la lutte anti-vectorielle. Pour rappel cette deuxième phase des Journées nationales de lutte ant-vectorielle se déroule les 5 et 6 septembre 2026. Agence d'information du Burkina BEB/wis",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "N",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": ".",
+      "_desk": "A1"
+    },
+    {
+      "title": "Grand Prix Mogho Naaba des gardiens de but : Moussa Traoré de CEFFEB reçoit le trophée du meilleur gardien",
+      "link": "https://burkina24.com/2026/09/06/grand-prix-mogho-naaba-des-gardiens-de-but-moussa-traore-de-ceffeb-recoit-le-trophee-du-meilleur-gardien/",
+      "pubDate": "2026-09-06T16:46:11.000Z",
+      "description": "A Ouagadougou, le Palais du Mogho Naaba Baongho a accueilli, ce dimanche 6 septembre 2026, la deuxième édition du Grand Prix des gardiens de but. Cette année, c’est Moussa Traoré, gardien de but de CEFFEB, qui a été désigné meilleur gardien de la saison. Il succède à Ladji Sanou, désormais ancien gardien de l’AS SONABEL, … The post Grand Prix Mogho Naaba des gardiens de but : Moussa Traoré de CEFFEB reçoit le trophée du meilleur gardien appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": null,
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": ".",
       "_desk": "A1"
     }
   ],
@@ -1137,7 +1132,7 @@
       "title": "Hollow Promises: Resetting Gaza’s Ceasefire",
       "link": "https://www.crisisgroup.org/rpt/middle-east-north-africa/israelpalestine-united-states/257-hollow-promises-resetting-gazas-ceasefire",
       "source": "ICG — International Crisis Group",
-      "date": "2026-09-06T15:28:23.222Z",
+      "date": "2026-09-06T20:24:11.470Z",
       "rating": "A2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1146,6 +1141,70 @@
         {
           "type": "diplo_majeur",
           "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Child among 2 Palestinians killed in Israeli strike in Gaza despite ceasefire",
+      "link": "https://www.aa.com.tr/en/middle-east/child-among-2-palestinians-killed-in-israeli-strike-in-gaza-despite-ceasefire/4049012",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-09-06T17:28:50.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Iran touts military response as US maintains blockade, hits tankers",
+      "link": "https://www.aljazeera.com/news/2026/9/6/iran-touts-military-response-as-us-maintains-blockade-hits-tankers?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-09-06T16:17:06.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Allemagne : l’AfD aux portes du pouvoir régional, un «séisme politique» en vue",
+      "link": "https://francais.rt.com/international/137770-allemagne-afd-portes-pouvoir-regional-saxe-ulrich-siegmund",
+      "source": "RT en français",
+      "date": "2026-09-06T15:57:55.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "Serie A : Juventus – Milan, choc au sommet entre deux équipes invaincues",
+      "link": "https://beninwebtv.com/serie-a-juventus-milan-choc-au-sommet-entre-deux-equipes-invaincues/",
+      "source": "Bénin Web TV",
+      "date": "2026-09-06T15:20:26.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
         }
       ]
     },
@@ -1212,92 +1271,28 @@
           "keyword": "coup d'état"
         }
       ]
-    },
-    {
-      "title": "Catastrophe au Népal : le coût de la reconstruction estimé à 4 milliards de dollars",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260906-catastrophe-au-n%C3%A9pal-le-co%C3%BBt-de-la-reconstruction-estim%C3%A9-%C3%A0-4-milliards-de-dollars",
-      "source": "France 24",
-      "date": "2026-09-06T09:17:03.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "catastrophe"
-        }
-      ]
-    },
-    {
-      "title": "Nouveau bilan de l’effondrement du chantier de construction à Maal : 5 morts",
-      "link": "https://fr.saharamedias.net/nouveau-bilan-de-leffondrement-du-chantier-de-construction-a-maal-5-morts/",
-      "source": "Sahara Médias",
-      "date": "2026-09-06T00:14:44.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "effondrement"
-        }
-      ]
-    },
-    {
-      "title": "Mauritanie : le ministère de l’Intérieur annonce des mesures d’urgence suite à l’effondrement d’un bâtiment à Maal",
-      "link": "https://fr.saharamedias.net/mauritanie-le-ministere-de-linterieur-annonce-des-mesures-durgence-suite-a-leffondrement-dun-batiment-a-maal/",
-      "source": "Sahara Médias",
-      "date": "2026-09-06T00:04:06.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "effondrement"
-        }
-      ]
-    },
-    {
-      "title": "Diplomatie et développement : La ministre Oumou Sall Seck accueillie au Caire pour un sommet clé de la Banque Islamique de Développement",
-      "link": "https://malijet.com/a_la_une_du_mali/311659-diplomatie-et-developpement-la-ministre-oumou-sall-seck-ac.html",
-      "source": "Malijet",
-      "date": "2026-09-05T20:16:51.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      168
+      183
     ],
     [
       "occident_fr",
-      130
+      128
     ],
     [
       "autre",
-      119
+      109
     ],
     [
       "occident_us",
-      106
+      97
     ],
     [
       "golfe_mo",
-      74
+      88
     ],
     [
       "turquie",
@@ -1305,19 +1300,19 @@
     ],
     [
       "russie",
-      53
-    ],
-    [
-      "chine",
-      33
+      55
     ],
     [
       "bf_local",
-      29
+      32
+    ],
+    [
+      "chine",
+      30
     ],
     [
       "sahel",
-      28
+      18
     ]
   ],
   "desks": [
@@ -1325,30 +1320,12 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 94,
+      "count": 93,
       "top": [
-        {
-          "title": "L'Afrique en quête d'une médecine souveraine : Soixante ans de combat pour les savoirs médicaux endogènes",
-          "link": "https://lefaso.net/spip.php?article149051",
-          "source": "Lefaso.net",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
         {
           "title": "IIe Jeux de l’AES : Ouagadougou fin prête pour accueillir les trois nations du Sahel",
           "link": "https://www.sidwaya.info/iie-jeux-de-laes-ouagadougou-fin-prete-pour-accueillir-les-trois-nations-du-sahel/",
           "source": "Sidwaya",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Niger: le gouvernement affirme avoir constitué une documentation sur la tentative de déstabilisation",
-          "link": "https://www.aib.media/niger-le-gouvernement-affirme-avoir-constitue-une-documentation-sur-la-tentative-de-destabilisation/",
-          "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
           "relevance": "A",
@@ -1364,11 +1341,29 @@
           "rating": "A2"
         },
         {
+          "title": "Burkina : Le PDS de la commune de Bittou rend hommage aux Forces combattantes lors de la cérémonie de montée des couleurs",
+          "link": "https://www.aib.media/burkina-le-pds-de-la-commune-de-bittou-rend-hommage-aux-forces-combattantes-lors-de-la-ceremonie-de-montee-des-couleurs/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
           "title": "Noumbiel : le vivre-ensemble au cœur de la première session du cadre de concertation provincial (CCP) à Batié",
           "link": "https://www.aib.media/noumbiel-le-vivre-ensemble-au-coeur-de-la-premiere-session-du-cadre-de-concertation-provincial-ccp-a-batie/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Balé : Des leaders d’opinion formés pour sensibiliser la population sur l’enregistrement systématique des faits d’état civil à Poura",
+          "link": "https://www.aib.media/bale-des-leaders-dopinion-formes-pour-sensibiliser-la-population-sur-lenregistrement-systematique-des-faits-detat-civil-a-poura/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
           "relevance": "A",
           "rating": "C2"
         }
@@ -1378,51 +1373,51 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 51,
+      "count": 53,
       "top": [
         {
-          "title": "Ghana : L’armée libère le corridor de la future autoroute Accra-Kumasi",
-          "link": "https://burkina24.com/2026/09/06/ghana-larmee-libere-le-corridor-de-la-future-autoroute-accra-kumasi/",
-          "source": "Burkina24",
+          "title": "Atiku faults Tinubu over rising fuel, fertiliser prices",
+          "link": "https://www.vanguardngr.com/2026/09/atiku-faults-tinubu-over-rising-fuel-fertiliser-prices/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         },
         {
-          "title": "CAF Confederation Cup: Dennis Korsah confident Nations FC can overturn Mali defeat",
-          "link": "https://www.myjoyonline.com/caf-confederation-cup-dennis-korsah-confident-nations-fc-can-overturn-mali-defeat/",
+          "title": "Police barracks: IGP sets December-January target for officers’ return",
+          "link": "https://www.vanguardngr.com/2026/09/police-barracks-igp-sets-december-january-target-for-officers-return/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Enforcing environmental laws carries political cost, while offenders go unpunished – Frimpong-Boateng",
+          "link": "https://www.myjoyonline.com/enforcing-environmental-laws-carries-political-cost-while-offenders-go-unpunished-frimpong-boateng/",
           "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Political thugs attack NDC office in Rivers, destroy billboards",
-          "link": "https://www.vanguardngr.com/2026/09/political-thugs-attack-ndc-office-in-rivers-destroy-billboards/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Omo-Agege seeks pastors’ backing, alleges threat to life, calls for support for Obi, Iyowaye",
-          "link": "https://www.vanguardngr.com/2026/09/omo-agege-seeks-pastors-backing-alleges-threat-to-life-calls-for-support-for-obi-iyowaye/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Customs appoints Dim DCG, five ACGs, generates N4.3tn",
-          "link": "https://www.vanguardngr.com/2026/09/customs-appoints-dim-dcg-five-acgs-generates-n4-3tn/",
-          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Galamsey fight collapsed after safeguards introduced in 2018 were abandoned – Prof Frimpong-Boateng",
+          "link": "https://www.myjoyonline.com/galamsey-fight-collapsed-after-safeguards-introduced-in-2018-were-abandoned-prof-frimpong-boateng/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Nigerian-British businessman dies after penis enlargement procedure in Thailand",
+          "link": "https://www.myjoyonline.com/nigerian-british-businessman-dies-after-penis-enlargement-procedure-in-thailand/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         }
       ]
@@ -1431,52 +1426,52 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 29,
+      "count": 36,
       "top": [
         {
-          "title": "Walikale : de nouveaux déplacés affluent à Kyumba et Langira après l’intensification des combats à Masisi",
-          "link": "https://actualite.cd/2026/09/06/walikale-de-nouveaux-deplaces-affluent-kyumba-et-langira-apres-lintensification-des",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
+          "title": "Guinée-Bissau : le Gabon salue l’adoption de la nouvelle Constitution, approuvée à 70 %",
+          "link": "https://www.gabonreview.com/guinee-bissau-le-gabon-salue-ladoption-de-la-nouvelle-constitution-approuvee-a-70/",
+          "source": "Gabon Review",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "CAF C1 : première victoire historique des Aigles du Congo, succès de Mazembe à l’extérieur",
+          "link": "https://www.radiookapi.net/2026/09/06/actualite/sport/caf-c1-premiere-victoire-historique-des-aigles-du-congo-succes-de-mazembe",
+          "source": "Radio Okapi (RDC)",
+          "zone": "3. Afrique centrale",
           "theme": "H",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "La guerre au Nord-Kivu entraine une rareté de viande à Masisi",
-          "link": "https://www.radiookapi.net/2026/09/06/actualite/societe/la-guerre-au-nord-kivu-entraine-une-rarete-de-viande-masisi",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "L",
-          "relevance": "L",
-          "rating": "F2"
-        },
-        {
-          "title": "Centrafrique: à Zamboye, un village qui vacille avec la fermeture de la mine [3/3]",
-          "link": "https://www.rfi.fr/fr/podcasts/reportage-afrique/20260905-centrafrique-%C3%A0-zambo%C3%AF-un-village-qui-vacille-avec-la-fermeture-de-la-mine-3-3",
-          "source": "RFI Afrique",
+          "title": "Ligue des champions CAF : Mangasport écrase African Stars (3-1) et prend une option pour le tour suivant",
+          "link": "https://www.gabonreview.com/ligue-des-champions-caf-mangasport-ecrase-african-stars-3-1-et-prend-une-option-pour-le-tour-suivant/",
+          "source": "Gabon Review",
           "zone": "3. Afrique centrale",
           "theme": "E",
           "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Festival international des danses Bosangani : la 6ème édition axée sur les richesses et valeurs de la RDC",
-          "link": "https://www.radiookapi.net/2026/09/06/actualite/culture/festival-international-des-danses-bosangani-la-6eme-edition-axee-sur",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": null,
-          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Life on the frontline against Ebola",
-          "link": "https://www.ft.com/content/abd30cb8-08f6-4a1a-a92b-f1fcc339ea82?syn-25a6b1a6=1",
-          "source": "Financial Times World",
+          "title": "Autorité, communication, bien-être : la formule du leadership selon Odillon Ingénierie",
+          "link": "https://www.gabonreview.com/autorite-communication-bien-etre-la-formule-du-leadership-selon-odillon-ingenierie/",
+          "source": "Gabon Review",
           "zone": "3. Afrique centrale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B3"
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Assainissement : 17 agents municipaux de Libreville formés à la conduite des engins lourds",
+          "link": "https://www.gabonreview.com/assainissementassainissement-17-agents-municipaux-de-libreville-formes-a-la-conduite-des-engins-lourds/",
+          "source": "Gabon Review",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1484,16 +1479,43 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 29,
+      "count": 26,
       "top": [
         {
           "title": "Dans une Libye divisée, Donald Trump mise sur son « art du deal » pour se poser en faiseur de paix",
           "link": "https://www.lemonde.fr/afrique/article/2026/09/06/dans-une-libye-divisee-donald-trump-mise-sur-son-art-du-deal-pour-se-poser-en-faiseur-de-paix_6766778_3212.html",
-          "source": "Le Monde International",
+          "source": "Le Monde Afrique",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
           "relevance": "A",
           "rating": "B2"
+        },
+        {
+          "title": "Guerre franco-allemande de 1870 : le triste sort des tirailleurs algériens",
+          "link": "https://www.tsa-algerie.com/guerre-franco-allemande-de-1870-le-triste-sort-des-tirailleurs-algeriens/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Législatives 2026 : arsenal juridique renforcé pour lutter contre la désinformation et les deepfakes",
+          "link": "https://fr.hespress.com/487329-legislatives-2026-arsenal-juridique-renforce-pour-lutter-contre-la-desinformation-et-les-deepfakes.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "T",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "À l’USFP, la fin de l’ère où les militants syndicaux se « cachaient »",
+          "link": "https://fr.hespress.com/487359-a-lusfp-la-fin-de-lere-ou-les-militants-syndicaux-se-cachaient.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "Treize pays à l’exercice Phoenix Express sur les côtes tunisiennes",
@@ -1503,33 +1525,6 @@
           "theme": "M",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Sofiane Boufal rejoint Al-Ittihad Tripoli avec un salaire XXL",
-          "link": "https://fr.hespress.com/487310-sofiane-boufal-rejoint-al-ittihad-tripoli-avec-un-salaire-xxl.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Législatives : à Dakhla, El Mansouri affiche son soutien à El Khattat Yanja",
-          "link": "https://fr.hespress.com/487321-legislatives-a-dakhla-el-mansouri-affiche-son-soutien-a-el-khattat-yanja.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Messages de prison de Saâdia Mosbah",
-          "link": "https://kapitalis.com/tunisie/2026/09/06/messages-de-prison-de-saadia-mosbah/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     },
@@ -1537,8 +1532,17 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 97,
+      "count": 118,
       "top": [
+        {
+          "title": "Child among 2 Palestinians killed in Israeli strike in Gaza despite ceasefire",
+          "link": "https://www.aa.com.tr/en/middle-east/child-among-2-palestinians-killed-in-israeli-strike-in-gaza-despite-ceasefire/4049012",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
         {
           "title": "Hollow Promises: Resetting Gaza’s Ceasefire",
           "link": "https://www.crisisgroup.org/rpt/middle-east-north-africa/israelpalestine-united-states/257-hollow-promises-resetting-gazas-ceasefire",
@@ -1555,15 +1559,6 @@
           "zone": "8. Moyen-Orient",
           "theme": "D",
           "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Cisjordanie: face aux violences des colons, l'ambassadeur des États-Unis en Israël brandit la menace",
-          "link": "https://www.rfi.fr/fr/moyen-orient/20260905-cisjordanie-face-aux-violences-des-colons-l-ambassadeur-des-%C3%A9tats-unis-en-isra%C3%ABl-brandit-la-menace",
-          "source": "RFI Moyen-Orient",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
           "rating": "A1"
         },
         {
@@ -1576,13 +1571,13 @@
           "rating": "F2"
         },
         {
-          "title": "Yémen : 141 morts depuis samedi dans les affrontements entre rebelles houthistes et forces gouvernementales",
-          "link": "https://www.lemonde.fr/international/article/2026/09/06/yemen-141-morts-depuis-samedi-dans-les-affrontements-entre-rebelles-houthistes-et-forces-gouvernementales_6767385_3210.html",
-          "source": "Le Monde International",
+          "title": "Iran warns of 'more painful response' if US launches further attacks",
+          "link": "https://www.dawn.com/news/2027938/iran-warns-of-more-painful-response-if-us-launches-further-attacks",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
-          "theme": "P",
+          "theme": "M",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F1"
         }
       ]
     },
@@ -1590,25 +1585,25 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 186,
+      "count": 172,
       "top": [
         {
-          "title": "Catastrophe au Népal : le coût de la reconstruction estimé à 4 milliards de dollars",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260906-catastrophe-au-n%C3%A9pal-le-co%C3%BBt-de-la-reconstruction-estim%C3%A9-%C3%A0-4-milliards-de-dollars",
-          "source": "France 24",
-          "zone": "12. Asie du Sud",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Ukraine : Kiev doute de pouvoir obtenir assez de missiles Patriot pour passer l'hiver, malgré les demandes de Zelensky",
-          "link": "https://francais.rt.com/international/137766-ukraine-kiev-doute-pouvoir-obtenir-assez-missiles-patriot-pour-passer-hiver-malgre-demandes-zelensky",
-          "source": "RT en français",
+          "title": "Guerre en Ukraine : après la visite des émissaires américains, Zelensky assure que la question territoriale ne peut être «résolue» que lors de rencontres entre présidents",
+          "link": "https://www.liberation.fr/international/europe/ukraine-les-emissaires-de-trump-pour-la-premiere-fois-a-kyiv-au-lendemain-de-leur-rencontre-avec-poutine-20260906_ABKCLMIB4BCJPFBRIFRZCPHFHY/",
+          "source": "Libération International",
           "zone": "10. Europe orient. & Balkans",
           "theme": "P",
           "relevance": "L",
-          "rating": "A2"
+          "rating": "A1"
+        },
+        {
+          "title": "L’AfD obtient le meilleur résultat de l’extrême droite en Allemagne depuis la Seconde Guerre mondiale",
+          "link": "https://legrandcontinent.eu/fr/2026/09/06/afd-obtient-le-meilleur-resultat-de-lextreme-droite-en-allemagne-depuis-la-seconde-guerre-mondiale-saxe-anhalt/",
+          "source": "Le Grand Continent",
+          "zone": "9. Europe occidentale",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A1"
         },
         {
           "title": "Volcano eruption leaves 150,000 passengers stranded in Indonesia",
@@ -1620,21 +1615,21 @@
           "rating": "A1"
         },
         {
-          "title": "Aux États-Unis, sous fond de reprise des hostilités avec Téhéran, démissions en série au Pentagone",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260906-aux-%C3%A9tats-unis-sous-fond-de-reprise-des-hostilit%C3%A9s-avec-t%C3%A9h%C3%A9ran-d%C3%A9missions-en-s%C3%A9rie-au-pentagone",
-          "source": "France 24",
-          "zone": "16. Amérique du Nord",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "A2"
+          "title": "Serie A : Juventus – Milan, choc au sommet entre deux équipes invaincues",
+          "link": "https://beninwebtv.com/serie-a-juventus-milan-choc-au-sommet-entre-deux-equipes-invaincues/",
+          "source": "Bénin Web TV",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
-          "title": "Failed Coup: Niger blames France, neighbouring countries, threatens international action",
-          "link": "https://www.premiumtimesng.com/news/headlines/907669-failed-coup-niger-blames-france-neighbouring-countries-threatens-international-action.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "9. Europe occidentale",
-          "theme": null,
-          "relevance": ".",
+          "title": "Cartographie : l'ONU soutient l'initiative africaine pour rétablir la véritable taille du continent",
+          "link": "https://fr.hespress.com/487267-cartographie-lonu-soutient-linitiative-africaine-pour-retablir-la-veritable-taille-du-continent.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "16. Amérique du Nord",
+          "theme": "J",
+          "relevance": "L",
           "rating": "F2"
         }
       ]
@@ -1653,42 +1648,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-06T15:27:55.312Z",
+      "at": "2026-09-06T20:23:41.816Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-06T15:27:55.319Z",
+      "at": "2026-09-06T20:23:41.824Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-06T15:28:23.193Z",
+      "at": "2026-09-06T20:24:11.440Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1919 articles"
+      "message": "105/170 flux OK, 1830 articles"
     },
     {
-      "at": "2026-09-06T15:28:26.141Z",
+      "at": "2026-09-06T20:24:14.531Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-06T15:28:26.484Z",
+      "at": "2026-09-06T20:24:14.854Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-06T15:28:26.489Z",
+      "at": "2026-09-06T20:24:14.859Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-09-06T15:28:26.489Z",
+      "at": "2026-09-06T20:24:14.859Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-06T15:28:26.489Z",
+      "at": "2026-09-06T20:24:14.859Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
