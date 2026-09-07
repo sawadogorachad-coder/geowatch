@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-09-07T13:28:05.238Z",
+  "generatedAt": "2026-09-07T19:10:08.068Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 106,
-    "failed": 64,
-    "articles": 1861,
+    "ok": 109,
+    "failed": 61,
+    "articles": 1905,
     "okSources": [
+      {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "count": 30
+      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -40,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -51,6 +56,11 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -90,6 +100,11 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -143,11 +158,6 @@
         "count": 20
       },
       {
-        "id": "rss_punch",
-        "name": "Punch (Nigeria)",
-        "count": 30
-      },
-      {
         "id": "rss_journ_cam",
         "name": "Journal du Cameroun",
         "count": 10
@@ -161,11 +171,6 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -223,6 +228,11 @@
         "count": 10
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "count": 10
+      },
+      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -260,7 +270,7 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 24
+        "count": 22
       },
       {
         "id": "rss_f24afr",
@@ -275,7 +285,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -326,6 +336,11 @@
         "id": "rss_brookings",
         "name": "Brookings Institution",
         "count": 0
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "count": 25
       },
       {
         "id": "rss_carnegie",
@@ -380,7 +395,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 27
+        "count": 26
       },
       {
         "id": "rss_bbc_africa",
@@ -400,7 +415,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -490,7 +505,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 25
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -540,19 +555,9 @@
     ],
     "failedSources": [
       {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "error": "HTTP 415"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -598,11 +603,6 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -655,9 +655,19 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_punch",
+        "name": "Punch (Nigeria)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -697,7 +707,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "HTTP 415"
+        "error": "fetch failed"
       },
       {
         "id": "rss_le360",
@@ -717,7 +727,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 415"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_moibrahim",
@@ -733,11 +743,6 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -783,11 +788,6 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_alarabiya",
@@ -863,19 +863,19 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 50,
-    "alerts": 10,
-    "criticalAlerts": 6,
-    "sourcesDistinct": 69
+    "bfAes": 78,
+    "alerts": 9,
+    "criticalAlerts": 4,
+    "sourcesDistinct": 74
   },
   "topDevelopments": [
     {
-      "title": "Namentenga : Le Haut-commissaire exhorte les corps constitués à porter le casque pour montrer l’exemple aux citoyens",
-      "link": "https://www.aib.media/namentenga-le-haut-commissaire-exhorte-les-corps-constitues-a-porter-le-casque-pour-montrer-lexemple-aux-citoyens/",
-      "pubDate": "2026-09-07T11:48:04.000Z",
-      "description": "BURKINA-NAMENTENGA-MONTEE-COULEURS Namentenga : Le Haut-commissaire exhorte les corps constitués à porter le casque pour montrer l’exemple aux citoyens Boulsa, 7 sept. 2026 (AIB)- Le Haut-commissaire du Namentenga, Adama Conseiga, a exhorté le lundi 7 septembre 2026, les membres des corps constitués, particulièrement les corps habillés, à porter systématiquement le casque afin de donner l’exemple aux autres citoyens. Le Haut-commissaire de la province du Namentenga, Adama Conseiga a présidé ce lundi 7 septembre 2026,la cérémonie solennelle de montée des couleurs nationales, organisée dans les locaux du haut-commissariat de Boulsa. Au cours des échanges, le Haut-commissaire a insisté sur le respect du port obligatoire du casque. « J’invite les membres des corps constitués en général et les corps habillés en particulier à porter le casque pour donner l’exemple », a-t-il déclaré. Cette cérémonie, qui se tient chaque premier lundi du mois, a également servi de cadre pour des échanges sur les informations et les préoccupations des différents corps constitués. L’ensemble des participants, notamment les membres des corps constitués et les appelés à l’Immersion patriotique obligatoire (IPO), ont entonné en français l’hymne national, le Ditanyè, marquant ainsi la solennité de la cérémonie. Le représentant du directeur provincial de la Police le sous-lieutenant de police Dieudonné Compaoré a, pour sa part, indiqué que tout agent de police qui se présente au service sans casque est passible d’une contravention de 12 000 FCFA. Par ailleurs, le Haut-commissaire et président des corps constitués de la province a informé les participants de sa récente mission, effectuée avec le Président de la délégation spéciale de Boulsa, Issaka Sangla, dans le village de Banguindé, dans la commune de Sallogo, province du Kouritenga. Cette mission visait à apporter un soutien aux usagers de l’axe Sallaogo-Boulsa, affectés par la dégradation d’une partie de l’ouvrage de franchissement de Banguindé, situé à environ 15 km de Boulsa. Abordant la lutte contre le paludisme, Adama Conseiga a invité les populations à s’investir davantage dans la destruction systématique des gîtes larvaires dans leur cadre de vie. Il a également appelé les appelés à l’IPO à respecter scrupuleusement les règles de bonne conduite dans leurs milieux de vie. Le Haut-commissaire a, en outre, encouragé les admis en seconde série C à s’inscrire massivement dans les filières F3 et F4 qui ouvrent cette année au lycée technique Jan Vervoot. Le camarade Conseiga a enfin souhaité la bienvenue au nouveau chef d’antenne de la Poste, Lucien Zagré, nommé en remplacement d’Ali Kaboré, affecté à Banfora, et a renouvelé sa reconnaissance aux forces combattantes pour les efforts consentis sur le terrain en faveur de la reconquête du territoire national. Agence d’information du Burkina JBD/no",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Retour sur Actu : Les temps forts de la semaine du 31 août au 6 septembre 2026 au Burkina Faso",
+      "link": "https://burkina24.com/2026/09/07/retour-sur-actu-les-temps-forts-de-la-semaine-du-31-aout-au-6-septembre-2026-au-burkina-faso/",
+      "pubDate": "2026-09-07T15:39:49.000Z",
+      "description": "Du 31 août au 6 septembre 2026, l’actualité burkinabè a été marquée par plusieurs événements majeurs, notamment dans les domaines de la formation, de l’éducation, de la mémoire nationale, de l’intégration au sein de l’Alliance des États du Sahel (AES) et de la coopération internationale. À Ouagadougou, 470 veuves, orphelins et victimes de guerre, bénéficiaires … The post Retour sur Actu : Les temps forts de la semaine du 31 août au 6 septembre 2026 au Burkina Faso appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -883,40 +883,7 @@
         "economic",
         "diplomatic",
         "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A1"
-      },
-      "_rating": "A1",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Boulgou : La délégation spéciale de Niaogho en guerre contre les gîtes larvaires",
-      "link": "https://www.aib.media/boulgou-la-delegation-speciale-de-niaogho-en-guerre-contre-les-gites-larvaires/",
-      "pubDate": "2026-09-07T12:03:44.000Z",
-      "description": "BURKINA-PALUDISME-ELIMINATION-GITES-LARVAIRES-NIAOGHO Boulgou : La délégation spéciale de Niaogho en guerre contre les gîtes larvaires Niaogho, 05 sept. 2026 (AIB) – La commune de Niaogho, dans la province du Boulgou, a pris une part active aux Journées nationales de lutte antivectorielle, ce samedi 05 septembre 2026. Conduite par le président de la délégation spéciale, Karim Sana, une opération de terrain a été menée pour identifier et détruire les gîtes larvaires afin de freiner la propagation du paludisme. Accompagné de l'équipe technique municipale et des agents de santé, le président de la délégation spéciale a conduit les différents groupes sur des sites stratégiques préalablement cartographiés. Sur chaque point d'intervention, l'opération d'assainissement a été couplée à des séances de sensibilisation sur l'éco-citoyenneté, en vue d'amener les riverains à adopter de bons comportements et à éviter les pratiques favorisant la stagnation des eaux usées, propices à la prolifération des moustiques. Le camarade Sana a salué la mobilisation et l'engagement de l'ensemble des participants et a souligné l'urgence d'une réponse collective face à ce fléau de santé publique. Présent aux côtés des autorités communales, le médecin-chef du district sanitaire de Niaogho, Moussa Ouédraogo, a rappelé la portée de cette campagne. Selon lui, l'initiative s'inscrit dans la feuille de route nationale visant l'élimination du paludisme d'ici 2030. Il a précisé que la destruction des gîtes larvaires vient en complément aux autres stratégies déjà déployées, notamment la chimioprévention du paludisme saisonnier (CPS) par la distribution de traitements préventifs aux enfants. L'opération du 5 septembre marque la deuxième étape d'une série de quatre passages prévus sur l'ensemble du territoire communal. La journée s'est achevée par les remerciements du président de la délégation spéciale, qui a félicité l'ensemble des acteurs pour le travail abattu et réaffirmé l'engagement de la commune à maintenir la pression contre la maladie. Agence d'Information du Burkina AA/SM/ata/zs",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -928,7 +895,39 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 115,
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Sissili : à Léo, coutumiers, religieux et populations s’unissent pour la réussite de l’opération spéciale d’enrôlement de la carte d’identité AES",
+      "link": "https://www.aib.media/sissili-a-leo-coutumiers-religieux-et-populations-sunissent-pour-la-reussite-de-loperation-speciale-denrolement-de-la-carte-didentite-aes/",
+      "pubDate": "2026-09-07T16:29:46.000Z",
+      "description": "BURKINA-ENROLEMENT-CARTE-IDENTITE-AES-PROVINCE-SISSILI Sissili : à Léo, coutumiers, religieux et populations s’unissent pour la réussite de l’opération spéciale d’enrôlement de la carte d’identité AES Léo, 4 sept. 2026 (AIB) – L’opération spéciale d’enrôlement pour la Carte d’Identité Biométrique de la Confédération des États du Sahel (CIB-AES) s’est achevée le vendredi 4 septembre 2026 à Léo. Caractérisé par une forte adhésion populaire et l’implication résolue des autorités administratives, coutumières et religieuses de la Sissili, le bilan a été jugé satisfaisant. Déployée du 1er au 4 septembre 2026, la mission de proximité de l’Office national d’identification (ONI) visait à rapprocher les services d’état civil des populations. Dressant le bilan des activités au centre de traitement, le chef d’antenne de l’ONI de Nando, le Lieutenant de police Oumarou Savadogo, s’est réjoui de l’efficacité du dispositif. « Cette forte mobilisation s’inscrit pleinement dans le cadre des missions de l’ONI. Notre rôle est de faire en sorte que chaque citoyen résidant dans notre région puisse bénéficier de la nouvelle CIB-AES », a-t-il déclaré, exprimant sa gratitude envers le Haut-Commissaire, les chefs coutumiers et les leaders religieux. Le responsable de l’ONI a rappelé les innovations fixées par cette réforme : la possibilité d’établir la carte dès l’âge de 5 ans et son caractère obligatoire dès 13 ans. Sur le plan opérationnel, avec plus de 200 personnes enrôlées par jour, le cap des 800 enregistrements a été franchi dans la commune. Le Lieutenant Savadogo a précisé qu’il n’est pas nécessaire d’attendre l’expiration de l’ancienne CNIB pour demander la CIB-AES. Une période transitoire, qui va jusqu’en 2031, garantit la validité de l’ancienne carte. Les requérants doivent fournir un acte de naissance, une copie de l’ancienne pièce, un justificatif de profession et, le cas échéant, un certificat de nationalité ou un acte de mariage selon le contexte. Cette opération a bénéficié d’un portage communautaire puissant. Pour le garant des traditions, Sa Majesté Lio-Pio Dan-Zwè, Chef de Canton de Léo, la démarche dépasse le simple acte administratif. « Se faire enrôler aujourd’hui, c’est affirmer sa citoyenneté et manifester son appartenance à un espace communautaire souverain. Nous avons mobilisé l’ensemble des chefs de village pour qu’aucun habitant de la Sissili ne reste en marge », a-t-il soutenu. Même son de cloche au sein des communautés religieuses. L’Imam de la mosquée blanche de Léo a exprimé sa gratitude face à l’engouement des fidèles. « Nous sommes tellement heureux. Tous les musulmans qui viennent prier à la mosquée ont fait l’effort de se faire enrôler. Nous prions Dieu pour que tout se passe bien, pour notre président ainsi que pour son gouvernement » a déclaré l’ilam Yago. Au sein de la population, l’initiative est perçue comme un pas concret vers la consolidation de l’espace AES. C’est le sentiment traduit par Alassane Guiendé, citoyen venu accomplir son devoir civique : « La Confédération des Etats du Sahel réunit trois nations en une seule. Aujourd’hui, d’après ce que j’ai compris, si je suis au Mali ou au Niger, je suis chez moi. C’est une excellente initiative pour que nos trois pays ne fassent plus qu’un ». Il a par ailleurs salué la fluidité du processus et le professionnalisme des équipes techniques. Au terme de cette mission de quatre jours marquée par une synergie réussie entre tous les acteurs, l’équipe de l’ONI a regagné Koudougou sur une note de pleine satisfaction. Agence d’Information du Burkina BAN/ata/zs",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 123,
       "_zone": 1,
       "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -936,12 +935,76 @@
       "_desk": "A1"
     },
     {
-      "title": "Montée du pavillon national : Le Premier ministre réaffirme sa foi en un Burkina Faso capable de surprendre le monde",
-      "link": "https://www.minute.bf/montee-du-pavillon-national-le-premier-ministre-reaffirme-sa-foi-en-un-burkina-faso-capable-de-surprendre-le-monde/",
-      "pubDate": "2026-09-07T11:29:28.000Z",
-      "description": "Le Camarade Premier ministre, Chef du Gouvernement, Rimtalba Jean Emmanuel Ouédraogo, a présidé, ce lundi 7 septembre 2026, la traditionnelle cérémonie mensuelle de montée du pavillon national à la Primature. À cette occasion, il a rendu hommage aux devanciers de la Nation, aux Forces combattantes et aux producteurs agricoles, avant d’inviter les collaborateurs de l’institution à maintenir le cap de l’engagement et de la performance au cours des quatre derniers mois de l’année. Dans son adresse, le Chef du Gouvernement a insisté sur la portée patriotique et symbolique de la montée des couleurs, devenue un rendez-vous mensuel de communion autour des valeurs de la Nation. Cette cérémonie constitue, selon lui, un moment privilégié pour se souvenir de toutes celles et de tous ceux qui ont consenti des sacrifices pour préserver la souveraineté et la dignité du Burkina Faso. « Cette montée des couleurs est aussi l’occasion pour chacun de nous de renouveler son serment envers la Nation : celui de toujours la servir avec dévouement, avec engagement et sans concession ; celui de ne jamais la trahir », a affirmé le Camarade Premier ministre. Il a invité les agents de la Primature à mesurer la responsabilité qui leur incombe en tant qu’héritiers de celles et de ceux qui, à différentes étapes de l’histoire nationale, ont œuvré à maintenir le Burkina Faso debout. Dans le même élan, le Chef du Gouvernement a rendu un hommage appuyé aux Forces combattantes engagées dans la reconquête du territoire national et dans la lutte pour la paix et la souveraineté. « Nous devons reconnaître et saluer leur esprit de sacrifice. C’est cet esprit de sacrifice, cette résilience et cette combativité à toute épreuve qui maintiennent le Burkina Faso debout et qui consolident, tous les jours, notre espoir collectif de venir à bout de toutes les adversités », a-t-il déclaré. Plus de 72 % de taux de réalisation physique à fin août Abordant le bilan des huit premiers mois de l’année 2026, le Camarade Premier ministre a relevé des résultats encourageants au sein de la Primature. À la fin du mois d’août, l’institution affichait un taux de réalisation physique supérieur à 72 %, avec plus de 4 600 dossiers traités. « Chers collaborateurs, vous avez mis du cœur à l’ouvrage. C’est ce qui nous permet aujourd’hui, lorsque nous jetons un coup d’œil sur le tableau de bord, de nous rendre compte que nous avançons à un rythme qui dégage des motifs de satisfaction », a-t-il soutenu. Tout en saluant cette dynamique, le Chef du Gouvernement a appelé le personnel à se garder de toute autosatisfaction et à redoubler d’efforts au cours des derniers mois de l’année. « Ce bilan statistiquement satisfaisant ne doit pas nous pousser à verser dans l’autosatisfaction. Il doit plutôt constituer une source supplémentaire d’énergie et de remobilisation pour toujours tendre vers l’excellence et vers des performances inédites », a-t-il poursuivi. Le Chef du Gouvernement a également salué la détermination des producteurs agricoles, qu’il a qualifiés de « combattants de notre souveraineté alimentaire ». Malgré les disparités pluviométriques observées dans certaines régions, il s’est montré confiant quant à l’issue de la campagne agricole, tout en exprimant sa solidarité aux producteurs confrontés à des poches de sécheresse. Il a, en outre, salué le travail des agents chargés de l’encadrement du monde rural et formulé le vœu de voir les performances agricoles de 2026 dépasser celles de la campagne précédente. « Nous allons surprendre le monde » Évoquant la dynamique de transformation du Burkina Faso sous le leadership du Camarade Président du Faso, le Capitaine Ibrahim Traoré, le Premier ministre a relevé les progrès accomplis dans plusieurs secteurs, notamment la défense, l’agriculture, la santé, l’éducation et les infrastructures. Il a particulièrement salué les efforts engagés dans la réorganisation et l’équipement des Forces armées nationales, ainsi que l’accélération des projets de développement depuis l’avènement du MPSR II, il y a près de quatre ans. « De la parole à l’acte, c’est cela, la Révolution progressiste populaire sous le leadership du Camarade Président du Faso », a-t-il soutenu. Face aux critiques et au scepticisme, le Camarade Premier ministre a réaffirmé sa confiance dans les capacités du peuple burkinabè à poursuivre la transformation du pays. « Nous allons surprendre le monde. Nous surprenons déjà le monde », a-t-il lancé, invitant chacun à avoir foi dans le Burkina Faso, ainsi que dans la vision et le leadership du Camarade Président du Faso. Parmi les avancées évoquées, le Chef du Gouvernement a annoncé l’inauguration prochaine de l’usine textile des Forces armées du Burkina Faso, TEXFORCES-BF. Cette unité industrielle permettra de valoriser le coton produit au Burkina Faso et de contribuer à l’habillement des Forces combattantes. Pour le Camarade Premier ministre, cette réalisation illustre la dynamique d’industrialisation et de souveraineté économique dans laquelle le Burkina Faso est résolument engagé. Au terme de son adresse, le Chef du Gouvernement a appelé l’ensemble des agents de la Primature à rester mobilisés, déterminés et pleinement engagés dans l’accomplissement de leurs missions au cours des derniers mois de l’année 2026. Il les a invités à puiser leur motivation dans le sacrifice des Forces combattantes, la détermination des producteurs agricoles et la résilience du peuple burkinabè, afin que la Primature continue d’assumer avec efficacité les hautes missions qui lui sont confiées. DCRP/Primature Rimtalba Jean Emmanuel Ouédraogo, a Montée des couleurs, Primature, Forces combattantes, RPP, Minute.bf,",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Chevauchements des années académiques au Burkina Faso : Une normalisation historique de 99,69 % dans les universités publiques après 15 ans de crise",
+      "link": "https://netafrique.net/chevauchements-des-annees-academiques-au-burkina-faso-une-normalisation-historique-de-9969-dans-les-universites-publiques-apres-15-ans-de-crise/",
+      "pubDate": "2026-09-07T18:10:38.000Z",
+      "description": "C'est un tournant historique pour l'enseignement supérieur burkinabè. Dix-huit ans après l'apparition des premiers chevauchements d'années académiques en 2008, le ministère de l’Enseignement supérieur, de la Recherche et de l’Innovation a annoncé, ce lundi 7 septembre 2026, un taux de normalisation exceptionnel de 99,69 % au 31 août 2026. Grâce à des réformes structurelles profondes, à d'importants investissements et au sens des responsabilités des étudiants, la quasi-totalité des filières du pays ont bouclé leur cursus à temps. Cette prouesse ouvre la voie à une rentrée unique et coordonnée, fixée au 1er octobre 2026. Pour la première fois depuis plus d’une quinzaine d’années, un calme inédit règne sur les universités publiques du Burkina Faso. Presque tous les acteurs de la communauté universitaire — enseignants, personnels de soutien et étudiants — savourent actuellement des vacances bien méritées après avoir intégralement achevé l’année académique en cours. Ce tableau, presque irréel pour qui connaît les perturbations chroniques des campus burkinabè, scelle la réussite d'un chantier titanesque. Le ministre chargé de l’enseignement supérieur, le Pr Adjima Thiombiano, a dressé ce lundi 7 septembre 2026, lors d'un point de presse à Ouagadougou, un bilan qui tient de la prouesse systémique : le taux de normalisation des années académiques s’élève désormais à 99,69 % . Pour mesurer la portée de cette annonce, il faut se replonger dans l'histoire récente. C’est en 2008 que les premiers retards et chevauchements d'années ont commencé à gangréner le système universitaire national. En 2023, le diagnostic était alarmant. Le pays faisait face à des disparités extrêmes : d'une université à l'autre, d'un établissement à l'autre, et même d'une filière à l'autre, les retards cumulés oscillaient de manière critique entre 3 et 30 mois . Aujourd’hui, la donne a radicalement changé : 360 filières sur les 361 que compte le pays sont officiellement normalisées. Seule la filière Pharmacie de l’Université Joseph KI-ZERBO (UJKZ) est encore en voie de normalisation. Toutefois, le calendrier est d’ores et déjà maîtrisé : l'ensemble des niveaux de toutes les filières, y compris cette ultime section de pharmacie, effectueront leur rentrée des classes de manière effective le 1er octobre 2026 . Comment le gouvernement de transition a-t-il réussi à désamorcer une crise vieille de près de deux décennies ? Selon le ministre Thiombiano, cette victoire repose sur un faisceau d'actions vigoureuses et coordonnées. L'appareil d'État a d'abord misé sur l'assainissement rigoureux des statistiques et des investissements d’envergure dans la construction et la réhabilitation d'infrastructures pédagogiques. Parallèlement, la digitalisation s'est imposée au cœur du système grâce à une intégration plus poussée de la plateforme numérique CampusFaso . À ces leviers technologiques et structurels s'est ajouté un renforcement significatif des ressources humaines, marqué par le recrutement massif d’enseignants-chercheurs, de chercheurs et de personnels administratifs. Enfin, le dialogue franc, direct et sans concession avec l'ensemble des acteurs universitaires a permis de responsabiliser chacun face à ses devoirs. « Je suis un ministre comblé » , a confessé le Pr Adjima Thiombiano. Dans son allocution, le ministre a tenu à associer à cette réussite les plus hautes autorités de l'État, saluant la vision stratégique du Président du Faso, le Capitaine Ibrahim Traoré, qualifié de « Grand Guide » tout au long du processus, ainsi que les orientations du Premier ministre. Mais l'hommage le plus vibrant du chef du département a été réservé aux étudiants burkinabè, qu'il a solennellement érigés au rang de « héros ». « Ils ont prouvé leur sens de responsabilité élevé et leur combativité aux yeux de toute la Nation et du monde entier. Ils ont également tout sacrifié pour rendre possible un autre avenir » , a-t-il insisté, saluant leur adhésion aux valeurs de travail, de discipline et d'ordre. Si la victoire contre les chevauchements d'années est aujourd'hui acquise, le gouvernement appelle à ne pas relâcher l'effort. Pour le Pr Adjima Thiombiano, il est désormais impératif de maintenir fermement ce cap afin de pérenniser cette normalisation historique et de garantir, sur le long terme, une formation de qualité pour la jeunesse du Faso. L’article Chevauchements des années académiques au Burkina Faso : Une normalisation historique de 99,69 % dans les universités publiques après 15 ans de crise est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
+      "_score": 119,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Passoré : Les forces vives s’attaquent aux gîtes larvaires au grand marché et à la gare routière de Yako Yako",
+      "link": "https://www.aib.media/passore-les-forces-vives-sattaquent-aux-gites-larvaires-au-grand-marche-et-a-la-gare-routiere-de-yako-yako-7-sept-2026-aib-les-forces-vives-du-passore-ont-participe-les-5-et-6-septemb/",
+      "pubDate": "2026-09-07T17:14:17.000Z",
+      "description": "BURKINA-SANTE-PASSORE-ASSAINISSEMENT Passoré : Les forces vives s’attaquent aux gîtes larvaires au grand marché et à la gare routière de Yako Yako, 7 sept. 2026 (AIB)- Les forces vives du Passoré ont participé les 5 et 6 septembre 2026, au deuxième passage de la Journée nationale de destruction des gîtes larvaires, une opération visant à renforcer l’assainissement et à prévenir les maladies liées à la prolifération des moustiques dans la ville de Yako. L’activité a mobilisé les autorités coutumières et administratives, les services techniques, les agents de santé, les Forces de défense et de sécurité (FDS), les associations et organisations de la société civile, ainsi que les élèves ayant pris part à l’édition 2026 de l’Immersion patriotique obligatoire (IPO). Avant le démarrage des travaux, les participants ont été sensibilisés à la nécessité de maintenir les espaces propres et de détruire régulièrement les gîtes larvaires. Munis de pelles, de râteaux, de balais, de brouettes et de sacs, ils ont procédé au nettoyage et à la destruction des gîtes larvaires sur plusieurs sites, notamment au grand marché et à la gare routière de Yako. Les autorités ont salué l’engagement des participants et les ont invités à poursuivre les actions d’assainissement, afin d’inscrire la lutte contre les gîtes larvaires dans les habitudes quotidiennes des populations. Agence d’information du Burkina ZES/no/",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Jean Emmanuel Ouédraogo, Premier ministre du Burkina Faso: « Nous allons surprendre le monde »",
+      "link": "https://netafrique.net/jean-emmanuel-ouedraogo-premier-ministre-du-burkina-faso-nous-allons-surprendre-le-monde/",
+      "pubDate": "2026-09-07T16:41:42.000Z",
+      "description": "Ce lundi 7 septembre 2026, le Premier ministre, chef du gouvernement, Rimtalba Jean Emmanuel Ouédraogo, a présidé la traditionnelle cérémonie mensuelle de montée du pavillon national à la Primature. Tout en dressant un bilan administratif encourageant, caractérisé par un taux de réalisation physique supérieur à 72 % à la fin du mois d'août, le chef du gouvernement a rendu un hommage vibrant aux Forces combattantes et aux producteurs agricoles, piliers de la résilience nationale. Affirmant la volonté de souveraineté économique du Burkina Faso sous le leadership du Capitaine Ibrahim Traoré, il a également annoncé l'inauguration prochaine de l'unité industrielle textile militaire TEXFORCES-BF. Sous le ciel de Ouagadougou, la traditionnelle cérémonie mensuelle de montée du pavillon national à la Primature a pris, ce lundi 7 septembre 2026, une résonance patriotique particulièrement forte. Présidé par le Premier ministre Rimtalba Jean Emmanuel Ouédraogo, ce rendez-vous s'est affirmé comme un moment de communion intense autour des valeurs fondamentales de la Nation. Pour le chef du gouvernement, cet acte symbolique fort constitue l'occasion idéale pour chaque commis de l’État de renouveler son engagement solennel à servir le pays avec dévouement, loyauté et sans concession. Dans un appel direct à ses collaborateurs, il a insisté sur le devoir de mémoire envers les devanciers de la Nation et sur l'importance de s'inspirer du sacrifice des Forces combattantes qui luttent quotidiennement pour la paix et la reconquête du territoire. Loin de se limiter aux déclarations de principe, le Premier ministre a présenté des données concrètes démontrant l'efficacité de l'appareil gouvernemental. À la fin du mois d'août 2026, la Primature affichait un taux de réalisation physique supérieur à 72 %, avec un volume impressionnant de plus de 4 600 dossiers rigoureusement traités. Saluant la détermination et le cœur à l'ouvrage de ses équipes, Jean Emmanuel Ouédraogo a néanmoins mis en garde contre tout relâchement. L'heure n'est pas à l'autosatisfaction, mais bien à la remobilisation générale pour maintenir cette cadence et tendre vers des performances inédites au cours des quatre derniers mois de l'année. L'autre grand hommage de cette adresse solennelle est allé en direction du monde rural. Le Premier ministre a salué avec ferveur les producteurs agricoles burkinabè, qualifiés de véritables « combattants de notre souveraineté alimentaire ». Malgré des disparités de pluviométrie notables et des poches de sécheresse signalées dans certaines régions, le chef du gouvernement a réaffirmé sa confiance quant au succès final de la campagne agricole. Il a également tenu à exprimer la solidarité de la Nation envers les exploitants en difficulté, tout en félicitant les agents d’encadrement rural pour leur dévouement constant. Évoquant la dynamique globale de transformation du pays initiée sous le leadership du Président du Faso, le Capitaine Ibrahim Traoré, Rimtalba Jean Emmanuel Ouédraogo a mis en lumière les progrès significatifs réalisés dans les secteurs vitaux de la défense, de l'éducation, de la santé, des infrastructures et de l'agriculture. Près de quatre ans après l’avènement du MPSR II, la transition s'illustre par le passage systématique de la parole à l'acte. L'annonce la plus marquante de cette matinée demeure l'inauguration imminente de l'usine de textile des Forces armées du Burkina Faso, baptisée TEXFORCES-BF. Destinée à valoriser le coton produit localement par les agriculteurs burkinabè, cette unité industrielle assurera l'habillement des Forces combattantes. Un exemple concret d'industrialisation et d’indépendance économique qui démontre, selon le Premier ministre, que le Burkina Faso ne se contente plus de subir les événements, mais prend son destin en main. Face au scepticisme, le chef du gouvernement a conclu avec une formule sans équivoque : « Nous allons surprendre le monde. Nous surprenons déjà le monde » . L’article Jean Emmanuel Ouédraogo, Premier ministre du Burkina Faso: « Nous allons surprendre le monde » est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -969,45 +1032,12 @@
       "_desk": "A1"
     },
     {
-      "title": "Montée du pavillon national : le Premier ministre réaffirme sa foi en un Burkina Faso capable de surprendre le monde",
-      "link": "https://www.sidwaya.info/%f0%9d%90%8c%f0%9d%90%a8%f0%9d%90%a7%f0%9d%90%ad%f0%9d%90%9e%f0%9d%90%9e-%f0%9d%90%9d%f0%9d%90%ae-%f0%9d%90%a9%f0%9d%90%9a%f0%9d%90%af%f0%9d%90%a2%f0%9d%90%a5%f0%9d%90%a5%f0%9d%90%a8%f0%9d%90%a7/",
-      "pubDate": "2026-09-07T11:22:22.000Z",
-      "description": "Le Camarade Premier ministre, Chef du Gouvernement, Rimtalba Jean Emmanuel Ouédraogo, a présidé, ce lundi 7 septembre 2026, la traditionnelle cérémonie mensuelle de montée du pavillon national à la Primature. À cette occasion, il a rendu hommage aux devanciers de la Nation, aux Forces combattantes et aux producteurs agricoles, avant d’inviter les collaborateurs de l’institution à maintenir le cap de l’engagement et de la performance au cours des quatre derniers mois de l’année. Dans son adresse, le Chef du Gouvernement a insisté sur la portée patriotique et symbolique de la montée des couleurs, devenue un rendez-vous mensuel de communion autour des valeurs de la Nation. Cette cérémonie constitue, selon lui, un moment privilégié pour se souvenir de toutes celles et de tous ceux qui ont consenti des sacrifices pour préserver la souveraineté et la dignité du Burkina Faso. « Cette montée des couleurs est aussi l’occasion pour chacun de nous de renouveler son serment envers la Nation : celui de toujours la servir avec dévouement, avec engagement et sans concession ; celui de ne jamais la trahir », a affirmé le Camarade Premier ministre. Il a invité les agents de la Primature à mesurer la responsabilité qui leur incombe en tant qu’héritiers de celles et de ceux qui, à différentes étapes de l’histoire nationale, ont œuvré à maintenir le Burkina Faso debout. Dans le même élan, le Chef du Gouvernement a rendu un hommage appuyé aux Forces combattantes engagées dans la reconquête du territoire national et dans la lutte pour la paix et la souveraineté. « Nous devons reconnaître et saluer leur esprit de sacrifice. C’est cet esprit de sacrifice, cette résilience et cette combativité à toute épreuve qui maintiennent le Burkina Faso debout et qui consolident, tous les jours, notre espoir collectif de venir à bout de toutes les adversités », a-t-il déclaré. 𝐏𝐥𝐮𝐬 𝐝𝐞 𝟕𝟐 % 𝐝𝐞 𝐭𝐚𝐮𝐱 𝐝𝐞 𝐫𝐞́𝐚𝐥𝐢𝐬𝐚𝐭𝐢𝐨𝐧 𝐩𝐡𝐲𝐬𝐢𝐪𝐮𝐞 𝐚̀ 𝐟𝐢𝐧 𝐚𝐨𝐮̂𝐭 Abordant le bilan des huit premiers mois de l’année 2026, le Camarade Premier ministre a relevé des résultats encourageants au sein de la Primature. À la fin du mois d’août, l’institution affichait un taux de réalisation physique supérieur à 72 %, avec plus de 4 600 dossiers traités. « Chers collaborateurs, vous avez mis du cœur à l’ouvrage. C’est ce qui nous permet aujourd’hui, lorsque nous jetons un coup d’œil sur le tableau de bord, de nous rendre compte que nous avançons à un rythme qui dégage des motifs de satisfaction », a-t-il soutenu. Tout en saluant cette dynamique, le Chef du Gouvernement a appelé le personnel à se garder de toute autosatisfaction et à redoubler d’efforts au cours des derniers mois de l’année. « Ce bilan statistiquement satisfaisant ne doit pas nous pousser à verser dans l’autosatisfaction. Il doit plutôt constituer une source supplémentaire d’énergie et de remobilisation pour toujours tendre vers l’excellence et vers des performances inédites », a-t-il poursuivi. Le Chef du Gouvernement a également salué la détermination des producteurs agricoles, qu’il a qualifiés de « combattants de notre souveraineté alimentaire ». Malgré les disparités pluviométriques observées dans certaines régions, il s’est montré confiant quant à l’issue de la campagne agricole, tout en exprimant sa solidarité aux producteurs confrontés à des poches de sécheresse. Il a, en outre, salué le travail des agents chargés de l’encadrement du monde rural et formulé le vœu de voir les performances agricoles de 2026 dépasser celles de la campagne précédente. « 𝐍𝐨𝐮𝐬 𝐚𝐥𝐥𝐨𝐧𝐬 𝐬𝐮𝐫𝐩𝐫𝐞𝐧𝐝𝐫𝐞 𝐥𝐞 𝐦𝐨𝐧𝐝𝐞 » Évoquant la dynamique de transformation du Burkina Faso sous le leadership du Camarade Président du Faso, le Capitaine Ibrahim Traoré, le Premier ministre a relevé les progrès accomplis dans plusieurs secteurs, notamment la défense, l’agriculture, la santé, l’éducation et les infrastructures. Il a particulièrement salué les efforts engagés dans la réorganisation et l’équipement des Forces armées nationales, ainsi que l’accélération des projets de développement depuis l’avènement du MPSR II, il y a près de quatre ans. « De la parole à l’acte, c’est cela, la Révolution progressiste populaire sous le leadership du Camarade Président du Faso », a-t-il soutenu. Face aux critiques et au scepticisme, le Camarade Premier ministre a réaffirmé sa confiance dans les capacités du peuple burkinabè à poursuivre la transformation du pays. « Nous allons surprendre le monde. Nous surprenons déjà le monde », a-t-il lancé, invitant chacun à avoir foi dans le Burkina Faso, ainsi que dans la vision et le leadership du Camarade Président du Faso. Parmi les avancées évoquées, le Chef du Gouvernement a annoncé l’inauguration prochaine de l’usine textile des Forces armées du Burkina Faso, TEXFORCES-BF. Cette unité industrielle permettra de valoriser le coton produit au Burkina Faso et de contribuer à l’habillement des Forces combattantes. Pour le Camarade Premier ministre, cette réalisation illustre la dynamique d’industrialisation et de souveraineté économique dans laquelle le Burkina Faso est résolument engagé. Au terme de son adresse, le Chef du Gouvernement a appelé l’ensemble des agents de la Primature à rester mobilisés, déterminés et pleinement engagés dans l’accomplissement de leurs missions au cours des derniers mois de l’année 2026. Il les a invités à puiser leur motivation dans le sacrifice des Forces combattantes, la détermination des producteurs agricoles et la résilience du peuple burkinabè, afin que la Primature continue d’assumer avec efficacité les hautes missions qui lui sont confiées. DCRP/Primature",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Universités publiques : Le Ministère de l’Enseignement supérieur promet la fin totale des retards académiques d’ici le 21 septembre 2026",
-      "link": "https://www.minute.bf/universites-publiques-le-ministere-de-lenseignement-superieur-promet-la-fin-totale-des-retards-academiques-dici-le-21-septembre-2026/",
-      "pubDate": "2026-09-07T10:29:08.000Z",
-      "description": "Le ministre de l’Enseignement supérieur, de la Recherche et de l’Innovation (MESRI), le Pr Ardjima Thiombiano, a tenu une conférence de presse, ce lundi 7 septembre 2026. L’objet de cette rencontre était de faire le point sur la résorption des retards et des chevauchements d’années académiques dans les Universités publiques du Burkina Faso. Entre janvier 2024 et août 2026, les efforts du Ministère ont permis de porter le taux de filières normalisées de 81,31 % à 99,69 %. L’objectif affiché est désormais d’atteindre 100 % d’ici au 21 septembre prochain. Les années académiques à rallonge seront bientôt conjuguées au passé dans l’Énseignement supérieur public burkinabè. En moins de trois ans, le taux de filières ayant retrouvé un rythme normal est passé de 81,31 % à 99,69 %. Une performance que le Ministre de l’Enseignement supérieur, de la Recherche et de l’Innovation (MESRI), entend parachever dans les prochains jours. Selon le MESRI, en 2023, la situation était pourtant alarmante. Certaines filières accusaient des retards allant de trois à plus de trente mois, allongeant considérablement la durée des cursus. Une licence, conçue pour être obtenue en trois ans, pouvait ainsi s’étirer sur cinq années, voire davantage. Face à ce constat, le Pr Ardjima Thiombiano a expliqué que son Ministère a misé sur trois leviers complémentaires : des réformes institutionnelles, un renforcement du suivi des cursus universitaires, et la création de commissions spécialement chargées de veiller à la normalisation des filières. Cette stratégie a rapidement porté ses fruits. Le taux de normalisation, qui s’élevait à 81,31 % au 1er janvier 2024, est passé à 86,86 % au 31 juillet 2025, puis à 92,52 % avant d’atteindre 98,44 % au 31 juillet 2026. Au 31 août 2026, ce taux s’établit à 99,69 %. Sur l’ensemble des 321 filières recensées, une seule reste encore en décalage : il s’agit de la filière Pharmacie de l’Université Joseph-Ki-Zerbo (UJKZ). Sa complète régularisation est attendue pour le 21 septembre 2026. Pour le ministre Pr Thiombiano, cette avancée est inédite depuis plus de quinze ans et constitue une étape décisive dans l’assainissement du calendrier universitaire national. Lire aussi : Résorption des retards académiques dans les universités publiques : 92,52% des filières normalisées Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Université : Le Burkina vient à bout des retards académiques après près de 20 ans (ministre)",
+      "link": "https://www.aib.media/universite-le-burkina-vient-a-bout-des-retards-academiques-apres-pres-de-20-ans-ministre/",
+      "pubDate": "2026-09-07T16:16:27.000Z",
+      "description": "Université : Le Burkina vient à bout des retards académiques après près de 20 ans (ministre) Ouagadougou, 7 sept. 2026 (AIB)-Après 18 ans de retards académiques, les universités publiques burkinabè affichent désormais 99,69% de filières normalisées, avec une normalisation complète attendue à la rentrée académique 2026-2027, a annoncé lundi le ministre chargé de l’Enseignement supérieur Pr Adjima Thiombiano. « Dès la rentrée académique 2026-2027, on aura une normalisation complète des années académiques de toutes les filières, de toutes les institutions d’enseignement supérieur du Burkina Faso », a indiqué le ministre de l’Enseignement supérieur, de la Recherche et de l’Innovation (MESRI) Pr Adjima Thiombiano, lundi, lors d’une conférence de presse. Les retards académiques, constatés depuis 2008 et accentués avec l’introduction du système Licence Master-Doctorat (LMD) en 2010, variaient en 2023 de trois à plus de 30 mois, entraînant des chevauchements de promotions, a-t-il rappelé. Sur les 321 filières de licence recensées au 1er octobre 2023, 162 étaient normalisées contre 159 en retard, a ajouté le ministre. Grâce aux mesures de résorption et au suivi renforcé des activités pédagogiques, le taux de normalisation est passé à 81,31% en octobre 2024 à 86,29% en juillet 2025, puis 92,52% en octobre 2025, avant d’atteindre 99,69%, a-t-il précisé. L’autorité a indiqué que cette progression intervient à la suite d’une stratégie de résorption des retards académiques reposant notamment sur des réformes institutionnelles et organisationnelles, ainsi que sur un suivi renforcé des activités pédagogiques dans les différentes Unités de formation et de recherche (UFR). Le ministre a salué l’engagement de tous les acteurs de l’éducation qui ont favorisé l’atteinte de ces objectifs, afin de garantir un meilleur apprentissage des étudiants. Agence d’information du Burkina APA/jt/ata",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1022,30 +1052,29 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C1"
       },
-      "_rating": "F2",
+      "_rating": "C1",
       "_score": 115,
       "_zone": 1,
-      "_theme": "H",
+      "_theme": null,
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
+      "_relevance": ".",
       "_desk": "A1"
     },
     {
-      "title": "Burkina : Mise en vente des systèmes électroniques certifiés de facturation",
-      "link": "https://www.minute.bf/burkina-mise-en-vente-des-systemes-electroniques-certifies-de-facturation-2/",
-      "pubDate": "2026-09-07T10:15:48.000Z",
-      "description": "Ceci est un communiqué conjoint de la Chambre de commerce et d'industrie du Burkina Faso et de la Direction générale des impôts, relative à une mise en vente des systèmes électroniques certifiés de facturation. Lisez-plutôt ! Conformément aux dispositions de l'article 564-2 du Code général des impôts, les personnes physiques et morales relevant de la Direction des grandes entreprises (DGE) et des Directions des moyennes entreprises (DME) sont tenues de délivrer exclusivement à leurs clients des factures électroniques certifiées. L'article 4 de l'arrêté n°2025-0049/MEF/SG/DGI du 05 février 2025 portant conditions et modalités d'émission des factures électroniques certifiées précise que celles-ci sont émises au moyen de systèmes électroniques certifiés de facturation physiques, acquis auprès de distributeurs agréés par la Chambre de commerce et d'industrie du Burkina Faso et disposant d'une attestation de conformité délivrée par l'administration fiscale. En application de ces dispositions, la Direction générale des impôts et la Chambre de commerce et d'industrie du Burkina Faso informent les contribuables concernés que les systèmes électroniques certifiés de facturation, notamment les unités de facturation et les modules de contrôle de facturation, seront disponibles à compter du lundi 07 septembre 2026 sur les sites ci-après: ➤ à Ouagadougou, dans les locaux de la Direction de la facturation normalisée et des téléprocédures (DFNT) de la Chambre de commerce et d'industrie du Burkina Faso, sis côté Quest de la place Naaba Koom, non loin de la gare ferroviaire, ainsi que dans les locaux de la Direction des moyennes entreprises du Centre 5 et de la Direction des grandes entreprises; ➤ à Bobo-Dioulasso, dans les locaux de la Direction régionale de la Chambre de commerce et d'industrie du Burkina Faso, sis à proximité du rond-point à sept (07) voies, non loin du Musée régional du Guiriko ainsi qu'à la Direction des moyennes entreprises du Guiriko. La mise en vente se fera suivant le chronogramme ci-après: ➤ à compter du lundi 07 septembre 2026 contribuables relevant de la Direction des grandes entreprises (DGE) et éditeurs de logiciels de facturation; ➤ à compter du lundi 02 novembre 2026: contribuables relevant du Régime du réel normal d'imposition des Directions des moyennes entreprises (DME); ➤ à compter du mardi 1er décembre 2026: contribuables relevant du Régime non déterminé des Directions des moyennes entreprises (DME). Il est rappelé que l'obligation d'émission de la facture électronique certifiée est entrée en vigueur depuis le 1er janvier 2025, conformément aux dispositions du Code général des impôts. Toutefois, afin de tenir compte du calendrier de disponibilité des systèmes électroniques certifiés de facturation, et afin de permettre aux contribuables concernés d'accomplir les diligences nécessaires à leur mise en conformité, la Direction générale des impôts accompagnera leur appropriation progressive du dispositif. Le délai accordé pour la mise en conformité est de trente (30) jours suivant les dates ci-dessus indiquées. Par ailleurs, dans l'optique d'accompagner les entreprises à leur mise en conformité, il est accordé, à titre exceptionnel, un prix promotionnel de cent cinquante mille (150 000) francs CFA pour l'acquisition de toute unité de facturation ou de tout module de contrôle de facturation. Ce prix promotionnel est applicable jusqu'au 31 décembre 2026. Les prix de vente applicables à compter du 1er janvier 2027, vous seront communiqués en temps opportun. La Direction générale des impôts et la Chambre de commerce et d'industrie du Burkina Faso invitent, en conséquence, les contribuables concernés à saisir cette opportunité et à prendre, dans les meilleurs délais, les dispositions pour acquérir le système électronique certifié de facturation adapté à leur mode de facturation. A cet effet, ils sont invités à s'inscrire sur la plateforme >, accessible à partir des sites web de la Direction générale des impôts ( https://dgi.bf ) et de la Chambre de commerce et d'industrie du Burkina Faso ( https://www.cci.bf ). Pour toute information complémentaire, les contribuables peuvent s'adresser aux points focaux dédiés à la facture électronique certifiée au sein de leur service des impôts de rattachement. La Direction générale des impôts et la Chambre de commerce et d'industrie du Burkina Faso comptent sur le civisme fiscal et le sens de responsabilité des contribuables relevant de la DGE et des DME ainsi que des éditeurs de logiciels de facturation pour accomplir, dans les délais requis, les diligences nécessaires à leur mise en conformité avec la réforme de la facture électronique certifiée. Fait à Ouagadougou, le 28 août 2026. Le Directeur général de la Chambre de Commerce et d'Industrie du Burkina Seydou Tou La Directrice générale des impôts Elfane T. Djiguemdé Minute.bf Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Jeux de l’AES 2026 : 376 athlètes du Burkina Faso, du Mali et du Niger attendus à Ouagadougou",
+      "link": "https://burkina24.com/2026/09/07/jeux-de-laes-2026-376-athletes-du-burkina-faso-du-mali-et-du-niger-attendus-a-ouagadougou/",
+      "pubDate": "2026-09-07T15:42:16.000Z",
+      "description": "La deuxième édition des Jeux de la Confédération des États du Sahel (JAES) Ouagadougou ont débuté le lundi 7 septembre 2026 à Ouagadougou. Lors d’une conférence de presse tenue le samedi 5 septembre 2026, le comité d’organisation a fait le point des préparatifs de cette compétition qui regroupe le Burkina Faso, le Mali et le … The post Jeux de l'AES 2026 : 376 athlètes du Burkina Faso, du Mali et du Niger attendus à Ouagadougou appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1054,23 +1083,23 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": null,
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
+      "_relevance": ".",
       "_desk": "A1"
     },
     {
-      "title": "Saponé : La Gendarmerie nationale saisit des produits pharmaceutiques prohibés d’une valeur d’environ 5 millions de FCFA",
-      "link": "https://www.minute.bf/sapone-la-gendarmerie-nationale-saisit-des-produits-pharmaceutiques-prohibes-dune-valeur-denviron-5-millions-de-fcfa/",
-      "pubDate": "2026-09-07T10:03:54.000Z",
-      "description": "Dans la matinée du samedi 22 août 2026, les gendarmes de la Brigade territoriale de Saponé ont intercepté deux véhicules transportant une importante cargaison de médicaments et produits vétérinaires interdits à Targho. Trois hommes ont été placés en garde à vue, tandis qu’une enquête pour blanchiment de capitaux a été ouverte. La lutte contre les trafics illicites s’intensifie au Burkina Faso. Aux premières heures du samedi 22 août 2026, la Brigade territoriale de Gendarmerie de Saponé a réalisé une interception dans la localité de Targho, située à environ 30 kilomètres de Saponé. Deux véhicules, soigneusement aménagés pour dissimuler leur chargement, ont été arrêtés alors qu’ils transportaient une grande quantité de produits pharmaceutiques destinés à la santé humaine et animale, dont la circulation est formellement prohibée sur le territoire national. À bord des deux véhicules se trouvaient trois hommes, âgés de 31 ans pour l’un et de 27 ans pour les deux autres. Tous se présentent comme commerçants et résident dans différentes localités du pays. Placés en garde à vue dans les locaux de la sous-unité, ils sont soupçonnés d’être les transporteurs de cette marchandise illégale. Selon les premiers éléments de l’enquête, menée sous la direction du commandant de la Brigade, les présumés trafiquants s’approvisionnaient à Dakola, une localité proche de la frontière, avant de contourner les postes de sécurité pour acheminer les produits vers leur destination finale. Les propriétaires présumés de la cargaison, qui n’ont pas été interpellés lors de l’opération, ont été invités à se présenter à la Gendarmerie pour contribuer à la manifestation de la vérité. Ils auraient eux-mêmes évalué la valeur de la marchandise saisie à environ cinq millions (5 000 000) de francs CFA. Au-delà du volet lié au trafic de médicaments, les investigations ont été étendues à une procédure pour blanchiment de capitaux, compte tenu des indices relevés par les enquêteurs. À l’issue de la garde à vue, les trois mis en cause ont été déférés devant les autorités judiciaires compétentes pour la suite de la procédure. Par cette opération, la Gendarmerie nationale réaffirme son engagement résolu dans la lutte contre les trafics illicites et la protection des populations contre des produits dangereux pour la santé humaine et animale. Elle salue également la bonne collaboration avec les services techniques et les autorités judiciaires. Enfin, la Gendarmerie nationale adresse ses félicitations aux populations pour leur collaboration fructueuse et les invite à maintenir une vigilance accrue. Elle rappelle que tout comportement suspect peut être signalé via les numéros verts gratuits : 10 10, 16 et 17. Source : Gendarmerie nationale",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Burkina-Iran: le renforcement de la coopération au menu d’un échange entre Karamoko Traoré et l’ambassadeur Faghini",
+      "link": "https://www.wakatsera.com/burkina-iran-le-renforcement-de-la-cooperation-au-menu-dun-echange-entre-karamoko-traore-et-lambassadeur-faghini/",
+      "pubDate": "2026-09-07T15:10:07.000Z",
+      "description": "(Ouagadougou, le 7 septembre 2026) Le camarade ministre des Affaires étrangères Karamoko Jean Marie TRAORE, a accordé une audience à SEM Mojtaba FAGHIHI, ambassadeur de la République Islamique d’Iran, le vendredi 4 septembre dernier. Cette audience s'inscrit dans une dynamique de dialogue régulier autour des axes de coopération entre les deux pays. Elle a aussi permis aux deux hommes d'aborder des sujets d'actualité sur les relations internationales, notamment la situation en République Islamique d’Iran marquée par des sanctions américaines visant un isolement économique de ce pays. Dans une convergence d'appréciations, le diplomate iranien et le ministre des Affaires étrangères ont déploré cette situation qui résulte d'une volonté de certains Etats dits puissants de vouloir imposer leur politique nationale au reste du monde. Le Chef de la diplomatie burkinabè a souligné la nécessité, voire l'urgence pour l’Organisation des Nations Unies de prendre ses responsabilités, en interpellant certains Etats membres qui œuvrent comme des acteurs de la guerre et non de la paix. Pour le Camarade Karamoko Jean Marie TRAORE, c'est aussi dans ce contexte que les Etats victimes d'injustice se doivent d'être solidaires pour faire face aux tentatives de domination et affronter les défis communs, à l'image de ce que font les pays de la Confédération AES. Tout en exprimant la compassion du peuple burkinabè à celui de la République Islamique d’Iran, le ministre des Affaires étrangères a réaffirmé la disposition du Burkina Faso à aller de l'avant dans la coopération entre Ouagadougou et Téhéran. DCRP/MAE L’article Burkina-Iran: le renforcement de la coopération au menu d'un échange entre Karamoko Traoré et l'ambassadeur Faghini est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1078,7 +1107,7 @@
         "economic",
         "diplomatic",
         "military",
-        "political"
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -1087,46 +1116,14 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "J",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Kourittenga : Les populations mobilisées pour l’assainissement du CMA de Pouytenga",
-      "link": "https://www.aib.media/kourittenga-les-populations-mobilisees-pour-lassainissement-du-cma-de-pouytenga/",
-      "pubDate": "2026-09-07T12:00:11.000Z",
-      "description": "BURKINA-KOURITTENGA-SANTE-LUTTE-ANTIVECTORIELLE-CMA Kourittenga : Les populations mobilisées pour l’assainissement du CMA de Pouytenga Pouytenga, 05 sept. 2026 (AIB)-Une opération d’assainissement de l’enceinte du Centre médical avec antenne chirurgicale (CMA) de Pouytenga a débuté ce samedi 5 septembre 2026. Organisée dans le cadre du deuxième passage des Journées nationales de lutte antivectorielle (JN-LAV), l’activité a mobilisé les populations et les appelés à l’immersion patriotique obligatoire autour de la salubrité et de la prévention des maladies. Munis de pelles, de pioches, de râteaux, de tricycles et d’autres outils, les participants s’attèlent au nettoyage des différents espaces du centre de santé. L’opération consiste notamment à assainir le cadre de vie, à identifier et à détruire les gîtes larvaires, ainsi qu’à collecter les objets susceptibles de favoriser la prolifération des moustiques. Pour l’appelée à l’immersion patriotique obligatoire, édition 2026, Micheline Bikienga, cette mobilisation constitue une manière pour la population de contribuer directement à la protection de la santé publique. « Nous sommes là pour rendre le centre médical propre et aussi lutter contre certaines maladies comme le paludisme qui est en train de ravager presque tout le monde. Nous, appelés de 2026, avons pris part à cette activité parce qu’à l’immersion, on nous a appris à lutter contre les maladies, à cultiver la solidarité et bien d’autres valeurs qui contribuent au vivre-ensemble », a-t-elle témoigné. Sur le terrain, les travaux se poursuivent avec la collecte des déchets et l’élimination des objets pouvant retenir de l’eau. Cette action de proximité constitue également un volet important de la lutte antivectorielle. Pour le médecin-chef du district sanitaire de Pouytenga, Dr Abdoul Kader Konaté, assurant l’intérim du médecin-chef de district (MCD) en mission, l’assainissement permet de réduire les conditions favorables à la prolifération des moustiques. « L’intérêt, d’abord, c’est de prévenir les infections nosocomiales. Nous avons beaucoup d’herbes et, en rendant ce lieu propre, cela va dans le sens de la santé de nos populations, de nos malades et de nous-mêmes, agents de santé », a-t-il expliqué. Selon lui, la destruction des gîtes larvaires autour du CMA contribue également à réduire les risques de transmission du paludisme. « La présence des gîtes larvaires va encore augmenter l’incidence du paludisme au sein du CMA. N’oublions pas que les malades hospitalisés ont des accompagnants qui viennent leur rendre visite. S’ils trouvent un cadre sans gîtes larvaires, ils seront moins exposés au risque de paludisme, et c’est ce qui est très bien pour la santé de la population », a-t-il ajouté. En cette période où certaines maladies sont observées, le premier responsable de la commune, Benoît Tiemtoré, appelle l’ensemble des citoyens à poursuivre leur engagement en faveur de l’assainissement. « Effectivement, ce sont les déchets issus de notre centre de santé que nous sommes en train de dégager. Notre message à lancer à la population de Pouytenga, c’est de travailler effectivement à lutter contre les maladies que nous vivons régulièrement, notamment le paludisme, la dengue et le chikungunya, qui nous ont aussi fatigués les années antérieures », a-t-il déclaré. Il a invité les populations à détruire les gîtes larvaires autour des concessions et à adopter des comportements favorables à la prévention des maladies vectorielles. « Pour lutter contre toutes ces maladies, nous devons détruire tous les gîtes larvaires à proximité de nos concessions. Les retenues d’eau, nous devons les boucher. Les pneus usés qui retiennent beaucoup d’eau, nous devons les vider et les éloigner de nos concessions. Nous devons également protéger nos enfants en les faisant dormir sous des moustiquaires, tout en suivant les conseils des agents de santé », a-t-il conseillé. L’opération se poursuit jusqu’au dimanche 6 septembre 2026 au CMA de Pouytenga. À travers cette initiative, les autorités communales, les services sanitaires et les populations entendent renforcer la lutte antivectorielle par l’assainissement, la destruction des gîtes larvaires et la collecte des objets favorisant la prolifération des moustiques. Agence d’information du Burkina WMGN/AWS/HB/OO",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "N",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
       "_desk": "A1"
     }
   ],
@@ -1135,7 +1132,7 @@
       "title": "Hollow Promises: Resetting Gaza’s Ceasefire",
       "link": "https://www.crisisgroup.org/rpt/middle-east-north-africa/israelpalestine-united-states/257-hollow-promises-resetting-gazas-ceasefire",
       "source": "ICG — International Crisis Group",
-      "date": "2026-09-07T13:28:02.443Z",
+      "date": "2026-09-07T19:10:05.188Z",
       "rating": "A2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1148,18 +1145,114 @@
       ]
     },
     {
-      "title": "Nepal observes national day of mourning for victims of flash flood disaster",
-      "link": "https://www.myjoyonline.com/nepal-observes-national-day-of-mourning-for-victims-of-flash-flood-disaster/",
-      "source": "MyJoyOnline (Ghana)",
-      "date": "2026-09-07T12:55:24.000Z",
-      "rating": "F1",
+      "title": "Cuba incurs almost $9 bln in damage from US blockade in one year — top diplomat",
+      "link": "https://tass.com/world/2183801",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-09-07T18:21:41.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "UK's Burnham, Trump discuss working towards Ukraine-Russia ceasefire, Downing Street says",
+      "link": "https://www.al-monitor.com/originals/2026/09/uks-burnham-trump-discuss-working-towards-ukraine-russia-ceasefire-downing-street",
+      "source": "Al-Monitor",
+      "date": "2026-09-07T17:46:34.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Sommet Lumière : Emmanuel Macron au chevet d’un cinéma menacé par les plateformes gratuites et l’IA générative",
+      "link": "https://www.lemonde.fr/culture/article/2026/09/07/sommet-lumiere-emmanuel-macron-au-chevet-d-un-cinema-menace-par-les-plateformes-gratuites-et-l-ia-generative_6767980_3246.html",
+      "source": "Le Monde International",
+      "date": "2026-09-07T16:56:44.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Un \"vent de panique\" : avec la victoire de l'AfD en Saxe-Anhalt, les étrangers redoutent un tournant",
+      "link": "https://www.france24.com/fr/europe/20260907-vent-panique-victoire-afd-saxe-anhalt-%C3%A9trangers-redoutent-tournant-extr%C3%AAme-droite",
+      "source": "France 24",
+      "date": "2026-09-07T16:16:58.000Z",
+      "rating": "C2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
       "majors": [
         {
           "type": "crise",
-          "keyword": "disaster"
+          "keyword": "panique"
+        }
+      ]
+    },
+    {
+      "title": "L'hommage à Mladic, ancien général de guerre condamné pour génocide, réprouvé à l'international",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260907-l-hommage-%C3%A0-mladic-ancien-g%C3%A9n%C3%A9ral-de-guerre-condamn%C3%A9-pour-g%C3%A9nocide-r%C3%A9prouv%C3%A9-%C3%A0-l-international",
+      "source": "France 24",
+      "date": "2026-09-07T15:54:58.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "génocide"
+        }
+      ]
+    },
+    {
+      "title": "Guinée : quel bilan pour Mamadi Doumbouya 5 ans après le coup d'État ?",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260907-guin%C3%A9e-quel-bilan-pour-mamadi-doumbouya-5-ans-apr%C3%A8s-le-coup-d-%C3%A9tat",
+      "source": "France 24",
+      "date": "2026-09-07T14:53:41.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "coup d'état"
+        }
+      ]
+    },
+    {
+      "title": "Après les crues au Népal, la difficile reconnaissance des corps : «Nous n’imaginions pas un instant ne recevoir que des cadavres»",
+      "link": "https://www.liberation.fr/international/asie-pacifique/apres-les-crues-au-nepal-la-difficile-reconnaissance-des-corps-nous-nimaginions-pas-un-instant-ne-recevoir-que-des-cadavres-20260907_EC3A5MRTLVBJJLCFDQQJFDINBA/",
+      "source": "Libération International",
+      "date": "2026-09-07T13:57:38.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
         }
       ]
     },
@@ -1178,156 +1271,44 @@
           "keyword": "blockade"
         }
       ]
-    },
-    {
-      "title": "Sommet Lumière : le cinéma mondial réuni à Saint-Paul-de-Vence pour un \"Davos du 7ème art\"",
-      "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260907-sommet-lumi%C3%A8re-le-cin%C3%A9ma-mondial-r%C3%A9unit-%C3%A0-saint-paul-de-vence-pour-un-davos-du-7%C3%A8me-art",
-      "source": "France 24",
-      "date": "2026-09-07T10:56:49.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Ouverture du procès : assassinat par balle de l'ex-rugbyman Federico Aramburú",
-      "link": "https://www.france24.com/fr/vid%C3%A9o/20260907-ouverture-du-proc%C3%A8s-assassinat-par-balle-de-l-ex-rugbyman-federico-arambur%C3%BA",
-      "source": "France 24",
-      "date": "2026-09-07T10:46:26.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "Effondrement du pont Kabakuli : le Parlement des jeunes de Butembo craint l’enclavement de plusieurs quartiers",
-      "link": "https://www.radiookapi.net/2026/09/07/actualite/societe/effondrement-du-pont-kabakuli-le-parlement-des-jeunes-de-butembo-craint",
-      "source": "Radio Okapi (RDC)",
-      "date": "2026-09-07T09:35:17.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "effondrement"
-        }
-      ]
-    },
-    {
-      "title": "Nepal observes national day of mourning for victims of flash flood disaster",
-      "link": "https://www.bbc.co.uk/news/articles/c2kw1qek7gdo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "date": "2026-09-07T09:31:26.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
-    },
-    {
-      "title": "A Belgrade, des milliers de Serbes rendent hommage à Ratko Mladic, général serbe condamné pour génocide",
-      "link": "https://www.lemonde.fr/international/article/2026/09/07/a-belgrade-des-milliers-de-serbes-rendent-hommage-a-ratko-mladic-general-serbe-condamne-pour-genocide_6767917_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-09-07T08:19:21.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "Des frappes israéliennes au Liban font 11 morts, dont deux nourrissons, malgré le cessez-le-feu",
-      "link": "https://www.lemonde.fr/international/article/2026/09/07/des-frappes-israeliennes-au-liban-font-11-morts-dont-deux-nourrissons-malgre-le-cessez-le-feu_6767911_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-09-07T07:52:01.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Chasse en Sologne: Olivier Bouygues face à la justice pour massacre supposé d’espèces protégées",
-      "link": "https://www.mediapart.fr/journal/ecologie/070926/chasse-en-sologne-olivier-bouygues-face-la-justice-pour-massacre-suppose-d-especes-protegees",
-      "source": "Mediapart International",
-      "date": "2026-09-07T06:38:29.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "massacre"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      203
+      185
     ],
     [
       "occident_fr",
-      113
-    ],
-    [
-      "autre",
-      101
+      123
     ],
     [
       "occident_us",
-      93
+      88
     ],
     [
       "golfe_mo",
-      66
+      86
     ],
     [
-      "turquie",
-      60
-    ],
-    [
-      "russie",
-      57
+      "autre",
+      82
     ],
     [
       "bf_local",
-      45
+      60
+    ],
+    [
+      "turquie",
+      56
+    ],
+    [
+      "russie",
+      49
     ],
     [
       "sahel",
-      32
+      41
     ],
     [
       "chine",
@@ -1339,52 +1320,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 84,
+      "count": 123,
       "top": [
         {
-          "title": "Namentenga : Le Haut-commissaire exhorte les corps constitués à porter le casque pour montrer l’exemple aux citoyens",
-          "link": "https://www.aib.media/namentenga-le-haut-commissaire-exhorte-les-corps-constitues-a-porter-le-casque-pour-montrer-lexemple-aux-citoyens/",
-          "source": "AIB — Agence Information BF",
+          "title": "Retour sur Actu : Les temps forts de la semaine du 31 août au 6 septembre 2026 au Burkina Faso",
+          "link": "https://burkina24.com/2026/09/07/retour-sur-actu-les-temps-forts-de-la-semaine-du-31-aout-au-6-septembre-2026-au-burkina-faso/",
+          "source": "Burkina24",
           "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Boulgou : La délégation spéciale de Niaogho en guerre contre les gîtes larvaires",
-          "link": "https://www.aib.media/boulgou-la-delegation-speciale-de-niaogho-en-guerre-contre-les-gites-larvaires/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
+          "theme": "D",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "Montée du pavillon national : Le Premier ministre réaffirme sa foi en un Burkina Faso capable de surprendre le monde",
-          "link": "https://www.minute.bf/montee-du-pavillon-national-le-premier-ministre-reaffirme-sa-foi-en-un-burkina-faso-capable-de-surprendre-le-monde/",
-          "source": "Minute BF",
+          "title": "Sissili : à Léo, coutumiers, religieux et populations s’unissent pour la réussite de l’opération spéciale d’enrôlement de la carte d’identité AES",
+          "link": "https://www.aib.media/sissili-a-leo-coutumiers-religieux-et-populations-sunissent-pour-la-reussite-de-loperation-speciale-denrolement-de-la-carte-didentite-aes/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Chevauchements des années académiques au Burkina Faso : Une normalisation historique de 99,69 % dans les universités publiques après 15 ans de crise",
+          "link": "https://netafrique.net/chevauchements-des-annees-academiques-au-burkina-faso-une-normalisation-historique-de-9969-dans-les-universites-publiques-apres-15-ans-de-crise/",
+          "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
           "relevance": "A",
           "rating": "F1"
         },
         {
-          "title": "Montée du pavillon national : le Premier ministre réaffirme sa foi en un Burkina Faso capable de surprendre le monde",
-          "link": "https://www.sidwaya.info/%f0%9d%90%8c%f0%9d%90%a8%f0%9d%90%a7%f0%9d%90%ad%f0%9d%90%9e%f0%9d%90%9e-%f0%9d%90%9d%f0%9d%90%ae-%f0%9d%90%a9%f0%9d%90%9a%f0%9d%90%af%f0%9d%90%a2%f0%9d%90%a5%f0%9d%90%a5%f0%9d%90%a8%f0%9d%90%a7/",
-          "source": "Sidwaya",
+          "title": "Passoré : Les forces vives s’attaquent aux gîtes larvaires au grand marché et à la gare routière de Yako Yako",
+          "link": "https://www.aib.media/passore-les-forces-vives-sattaquent-aux-gites-larvaires-au-grand-marche-et-a-la-gare-routiere-de-yako-yako-7-sept-2026-aib-les-forces-vives-du-passore-ont-participe-les-5-et-6-septemb/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Jean Emmanuel Ouédraogo, Premier ministre du Burkina Faso: « Nous allons surprendre le monde »",
+          "link": "https://netafrique.net/jean-emmanuel-ouedraogo-premier-ministre-du-burkina-faso-nous-allons-surprendre-le-monde/",
+          "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
           "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "Universités publiques : Le Ministère de l’Enseignement supérieur promet la fin totale des retards académiques d’ici le 21 septembre 2026",
-          "link": "https://www.minute.bf/universites-publiques-le-ministere-de-lenseignement-superieur-promet-la-fin-totale-des-retards-academiques-dici-le-21-septembre-2026/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         }
       ]
     },
@@ -1392,29 +1373,38 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 58,
+      "count": 59,
       "top": [
         {
-          "title": "Nigerian lawmaker accused of sponsoring banditry denies allegation, says case already in Niger court",
-          "link": "https://www.premiumtimesng.com/news/top-news/907904-nigerian-lawmaker-accused-of-sponsoring-banditry-denies-allegation-says-case-already-in-niger-court.html",
-          "source": "Premium Times (Nigeria)",
+          "title": "Former GPHA Director-General Edward K. Osei receives Honorary Doctorate, Excellence Award",
+          "link": "https://www.myjoyonline.com/former-gpha-director-general-edward-k-osei-receives-honorary-doctorate-excellence-award/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "theme": "L",
+          "relevance": "A",
+          "rating": "C2"
         },
         {
-          "title": "Security, activism and the burden of proof, By Mukhtar Ya’u Madobi",
-          "link": "https://www.premiumtimesng.com/opinion/907871-security-activism-and-the-burden-of-proof-by-mukhtar-yau-madobi.html",
-          "source": "Premium Times (Nigeria)",
+          "title": "29 Players to commence Black Starlets preparations ahead of 2026 WAFU U-17 Championship",
+          "link": "https://www.myjoyonline.com/29-players-to-commence-black-starlets-preparations-ahead-of-2026-wafu-u-17-championship/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Nigerian Founder Benjamin Akindote Is Building Eego to Power Africa’s Next Generation of Online Sellers",
-          "link": "https://www.vanguardngr.com/2026/09/nigerian-founder-benjamin-akindote-is-building-eego-to-power-africas-next-generation-of-online-sellers/",
+          "title": "Après deux ans d’exil, Ernest Bai Koroma retrouve enfin sa terre natale",
+          "link": "https://www.wakatsera.com/apres-deux-ans-dexil-ernest-bai-koroma-retrouve-enfin-sa-terre-natale/",
+          "source": "Wakat Séra",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "South-South governors back Tinubu for 2027, seek economic integration",
+          "link": "https://www.vanguardngr.com/2026/09/south-south-governors-back-tinubu-for-2027-seek-economic-integration/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
@@ -1422,22 +1412,13 @@
           "rating": "F2"
         },
         {
-          "title": "Third quarter national security update: Building security through coordination, intelligence and public trust, By Chido Onumah",
-          "link": "https://www.premiumtimesng.com/opinion/907893-third-quarter-national-security-update-building-security-through-coordination-intelligence-and-public-trust-by-chido-onumah.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Intersociety: 3,083 Christians killed, 3,193 abducted in eight months",
-          "link": "https://www.vanguardngr.com/2026/09/intersociety-3083-christians-killed-3193-abducted-in-eight-months/",
+          "title": "Tinubu’s reforms transforming indigenous firms into global brands – Shettima",
+          "link": "https://www.vanguardngr.com/2026/09/tinubus-reforms-transforming-indigenous-firms-into-global-brands-shettima/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1445,52 +1426,52 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 37,
+      "count": 29,
       "top": [
         {
-          "title": "Kinshasa : Au moins 22 morts dans l’incendie d’une salle de mariage",
-          "link": "https://burkina24.com/2026/09/07/kinshasa-au-moins-22-morts-dans-lincendie-dune-salle-de-mariage/",
-          "source": "Burkina24",
-          "zone": "4. Grands Lacs",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "Tanzanie : Le mari de la présidente Samia Suluhu Hassan est décédé",
-          "link": "https://burkina24.com/2026/09/07/tanzanie-le-mari-de-la-presidente-samia-suluhu-hassan-est-decede/",
-          "source": "Burkina24",
+          "title": "Kenya : des Burundais cherchent à quitter le pays face à la menace d’un durcissement contre les petits commerçants étrangers",
+          "link": "https://francais.rt.com/afrique/137809-kenya-burundais-menace-durcissement",
+          "source": "RT en français",
           "zone": "4. Grands Lacs",
           "theme": "P",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "A1"
         },
         {
-          "title": "Effondrement du pont Kabakuli : le Parlement des jeunes de Butembo craint l’enclavement de plusieurs quartiers",
-          "link": "https://www.radiookapi.net/2026/09/07/actualite/societe/effondrement-du-pont-kabakuli-le-parlement-des-jeunes-de-butembo-craint",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": null,
-          "relevance": ".",
+          "title": "MRC : la diaspora Europe réaffirme son soutien sans faille à Maurice Kamto",
+          "link": "https://fr.journalducameroun.com/mrc-la-diaspora-europe-reaffirme-son-soutien-sans-faille-a-maurice-kamto/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Kenya minister warns foreigners against ‘misusing’ visas to trade",
-          "link": "https://www.myjoyonline.com/kenya-minister-warns-foreigners-against-misusing-visas-to-trade/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Tanzanie: décès de l’époux de la présidente Samia Suluhu Hassan",
+          "link": "https://www.wakatsera.com/tanzanie-deces-de-lepoux-de-la-presidente-samia-suluhu-hassan/",
+          "source": "Wakat Séra",
           "zone": "4. Grands Lacs",
-          "theme": "D",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "C1"
         },
         {
-          "title": "L'ONU réfléchit à des missions de paix plus ciblées: quelles pistes pour la Monusco?",
-          "link": "https://www.rfi.fr/fr/afrique/20260907-monusco-rdc-antonio-guterres-pr%C3%A9conise-des-missions-paix-plus-cibl%C3%A9es",
-          "source": "RFI Afrique",
+          "title": "Création du poste de vice-président au Cameroun : ‘’Toute controverse orchestrée par des acteurs politiques … est vaine’’, Paul Atanga Nji",
+          "link": "https://fr.journalducameroun.com/creation-du-poste-de-vice-president-au-cameroun-toute-controverse-orchestree-par-des-acteurs-politiques-est-vaine-paul-atanga-nji/",
+          "source": "Journal du Cameroun",
           "zone": "3. Afrique centrale",
-          "theme": "H",
+          "theme": "P",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
+        },
+        {
+          "title": "Soudan : les drones armés étendent les ravages du conflit, frappant hôpitaux et écoles",
+          "link": "https://news.un.org/feed/view/fr/story/2026/09/1159419",
+          "source": "ONU Info (FR)",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
         }
       ]
     },
@@ -1498,50 +1479,50 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 25,
+      "count": 22,
       "top": [
         {
-          "title": "Attijariwafa bank rejoint le Swift Payments Scheme pour accélérer les paiements internationaux",
-          "link": "https://fr.hespress.com/487429-attijariwafa-bank-rejoint-le-swift-payments-scheme-pour-accelerer-les-paiements-internationaux.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Le futur parc éolien offshore d'Essaouira entre dans sa phase d'étude",
-          "link": "https://fr.hespress.com/486951-le-futur-parc-eolien-offshore-dessaouira-entre-dans-sa-phase-detude.html",
+          "title": "Emploi, salaires, croissance : le PJD refuse de fixer des objectifs chiffrés",
+          "link": "https://fr.hespress.com/487471-emploi-salaires-croissance-le-pjd-refuse-de-fixer-des-objectifs-chiffres.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
-          "title": "Le marché tunisien de l’acier dans l’expectative",
-          "link": "https://kapitalis.com/tunisie/2026/09/07/le-marche-tunisien-de-lacier-dans-lexpectative/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "OCDE : Akhannouch réaffirme l’ambition du Maroc de devenir « plus fort et plus compétitif »",
+          "link": "https://fr.hespress.com/487446-ocde-akhannouch-reaffirme-lambition-du-maroc-de-devenir-plus-fort-et-plus-competitif.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "2 000 mineurs identifiés à Sebta, l’Espagne privilégie le regroupement familial",
-          "link": "https://telquel.ma/instant-t/2026/09/07/2-000-mineurs-identifies-a-sebta-lespagne-privilegie-le-regroupement-familial_2005974/",
-          "source": "TelQuel (Maroc)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Figue de Barbarie d’Algérie : de M’Sila à la France, le pari entrepreneurial de Kenza et son père",
-          "link": "https://www.tsa-algerie.com/figue-de-barbarie-dalgerie-de-msila-a-la-france-le-pari-entrepreneurial-de-kenza-et-son-pere/",
+          "title": "Incendies en Algérie : quatre présumés pyromanes sous mandat de dépôt",
+          "link": "https://www.tsa-algerie.com/incendies-en-algerie-quatre-presumes-pyromanes-sous-mandat-de-depot/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Contre la « guerre non déclarée » du trafic de drogue, l’Algérie muscle sa réponse sécuritaire",
+          "link": "https://www.lemonde.fr/international/article/2026/09/07/contre-la-guerre-non-declaree-du-trafic-de-drogue-l-algerie-muscle-sa-reponse-securitaire_6767973_3210.html",
+          "source": "Le Monde International",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "SMIG à 5.000 DH : Chaouki rejette les surenchères",
+          "link": "https://fr.hespress.com/487493-smig-a-5-000-dh-chaouki-rejette-les-surencheres.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1551,17 +1532,8 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 88,
+      "count": 102,
       "top": [
-        {
-          "title": "Des frappes israéliennes au Liban font 11 morts, dont deux nourrissons, malgré le cessez-le-feu",
-          "link": "https://www.lemonde.fr/international/article/2026/09/07/des-frappes-israeliennes-au-liban-font-11-morts-dont-deux-nourrissons-malgre-le-cessez-le-feu_6767911_3210.html",
-          "source": "Le Monde International",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
-        },
         {
           "title": "Hollow Promises: Resetting Gaza’s Ceasefire",
           "link": "https://www.crisisgroup.org/rpt/middle-east-north-africa/israelpalestine-united-states/257-hollow-promises-resetting-gazas-ceasefire",
@@ -1581,22 +1553,31 @@
           "rating": "F2"
         },
         {
-          "title": "Comment le conflit entre les États-Unis et l'Iran pourrait-il prendre fin ? Trois experts donnent leur avis",
-          "link": "https://www.bbc.com/afrique/articles/c93eyk2150qo?at_medium=RSS&at_campaign=rss",
-          "source": "BBC Afrique (FR)",
+          "title": "Comprendre la sécurité énergétique : concepts, réalités physiques, transition énergétique et polycrise",
+          "link": "https://www.iris-france.org/comprendre-la-securite-energetique-concepts-realites-physiques-transition-energetique-et-polycrise/",
+          "source": "IRIS France",
+          "zone": "8. Moyen-Orient",
+          "theme": "L",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Israeli strikes in southern Lebanese village kill 12",
+          "link": "https://www.myjoyonline.com/israeli-strikes-in-southern-lebanese-village-kill-12/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F1"
         },
         {
-          "title": "Saudi Aramco oil facilities hit in new strikes",
-          "link": "https://www.ft.com/content/9ffb0fb3-51f6-4aa8-9270-a949196bf441?syn-25a6b1a6=1",
-          "source": "Financial Times World",
+          "title": "Israeli clearance of Gaza rubble could destroy 'evidence', says UN expert",
+          "link": "https://www.al-monitor.com/originals/2026/09/israeli-clearance-gaza-rubble-could-destroy-evidence-says-un-expert",
+          "source": "Al-Monitor",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B2"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1604,17 +1585,8 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 165,
+      "count": 169,
       "top": [
-        {
-          "title": "Santé: des chercheurs russes développent un « aspirateur laser » pour nettoyer les plaies sans endommager les tissus sains",
-          "link": "https://www.aib.media/sante-des-chercheurs-russes-developpent-un-aspirateur-laser-pour-nettoyer-les-plaies-sans-endommager-les-tissus-sains/",
-          "source": "AIB — Agence Information BF",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
-        },
         {
           "title": "Mondial de basketball : le Mali renverse l’Espagne et change sa trajectoire",
           "link": "https://journaldumali.com/mondial-de-basketball-le-mali-renverse-lespagne-et-change-sa-trajectoire/",
@@ -1625,31 +1597,40 @@
           "rating": "F2"
         },
         {
-          "title": "Sommet Lumière : le cinéma mondial réuni à Saint-Paul-de-Vence pour un \"Davos du 7ème art\"",
-          "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260907-sommet-lumi%C3%A8re-le-cin%C3%A9ma-mondial-r%C3%A9unit-%C3%A0-saint-paul-de-vence-pour-un-davos-du-7%C3%A8me-art",
-          "source": "France 24",
+          "title": "Sommet Lumière : Emmanuel Macron au chevet d’un cinéma menacé par les plateformes gratuites et l’IA générative",
+          "link": "https://www.lemonde.fr/culture/article/2026/09/07/sommet-lumiere-emmanuel-macron-au-chevet-d-un-cinema-menace-par-les-plateformes-gratuites-et-l-ia-generative_6767980_3246.html",
+          "source": "Le Monde International",
           "zone": "14. Extrême-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Après les crues au Népal, la difficile reconnaissance des corps : «Nous n’imaginions pas un instant ne recevoir que des cadavres»",
+          "link": "https://www.liberation.fr/international/asie-pacifique/apres-les-crues-au-nepal-la-difficile-reconnaissance-des-corps-nous-nimaginions-pas-un-instant-ne-recevoir-que-des-cadavres-20260907_EC3A5MRTLVBJJLCFDQQJFDINBA/",
+          "source": "Libération International",
+          "zone": "12. Asie du Sud",
           "theme": "D",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Ouverture du procès : assassinat par balle de l'ex-rugbyman Federico Aramburú",
-          "link": "https://www.france24.com/fr/vid%C3%A9o/20260907-ouverture-du-proc%C3%A8s-assassinat-par-balle-de-l-ex-rugbyman-federico-arambur%C3%BA",
-          "source": "France 24",
-          "zone": "9. Europe occidentale",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "C2"
+          "title": "La doctrine Milei pour unir l’extrême droite mondiale",
+          "link": "https://legrandcontinent.eu/fr/2026/09/07/la-doctrine-milei-pour-unir-lextreme-droite-mondiale/",
+          "source": "Le Grand Continent",
+          "zone": "18. Amérique du Sud",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
         },
         {
-          "title": "Nepal observes national day of mourning for victims of flash flood disaster",
-          "link": "https://www.bbc.co.uk/news/articles/c2kw1qek7gdo?at_medium=RSS&at_campaign=rss",
-          "source": "BBC World",
-          "zone": "12. Asie du Sud",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B1"
+          "title": "L'hommage à Mladic, ancien général de guerre condamné pour génocide, réprouvé à l'international",
+          "link": "https://www.france24.com/fr/vid%C3%A9o/20260907-l-hommage-%C3%A0-mladic-ancien-g%C3%A9n%C3%A9ral-de-guerre-condamn%C3%A9-pour-g%C3%A9nocide-r%C3%A9prouv%C3%A9-%C3%A0-l-international",
+          "source": "France 24",
+          "zone": "9. Europe occidentale",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "C2"
         }
       ]
     }
@@ -1663,43 +1644,48 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "EMAIL_TO missing"
+    "reason": "disabled"
   },
   "agentLog": [
     {
-      "at": "2026-09-07T13:27:29.751Z",
+      "at": "2026-09-07T19:09:35.135Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-07T13:27:29.756Z",
+      "at": "2026-09-07T19:09:35.141Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-07T13:28:02.416Z",
+      "at": "2026-09-07T19:10:05.163Z",
       "agent": "Agent Collecte RSS",
-      "message": "106/170 flux OK, 1861 articles"
+      "message": "109/170 flux OK, 1905 articles"
     },
     {
-      "at": "2026-09-07T13:28:04.982Z",
+      "at": "2026-09-07T19:10:07.772Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-07T13:28:05.236Z",
+      "at": "2026-09-07T19:10:08.066Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-07T13:28:05.240Z",
+      "at": "2026-09-07T19:10:08.069Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 10 alertes"
+      "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-09-07T13:28:05.240Z",
+      "at": "2026-09-07T19:10:08.070Z",
       "agent": "Agent Email",
-      "message": "Email non envoye: EMAIL_TO missing"
+      "message": "Envoi email ignore (SEND_EMAIL=false)"
+    },
+    {
+      "at": "2026-09-07T19:10:08.070Z",
+      "agent": "Agent Email",
+      "message": "Email non envoye: disabled"
     }
   ]
 }
