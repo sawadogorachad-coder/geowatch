@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-09-10T04:42:30.595Z",
+  "generatedAt": "2026-09-10T11:19:34.998Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 106,
-    "failed": 64,
-    "articles": 1862,
+    "ok": 111,
+    "failed": 59,
+    "articles": 1934,
     "okSources": [
+      {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "count": 30
+      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -40,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -51,6 +56,11 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -95,6 +105,11 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -228,6 +243,11 @@
         "count": 10
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "count": 10
+      },
+      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -280,7 +300,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -333,6 +353,11 @@
         "count": 0
       },
       {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "count": 25
+      },
+      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -360,7 +385,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 22
+        "count": 23
       },
       {
         "id": "rss_fp",
@@ -385,7 +410,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 22
       },
       {
         "id": "rss_bbc_africa",
@@ -405,7 +430,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -490,7 +515,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 24
       },
       {
         "id": "rss_nikkei",
@@ -540,19 +565,9 @@
     ],
     "failedSources": [
       {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "error": "HTTP 415"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -593,11 +608,6 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -692,7 +702,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "HTTP 415"
+        "error": "fetch failed"
       },
       {
         "id": "rss_le360",
@@ -712,7 +722,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 415"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_moibrahim",
@@ -728,11 +738,6 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -778,11 +783,6 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_chinadaily",
@@ -863,28 +863,32 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 51,
-    "alerts": 7,
-    "criticalAlerts": 3,
+    "bfAes": 47,
+    "alerts": 9,
+    "criticalAlerts": 6,
     "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
-      "title": "Jeux de l’AES | Tir à l’arc traditionnel : Le Burkina s’adjuge trois médailles d’or",
-      "link": "https://www.minute.bf/jeux-de-laes-tir-a-larc-traditionnel-le-burkina-sadjuge-trois-medailles-dor/",
-      "pubDate": "2026-09-09T21:15:02.000Z",
-      "description": "La deuxième édition des Jeux de l’Alliance des États du Sahel (AES) se poursuit à Ouagadougou. Ce mercredi 9 septembre 2026, les épreuves de tir à l’arc traditionnel ont eu lieu sur le terrain annexe du Stade du 4-Août. Au terme des confrontations, les archers burkinabè se sont illustrés aussi bien en individuel que par équipes, décrochant trois médailles d’or. Lancés lundi dernier dans la capitale burkinabè, ces jeux réunissent le Burkina Faso, le Mali et le Niger autour de plusieurs disciplines sportives. Le podium avec 2 Burkinabè et un Nigérien Chez les hommes, les tirs se sont effectués à une distance de 25 mètres, contre 15 mètres pour les femmes. Les épreuves se sont disputées en plusieurs séries de six puis de trois flèches. Chez les dames, les archères burkinabè, maliennes et nigériennes se sont affrontées. À l’issue des épreuves individuelles, la Burkinabè Yeri Jeannette Kambou a pris la première place, devançant la Malienne Ramatoulaye Traoré et sa compatriote Kabako Kam. En individuel hommes, le Burkinabè Kopounè Hein s’est également distingué en remportant la première place avec 36 points. Son compatriote Kopotin Ollo termine deuxième, tandis qu’un archer nigérien complète le podium. Épreuve du tir à l'arc La domination burkinabè s’est confirmée par équipes. Chez les femmes, le Burkina Faso l’emporte devant le Niger et le Mali. En compétition mixte, l’équipe burkinabè s’impose à nouveau, suivie du Niger puis du Mali. Lors des confrontations directes, les archers burkinabè ont d’abord disputé des demi-finales face à des représentants nigériens avant les matchs de classement. Ils ont notamment décroché une troisième place dans l’une de ces épreuves. Au total, avec les titres en individuel dames, individuel hommes, par équipe féminine et en mixte, le Burkina Faso signe une prestation remarquée dans le tir à l’arc traditionnel. À l’issue de la compétition, les archers burkinabè repartent avec trois médailles d’or, une enveloppe financière et le trophée mis en jeu. Pour Kopounè Hein, cette victoire est avant tout le fruit du travail. « Il n’y a rien de magique là-dedans. Ce sont les entraînements qui paient. Je n’en suis pas à ma première médaille : j’ai participé à la Semaine nationale de la culture (SNC) et à d’autres compétitions sous-régionales où j’ai déjà été récompensé », a-t-il confié. L'objectif Le champion burkinabè a également encouragé ses adversaires à redoubler d’efforts. « J’encourage mes frères du Niger et du Mali à mieux s’entraîner, car, de ce que j’ai vu, leur niveau de jeu était encore insuffisant », a-t-il ajouté. Rappelons que le lancement officiel des Jeux de l’AES a eu lieu hier au Palais des sports de Ouaga 2000. Les épreuves de tir à l’arc olympique se poursuivront demain, jeudi 10 septembre, sur le même site. Lire aussi : Jeux de l’AES : Les Étalons U17 A écrasent le Niger et lancent parfaitement la compétition Nadège KINDA Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "Kankan : « La surveillance a été renforcée après l’assassinat d’un homme retrouvé décapité », explique Michel Pivi",
+      "link": "https://mediaguinee.com/2026/09/kankan-la-surveillance-a-ete-renforcee-apres-lassassinat-dun-homme-retrouve-decapite-explique-michel-pivi/",
+      "pubDate": "2026-09-10T06:50:28.000Z",
+      "description": "La commune urbaine de Kankan renforce son dispositif sécuritaire dans les 57 quartiers de la ville. Dans un communiqué rendu public cette semaine, la mairie appelle à une vigilance accrue sur les mouvements de personnes et annonce le renforcement de la présence de la police municipale sur le terrain. Désormais, les chefs de quartier devront être informés de l’arrivée et du séjour de toute personne personnes étrangères venant s’installer temporairement ou durablement dans leur zone. Les propriétaires de concessions, maisons et appartements meublés mis en location sont également invités à signaler aux responsables de quartier l’identité des nouveaux occupants. Une mesure prise après un crime qui a marqué la ville Screenshot \" data-large-file=\"https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?fit=1024%2C700&ssl=1\" class=\"wp-image-325240 size-full\" src=\"https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?resize=1170%2C800&ssl=1\" alt=\"\" width=\"1170\" height=\"800\" srcset=\"https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?w=1763&ssl=1 1763w, https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?resize=300%2C205&ssl=1 300w, https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?resize=1024%2C700&ssl=1 1024w, https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?resize=768%2C525&ssl=1 768w, https://i0.wp.com/mediaguinee.com/wp-content/uploads/2026/09/IMG_8291.jpeg?resize=1536%2C1051&ssl=1 1536w\" sizes=\"(max-width: 1170px) 100vw, 1170px\" /> Screenshot Interrogé sur les raisons de cette nouvelle orientation sécuritaire, Michel Pivi, responsable de la communication de la commune urbaine de Kankan, explique que cette décision intervient notamment après l’assassinat récent d’un homme d’une quarantaine d’années, retrouvé décapité. Selon lui, ce crime, présenté comme une première dans la ville par son caractère particulièrement violent, a profondément marqué la population et suscité de nombreuses interrogations sur l’identité et l’origine des personnes impliquées. « C'était une première, une grande première à Kankan. Franchement, ça a secoué toute la ville. Donc il fallait prendre des décisions draconiennes », explique Michel Pivi.» Le responsable de la communication indique également que des concertations ont eu lieu entre les autorités communales, préfectorales, régionales et judiciaires afin d’évaluer la situation sécuritaire dans la préfecture de Kankan. À l’issue de ces échanges, le maire, en tant que premier responsable de la municipalité, a décidé de renforcer les mesures de prévention et de surveillance dans les différents quartiers. Les nouveaux arrivants davantage suivis L’une des principales mesures annoncées concerne les personnes qui viennent séjourner ou s’installer dans les quartiers de Kankan. Les chefs de quartier devront désormais être informés de l’arrivée de tout nouvel occupant, qu’il s’agisse d’un séjour temporaire ou d’une installation durable. Les propriétaires qui louent leurs maisons, concessions ou appartements meublés sont également appelés à communiquer l’identité des personnes qui y résident. Pour Michel Pivi, cette mesure vise essentiellement à permettre aux responsables locaux de savoir qui vit dans les différents quartiers et à faciliter la circulation de l’information en cas de situation inhabituelle. Cette orientation s’explique aussi par la forte mobilité de la population à Kankan. Située au cœur d’une région marquée par l’activité aurifère, la ville accueille régulièrement des personnes venues d’autres préfectures de Guinée, mais également de pays voisins, notamment le Mali, le Burkina Faso et la Côte d’Ivoire. La mairie estime ainsi que cette importante mobilité nécessite une meilleure connaissance des personnes présentes dans les quartiers. Les chefs de quartier au cœur du dispositif Dans cette nouvelle stratégie, les chefs de quartier sont appelés à jouer un rôle central. Ils devront être informés de l’arrivée des nouveaux occupants et contribuer à la remontée des informations vers les autorités communales. L’objectif affiché est de renforcer la prévention et de permettre une réaction plus rapide face à d’éventuelles situations à risque. La mairie appelle donc les responsables de quartier, les propriétaires et les habitants à davantage de vigilance et de collaboration. Cinq policiers municipaux dans chacun des 57 quartiers Pour accompagner ces mesures, la commune urbaine de Kankan prévoit également de renforcer la présence de la police municipale. Cinq policiers municipaux sont affectés dans chacun des 57 quartiers de la ville, soit un effectif total de 285 agents. Ces policiers auront notamment pour mission d’effectuer des patrouilles quotidiennes dans les quartiers afin de détecter d’éventuels manquements, prévenir les troubles et signaler aux autorités compétentes toute situation jugée préoccupante. Michel Pivi précise : « Actuellement, chaque quartier est doté de cinq policiers municipaux. Donc, dans les 57 quartiers, il y a plus de 280 personnes que la commune prend en charge. Les cinq policiers communaux représentés dans chaque quartier vont sillonner les quartiers tous les jours pour voir s'il y a des manquements ou des cas comme ça. » À travers ce dispositif, la municipalité entend accroître sa présence sur le terrain et mieux anticiper les éventuels risques sécuritaires. La lutte contre les stupéfiants annoncée La mairie prévoit également une opération de contrôle visant la consommation de stupéfiants dans la ville. Cette action constitue un autre volet de la nouvelle stratégie sécuritaire. Selon les autorités communales, la lutte contre la consommation de drogues doit contribuer à prévenir certains comportements susceptibles de favoriser les violences, les troubles à l’ordre public ou d’autres actes criminels. Pour Michel Pivi, il s’agit également de répondre aux inquiétudes suscitées par les récents événements et de renforcer la sécurité des populations. Miser sur la prévention Au-delà de la réaction à l’assassinat récent, la commune affirme vouloir davantage miser sur l’anticipation. Connaître les nouveaux occupants, améliorer la remontée des informations, renforcer les patrouilles de proximité et lutter contre les stupéfiants constituent désormais les principaux axes du dispositif annoncé. Le crime particulièrement violent qui a récemment secoué Kankan apparaît ainsi comme un signal d’alerte pour les autorités locales. La mairie entend désormais resserrer la surveillance dans les 57 quartiers afin de mieux prévenir d’éventuels actes criminels et renforcer la sécurité des citoyens. La nouvelle orientation sécuritaire repose donc sur une collaboration accrue entre les habitants, les propriétaires, les chefs de quartier, la police municipale et les autorités administratives et judiciaires. Karifa Kansan Doumbouya, correspondant régional- Kankan L’article Kankan : « La surveillance a été renforcée après l’assassinat d’un homme retrouvé décapité », explique Michel Pivi est apparu en premier sur Mediaguinee.com .",
+      "_source": "Mediaguinee",
+      "_sourceId": "rss_mediaguinee",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
         "military"
       ],
-      "_majors": [],
+      "_majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ],
       "_bf": true,
       "_aes": true,
       "_agentGenerated": true,
@@ -894,70 +898,7 @@
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Xiaomi dévoile le REDMI 17 : une batterie de 7 500 mAh, un écran spacieux de 6,9 pouces et une durabilité au quotidien",
-      "link": "https://www.minute.bf/xiaomi-devoile-le-redmi-17-une-batterie-de-7-500-mah-un-ecran-spacieux-de-69-pouces-et-une-durabilite-au-quotidien/",
-      "pubDate": "2026-09-09T16:50:54.000Z",
-      "description": "Ouagadougou, Burkina Faso, 9 septembre 2026 – Xiaomi a dévoilé aujourd'hui la série REDMI 17, la dernière génération de sa gamme de smartphones axée sur le rapport qualité-prix, conçue pour offrir une fiabilité toute la journée et un divertissement sans effort à un plus grand nombre d'utilisateurs dans le monde. Composée des modèles REDMI 17, cette série associe une batterie massive de 7 500 mAh (typ.) à un écran immersif de 6,9 pouces à taux de rafraîchissement élevé et à un système de double caméra IA de 50 MP, offrant une expérience smartphone durable et fiable, adaptée au rythme de la vie quotidienne. Batterie plus grande et charge plus rapide pour une fiabilité au quotidien La performance est au cœur du REDMI 17. Doté d'une imposante batterie de 7 500 mAh (typ.), le smartphone est conçu pour offrir une autonomie exceptionnelle et accompagner les utilisateurs tout au long de la journée. Qu'il s'agisse de streaming, de navigation, d'appels vidéo, de création de contenu ou de divertissement, cette batterie haute capacité permet de rester productif, connecté et de profiter de ses contenus plus longtemps, tout en réduisant la fréquence des recharges. Compatible avec la charge turbo 45 W³ et la recharge inversée filaire jusqu'à 22,5 W⁴, le REDMI 17 offre également une plus grande flexibilité au quotidien. Selon le type d'utilisation, il peut atteindre jusqu'à 28 heures de lecture vidéo, 91 heures d'écoute musicale, 46 heures d'appels ou 12 heures d'enregistrement vidéo, répondant ainsi aux besoins des utilisateurs les plus exigeants.² Un écran large pour une expérience visuelle immersive Le REDMI 17 est équipé d'un grand écran immersif de 6,9 pouces offrant une expérience visuelle idéale pour le streaming, les jeux, la navigation et la lecture. Son taux de rafraîchissement adaptatif pouvant atteindre 120 Hz ajuste intelligemment la fluidité de l'affichage afin d'offrir une navigation plus réactive tout en optimisant la consommation d'énergie.⁵ Associé aux certifications TÜV Rheinland Low Blue Light, Circadian Friendly et Flicker Free, ainsi qu'à la technologie DC Dimming, l'écran garantit un meilleur confort visuel, même lors d'une utilisation prolongée. Conçu pour accompagner les utilisateurs au quotidien, l'écran est protégé par le Corning® Gorilla® Glass 7i, offrant une meilleure résistance aux rayures et aux chocs. Avec sa certification IP64 contre la poussière et les éclaboussures ainsi que la technologie Wet Touch, le REDMI 17 assure une utilisation fiable et réactive dans différentes conditions d'utilisation.⁶ Design audacieux et novateur, à l’extérieur comme à l’intérieur Le REDMI 17 adopte un tout nouveau langage de design inspiré de la nature, décliné dans une palette de couleurs à la fois classiques et expressives, qui associe une esthétique épurée à une praticité pensée pour le quotidien. Disponible en Noir, Bleu Profond, Vert Chêne et Violet Lotus⁷, il offre un style moderne qui s'adapte à toutes les personnalités. Au-delà de ses nouveaux coloris, le REDMI 17 associe un écran plat, une architecture à cadre mat et un design Metal Deco pour offrir une apparence élégante inspirée des smartphones haut de gamme, tout en garantissant une prise en main confortable. Son écran à perforation centrale et ses bordures affinées renforcent l'immersion et apportent une esthétique plus épurée. Pour compléter cette expérience, le système Dynamic RGB Light personnalise les effets lumineux des appels entrants, des notifications, de l'état de charge, des sessions de jeu et de l'utilisation de l'appareil photo, ajoutant une touche de personnalisation au quotidien. Performances fluides pour le divertissement au quotidien Le REDMI 17 associe un matériel performant à Xiaomi HyperOS 3 afin d'offrir une expérience fluide et réactive pour les tâches quotidiennes, le divertissement et le multitâche.⁹ Équipé du MediaTek Helio G91-Ultra, il prend en charge jusqu'à 12 Go de RAM grâce à l'extension de mémoire⁸, permettant un lancement plus rapide des applications et une meilleure fluidité lors de l'utilisation simultanée de plusieurs applications. Xiaomi HyperOS 3 améliore encore l'expérience grâce à des animations plus fluides,⁹ une réactivité renforcée et des interactions plus intuitives au quotidien. Côté photographie, le système de double caméra IA de 50 MP capture des images nettes et naturelles dans les situations de tous les jours, tandis que la fonction Double Vue permet d'enregistrer simultanément avec les caméras avant et arrière pour capturer chaque instant sous plusieurs perspectives. Pour compléter l'expérience multimédia, les doubles haut-parleurs stéréo avec une amplification du volume pouvant atteindre 300 % offrent un son plus puissant et immersif pour les vidéos, la musique, les appels et bien plus encore. Les images du produit sont disponibles au téléchargement via les liens ci-dessous : REDMI 17 Fiche technique rapide du REDMI 17 REDMI 17 Conception Écran plat et architecture de cadre mat avec design Metal Deco Dimensions : 170,12 mm × 78,42 mm × 8,8 mm² Poids : 232 g² Couleurs : Noir, Bleu profond, Vert chêne, Violet lotus⁷ Résistance à la poussière et à l'eau IP64⁶ Appareil photo Capteur principal 50MP Objectif 5P, f/1.8 Objectif auxiliaire Caméra frontale de 8 mégapixels f/2,05 Écran Écran de 6,9 pouces² Résolution : 1600 x 720 Taux de rafraîchissement : jusqu'à 120 Hz⁵ Luminosité : 675 nits (typique), 825 nits HBM TÜV Rheinland : Lumière bleue faible (solution logicielle) TÜV Rheinland Circadian Friendly TÜV Rheinland 无频闪认证 gradation DC Taux d'échantillonnage tactile : jusqu'à 240 Hz Taux de contraste : 1400:1 Profondeur de couleur : 8 bits, 16,7 millions de couleurs Gamme de couleurs : 83 % NTSC Performance MediaTek Helio G91-Ultra Proceso de 12 nm, octa-core Processeur : Cortex-A75 + Cortex-A55 Fréquence maximale du processeur : 2,0 GHz GPU : Mali-G52 MC2™ Prend en charge jusqu'à 12 Go de RAM avec extension mémoire⁸ Prend en charge jusqu'à 2 To de stockage extensible¹¹ Xiaomi HyperOS 3⁹ Batterie et recharge Batterie de 7500 mAh (typique) Suralimentation turbo 45W³ Recharge inversée filaire de 22,5 W⁴ USB Type-C Audio Double haut-parleurs stéréo Jusqu'à 300 % d'augmentation de volume¹⁰ Prise casque 3.5 mm Connectivité Wi-Fi : 2,4 GHz | 5 GHz¹² Hybride triple emplacement 2 en 1 pour carte SIM + microSD Prend en charge la technologie NFC¹³ Bluetooth 5.4 Prend en charge la radio FM avec prise casque Prend en charge AAC / SBC / LDAC",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "J",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Concours pour créer son logo, son slogan et son identité",
-      "link": "https://leconomistedufaso.com/2026/09/09/concours-pour-creer-son-logo-slogan-et-identite/",
-      "pubDate": "2026-09-09T16:29:38.000Z",
-      "description": "Pour accompagner durablement la Semaine de l’Énergie, des Mines et des Hydrocarbures de l’AES (SEMH-AES) et lui conférer une identité forte, moderne et fédératrice… La Confédération des États du Sahel lance un concours pour la conception d’un logo officiel et du slogan de cet important évènement. Créateurs, graphistes, designers et passionnés d’arts visuels : votre talent peut donner un visage à l’ambition commune du Burkina Faso, du Mali et du Niger ! Imaginez un logo original, moderne, épuré et intemporel, associé à un slogan percutant et mémorisable, en parfaite résonance avec la vision de l’AES dans les secteurs de l’énergie, des mines et des hydrocarbures. Graphistes, designers et créateurs de nos trois nations : Révélez votre talent et entrez dans l’histoire de la SEMH-AES Le concours est gratuit et ouvert à tous. Chaque candidat devra soumettre une proposition complète (logo et slogan), conformément au règlement du concours. Les propositions sont attendues au plus tard le 11 septembre 2026 à 23h59 TU sur https://www.inscription.samao. bf/ Pour plus d’informations, veuillez contacter le secrétariat du concours. Contacts : +226 68 91 71 47 (Burkina Faso) / +223 91 96 41 84 (Mali) / +227 91 17 82 73 (Niger) Ensemble, donnons un visage à l’avenir énergétique et minier de l’espace sahélien. The post Concours pour créer son logo, son slogan et son identité appeared first on L'economiste du faso .",
-      "_source": "L'Économiste du Faso",
-      "_sourceId": "rss_eco_faso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "B2"
-      },
-      "_rating": "B2",
-      "_score": 123,
+      "_score": 144,
       "_zone": 1,
       "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -965,10 +906,44 @@
       "_desk": "A1"
     },
     {
-      "title": "Gnagna/Manni : les femmes de la paroisse Sainte-Alphonse-Marie-de-Liguorie prient pour la paix et la cohésion sociale",
-      "link": "https://www.aib.media/gnagna-manni-les-femmes-de-la-paroisse-sainte-alphonse-marie-de-liguorie-prient-pour-la-paix-et-la-cohesion-sociale/",
-      "pubDate": "2026-09-09T15:22:49.000Z",
-      "description": "BURKINA-SIRBA-GNAGNA-MANNI-RELIGION Gnagna/Manni : les femmes de la paroisse Sainte-Alphonse-Marie-de-Liguorie prient pour la paix et la cohésion sociale Manni, 5 septembre 2026 (AIB) – Une trentaine de femmes du groupe YAMIDAGIDI de la paroisse Sainte-Alphonse-Marie-de-Liguorie de Manni ont consacré, samedi, une journée à la prière, au partage et à la fraternité, avec une intention particulière pour la paix et la cohésion sociale au Burkina Faso. La journée a débuté dès 6 heures par une célébration eucharistique présidée par le curé de la paroisse, l’abbé Paulin Mano. À l’issue de la messe, les participantes se sont rendues à la grotte mariale Notre-Dame-du-Perpétuel-Secours pour poursuivre leur moment de recueillement. Réunies autour du sanctuaire, elles ont récité le chapelet en méditant les mystères joyeux, sous la conduite d’Hélène Diagbouga. Au cours de leurs invocations, elles ont confié à Dieu leurs familles, leur communauté ainsi que le Burkina Faso, confronté à de nombreuses épreuves. La rencontre ne s’est toutefois pas limitée aux activités spirituelles. De retour à la paroisse, les participantes ont échangé sur la paix et sur la nécessité de préserver, au sein des familles et de la collectivité, les valeurs de solidarité, de pardon, de tolérance et de fraternité. La journée s’est achevée par un repas fraternel, dans une ambiance conviviale, permettant au groupe de renforcer davantage les liens qui les unissent. Le groupement YAMIDAGIDI, dont le nom en langue locale renvoie à l’idée de femmes partageant une même vision, un même esprit et des projets convergents, se réunit habituellement une fois par mois. Ces rencontres constituent des cadres de prière, d’échanges d’expériences et de partage d’idées autour de la vie familiale et communautaire. Pour cette édition, les membres ont choisi d’élargir leur rendez-vous habituel en consacrant une journée entière à la prière pour la paix. Une initiative qui traduit, selon elles, leur volonté d’apporter leur contribution aux efforts en faveur de la paix et de la cohésion au Burkina Faso, à travers les intercessions et le renforcement des liens sociaux. « Nous prions pour que la paix revienne dans notre pays, dans nos familles et dans nos cœurs », a déclaré une participante, résumant l’intention portée par cette activité. À travers cette initiative, les femmes de YAMIDAGIDI entendent ainsi apporter leur contribution spirituelle à la recherche de la paix, convaincues que la prière, la solidarité et la fraternité peuvent contribuer à l’apaisement des relations au sein des familles et de la communauté. Agence d’Information du Burkina GL/ayt/ata/zs",
+      "title": "Algérie–Sahel : le retour en force d’un voisin incontournable",
+      "link": "https://journaldumali.com/algerie-sahel-le-retour-en-force-dun-voisin-incontournable/",
+      "pubDate": "2026-09-10T11:03:26.000Z",
+      "description": "© Internet La 13e Grande Commission mixte Mali–Algérie, attendue à Bamako après dix ans d’interruption, doit consacrer la détente après quinze mois de crise. Elle marque surtout le retour d’Alger dans un Sahel transformé par l’AES, le partenariat russe et la poussée marocaine. La précédente Grande Commission mixte s’était achevée à Bamako, en novembre 2016, par treize instruments de coopération : accords, mémorandums et programme exécutif. La session suivante, annoncée pour 2018 à Alger, est de nouveau programmée dix ans plus tard, à Bamako. Entre-temps, le cadre régional a profondément changé. Pour Birahim Soumaré, ancien ambassadeur du Mali en Türkiye et analyste en stratégie internationale, ce rendez-vous dépasse la normalisation : « Nous sommes dans une phase de redéfinition et de relance ». Une relation remise à plat La confiance s’était déjà dégradée lorsque Bamako a annoncé, le 25 janvier 2024, la fin de l’Accord pour la paix issu du processus d’Alger. Elle a cédé en avril 2025 après la destruction d’un drone militaire malien près de Tin Zaouatine. Alger soutenait que l’appareil avait pénétré son territoire. Bamako contestait cette version. Le rappel des ambassadeurs et la fermeture réciproque des espaces aériens ont suivi. Le 6 avril 2025, le Mali s’est retiré avec effet immédiat du Comité d’état-major opérationnel conjoint (CEMOC). Créé en 2010 à Tamanrasset avec l’Algérie, la Mauritanie et le Niger, ce dispositif coordonnait le renseignement et la lutte antiterroriste. Ce retrait a privé les deux voisins de l’un de leurs principaux cadres de coopération sécuritaire. Birahim Soumaré rappelle que les relations diplomatiques n’ont jamais été formellement rompues : des chargés d’affaires ont continué d’assurer la représentation. Le 10 juillet 2026, les deux pays ont annoncé le retour de leurs ambassadeurs et la réouverture réciproque de leurs espaces aériens. Le 24 août, Abdoulaye Maïga s’est rendu à Alger et Assimi Goïta a accepté une invitation du président Tebboune, sans date fixée. Plus de 1 300 kilomètres de frontière, des familles établies de part et d’autre, des transhumances, des marchés liés et des menaces communes rendent une brouille prolongée coûteuse. Selon une estimation non officielle de Mohamed Abdellahi Elkhalil, sociologue et spécialiste des questions sociales et sécuritaires du Sahel, la crise a fait chuter de 70 % le commerce informel à Tessalit et Tinzaouatène. Il évoque des familles séparées, des transhumances bloquées et des éleveurs contraints de vendre à perte. Ses priorités sont la circulation, l’accès humanitaire, le réapprovisionnement des marchés et les laissez-passer consulaires. Il propose la réouverture contrôlée d’un poste pour le bétail et une ligne directe entre autorités locales. Alger revient autrement Le retour algérien s’inscrit dans un cadre différent de celui du processus de paix malien. Bamako privilégie désormais un règlement national et l’Alliance des États du Sahel a créé son propre cadre. Bréhima Ely Dicko, sociologue, voit donc l’Algérie évoluer de médiateur extérieur vers « un voisin-partenaire stratégique ». Reste à savoir si Alger travaillera avec l’AES comme ensemble régional, et pas seulement avec chacune de ses capitales. Une défiance persiste. Selon Mohamed Abdellahi Elkhalil, l’Algérie est perçue par une partie des acteurs du Nord comme partie prenante, en raison du soutien prêté aux mouvements armés, plutôt que comme arbitre neutre. Alger a rejeté ces accusations. Pour le sociologue, sa facilitation demeure difficilement remplaçable faute d’alternative régionale. L’Algérie a déjà repris l’initiative à Niamey et à Ouagadougou par l’énergie, les mines, les infrastructures et la formation. Après la mutinerie qui a visé une base aérienne de Niamey fin août, le ministère algérien de la Défense a annoncé le déploiement, à la demande du Niger, de quatre avions de combat Su-30, d’un avion de transport et d’un ravitailleur. Arrivés après la reprise de la base, les appareils algériens n’ont pas participé aux combats, auxquels l’Africa Corps russe avait directement pris part. Ce soutien tranche avec la prudence affichée par Alger en 2023, lorsqu’elle s’opposait à une intervention militaire extérieure au Niger. Depuis la révision constitutionnelle de 2020, le président algérien peut décider l’envoi d’unités à l’étranger, après approbation des deux tiers de chaque chambre du Parlement. La Constitution maintient cependant la non-ingérence et encadre la participation au maintien de la paix. La doctrine est devenue plus souple, sans ouvrir un droit d’intervention illimité. Moscou, partenaire et irritant L’Algérie entretient avec la Russie une relation stratégique ancienne, surtout militaire. Le Mali et ses partenaires de l’AES ont fait de Moscou un appui majeur, à travers la coopération militaire et la présence de l’Africa Corps. Cette proximité commune avec la Russie n’efface pas les divergences. Alger a publiquement critiqué le recours aux mercenaires dans son voisinage et refuse les bases militaires étrangères sur son propre territoire. Cette position coexiste avec sa coopération d’État à État avec Moscou et la présence de l’Africa Corps au Sahel. Le Niger montre qu’une coexistence est possible en ce sens que l’Africa Corps a directement soutenu les forces nigériennes contre la mutinerie, tandis que l’Algérie a déployé ses appareils après les combats. Cette convergence ponctuelle ne règle ni les désaccords sur le Nord malien ni la place future des forces étrangères. Elle révèle surtout une Algérie plus active. La poussée marocaine Alger revient dans un Sahel où le Maroc progresse. L’Initiative royale d’accès à l’Atlantique a reçu l’adhésion du Mali, du Burkina Faso et du Niger. Bamako et Rabat ont relancé leur Grande Commission mixte en juillet 2026. Une concurrence de débouchés se dessine à travers les ports atlantiques proposés par le Maroc et l’ouverture méditerranéenne portée par les corridors algériens. Bréhima Ely Dicko distingue l’offre sécuritaire russe, l’offre économique et religieuse marocaine, et la relation historique, frontalière et humaine avec l’Algérie. Il recommande une « diplomatie de l’utilité », jugeant chaque partenariat sur la souveraineté, le développement local et le désenclavement. Birahim Soumaré refuse l’idée d’un choix exclusif : « La nature de notre relation bilatérale avec l’Algérie ou avec le Maroc ne saurait être déterminée par les relations que nous entretenons avec l’autre pays ». Bamako peut ainsi préserver sa liberté et rechercher des solutions concrètes. Le test des résultats Les projets ne manquent pas : Route transsaharienne, branche Tamanrasset–Bamako, fibre optique, énergie, formation et commerce frontalier. Le gazoduc Nigeria–Niger–Algérie, bien qu’il ne traverse pas le Mali, complète cette stratégie d’axes nord-sud vers la Méditerranée. Le potentiel contraste avec la faiblesse du commerce déclaré. Selon les données de l’ITC et d’UN Comtrade déclarées par l’Algérie, les échanges formels de marchandises ont atteint environ 7,6 millions de dollars en 2024, hors flux informels. Les accords de 2016 prévoyaient aussi 280 MW de centrales hybrides, dont 40 MW à Gao et 40 MW à Tombouctou. Leur état d’exécution reste à établir. Pour le géographe Yacouba Sogoré, spécialiste du développement local et de la décentralisation, une route ne devient un corridor que lorsque douanes, sécurité, logistique, financement et services commerciaux fonctionnent ensemble. Il propose un axe pilote, avec des produits et des transporteurs identifiés, des délais mesurés et des résultats publiés. Il insiste surtout sur les retombées locales : « Un projet qui traverse un territoire doit produire des revenus, des services et des emplois pour la population qui y vit ». En 2016, le suivi des engagements avait été confié au Comité bilatéral stratégique. Sa relance devrait s’accompagner de financements identifiés, de calendriers et de résultats accessibles. Bréhima Ely Dicko résume le défi par une formule simple : « Une route, une fibre optique, une ligne électrique ont plus d’impact qu’un protocole ». La Grande Commission constitue ainsi un test pour une relation appelée à passer d’une coopération principalement interétatique à une coopération utile aux populations. La relance offre surtout aux deux pays l’occasion de remettre leur relation à l’épreuve du concret. Pour Bamako comme pour Alger, elle prendra tout son sens si elle se traduit par des échanges plus fluides, des déplacements facilités, des zones frontalières mieux intégrées et des projets enfin menés à terme. Massiré DIOP",
+      "_source": "Journal du Mali",
+      "_sourceId": "rss_journ_mali",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mouhoun/Soutien aux forces combattantes de Douroula : Les femmes réaffirment leur soutien aux forces combattantes",
+      "link": "https://www.aib.media/mouhoun-soutien-aux-forces-combattantes-de-douroula-les-femmes-reaffirment-leur-soutien-aux-forces-combattantes/",
+      "pubDate": "2026-09-10T09:33:20.000Z",
+      "description": "BURKINA- MOUHOUN-DOUROULA-SOUTIEN-FDS-VDP Mouhoun/Soutien aux forces combattantes de Douroula : Les femmes réaffirment leur soutien aux forces combattantes Douroula, 8 sept. 2026 (AIB)-Les femmes de Douroula ont témoigné leur solidarité aux Forces de défense et de sécurité (FDS) et aux Volontaires pour la défense de la patrie (VDP), le mardi 08 septembre 2026 à travers un don composé notamment de savon liquide, de beurre de karité et de soumbala, sous la présidence du Haut-commissaire de la province du Mouhoun, Bassouleymane Ouattara. La cérémonie de remise du don a constitué un moment de reconnaissance à l’endroit des Forces de défense et de sécurité (FDS) et aux Volontaires pour la défense de la patrie (VDP), pour leur engagement en faveur de la reconquête du territoire et du retour de la paix et de la sécurité dans la commune. Par ce geste, les femmes de Douroula entendent apporter leur contribution à l’effort collectif et encourager les forces engagées dans la défense de la patrie. La cérémonie a également été marquée par la remise symbolique de vivres mobilisés par l’Organisation catholique pour le développement et la solidarité (OCADES) et le Conseil national de secours d’urgence et de réhabilitation (CONASUR), au profit des populations de la commune. Le Président de la délégation spéciale (PDS) de la commune de Douroula, Maxime Bakouan a salué ce geste qui traduit l’attachement des femmes aux FDS et aux VDP ainsi que leur reconnaissance des sacrifices consentis pour la reconquête du territoire. Il a également appelé les femmes à préserver leur union et leur solidarité, qu’il considère comme des leviers essentiels pour faire face aux défis de la commune. La coordonnatrice des femmes de Douroula, Koeta Zata, a souligné le caractère symbolique de leur contribution et appelé au renforcement de la cohésion entre les femmes. Elle a, par ailleurs, renouvelé leur demande en faveur de la mise en place de projets générateurs de revenus. « De telles initiatives permettraient aux femmes de renforcer leur autonomie économique, de contribuer davantage aux charges familiales et d’améliorer la prise en charge de leurs enfants » a dit Koeta Zata. Le Haut-commissaire de la province du Mouhoun, Bassouleymane Ouattara, a salué la mobilisation des différentes composantes de la commune en faveur du retour progressif de la quiétude. Il a particulièrement apprécié le leadership du PDS ainsi que l’engagement des acteurs qui accompagnent les populations dans leur processus de résilience. A l’endroit des FDS et des VDP, camarade Ouattara a adressé ses félicitations pour leur veille constante et salué la solidarité manifestée par les femmes. « Cela prouve qu’il y a une bonne collaboration entre les femmes et les FDS et VDP. Je vous invite à renforcer ce lien envers elles à travers des bénédictions », a-t-il déclaré. Revenant sur les vivres destinés aux populations, Bassouleymane Ouattara a salué les démarches entreprises par le PDS et le haut-commissariat pour leur mobilisation ce qui traduit l’attention accordée aux conditions de vie des populations. S’agissant de la création de sociétés coopératives souhaitée par les femmes, il les a exhortées à s’y investir avec détermination. A l’issue de la cérémonie, le PDS de Douroula a présenté les modalités de distribution des vivres ainsi que les villages bénéficiaires, conformément aux instructions reçues et a annoncé qu’une communication sera faite pour informer les populations. Agence d’information du Burkina TFT/SB/HB/OO",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -977,7 +952,8 @@
       "_tags": [
         "economic",
         "diplomatic",
-        "military"
+        "military",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -986,12 +962,12 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "A2"
+        "rating": "C1"
       },
-      "_rating": "A2",
-      "_score": 123,
+      "_rating": "C1",
+      "_score": 115,
       "_zone": 1,
-      "_theme": "L",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1052,9 +1028,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "F2"
       },
-      "_rating": "F1",
+      "_rating": "F2",
       "_score": 115,
       "_zone": 1,
       "_theme": "E",
@@ -1085,9 +1061,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "F1"
       },
-      "_rating": "F2",
+      "_rating": "F1",
       "_score": 115,
       "_zone": 1,
       "_theme": "D",
@@ -1127,14 +1103,93 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
+    },
+    {
+      "title": "IIes Jeux de l’AES : carton plein pour les Burkinabè au tir à l’arc traditionnel",
+      "link": "https://www.sidwaya.info/iies-jeux-de-laes-carton-plein-pour-les-burkinabe-au-tir-a-larc-traditionnel/",
+      "pubDate": "2026-09-09T23:42:54.000Z",
+      "description": "Les archers du Burkina Faso ont surclassé la concurrence dans toutes les catégories lors de la compétition de tir à l’arc traditionnel le mercredi 9 septembre 2026 à Ouagadougou. Ollo Boutoté et Kapounè Hien, tous du Burkina Faso ont été les deux derniers archers a gratifié le public d’un spectacle des meilleurs lors de la finale hommes en individuel. A 25 mètres de la cible, les deux hommes ont rivalisé d’adresse jusqu’au dernier des neuf tirs qu’ils ont eu à effectuer chacun. Lors de la première série des trois flèches, ils ont tous les deux accroché 12 points, Ollo Boutoté réalisant un 9-3-0 et Kapounè Hien, un 8-4-0. Pour le second volet, Kapounè Hien met la pression sur son vis-à-vis en touchant la cible à 7-6-0 points soit un cumul désormais de 25 points. Ollo Boutoté lui marque 5-1-0 points ce qui lui fait un total de 18 points. Acculé, il réagit en touchant la partie de la cible à 8 points dès le premier tir de son dernier essai. Mais la réplique de l’adversaire tue tout suspense. Celui-ci enregistre 9 points à son tour, enchaine avec 5 points et termine par un point pendant que son compatriote faisait 0 point et Hors cadre (HC) pour ses ultimes tirs. Kapounè Hien s’offre donc la première place devant Ollo Boutoté et Gildas Palé classé 3e. Chez les dames, la Malienne Ramatoulaye Traoré n’a pas fait le poids devant la Burkinabè Yéri Jeannet Kambou dans la finale qui les a opposées. Sur les trois tours à une distance de 15 mètres de la cible, la représentante burkinabè a réalisé successivement 2-0-0, 2-0-0 et 3-0 HC quand sa rivale faisait HC-0-0,0-0-0 et 0 HC-HC. La 3e place du podium est revenue au Burkina Faso grâce à Kabako Kam. Les Burkinabè se sont également illustrés aussi bien en compétition par équipe qu’en mixte en occupant les premières places. Le Niger se classe 2e aussi bien par équipe qu’en mixte laissant la dernière place au Mali. La journée de ce jeudi est consacrée au tir olympique dont les éliminatoires se déroulent ce matin sur le terrain annexe du stade du 4-Août. Les finales sont prévues pour cet après-midi à partir du 15h. Voro KORAHIRE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": null,
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": ".",
+      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Obi Benue blockade: Police arrest 46 as condemnation mounts",
-      "link": "https://punchng.com/obi-benue-blockade-police-arrest-46-as-condemnation-mounts/?utm_source=rss.punchng.com&utm_medium=web",
-      "source": "Punch (Nigeria)",
-      "date": "2026-09-10T04:45:50.000Z",
+      "title": "«Nettoyage ethnique», «force destructrice» : après le séisme en Saxe-Anhalt, Friedrich Merz tente de reprendre la main",
+      "link": "https://www.lefigaro.fr/international/nettoyage-ethnique-force-destructrice-apres-le-seisme-en-saxe-anhalt-friedrich-merz-tente-de-reprendre-la-main-20260910",
+      "source": "Le Figaro International",
+      "date": "2026-09-10T09:52:06.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "séisme"
+        }
+      ]
+    },
+    {
+      "title": "En marge de l’Assemblée générale de l’ONU, le travail de lobbying du Somaliland pour sa reconnaissance",
+      "link": "https://www.rfi.fr/fr/afrique/20260910-en-marge-de-l-assembl%C3%A9e-g%C3%A9n%C3%A9rale-de-l-onu-le-travail-de-lobbying-du-somaliland-pour-sa-reconnaissance",
+      "source": "RFI Afrique",
+      "date": "2026-09-10T09:48:03.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "title": "Sommet international de l'espace : Macron prend la parole sur l'ambition spatiale française",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20260910-sommet-international-de-l-espace-macron-prend-la-parole-sur-l-ambition-spatiale-fran%C3%A7aise",
+      "source": "France 24",
+      "date": "2026-09-10T09:16:31.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Ex-Gov Ortom condemns blockade of Peter Obi’s convoy in Benue, fingers state govt",
+      "link": "https://www.premiumtimesng.com/news/more-news/908572-ex-gov-ortom-condemns-blockade-of-peter-obis-convoy-in-benue-fingers-state-govt.html",
+      "source": "Premium Times (Nigeria)",
+      "date": "2026-09-10T09:16:29.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1147,74 +1202,10 @@
       ]
     },
     {
-      "title": "En Iran, le régime tenté par l’escalade militaire",
-      "link": "https://www.lefigaro.fr/international/en-iran-le-regime-tente-par-l-escalade-militaire-20260909",
-      "source": "Le Figaro International",
-      "date": "2026-09-09T21:36:38.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "escalade"
-        }
-      ]
-    },
-    {
-      "title": "SOMMET COREE DU SUD-AFRIQUE SUR L’IA : Au continent noir de savoir en tirer profit sans perdre son âme",
-      "link": "https://lepays.bf/sommet-coree-du-sud-afrique-sur-lia-au-continent-noir-de-savoir-en-tirer-profit-sans-perdre-son-ame/",
-      "source": "Le Pays (BF)",
-      "date": "2026-09-09T21:29:26.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Israel violated ceasefire with Lebanon 7,700 times since June 26 — Lebanese military",
-      "link": "https://tass.com/world/2185115",
-      "source": "TASS (Russie, EN)",
-      "date": "2026-09-09T20:40:33.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Les pays du Golfe cherchent l’alternative à la fermeture du détroit d’Ormuz",
-      "link": "https://www.lefigaro.fr/international/les-pays-du-golfe-cherchent-l-alternative-a-la-fermeture-du-detroit-d-ormuz-20260909",
-      "source": "Le Figaro International",
-      "date": "2026-09-09T18:15:00.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "fermeture du détroit"
-        }
-      ]
-    },
-    {
-      "title": "Sommet «international» sur l’espace à Paris : un échec annoncé ?",
-      "link": "https://francais.rt.com/france/137891-sommet-espace-paris-grands-absents",
-      "source": "RT en français",
-      "date": "2026-09-09T17:07:33.000Z",
+      "title": "Sommet sur l'espace : l'Europe doit développer ses propres \"vols habités\", affirme Macron",
+      "link": "https://www.france24.com/fr/france/20260910-sommet-international-espace-discours-macron-france-conquete-investissement",
+      "source": "France 24",
+      "date": "2026-09-10T08:32:12.000Z",
       "rating": "A2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1227,18 +1218,66 @@
       ]
     },
     {
-      "title": "RDC : jeunesse et développement durable au cœur du Sommet mondial de la diplomatie à Kinshasa",
-      "link": "https://francais.rt.com/afrique/137890-rdc-jeunesse-developpement-durable-coeur-sommet-mondial-diplomatie-kinshasa",
-      "source": "RT en français",
-      "date": "2026-09-09T16:09:55.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
+      "title": "Les pays du Golfe cherchent l’alternative à la fermeture du détroit d’Ormuz",
+      "link": "https://www.lefigaro.fr/international/les-pays-du-golfe-cherchent-l-alternative-a-la-fermeture-du-detroit-d-ormuz-20260909",
+      "source": "Le Figaro International",
+      "date": "2026-09-10T07:38:14.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
       "bf": false,
       "majors": [
         {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
+          "type": "rupture",
+          "keyword": "fermeture du détroit"
+        }
+      ]
+    },
+    {
+      "title": "Kankan : « La surveillance a été renforcée après l’assassinat d’un homme retrouvé décapité », explique Michel Pivi",
+      "link": "https://mediaguinee.com/2026/09/kankan-la-surveillance-a-ete-renforcee-apres-lassassinat-dun-homme-retrouve-decapite-explique-michel-pivi/",
+      "source": "Mediaguinee",
+      "date": "2026-09-10T06:50:28.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": true,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ]
+    },
+    {
+      "title": "Qatar: la fermeture du détroit d'Ormuz pèse sur les finances de l'émirat",
+      "link": "https://www.rfi.fr/fr/moyen-orient/20260910-qatar-la-fermeture-du-d%C3%A9troit-d-ormuz-p%C3%A8se-sur-les-finances-de-l-%C3%A9mirat",
+      "source": "RFI Moyen-Orient",
+      "date": "2026-09-10T06:10:43.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "fermeture du détroit"
+        }
+      ]
+    },
+    {
+      "title": "En Iran, le régime joue l’escalade face à Donald Trump",
+      "link": "https://www.lefigaro.fr/international/en-iran-le-regime-tente-par-l-escalade-militaire-20260909",
+      "source": "Le Figaro International",
+      "date": "2026-09-10T04:56:06.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "escalade"
         }
       ]
     }
@@ -1250,39 +1289,39 @@
     ],
     [
       "occident_fr",
-      116
-    ],
-    [
-      "occident_us",
-      113
+      126
     ],
     [
       "autre",
-      104
+      114
     ],
     [
-      "golfe_mo",
-      69
-    ],
-    [
-      "bf_local",
-      55
-    ],
-    [
-      "russie",
-      47
+      "occident_us",
+      102
     ],
     [
       "turquie",
-      42
+      54
+    ],
+    [
+      "russie",
+      53
+    ],
+    [
+      "golfe_mo",
+      49
+    ],
+    [
+      "bf_local",
+      44
     ],
     [
       "chine",
-      32
+      31
     ],
     [
       "sahel",
-      21
+      26
     ]
   ],
   "desks": [
@@ -1290,43 +1329,34 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 102,
+      "count": 87,
       "top": [
         {
-          "title": "Jeux de l’AES | Tir à l’arc traditionnel : Le Burkina s’adjuge trois médailles d’or",
-          "link": "https://www.minute.bf/jeux-de-laes-tir-a-larc-traditionnel-le-burkina-sadjuge-trois-medailles-dor/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Xiaomi dévoile le REDMI 17 : une batterie de 7 500 mAh, un écran spacieux de 6,9 pouces et une durabilité au quotidien",
-          "link": "https://www.minute.bf/xiaomi-devoile-le-redmi-17-une-batterie-de-7-500-mah-un-ecran-spacieux-de-69-pouces-et-une-durabilite-au-quotidien/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Concours pour créer son logo, son slogan et son identité",
-          "link": "https://leconomistedufaso.com/2026/09/09/concours-pour-creer-son-logo-slogan-et-identite/",
-          "source": "L'Économiste du Faso",
+          "title": "Kankan : « La surveillance a été renforcée après l’assassinat d’un homme retrouvé décapité », explique Michel Pivi",
+          "link": "https://mediaguinee.com/2026/09/kankan-la-surveillance-a-ete-renforcee-apres-lassassinat-dun-homme-retrouve-decapite-explique-michel-pivi/",
+          "source": "Mediaguinee",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         },
         {
-          "title": "Gnagna/Manni : les femmes de la paroisse Sainte-Alphonse-Marie-de-Liguorie prient pour la paix et la cohésion sociale",
-          "link": "https://www.aib.media/gnagna-manni-les-femmes-de-la-paroisse-sainte-alphonse-marie-de-liguorie-prient-pour-la-paix-et-la-cohesion-sociale/",
+          "title": "Algérie–Sahel : le retour en force d’un voisin incontournable",
+          "link": "https://journaldumali.com/algerie-sahel-le-retour-en-force-dun-voisin-incontournable/",
+          "source": "Journal du Mali",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Mouhoun/Soutien aux forces combattantes de Douroula : Les femmes réaffirment leur soutien aux forces combattantes",
+          "link": "https://www.aib.media/mouhoun-soutien-aux-forces-combattantes-de-douroula-les-femmes-reaffirment-leur-soutien-aux-forces-combattantes/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "L",
+          "theme": "D",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "C1"
         },
         {
           "title": "Inauguration du complexe industriel Textile des Forces du Burkina Faso: Un symbole de souveraineté hautement stratégique et politique",
@@ -1336,6 +1366,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F1"
+        },
+        {
+          "title": "Sya est la capitale économique et doit être le poumon industriel du Burkina Faso (Président Ibrahim Traoré)",
+          "link": "https://netafrique.net/sya-est-la-capitale-economique-et-doit-etre-le-poumon-industriel-du-burkina-faso-president-ibrahim-traore/",
+          "source": "Net Afrique (BF)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1343,20 +1382,29 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 53,
+      "count": 63,
       "top": [
         {
-          "title": "Nigeria names new commander to lead military operations against Boko Haram",
-          "link": "https://www.myjoyonline.com/nigeria-names-new-commander-to-lead-military-operations-against-boko-haram/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Mission de la Cedeao : un contingent de 618 Sénégalais déployé en Gambie",
+          "link": "https://lesoleil.sn/actualites/societe-fait-divers/mission-de-la-cedeao-un-contingent-de-618-senegalais-deploye-en-gambie/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Ex-Gov Ortom condemns blockade of Peter Obi’s convoy in Benue, fingers state govt",
+          "link": "https://www.premiumtimesng.com/news/more-news/908572-ex-gov-ortom-condemns-blockade-of-peter-obis-convoy-in-benue-fingers-state-govt.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "What the NBA must do to help Nigeria, Africa grow — Ex-Liberian President Weah",
-          "link": "https://www.vanguardngr.com/2026/09/what-the-nba-must-do-to-help-nigeria-africa-grow-ex-liberian-president-weah/",
+          "title": "Sometimes I believe Tinubu is not in charge of his administration — Peter Obi",
+          "link": "https://www.vanguardngr.com/2026/09/sometimes-i-believe-tinubu-is-not-in-charge-of-his-administration-peter-obi/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1364,29 +1412,20 @@
           "rating": "F2"
         },
         {
-          "title": "Nigeria : Ibikunle Ajose prend la tête des opérations contre Boko Haram et l’ISWAP",
-          "link": "https://beninwebtv.com/nigeria-ibikunle-ajose-prend-la-tete-des-operations-contre-boko-haram-et-liswap/",
-          "source": "Bénin Web TV",
+          "title": "ASUU gives Sokoto govt ultimatum over unfulfilled agreement, threatens strike",
+          "link": "https://www.vanguardngr.com/2026/09/asuu-gives-sokoto-govt-ultimatum-over-unfulfilled-agreement-threatens-strike/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Police rescue kidnap victim, apprehend suspect",
-          "link": "https://www.premiumtimesng.com/regional/south-south-regional/908510-police-rescue-kidnap-victim-apprehend-suspect.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "L",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Singer Davido sternly warns those trying to move like him",
-          "link": "https://www.myjoyonline.com/singer-davido-sternly-warns-those-trying-to-move-like-him/",
+          "title": "Who is really protecting the business?",
+          "link": "https://www.myjoyonline.com/who-is-really-protecting-the-business/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1399,49 +1438,49 @@
       "count": 25,
       "top": [
         {
-          "title": "Damien Mama appelle à renforcer la riposte contre Ebola et l’action humanitaire au Nord-Kivu",
-          "link": "https://www.radiookapi.net/2026/09/10/actualite/sante/damien-mama-appelle-renforcer-la-riposte-contre-ebola-et-laction",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Le Tchad réfute une nouvelle fois toute implication dans le conflit soudanais",
-          "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260909-le-tchad-r%C3%A9fute-une-nouvelle-fois-toute-implication-dans-le-conflit-soudanais",
-          "source": "France 24",
+          "title": "En marge de l’Assemblée générale de l’ONU, le travail de lobbying du Somaliland pour sa reconnaissance",
+          "link": "https://www.rfi.fr/fr/afrique/20260910-en-marge-de-l-assembl%C3%A9e-g%C3%A9n%C3%A9rale-de-l-onu-le-travail-de-lobbying-du-somaliland-pour-sa-reconnaissance",
+          "source": "RFI Afrique",
           "zone": "5. Corne de l’Afrique",
-          "theme": "L",
-          "relevance": "L",
+          "theme": "D",
+          "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Cameroun: un policier tué et cinq enseignants kidnappés dans la région anglophone du Nord-Ouest",
-          "link": "https://www.rfi.fr/fr/afrique/20260910-cameroun-un-policier-tu%C3%A9-et-cinq-enseignants-kidnapp%C3%A9s-dans-la-r%C3%A9gion-anglophone-du-nord-ouest",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Ubuntu Panafrica appelle à une collaboration civilo‑militaire pour renforcer l’efficacité de l’armée",
-          "link": "https://www.radiookapi.net/2026/09/10/actualite/securite/ubuntu-panafrica-appelle-une-collaboration-civilo-militaire-pour",
-          "source": "Radio Okapi (RDC)",
+          "title": "Rwanda–Ouganda : De la brouille à la coopération retrouvée",
+          "link": "https://journaldumali.com/rwanda-ouganda-de-la-brouille-a-la-cooperation-retrouvee/",
+          "source": "Journal du Mali",
           "zone": "4. Grands Lacs",
-          "theme": "S",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "En RDC, la guerre prive près d'un demi-million d'enfants d'école",
-          "link": "https://www.rfi.fr/fr/afrique/20260909-en-rdc-la-guerre-prive-pr%C3%A8s-d-un-demi-million-d-enfants-d-%C3%A9cole",
-          "source": "RFI Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "H",
+          "title": "Cameroun : l’économie de la terreur autour des établissements scolaires évaluée à 77 millions de F de rançon en un an",
+          "link": "https://fr.journalducameroun.com/cameroun-leconomie-de-la-terreur-autour-des-etablissements-scolaires-evaluee-a-77-millions-de-f-de-rancon-en-un-an/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "S",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "A2"
+        },
+        {
+          "title": "Au Tchad, l’ancien chef rebelle centrafricain Abdoulaye Miskine condamné à quinze ans de prison",
+          "link": "https://www.jeuneafrique.com/1841982/politique/au-tchad-lancien-chef-rebelle-centrafricain-abdoulaye-miskine-condamne-a-quinze-ans-de-prison/",
+          "source": "Jeune Afrique",
+          "zone": "3. Afrique centrale",
+          "theme": "J",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Les États-Unis vont-ils réussir à mettre fin à la guerre du Soudan ?",
+          "link": "https://kapitalis.com/tunisie/2026/09/10/les-etats-unis-vont-ils-reussir-a-mettre-fin-a-la-guerre-du-soudan/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1449,51 +1488,51 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 20,
+      "count": 27,
       "top": [
         {
-          "title": "Investissement, importations, foncier industriel : nouvelles décisions de Tebboune",
-          "link": "https://www.tsa-algerie.com/investissement-importation-foncier-industriel-nouvelles-decisions-de-tebboune/",
+          "title": "Après des années de tension, l’Algérie rompt ses relations avec les Émirats",
+          "link": "https://www.tsa-algerie.com/apres-des-annees-de-tension-lalgerie-rompt-ses-relations-avec-les-emirats/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "D",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F1"
         },
         {
-          "title": "« L’IA pourrait tuer tous les humains » : un chercheur d’Anthropic démissionne et tire la sonnette d’alarme",
-          "link": "https://fr.hespress.com/487773-lia-pourrait-tuer-tous-les-humains-un-chercheur-danthropic-demissionne-et-tire-la-sonnette-dalarme.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "A2"
-        },
-        {
-          "title": "Bensaid : les alliés du « PAM » au gouvernement ont rejeté nos propositions sur le pouvoir d’achat",
-          "link": "https://fr.hespress.com/487838-bensaid-les-allies-du-pam-au-gouvernement-ont-rejete-nos-propositions-sur-le-pouvoir-dachat.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Transport : la contestation s’étend aux professionnels des taxis",
-          "link": "https://fr.hespress.com/487812-transport-la-contestation-setend-aux-professionnels-des-taxis.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Affaire Mrabet | Deux nouveaux suspects arrêtés, l’enquête se poursuit",
-          "link": "https://kapitalis.com/tunisie/2026/09/09/affaire-mrabet-deux-nouveaux-suspects-arretes-lenquete-se-poursuit/",
+          "title": "Noureddine Bouarrouj, la mémoire effacée du communisme tunisien",
+          "link": "https://kapitalis.com/tunisie/2026/09/10/noureddine-bouarrouj-la-memoire-effacee-du-communisme-tunisien/",
           "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "J",
           "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Espagne-Maroc : 12 milliards d’euros d’exportations placent le Royaume au cœur des intérêts espagnols",
+          "link": "https://fr.hespress.com/487454-espagne-maroc-12-milliards-deuros-dexportations-placent-le-royaume-au-coeur-des-interets-espagnols.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "La Tunisie, son sel et son pétrole | Que vaut une souveraineté sans capacité ?",
+          "link": "https://kapitalis.com/tunisie/2026/09/10/la-tunisie-son-sel-et-son-petrole-que-vaut-une-souverainete-sans-capacite/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Les prophéties alarmistes des « experts » français sur la fin du pétrole en Algérie",
+          "link": "https://www.tsa-algerie.com/les-propheties-alarmistes-des-experts-francais-sur-la-fin-du-petrole-en-algerie/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
+          "relevance": "A",
           "rating": "F2"
         }
       ]
@@ -1502,19 +1541,28 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 108,
+      "count": 85,
       "top": [
         {
-          "title": "Iran–États-Unis : Téhéran frappe une base américaine en Jordanie après des attaques contre des pétroliers",
-          "link": "https://burkina24.com/2026/09/09/iran-etats-unis-teheran-frappe-une-base-americaine-en-jordanie-apres-des-attaques-contre-des-petroliers/",
-          "source": "Burkina24",
+          "title": "Trump va-t-il de nouveau frapper les nucléaire iranien ?",
+          "link": "https://legrandcontinent.eu/fr/2026/09/10/trump-va-t-il-de-nouveau-frapper-les-nucleaire-iranien/",
+          "source": "Le Grand Continent",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "N",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "A2"
         },
         {
-          "title": "En Iran, le régime tenté par l’escalade militaire",
+          "title": "Qatar: la fermeture du détroit d'Ormuz pèse sur les finances de l'émirat",
+          "link": "https://www.rfi.fr/fr/moyen-orient/20260910-qatar-la-fermeture-du-d%C3%A9troit-d-ormuz-p%C3%A8se-sur-les-finances-de-l-%C3%A9mirat",
+          "source": "RFI Moyen-Orient",
+          "zone": "8. Moyen-Orient",
+          "theme": "M",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "En Iran, le régime joue l’escalade face à Donald Trump",
           "link": "https://www.lefigaro.fr/international/en-iran-le-regime-tente-par-l-escalade-militaire-20260909",
           "source": "Le Figaro International",
           "zone": "8. Moyen-Orient",
@@ -1523,31 +1571,22 @@
           "rating": "C2"
         },
         {
-          "title": "Le conflit entre les Houthis et Riyad est à son plus haut niveau de tensions depuis 2022",
-          "link": "https://legrandcontinent.eu/fr/2026/09/09/le-conflit-entre-les-houthis-et-riyad-est-a-son-plus-haut-niveau-de-tensions-depuis-2022/",
-          "source": "Le Grand Continent",
+          "title": "Les attaques contre les écoles ont bondi de 33 % en 2025",
+          "link": "https://www.wakatsera.com/les-attaques-contre-les-ecoles-ont-bondi-de-33-en-2025/",
+          "source": "Wakat Séra",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "C2"
         },
         {
-          "title": "Iran: Ongoing Unlawful Execution Campaign Against Protesters",
-          "link": "https://www.hrw.org/news/2026/09/10/iran-ongoing-unlawful-execution-campaign-against-protesters",
-          "source": "Human Rights Watch",
+          "title": "Au Yémen, les houthistes, alliés de l’Iran, ont pris le contrôle de la ville stratégique de Moka, sur la mer Rouge",
+          "link": "https://www.lemonde.fr/international/article/2026/09/10/au-yemen-les-houthistes-allies-de-l-iran-ont-pris-le-controle-de-la-ville-strategique-de-moka-sur-la-mer-rouge_6769728_3210.html",
+          "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Brent holds above $100 as tanker attacks deepen supply fear",
-          "link": "https://www.myjoyonline.com/brent-holds-above-100-as-tanker-attacks-deepen-supply-fear/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F2"
+          "rating": "B2"
         }
       ]
     },
@@ -1555,49 +1594,49 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 191,
+      "count": 183,
       "top": [
         {
-          "title": "Gnagna/Piéla : la communauté catholique Saint Charles Lwanga rend hommage à l’abbé Nestor Dayamba, en partance pour la France",
-          "link": "https://www.aib.media/gnagna-piela-la-communaute-catholique-saint-charles-lwanga-rend-hommage-a-labbe-nestor-dayamba-en-partance-pour-la-france/",
-          "source": "AIB — Agence Information BF",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Réparations liées à l’esclavage : La Jamaïque saisit Charles III, Londres répond « jamais »",
-          "link": "https://burkina24.com/2026/09/09/reparations-liees-a-lesclavage-la-jamaique-saisit-charles-iii-londres-repond-jamais/",
-          "source": "Burkina24",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Sommet «international» sur l’espace à Paris : un échec annoncé ?",
-          "link": "https://francais.rt.com/france/137891-sommet-espace-paris-grands-absents",
-          "source": "RT en français",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
+          "title": "Combat avec son geôlier, plongeon mains liées dans la rivière : le récit de la rocambolesque évasion du légionnaire enlevé en Colombie",
+          "link": "https://www.lefigaro.fr/international/lutte-a-mains-nues-fuite-dans-la-jungle-la-grande-evasion-de-jose-olger-melo-charry-soldat-de-la-legion-etrangere-enleve-en-colombie-20260910",
+          "source": "Le Figaro International",
+          "zone": "18. Amérique du Sud",
+          "theme": null,
+          "relevance": ".",
           "rating": "A2"
         },
         {
-          "title": "Visite d’État de Lee Jae Myung en France : où en est la coopération franco-coréenne ?",
-          "link": "https://www.iris-france.org/visite-detat-de-lee-jae-myung-en-france-ou-en-est-la-cooperation-franco-coreenne/",
+          "title": "Humanoïdes : révolutions agricoles et alimentaires ?",
+          "link": "https://www.iris-france.org/humanoides-revolutions-agricoles-et-alimentaires/",
           "source": "IRIS France",
           "zone": "14. Extrême-Orient",
-          "theme": "D",
+          "theme": "T",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "SOMMET COREE DU SUD-AFRIQUE SUR L’IA : Au continent noir de savoir en tirer profit sans perdre son âme",
-          "link": "https://lepays.bf/sommet-coree-du-sud-afrique-sur-lia-au-continent-noir-de-savoir-en-tirer-profit-sans-perdre-son-ame/",
-          "source": "Le Pays (BF)",
-          "zone": "14. Extrême-Orient",
+          "title": "Les combats se rapprochent de la ville ukrainienne de Kramatorsk",
+          "link": "https://legrandcontinent.eu/fr/2026/09/10/les-combats-se-rapprochent-de-la-ville-ukrainienne-de-kramatorsk/",
+          "source": "Le Grand Continent",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Comment Poutine est en train de ruiner l’économie russe",
+          "link": "https://legrandcontinent.eu/fr/2026/09/10/comment-poutine-est-en-train-de-ruiner-leconomie-russe/",
+          "source": "Le Grand Continent",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "FO says Makkah defence pact 'defensive' in nature, expansion currently 'not on the cards'",
+          "link": "https://www.dawn.com/news/2028847/fo-says-makkah-defence-pact-defensive-in-nature-expansion-currently-not-on-the-cards",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
@@ -1609,8 +1648,7 @@
     "Verifier immediatement les alertes critiques avec une seconde source independante.",
     "Suivre les signaux BF/AES sur sources locales, institutionnelles et regionales.",
     "Surveiller les canaux economiques : or, carburant, corridors, budget, sanctions.",
-    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers.",
-    "Audit technique requis : trop de flux RSS en erreur ou silencieux."
+    "Surveiller communiques CEDEAO/AES/UA/ONU et reactions des voisins cotiers."
   ],
   "mail": {
     "sent": false,
@@ -1618,42 +1656,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-10T04:42:00.253Z",
+      "at": "2026-09-10T11:19:04.870Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-10T04:42:00.260Z",
+      "at": "2026-09-10T11:19:04.877Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-10T04:42:27.318Z",
+      "at": "2026-09-10T11:19:31.283Z",
       "agent": "Agent Collecte RSS",
-      "message": "106/170 flux OK, 1862 articles"
+      "message": "111/170 flux OK, 1934 articles"
     },
     {
-      "at": "2026-09-10T04:42:30.253Z",
+      "at": "2026-09-10T11:19:34.629Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-10T04:42:30.591Z",
+      "at": "2026-09-10T11:19:34.994Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-10T04:42:30.597Z",
+      "at": "2026-09-10T11:19:34.999Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-09-10T04:42:30.597Z",
+      "at": "2026-09-10T11:19:35.000Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-10T04:42:30.597Z",
+      "at": "2026-09-10T11:19:35.000Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
