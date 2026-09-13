@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-13T11:52:03.498Z",
+  "generatedAt": "2026-09-13T12:41:07.764Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 109,
-    "failed": 61,
-    "articles": 1893,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1915,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -136,6 +136,11 @@
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
         "count": 20
+      },
+      {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "count": 12
       },
       {
         "id": "rss_guineenews",
@@ -645,11 +650,6 @@
         "error": "HTTP 500"
       },
       {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "error": "HTTP 500"
-      },
-      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -847,7 +847,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 404"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_imf",
@@ -866,7 +866,7 @@
     "bfAes": 44,
     "alerts": 5,
     "criticalAlerts": 2,
-    "sourcesDistinct": 64
+    "sourcesDistinct": 65
   },
   "topDevelopments": [
     {
@@ -1218,11 +1218,11 @@
   "narrativesByBloc": [
     [
       "afrique",
-      197
+      193
     ],
     [
       "occident_fr",
-      132
+      128
     ],
     [
       "autre",
@@ -1230,19 +1230,19 @@
     ],
     [
       "occident_us",
-      93
+      88
     ],
     [
       "golfe_mo",
-      70
-    ],
-    [
-      "russie",
-      50
+      75
     ],
     [
       "turquie",
-      43
+      53
+    ],
+    [
+      "russie",
+      48
     ],
     [
       "chine",
@@ -1262,7 +1262,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 95,
+      "count": 93,
       "top": [
         {
           "title": "Abidjan, nouveau rendez-vous de l’automobile et des mobilités en Afrique de l’Ouest",
@@ -1315,7 +1315,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 57,
+      "count": 55,
       "top": [
         {
           "title": "Rufai, Dabiri clash over stranded Nigerian in India",
@@ -1345,13 +1345,13 @@
           "rating": "F2"
         },
         {
-          "title": "Army debunks abduction at Yari’s residence",
+          "title": "Army debunks abduction of Islamic scholars at Yari’s residence",
           "link": "https://www.vanguardngr.com/2026/09/army-debunks-abduction-at-yaris-residence/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "I",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
           "title": "Digital skills training producing solution-driven youth for Ghana’s future – Sam George",
@@ -1368,7 +1368,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 20,
+      "count": 19,
       "top": [
         {
           "title": "En Ethiopie, le changement climatique pousse les éleveurs pastoraux à se convertir à l’agriculture vivrière : « C’est loin d’être une solution miracle »",
@@ -1378,15 +1378,6 @@
           "theme": "C",
           "relevance": "A",
           "rating": "B2"
-        },
-        {
-          "title": "Losseba Ngoutiwa, premier artiste centrafricain en concert dans une grande salle à Paris",
-          "link": "https://www.rfi.fr/fr/afrique/20260912-losseba-ngoutiwa-premier-artiste-centrafricain-en-concert-dans-une-grande-salle-%C3%A0-paris",
-          "source": "RFI Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "A2"
         },
         {
           "title": "RDC : Félix Tshisekedi remet les documents de formalisation à 537 entreprises des jeunes de Kinshasa",
@@ -1414,6 +1405,15 @@
           "theme": "J",
           "relevance": "L",
           "rating": "C2"
+        },
+        {
+          "title": "Alain Kaninda: \"Le marché des assurances en RDC est en plein épanouissement\"",
+          "link": "https://www.radiookapi.net/2026/09/13/emissions/le-grand-temoin/alain-kaninda-le-marche-des-assurances-en-rdc-est-en-plein",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A2"
         }
       ]
     },
@@ -1474,7 +1474,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 90,
+      "count": 101,
       "top": [
         {
           "title": "BRICS : le sommet du sud global dominé par le conflit au Moyen-Orient",
@@ -1504,18 +1504,18 @@
           "rating": "F2"
         },
         {
+          "title": "Iran war reshapes Brics ties but also exposes divisions",
+          "link": "https://www.myjoyonline.com/iran-war-reshapes-brics-ties-but-also-exposes-divisions/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "8. Moyen-Orient",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
           "title": "Two killed in Gaza City strike, IDF says it targeted car with Hamas terrorists",
           "link": "https://www.jpost.com/middle-east/article-908449",
           "source": "Jerusalem Post",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Israeli strike kills two people in Gaza, medics say",
-          "link": "https://www.thehindu.com/news/international/israeli-strike-kills-two-people-in-gaza-medics-say/article71463083.ece",
-          "source": "The Hindu (Inde)",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
@@ -1527,7 +1527,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 187,
+      "count": 182,
       "top": [
         {
           "title": "« La gifle de l'immigration » : Seydou Nabalma tend un miroir aux candidats au départ",
@@ -1536,6 +1536,15 @@
           "zone": "16. Amérique du Nord",
           "theme": "D",
           "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "États-Unis : L’Afrique du Sud veut empêcher la vente aux enchères de 29 objets historiques ayant appartenu à Nelson Mandela",
+          "link": "https://burkina24.com/2026/09/13/etats-unis-lafrique-du-sud-veut-empecher-la-vente-aux-encheres-de-29-objets-historiques-ayant-appartenu-a-nelson-mandela/",
+          "source": "Burkina24",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
+          "relevance": "L",
           "rating": "C2"
         },
         {
@@ -1564,15 +1573,6 @@
           "theme": "L",
           "relevance": "L",
           "rating": "A1"
-        },
-        {
-          "title": "Pakistan urges UN to close gaps in fight against evolving terror threat",
-          "link": "https://www.dawn.com/news/2029415/pakistan-urges-un-to-close-gaps-in-fight-against-evolving-terror-threat",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     }
@@ -1586,48 +1586,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-09-13T11:51:32.348Z",
+      "at": "2026-09-13T12:40:35.068Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-13T11:51:32.355Z",
+      "at": "2026-09-13T12:40:35.074Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-13T11:52:00.082Z",
+      "at": "2026-09-13T12:41:04.904Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1893 articles"
+      "message": "110/170 flux OK, 1915 articles"
     },
     {
-      "at": "2026-09-13T11:52:03.190Z",
+      "at": "2026-09-13T12:41:07.452Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-13T11:52:03.496Z",
+      "at": "2026-09-13T12:41:07.761Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-13T11:52:03.500Z",
+      "at": "2026-09-13T12:41:07.765Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-09-13T11:52:03.501Z",
+      "at": "2026-09-13T12:41:07.766Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-09-13T11:52:03.501Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
