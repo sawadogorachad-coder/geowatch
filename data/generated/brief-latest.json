@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-14T04:56:34.617Z",
+  "generatedAt": "2026-09-14T12:47:02.656Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 110,
-    "failed": 60,
-    "articles": 1926,
+    "ok": 109,
+    "failed": 61,
+    "articles": 1883,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -45,7 +45,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -103,11 +103,6 @@
         "count": 10
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "count": 10
-      },
-      {
         "id": "rss_sahara_med",
         "name": "Sahara Médias",
         "count": 10
@@ -148,14 +143,14 @@
         "count": 30
       },
       {
+        "id": "rss_mediaguinee",
+        "name": "Mediaguinee",
+        "count": 20
+      },
+      {
         "id": "rss_premiumng",
         "name": "Premium Times (Nigeria)",
         "count": 15
-      },
-      {
-        "id": "rss_vanguard",
-        "name": "Vanguard (Nigeria)",
-        "count": 20
       },
       {
         "id": "rss_punch",
@@ -176,6 +171,11 @@
         "id": "rss_radiookapi",
         "name": "Radio Okapi (RDC)",
         "count": 30
+      },
+      {
+        "id": "rss_actuacd",
+        "name": "ActualitéCD (RDC)",
+        "count": 10
       },
       {
         "id": "rss_standard_ke",
@@ -375,7 +375,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 10
+        "count": 8
       },
       {
         "id": "rss_fp",
@@ -400,12 +400,12 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 23
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
         "name": "BBC Africa",
-        "count": 30
+        "count": 29
       },
       {
         "id": "rss_guardian",
@@ -420,7 +420,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 13
       },
       {
         "id": "rss_tass",
@@ -468,11 +468,6 @@
         "count": 25
       },
       {
-        "id": "rss_alarabiya",
-        "name": "Al Arabiya (EN)",
-        "count": 30
-      },
-      {
         "id": "rss_almonitor",
         "name": "Al-Monitor",
         "count": 20
@@ -480,7 +475,7 @@
       {
         "id": "rss_jpost",
         "name": "Jerusalem Post",
-        "count": 25
+        "count": 26
       },
       {
         "id": "rss_dailysabah",
@@ -510,7 +505,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 23
       },
       {
         "id": "rss_nikkei",
@@ -595,9 +590,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_alakhbar",
@@ -650,24 +650,19 @@
         "error": "HTTP 500"
       },
       {
-        "id": "rss_mediaguinee",
-        "name": "Mediaguinee",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
       },
       {
+        "id": "rss_vanguard",
+        "name": "Vanguard (Nigeria)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_actuacd",
-        "name": "ActualitéCD (RDC)",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -795,6 +790,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_alarabiya",
+        "name": "Al Arabiya (EN)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_arabnews",
         "name": "Arab News (Arabie Saoudite)",
         "error": "HTTP 403"
@@ -863,19 +863,85 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 52,
-    "alerts": 7,
+    "bfAes": 60,
+    "alerts": 9,
     "criticalAlerts": 4,
-    "sourcesDistinct": 71
+    "sourcesDistinct": 68
   },
   "topDevelopments": [
     {
-      "title": "Coupes africaines : Rahimo et Vitesse FC éliminés, le football burkinabè encore KO dès le premier tour",
-      "link": "https://netafrique.net/coupes-africaines-rahimo-et-vitesse-fc-elimines-le-football-burkinabe-encore-ko-des-le-premier-tour/",
-      "pubDate": "2026-09-13T21:59:41.000Z",
-      "description": "Le rideau est déjà tombé sur la campagne africaine de Rahimo FC et de Vitesse FC. Battu lourdement à l’aller avant de concéder un nul vierge au retour, Rahimo quitte la Ligue des champions, tandis que Vitesse FC, pour sa première expérience continentale, n’a pu renverser le Réal de Bamako. Deux éliminations précoces qui relancent une vieille interrogation : le football burkinabè participe-t-il encore aux compétitions africaines pour jouer les premiers rôles ou simplement pour y faire acte de présence ? La scène continentale s’est refermée plus tôt que prévu pour les deux représentants burkinabè engagés cette saison dans les compétitions interclubs de la CAF. Rahimo FC et Vitesse FC n’auront pas franchi le premier tour préliminaire. Deux aventures différentes, deux adversaires différents, mais une même issue : l’élimination. Pour Rahimo FC, champion du Burkina Faso, l’obstacle s’appelait Maghreb de Fès. Après une lourde défaite 4-1 concédée au Maroc lors du match aller, les Burkinabè devaient réaliser un véritable exploit au Stade du 4-Août de Ouagadougou. Ils n'ont finalement pas trouvé les ressources nécessaires. Le 0-0 du retour a simplement confirmé la qualification du club marocain, vainqueur 4-1 sur l'ensemble des deux rencontres. Le scénario est d'autant plus frustrant que Rahimo avait au moins l'obligation de montrer un autre visage à domicile. Or, malgré l'enjeu et le soutien du public, le champion burkinabè n'a pas réussi à inscrire le moindre but. Le MAS, fort de son avantage acquis à l'aller, a surtout géré son avance et validé tranquillement son billet pour le deuxième tour préliminaire, où il retrouvera l'ASEC Mimosas. Vitesse FC, une première africaine sans lendemain Chez Vitesse FC, l'histoire était différente. Les Guépards disputaient leur toute première campagne africaine après leur sacre en Coupe du Faso. Mais leur baptême du feu aura été bref. Battu 2-1 à domicile par l'AS Réal de Bamako lors de la manche aller, Vitesse devait aller chercher sa qualification au Stade Modibo-Keïta. Mission manquée. Les deux équipes se sont séparées sur un score nul et vierge, 0-0, laissant les Maliens poursuivre leur route avec un avantage cumulé de 2-1. Le constat est sévère : sur deux matches, Vitesse n'aura inscrit qu'un but et n'aura pas réussi à renverser une situation pourtant encore jouable après la première manche. L'expérience africaine s'arrête donc dès le premier tour. Le mal est-il plus profond ? Deux clubs burkinabè engagés, deux éliminations au premier tour. Et, surtout, aucune victoire sur l'ensemble des matches retour. Il ne s'agit évidemment pas de tirer des conclusions définitives à partir d'une seule campagne. Mais la répétition de ces sorties prématurées interpelle. Le problème du football burkinabè n'est pas nécessairement celui du talent. Le pays continue de produire des joueurs capables de s'exporter et des équipes compétitives sur la scène nationale. La difficulté semble davantage se situer dans la capacité des clubs à transformer cette qualité en performances régulières au niveau continental. Sur le continent, la différence ne se fait pas uniquement sur la technique. Elle se joue également sur la profondeur des effectifs, l'expérience des compétitions internationales, la préparation, la capacité à gérer les temps faibles, le réalisme devant le but et, surtout, la constance d'une saison à l'autre. Le cas de Vitesse est révélateur : pour une première participation, affronter un adversaire malien habitué aux joutes continentales constituait un test sérieux. Mais le football africain ne laisse guère de temps aux novices pour apprendre. Salitas, quand l'ambition dépassait la simple participation Dans ce paysage, le souvenir de Salitas FC mérite d'être convoqué. Non pas pour idéaliser le passé, mais parce que le club de Ouaga 2000 avait démontré qu'un représentant burkinabè pouvait franchir les tours préliminaires et atteindre la phase de groupes. Lors de sa première campagne, en 2018-2019, Salitas avait écrit une page historique en devenant le premier club burkinabè à atteindre la phase de groupes d'une compétition africaine interclubs. Après avoir perdu 1-0 à l'aller contre Al Nasr de Benghazi, le club avait renversé la situation au Stade du 4-Août en s'imposant 3-1. Cette performance n'était pas le fruit du hasard. À l'époque, Salitas avait notamment misé sur une organisation structurée, un encadrement stable et une équipe capable d'assumer la pression des matches à élimination directe. La victoire contre Al Nasr, après celles obtenues face à d'autres formations expérimentées, avait confirmé qu'un club burkinabè pouvait rivaliser dès lors qu'il se préparait réellement pour l'Afrique. Salitas avait ensuite confirmé sa capacité à franchir les tours préliminaires lors de la campagne 2020-2021, en atteignant de nouveau la phase de groupes. Le club avait notamment éliminé les Zambiens de Green Eagles au premier tour avant de poursuivre son parcours jusqu'aux barrages, puis aux groupes. La comparaison avec les campagnes actuelles doit toutefois être faite avec prudence. Le football a changé, les adversaires aussi, et chaque génération possède sa propre réalité. Mais une constante demeure : pour exister en Afrique, il faut construire des clubs capables de penser et de fonctionner à l'échelle africaine. Le facteur domicile : une force à retrouver L'une des leçons de l'époque Salitas se trouvait également dans la capacité à transformer le Stade du 4-Août en véritable levier de qualification. Contre Al Nasr, les Salitasiens avaient abordé le retour avec une obligation de résultat. Ils avaient répondu par un début de match offensif et intense, porté par un public nombreux. C'est précisément cette capacité à faire de son terrain une forteresse qui semble manquer aujourd'hui à plusieurs clubs burkinabè. Vitesse FC a perdu 2-1 à domicile avant d'aller chercher un résultat nul à Bamako. Rahimo FC, lui, devait combler un déficit de trois buts devant son public mais n'a pas réussi à marquer. Dans les compétitions africaines, recevoir ne garantit évidemment pas la victoire. Mais perdre ou ne pas gagner chez soi complique considérablement la mission. Les équipes qui veulent aller loin doivent généralement être capables de prendre des points à domicile et de voyager avec suffisamment de solidité pour résister à l'extérieur. Participer ne suffit plus La question mérite donc d'être posée sans détour : à quand la fin de la figuration ? Le Burkina Faso dispose d'un vivier de joueurs, d'académies, d'entraîneurs et d'un championnat qui produit régulièrement des talents. Mais la sélection nationale ne peut pas être le seul étendard du football burkinabè. La progression d'un pays passe aussi par ses clubs. Or, année après année, les représentants burkinabè éprouvent des difficultés à franchir les premiers obstacles continentaux. Cette situation finit nécessairement par avoir des conséquences sur l'image du championnat, le coefficient du pays, l'attractivité des clubs et leur capacité à attirer puis conserver les meilleurs joueurs. La CAF a d'ailleurs renforcé son dispositif de soutien financier aux clubs engagés : pour la saison 2026-2027, les équipes éliminées lors des tours préliminaires de la Coupe de la Confédération bénéficient notamment d'une subvention de solidarité de 100 000 dollars. Mais l'aide financière ne remplacera jamais le travail structurel nécessaire pour être compétitif. Rahimo et Vitesse sont désormais éliminés. Leurs échecs ne doivent pas seulement alimenter les regrets du lendemain de match. Ils doivent surtout servir de matière à une réflexion plus large sur la préparation des clubs burkinabè pour l'Afrique. Car le véritable enjeu n'est plus simplement de se qualifier pour une compétition continentale. Il est de s'y installer, d'y progresser et d'y faire respecter le football burkinabè. Salitas avait montré la voie. À la nouvelle génération de clubs de démontrer que cette histoire peut devenir une tradition plutôt qu'une exception. NB : J’ai volontairement corrigé un point de chronologie dans votre texte : on peut parler des campagnes 2018, 2019 et 2020 dans le langage courant, mais les phases de groupes correspondantes se sont notamment déroulées en 2019 et 2021 en raison du calendrier des compétitions CAF. Salitas a bien atteint deux fois la phase de groupes sur cette séquence, tandis que sa campagne 2019 s'était arrêtée avant cette étape. L’article Coupes africaines : Rahimo et Vitesse FC éliminés, le football burkinabè encore KO dès le premier tour est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
+      "title": "DBS: • Faso Kosam : une première AG sous le signe de la concertation et de l’engagement",
+      "link": "https://leconomistedufaso.com/2026/09/14/dbs-faso-kosam-une-premiere-ag-sous-le-signe-de-la-concertation-et-de-lengagement/",
+      "pubDate": "2026-09-14T06:57:47.000Z",
+      "description": "• Faso Kosam : une première AG sous le signe de la concertation et de l’engagement La Société Faso Kosam, productrice de lait et de produits laitiers, a tenu sa première Assemblée générale, en août dernier. Présidée par le Directeur général de Faso Kosam, Alain Sawadogo, cette rencontre a réuni les travailleurs de la Direction ainsi que les équipes des agences de production de Léo et de Fada N’Gourma. Les échanges ont, notamment, porté sur la prise de contact entre les différents collaborateurs, la désignation de l’administrateur représentant le personnel au Conseil d’administration, la présentation de l’organigramme de la société, ainsi que l’organisation et le fonctionnement des agences de production. Les participants ont également échangé sur les défis auxquels ces agences sont confrontées et sur les perspectives à envisager pour renforcer leur contribution aux objectifs de la Société. • DGTCP : 131,24 % de taux de recouvrement au mois d’août La Direction générale du Trésor et de la Comptabilité publique (DGTCP) a, le 1 er septembre 2026, marqué le début du mois de septembre par la traditionnelle cérémonie de montée des couleurs nationales. Une cérémonie présidée par le Directeur de la Banque des dépôts du Trésor (BDT), Seydou Barro. Occasion pour relayer les orientations contenues dans le message du Directeur général. En premier, les enjeux majeurs de ce dernier trimestre de l’année budgétaire 2026, marqué par l’intensification de la mobilisation et de la sécurisation des ressources, ainsi que par la préparation méthodique de la fin de gestion et de la reddition des comptes. Avec un taux de recouvrement de 131,24 % au titre du mois d’août, la DGTCP entend poursuivre sa dynamique de performance et relever avec détermination les défis du dernier trimestre. Autre point important, l’audit de certification ISO 9001 : 2015 de la Banque des dépôts du Trésor et de la Trésorerie régionale du Kadiogo. La cérémonie a également été l’occasion de rappeler l’importance de la transformation numérique dans l’amélioration de la qualité des services. Les plateformes telles que SI-N@folo, SGDF, Faso Arzeka, LANAYA, Faso Wari et e-BDT constituent désormais des outils essentiels de modernisation, d’optimisation du recouvrement des recettes, de sécurisation des opérations et de traçabilité des processus. • DGI : 104 milliards FCFA attendus pour septembre Que nous réserve la Direction générale des Impôts (DGI) en matière de recouvrement fiscal en septembre 2026 ? Pour septembre 2026, l’objectif de recouvrement est fixé à 104 milliards FCFA. Cette information a été portée à la connaissance des agents de la DGI, le 1 er septembre 2026, par la Directrice générale des Impôts (DGI), Talato Eliane Djiguemdé/Ouédraogo, à la traditionnelle cérémonie mensuelle de montée des couleurs nationales. Selon elle, ce montant souhaité peut être largement dépassé, au regard des performances déjà réalisées par la DGI, notamment, les mobilisations de plus de 150 milliards et même de 200 milliards FCFA pour certains mois. Mais avant septembre, la DGI a une nouvelle fois démontré sa résilience pour le mois d’août 2026. Sur un objectif de 112 milliards FCFA, l’administration fiscale a mobilisé 122 milliards FCFA, soit un taux de recouvrement de 108 %. • Système de reconnaissance : échanges entre les Grandes Chancelleries de l’AES Ouagadougou a abrité la première rencontre technique des Secrétaires généraux des Grandes Chancelleries du Burkina Faso, du Mali et du Niger. Ces derniers échangent sur les cadres juridiques et institutionnels de leurs Chancelleries, afin de proposer les fondements d’un cadre commun de reconnaissance du mérite dans l’espace confédéral. Ils ont été reçus en audience, le 2 septembre dernier, par le Premier ministre du Faso, Rimtalba Jean Emmanuel Ouédraogo. À la sortie de l’audience, le Grand Chancelier des Ordres burkinabè, le Général de brigade à la retraite, Pingrenoma Zagré, a précisé la finalité des réflexions en cours. « À terme, les conclusions issues de ces travaux devront permettre de définir les valeurs, les critères et les symboles devant encadrer l’attribution des distinctions honorifiques dans l’espace confédéral », a-t-il souligné. Les travaux de Ouagadougou doivent permettre de remettre en lumière ces mécanismes traditionnels et de les adapter aux réalités contemporaines de la Confédération. L’ambition est également de promouvoir une reconnaissance du mérite qui valorise toute personne contribuant de manière remarquable, par son engagement, son travail ou sa bravoure, à l’édification de la Nation et de l’espace confédéral. o The post DBS: • Faso Kosam : une première AG sous le signe de la concertation et de l’engagement appeared first on L'economiste du faso .",
+      "_source": "L'Économiste du Faso",
+      "_sourceId": "rss_eco_faso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "B2"
+      },
+      "_rating": "B2",
+      "_score": 135,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Jeux de l’AES | Lutte : Le Niger domine chez les hommes, les lutteuses burkinabè s’imposent chez les dames",
+      "link": "https://www.minute.bf/jeux-de-laes-lutte-le-niger-domine-chez-les-hommes-les-lutteuses-burkinabe-simposent-chez-les-dames/",
+      "pubDate": "2026-09-14T11:50:21.000Z",
+      "description": "La compétition de lutte des Jeux de l’Alliance des États du Sahel (AES) a livré son verdict, dans la soirée du samedi 12 septembre 2026 à l’hippodrome de Hamdallaye à Ouagadougou. A l'issue de deux jours de compétition, chez les hommes, le Niger s’est particulièrement illustré en remportant trois des cinq catégories disputées. Chez les dames, les lutteuses burkinabè ont réalisé une belle performance en décrochant les médailles d’or, aussi bien en équipe qu’en individuel. La ministre des Sports, de la Jeunesse et de l’emploi, Annick Lydie Djouma Pickbougoum Zingué/Outtara avec une importante délégation du Ministère en charge de la jeunesse, des délégations des autres pays de l'AES, ainsi que des représentants coutumières ont pris part à la finale de la lutte. Le Niger s’est imposé comme la nation dominante de la lutte aux Jeux de l’Alliance des États du Sahel (AES), à l’issue des compétitions disputées à Ouagadougou. Avec trois premières places sur les cinq catégories masculines, les Nigériens confirment leur suprématie dans cette discipline. Le Burkina Faso, malgré des résultats en dents de scie, entend désormais accélérer sa préparation pour rivaliser avec son voisin. Le lutteur burkinabè champion dans les 76 kg En effet, pour cette deuxième édition des jeux de l'AES, la lutte a tenu ses promesses. Les représentants du Burkina Faso, du Mali et du Niger se sont affrontés dans les catégories de 60, 66, 76, 86 et 100 kg chez les hommes. Dans la catégorie des 60 kg, le Niger termine premier, devant le Burkina Faso, et le Mali. Le classement reste identique chez les 66 kg. Le Burkina Faso s’est toutefois imposé dans la catégorie des 76 kg, devant le Niger et le Mali. Chez les 86 kg, le Mali décroche la première place, suivi du Niger, tandis que le Burkina Faso ferme le classement. Enfin, dans la catégorie des 100 kg, le Niger reprend la première place, devant le Burkina Faso et le Mali. Toutes les équipes réunies pour entonner l'hymne du Niger Sibiri Ki : « Une petite erreur de ma part » Vice-champion dans la catégorie des 66 kg, Sibiri Ki, ancien champion de cette catégorie lors de la première édition des Jeux de l’AES au Mali, reconnaît avoir manqué de confiance lors de son combat face au Nigérien. « Ce qui n’a pas marché, c’est le manque de confiance. Une petite erreur de ma part a montré la technicité de mon adversaire nigérien », a-t-il expliqué. Malgré cette deuxième place, le lutteur burkinabè se projette déjà vers la prochaine édition. « Avec l’intensification des entraînements, nous allons arracher de nouveau notre première place », promet Sibiri Ki. Chez les dames, les Burkinabè ont largement dominé les débats. Le plus long combat n’aura duré qu’une minute et dix secondes. Les lutteuses burkinabè ont raflé les médailles d’or, aussi bien en équipe qu’en individuel. « Je suis très heureuse. Ce n’est pas de la sorcellerie, c’est juste des entraînements », s’est réjouie Edith B. Kourouné, médaillée d’or dans la catégorie des 65 kg. Ibrahime Mamane, entraîneur des lutteurs nigériens entend poursuivre le titre de champion du monde Selon elle, les lutteuses maliennes « se sont donné et se sont battues comme elles le pouvaient », mais les Burkinabè ont été « plus décisives et plus fortes ». Mlle Kourouné promet de poursuivre les entraînements pour maintenir le niveau. Le Niger assume sa suprématie Pour l’entraîneur des lutteurs nigériens, Ibrahime Mamane cette performance est le résultat d’un travail préparé en amont. « Nous l’avons préparée d’avance et le résultat est là devant vous aujourd’hui », a-t-il déclaré. Affichant déjà de grandes ambitions pour la suite, M. Mamane dit ceci : « nous comptons être champions du monde, pourquoi pas, en matière de lutte ». Le technicien nigérien a également salué les progrès du Burkina Faso. « Le Burkina de 2025 n’est pas le Burkina de 2026 », a-t-il constaté, estimant avoir observé une nette évolution dans le comportement et le niveau des athlètes burkinabè. Du côté burkinabè, la satisfaction est présente malgré la domination nigérienne. L’entraîneur national, Blaise Debé estime que ses lutteurs ont livré des prestations encourageantes, notamment face au Niger. « Depuis longtemps, c’est le Niger qui est vraiment notre bête noire, que nous cherchons vraiment à battre », a-t-il expliqué. M. Debé estime que certains combats se sont joués sur des détails : « Sur les cinq lutteurs, nous avons eu au moins deux victoires ». Le technicien regrette toutefois le résultat des 66 kg, évoquant une situation d’arbitrage qui, selon lui, aurait mérité une reprise du combat. « Le lutteur avait un pied dehors. Le règlement dit qu’on reprend le combat », a-t-il affirmé, tout en précisant ne pas vouloir « accuser l’arbitrage ». Malgré cette réserve, Blaise Debé retient surtout l’engagement de ses athlètes. « Dans l’ensemble, je pense que les lutteurs ont donné ce qu’ils avaient. À nous, chacun a mouillé le maillot », a-t-il assuré. Concernant les filles, l’absence de lutteuses nigériennes n’enlève rien, selon le technicien, à la performance burkinabè. « Elles étaient au top mentalement, physiquement, techniquement et tactiquement », a-t-il souligné. « Le Niger n’est pas une montagne à escalader » Même constat de satisfaction du côté du Président de la Fédération burkinabè de lutte, Ousséni Kabré. Il salue le niveau de l’organisation, la mobilisation du public et la compétitivité des athlètes. « Franchement, je suis satisfait », a-t-il déclaré, estimant que les résultats permettent aux encadreurs de mesurer les acquis et d’identifier les aspects à améliorer. Ousséni Kabré, Président de la fédération de lutte au Burkina Faso, se dit satisfait de l'ensemble des resultats Pour lui, le Burkina Faso peut progressivement s’imposer comme une grande nation de lutte. « Le Niger n’est pas une montagne à escalader », a lancé M. Kabré avant d’annoncer la mise en œuvre d’un plan stratégique destiné à développer davantage la discipline au Burkina Faso. Le Président de la fédération de lutte, cite notamment l’exemple du championnat national nigérien, dont l’organisation mobiliserait, selon lui, environ 400 millions de francs CFA. Un investissement qui, estime M. Kabré, pourrait permettre au Burkina Faso de détecter et de former davantage de jeunes talents. Des primes pour les médaillés À l’issue des compétitions, les athlètes classés dans les différentes catégories ont également été récompensés. Grâce à la vision du chef de l'État du Burkina Faso en particulier et de celui de la confédération en général, le premier de chaque catégorie repart avec 400 000 francs CFA, le deuxième avec 300 000 francs CFA et le troisième avec 200 000 francs CFA. Enfin, malgré la suprématie du Niger sur le plan masculin, les performances des lutteuses et la progression affichée par les athlètes burkinabè donnent déjà rendez-vous aux prochaines échéances de l’AES. Il faut noter que d'autres disciplines se poursuivent dans différents axes sportifs de Ouagadougou. Nadège KINDA Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "H",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Burkina: vers une agriculture durable et résiliente, l’oeuvre d’une chercheure",
+      "link": "https://www.wakatsera.com/burkina-vers-une-agriculture-durable-et-resiliente-loeuvre-dune-chercheure/",
+      "pubDate": "2026-09-14T11:09:04.000Z",
+      "description": "Titre: Les pratiques agroécologiques des paysans à Yilou au Burkina Faso : Vers une agriculture durable et résiliente Auteur : Sidonie Aristide IMA/OUOBA, Anthropologie Sociale et Culturelle, Chargé de Recherche, CNRST/ INERA, Burkina Faso , imasidonie@yahoo.fr Résumé La forme productiviste de l’agriculture au Burkina Faso a des conséquences directes sur la dégradation des sols. C’est dans ce cadre que le projet Sustain SAHEL a introduit l’approche agroécologique pour pallier la dégradation des sols. Cette approche combine plusieurs principes écologiques qui sont le respect de l’environnement, l’utilisation de fertilisants naturels, économie de l’eau et technologies locales. L’approche agroécologique est mise en œuvre par des agriculteurs de la commune de Guibaré dans la province du Bam. Il s’agit dans cette recherche d’analyser les perceptions des producteurs sur cette pratique agroécologique. Introduction Au Burkina Faso, le potentiel ligneux est fortement affecté par les changements climatiques et les facteurs anthropiques, entraînant une dégradation des écosystèmes, une baisse de la productivité des sols et une multiplication des conflits d’exploitation. Selon le MEEVC (2018, p. 10), « environ 19% des terres du territoire national burkinabé sont en péril dû au mauvais système d’utilisation des terres et aux éléments démographiques, économiques ou sociopolitiques. Chaque année, le pays perd 469 650 hectares de ses terres productives ». Face à cette dégradation, le projet Sustain SAHEL a introduit l’approche agroécologique pour renforcer la résilience des exploitations familiales par l’intégration des cultures, arbres et bétail (CAB). Cependant, l’adoption et la pérennisation des pratiques agroécologiques demeurent limitées. K.T.R. Hilou et al. (2022, p. 403) soulignent le rôle des organisations de producteurs, ONG et techniciens dans leur expérimentation et leur diffusion, mais montrent également que les valeurs et logiques paysannes peuvent freiner leur appropriation. Certains producteurs les perçoivent comme exigeantes en travail et associées à des rendements incertains. S. Kambiré et al. (2023, p. 602) montrent que l’adoption d’une technologie dépend de facteurs socio-démographiques, économiques, institutionnels et territoriaux. De même, Morin-Kasprzyk et al. (2015, p. 20) relèvent que certaines solutions agroécologiques restent trop contraignantes pour les exploitations vulnérables, davantage attirées par les intrants conventionnels qui réduisent la pénibilité du travail. L’analyse de ces choix nécessite ainsi de considérer les rationalités paysannes au-delà des seuls motifs utilitaires. Pour Leroux (2020, p. 216), les comportements s’expliquent également par les motivations et les intentions des acteurs. La prise en compte des perceptions et savoirs locaux apparaît dès lors essentielle. Agossou (2008, p. 16) souligne les lacunes existant entre savoirs scientifiques et paysans, tandis que Tyano (2021, p. 56) montre le recours à certaines pratiques traditionnelles peu coûteuses, notamment le paillage. Dès lors, cette étude interroge la perception des technologies agroécologiques, leur appréciation, leurs contraintes, les solutions endogènes mobilisées et les déterminants de leur adoption par les producteurs. Matériels et méthodes 1.1 Site de l’étude Le village de Yilou se situe dans la commune rurale de Guibaré, une des neuf communes de la province du Bam qui, avec le Sanmatenga et le Nanmantenga forment la Région des Kuilsé (ex. Centre-Nord). Yilou est distant de 76 Km de Ouagadougou sur la RN 22, et de 10 Km de Guibaré, Chef-lieu du département, (PDRD, 2009, p.15). La population de la commune rurale de Guibaré selon le recensement général de la population et de l’habitat en 2019 était de 37419 habitants dont 17728 hommes et 19703 femmes, (INSD, 2022, p.118). Elle est composée principalement de Mossi (le peuple autochtone), de Peuls et de Yarcé. L’agriculture de type pluviale est essentiellement tournée vers les cultures céréalières et tributaire de la pluviométrie qui est en moyenne comprise entre 450 à 700 mm/an (RCN/CR, 2014, p.55). Dix-sept (17) villages de la commune de Guibaré furent touchés par les entretiens, ce sont : Barsa, Bissa, Bokin, Garga, Guibaré, Gougré , Imiougou, Karentenga, Niangouèla, Pissy, Sabcé, Sakoudi, Sindri, Tongtenga, Vousnango, Watinoma et Zandkom. 1.2 Méthodologie Les données ont été collectées à partir de sources documentaires, d’enquêtes de terrain, d’observations directes et de prises de vue. La collecte auprès des producteurs s’est déroulée de juillet à septembre 2024. Les enquêtés ont été sélectionnés à partir de la liste des acteurs bénéficiaires établie avec les producteurs et les personnes ressources locales, en tenant compte du genre et de la philosophie inclusive du projet. Deux personnes par village ont été sélectionnées stratégiquement dans 20 villages. Au total, 40 producteurs issus de 17 villages ont été individuellement enquêtés en langue locale (mooré), avec des garanties de confidentialité et d’anonymat. Le traitement des données a combiné les approches quantitative et qualitative. Les données qualitatives ont fait l’objet d’une transcription, puis d’une condensation et d’un classement par catégories à partir des verbatim . L’analyse s’est appuyée sur les méthodes d’analyse qualitative de Miles, Huberman et Saldaña (2014). L’analyse des pratiques agroécologiques et des perceptions des producteurs s’inscrit dans les théories de l’adoption des innovations agricoles, notamment la théorie de la diffusion des innovations d’Everett Rogers. À ce propos, Fèvres (2012, p. 135) rapporte : « Rogers établit pour la première fois sa théorie en observant des agriculteurs de l’Iowa et leur capacité à intégrer, ou à rejeter l’innovation agricole. Plus l’avantage relatif perçu est élevé, plus la probabilité d’adoption est importante » Résultats/discussion 1. Caractéristiques socio démographiques des producteurs Pour une prévision de 55 producteurs et 20 villages dans le site de Yilou, 40 producteurs dont 24 hommes et 16 femmes furent touchés par les entretiens. Les résultats des données révèlent que la majorité des femmes (12 personnes) a un âge compris entre 36 et 46 ans et la plupart des hommes (8 personnes) se trouve dans la tranche d’âge de 47 à 57 ans. Dans la tranche d’âge des plus âgés, les hommes sont les plus nombreux (4) par rapport aux femmes (1 personne). Tous les producteurs ont été formés et détiennent une expérience d’une durée moyenne de 8,89 ans pour les hommes et les femmes en ont en moyenne 3, 67 ans. 2.2. Technologies pratiquées par les producteurs Différents déterminants naturels et les actions anthropiques ont entraîné une dégradation des sols et contraint les producteurs à des pratiques diverses pour fertiliser les sols (voir figure 1) Source : collecte des données, site de Yilou, juillet-septembre 2024 Figure 1 : Technologies pratiquées Cette figure révèle que la plupart des producteurs font usage du paillage pour fertiliser leurs champs. La technologie la plus utilisée est le paillage + Zaï (45 %) suivie du Paillage +Zaï + fumure organique (27,50 %). Elle révèle aussi que les sols sont dégradés et les producteurs adoptent des combinaisons de technologies « Les moins coûteux, faciles à réaliser en fonction de leurs moyens financiers et de la main d’œuvre », nous confient-ils. D’autres combinaisons de technologies sont faiblement réalisées par les producteurs du fait de leur coût élevé, il s’agit du paillage en association avec les bandes enherbées et le compost. 2.3 Raisons de la pratique des technologies par les producteurs Diverses raisons (fig. 2) sont données par les producteurs. Ils sont unanimes à reconnaître que la mise en place des technologies permet de fertiliser les sols dégradés, augmenter l’humidité dans les champs et accroître les rendements agricoles. La mise en œuvre du type de technologies dans les champs est dépendante des cultures et des objectifs de production. En effet, la production agricole est d’abord destinée à la consommation, ensuite aux différents usages socio-culturels et enfin, à la commercialisation pour satisfaire aux besoins des membres du ménage. Source : collecte des données, site de Yilou, juillet-septembre 2024 Figure 2 : Raisons de mise en œuvre des technologies 2.4 Contraintes de mise en œuvre des technologies et Solutions endogènes Des contraintes de mise en œuvre des technologies ont été soulevées par les producteurs. Il s’agit notamment de l’insuffisance de moyen financier pour l’acquisition des intrants (plants, grillage, fumure organique, semences améliorées, Burkina phosphate), la variabilité climatique, l’insuffisance d’eau pour l’application des technologies, l’insuffisance de la main d’œuvre, l’insuffisance de fumure organique, la coupe abusive du bois, la difficulté à protéger et à entretenir les plantules épargnées dans les champs en saison sèche, la divagation et la mortalité des animaux et les feuilles utilisées pour le paillage sont emportées souvent par le vent. Face à ces contraintes, des solutions endogènes ont été développées par les producteurs (fig. 3). Source : collecte des données, site de Yilou, juillet-septembre 2024 Figure 3 : Solutions endogènes NB : Entraide (s ensibilisation des producteurs par les notables du village, emprunt de matériels agricoles). Les initiatives endogènes sont : Planter très tôt les arbres, en début d’hivernage, usage des feuilles et graines de neem pour lutter contre les attaques des termites, l’usage d’os et de sel dans les trous des plants afin d’éloigner les termites du trou, usage d’os et de sel dans le trou avant de planter, enfouissement de panicules vides de sorgho dans les trous de plants. Néanmoins, différents types d’accompagnement ont été soulignés par les producteurs. Il s’agit du renforcement de capacité en production de plants, en fabrication de compost et en embouche ovine et bovine, appui en matériels de travail (20%), faciliter l’accès à l’engrais et aux semences améliorées (15%), subventionner les grilles de protection des plants (12,50%) et la facilitation à l’achat des animaux afin d’avoir du fumier (5%). Cependant, des déterminants constituent des freins à l’adoption de la technologie dont notamment les variabilités climatiques évoqués par 37,50% des producteurs et l’insuffisance de moyens financiers et matériels soulignés par 25% des producteurs. Discussion La mise en œuvre des technologies agroécologiques à Yilou est diversifiée, avec une prédominance du paillage à partir des feuilles d’arbustes et de ligneux. Ce résultat corrobore ceux de B. Yelemou et al. (2007, p. 59), qui montrent que les producteurs utilisent les recrus forestiers, notamment Piliostigma reticulatum et Guiera senegalensis, à des doses importantes (5 à 13 t/ha) sur les parties dégradées des champs. Le paillage, associé au zaï, aux bandes enherbées, aux cordons pierreux ou aux demi-lunes, est perçu comme un moyen de restaurer les sols et d’améliorer les rendements. Cette perception rejoint les résultats de A. Bazongo et al. (2022, p. 161), selon lesquels le paillage accroît la densité du macrofaune du sol, ainsi que ceux de M. Gnissien et al. (2023, p. 1229), qui montrent que la présence d’arbustes favorise l’augmentation du stock de carbone du sol. Ces pratiques constituent également, pour les producteurs, une manifestation de résilience face à la dégradation des terres et un moyen d’améliorer les revenus, la nutrition et les conditions de vie. Cette représentation rejoint M. Morin-Kasprzyk et al. (2015, p. 19), pour qui l’agroécologie renvoie notamment à la gestion de la fertilité des sols et à la protection de l’environnement. A. Tyano (2021, p. 52) souligne par ailleurs que le paillage de P. reticulatum et G. senegalensis contribue à améliorer le pH du sol. Son efficacité sur les rendements est également documentée (Tyano, 2021, p. 94), tandis que l’association maïs-niébé favorise une meilleure humidité du sol (Coulibaly et al., 2024, p. 1309). Toutefois, l’adoption demeure sélective, ains rotation, association culturale et semences améliorées sont mobilisées selon les ressources disponibles, les besoins en main-d’œuvre, l’eau, les équipements et les capacités financières. Hedokingbe et al. (2025, p. 131) confirment l’intérêt combiné de ces techniques pour la fertilité et la productivité. Ainsi, conformément à S. Kambiré et al. (2023, p. 603), l’adoption technologique relève d’un processus complexe, marqué à Yilou par des arbitrages individuels et un soutien institutionnel jugé insuffisant. Conclusion Les paysans burkinabè jouent un rôle crucial dans la promotion de l'agroécologie en adoptant des pratiques durables et résilientes. Malgré les nombreux avantages des pratiques agroécologiques, des défis persistent, notamment le manque d'accès aux ressources, aux technologies appropriées et aux marchés pour les produits agroécologiques. Il est essentiel d'investir dans la formation, la recherche et le développement de politiques favorables pour promouvoir davantage l'agroécologie au Burkina Faso. En reconnaissant et en soutenant ces pratiques, le Burkina Faso peut renforcer sa sécurité alimentaire, améliorer les moyens de subsistance des agriculteurs et contribuer à la préservation de l'environnement pour les générations futures. Références bibliographiques AGOSSOU Sêsihouèdé Mindéhiya Désiré, 2008. Adaptation aux changements climatiques : perceptions, savoirs locaux et stratégies d’adaptation des producteurs des communes de Glazoué et de Savalou au centre du Bénin , Mémoire d’Ingénieur Agronome, Université d’Abomey Calavi (Benin). 197 p. https://agritrop.cirad.fr › …, consulté le 16/02/2026 BARRO Albert, 1999. Evaluation de l’effet et de la faisabilité du travail du sol sur le sorgho Photo sensible à Saria (Burkina Faso) . Thèse de doctorat. ENSA Montpellier. 175 p. BAZONGO Jean-Paul, KABRÉ Salifou, DAO Madjelia Cangré Ebou, OUÉDRAOGO Lassané, SOMÉ Der et HIEN Edmond, 2022. « Contribution à la valorisation et à la conservation du Piliostigma reticulatum (DC) Hochst. (F) à Yilou et dans la région centre-nord du Burkina Faso », International Journal of Biological and Chemical Sciences , Vol. 41, n°2 (3), pp.151-169, ISSN 1011-6028, consulté le 22/05/2025 COULIBALY Kalifa, YAMÉOGO Louis Paul, TRAORÉ Mamadou, GOMGNIMBOU Alain Pierre, BACYÉ Bernard and NACRO Hassan Bismarck, 2024. « L’association maïs-niébé et la restitution organique sont-elles le moteur d’une gestion durable des sols à l’ouest du Burkina Faso ? », Int. J. Adv. Res. 12(09), 1301-1312, https://www.journalijar.com , consulté le 17/02/2026 FÈVRES Jessica, 2012. « Everett M. Rogers, Diffusion of innovations », Essais [En ligne], mis en ligne le 31 janvier 2022, consulté le 02 février 2022. URL : http://journals.openedition.org/essais/11135 ; DOI : https://doi.org/10.4000/essais.11135 GNISSIEN Moussa, COULIBALY Kalifa, BARRO Moussa, DOUZET Jean-Marie, COURNAC Laurent, CICEK Harun et NACRO Hassan Bismarck, 2023. « Effets longue-durée de différentes densités de Piliostigma reticulatum (DC) Hochst sur le stockage et la dynamique du carbone et de l’eau dans un Plinthosol épipétrique en zone nord-soudanienne du Burkina Faso », International Journal of Biological and Chemical Sciences , 17 (3), pp.1220-1236. ff10.4314/ijbcs.v17i3.36ff. ffhal-05182393, https://hal.science/hal-05182393v1 , consulté le 17/02/2026 HILOU KISSIFING Tihouhon Rodrigue et KABORÉ Ramané, 2022, « L’agroécologie à l’épreuve des perceptions paysannes : cas des agriculteurs membres de L’USCCPA/BM (BURKINA FASO) », Djiboul ç N°004, Vol.2, pp. 402 – 415, consulté le 10/05/2025 HEDOKINGBE Rodolphe, AHOUANGNINOU Claude, ADE Jules, EL GHAZI Ibrahim, INSD, 2022. Fichier des Localités du 5e RGPH. Cinquième Recensement Général de la Population et de l’Habitation du Burkina Faso , 395 p. KAMBIRE Seu, ELEGBEDE Bio Cyrinus, HORRIGUE Walid, KOFFI Kouadio Bérenger Hermann, SABRE Rachid et ASSIDJO Emmanuel Nogbou et al (2023) « Déterminants socio-économiques de l’adoption de la motorisation en zones cotonnières ivoiriennes », Revue Internationale du chercheur « Volume 4 : Numéro 2 » pp : 600- 623, www.revuechercheur.com , consulté le 10/05/2025 LEROUX Robert, « Raymond Boudon : genèse d’un projet scientifique », Revue européenne des sciences sociales , no 58-1, p. 209-220 URL : http://journals.openedition.org/ress/6581 , ; DOI : https://doi.org/10.4000/ress.6581 , consulté le 11/01/2024 MINISTERE de l’ENVIRONNEMENT, de l’ÉCONOMIE VERTE et du CHANGEMENT CLIMATIQUE (MEEVC), 2018, Rapport final du Programme de Définition des Cibles sur la Neutralité en matière de Dégradation des Terres, Burkina Faso, 36 p. MORIN-KASPRZYK Mata, SANKARA Rasmata, GARNOTEL Jean-Louis, 2015. « Quel accompagnement des producteurs sur la voie de l’agro écologie ? De la pratique à une démarche », https://www.alimenterre.org › system › files › ressources › pdf, 35 p., consulté le 24/01/2026 MILES Matthew, HUBERMAN Michael et SALDAÑA Johnny, 2014. Qualitative Data Analysis, A Methods Source book , 3e éd., Thousand Oaks, Sage Publications. PDRD, 2009. Plan communal de développement de Guibaré 2009-2011 , Direction Provinciale de l'Agriculture du Bam (Kongoussi), 108 p. Région du Centre Nord/Conseil Régional,2014. Plan Régional de Développement du Centre-Nord 2015-2019, Burkina Faso, Version finale, 202 p. TYANO Abdoulaye, 2021. Services écosystémiques des arbustes au champ : intensification écologique des sols et évaluation du stock de carbone en zone nord soudanienne du Burkina Faso, Doctorat unique en devéloppement rural option : Systèmes de Production Forestière, spécialité : Production Forestière, Université Nazi BONI, Bobo-Dioulasso, 157 p. YELEMOU Barthélémy, BATIONO Babou. André., YAMEOGO Germain, MILLOGO-RASOLODIMBY Jeanne, 2007, « Gestion traditionnelle et usages de Piliostigma reticulatum sur le Plateau central du Burkina Faso », Bois et Forêts des Tropiques, N° 291 (1) pp.55-66, consulté le 10/05 2025 Ce document de vulgarisation est tiré du chapitre d’un ouvrage collectif : IMA/OUOBA Sidonie Aristide, 2026. « Pratiques agro-écologiques et les perceptions des producteurs du site de Yilou dans la province du Bam au Burkina Faso », in FAYAMA Tionyélé, KARAMBIRI Souleymane et ADIOLA Belo. Le regard des Sciences humaines et sociales sur les changements globaux en Afrique , L’Harmattan, 2026, pp.57-75 L’article Burkina: vers une agriculture durable et résiliente, l'oeuvre d'une chercheure est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -893,12 +959,144 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Kankan : La traque aux « étrangers » de la mairie se heurte au mur du flou sémantique",
+      "link": "https://guineenews.org/2026/09/14/kankan-la-traque-aux-etrangers-de-la-mairie-se-heurte-au-mur-du-flou-semantique/",
+      "pubDate": "2026-09-14T10:41:44.000Z",
+      "description": "« Tout chef de famille qui reçoit un étranger venant d'une autre localité est tenu d'informer immédiatement le chef de quartier. » Il y a quelques jours, le maire de la commune de Kankan s’était fendu un communiqué sur la visite des étrangers dans sa circonscription administrative. Dans ce document, il avait intimé tous les chefs de famille de signaler la présence de leurs visiteurs auprès des chefs de quartiers qui doivent remonter les informations à la mairie. Mais aujourd’hui, ce communiqué se heurte à l’incompréhension, à l’inquiétude, et suscite des réactions dans la commune urbaine. Publié le 7 septembre 2026 sur la page Facebook officielle de la mairie, ce texte intervient dans un contexte marqué par des préoccupations sécuritaires. Dans le document, le maire de Kankan, Lamine Labo Kourouma, rappelle notamment : « Tout chef de famille qui reçoit un étranger venant d'une autre localité est tenu d'informer immédiatement le chef de quartier. » Et précise : « Il est formellement interdit à tout citoyen de loger un étranger sans en informer au préalable le chef de quartier. » La formulation du communiqué a cependant éveillé des interrogations, notamment sur la définition exacte du terme « étranger ». S'agit-il uniquement des personnes venant de l'étranger, de celles originaires d'autres préfectures de la Guinée, ou encore de toute personne extérieure au quartier ? Dans la commune urbaine, plusieurs citoyens et acteurs de la société civile rencontrés par notre rédaction estiment que cette précision aurait dû figurer d’emblée dans la publication. Pour Sékou Kaissa Cissé, activiste de la société civile locale, la mesure manquait de pédagogie : « Moi, je trouve le communiqué du maire un peu bancal. Quand on parle d'étranger, il faut donner plus de détails. Par exemple, s'agit-il des personnes venant du Mali, de la Côte d'Ivoire, du Sénégal ou du Burkina Faso ? » Selon lui, cette clarification est d'autant plus vitale que Kankan constitue un carrefour et une ville de passage pour de nombreux voyageurs, notamment vers les zones minières. L'activiste concède toutefois que la sécurité nécessite l'implication de toutes les forces vives : « Si le contexte se tend, surtout après l'assassinat d'un citoyen dernièrement, c'est normal d'impliquer toutes les parties : autorités administratives et politiques, justice, services de défense et de sécurité, ainsi que la société civile. Mais nous avons été surpris par ce communiqué sans consultation préalable. » Sékou Kaissa Cissé plaide pour une meilleure maîtrise des compétences des collectivités locales et insiste sur la communication en amont : « La mairie doit normalement mettre de la pédagogie dans sa démarche afin de faire adhérer la population à des décisions qui doivent refléter la société . » Il soulève en outre une contrainte pratique de taille : de nombreux habitants ignorent l'identité ou la localisation exacte du chef de leur quartier, sur les 57 que compte la commune urbaine. « Si ma maman, mon jeune frère ou un membre de ma famille vient chez moi la nuit, il faut que je parte le présenter au chef de quartier qui habite peut-être loin de moi ? C'est impossible », conteste-t-il à propos de ce communiqué. Une autre citoyenne, interrogée sous le sceau de l'anonymat, juge la mesure pertinente sur le plan sécuritaire, mais déplore le flou artistique qui l'entoure : « Je ne saisis pas bien l'esprit du maire. Si ce sont des personnes que je ne connais pas, je comprends. Mais pour ma propre famille, je m'interroge : s'il faut y aller à chaque visite, ça devient compliqué . » Pour Nakany Konaté, mère de famille à Kankan, l'ambiguïté nuit à l'efficacité de l'action municipale : « J'ai appris que le maire a demandé que, dans chaque quartier, dès qu'on héberge un étranger, on le signale. Je me suis posé la question de savoir de quel type d'étranger il s'agit. Est-ce un ressortissant d'un pays tiers ou quelqu'un venant de Conakry et d'ailleurs en Guinée ? » Selon elle, ce vide sémantique nourrit les rumeurs : « Quand tu communiques, tu dois satisfaire ton auditoire. Ton interlocuteur doit comprendre exactement de quoi il s'agit pour calmer les murmures . », rappelle-t-elle. Tout en saluant les initiatives passées du maire, elle pointe le manque de suivi, à l'instar de la mesure sur le stationnement des gros porteurs dont l'application s'est essoufflée. Elle pose également la question des arrivées nocturnes : « Si tu reçois un visiteur à minuit ou à une heure du matin, qu'est-ce qu'il faut faire ? Faut-il se déplacer à cette heure-là ? » Elle suggère la mise en place de lignes vertes ou de contacts directs pour joindre les responsables de quartier à toute heure. Pour Amara Narena Condé, acteur des médias locaux, il convient de distinguer les situations : « Imaginez des personnes quittant les villages environnants pour un court séjour chez des proches. Sont-elles concernées ? S'il était précisé qu'il s'agit uniquement de non-résidents ou de non-Guinéens, ce serait plus clair . » Néanmoins, il admet que le climat sécuritaire – marqué par des drames récents dans la région- justifie la vigilance, pour peu que la cible visée soit clairement définie. Le malaise gagne également le milieu universitaire. De nouveaux étudiants débarquent chaque année à Kankan sans repères géographiques ou administratifs. La formulation actuelle sème le doute chez ces jeunes venus d'autres préfectures. Sollicitée pour éclairer cette situation, la direction de l'Université Julius Nyerere de Kankan, par la voix de son vice-recteur le Pr Mamadou Dindé, n'a pas souhaité se prononcer. Face à la polémique grandissante, la mairie a tenu à clarifier sa position. Michel Pivi, conseiller communal et chargé de la communication de l'institution, apporte des précisions sur le sens du mot « étranger » : « C'est très clair dans le communiqué : il s'agit des étrangers venant des pays limitrophes, mais aussi de ceux provenant d'autres localités guinéennes. Quelqu'un peut commettre une infraction à Mandiana et venir se réfugier à Kankan, ce qui pose un problème de sécurité publique. » Il invite les chefs de quartier à redoubler de vigilance, notamment auprès des détenteurs d'appartements meublés et des familles accueillant de nouveaux visages : « Une fois qu'ils sont installés et que vous ne les connaissez pas, il faut faire un compte rendu à votre chef de quartier. On parle de la sécurité de notre ville. » Il évoque également des profils spécifiques, tels que les bergers ou cultivateurs immigrants, pour lesquels la traçabilité s'avère indispensable. Au-delà de la sémantique, c’est toute la logistique d'application qui reste à affiner par la municipalité : horaires, canal de transmission, et gestion des cas d'urgence nocturne. Dans une cité aussi cosmopolite et dynamique que Kankan, la clarté administrative demeure le meilleur rempart contre la psychose et l'incompréhension.",
+      "_source": "Guineenews",
+      "_sourceId": "rss_guineenews",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
         "rating": "F2"
       },
       "_rating": "F2",
       "_score": 127,
       "_zone": 1,
+      "_theme": "H",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "SAMAO 2026 : Les ministres des Mines de l’AES en visite au Mémorial Thomas Sankara",
+      "link": "https://www.minute.bf/samao-2026-les-ministres-des-mines-de-laes-en-visite-au-memorial-thomas-sankara/",
+      "pubDate": "2026-09-14T10:11:43.000Z",
+      "description": "En prélude au lancement officiel de la 8e édition de la Semaine des activités minières d’Afrique de l’Ouest (SAMAO), le ministre burkinabè en charge des Mines, Yacouba Zabré Gouba, accompagné de ses homologues malien, le Pr Amadou Keïta, et nigérien le commissaire-colonel Ousmane Abarchi, a effectué une visite guidée au Mémorial Thomas Sankara. À l’issue de cette visite, le Pr Amadou Keïta a déclaré que « tout patriote devrait faire un tour dans ce mémorial ». Avant le début de la Semaine des activités minières d’Afrique de l’Ouest (SAMAO) 2026, les ministres des Mines de l’Alliance des États du Sahel (AES) ont rendu un hommage au Capitaine Thomas Sankara, père de la révolution burkinabè. Selon le ministre malien des Mines, le Pr Amadou Keïta, le mémorial Thomas Sankara est un espace de recueillement au regard de l’immense sacrifice consenti par le Capitaine Sankara et ses compagnons. À l'en croire, il s’agit à la fois d’un lieu de mémoire et d’histoire. « Je pense que tout Africain digne de ce nom, tout patriote, devrait faire un tour dans ce mémorial, justement pour s’imprégner d’une partie de l’histoire du Burkina Faso, mais aussi de l’Afrique. De l’Afrique combattante, de l’Afrique qui a osé se libérer, de l’Afrique qui a osé revendiquer les droits les plus nobles de ses peuples. C’est pour moi un grand honneur, et c’est avec beaucoup d’humilité que j’ai fait cette visite. On a visité le bureau du capitaine Sankara. On a aussi vu l’endroit où il a été fauché. On a également visité le mausolée qui abrite désormais son corps et celui de ses compagnons », a-t-il déclaré. Pour le ministre malien des Mines, le Pr Amadou Keïta, le mémorial Thomas Sankara est un espace de recueillement au regard de l’immense sacrifice consenti par le Capitaine Sankara et ses compagnons Le Pr Amadou Keïta n'a pas caché ses émotions face à la re-découverte de ce pan de l'histoire du Burkina Faso. « Cela me rappelle le devoir de sacrifice pour nos pays, pour toute l’Afrique. Et j’en ressors très requinqué, très réconforté et davantage aguerri pour les combats que nous menons pour nos pays », a-t-il ajouté. Pour rappel, la 8e édition de la SAMAO est prévue du 14 au 19 septembre 2026 sous le thème : « Gouvernance des ressources extractives : enjeux géopolitiques, défis et opportunités pour les États africains ». Jean-François SOMÉ Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 8,
       "_theme": "E",
+      "_zoneShort": "8. Moyen-Orient",
+      "_relevance": "A",
+      "_desk": "A5"
+    },
+    {
+      "title": "Point sur les Conseils des ministres des pays de la zone UEMOA",
+      "link": "https://leconomistedufaso.com/2026/09/14/point-sur-les-conseils-des-ministres-des-pays-de-la-zone-uemoa-70/",
+      "pubDate": "2026-09-14T07:10:36.000Z",
+      "description": "Semaine du 27 août au 23 Juillet 2026 A u titre des Conseils des ministres des pays de la zone UEMOA, les équipes de la SA2IF vous présentent le résumé suivant. BENIN Le Conseil des ministres s’est réuni ce mercredi 2 septembre 2026, sous la présidence de Monsieur Romuald WADAGNI, Président de la République. AU CHAPITRE DES MESURES LEGISLATIVES ET REGLEMENTAIRES Le Conseil des ministres a autorisé la transmission à l’Assemblée nationale, pour autorisation de ratification, de l’adhésion de la République du Bénin au Fonds pour le Développement des Exportations en Afrique, initiative de l’AFREXIMBANK. Le Conseil a également autorisé la transmission à l’Assemblée nationale, pour autorisation de ratification, de l’accord établissant la Banque de Développement Shelter Afrique. Autres mesures normatives Le Conseil des ministres a par ailleurs adopté plusieurs décrets portant : modification du décret n° 2023-119 du 29 mars 2023, portant création, attributions, organisation et fonctionnement du Comité d’agrément des zones économiques spéciales; modification du décret n° 2021-068 du 17 février 2021, portant attributions, composition, organisation et fonctionnement du Comité interministériel de promotion des investissements ; modification du décret n° 2018-165 du 02 mai 2018, portant attributions, composition et modalités de fonctionnement de la Cellule d’Appui au Partenariat Public-Privé en République du Bénin ; nomination de commissaires aux comptes auprès de certaines entreprises publiques. Ces mesures visent notamment à renforcer le cadre institutionnel et réglementaire relatif à la promotion des investissements, aux zones économiques spéciales et au partenariat public-privé au Bénin. AU CHAPITRE DES COMMUNICATIONS Mesures sociales au profit des trois ordres d’enseignement à la rentrée scolaire et universitaire 2026-2027 Dans le cadre de la mise en œuvre de la Vision nationale de développement à l’horizon 2060, le Gouvernement a adopté un ensemble de mesures sociales destinées à améliorer l’accès à une éducation de qualité et les conditions d’apprentissage, tout en renforçant le développement du capital humain. Travaux de construction de 35 Centres intégrés économiques sociaux et numériques dans 26 communes. Dans le cadre de la mise en œuvre du Programme de Filets de Protection Sociale Productifs, le Gouvernement prévoit la construction et la mise aux normes de centres dédiés à la délivrance des services et prestations sociaux, afin de renforcer leur couverture territoriale et d’améliorer la prise en charge des populations vulnérables. Le programme vise également à soutenir l’autonomisation économique des ménages extrêmement pauvres et des populations affectées par des chocs, à travers un accompagnement financier progressif destiné au développement d’activités génératrices de revenus. Une attention particulière est accordée à la modernisation des Centres de Promotion Sociale, appelés à évoluer vers des Guichets uniques de Protection sociale (GUPS). Ces centres intégreront notamment les GUPS, des agences de La Poste du Bénin et des Points Numériques Communautaires (PNC), permettant de regrouper plusieurs services et prestations au sein d’un même espace. Le projet concernera 26 communes, à savoir : Kandi, Banikoara, Natitingou, Matéri, Abomey-Calavi, Allada, Ouidah, Parakou, Nikki, Tchaourou, Dassa-Zoumè, Savalou, Aplahoué, Djakotomey, Bassila, Djougou, Cotonou, Houéyogbé, Lokossa, Adjohoun, Porto-Novo, Sèmè-Podji, Adja-Ouèrè, Pobè, Abomey et Bohicon. Le Conseil des ministres a autorisé la maîtrise d’ouvrage déléguée du projet et instruit les ministres concernés d’assurer sa mise en œuvre diligente. BURKINA FASO A la date du 03 septembre 2026, aucune information nouvelle sur une réunion du Conseil des ministres du Burkina Faso n’a été publiée depuis celle du jeudi 30 juillet 2026. COTE D’IVOIRE A la date du 03 septembre 2026, aucune information nouvelle sur une réunion du Conseil des ministres de la Côte d’Ivoire n’a été publiée depuis celle du mercredi 05 août 2026. GUINEE BISSAU A la date du 03 septemebre 2026, aucune information nouvelle sur une réunion du Conseil des ministres bissau-guinéen n’a été publiée. MALI Le Conseil des ministres s’est réuni en session ordinaire, le mercredi 2 septembre 2026, dans sa salle de délibérations au Palais de Koulouba, sous la présidence du Général d’Armée Assimi GOITA, Président de la Transition, Chef de l’Etat. AU CHAPITRE DES MESURES LEGISLATIVES ET REGLEMENTAIRES Sur le rapport du ministre des Mines Le Conseil des ministres a adopté quatre projets de décret portant premier renouvellement de permis de recherche d’or et de substances minérales du groupe 2 au profit de plusieurs sociétés minières. Les renouvellements concernent : la Société HONGDA LIUJIU SARL, bénéficiaire du permis initialement attribué à YIYUAN MINES SARL, à Ourounia, Cercle de Bougouni ; la Société A.NA.DI.S SARL, à Dézébéla, Cercle de Sikasso ; la Société L’HORIZON SARL, à Faladiè-Nord, Cercle de Kangaba ; la Société L’HORIZON SARL, à Liberta-Sud, Cercle de Kéniéba. Les permis concernés, attribués entre 2019 et 2022, avaient été affectés par la suspension du renouvellement des titres miniers intervenue entre décembre 2022 et mars 2025. La poursuite des travaux de recherche, ayant permis de relever plusieurs anomalies justifiant de nouvelles investigations, a conduit les sociétés concernées à solliciter leur renouvellement conformément au Code minier. L’adoption de ces projets de décret permettra aux sociétés bénéficiaires de poursuivre leurs travaux de recherche pour une période supplémentaire de trois ans, renouvelable une fois, conformément à la réglementation en vigueur. AU CHAPITRE DES COMMUNICATIONS Sur le rapport du ministre de l’Energie et de l’Eau Le ministre de l’Énergie et de l’Eau a rendu compte de la participation du Mali à la 8ᵉ Réunion du Comité régional de l’Alliance solaire internationale pour l’Afrique, tenue du 25 au 27 août 2026 à Victoria Falls (Zimbabwe). Les échanges ont porté sur la mobilisation des investissements dans l’énergie solaire, le renforcement des capacités institutionnelles et l’accélération de la transition énergétique. Le Mali a notamment réaffirmé l’importance de valoriser son potentiel en énergies renouvelables afin de répondre à la demande croissante et de réduire sa dépendance aux énergies fossiles. Il a également annoncé l’organisation de la 8ᵉ Session ordinaire du Conseil des Ministres de l’Autorité du Bassin de la Volta, prévue du 12 au 16 octobre 2026 à Bamako, consacrée notamment au renforcement de la coopération entre les États membres pour une gestion concertée des ressources en eau. Sur le rapport du ministre de la Jeunesse et des Sports, chargé de l’Instruction civique et de la Construction citoyenne Le Conseil des Ministres a pris connaissance la participation du Mali au Forum confédéral de la Jeunesse et du Volontariat de l’AES, tenu du 27 au 30 août 2026 à Ouagadougou, avec la participation de plus de 600 jeunes et encadreurs. Les discussions ont porté sur les valeurs de l’espace confédéral, le rôle des jeunes dans la souveraineté des États de l’AES et les politiques de promotion de la jeunesse. Plusieurs instruments de coopération ont été signés, notamment des mémorandums d’entente relatifs au Forum de la Jeunesse et du Volontariat et aux Jeux de l’AES, ainsi qu’une Convention sur le Volontariat. Sur le rapport du ministre de l’Industrie et du Commerce Une mission gouvernementale a effectué, du 27 au 29 août 2026, une visite de suivi de l’usine de production de ciment de la Société Ciments de l’Afrique, à Natien dans la région de Sikasso. Mise en production le 23 mars 2026, l’usine a mobilisé un investissement global de 56 milliards de FCFA et dispose d’une capacité installée de 1 million de tonnes de ciment par an, extensible à 3 millions de tonnes. Elle a permis la création de 250 emplois directs et environ 1 500 emplois indirects au démarrage. Par ailleurs, le Gouvernement a annoncé l’organisation du Forum international de l’Investissement au Mali, « Forum du Mali Kura », prévu les 11 et 12 décembre 2026 à Bamako. L’évènement vise notamment à promouvoir le Mali comme destination d’investissement, présenter les opportunités d’investissement, mobiliser les investisseurs, institutions financières et partenaires, et faciliter la mise en relation entre porteurs de projets et investisseurs nationaux et internationaux. Sur le rapport du ministre l’Environnement, de l’Assainissement et du Développement durable Le Conseil des ministres a pris connaissance de la participation du Mali à la 17ᵉ Conférence des Parties à la Convention des Nations unies sur la Lutte contre la Désertification, tenue du 17 au 28 août 2026 à Oulan-Bator (Mongolie), sous le thème « Restaurer les terres, restaurer l’espoir ». Les travaux ont porté notamment sur la restauration des terres, la résilience à la sécheresse, la gestion durable des parcours, la sécurité alimentaire et la mobilisation des financements. Le Mali a plaidé pour le renforcement de la gouvernance des initiatives et l’accélération des investissements en Afrique, notamment dans les domaines du financement climatique et de la biodiversité. Sur le rapport du ministre de la Santé et du Développement social Le Conseil des ministres a pris connaissance de la participation du Mali à la 76ᵉ Session du Comité régional de l’Organisation mondiale de la Santé pour l’Afrique, tenue du 25 au 28 août 2026 à Addis-Abeba (Éthiopie). Les échanges ont notamment porté sur la gestion des urgences sanitaires, la production locale de médicaments et de vaccins, l’amélioration de l’accès aux soins et le renforcement de la souveraineté sanitaire. Le Gouvernement a également fait état d’une stagnation du nombre de cas confirmés de dengue par rapport à la semaine précédente et a appelé la population au respect des mesures de prévention. NIGER A la date du 03 septembre 2026, aucune information nouvelle sur une réunion du Conseil des ministres du Niger n’a été publiée depuis celle du 21 août. SENEGAL Le Conseil des ministres s’est tenu le mercredi 02 septembre 2026, au Palais de la République, sous la présidence de Son Excellence Monsieur Bassirou Diomaye Diakhar FAYE, Président de la République. AU TITRE DE LA COMMUNICATION DU PRESIDENT DE LA REPUBLIQUE Le Chef de l’État a formulé plusieurs orientations portant sur les célébrations religieuses, la conduite de l’action gouvernementale, la politique sociale, la santé publique et la préparation des JOJ Dakar 2026. Intensification de l’action gouvernementale et priorités économiques. Le Président de la République a salué la conclusion de l’accord technique de principe entre le Sénégal et le FMI, qui prévoit la mobilisation de 1 243 milliards de FCFA (2,2 milliards USD) sur trois ans au titre de la Facilité élargie de crédit (FEC), en appui aux réformes économiques et financières. Il a appelé le Gouvernement à accélérer la mise en œuvre des mesures destinées à préserver le pouvoir d’achat des ménages, maîtriser les prix des produits et services de consommation courante et réguler les coûts des loyers. Il a également insisté sur la sécurisation des approvisionnements, la relance des secteurs et filières prioritaires, ainsi que sur la promotion de l’investissement productif, dans un contexte d’assainissement des finances publiques. Le Chef de l’État a par ailleurs demandé l’amélioration de l’environnement des affaires et la préparation de la prochaine session du Conseil Présidentiel de l’Investissement (CPI), avec l’implication du secteur privé. Une attention particulière devra également être accordée au suivi du secteur des hydrocarbures, avec la tenue prochaine d’une session spéciale du COS-PETROGAZ et l’activation des instances de pilotage du Fonds intergénérationnel (FIG) pour la validation de la stratégie d’investissement proposée par le FONSIS. Dans le domaine de l’emploi et de la formation, le Gouvernement est appelé à accélérer le développement de la formation duale, des centres départementaux de formation professionnelle et technique, des ISEP ainsi que des infrastructures scolaires et universitaires. Le Président a également demandé la finalisation du projet de loi de finances pour 2027 et la présentation prochaine du programme de travail intégral du Gouvernement dans le cadre de la Déclaration de Politique générale. Consolidation de la politique sociale. Le Chef de l’État a demandé l’accélération du paiement des bourses de sécurité familiale, sur la base du Registre national unique (RNU) actualisé et validé. Il a également préconisé une évaluation de la mise en œuvre de la loi d’orientation sociale et des dispositifs de protection sociale et de la Carte d’égalité des chances. Il a insisté sur la nécessité de renforcer le financement durable de la Couverture sanitaire universelle (CSU), de poursuivre la revalorisation des pensions de retraite et de consolider les mécanismes de solidarité nationale. Le renforcement du Fonds de Solidarité nationale et du Commissariat à la Sécurité Alimentaire et à la Résilience a également été demandé. Enfin, le Gouvernement devra préparer un projet de loi sur l’autonomisation économique des femmes. Réformes et renforcement du système de santé. Le Président de la République a demandé l’ouverture de concertations avec les acteurs du secteur afin de favoriser une stabilité sociale durable. Il a également instruit le Gouvernement d’accélérer la mise en service des infrastructures sanitaires en construction, notamment l’hôpital Aristide Le Dantec, le Centre national d’Oncologie et l’hôpital de Ourossogui, et de mettre en place un programme d’urgence visant à densifier la carte sanitaire en établissements publics de santé. Le renforcement de la veille sanitaire, le déploiement des campagnes nationales de vaccination et l’accélération du recrutement de nouveaux personnels de santé figurent également parmi les priorités. Préparation des JOJ Dakar 2026. À la suite de l’inauguration, le 29 août 2026, du Village olympique et du Centre équestre de Diamniadio, le Chef de l’État a salué les efforts engagés pour la réalisation des infrastructures des JOJ Dakar 2026. Il a demandé l’achèvement des travaux de proximité résiduels et l’amélioration du cadre de vie dans les villes et quartiers d’accueil, avec l’implication des populations, notamment des jeunes. Le Président de la République a enfin appelé à une mobilisation nationale en faveur de l’appropriation et du succès des JOJ Dakar 2026. AU TITRE DE LA COMMUNICATION DU PREMIER MINISTRE La communication du Premier ministre a porté sur le suivi des diligences consécutives à l’accord technique conclu entre le Sénégal et le Fonds monétaire international (FMI), ainsi que sur la feuille de route gouvernementale pour la période septembre-décembre 2026. À la suite de l’accord technique avec le FMI et de l’annonce, le 1er septembre 2026, du Plan de Traitement de la Dette du Sénégal, le Premier Ministre a instruit le Gouvernement d’accélérer plusieurs mesures destinées à renforcer le redressement des finances publiques. Il a notamment demandé la mise en place rapide du dispositif de ciblage des subventions et le règlement, au plus tard fin septembre 2026, des arriérés de bourses nationales de sécurité familiale. Le Ministre de l’Économie, des Finances et du Plan a également été chargé de déposer dans les meilleurs délais à l’Assemblée nationale la Loi de Finances rectificative (LFR) 2026, intégrant les conclusions de l’accord technique avec le FMI. Il devra par ailleurs soumettre à l’approbation du Président de la République les résultats de l’audit des arriérés intérieurs, afin de permettre le démarrage de leur paiement avant la fin de 2026, avec une priorité accordée aux créances des TPE, PME et PMI. Dans le cadre de la préparation de l’exercice 2027, le Gouvernement devra finaliser et soumettre au Conseil des Ministres le projet de Loi de Finances Initiale (LFI) 2027 au plus tard le 30 septembre 2026. Par ailleurs, compte tenu de l’urgence de relancer le secteur de la construction, des mesures réglementaires sont attendues concernant le réaménagement et la restructuration de certains lotissements dans les zones de Dakar et Thiès, conformément aux recommandations du Comité de Suivi des audits fonciers. S’agissant de la feuille de route gouvernementale pour septembre-décembre 2026, le Premier Ministre a demandé à chaque département ministériel d’identifier précisément les projets et réformes à engager ou à finaliser d’ici la fin de 2026, ainsi que ceux à programmer pour les années 2027, 2028 et 2029. Il a insisté sur la nécessité d’une plus grande sélectivité et structuration des projets, ces critères devant constituer des éléments déterminants dans l’arbitrage des demandes de crédits au titre de la LFI 2027. AU TITRE DE LA COMMUNICATION DES MINISTRES Le Ministre de l’Economie, des Finances et du Plan a fait une communication sur le Programme économique et financier 2026-2029, suite à l’accord technique conclu avec le FMI. Le Ministre de l’Energie et du Pétrole a fait une communication sur la situation du secteur de l’Energie. Le Ministre de la Jeunesse et des sports a fait une communication sur le Conseil consultatif des Jeunes du Sénégal et sur les vacances citoyennes. AU TITRE DES TEXTES LEGISLATIFS ET REGLEMENTAIRES Le Conseil des ministres a examiné et adopté le projet de loi autorisant le Président de la République à ratifier le Protocole à la Charte africaine des Droits de l’Homme et des Peuples relatif au droit à la nationalité et à l’élimination de l’apatridie en Afrique, adopté le 18 février 2024 à Addis-Abeba. Cette ratification vise à renforcer l’engagement du Sénégal en faveur de la protection du droit à la nationalité et de la lutte contre l’apatridie, conformément aux principes et objectifs de la Charte africaine des Droits de l’Homme et des Peuples. TOGO A la date du 03 septembre 2026, aucune information nouvelle sur une réunion du Conseil des ministres du Togo n’a été publiée depuis celle mercredi 26 août. The post Point sur les Conseils des ministres des pays de la zone UEMOA appeared first on L'economiste du faso .",
+      "_source": "L'Économiste du Faso",
+      "_sourceId": "rss_eco_faso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Source fiable unique",
+        "color": "#60a5fa",
+        "rating": "B3"
+      },
+      "_rating": "B3",
+      "_score": 123,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Immersion patriotique des professionnels des médias: 44 journalistes dans le quotidien de la Police nationale",
+      "link": "https://leconomistedufaso.com/2026/09/14/immersion-patriotique-des-professionnels-des-medias-44-journalistes-dans-le-quotidien-de-la-police-nationale/",
+      "pubDate": "2026-09-14T07:03:27.000Z",
+      "description": "• Retour sur les à-côtés • “Qui vous a dit que les immergés mangaient avec les ministres ?” • Elle était volontaire et sans condition Ici, le ministre de la Communication, Gilbert Ouédraogo, partage sa “soupe” avec votre immergé Ambéternifa Crépin Somda. (Ph. DR) E n 5 jours, soit du 9 au 14 août 2026, ils ont rangé caméras, micros et bics pour “s’incruster” dans le quotidien des forces de sécurité, à travers la Formation militaire de base (FMB), le maniement des armes, le secourisme, les reflexes et aptitudes en mode d’attaques ennemis, la gestion du stress, etc. Eux, ce sont les 44 journalistes issus des médias burkinabè venus des quatre coins du Burkina Faso, qui ont pris part à l’immersion patriotique des professionnels des médias (IPPM) qui a eu lieu dans l’enceinte de l’Académie de police, à Pabré. “Gardez-vous”, “repos”, “au temps”, ”fixe”, “à gauche, gauche”, “à droite, droite”, demi-tour, à droite” Le ministre en charge de la Sécurité et celui en charge de la Communication ont constaté que les immergés étaient bien servis (Ph. DR) Sur un message militaire, “regroupement terminé pour l’immersion est prévu ce dimanche 9 août 2026 à 14h00, à l›École nationale de police, sise à Gounghin”. Sur les lieux, nous avions compris aussitôt ce qui nous attendait à l’Académie de police, à Pabré, et pour cause, nos hôtes, sur un ton martial, ont sifflé le rassemblement pour faciliter la distribution de la tenue militaire et de la kalachnikov qui deviendra notre “bébé” pendant les 5 jours qui allaient suivre. Une fois dans nos tenues militaires avec armes, chacun découvrait son binôme avec surprise, car nos tenues civiles faisaient place aux tenues des forces de sécurité. Mieux, nous avions commencé à se familiariser avec les termes militaires, “gardez-vous”, “repos”, “au temps”, ”fixe”, “à gauche, gauche”, “à droite, droite” “demi-tour, à droite”. Le “lavage de la boue” Les immergés ont été bien servis par le lavage de la boue. (Ph. DR) Avec nos formateurs qu’on appellera plus tard nos “monos”, avec à sa tête le Commissaire Kaboré, tout se fera sur un ton militaire pour nous imposer l’ordre et la discipline. Le contraire n’était plus autorisé et les appelés que nous sommes avons commencé à comprendre dès le port de la tenue militaire qu’on ne s’appartenait plus. De l’Ecole nationale de police (ENP), nous embarquons pour l’Académie de police à Pabré, à peine que nous contemplions le paysage et nos kalachnikovs que notre car s’immobilise au poste de police, à la sortie de Pabré, et la voix du Commissaire Kaboré se fait entendre, “descendez”. En rang de deux colonnes, le confort du car fait place à la marche jusqu’à l’Académie de police, à Pabré (le fameux 8 km). Mais une fois à l’Académie de police à Pabré, un rituel va s’imposer à nous, à savoir trois tours de l’Académie de police à Pabré, sous la houlette du Capitaine Lidia Taganbou. Le tout se fera dans une fatigue “extrême” de certains mais personne n’a voulu abandonner. Nous avions eu droit au “lavage de la boue” sur nos habits avant de pénétrer dans l’enceinte. Secourisme, reportage de guerre, l’éthique et la déontologie, la gestion du stress Les immergés en défilé. (Ph. DR) A la fatigue se mêlait le sommeil, mais la dernière corvée de la journée nous attendait, laver nos tenues salies par la boue avant de retrouver nos monos pour continuer la FMB avec l’apprentissage des chants. Libérés vers minuit, le temps de tomber dans les bras de morphée, que la sirène des dortoirs nous réveille à 5 heures du matin. Pour ne pas être puni au rassemblement, il fallait dormir avec nos tenues militaires, avec la kalachnikov juste à côté, car les rassemblements étaient improvisés à tout moment. Le sommeil était pour les “faibles”. La douche aussi était au pas de course. C’est reparti pour la FMB, suivie des chants, le tout couronné par le sport “self-défense” et dans une bonne ambiance. Après le sport matinal, place au petit-déjeuner et la toilette avant de retrouver encore les monos pour la suite du programme. Les journées sont enchaînées par la FMB et des conférences sur le secourisme, le reportage de guerre, l’éthique et la déontologie, la gestion du stress, etc. Toutes ces thématiques ont été dispensées par des experts tels que Liradan Philippe Ada dont les expériences du retour de terrain de combats sont édifiantes. Les immergés avec le GSIPN Le 14 août, les immergés ont eu droit à un cours spécial, le maniement des armes avec le Groupe spécial d’intervention de la Police nationale (GSIPN). Un autre moment fort de cette immersion première du genre pour les journalistes. Les immergés ont été soumis à un concours de tirs au PA et à la kalachnikov. Le genre a été le moindre souci dans cette immersion, les uns et les autres se sont adaptés à tous les exercices, avec le souci de comprendre et de mieux cerner la formation et le vécu des forces de sécurité. Dans ce corps spécial de la Police nationale dirigé par le Commissaire principal Issa Zongo, vous avez affaire à des “guerriers qui nous ont aussi appris le maniement des gros calibres d’armement. Les séances de tirs se sont faites sous une grosse pluie pour finir dans une bonne ambiance de chants et de danse avec les monos. Cette journée s’est terminée par la soupe offerte par le Commandant Issa Zongo. La soupe était bien servie Les trois repas étaient bien garnis et servis aux immergés dans nos nouveaux plats appelés gamelles. Notre policière restauratrice était vraiment à nos soins avec des fruits en plus. Mieux, ceux qui ont passé une nuit de plus ont eu droit au petit déjeuner, à un repas local, bouillie et galettes. Aux deux repas offerts par les Commissaires Zongo et Traoré, les immergés ont bien mangé. Une autre famille a été créée entre nous Cette immersion a plus que jamais rapproché les journalistes qui se croisaient juste pour un reportage et que chacun rejoignait sa Rédaction. Nous avons, en 5 jours, créé une famille autour des valeurs de respect et de solidarité. Nous étions tous là l’un pour l’autre dans les manœuvres ainsi que dans les tâches domestiques. Aux grands frères qui étaient de la partie, les jeunes frères avaient cette phrase, “doyen”. Il y avait aussi cette joie de partage et de transmission du savoir. La solidarité a été vraiment partagée Ceux qui avaient un “bobo” et séjournaient à l’infirmerie avaient à leurs côtés leurs binômes et les autres n’hésitaient pas à faire un tour pour leur souhaiter un prompt rétablissement. Avec nos monos, des liens forts se sont noués au point qu’au moment de se séparer, l’émotion était grande et la séparation était difficile à accepter. Le point culminant de cette émotion a été le pot d’au revoir offert par le Directeur général de l’Académie de police, le Commissaire divisionnaire, Lassina Traoré, le 14 août 2026. Si certains sont rentrés après sur Ouaga, d’autres ont passé encore une nuit de plus à l’Académie, avant de retrouver leurs familles le 15 août 2026. La cérémonie de clôture a connu la présence des ministres en charge de la sécurité et de la communication. Ceux-ci ont pris du plaisir à partager la soupe avec nous. Malheureusement, une soupe qui allait aussitôt devenir salée, et pour cause, cette phrase résonne encore dans nos oreilles : “ qui a dit que les immergés avaient le droit de manger avec les autorités ?”. Nous avions eu affaire, en plein midi, à ces phrases, “tomber”, qui signifie faire des pompes et 10 tours du carré d’as avec en plus le sourire. Ces différentes manouvres, loin de nous décourager, ont davantage renforcé des liens de solidarité entre immergés. o De retour de l’immersion, votre immergé Ambéternifa Crépin SOMDA “Le Burkina Faso a besoin de journalistes professionnels et patriotes” En rappel, cette immersion patriotique des professionnels des médias a été initiée par le ministère de la Sécurité, en collaboration avec le ministère de la Communication au profit des 44 journalistes, sans aucune contrainte, contrairement à ces médias mensongers. Pour preuve, sur 50 médias sollicités, le comité d’organisation n’a reçu que 44 journalistes. Du reste, aucune restriction, encore moins une contrainte n’a été donnée aux journalistes après l’immersion à orienter nos articles ou émissions. Pour le ministre de la Communication, Gilbert Ouédraogo, le Burkina Faso a besoin de journalistes professionnels et patriotes, au regard du contexte d’affirmation de souveraineté. Pour sa part, le ministre de la Sécurité, le Commissaire divisionnaire de police, Mahamadou Sana, a martelé que: « On ne peut pas parler de révolution, on ne peut pas parler de changement de mentalité, on ne peut pas parler d’éveil de conscience en révolution sans prendre en compte les hommes et les femmes des médias ». Au contraire, nous sommes revenus enrichis de plus de patriotisme et de plus de citoyenneté envers notre Patrie le Burkina Faso. Et la Police nationale reste désormais une porte ouverte aux journalistes pour une bonne collaboration. Une stimulation de tirs la nuit Les journalistes sont amenés souvent à faire des reportages de guerre aux côtés des Forces de défense et de sécurité. Pour avoir toutes les aptitudes, quelques notions nous ont été apprises. Ces notions ont été soumises à l’épreuve à deux reprises, à travers des stimulations de tirs pour voir notre capacité de réactivité. Un grand moment d’émotion également vécu. Le houblon, qui es-tu ? 5 jours sans portable, ni télévision, encore moins la bière pour les habitués. Si certains ont fini par reconnaître que les deux autres sont sans effet sur leur vie, le manque de houblon commençait à se faire sentir, même votre journaliste était du lot. Après 5 jours d’absence du houblon, la délivrance pour les habitués aura lieu le 14 août, autour du repas d’au revoir, grâce aux bons soins du Directeur général de l’Académie de police, le Commissaire divisionnaire de police, Lassina Traoré. Des humoristes, des chanteurs, des conteurs, en somme, des génies parmi les journalistes Avec le concours des monos, nous avions une nuit improvisée, une nuit culturelle toujours dans le cadre de la FMB, mais surtout pour nous remonter le moral entre nous. Cette soirée culturelle a été l’occasion de voir le talent caché de certains d’entre nous. Si certains étaient de véritables imitateurs de nos monos dans leurs gestes de commandement de tous les jours, d’autres étaient de véritables Floby, Dez Altino ou encore Smarty. Du reste, un parmi nous est un slameur. Un autre confrère, véritable imitateur d’un illustre Wayiyan, en la personne d’Adama Compaoré, auteur de la célèbre phrase, “content, pas content, content quand même”. Dans cet exercice, notre confrère, Rahim Kouda de Kaya, également le plus jeune des immergés, a la palme d’or, grand imitateur devant l’Eternel. Le délégué du jour, l’élevé de base, les commandements aux journalistes femmes Dans cette immersion, tous les jours, il fallait désigner le délégué du jour pour commander durant la journée, les 44 “commandos”. Aussi, il fallait chaque jour désigner l’élève du jour pour commander une des colonnes, généralement, cette tâche qui se faisait par désignation était laissée aux bons soins des consœurs. Et leurs commandements se faisaient sans murmures!!! The post Immersion patriotique des professionnels des médias: 44 journalistes dans le quotidien de la Police nationale appeared first on L'economiste du faso .",
+      "_source": "L'Économiste du Faso",
+      "_sourceId": "rss_eco_faso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "B2"
+      },
+      "_rating": "B2",
+      "_score": 123,
+      "_zone": 1,
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -933,205 +1131,121 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Littérature et migration : Seydou Nabalma dissèque l’envers du rêve canadien dans « La gifle de l’immigration »",
-      "link": "https://netafrique.net/litterature-et-migration-seydou-nabalma-disseque-lenvers-du-reve-canadien-dans-la-gifle-de-limmigration/",
-      "pubDate": "2026-09-13T22:41:21.000Z",
-      "description": "C'est devant un parterre d'enseignants, d'élèves, de personnalités administratives et de professionnels des médias que s'est tenue, le 12 septembre 2026 au complexe scolaire Unique & One School de Ouagadougou, la cérémonie de dédicace du tout premier roman de Seydou Nabalma, intitulé « La gifle de l’immigration » et publié aux Éditions Calebasse. Placé sous le patronage du Ministre des Affaires Etrangères, de la Coopération Régionale et des Burkinabè de l'Extérieur, représenté par son Directeur de la Migration, le camarade Karamoko Jean-Marie Traoré, l'événement a donné lieu à une grande interview publique au cours de laquelle l'auteur, haut fonctionnaire établi au Canada depuis 2012 a levé le voile sur les dures réalités sociales, professionnelles et culturelles qui frappent les familles africaines candidates à l'émigration légale. L’enceinte de l’établissement d'enseignement Unique & One School a prêté son cadre à un exercice de haute portée intellectuelle et citoyenne. En ouvrant ses portes à la dédicace de l'ouvrage « La gifle de l’immigration », la direction de l'école a rappelé que sa mission éducative dépasse la formation académique pour embrasser l'éveil des consciences et la culture de l'esprit critique chez les jeunes. La cérémonie, marquée par une présence massive du monde éducatif et de membres de la société civile, visait à donner à la jeunesse des clés de lecture lucides face aux défis contemporains de la mobilité internationale. Un auteur au parcours international entre l'Afrique et le Canada L'auteur de ce roman-vérité, Seydou Nabalma, offre un regard ancré dans l'expérience du terrain. Natif du Burkina Faso, cet ingénieur de formation est titulaire d'un MBA de l'Université d'Ottawa. Après avoir mené une carrière de cadre au sein de grandes institutions au Burkina Faso et en Afrique centrale, il s'est installé au Québec en 2012. Il y a servi au ministère des Finances du Québec avant d'intégrer le ministère de l'Emploi du gouvernement fédéral du Canada. C'est fort de ce double ancrage institutionnel et communautaire qu'il livre une œuvre poignante sur les décalages de l'aventure migratoire. « La gifle de l’immigration » : La trajectoire de Francis et Roxane face à l'épreuve Construit sous forme narrative à partir d'une compilation d'histoires réelles, le roman retrace l'itinéraire de Francis et Roxane, un couple d'intellectuels africains établis confortablement à Abidjan. Désireux d'offrir un avenir supposé meilleur à leurs enfants, Samuel et Maya, ils décident de tout quitter pour s'installer au Québec. Mais une fois sur place, la promesse d'un nouveau départ se heurte à l'écueil du classement professionnel, à la non-reconnaissance des diplômes, à la précarité financière et au choc des valeurs culturelles. Cette « gifle » métaphorique coup de massue imprévu reçu en plein visage transforme leur projet familial en un combat quotidien pour la survie et la dignité. L'histoire s'achève par la création d'une fondation et un retour constructif en Côte d'Ivoire, prouvant que le retour au pays natal constitue une réussite et non un échec. Un plaidoyer soutenu par les autorités nationales 0-4096×3072-0-0-{}-0-24# Prenant la parole au nom du Ministre des Affaires Etrangères, de la Coopération Régionale et des Burkinabè de l'Extérieur, le Directeur de la Migration a vivement félicité l'auteur pour cet ouvrage qu'il qualifie d'outil de sensibilisation d'une valeur inestimable. Rappelant que la migration ordonnée et régulière doit s'appuyer sur des informations objectives, le représentant du gouvernement a souligné la nécessité d'instaurer des mécanismes nationaux capables de mobiliser et de réinsérer les compétences de la diaspora burkinabè désireuse de revenir contribuer au développement du pays. L’article Littérature et migration : Seydou Nabalma dissèque l'envers du rêve canadien dans « La gifle de l’immigration » est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Ouagadougou : Fusion FC s’offre la 5e édition du grand tournoi maracana de l’AJPSC",
-      "link": "https://faso7.com/2026/09/13/ouagadougou-fusion-fc-soffre-la-5e-edition-du-grand-tournoi-maracana-de-lajpsc/",
-      "pubDate": "2026-09-13T13:41:56.000Z",
-      "description": "La finale du grand tournoi maracana de l’Association des jeunes passionnés de sport et de culture (AJPSC) s'est jouée le 12 septembre 2026 à Ouagadougou. Elle a été remportée par l'équipe de Fusion FC aux tirs au but face à celle de Dream Team. Lancé au mois de juillet 2026, le tournoi a connu son dénouement avec la victoire de Fusion FC. Les vainqueurs empochent la somme de 1 500 000 F CFA, un trophée, des médailles et un ballon. Dream Team, qui occupe la deuxième marche du poduim, reçoit 1 000 000 de F CFA, un trophée, des médailles et un ballon. Enfin, à la troisième place, Minime FC s'est vu attribuer 200 000 F CFA, des médailles et un trophée. « On a débuté le match, c'était un peu compliqué. On a été les premiers à marquer, ensuite, ils sont revenus au score et finalement, on a gagné aux tirs au but. Je dirais, c'est la patience et aussi, le moral de tous les joueurs », a expliqué Mohamed Koanda, capitaine de l'équipe victorieuse. Pour cette 5e édition, ce sont plus de 40 équipes qui se sont affrontées pour le trophée. Le promoteur, Daniel Ouédraogo, s'est dit pleinement satisfait de la réussite de l'événement. Depuis plusieurs années, la compétition rassemble des passionnés et des partenaires pour célébrer le sport et l’esprit d’équipe de la jeunesse. Il a également souligné que l'initiative vise principalement à promouvoir la cohésion sociale, conformément aux orientations du président du Faso. Les officiels du tournoi©️Faso7 « Nous nous inscrivons vraiment dans la dynamique des idées du chef de l'État, le camarade capitaine Ibrahim Traoré. Nous remarquons que pendant les vacances, certains ont la chance de mener certaines activités. D'autres qui sont des professionnels n'ont pas vraiment la chance. Ils passent des moments moroses. Nous avons décidé de créer ce projet pour regrouper les jeunes », a-t-il indiqué. Le tournoi a été placé sous le patronage du Colonel Yacouba Ouédraogo. Il dit être présent à cet événement, car le promoteur mène un noble combat, notamment l'union des jeunes autour de leur passion. Il a aussi souligné le niveau du tournoi à travers les prix qui ont été offerts aux compétiteurs. « Quand vous avez des jeunes dans un domaine qui font de telle sorte que la population se retrouve, il n'y a rien de tel. Donc, nous sommes là effectivement en tant qu'ancien. Aussi, apporter notre soutien parce que c'est toujours important qu'il y ait aussi, comme on dit, des anciens derrière les jeunes », a-t-il ajouté. Le parrain du tournoi, Charlemagne Démé, a, quant à lui, exprimé sa satisfaction face à la réussite de cette édition. L'événement permet aux habitants du quartier de se divertir et de renforcer leur cohésion. Il a par ailleurs rappelé que sa présence à cette finale relevait d'un devoir, au regard des liens étroits qui l'unissent au promoteur. Cheick Habib Désiré BAYILI Faso7 L’article Ouagadougou : Fusion FC s'offre la 5e édition du grand tournoi maracana de l'AJPSC est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Le Président du Faso aux étudiants de l’UNB : « Nous ne voulons plus d’université qui fait juste la théorie »",
-      "link": "https://www.sidwaya.info/le-president-du-faso-aux-etudiants-de-lunb-nous-ne-voulons-plus-duniversite-qui-fait-juste-la-theorie/",
-      "pubDate": "2026-09-14T00:02:25.000Z",
-      "description": "Le Président du Faso, le capitaine Ibrahim Traoré, a échangé, le vendredi 11 septembre 2026 à Bobo-Dioulasso, avec les étudiants de l’Université Nazi-Boni, à l’issue de l’inauguration du complexe d’amphithéâtres. Nous vous proposons l’intégralité de son message. Bonjour camarades. J’espère que tout un chacun se porte très bien. En tout cas, merci beaucoup à Dieu pour cette opportunité qui nous est donnée, ce matin, de pouvoir nous entretenir. Et, comme je l’ai consigné dans le livre d’or, pour moi, ce n’est pas une inauguration, ni une coupure de ruban. C’est plutôt un message envoyé à chacun de vous, étudiants, personnels d’encadrement, enseignants et à toute la jeunesse burkinabè et africaine. Je vais vous entretenir sur un certain nombre de points, qu’on ne cessera de rappeler. Mais c’est de notre devoir, en tant que dirigeant, de vous faire voir la vision révolutionnaire que nous avons, afin que vous compreniez notre vision et croyiez en vous pour un lendemain meilleur. Bien avant tout cela, nous sommes ici, en mesure de faire cette rencontre grâce à la combativité de nos vaillantes Forces combattantes. En 2022, le terrorisme se rapprochait jusqu’aux portes de Bobo-Dioulasso. Et, il n’était pas évident que si elles n’avaient pas repris l’ascendant, nous serions là, ce matin, pour échanger. Il serait donc bon qu’on prenne une minute de notre temps pour les applaudir, les encourager et les féliciter pour le combat qui est mené sur le champ de bataille. (ndlr : applaudissements). On nous reproche très souvent de trop parler. Les impérialistes et les valets locaux nous disent que nous parlons beaucoup. Mais, est-ce pour autant qu’on doit arrêter de parler ? Je pense qu’ils ont peur de notre parole. Ils ont peur que nous réveillions la jeunesse. Ils ont peur que nous fassions comprendre beaucoup de choses pour faire reculer l’ignorance. En fait, ils ont peur de votre réveil. Ils ont peur que l’Afrique prenne son destin en main. Ils ont peur que nos matières premières ne viennent plus vers là-bas. Pour cela, on nous traite souvent de trop parler et de ne rien faire, d’être populiste. Le mot qui est dans la bouche de tous les incompétents de l’Afrique. On nous traite de populistes et c’est ce qu’ils emploient très souvent. Je ne l’invente pas. Ils ne manquent pas de stratagèmes lorsque nous posons un acte, de trouver tous les moyens pour essayer de prouver aux uns aux autres que ce n’est pas vrai. Par plusieurs fois, les actes que nous posons, ils ont essayé de démontrer aux yeux du monde que c’était de l’intelligence artificielle, que ce n’était pas vrai, que c’était du populisme. Et, même lorsque nous avons inauguré notre complexe industriel TEXFORCES-BF, il y a deux jours de cela, nous avons vu, à travers l’analyse de ces paroliers de l’impérialisme, voulant dénigrer ce complexe, en voulant le comparer, le rabaisser. Je vais m’attarder un peu sur ce sujet pour que vous compreniez et que vous puissiez faire passer le message à qu0i le veut et partout au Burkina Faso. Je l’ai dit dans mon propos, c’est un complexe unique dans la sous-région et je défie quiconque de me prouver le contraire. Le complexe, par sa taille, par ce qu’elle est en mesure de produire, par sa modernité et par sa structuration, est unique. Lorsque nous partons du coût du complexe, nous avons dit que nous l’avons financé à 17 milliards F CFA. D’ailleurs, je félicite toutes les entreprises qui, je sais, ont été un peu forcées et n’ont pas pu avoir quelque chose à la fin. Pour le prochain complexe, on verra comment les revaloriser. Mais, nous avons été sincères et purs dans la démarche. Sous d’autres cieux, 17 milliards F CFA, c’est peut-être pour payer allocco, peut-être pour construire un château d’eau. « Maintenant, nous produisons tous types de tenues » Donc, qu’on me montre un seul complexe de ce type en Afrique, ici, qui coûte ce montant. Il n’y en a pas. Qu’on me montre un seul complexe qui est financé de la sorte et appartenant entièrement à l’Etat. Nous sommes sortis d’un concept. C’est pour cela que j’ai dit que nous avons cassé le mythe des investisseurs. Dans l’économie révolutionnaire qui est souvent aux antipodes de l’économie classique et que les gens n’arrivent d’ailleurs pas le comprendre, nous avons une autre manière de voir les choses. Et vous étudiants, surtout les étudiants en économie, on va toujours vous dire de faire un certain nombre de choses pour attirer les investisseurs. C’est bien. Nous ne refusons pas les investisseurs. Mais qui vient investir parce que vous avez de beaux yeux et parce qu’il n’a pas de rentabilité ? Cela n’existe pas. Un investisseur vient pour investir, pour moi, c’est une forme d’esclavage d’ailleurs. Quand ils viennent d’ailleurs avec leur argent, c’est juste vous faire travailler. Mais les intérêts, c’est pour eux. Et, ils repartent avec. Mais, dans l’économie révolutionnaire, nous mettons l’investissement par palier. Et l’Etat garde entièrement tout ce qui est stratégique. Et ce qui n’est pas stratégique, nous voyons comment partager les charges avec l’investisseur. Mais, nous préférons faire les choses de nous-mêmes. Nous ne sommes pas aussi allés faire des tables-rondes ailleurs pour chercher des financements pour venir construire notre industrie textile. Donc, ne le comparez pas à ce qui n’est pas comparable. Des pays peuvent avoir des industries textiles, c’est bien. Nous encourageons cela. Mais, est-ce que ça appartient à l’Etat ? Ce n’est pas évident. Des investisseurs étrangers viennent, mettent des complexes sur place et produisent des choses. Le Président du Faso s’est rejoui de la qualité des équipements produits par les artisans locaux. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-683x1024.jpeg\" class=\"size-medium wp-image-169506\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-200x300.jpeg\" alt=\"\" width=\"200\" height=\"300\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-200x300.jpeg 200w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-683x1024.jpeg 683w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-768x1152.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-1024x1536.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-280x420.jpeg 280w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-150x225.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-300x450.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11-696x1044.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.22.11.jpeg 1067w\" sizes=\"(max-width: 200px) 100vw, 200px\" /> Le Président du Faso s’est rejoui de la qualité des équipements produits par les artisans locaux. C’est bien. Mais, pour nous, ce n’est pas arrivé. C’est la même chose avec Air Burkina que certains ont essayé de comparer. C’est 100% pour l’Etat burkinabè. Il n’y a pas quelqu’un qui a une part dedans. C’est un concept d’économie que nous avons développé dans la Révolution. Ce qui concerne des secteurs qu’on appelle stratégiques, comme le textile ou comme l’aviation. Dans ce sens, on peut avoir peut-être de grands ateliers de couture dans certains pays qui ne sont pas à confondre avec ce que nous faisons. Aller payer des tissus et venir coudre est différent d’un complexe de ce genre. Nous partons du coton pour tisser le fil nous-mêmes, dans les proportions que nous souhaitons ; produire les types de tissus que nous voulons et il y a toute une panoplie de tissus que cette usine est capable de faire. Dernièrement, j’ai vu le test au laboratoire de la tenue des pompiers que l’usine est capable de faire. Maintenant, nous produisons tout type de tenue. C’est pour dire que nos stylistes, tous ceux qui partaient à l’extérieur payer des vêtements doivent être en mesure d’approcher l’usine et de dire avec précision la qualité de tissu souhaitée, avec tel pourcentage de coton, tant autre de polyester et ainsi de suite. L’usine sera en mesure de vous produire cela, pour que vous alliez confectionner les vêtements. Parce que ce n’est pas que les vêtements des FDS. Elle pourra confectionner tout type de vêtements. Vous voilà aujourd’hui. Je vois qu’il y a comme un uniforme que vous portez. Quand je regarde les conseillers, les ministres, c’est en Koko Dunda. Nos mamans partaient chercher les tissus ailleurs pour venir teindre ici. « Je serai toujours populiste » Aujourd’hui, tout ce tissu peut être produit dans notre unité industrielle. Donc, c’est pour vous dire toute la dimension révolutionnaire qui est dans cette unité textile. On n’a pas fini de faire toute la communication, la publicité autour. Quand vous entendez que ça peut produire 20 millions de mètres de tissu de tenue par an, c’est pour dire que nous sommes en mesure de coudre environ 6 millions de tenues. Mais vous imaginez que nous pouvons habiller presque toutes les forces d’Afrique, en tout cas d’Afrique de l’ouest et en allant ailleurs. C’est pour dire que c’est un très grand complexe audacieux et futuriste. Nous voulons notre indépendance. Et quand nous parlons de souveraineté, nous ne nous contentons pas juste de paroles, nous posons des actes et voilà pourquoi, ils ne peuvent pas trouver autre mot. Comme je l’ai dit, ils disent que c’est du populisme que nous faisons. Nous ne le faisons pas pour demander quoi que ce soit à qui que ce soit. Nous le faisons pour le bien de nos populations. Et, si poser des actes qui plaisent à la population, c’est du populisme, eh bien, je serai toujours populiste. C’est notre mission. Nous sommes là pour cela. Donc, c’est pour vous dire de rester concentrés chaque acte que nous allons poser. Ils auront toujours quelque chose pour vous détourner et vous amener sur un autre terrain. Mais restez concentrés, restez focus. Parce que vous savez, un chef d’Etat a dit, il y a quelques années de cela, que nous sommes des pays de merde. En son temps, ça m’a beaucoup fait mal. Mais, en analysant la situation, il n’a peut-être pas tort. Et, je pense qu’il est là actuellement aux Etats Unis. Je parle de monsieur Trump. Vous voyez, certaines personnes avaient cette habitude, lorsque leurs femmes étaient enceintes, lorsqu’elles étaient presque à terme, elles cherchaient rapidement un visa pour que l’enfant aille naître aux Etats Unis pour avoir la nationalité américaine. Donald Trump a mis fin à cette pratique et je le félicite pour cela. C’est très bien. C’est l’un des actes que j’ai appréciés parce qu’il faut qu’on arrête nous-même de nous auto flageller, de nous insulter. Pourquoi, vous ne voulez pas que vos enfants naissent ici, aient la nationalité d’ici et transforment votre pays. Eux, ils se sont battus pour construire leur pays. N’avons-nous pas honte de nous comporter ainsi. Désormais chacun reste chez soi pour accoucher. Il faut qu’on accepte travailler pour changer le visage de nos pays. Il y a des choses qui peuvent faire mal mais lorsque ça fait mal, il faut en tirer ce qu’il y a de positif, avoir du cœur pour se lancer et prouver aux yeux du monde que nous ne sommes pas des pays de merde. C’est ce que le Burkina Faso est en train de faire aujourd’hui. La révolution, ce ne sont pas uniquement des paroles mais ce sont des actes également. C’est pourquoi nous demandons à tout un chacun de prendre en compte cette dimension. « Devrions-nous aller recruter ailleurs pour faire fonctionner ces machines ? » Je reviens encore sur l’industrialisation qui est en cours. J’ai invité dernièrement les gens, même s’ils ont fait des filières littéraires et autres, à se reformer dans les filières techniques. Beaucoup de gens n’ont pas peut-être compris où n’ont pas voulu comprendre, mais j’insiste là-dessus. L’avenir est dans la technique. Les littéraires c’est très bien, voilà le jeune qui a slamé tout de suite. Ils ont la capacité de passer des messages, de conscientiser, de faire reculer l’ignorance. Les étudiants ont suivi avec intérêt le message du Président du Faso. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-1024x682.jpeg\" class=\"size-medium wp-image-169508 alignright\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-300x200.jpeg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-300x200.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-1024x682.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-768x512.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-630x420.jpeg 630w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-150x100.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-696x464.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08-1068x712.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.08.jpeg 1280w\" sizes=\"(max-width: 300px) 100vw, 300px\" />On en a besoin certes, mais pas beaucoup. On ne peut pas en avoir plus que des techniciens. Depuis quelques temps, vous entendez au Nigéria, des gens se plaindre d’un investisseur nigérian qui a mis en place une raffinerie et qui a fait venir des techniciens d’ailleurs pour travailler parce qu’il n’y a pas la substance sur place et tout le monde crie au scandale. Lorsque nous rentrons à TEXFORCES, ce sont uniquement des machines. Comment on fait ? Devrions-nous aller recruter ailleurs pour faire fonctionner ces machines. Non ! Il faut former la jeunesse à maintenir ces machines, à les faire fonctionner, à les entretenir et à les reproduire. Nous allons continuer. Par exemple, nous n’avons pas terminé la chaîne. Quand je regarde les chaussures que nous portons, nous avons des jeunes cordonniers très bien formés en mesure de fabriquer les jolies paires de souliers que vous portez et même les rangers des militaires. Mais ils n’ont pas le bon cuir parce que nous n’avons pas bien tanné le nôtre pour produire du cuir de qualité, et nous exportons de manière brute. S’il plaît à Dieu avant la fin de l’année, nous allons commencer la construction d’une industrie de tannerie aussi. Il faut qu’on aille jusqu’au bout et on a besoin de vous les jeunes. Quand le coordonnateur de l’IPEC a fait sa présentation, des étudiants ont participé à la construction de cet amphi. C’est très bien et je salue cela. Les artisans, je les ai mis au défi. J’ai fait le tour et j’ai observé mais je suis plus que content de tous ceux qui ont participé à ça. Ça fait combien de milliards F CFA pour équiper toutes ces salles ? Normalement tout devrait aller à l’extérieur pour payer les employés d’autres pays mais tout cet argent est resté sur place pour notre jeunesse. C’est ça la révolution économique également et nous sommes en mesure de le faire. Qui pouvait croire que nos artisans en étaient mesure de le faire ? J’ai visité toutes les salles jusqu’aux chaises directeurs. Je suis émerveillé. Parce que moi, je crois en vous, je crois à la jeunesse, je crois en vos capacités. Croyez en vous et apprenez. Lorsqu’on fait de l’économie, j’ai d’ailleurs demandé le point de la situation de nos importations et j’espère que c’est prêt pour le premier semestre. Parce que je suis cela. Tout de suite, j’étais au laboratoire. J’ai vu la présentation et j’ai dit au Premier ministre, on va vous convertir bientôt parce qu’il est sociologue de formation et il le reconnaît. Le programme « Tanmiougou » La vie est basée principalement sur la science, les connaissances scientifiques et techniques. Je dis la science de manière globale. Toutes les sciences et même la sociologie c’est une science mais vous savez bien de quoi je veux parler. A l’intérieur, j’ai vu des gens qui produisent, qui prennent nos plantes et qui extraient la substance des huiles essentielles et un certain nombre de médicaments pour traiter les fongicides et autres au laboratoire. Ils sont en train de le faire. C’est de la science biologique. J’ai vu des gens qui m’ont présenté différents types de briques qu’ils ont fabriquées à partir de l’argile ou de la terre rouge que nous avons ici. C’est de la science minérale. Quand nous prenons nos importations au Burkina Faso après les hydrocarbures, le deuxième produit d’importation souvent ce sont les médicaments ou les matériaux de construction et principalement le clinker, le gypse et autres. Ces matériaux rentrent dans tout ce que nous faisons. Pourtant, nous avons de l’argile ici, capable d’être transformé en clinker pour se substituer à cela. Ces centaines de milliards F CFA qui sortent pour aller payer ce clinker doivent rester au profit de notre jeunesse à l’intérieur. Comment faire pour y arriver ? Voilà des laboratoires qui permettent à nos chercheurs de nous donner la formule et bientôt je suis sûr que nous allons mettre en place des unités industrielles pour produire et transformer notre argile ici et ne plus importer. Ce sont de grandes économies d’échelle et lorsque nous faisons ces économies, qu’est-ce qu’on en fait ? Nous allons réinvestir en vous. C’est de ça qu’il s’agit et je disais au Premier ministre hier que j’ai un programme que je dois lancer dans deux jours que j’ai baptisé « Tanmiougou ». Ça veut dire la terre rouge. Souvent des gens se plaisent à se moquer du Burkina que c’est un pays de terre rouge. Nous allons leur montrer comment on valorise la terre rouge pour les narguer prochainement. Ce sont des individus qui ont une petite cervelle. Ils ne sont pas assez intelligents. Mais c’est ce que j’ai toujours dit ; quand on nous dit quelque chose qui nous fait mal, nous tirons ce qui est positif dedans et nous vous répondons de la belle des manières qu’il faut, en vous montrant comment nous valorisons vos injures. C’est ça le Burkinabè et c’est ça notre capacité à développer, à changer notre manière de vivre, à changer notre pays. Il ne faut pas prendre les injures et les moqueries des autres comme quelque chose qui doit faire mal ou une fatalité. Non ! Quand ils le font, voyez-y quelque chose d’important et prouvez-leur qu’ils ne sont pas intelligents et que vous êtes beaucoup plus intelligents qu’eux. Valoriser ça. Je suis très content de voir qu’il y en a qui ont commencé déjà les travaux dans les laboratoires et je compte sur le ministre de la Recherche scientifique pour que ces travaux puissent être mis à disposition. Les étudiants se sont engagés à participer à l’édification d’un Burkina prospère. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-1024x683.jpeg\" class=\"size-medium wp-image-169510\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-300x200.jpeg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-300x200.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-1024x683.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-768x512.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-1536x1024.jpeg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-630x420.jpeg 630w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-150x100.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-696x464.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09-1068x712.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.09.jpeg 1600w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Les étudiants se sont engagés à participer à l’édification d’un Burkina prospère. « Tout ce qui doit toucher à la transformation de nos matières premières, nous sommes engagés » Parce que c’est Faso Mêbo qui sera la clé pour employer des milliers voire des millions de jeunes burkinabè. Nous n’allons plus importer des matières pour faire le ciment comme il le faut parce qu’on a tout sur place et nous en sommes capables. Nous avons le cerveau nécessaire pour transformer cela ici pour participer à la construction de notre pays. Et restez concentrés parce que c’est de ça qu’il s’agit. Tout ce qui doit toucher à la vie ou à la transformation de nos matières premières, nous sommes engagés sur ce chemin. C’est ce que les impérialistes n’aiment pas. J’ai dit cela pour vous faire comprendre pourquoi nous sommes en mesure. Ils ne peuvent pas apprécier, mais nous sommes obligés de parler et de vous expliquer notre voie. Quelle est la vision ? Nous n’avons même pas commencé d’abord l’industrialisation. Ce n’est qu’embryonnaire. Il y aura des milliers et des milliers d’entreprises et il faut qu’on le fasse. Parce que chacun aussi, à son niveau, peu importe sa formation, peut être un entrepreneur. Pourquoi le dis-je ? A n’importe quel moment de la vie, on doit être en mesure d’apprendre quelque chose et de faire quelque chose. En venant ici ce matin, camarades étudiants, je pense que rares sont ceux qui ont marché. Sinon on a pris nos mobylettes ou enfourché nos vélos ou encore emprunté le bus pour arriver ici. Et lorsqu’on prend une moto, si quelqu’un parmi vous décide de créer un système pour assembler des pièces pour faire une moto c’est bien. Ça fait de lui un entrepreneur et dans la moto quelqu’un peut voir qu’il peut fabriquer la chaîne. Ça fait une entreprise encore qui est créée. Quelqu’un d’autre verra qu’il peut fabriquer des câbles, des pions ou des pistons ainsi de suite. Voyez comme on démultiplie l’industrie à partir d’un seul objet et c’est ce à quoi il faut que vous réfléchissiez en tant que jeunes pour voir comment créer ou copier tout ce que nous pouvons voir dans notre vie quotidienne. Et nous serons là pour accompagner cela. La réflexion est désormais de votre côté. Réfléchissez pour créer, pour avoir des idées de création d’unités industrielles, aussi petites soient-elles. Elles doivent pouvoir contribuer à la vie de la Nation. Ne restez pas cantonnés uniquement sur ce que vous avez fait. Vous le comprendrez bientôt. Moi-même, je suis géologue de formation. On me dira que je ne suis ni économiste ni politologue, mais on arrive à diriger. C’est une question de volonté. Il y a des gens qui ont fait de grandes études en économie, mais ce n’est pas sûr que, si nous nous asseyons pour débattre, ils puissent me convaincre sur leurs principes. N’est-ce pas, les économistes ? Ils sont là. Moi, j’ai commencé avec mon modèle, alors qu’il existe des modèles qu’on vous enseigne à l’université. Beaucoup de gens nous ont écrit pour dire que nous n’étions pas sur la bonne voie. Je pense qu’ils commencent à comprendre qu’il existe un modèle burkinabè. « C’est un devoir pour nous, gouvernants, d’assurer l’éducation et la santé à nos populations » Je vous en conjure : dupliquez ce modèle burkinabè, écrivez-le et vulgarisez-le afin que des gens puissent également le voir. Nous avons une manière particulière de voir l’économie. Et ce modèle nous permet de faire beaucoup de réalisations aujourd’hui. Hier, on nous traitait de pays pauvre. Nous n’étions pas, disait-on, en mesure de faire quoi que ce soit. Mais pourquoi, aujourd’hui, arrivons-nous subitement à réaliser tout ce que nous sommes en train d’accomplir ? Cela doit interpeller, n’est-ce pas ? Rien que dans le domaine de la défense, en termes d’effectifs, nous sommes en train de progresser à grands pas. Nous sommes à quatre ou cinq fois l’effectif que nous avons trouvé, avec des hommes formés, équipés et déployés sur le terrain. Comment avons-nous fait pour y parvenir ? Dans le domaine de la santé, l’initiative a permis de réaliser des dizaines de centres de santé modernes, qui apparaissent partout. Si nous sommes aujourd’hui dans cet amphithéâtre en train de parler, c’est aussi un symbole. Nous voulons moderniser notre système éducatif. Si nous n’éduquons pas, tout ce que nous faisons ne pourra pas être compris, surtout par les jeunes. Ils ne peuvent pas comprendre notre action si l’éducation n’est pas de qualité. Et pour qu’elle le soit, il faut d’abord des infrastructures et de bonnes conditions de travail. C’est cela, le principal objectif. Je pense que tout ce qui peut sortir de ce que nous avons construit aujourd’hui doit constituer une ressource humaine de très bonne qualité, capable de contribuer activement au développement de notre Patrie. Nous allons continuer cette sensibilisation et continuer à vous expliquer notre vision, notamment en matière d’économie. Nous allons également continuer à vous enseigner la discipline nécessaire pour accompagner cette vision. Voilà pourquoi nous avons instauré cette immersion patriotique au profit des étudiants. Mais nous allons bientôt l’élargir à tout le monde. Pendant longtemps, nous avons passé notre temps à voir l’étudiant et le policier comme chiens et chats. Ils devaient se pourchasser chaque année dans les rues, casser, brûler, etc. ’est une logique que je n’ai jamais comprise. Non, il faut changer la donne. Ils doivent plutôt travailler ensemble, coopérer et construire ensemble. C’est ce que nous essayons de faire. Je vous félicite, vous les étudiants, d’avoir compris le sens de notre combat. Parce que nous nous portons de mieux en mieux. Et ce n’est que le début. L’université d’ici, comme toutes les universités d’ailleurs, va changer de visage. Nous avons pour ambition de construire plusieurs amphithéâtres afin que jamais, dans les années à venir, un étudiant ne vienne à l’université et dise qu’il n’a pas de place pour étudier. Nous poursuivons également cet effort au niveau des lycées et jusqu’à la maternelle. Parce que c’est un devoir pour nous, gouvernants, d’assurer l’éducation et la santé à nos populations. C’est notre devoir. Je le dis tous les jours aux membres du gouvernement : l’éducation et la santé, c’est notre devoir, c’est notre travail. Si nous ne sommes pas en mesure, dans un laps de temps, d’assurer ces services à toute la population, c’est que nous avons échoué. Nous avons pris l’engagement de le faire. Nous allons aller aussi vite que possible pour y parvenir, avec votre accompagnement, bien sûr. Participez activement ! C’est une manière d’interpeller tout le monde. « Rien n’est une fatalité » Rien n’est une fatalité. Absolument rien n’est une fatalité. Si nous étions tombés dans la peur et la fatalité, nous aurions abandonné le combat dès le début. Je vous l’ai dit mille et une fois : en 2022, lorsque nous sommes arrivés, des gens, de l’intérieur comme de l’extérieur, nous disaient : « Ce pays, vous ne pourrez pas le gérer. Comment avez-vous fait pour prendre un pays comme ça ? C’est impossible. C’est déjà fini. C’est tombé ». Nous avons subi toutes sortes de pressions. Effectivement, la réalité qu’on nous décrivait était difficile. « Trois mois, vous ne pourrez pas gérer. Vous n’aurez pas les munitions pour continuer. Vous n’aurez pas l’argent pour faire quoi que ce soit. Vous ne pourrez pas payer les salaires », nous disait-on. Parce que tout était au rouge. Mais si nous avions eu le moral faible et accepté cette fatalité, le pays allait s’effondrer. Et, comme le disait un apatride, les terroristes allaient peut-être fêter la Tabaski à Ouagadougou. Mais nous avons refusé la fatalité et décidé de combattre. Voilà pourquoi je vous ai dit : soyez fiers de vous. Soyez fiers de vos forces combattantes. C’est cela, la qualité de la ressource humaine burkinabè. Le Burkinabè est intrinsèquement révolutionnaire. Il faut savoir réveiller ce volet révolutionnaire qui sommeille en lui. Nous avons su le faire et nous voilà aujourd’hui à cette étape de la reconquête. Qui pouvait croire que nous en arriverions là ? La pression était tellement forte sur le Burkina Faso. Mais nos forces progressent et rien ne les arrête, absolument rien. La population a compris. La guerre, nous la menons nous-mêmes. Personne, j’ai bien dit personne parmi tous ceux qui tournaient autour de nous, n’a apporté une seule cartouche pour nos forces combattantes. N’en parlons même pas d’une arme. Pire, on nous empêche d’en acheter. Mais j’ai fait le serment que, qu’il s’agisse actuellement des véhicules blindés ou d’autres équipements, nous les produirons. Les armes, nous allons également les produire. Il n’y a rien à faire. Et j’ai confiance en chacun de vous. Je suis convaincu que nous disposons d’une très bonne qualité de ressources humaines. Notre jeunesse est la meilleure. Et il faut y croire. C’est ce qu’il faut se dire tous les jours : nous sommes les meilleurs. C’est ainsi que nous deviendrons les meilleurs. Tout ce que nous pensons ne pas être en mesure de faire, il faut se dire : « Je peux le faire ». Tant que vous ne vous mettez pas cela dans la tête, vous êtes faibles. Et nous n’avons pas besoin de faiblards. Nous avons besoin de gens forts : forts physiquement, forts surtout dans la tête. C’est cela, la révolution. La révolution, c’est changer totalement de paradigme, changer totalement de concept. Nous sommes en train de réussir ce pari grâce à chacun de vous. La sensibilisation que chacun mène à travers les réseaux sociaux et les autres canaux est très importante. Soyez rassurés : chaque fois que vous sensibilisez, chaque fois que vous écrivez quelque chose allant dans le sens de la révolution, c’est très important. Vous êtes en train de battre en brèche tout le mensonge que certains avaient essayé de répandre sur notre pays. Ils continueront, mais je pense qu’ils finiront par se rendre compte que leur combat est perdu d’avance. « Nous irons jusqu’au bout » C’est fini. La jeunesse burkinabè a compris. Nous sommes engagés et nous irons jusqu’au bout. Bientôt, ils se rendront à l’évidence que le progrès est là, que le développement est là. Ils reviendront. Et nous déciderons alors de ce que nous ferons de cette future coopération, ou de je ne sais quoi. Ils reviendront, c’est sûr. Mais soyez unis. C’est quelque chose qui me tient à cœur. Ne soyez pas individualistes. Vous êtes jeunes et j’ai beaucoup parlé d’entrepreneuriat. Je souhaite vous voir évoluer ensemble, en groupe. Quoi qu’on dise, beaucoup de gens se livrent à des querelles inutiles. Chacun veut mettre des bâtons dans les roues de l’autre pour pouvoir émerger. Ce n’est pas bien. Si vous voulez entreprendre, allez-y ensemble. Ensemble, vous êtes plus forts. Et ensemble, vous nous encouragez davantage à vous accompagner. Les opérateurs économiques qui sont dans cette salle doivent désormais être de bons exemples pour les jeunes. Vos querelles inutiles, notamment sur le terrain politique, nous n’en voulons plus. Changez de paradigme. C’est sérieux, parce que chacun combat l’autre pour être dans les bonnes grâces du chef. Il n’y a plus de grâce. Pourquoi vous combattez-vous encore ? Travaillez ! Montrez l’exemple à la jeunesse ! C’est ainsi que nous pourrons faire émerger des jeunes bien unis autour d’un objectif précis et capable de contribuer au développement du pays. Vous savez qu’individuellement, c’est difficile. C’est même difficile pour nous de vous aider. Nous avons mis en place des fonds pour soutenir les entreprises. Dernièrement, j’ai regardé les statistiques d’un certain nombre de projets financés depuis deux ans par ces fonds. Beaucoup n’avancent pas. Beaucoup de projets ne seront pas en mesure de produire les résultats prévus dans leur plan d’affaires. Et beaucoup de promoteurs ne pourront même pas rembourser, parce qu’ils sont partis individuellement. Les autorités sont déterminées à faire de la RPP une réussite sur tous les plans. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-1024x682.jpeg\" class=\"size-medium wp-image-169511\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-300x200.jpeg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-300x200.jpeg 300w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-1024x682.jpeg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-768x512.jpeg 768w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-630x420.jpeg 630w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-150x100.jpeg 150w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-696x464.jpeg 696w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06-1068x712.jpeg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-11-at-16.23.06.jpeg 1280w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /> Les autorités sont déterminées à faire de la RPP une réussite sur tous les plans. Pourtant, il existe des projets qui se ressemblent. Pourquoi les gens n’arrivent-ils pas à travailler ensemble ? Si nous avons formé des juristes et d’autres spécialistes, c’est justement pour rédiger, dès le départ, les textes d’entente de vos entreprises. Chacun saura ce qu’il fait et chacun sait ce que l’autre fait. C’est transparent. Ainsi, vous pourrez grandir plus vite. Je souhaite donc que les futurs projets que vous allez monter soient réalisés en groupe. Cela favorisera la mobilisation davantage de ressources pour appuyer et accompagner la création de vos entreprises. Et comme je l’ai dit, vous devez être polyvalents. Ne vous cantonnez pas uniquement à ce que vous avez appris sur les bancs. Vous pouvez faire beaucoup d’autres choses. Allez prospecter. En tout état de cause, nous allons continuer à mettre l’accent sur l’enseignement et l’éducation. Notre balance commerciale est aujourd’hui largement portée par le secteur de l’or. Demain, nous voulons que ce soit vous, votre énergie et votre capacité à créer des entreprises qui portent une balance commerciale excédentaire, en faisant en sorte que nous importions très peu et que nous exportions beaucoup. Là encore, j’interpelle certains commerçants qui étaient hier importateurs de certains produits et matières. Ils doivent comprendre qu’ils doivent désormais opérer un véritable changement de cap pour devenir des exportateurs. Allez chercher les marchés pour venir confectionner vos articles au Burkina. Par exemple, dans le domaine du textile, pour ceux qui importaient les tenues, c’est mieux maintenant de faire rapidement pour aller chercher le marché dehors et venir confectionner ici. C’est de ça qu’il s’agit ! Bientôt, quand on va finir notre tannerie et tout ce qui va avec, il faut que tout le monde ait l’intelligence de faire le switch rapidement. « Il faut que l’énergie soit disponible partout » Ceux qui partaient prendre les chaussures à Dubaï, en Chine et autres, doivent maintenant aller chercher les marchés de la sous-région, venir confectionner ici et aller leur vendre. Beaucoup de gens n’ont pas cette capacité et lorsque nous lançons des initiatives, ils prient Dieu pour que ça échoue, afin qu’ils continuent leur business. Ça ne marche pas. Il faut comprendre que c’est une chaîne de valeurs, qui est créée autour de tout ce que nous faisons et il faut que tout le monde s’y mette. A chaque opportunité que l’on crée, il faut que par l’intelligence, on voit quelle opportunité se raccorde ou se substitue plus ou moins pour continuer. Cela doit être une chaîne et c’est ce qui fait la force d’une nation. Chaque région a ses particularités et ses potentialités, voilà pourquoi j’ai dit qu’il faut que l’énergie soit disponible partout, car cela permettra de créer autant que possible de petites unités industrielles qui vont grandir et desservir le Burkina et toute la sous-région. C’est ainsi que nous aurons une économie forte. Sinon, peu importe votre réflexion, les études que vous aurez faites, si vous vous en tenez justement à importer, vous ne pourrez pas avoir une économie forte. Les autres se sont mis au travail, tous les continents se sont développés. Aujourd’hui, regardez des pays comme l’Inde qui se sont actuellement développés. Je peux le dire, qu’ils produisent beaucoup et leurs productions se déversent en Afrique. Mais est ce que l’Afrique va continuer à vendre ses matières premières et attendre en retour des produits finis pendant, que sa jeunesse est toujours au chômage, en proie à la drogue et se contente juste d’un repas chaque deux jours ? Allons-nous continuer ainsi ou bien allons-nous nous mettre au travail, pour nous aussi transformer et être dans l’histoire ? En nous traitant de pays de merde ça peut faire mal, mais c’est une leçon que nous devons apprendre et sortir de cette situation. Plusieurs programmes et unités sont à venir et je veux que chacun mette du sien, participe activement et surtout continue la réflexion lorsqu’on crée un programme, pour voir où il s’insère, quelle part il doit prendre pour s’en sortir. Ce doit être la réflexion permanente de la jeunesse aujourd’hui. L’amphithéâtre est là mais lorsque nous regardons le chantier de la route d’accès, déjà je sais que bientôt elle va se dégrader. C’est ce type de route qu’on appelle goudron vie chère qu’on faisait. Si le bus commence à l’emprunter, le bitume va partir. Cela veut dire qu’on doit se mettre en action pour faire du béton bitumineux sur cette route rapidement, en attendant qu’on ait toutes les infrastructures nécessaires. Forcément, ici il faut une cité universitaire et un restaurant universitaire dignes de ce nom, pour que les étudiants soient dans l’environnement adéquat pour étudier et produire. Nous ne voulons plus d’université qui fait juste la théorie. Voilà pourquoi nous sommes en train d’accélérer pour augmenter les capacités des laboratoires et en créer beaucoup pour que lorsque vous étudiez, vous faites la pratique. Il faut que vous puissiez vivre et travailler dans un cadre qui donne l’envie à nous autres de redevenir étudiants. « Félicitations pour tout ce que vous montrez aux yeux du monde » Vos conditions de vie et d’études doivent êtres meilleures, surtout pour les futurs étudiants qui sont encore au lycée. Ce doit être votre combat. Une fois de plus, ce ne doit pas être un combat individuel mais collectif et surtout générationnel. Si nous n’avons pas eu la chance de connaître un certain nombre de choses, ceux qui viennent doivent être à l’aise. C’est notre devoir et voilà pourquoi j’ai dit qu’en révolution, il y a plus de devoirs que de droits. Donc battez-vous, faites-en sorte que vos petits frères, vos enfants vivent mieux. C’est ça le combat du Burkina Faso, qu’il soit en sécurité. Cette guerre que nous vivons finira et nous voulons la finir de sorte que dans les siècles à venir, le Burkina Faso ne connaissent plus jamais cette situation. Cela est possible, parce que nous n’allons pas lésiner sur les moyens. Nous allons recruter, former, armer sérieusement et constituer un bloc solide au cœur de l’Afrique de l’ouest. Quand on entend Burkina Faso, ça doit faire peur, le pays doit être une puissance. C’est pourquoi j’ai dit que vous n’êtes pas conscients peut-être de la qualité de la ressource humaine. Nous allons combattre l’orpaillage clandestin qui emploie et qui rend malade et tue beaucoup de nos enfants à l’extérieur. Pourtant c’est notre ressource humaine, notre avenir. A l’extérieur, tout le monde reconnaît le Burkinabè, de l’enfant jusqu’à l’adulte par sa capacité à travailler, mais nous allons tout faire pour les faire tous rentrer et leur donner l’éducation qu’il faut pour qu’ils participent activement au développement de notre patrie. Sur ce, je vous souhaite de bien prendre soin de vos infrastructures, parce que je le dis, ce n’est qu’un début. Nous ferons mieux. On avait planifié 40 amphithéâtres sur beaucoup de centres universitaires et je pense que lors de la deuxième phase de l’initiative, nous irons bien au-delà. Pour tout ce qui est laboratoire ou autre, nous restons à l’écoute de vos besoins. Vous allez aussi participer de manière active à approvisionner vos restaurants en ayant des champs, en cultivant vos légumes et autres, parce que ça c’est important. Notre mission est de vous mettre dans les conditions et nous allons nous battre pour cela. On mettra à votre disposition des infrastructures modernes, des laboratoires modernes. Aussi, les enseignants sont déterminés à vous donner toute l’instruction nécessaire. Voilà qu’ils ont pu rattraper toutes les années et je les félicite. Je félicite également tous ceux qui ont participé à la construction de ces infrastructures, pas uniquement Nazi-Boni. Quand on regarde, ce sont des architectes, des entreprises et des ouvriers burkinabè. Tout est fait sur place avec des équipements burkinabè. C’est encourageant. Si on venait me dire qu’il faut confectionner ou amener des équipements de l’extérieur, je n’allais pas accepter, parce que vous êtes capables de le faire. Félicitations encore une fois de plus à tous ceux qui ont participé à ces chantiers. Je souhaite une bonne chance à tous les nouveaux bacheliers qui vont rejoindre bientôt les universités. Aux étudiants qui sont sur place, tenez bon ! Tout n’est pas rose, mais nous travaillons à ce que ce soit rose pour vous et les générations à venir. Faites-en sorte que ce civisme et cette discipline que vous avez montré durant ces années de la révolution se renforcent et se perpétuent pour les générations qui viennent. Félicitations pour l’état d’esprit. Félicitations pour tout ce que vous montrez aux yeux du monde, la différence que vous venez de montrer aux yeux du monde. Etudiants burkinabè, étudiants ailleurs c’est carrément différent. Nous jurons de tout mettre en œuvre pour vous accompagner et vous donner la connaissance nécessaire et des conditions de vie bien améliorées dans vos universités et surtout dans votre vie active. Bonne suite. Que Dieu protège tout un chacun et notre chère patrie. La patrie ou la mort, nous vaincrons ! Propos retranscris par la Rédaction",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Gestion des crises et catastrophes : l’ISEPC outille 41 cadres de 17 pays africains",
-      "link": "https://www.sidwaya.info/gestion-des-crises-et-catastrophes-lisepc-outille-41-cadres-de-17-pays-africains/",
-      "pubDate": "2026-09-13T23:54:32.000Z",
-      "description": "L’Institut supérieur d’études de protection civile (ISEPC) a clôturé, vendredi 11 septembre 2026, à Ouagadougou, la huitième session de formation internationale en gestion des crises et catastrophes. Après deux semaines d’apprentissage, d’échanges d’expériences et d’exercices pratiques, à l’Institut supérieur d’études de protection civile (ISEPC), les participants à la session 2026 de la formation en gestion des crises et catastrophes ont reçu leur attestation, vendredi 11 septembre 2026. Organisée avec l’appui du Programme des nations unies pour le développement (PNUD), cette session a réuni 41 cadres et responsables venus du Bénin, du Niger, de la Guinée équatoriale, de la Tunisie, du Gabon, du Rwanda, du Cameroun, du Togo, du Kenya, de la Guinée, du Tchad, de la République démocratique du Congo, du Congo-Brazzaville, du Mali, des Comores, de la République centrafricaine et du Burkina Faso. La formation a porté sur les mécanismes de prévention, de préparation, de réponse et de relèvement face aux crises et aux catastrophes. Le directeur des enseignements et des programmes de l’ISEPC, le commandant Arsène Badolo, a salué la qualité et la diversité des participants composés des autorités administratives, des cadres et experts des pays amis et opérationnels intervenant dans la chaine de secours. « Cette pluralité a permis d’atteindre les objectifs escomptés, à savoir un riche partage d’expérience, la connaissance d’une cellule de crise et des plans d’urgence, la maitrise de la communication en temps de crise ainsi que la mise en œuvre d’une dynamique de coopération interservices, », a-t-il indiqué. Si les exemples et les cas concrets semblent être tirés des réalités du Burkina Faso, a-t-il poursuivi, l’unicité de l’Afrique et la similarité de leurs défis et préoccupations font que les solutions peuvent guider les stagiaires dans leurs pays respectifs. « Les connaissances n’ont de valeur que si elles sont partagées, testées et constamment mises à jour », a insisté le commandant Badolo. Il a exhorté les impétrants à préparer leurs équipes, à questionner les certitudes et à conserver le sang-froid face aux situations imprévues. Le délégué de la promotion, Thomas Yampa, par ailleurs, gouverneur de la région du Yaadga, a exprimé la reconnaissance des participants à l’endroit des formateurs et de la direction de l’ISEPC. Mieux cerner les enjeux liés à la prévention Il a relevé que la formation leur a permis de mieux cerner les enjeux liés à la prévention, à la préparation, à la réponse et au relèvement face aux crises et catastrophes. Ils ont également pris conscience, selon lui, de l’importance de l’anticipation et de la coordination dans la réduction des conséquences humaines, sociales, économiques et environnementales des catastrophes. «Cette formation nous a rappelé une réalité essentielle: la gestion des catastrophes ne commence pas au moment où survient la crise. Elle commence bien avant, par la connaissance des risques, la prévention, la préparation, la sensibilisation des populations et le renforcement des capacités », a déclaré Thomas Yampa. Il a ajouté que les acquis constituent pour eux des outils précieux à mettre au service des communautés et de leurs différents pays respectifs. Pour sa part, le directeur général de l’ISEPC, le lieutenant-colonel Zouno Gérard Bambara, a estimé que la gestion efficace d’une crise ne repose jamais sur l’action d’un seul acteur. Elle exige, selon lui, la coordination, l’anticipation, la circulation de l’information, la complémentarité des compétences et, surtout, une forte capacité à travailler ensemble. « La diversité des participants à cette session a précisément constitué l’une de ses principales richesses », a-t-il soutenu. Ainsi, le lieutenant-colonel Zouno Gérard Bambara a invité les stagiaires à considérer cette formation comme une nouvelle étape dans leur parcours professionnel et dans leur engagement au service des populations. Le représentant résident adjoint par intérim du PNUD au Burkina Faso, Dieudonné Kini, a félicité l'équipe pédagogique pour la qualité de l'encadrement. Il a souligné la pertinence des thématiques abordées dans un contexte marqué par la persistance de crises multidimensionnelles, notamment sécuritaires, climatiques, sanitaires et humanitaires. Pour le représentant du PNUD, le renforcement des compétences des acteurs constitue un investissement dans la sécurité, la stabilité et le développement durable des pays africains. Il a réaffirmé l’engagement de son institution à accompagner le gouvernement burkinabè, l’ISEPC et les autres partenaires dans les efforts de réduction des risques de catastrophe et de renforcement de la résilience des communautés. Wendaabo Cathérine KOURAOGO Gloria BEOGO (Stagiaire)",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Jeux de l’AES / Finale du critérium Elite : le sprint en or de Tiémoko Diamouténé",
-      "link": "https://www.sidwaya.info/jeux-de-laes-finale-du-criterium-elite-le-sprint-en-or-de-tiemoko-diamoutene/",
-      "pubDate": "2026-09-13T23:34:50.000Z",
-      "description": "Après avoir laissé filer les deux premières épreuves cyclistes, le Mali tient enfin sa victoire. Tiémoko Diamouténé s’est imposé, hier 13 septembre 2026, sur le boulevard Thomas-Sankara, à l’occasion de la finale du critérium Elite des 2es Jeux de l’AES. Au terme d’une course animée et longtemps indécise, le Malien a eu le dernier mot au sprint. Il a couvert les 61,2 km en 1 h 32 min 05 s, à une vitesse moyenne de 39,913 km/h. Il devance les Burkinabè Mouni Vincent et Saturnin Yaméogo. Clap de fin pour le cyclisme aux 2es Jeux de l’AES. Après les courses contre la montre individuelle et par équipes, la « petite reine » a livré, hier, sa dernière bataille sur le boulevard Thomas-Sankara. Douze coureurs, dont six Burkinabè et six Maliens, étaient au départ de ce critérium Elite disputé sur un circuit de 5,1 km à parcourir à 12 reprises. La course démarre sur un rythme soutenu, mais le peloton reste groupé durant les premiers tours. Il faut attendre le 4e tour pour voir trois coureurs se détacher. Le Burkinabè Moukaila Rawendé, son compatriote Saturnin Yaméogo et le Malien Tiémoko Diamouténé prennent les devants. Le trio compte jusqu’à 15 secondes d’avance sur le peloton. Au 8e tour, l’échappée est finalement reprise. Mais le répit est de courte durée. Dès le tour suivant, quatre coureurs relancent la course. Parmi eux, le Burkinabè Soumaila Ilboudo et le Malien Youssoufou Dissa donnent le tempo. L’échappée résiste jusqu’à l’entame du dernier tour, avant d’être finalement avalée par le peloton. Tout doit alors se jouer au sprint. Dans l’emballage final, Tiémoko Diamouténé fait parler sa puissance. Le Malien, réputé pour ses qualités de sprinteur, devance ses adversaires et s’adjuge la médaille d’or. Mouni Vincent prend la deuxième place, tandis que Saturnin Yaméogo complète le podium. « Après avoir perdu les deux premières courses, il nous fallait cette épreuve pour faire plaisir à notre peuple », s’est réjoui le vainqueur, qui repart avec le trophée, la médaille d’or et une enveloppe de 400 000 F CFA. Le deuxième reçoit 300 000 F CFA et le troisième 200 000 F CFA, en plus de leurs médailles respectives. En contre la-montre individuel, le Burkinabè Soumaila Ilboudo avait décroché, jeudi dernier, l’or en parcourant les 10,2 km en 14 min 10 s 76. Tiémoko Diamouténé avait pris la deuxième place et Mouni Vincent la troisième. Le lendemain la course contre la montre par équipes a, elle aussi, souri au Burkina Faso. Les Etalons ont remporté l’épreuve et repartent avec le trophée, les médailles d’or et une enveloppe d’un million F CFA. Le Mali, deuxième, empoche 700 000 F CFA et les médailles d’argent. En rappel, les épreuves cyclistes de la IIe édition des Jeux de l’AES ont mis aux prises le Burkina et le Mali. Ollo Aimé Césaire HIEN",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": null,
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
-      "_desk": "A1"
-    },
-    {
-      "title": "Jeux AES : le ministre des Sports, Annick Pikbougoum, au village des Jeux de l’AES",
-      "link": "https://www.aib.media/jeux-aes-le-ministre-des-sports-annick-pikbougoum-au-village-des-jeux-de-laes/",
-      "pubDate": "2026-09-13T19:45:09.000Z",
-      "description": "Jeux AES : le ministre des Sports, Annick Pikbougoum, au village des Jeux de l'AES Ouagadougou, 13 sept. 2026 (AIB)-Le ministre des Sports, de la Jeunesse et de l'Emploi a effectué, samedi 12 septembre, une visite au village des Jeux de l'AES pour encourager les exposants et les athlètes, a constaté l'AIB sur place. « Nous avons voulu ouvrir cet espace que nous avons dénommé le village des jeux afin de permettre à la population de venir découvrir les jeux sous un autre angle, autre que sur les différents terrains de jeu », a expliqué la patronne du département des Sports, Annick Pikbougoum, après avoir visité les différents stands. Elle a ajouté que le village des Jeux de l'AES va surtout permettre aux « athlètes et aux dirigeants des trois délégations de venir trouver un espace sur lequel ils peuvent échanger, partager les expériences et renforcer justement cette fraternité que nous avons voulu renforcer à travers l'organisation de ces jeux ». Madame Pikbougoum a assuré que « c'est un espace bien animé, bien protégé surtout et très bien fréquenté ». Le ministre des Sports, de la Jeunesse et de l'Emploi était accompagné de l'ambassadeur pour le sport du Burkina Faso, Charles Kaboré, et de figures emblématiques du sport du Mali et du Niger. La présence de ces quelques figures emblématiques du sport des pays de l'AES s'explique par le fait qu'« elles sont des modèles pour cette génération, cette jeunesse qui cherche à se frayer un chemin vers le firmament du sport mondial. Qui de mieux que ces stars pour leur montrer la voie à travers des partages d'expérience, à travers des conseils pour mieux les orienter dans leur choix de projet sportif ? » Annick Pikbougoum a salué la vision des trois chefs d'État de l'AES d'organiser ces jeux, qui offrent aux athlètes de l'espace une tribune pour viser les sommets. Agence d'information du Burkina AS/ata",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Au sommet des Brics, Xi Jinping fait un pas vers l’Inde de Narendra Modi",
+      "link": "https://www.lefigaro.fr/international/au-sommet-des-brics-xi-jinping-fait-un-pas-vers-l-inde-de-narendra-modi-20260914",
+      "source": "Le Figaro International",
+      "date": "2026-09-14T10:35:00.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Au Sommet des BRICS, Guterres appelle à adapter l’ONU au monde d’aujourd’hui",
+      "link": "https://www.wakatsera.com/au-sommet-des-brics-guterres-appelle-a-adapter-lonu-au-monde-daujourdhui/",
+      "source": "Wakat Séra",
+      "date": "2026-09-14T09:31:35.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "En Finlande, le Sommet européen sur l’Arctique s’ouvre dans un contexte de tensions géopolitiques croissantes",
+      "link": "https://www.liberation.fr/international/europe/en-finlande-le-sommet-europeen-sur-larctique-souvre-dans-un-contexte-de-tensions-geopolitiques-croissantes-20260914_545OOQEQ4VHHJMIMZFUJIVN7QQ/",
+      "source": "Libération International",
+      "date": "2026-09-14T09:16:46.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Yémen : l’escalade s’accélère entre les Houthis et l’Arabie saoudite (VIDEO)",
+      "link": "https://francais.rt.com/international/138030-yemen-escalade-saccelere-entre-houthis-arabie-saoudite",
+      "source": "RT en français",
+      "date": "2026-09-14T09:10:21.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "escalade"
+        }
+      ]
+    },
+    {
+      "title": "Panique à bord de l'IA",
+      "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260914-panique-%C3%A0-bord-de-l-ia",
+      "source": "France 24",
+      "date": "2026-09-14T08:57:58.000Z",
+      "rating": "A3",
+      "evidence": "Source fiable unique",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "panique"
+        }
+      ]
+    },
+    {
+      "title": "Cameroun : de Kondengui, Alain Fogue annonce un « génocide bamiléké programmé » et accuse le clan Biya de préparer la royauté",
+      "link": "https://fr.journalducameroun.com/cameroun-de-kondengui-alain-fogue-annonce-un-genocide-bamileke-programme-et-accuse-le-clan-biya-de-preparer-la-royaute/",
+      "source": "Journal du Cameroun",
+      "date": "2026-09-14T08:57:01.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "génocide"
+        }
+      ]
+    },
+    {
+      "title": "Entre l'Ukraine et la Russie, l'escalade militaire",
+      "link": "https://www.france24.com/fr/%C3%A9missions/dans-la-presse/20260914-entre-l-ukraine-et-la-russie-l-escalade-militaire",
+      "source": "France 24",
+      "date": "2026-09-14T04:54:04.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "escalade"
+        }
+      ]
+    },
     {
       "title": "Group lending cars for free to disaster victims struggles to meet demand",
       "link": "https://www.japantimes.co.jp/news/2026/09/14/japan/free-vehicle-lending-demand/",
@@ -1163,124 +1277,44 @@
           "keyword": "tsunami"
         }
       ]
-    },
-    {
-      "title": "En Colombie, un mois après le séisme, les plaies béantes du Choco : « Ici, les personnes dépendent de l’Etat »",
-      "link": "https://www.lemonde.fr/planete/article/2026/09/14/en-colombie-un-mois-apres-le-seisme-les-plaies-beantes-du-choco-ici-les-personnes-dependent-de-l-etat_6773248_3244.html",
-      "source": "Le Monde International",
-      "date": "2026-09-14T02:55:05.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "séisme"
-        }
-      ]
-    },
-    {
-      "title": "Soudan : les BRICS réclament un cessez-le-feu immédiat et permanent",
-      "link": "https://beninwebtv.com/soudan-les-brics-reclament-un-cessez-le-feu-immediat-et-permanent/",
-      "source": "Bénin Web TV",
-      "date": "2026-09-14T00:39:22.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Somaliland, une reconnaissance incendiaire",
-      "link": "https://www.monde-diplomatique.fr/2026/09/NOVEL/69841",
-      "source": "Le Monde Diplomatique",
-      "date": "2026-09-13T13:50:19.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "reconnaissance"
-        }
-      ]
-    },
-    {
-      "title": "Ukraine : des frappes russes près de la frontière polonaise, Varsovie dénonce une \"escalade\"",
-      "link": "https://www.france24.com/fr/europe/20260913-ukraine-chemins-fer-vis%C3%A9s-attaque-syst%C3%A9mique-train-varsovie-pologne-drone",
-      "source": "France 24",
-      "date": "2026-09-13T13:30:59.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "escalade"
-        }
-      ]
-    },
-    {
-      "title": "Au Sommet des BRICS, Guterres appelle à adapter l’ONU au monde d’aujourd’hui",
-      "link": "https://news.un.org/feed/view/fr/story/2026/09/1159458",
-      "source": "ONU Info (FR)",
-      "date": "2026-09-13T12:00:00.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      178
+      174
     ],
     [
       "autre",
-      134
+      124
     ],
     [
       "occident_fr",
-      108
-    ],
-    [
-      "golfe_mo",
-      91
+      121
     ],
     [
       "occident_us",
-      88
+      102
+    ],
+    [
+      "golfe_mo",
+      63
     ],
     [
       "bf_local",
-      51
+      55
     ],
     [
       "russie",
-      47
+      54
     ],
     [
       "turquie",
-      42
+      53
     ],
     [
       "chine",
-      40
+      33
     ],
     [
       "sahel",
@@ -1292,52 +1326,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 94,
+      "count": 106,
       "top": [
         {
-          "title": "Coupes africaines : Rahimo et Vitesse FC éliminés, le football burkinabè encore KO dès le premier tour",
-          "link": "https://netafrique.net/coupes-africaines-rahimo-et-vitesse-fc-elimines-le-football-burkinabe-encore-ko-des-le-premier-tour/",
-          "source": "Net Afrique (BF)",
+          "title": "DBS: • Faso Kosam : une première AG sous le signe de la concertation et de l’engagement",
+          "link": "https://leconomistedufaso.com/2026/09/14/dbs-faso-kosam-une-premiere-ag-sous-le-signe-de-la-concertation-et-de-lengagement/",
+          "source": "L'Économiste du Faso",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Jeux de l’AES | Lutte : Le Niger domine chez les hommes, les lutteuses burkinabè s’imposent chez les dames",
+          "link": "https://www.minute.bf/jeux-de-laes-lutte-le-niger-domine-chez-les-hommes-les-lutteuses-burkinabe-simposent-chez-les-dames/",
+          "source": "Minute BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "H",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Classement mondial des passeports 2026 : Le Burkina Faso se hisse au 28ᵉ rang africain malgré un recul global",
-          "link": "https://netafrique.net/classement-mondial-des-passeports-2026-le-burkina-faso-se-hisse-au-28%e1%b5%89-rang-africain-malgre-un-recul-global/",
-          "source": "Net Afrique (BF)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Littérature et migration : Seydou Nabalma dissèque l’envers du rêve canadien dans « La gifle de l’immigration »",
-          "link": "https://netafrique.net/litterature-et-migration-seydou-nabalma-disseque-lenvers-du-reve-canadien-dans-la-gifle-de-limmigration/",
-          "source": "Net Afrique (BF)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Ouagadougou : Fusion FC s’offre la 5e édition du grand tournoi maracana de l’AJPSC",
-          "link": "https://faso7.com/2026/09/13/ouagadougou-fusion-fc-soffre-la-5e-edition-du-grand-tournoi-maracana-de-lajpsc/",
-          "source": "Faso7",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Le Président du Faso aux étudiants de l’UNB : « Nous ne voulons plus d’université qui fait juste la théorie »",
-          "link": "https://www.sidwaya.info/le-president-du-faso-aux-etudiants-de-lunb-nous-ne-voulons-plus-duniversite-qui-fait-juste-la-theorie/",
-          "source": "Sidwaya",
+          "title": "Burkina: vers une agriculture durable et résiliente, l’oeuvre d’une chercheure",
+          "link": "https://www.wakatsera.com/burkina-vers-une-agriculture-durable-et-resiliente-loeuvre-dune-chercheure/",
+          "source": "Wakat Séra",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
           "rating": "C2"
+        },
+        {
+          "title": "Kankan : La traque aux « étrangers » de la mairie se heurte au mur du flou sémantique",
+          "link": "https://guineenews.org/2026/09/14/kankan-la-traque-aux-etrangers-de-la-mairie-se-heurte-au-mur-du-flou-semantique/",
+          "source": "Guineenews",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Point sur les Conseils des ministres des pays de la zone UEMOA",
+          "link": "https://leconomistedufaso.com/2026/09/14/point-sur-les-conseils-des-ministres-des-pays-de-la-zone-uemoa-70/",
+          "source": "L'Économiste du Faso",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "B3"
         }
       ]
     },
@@ -1345,52 +1379,52 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 64,
+      "count": 50,
       "top": [
         {
-          "title": "Gambie : Face à la colère populaire, le Président promet une amélioration de l’électricité d’ici fin octobre",
-          "link": "https://burkina24.com/2026/09/13/gambie-face-a-la-colere-populaire-le-president-promet-une-amelioration-de-lelectricite-dici-fin-octobre/",
-          "source": "Burkina24",
+          "title": "Un influenceur retrouvé mort à son domicile",
+          "link": "https://www.wakatsera.com/un-influenceur-retrouve-assassine-a-son-domicile/",
+          "source": "Wakat Séra",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "I",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "Africa must build, finance, own its future — Leaders",
-          "link": "https://www.vanguardngr.com/2026/09/africa-must-build-finance-own-its-future-leaders/",
-          "source": "Vanguard (Nigeria)",
+          "title": "What Is Wrong With Us: We fly halfway around the world to admire discipline, then fly home to tolerate chaos",
+          "link": "https://www.myjoyonline.com/what-is-wrong-with-us-we-fly-halfway-around-the-world-to-admire-discipline-then-fly-home-to-tolerate-chaos/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "L",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Falana tasks FG to sue S-Africa over killings of Nigerians",
-          "link": "https://www.vanguardngr.com/2026/09/falana-tasks-fg-to-sue-s-africa-over-killings-of-nigerians/",
-          "source": "Vanguard (Nigeria)",
+          "title": "“The Darkest Chapter”: Latif Abubakar’s 21st production brings President Mahama’s UN reckoning to the National Theatre stage",
+          "link": "https://www.myjoyonline.com/the-darkest-chapter-latif-abubakars-21st-production-brings-president-mahamas-un-reckoning-to-the-national-theatre-stage/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Teacher, three others investigated over alleged kidnapping of suspected MoMo fraudster in Kumasi",
+          "link": "https://www.myjoyonline.com/teacher-three-others-investigated-over-alleged-kidnapping-of-suspected-momo-fraudster-in-kumasi/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "J",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Passport: UK mission clarifies £70 fee, refunds £50",
-          "link": "https://punchng.com/passport-uk-mission-clarifies-70-fee-refunds-50/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "Bagbin urges Ewe diaspora to convert cultural network into investment platform",
-          "link": "https://www.myjoyonline.com/bagbin-urges-ewe-diaspora-to-convert-cultural-network-into-investment-platform/",
+          "title": "Ghana needs a system to track child protection funding to where risks are highest – ARK Foundation",
+          "link": "https://www.myjoyonline.com/ghana-needs-a-system-to-track-child-protection-funding-to-where-risks-are-highest-ark-foundation/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         }
       ]
     },
@@ -1398,52 +1432,52 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 15,
+      "count": 29,
       "top": [
         {
-          "title": "Somaliland, une reconnaissance incendiaire",
-          "link": "https://www.monde-diplomatique.fr/2026/09/NOVEL/69841",
-          "source": "Le Monde Diplomatique",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "D",
+          "title": "Cameroun : de Kondengui, Alain Fogue annonce un « génocide bamiléké programmé » et accuse le clan Biya de préparer la royauté",
+          "link": "https://fr.journalducameroun.com/cameroun-de-kondengui-alain-fogue-annonce-un-genocide-bamileke-programme-et-accuse-le-clan-biya-de-preparer-la-royaute/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         },
         {
-          "title": "Sudan public remain frustrated by Bankak app glitches despite update",
-          "link": "https://www.dabangasudan.org/en/all-news/article/sudan-public-remain-frustrated-by-bankak-app-glitches-despite-update",
-          "source": "Dabanga Sudan",
-          "zone": "5. Corne de l’Afrique",
+          "title": "Financement SND30 : le Cameroun séduit les investisseurs à Londres",
+          "link": "https://fr.journalducameroun.com/financement-snd30-le-cameroun-seduit-les-investisseurs-a-londres/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Cameroun/ Fraude pétrolière : le Minee enchaîne les coups, plus de 5 000 litres saisis en une semaine",
+          "link": "https://fr.journalducameroun.com/cameroun-fraude-petroliere-le-minee-enchaine-les-coups-plus-de-5-000-litres-saisis-en-une-semaine/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Soudan : les BRICS réclament un cessez-le-feu immédiat et permanent",
-          "link": "https://beninwebtv.com/soudan-les-brics-reclament-un-cessez-le-feu-immediat-et-permanent/",
-          "source": "Bénin Web TV",
+          "title": "Comble du cynisme, les Emirats réclament l’embargo sur les armes au Soudan",
+          "link": "https://www.tsa-algerie.com/comble-du-cynisme-les-emirats-reclament-lembargo-sur-les-armes-au-soudan/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "5. Corne de l’Afrique",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "DR Congo’s World Cup exploits encourage more players to join their cause",
-          "link": "https://www.myjoyonline.com/dr-congos-world-cup-exploits-encourage-more-players-to-join-their-cause/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "3. Afrique centrale",
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "RDC: Félix Tshisekedi formalise la première étape vers le dialogue national",
-          "link": "https://www.rfi.fr/fr/afrique/20260914-rdc-f%C3%A9lix-tshisekedi-formalise-la-premi%C3%A8re-%C3%A9tape-vers-le-dialogue-national",
-          "source": "RFI Afrique",
+          "title": "Walikale : le centre de Kibati et Milonge occupés par l'armée après les affrontements contre l'AFC/M23, Muhanga toujours sous tension",
+          "link": "https://actualite.cd/2026/09/14/walikale-le-centre-de-kibati-et-milonge-occupes-par-larmee-apres-les-affrontements",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "F2"
         }
       ]
     },
@@ -1451,50 +1485,50 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 26,
+      "count": 15,
       "top": [
         {
-          "title": "Sécurité, énergie et commerce : les enjeux de la visite de Massad Boulos en Algérie",
-          "link": "https://www.tsa-algerie.com/securite-energie-et-commerce-les-enjeux-de-la-visite-de-massad-boulos-en-algerie/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Birahim Soumaré : « Nous sommes dans une phase de redéfinition et de relance »",
-          "link": "https://journaldumali.com/birahim-soumare-nous-sommes-dans-une-phase-de-redefinition-et-de-relance/",
-          "source": "Journal du Mali",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Le Maghreb de Fès affrontera l’ASEC Mimosas en Ligue des champions CAF",
-          "link": "https://fr.hespress.com/488221-le-maghreb-de-fes-affrontera-lasec-mimosas-en-ligue-des-champions-caf.html",
+          "title": "Législatives 2026 : Nizar Baraka mise sur les grands projets pour accélérer le développement des provinces du Sud",
+          "link": "https://fr.hespress.com/488251-legislatives-2026-nizar-baraka-mise-sur-les-grands-projets-pour-accelerer-le-developpement-des-provinces-du-sud.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Maroc – Espagne : le grand numéro d’équilibriste de Rabat",
-          "link": "https://www.tsa-algerie.com/maroc-espagne-le-grand-numero-dequilibriste-de-rabat/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "J",
-          "relevance": "L",
           "rating": "A2"
         },
         {
-          "title": "Drugs marked with Gaddafi’s face seized in Libya",
-          "link": "https://www.myjoyonline.com/drugs-marked-with-gaddafis-face-seized-in-libya/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Essais nucléaires français en Algérie : Paris répond sur la remise des cartes",
+          "link": "https://www.tsa-algerie.com/essais-nucleaires-francais-en-algerie-paris-repond-sur-la-remise-des-cartes/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "N",
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Tunis | Démantèlement d’un réseau de trafic de cocaïne dirigé par un rappeur",
+          "link": "https://kapitalis.com/tunisie/2026/09/14/tunis-demantelement-dun-reseau-de-trafic-de-cocaine-dirige-par-un-rappeur/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Algérie – Tunisie : arrêt temporaire du train Alger – Tunis",
+          "link": "https://www.tsa-algerie.com/algerie-tunisie-arret-temporaire-du-train-alger-tunis/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "L",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Médicaments : le déficit commercial du Maroc pourrait atteindre 13,4 MMDH en 2030",
+          "link": "https://fr.hespress.com/488282-medicaments-le-deficit-commercial-du-maroc-pourrait-atteindre-134-mmdh-en-2030.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1504,29 +1538,20 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 106,
+      "count": 79,
       "top": [
         {
-          "title": "Ouagadougou : Les Pupilles de la Nation au cœur d’une journée de sport, de mémoire et de solidarité",
-          "link": "https://www.minute.bf/ouagadougou-les-pupilles-de-la-nation-au-coeur-dune-journee-de-sport-de-memoire-et-de-solidarite/",
+          "title": "SAMAO 2026 : Les ministres des Mines de l’AES en visite au Mémorial Thomas Sankara",
+          "link": "https://www.minute.bf/samao-2026-les-ministres-des-mines-de-laes-en-visite-au-memorial-thomas-sankara/",
           "source": "Minute BF",
           "zone": "8. Moyen-Orient",
-          "theme": "P",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Deepening oil market turmoil",
-          "link": "https://www.dawn.com/news/2029684/deepening-oil-market-turmoil",
-          "source": "Dawn (Pakistan)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "PM Shehbaz announces 'relief scheme' for bikes, autos, 800cc vehicles amid rising fuel prices",
-          "link": "https://www.dawn.com/news/2029634/pm-shehbaz-announces-relief-scheme-for-bikes-autos-800cc-vehicles-amid-rising-fuel-prices",
+          "title": "Govt mulling revival of austerity measures, decision to be taken soon: Tarar",
+          "link": "https://www.dawn.com/news/2029872/govt-mulling-revival-of-austerity-measures-decision-to-be-taken-soon-tarar",
           "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
           "theme": "E",
@@ -1534,22 +1559,31 @@
           "rating": "F2"
         },
         {
-          "title": "Prise de contrôle de Bab al-Mandab par les Houthis : «Je ne vois qu’une seule issue à court terme : une nouvelle flambée des prix»",
-          "link": "https://www.lefigaro.fr/conjoncture/prise-de-controle-de-bab-al-mandab-par-les-houthis-je-ne-vois-qu-une-seule-issue-a-court-terme-une-nouvelle-flambee-des-prix-20260913",
-          "source": "Le Figaro International",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Gulf-Iran meeting on Strait of Hormuz postponed, Oman says",
-          "link": "https://english.alarabiya.net/News/middle-east/2026/09/14/gulfiran-meeting-on-strait-of-hormuz-postponed-oman-says",
-          "source": "Al Arabiya (EN)",
+          "title": "Détroit de Bab el-Mandeb : Les avancées des Houthis pourraient-elles déclencher une crise maritime en mer Rouge ?",
+          "link": "https://www.bbc.com/afrique/articles/c20983j4q29o?at_medium=RSS&at_campaign=rss",
+          "source": "BBC Afrique (FR)",
           "zone": "8. Moyen-Orient",
           "theme": "M",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "B1"
+        },
+        {
+          "title": "À Gaza, un hôpital démuni pour soigner les bébés prématurés",
+          "link": "https://lesoleil.sn/actualites/sante/a-gaza-un-hopital-demuni-pour-soigner-les-bebes-prematures/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "EXPLAINER - US-Iran war ushers in new era of missile warfare",
+          "link": "https://www.aa.com.tr/en/middle-east/explainer-us-iran-war-ushers-in-new-era-of-missile-warfare/4056616",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A2"
         }
       ]
     },
@@ -1557,52 +1591,52 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 198,
+      "count": 176,
       "top": [
         {
-          "title": "Du statut de cadre au « boulot alimentaire » : L’amer constat des intellectuels immigrés africains au Canada raconté par Seydou Nabalma",
-          "link": "https://netafrique.net/du-statut-de-cadre-au-boulot-alimentaire-lamer-constat-des-intellectuels-immigres-africains-au-canada-raconte-par-seydou-nabalma/",
-          "source": "Net Afrique (BF)",
-          "zone": "16. Amérique du Nord",
+          "title": "Au Sommet des BRICS, Guterres appelle à adapter l’ONU au monde d’aujourd’hui",
+          "link": "https://www.wakatsera.com/au-sommet-des-brics-guterres-appelle-a-adapter-lonu-au-monde-daujourdhui/",
+          "source": "Wakat Séra",
+          "zone": "12. Asie du Sud",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "États-Unis : L’Afrique du Sud veut empêcher la vente aux enchères de 29 objets historiques ayant appartenu à Nelson Mandela",
-          "link": "https://burkina24.com/2026/09/13/etats-unis-lafrique-du-sud-veut-empecher-la-vente-aux-encheres-de-29-objets-historiques-ayant-appartenu-a-nelson-mandela/",
-          "source": "Burkina24",
-          "zone": "16. Amérique du Nord",
-          "theme": "P",
-          "relevance": "L",
           "rating": "C2"
         },
         {
-          "title": "L'Occident ouvre-t-il enfin les yeux ? Les médias américains repèrent des Ukrainiens parmi les rangs des terroristes en Afrique",
-          "link": "https://francais.rt.com/international/138027-occident-ouvre-enfin-yeux-medias-americains-reperent-ukrainiens-rangs-terroristes",
-          "source": "RT en français",
+          "title": "Entre l'Ukraine et la Russie, l'escalade militaire",
+          "link": "https://www.france24.com/fr/%C3%A9missions/dans-la-presse/20260914-entre-l-ukraine-et-la-russie-l-escalade-militaire",
+          "source": "France 24",
           "zone": "10. Europe orient. & Balkans",
           "theme": "S",
           "relevance": "A",
-          "rating": "D4"
+          "rating": "A2"
         },
         {
-          "title": "Au Sommet des BRICS, Guterres appelle à adapter l’ONU au monde d’aujourd’hui",
-          "link": "https://news.un.org/feed/view/fr/story/2026/09/1159458",
-          "source": "ONU Info (FR)",
+          "title": "En Finlande, le Sommet européen sur l’Arctique s’ouvre dans un contexte de tensions géopolitiques croissantes",
+          "link": "https://www.liberation.fr/international/europe/en-finlande-le-sommet-europeen-sur-larctique-souvre-dans-un-contexte-de-tensions-geopolitiques-croissantes-20260914_545OOQEQ4VHHJMIMZFUJIVN7QQ/",
+          "source": "Libération International",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "La Chine veut mettre fin à la guerre en Iran à sa manière",
+          "link": "https://legrandcontinent.eu/fr/2026/09/14/la-chine-veut-mettre-fin-a-la-guerre-en-iran-a-sa-maniere/",
+          "source": "Le Grand Continent",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Au sommet des Brics, Xi Jinping fait un pas vers l’Inde de Narendra Modi",
+          "link": "https://www.lefigaro.fr/international/au-sommet-des-brics-xi-jinping-fait-un-pas-vers-l-inde-de-narendra-modi-20260914",
+          "source": "Le Figaro International",
           "zone": "12. Asie du Sud",
           "theme": "D",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "Kremlin not ruling out return to Ukraine talks in October",
-          "link": "https://english.alarabiya.net/News/world/2026/09/13/kremlin-not-ruling-out-return-to-ukraine-talks-in-october",
-          "source": "Al Arabiya (EN)",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     }
@@ -1620,42 +1654,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-14T04:55:58.387Z",
+      "at": "2026-09-14T12:46:25.477Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-14T04:55:58.394Z",
+      "at": "2026-09-14T12:46:25.484Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-14T04:56:31.276Z",
+      "at": "2026-09-14T12:46:59.124Z",
       "agent": "Agent Collecte RSS",
-      "message": "110/170 flux OK, 1926 articles"
+      "message": "109/170 flux OK, 1883 articles"
     },
     {
-      "at": "2026-09-14T04:56:34.234Z",
+      "at": "2026-09-14T12:47:02.330Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-14T04:56:34.614Z",
+      "at": "2026-09-14T12:47:02.653Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-14T04:56:34.619Z",
+      "at": "2026-09-14T12:47:02.658Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 9 alertes"
     },
     {
-      "at": "2026-09-14T04:56:34.620Z",
+      "at": "2026-09-14T12:47:02.658Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-14T04:56:34.620Z",
+      "at": "2026-09-14T12:47:02.658Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
