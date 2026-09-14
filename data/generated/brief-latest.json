@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-09-14T19:51:07.655Z",
+  "generatedAt": "2026-09-14T23:52:27.402Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 108,
-    "failed": 62,
-    "articles": 1893,
+    "ok": 106,
+    "failed": 64,
+    "articles": 1859,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -58,11 +53,6 @@
         "count": 10
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
         "id": "rss_minute_bf",
         "name": "Minute BF",
         "count": 10
@@ -103,8 +93,8 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
+        "id": "rss_journ_tch",
+        "name": "Journal du Tchad",
         "count": 10
       },
       {
@@ -153,9 +143,19 @@
         "count": 15
       },
       {
+        "id": "rss_vanguard",
+        "name": "Vanguard (Nigeria)",
+        "count": 20
+      },
+      {
         "id": "rss_punch",
         "name": "Punch (Nigeria)",
         "count": 30
+      },
+      {
+        "id": "rss_journ_cam",
+        "name": "Journal du Cameroun",
+        "count": 10
       },
       {
         "id": "rss_gabonreview",
@@ -228,11 +228,6 @@
         "count": 10
       },
       {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "count": 10
-      },
-      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -270,7 +265,7 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 24
+        "count": 23
       },
       {
         "id": "rss_f24afr",
@@ -338,11 +333,6 @@
         "count": 0
       },
       {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "count": 25
-      },
-      {
         "id": "rss_carnegie",
         "name": "Carnegie Endowment",
         "count": 0
@@ -370,7 +360,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 11
+        "count": 12
       },
       {
         "id": "rss_fp",
@@ -415,7 +405,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 13
       },
       {
         "id": "rss_tass",
@@ -550,9 +540,19 @@
     ],
     "failedSources": [
       {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -585,11 +585,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_journ_tch",
-        "name": "Journal du Tchad",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
         "error": "HTTP 404"
@@ -598,6 +593,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -650,19 +650,9 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_vanguard",
-        "name": "Vanguard (Nigeria)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_journ_cam",
-        "name": "Journal du Cameroun",
-        "error": "fetch failed"
       },
       {
         "id": "rss_7sur7",
@@ -702,7 +692,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -722,7 +712,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -738,6 +728,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -783,6 +778,11 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_chinadaily",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 77,
+    "bfAes": 70,
     "alerts": 3,
     "criticalAlerts": 2,
-    "sourcesDistinct": 77
+    "sourcesDistinct": 73
   },
   "topDevelopments": [
     {
@@ -936,72 +936,6 @@
       "_desk": "A1"
     },
     {
-      "title": "AES : Les experts vétérinaires en conclave à Ouagadougou pour harmoniser la riposte contre les maladies animales transfrontalières",
-      "link": "https://faso7.com/2026/09/14/aes-les-experts-veterinaires-en-conclave-a-ouagadougou-pour-harmoniser-la-riposte-contre-les-maladies-animales-transfrontalieres/",
-      "pubDate": "2026-09-14T12:38:34.000Z",
-      "description": "Les experts vétérinaires du Burkina Faso, du Mali et du Niger ont débuté ce 14 septembre 2026 à Ouagadougou un atelier confédéral de trois jours consacré à la validation de documents techniques pour l'harmonisation de la réponse aux maladies animales transfrontalières dans l'espace de l'Alliance des États du Sahel (AES). Les travaux se poursuivront jusqu'au 16 septembre 2026. Trois instruments sont soumis à l'examen des experts, notamment un cadre de surveillance épidémiologique harmonisée, un mécanisme de banque confédérale de vaccins vétérinaires et un dispositif de campagnes de vaccination concertées à l'échelle des trois pays. Ces documents, une fois validés, seront soumis à l'adoption des plus hautes autorités du Burkina Faso, du Mali et du Niger. Des maladies qui ne connaissent pas de frontières Hiver Boussini, Conseiller Technique du Ministre Délégué, chargé des Ressources Animales du Burkina Faso, a rappelé que les trois pays partagent des espaces pastoraux, des bassins de production, des couloirs de transhumance, des marchés à bétail et des circuits commerciaux étroitement interconnectés. Parmi les maladies animales transfrontalières prioritaires identifiées figurent la péripneumonie contagieuse bovine, la peste des petits ruminants, l'influenza aviaire hautement pathogène et la rage, qui affectent simultanément les systèmes d'élevage des trois pays et, pour certaines, la santé humaine. « Il serait illusoire de prétendre contrôler efficacement les maladies animales dans un seul pays lorsque les facteurs de risque demeurent actifs de part et d'autre de nos frontières » , a-t-il souligné. Il a identifié trois chantiers prioritaires. Le premier est celui de la disponibilité des vaccins, dont l'approvisionnement demeure irrégulier dans les trois pays, avec des procédures d'acquisition, des programmations budgétaires et des mécanismes de financement insuffisamment maîtrisés. Le deuxième est la coordination des campagnes de vaccination, des campagnes menées de façon isolée avec des calendriers différents limitant considérablement l'efficacité des efforts consentis. Le troisième est la surveillance épidémiologique, condition préalable aux deux autres. « La question ne doit plus être uniquement : combien de doses chaque pays peut-il mobiliser individuellement ? Elle doit être également : comment les trois États peuvent-ils mutualiser leurs capacités, anticiper leurs besoins, sécuriser leurs approvisionnements et disposer collectivement d'un mécanisme permettant de répondre rapidement aux urgences de santé animale ? », a-t-il lancé. Une banque confédérale de vaccins en gestation La création d'une banque de vaccins contre les maladies animales prioritaires dans l'espace confédéral constitue l'une des innovations majeures portées par cet atelier. L'objectif est de permettre aux trois États de disposer d'un stock commun mobilisable rapidement en cas d'urgence sanitaire, plutôt que de rester tributaires de leurs capacités nationales individuelles. Hiver Boussini a précisé que la surveillance, la banque de vaccins et la vaccination concertée forment un triptyque indissociable. « La surveillance nous permet de savoir, la banque de vaccins nous permet d'être prêts et la vaccination concertée nous permet d'agir ensemble » , a-t-il déclaré. Il a également appelé à inscrire cette coopération dans l'approche One Health, associant les secteurs de la santé animale, de la santé humaine et de l'environnement, compte tenu du risque de transmission à l'homme de plusieurs des maladies ciblées. Les trois Directeurs Généraux des services vétérinaires réunis à Ouagadougou Le Vétérinaire Capitaine Aboubacar Nacro, Directeur Général des Services Vétérinaires du Burkina Faso, participe à la rencontre en compagnie du Directeur National des Services Vétérinaires du Mali, et du Directeur Général des Services Vétérinaires par intérim du Niger. Il a présenté cet atelier comme l'aboutissement d'un long processus d'échanges techniques entre les trois pays et a formulé le vœu que les conclusions des travaux contribuent à poser les bases de « services vétérinaires plus intégrés, plus résilients et davantage capables de répondre collectivement et efficacement aux maladies animales » . Dans un espace sahélien où le cheptel représente un pilier essentiel de la sécurité alimentaire et des revenus des populations rurales, la mutualisation des capacités vétérinaires entre le Burkina Faso, le Mali et le Niger s'impose comme une nécessité stratégique. Josué TIENDREBEOGO Faso7 L’article AES : Les experts vétérinaires en conclave à Ouagadougou pour harmoniser la riposte contre les maladies animales transfrontalières est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "L",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Jeux de l’AES | Lutte : Le Niger domine chez les hommes, les lutteuses burkinabè s’imposent chez les dames",
-      "link": "https://www.minute.bf/jeux-de-laes-lutte-le-niger-domine-chez-les-hommes-les-lutteuses-burkinabe-simposent-chez-les-dames/",
-      "pubDate": "2026-09-14T11:50:21.000Z",
-      "description": "La compétition de lutte des Jeux de l’Alliance des États du Sahel (AES) a livré son verdict, dans la soirée du samedi 12 septembre 2026 à l’hippodrome de Hamdallaye à Ouagadougou. A l'issue de deux jours de compétition, chez les hommes, le Niger s’est particulièrement illustré en remportant trois des cinq catégories disputées. Chez les dames, les lutteuses burkinabè ont réalisé une belle performance en décrochant les médailles d’or, aussi bien en équipe qu’en individuel. La ministre des Sports, de la Jeunesse et de l’emploi, Annick Lydie Djouma Pickbougoum Zingué/Outtara avec une importante délégation du Ministère en charge de la jeunesse, des délégations des autres pays de l'AES, ainsi que des représentants coutumières ont pris part à la finale de la lutte. Le Niger s’est imposé comme la nation dominante de la lutte aux Jeux de l’Alliance des États du Sahel (AES), à l’issue des compétitions disputées à Ouagadougou. Avec trois premières places sur les cinq catégories masculines, les Nigériens confirment leur suprématie dans cette discipline. Le Burkina Faso, malgré des résultats en dents de scie, entend désormais accélérer sa préparation pour rivaliser avec son voisin. Le lutteur burkinabè champion dans les 76 kg En effet, pour cette deuxième édition des jeux de l'AES, la lutte a tenu ses promesses. Les représentants du Burkina Faso, du Mali et du Niger se sont affrontés dans les catégories de 60, 66, 76, 86 et 100 kg chez les hommes. Dans la catégorie des 60 kg, le Niger termine premier, devant le Burkina Faso, et le Mali. Le classement reste identique chez les 66 kg. Le Burkina Faso s’est toutefois imposé dans la catégorie des 76 kg, devant le Niger et le Mali. Chez les 86 kg, le Mali décroche la première place, suivi du Niger, tandis que le Burkina Faso ferme le classement. Enfin, dans la catégorie des 100 kg, le Niger reprend la première place, devant le Burkina Faso et le Mali. Toutes les équipes réunies pour entonner l'hymne du Niger Sibiri Ki : « Une petite erreur de ma part » Vice-champion dans la catégorie des 66 kg, Sibiri Ki, ancien champion de cette catégorie lors de la première édition des Jeux de l’AES au Mali, reconnaît avoir manqué de confiance lors de son combat face au Nigérien. « Ce qui n’a pas marché, c’est le manque de confiance. Une petite erreur de ma part a montré la technicité de mon adversaire nigérien », a-t-il expliqué. Malgré cette deuxième place, le lutteur burkinabè se projette déjà vers la prochaine édition. « Avec l’intensification des entraînements, nous allons arracher de nouveau notre première place », promet Sibiri Ki. Chez les dames, les Burkinabè ont largement dominé les débats. Le plus long combat n’aura duré qu’une minute et dix secondes. Les lutteuses burkinabè ont raflé les médailles d’or, aussi bien en équipe qu’en individuel. « Je suis très heureuse. Ce n’est pas de la sorcellerie, c’est juste des entraînements », s’est réjouie Edith B. Kourouné, médaillée d’or dans la catégorie des 65 kg. Ibrahime Mamane, entraîneur des lutteurs nigériens entend poursuivre le titre de champion du monde Selon elle, les lutteuses maliennes « se sont donné et se sont battues comme elles le pouvaient », mais les Burkinabè ont été « plus décisives et plus fortes ». Mlle Kourouné promet de poursuivre les entraînements pour maintenir le niveau. Le Niger assume sa suprématie Pour l’entraîneur des lutteurs nigériens, Ibrahime Mamane cette performance est le résultat d’un travail préparé en amont. « Nous l’avons préparée d’avance et le résultat est là devant vous aujourd’hui », a-t-il déclaré. Affichant déjà de grandes ambitions pour la suite, M. Mamane dit ceci : « nous comptons être champions du monde, pourquoi pas, en matière de lutte ». Le technicien nigérien a également salué les progrès du Burkina Faso. « Le Burkina de 2025 n’est pas le Burkina de 2026 », a-t-il constaté, estimant avoir observé une nette évolution dans le comportement et le niveau des athlètes burkinabè. Du côté burkinabè, la satisfaction est présente malgré la domination nigérienne. L’entraîneur national, Blaise Debé estime que ses lutteurs ont livré des prestations encourageantes, notamment face au Niger. « Depuis longtemps, c’est le Niger qui est vraiment notre bête noire, que nous cherchons vraiment à battre », a-t-il expliqué. M. Debé estime que certains combats se sont joués sur des détails : « Sur les cinq lutteurs, nous avons eu au moins deux victoires ». Le technicien regrette toutefois le résultat des 66 kg, évoquant une situation d’arbitrage qui, selon lui, aurait mérité une reprise du combat. « Le lutteur avait un pied dehors. Le règlement dit qu’on reprend le combat », a-t-il affirmé, tout en précisant ne pas vouloir « accuser l’arbitrage ». Malgré cette réserve, Blaise Debé retient surtout l’engagement de ses athlètes. « Dans l’ensemble, je pense que les lutteurs ont donné ce qu’ils avaient. À nous, chacun a mouillé le maillot », a-t-il assuré. Concernant les filles, l’absence de lutteuses nigériennes n’enlève rien, selon le technicien, à la performance burkinabè. « Elles étaient au top mentalement, physiquement, techniquement et tactiquement », a-t-il souligné. « Le Niger n’est pas une montagne à escalader » Même constat de satisfaction du côté du Président de la Fédération burkinabè de lutte, Ousséni Kabré. Il salue le niveau de l’organisation, la mobilisation du public et la compétitivité des athlètes. « Franchement, je suis satisfait », a-t-il déclaré, estimant que les résultats permettent aux encadreurs de mesurer les acquis et d’identifier les aspects à améliorer. Ousséni Kabré, Président de la fédération de lutte au Burkina Faso, se dit satisfait de l'ensemble des resultats Pour lui, le Burkina Faso peut progressivement s’imposer comme une grande nation de lutte. « Le Niger n’est pas une montagne à escalader », a lancé M. Kabré avant d’annoncer la mise en œuvre d’un plan stratégique destiné à développer davantage la discipline au Burkina Faso. Le Président de la fédération de lutte, cite notamment l’exemple du championnat national nigérien, dont l’organisation mobiliserait, selon lui, environ 400 millions de francs CFA. Un investissement qui, estime M. Kabré, pourrait permettre au Burkina Faso de détecter et de former davantage de jeunes talents. Des primes pour les médaillés À l’issue des compétitions, les athlètes classés dans les différentes catégories ont également été récompensés. Grâce à la vision du chef de l'État du Burkina Faso en particulier et de celui de la confédération en général, le premier de chaque catégorie repart avec 400 000 francs CFA, le deuxième avec 300 000 francs CFA et le troisième avec 200 000 francs CFA. Enfin, malgré la suprématie du Niger sur le plan masculin, les performances des lutteuses et la progression affichée par les athlètes burkinabè donnent déjà rendez-vous aux prochaines échéances de l’AES. Il faut noter que d'autres disciplines se poursuivent dans différents axes sportifs de Ouagadougou. Nadège KINDA Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "H",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
       "title": "Moringa au Sahel : La science et la filière s’unissent pour relever le défi de la qualité de la semence à la plante médicinale",
       "link": "https://burkina24.com/2026/09/14/moringa-au-sahel-la-science-et-la-filiere-sunissent-pour-relever-le-defi-de-la-qualite-de-la-semence-a-la-plante-medicinale/",
       "pubDate": "2026-09-14T17:48:32.000Z",
@@ -1028,6 +962,71 @@
       "_score": 123,
       "_zone": 1,
       "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Pépiniéristes de Bobo-Dioulasso : entre passion et engagement pour l’environnement",
+      "link": "https://www.sidwaya.info/pepinieristes-de-bobo-dioulasso-entre-passion-et-engagement-pour-lenvironnement/",
+      "pubDate": "2026-09-14T23:42:37.000Z",
+      "description": "La production de plants constitue une activité à la fois économique et environnementale qui gagne du terrain au Burkina Faso. A Bobo-Dioulasso, les pépiniéristes s’investissent au quotidien dans la sauvegarde de l’environnement et le développement de leurs activités. Pour les acteurs de la filière, l’arbre représente à la fois une richesse naturelle, une source de revenus et un investissement pour l’avenir. C’est le constat fait dans la zone pépinière de Kôkô à Bobo-Dioulasso. Bobo-Dioulasso, mardi 25 août 2026. La journée commence au milieu des plants de la zone de production de pépinière dénommée : « coopérative Faso vert » située dans le quartier Kôkô de la ville. Dans les pépinières visitées, les plants d’arbres fruitiers, d’espèces sauvages et de plantes ornementales occupent les espaces disponibles. Les jeunes plants sont disposés dans des sachets, alignés les uns à côté des autres, en attendant d’être vendus et transférés vers les sites de plantation. Plusieurs acteurs exercent dans le secteur avec le double objectif de contribuer au reboisement de la région du Guiriko et du reste du pays, tout en tirant des revenus de leurs activités. Depuis 2005, Sami Crépin Tioyé travaille dans ce domaine. Il a fait ses premiers pas auprès de son « petit papa », qui lui a transmis des techniques de production, avant de suivre des formations pour approfondir ses connaissances. Pour Fousseni Sanou, le métier est le fruit d’un long parcours. Alors qu’il était encore élève, il profitait de ses vacances pour aider un patron dans de petites tâches. Ce qui devait être une occupation temporaire s’est transformée en véritable vocation. Devenu apprenti en 2006, il a commencé à pratiquer les travaux de terrain entre 2010 et 2015. Plusieurs formations organisées par le gouvernement et des projets lui ont ensuite permis de consolider son expérience. Des techniquesmaitrisées pour la production La production des plants obéit à des techniques précises. Le semis consiste à placer les graines dans un substrat afin d’obtenir de jeunes plants. Les producteurs ont également recours au bouturage, au marcottage. Ces méthodes de multiplication végétative permettent de reproduire de nouvelles plantes à partir d’une plante mère. Le temps nécessaire à la production dépend de l’espèce et de la technique utilisée. Selon Sami Crépin Tioyé, les délais de production varient considérablement. Les plants issus de semis peuvent nécessiter une année ou plus avant d’être proposés à la vente. Certains plants obtenus par bouturage sont, en revanche, commercialisables après trois à cinq mois. Leur production comprend des arbres fruitiers, des espèces sauvages et des plantes ornementales. Les plants sont issus de plusieurs provenances, notamment du Burkina Faso, de la Côte d’Ivoire, du Ghana et du Mali. Cette diversité permet aux acteurs de répondre aux demandes des particuliers, des producteurs, des entreprises et des initiatives de reboisement. Le constat fait sur le terrain est celui d’une activité qui bénéficie d’un marché favorable. « Le marché est bon actuellement », affirme Tioyé Sami Crépin. Selon les pépiniéristes, l’intérêt des autorités pour la plantation d’arbres et la promotion d’un Burkina Faso vert ont contribué à accroitre la commande. Les plants destinés au reboisement et les agrumes, notamment les tangelos, les orangers et les citronniers, figurent parmi les espèces les plus recherchées en saison pluvieuse. Les plantes ornementales sont également demandées par les particuliers et certaines structures. Le prix des plants est fixé de 100 F CFA au-delà de 50 000 F CFA en fonction de leurs variétés. Pour certains, comme le souligne Sibiri Sanou, les producteurs peuvent se retrouver avec des plants prêts à être commercialisés, mais une demande insuffisante. Cette situation fragilise leur activité. La production ne s’arrête pas à la vente. Les pépiniéristes assurent parfois le suivi des clients et se rendent sur les sites pour planter les arbres lorsque cela est nécessaire. Les plants doivent ensuite être régulièrement entretenus et protégés contre les vers, les insectes et les mouches blanches. Selon Fousseni Sanou, les traitements favorisent la croissance des arbres et peuvent leur permettre de commencer à produire des fruits à partir de la deuxième année. « Nos équipes accompagnent les clients qui le souhaitent jusque dans les plantations. Elles peuvent notamment assurer la mise en terre des plants et donner des conseils sur leur entretien », explique-t-il. Une importante source d’emploi Au fil des échanges, les producteurs présentent une activité qui exige de la patience, de la maîtrise technique et un suivi régulier, mais qui offre également des perspectives économiques intéressantes. La production des plants reste une source de revenus pour de nombreux acteurs. Elle contribue à soutenir des familles et à financer des réalisations importantes. Les revenus permettent à certains producteurs de construire, d’acquérir des moyens de déplacement. Pour Sami Crépin Tioyé, cette activité permet à plusieurs acteurs de subvenir à leurs besoins et d’améliorer leur condition de vie. La filière constitue également une importante source d’emploi dans la ville. Plusieurs personnes tirent des revenus de ce travail. Fousseni Sanou affirme qu’il emploie aujourd’hui plus d’une dizaine de personnes et participe à la formation de nouveaux acteurs. La production des plants offre un terrain de pratique aux étudiants des écoles professionnelles de la ville de Bobo-Dioulasso. « Des étudiants envoyés par des universités viennent se former dans les pépinières à la recherche d’une expérience professionnelle », confie Fousseni Sanou. Des élèves et des étudiants passionnés du travail viennent y travailler pendant les vacances dans le but de gagner des ressources pour subvenir à leurs besoins scolaires. C’est le cas de Christian Somé, un élève qui travaille dans une pépinière à chaque vacance. « Depuis la classe de CM2, je viens travailler pendant les vacances et repartir fréquenter », témoigne-t-il. Pour lui, cette activité représente une occasion de soutenir ses études tout en apprenant un métier. Les pépinières constituent un outil important de reboisement, de lutte contre la désertification, de conservation de la biodiversité et d’amélioration du cadre de vie au Burkina Faso. Plusieurs témoignages illustrent l’importance de l’arboriculture. Karim Diarra, planteur contribuant au reboisement et promoteur de la ferme Diarra à Dédougou, s’est approvisionné en plants au centre Coopérative Faso vert. Sa ferme couvre aujourd’hui plus de 15 hectares. Six hectares sont consacrés aux tangelos, aux orangers, aux citronniers et aux goyaviers. L’anacardier occupe neuf hectares, auxquels s’ajoutent des eucalyptus et d’autres variétés. « J’ai commencé la plantation, il y a trois ans et la majorité des plantes ont commencé à produire », déclare Karim Diarra. Cette première récolte représente une étape importante pour lui, car, elle concrétise les efforts consentis depuis le lancement de son activité. Yacouba Sawadogo, client et planteur également depuis 8 ans à Dawéra dans la province du Houet est aussi venu acheter des arbres dans la pépinière de Kôkô. Il affirme qu’il possède plusieurs hectares de plantation, dont plus de dix hectares d’anacardiers. Il cultive également le manguier, le citronnier, l’oranger et le baobab. « L’arbre est très bénéfique pour moi, j’en ai déjà tiré plusieurs avantages », souligne-t-il. M. Sawadogo affirme que les visites de son champ lui ont valu des cadeaux dont trois motos. Cette année, la vente de sa production d’anacarde lui a rapporté près de deux millions F CFA selon ses dires. Enseignante et passionnée de l’arboriculture, Djeneba Sawadogo s’est rendue sur le site avec une amie pour acheter des plants destinés à être mis en terre. Dans son établissement, elle a transformé la cour de l’école en véritable espace de verdure, où elle pratique le jardinage et cultive notamment des arbres fruitiers dont les récoltes sont consommées. Pour elle, l’arbre joue un rôle essentiel dans l’environnement scolaire. « L’ombre constitue un cadre d’étude pour les enfants et les exercices pratiques », a-t-elle souligné. Un investissement de longue haleine Dans les plantations, la réussite dépend aussi du suivi. Le traitement régulier des plants favorise la croissance des plants. Pour Karim Diarra et Yacouba Sawadogo, l’arboriculture est une activité qui demande de la passion, de la patience et une présence constante. « Il ne suffit pas de planter un arbre : il faut également le protéger, l’arroser et suivre son évolution jusqu’à sa pleine production. », insiste Karim Diarra Le promoteur de ferme explique que les plants doivent être traités avant leur mise en terre. Une attention particulière est accordée à la lutte contre les termites, qui peuvent détruire les jeunes arbres. Après un à deux mois, un apport de fumure organique est effectué afin de favoriser la croissance des plants. Environ six mois plus tard, le traitement contre les termites doit être renouvelé, tandis que l’arrosage reste indispensable, surtout durant les périodes de forte chaleur. Cette exigence d’entretien explique, selon Yacouba Sawadogo, pourquoi certains projets de plantation n’atteignent pas les résultats escomptés. « L’arbre est un investissement de longue durée. Il ne produit pas immédiatement et nécessite des soins réguliers avant de devenir une source de revenus ou de nourriture », soutient-il. C’est ainsi qu’il explique que son parcours n’est toutefois pas exempt de difficultés. Pour arroser ses manguiers et ses agrumes, il dépend d’un puits. « Le travail est avantageux, mais le début reste difficile. Il nécessite un sacrifice », prévient-il. « Certains arbres meurent malgré l’entretien et les traitements appliqués. Ces pertes représentent un manque à gagner et obligent le producteur à renouveler régulièrement les plants », ajoute Karim Diarra. Il encourage néanmoins les populations à s’intéresser davantage à l’arboriculture fruitière. Il y voit un moyen de renforcer l’autosuffisance alimentaire et de réduire la dépendance aux importations de fruits. Une production locale plus importante pourrait favoriser la transformation à travers la création des unités de transformation selon la vision des autorités actuelles pour promouvoir la politique du « consommons local ». Des contraintes qui appellent un accompagnement L’accès à l’eau conditionne l’avenir de la filière. Malgré ses potentialités, la production de plants demeure fragile. La principale difficulté reste l’accès à l’eau. « L’eau est à la base de tout », rappelle Sami Crépin Tioyé. En 2024, la pénurie a conduit certains producteurs à envisager de renoncer à leur activité. Pour continuer à travailler, Fousseni Sanou a creusé un puits. Le manque d’eau a obligé parfois les travailleurs à parcourir de longues distances avec des barriques afin d’alimenter les pépinières. Cette opération est pénible et coûteuse. Selon Sibiri Sanou, une barrique d’eau peut coûter environ 250 F CFA alors qu’il faut arroser un vaste champ de pépinière. Sans arrosage régulier, les jeunes plants se dessèchent rapidement. La période sèche exige davantage de temps, de main-d’œuvre et de moyens financiers. La réalisation d’un grand forage à Bolomakoté par l’Organisation catholique pour le développement et la solidarité (OCADES) a permis d’atténuer les difficultés, selon les pépiniéristes. Les maladies représentent une autre menace. Lorsqu’un arbre tombe malade, les travailleurs doivent traiter l’ensemble de la production, car, un seul plant contaminé peut transmettre la maladie aux autres. La prévention est donc essentielle. Le manque d’espace constitue une autre préoccupation. « Les commandes de l’Etat et de certaines entreprises exigent parfois une production en grande quantité et les superficies disponibles ne permettent pas toujours de répondre à ces demandes. Pourtant c’est dans la production de quantité qu’il y a de l’argent », fait remarquer Fousseni Sanou. Les producteurs souhaitent donc disposer d’espaces plus vastes, dotés de points d’eau et d’équipements adaptés. La main-d’œuvre qualifiée et permanente fait également défaut. Les jeunes, selon les producteurs, sont de moins en moins nombreux à accepter le temps nécessaire à l’apprentissage du métier. Pour faire face à cette situation, les responsables de pépinières mobilisent leurs enfants pendant les vacances et accueillent des élèves et des étudiants à la recherche de revenus pour leurs besoins scolaires. Pour les pépiniéristes comme pour les planteurs, l’arbre doit être davantage valorisé. Ils appellent à la création d’espaces de production plus grands, à la sécurisation de l’approvisionnement en eau et à l’accompagnement des spécialistes. Au regard de l’importance de l’arbre à l’école, Djeneba Sawadogo a affirmé qu’elle avait élaboré un projet destiné au ministère chargé de l’Enseignement de base. Son ambition est d’intégrer la production de plants dans les écoles et d’en faire une activité éducative à part entière. Ce projet va initier les élèves à la plantation, à l’entretien des arbres et à leur importance dans la vie quotidienne. « L’enfant doit comprendre comment l’arbre évolue jusqu’à donner des fruits, Il faut concrétisertout ça à l’école », conseille-t-elle. Elle affirme que son projet qui a coïncidé, avec la Covid-19, n’a pas reçu de suite favorable. Malgré ce contretemps, elle a réussi à mettre un jardin pédagogique en place dans l’école où elle exerce à Ouahigouya. Elle vise la réalisation de jardins pédagogiques dans quatre écoles et l’Etat, les organisations, les associations et toutes les personnes de bonne volonté à soutenir les passionnés engagés dans la promotion de l’environnement et de l’économie verte. Cet accompagnement pourrait porter sur la mise à disposition de plants, de matériel d’arrosage, de clôtures, de semences et de moyens de formation. Tioyé Sami Crépin invite, pour sa part, les jeunes à s’intéresser à l’arboriculture. Dans les pépinières de Bobo-Dioulasso, la production de plants apparaît ainsi comme un métier de patience et de sacrifice, mais aussi comme une activité porteuse d’espoir pour l’environnement, l’emploi et l’économie locale. Pengd Wendé Charles BAMOGO (Stagiaire) Investir dans l’arbre, c’est investir dans l’avenir L’arbre est un véritable allié de la vie. Il purifie l’air en absorbant le dioxyde de carbone, produit de l’oxygène, protège les sols contre l’érosion et contribue à la régulation du climat. Il offre également de l’ombre, favorise la biodiversité, améliore le paysage et peut fournir des fruits, et des revenus aux familles. La plantation des arbres devient nécessaire dans le contexte actuel du Burkina Faso où la déforestation, la sècheresse constituent un enjeu. Ensemble investissons dans l’arbre, ne serait-ce que planter même un seul arbre est un acte bénéfique à l’environnement, en nous et à la génération future. En plantant ou en protégeant un arbre, vous participez à la restauration de l’environnement et à la création d’un avenir plus sain pour tous. Chaque plant compte : investissons ensemble dans la plantation et la protection des arbres. P.W.C.B",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "À Bobo-Dioulasso, les élèves du Guiriko invités à devenir les acteurs du réarmement mental",
+      "link": "https://www.aib.media/a-bobo-dioulasso-les-eleves-du-guiriko-invites-a-devenir-les-acteurs-du-rearmement-mental/",
+      "pubDate": "2026-09-14T20:46:22.000Z",
+      "description": "À Bobo-Dioulasso, les élèves du Guiriko invités à devenir les acteurs du réarmement mental Bobo-Dioulasso, 14 sept. 2026 (AIB) – La Direction régionale de l’Enseignement secondaire et de la Formation professionnelle et technique du Guiriko a ouvert le samedi 12 septembre 2026, un espace de dialogue avec les élèves autour d’un enjeu majeur : mieux comprendre la Révolution Progressiste Populaire (RPP) et ses implications pour la jeunesse. Les échanges ont eu lieu en présence du Ministre de l’Enseignement secondaire et de la Formation professionnelle et technique, Pr Moumouni Zoungrana de ses proches collaborateurs et du Gouverneur de la région du Guiriko, Mariama Konaté/Gnanou. Pendant près de deux heures, les panelistes se sont succédé pour apporter des éclairages complémentaires sur le sujet. Le Commandant de la 2ᵉ Région militaire Lieutenant-colonel Lassané Porgo a introduit les échanges, avant que le Directeur général de la Police municipale, le chargé de mission à la Présidence du Faso pour la région du Guiriko et l’écrivaine Maiga/Ouédraogo Nobila Mariam ne se penchent chacun sur les fondements et les orientations de la Révolution Progressiste Populaire pour la jeunesse. Le Pr Moumouni Zoungrana a rappelé une chose « les jeunes doivent comprendre que cette révolution est là pour eux ». Modérés par le Directeur régional de l’Enseignement secondaire et de la Formation professionnelle et technique du Guiriko, Tanga Ouédraogo, les échanges ont surtout permis de rapprocher les grandes orientations de la RPP des réalités quotidiennes de l’école. Civisme, responsabilité, engagement, formation professionnelle, développement des compétences et contribution à la souveraineté nationale ont ainsi nourri les discussions. La phase des questions a donné aux élèves l’occasion d’exprimer leurs préoccupations et de mieux saisir leur rôle dans les réformes en cours. Avant le début du panel, les appelés de l'immersion patriotique obligatoire présents ont reçu des kits de connexion Telecel. Chaque participant est reparti avec un exemplaire du Manifeste de la RPP. À travers cette initiative, la Direction régionale du Guiriko entend contribuer à une meilleure appropriation des idéaux de la Révolution Progressiste Populaire, ce qui permettra à chacun de jouer harmonieusement sa partition. Agence d’information du Burkina En collaboration avec DCRP/MESFPT",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1132,6 +1131,22 @@
   ],
   "alerts": [
     {
+      "title": "Benue blockade: Ominous start to 2027 campaigns",
+      "link": "https://punchng.com/benue-blockade-ominous-start-to-2027-campaigns/?utm_source=rss.punchng.com&utm_medium=web",
+      "source": "Punch (Nigeria)",
+      "date": "2026-09-15T00:06:24.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
       "title": "US reconnaissance drone flies over Persian Gulf for several hours",
       "link": "https://tass.com/world/2187529",
       "source": "TASS (Russie, EN)",
@@ -1162,64 +1177,48 @@
           "keyword": "assassinat"
         }
       ]
-    },
-    {
-      "title": "King Charles to host AI leaders as disaster warnings mount",
-      "link": "https://www.washingtonpost.com/world/2026/09/14/king-charles-host-ai-leaders-disaster-warnings-mount/",
-      "source": "Washington Post World",
-      "date": "2026-09-14T12:58:00.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      198
+      224
     ],
     [
       "occident_fr",
-      117
+      110
     ],
     [
       "occident_us",
-      111
+      105
     ],
     [
       "autre",
-      86
+      83
     ],
     [
       "golfe_mo",
-      65
+      74
     ],
     [
       "turquie",
-      59
-    ],
-    [
-      "russie",
-      49
+      57
     ],
     [
       "bf_local",
-      49
+      48
+    ],
+    [
+      "russie",
+      43
     ],
     [
       "sahel",
-      41
+      33
     ],
     [
       "chine",
-      25
+      23
     ]
   ],
   "desks": [
@@ -1227,7 +1226,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 129,
+      "count": 125,
       "top": [
         {
           "title": "Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb",
@@ -1248,24 +1247,6 @@
           "rating": "C1"
         },
         {
-          "title": "AES : Les experts vétérinaires en conclave à Ouagadougou pour harmoniser la riposte contre les maladies animales transfrontalières",
-          "link": "https://faso7.com/2026/09/14/aes-les-experts-veterinaires-en-conclave-a-ouagadougou-pour-harmoniser-la-riposte-contre-les-maladies-animales-transfrontalieres/",
-          "source": "Faso7",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Jeux de l’AES | Lutte : Le Niger domine chez les hommes, les lutteuses burkinabè s’imposent chez les dames",
-          "link": "https://www.minute.bf/jeux-de-laes-lutte-le-niger-domine-chez-les-hommes-les-lutteuses-burkinabe-simposent-chez-les-dames/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Moringa au Sahel : La science et la filière s’unissent pour relever le défi de la qualité de la semence à la plante médicinale",
           "link": "https://burkina24.com/2026/09/14/moringa-au-sahel-la-science-et-la-filiere-sunissent-pour-relever-le-defi-de-la-qualite-de-la-semence-a-la-plante-medicinale/",
           "source": "Burkina24",
@@ -1273,6 +1254,24 @@
           "theme": "D",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Pépiniéristes de Bobo-Dioulasso : entre passion et engagement pour l’environnement",
+          "link": "https://www.sidwaya.info/pepinieristes-de-bobo-dioulasso-entre-passion-et-engagement-pour-lenvironnement/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "À Bobo-Dioulasso, les élèves du Guiriko invités à devenir les acteurs du réarmement mental",
+          "link": "https://www.aib.media/a-bobo-dioulasso-les-eleves-du-guiriko-invites-a-devenir-les-acteurs-du-rearmement-mental/",
+          "source": "AIB — Agence Information BF",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "C2"
         }
       ]
     },
@@ -1280,7 +1279,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 52,
+      "count": 72,
       "top": [
         {
           "title": "Black Maidens confident of WAFU B title defense ahead of Burkina Faso clash",
@@ -1292,40 +1291,40 @@
           "rating": "F2"
         },
         {
-          "title": "Visa restrictions costing African businesses opportunities – Gabby Otchere-Darko",
-          "link": "https://www.myjoyonline.com/visa-restrictions-costing-african-businesses-opportunities-gabby-otchere-darko/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Benue blockade: Ominous start to 2027 campaigns",
+          "link": "https://punchng.com/benue-blockade-ominous-start-to-2027-campaigns/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "Results before style: Why sticking with Carlos Queiroz is a great decision",
-          "link": "https://www.myjoyonline.com/results-before-style-why-sticking-with-carlos-queiroz-is-a-great-decision/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Un influenceur retrouvé mort à son domicile",
-          "link": "https://www.wakatsera.com/un-influenceur-retrouve-assassine-a-son-domicile/",
-          "source": "Wakat Séra",
+          "title": "FG raises N1.23trn to tackle N4trn GenCos’ legacy debt",
+          "link": "https://www.vanguardngr.com/2026/09/fg-raises-n1-23trn-to-tackle-n4trn-gencos-legacy-debt/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "I",
+          "theme": "E",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         },
         {
-          "title": "Africa’s richest man launches continent’s biggest share sale",
-          "link": "https://www.myjoyonline.com/africas-richest-man-launches-continents-biggest-share-sale/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Tinubu orders release of funds to regional commissions",
+          "link": "https://punchng.com/tinubu-orders-release-of-funds-to-regional-commissions-2/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A1"
+        },
+        {
+          "title": "When the throne takes sides: Delta’s traditional institution must not become political campaign platform, by Ejiro Ofoye",
+          "link": "https://www.vanguardngr.com/2026/09/when-the-throne-takes-sides-deltas-traditional-institution-must-not-become-political-campaign-platform-by-ejiro-ofoye/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1333,7 +1332,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 24,
+      "count": 18,
       "top": [
         {
           "title": "Beni : une journée de deuil observée après le triple assassinat de Butanuka",
@@ -1363,22 +1362,22 @@
           "rating": "F2"
         },
         {
-          "title": "Combien coûte la liberté de parole en politique ?",
-          "link": "https://www.gabonreview.com/combien-coute-la-liberte-de-parole-en-politique/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
+          "title": "GUERRE AU SOUDAN : La partition du pays est-elle encore évitable ?",
+          "link": "https://lepays.bf/guerre-au-soudan-la-partition-du-pays-est-elle-encore-evitable-2/",
+          "source": "Le Pays (BF)",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Walikale : calme précaire à Chanjikiro et Buhimba après deux jours d’affrontements",
-          "link": "https://actualite.cd/2026/09/14/walikale-calme-precaire-chanjikiro-et-buhimba-apres-deux-jours-daffrontements",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "S",
+          "title": "Cameroun : Alamine Ousmane Mey, l’électron libre du pouvoir",
+          "link": "https://www.jeuneafrique.com/1841972/politique/cameroun-alamine-ousmane-mey-lelectron-libre-du-pouvoir/",
+          "source": "Jeune Afrique",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "B2"
         }
       ]
     },
@@ -1386,16 +1385,16 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 30,
+      "count": 33,
       "top": [
         {
-          "title": "Séance de travail entre les Premiers ministres malien et algérien à Bamako",
-          "link": "https://www.wakatsera.com/seance-de-travail-entre-les-premiers-ministres-malien-et-algerien-a-bamako/",
+          "title": "Bamako: quand les Premiers ministres malien et algérien se retrouvent",
+          "link": "https://www.wakatsera.com/bamako-quand-les-premiers-ministres-malien-et-algerien-se-retrouvent/",
           "source": "Wakat Séra",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "C2"
         },
         {
           "title": "Algérie – Émirats : Amar Belani recadre Anwar Gargash, conseiller de MBZ",
@@ -1407,6 +1406,15 @@
           "rating": "F2"
         },
         {
+          "title": "Mali : le Premier ministre algérien Sifi Ghrieb à Bamako pour relancer la coopération",
+          "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260914-mali-le-premier-ministre-alg%C3%A9rien-sifi-ghrieb-%C3%A0-bamako-pour-relancer-la-coop%C3%A9ration",
+          "source": "France 24",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A1"
+        },
+        {
           "title": "Le Premier ministre algérien au Mali, la grande commission mixte au cœur de la visite",
           "link": "https://www.studiotamani.org/207718-le-premier-ministre-algerien-au-mali-la-grande-commission-mixte-au-coeur-de-la-visite",
           "source": "Studio Tamani (Mali)",
@@ -1416,20 +1424,11 @@
           "rating": "A1"
         },
         {
-          "title": "Une majorité d’Espagnols favorables au maintien de bonnes relations avec Rabat",
-          "link": "https://fr.hespress.com/488333-une-majorite-despagnols-favorables-au-maintien-de-bonnes-relations-avec-rabat.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "​SNCFT | Reprise de la ligne Tunis-Annaba ce 15 septembre",
+          "link": "https://kapitalis.com/tunisie/2026/09/14/sncft-reprise-de-la-ligne-tunis-annaba-ce-15-septembre/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Essais nucléaires français en Algérie : Paris répond sur la remise des cartes",
-          "link": "https://www.tsa-algerie.com/essais-nucleaires-francais-en-algerie-paris-repond-sur-la-remise-des-cartes/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "N",
+          "theme": null,
           "relevance": ".",
           "rating": "F2"
         }
@@ -1439,7 +1438,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 101,
+      "count": 105,
       "top": [
         {
           "title": "Le splendide isolement de l’Arabie saoudite",
@@ -1460,31 +1459,31 @@
           "rating": "F2"
         },
         {
-          "title": "Mer Rouge : le détroit s'embrase-t-il ? Les Houthis frappent l’Arabie saoudite et gagnent du terrain",
-          "link": "https://www.france24.com/fr/%C3%A9missions/le-d%C3%A9bat/20260914-mer-rouge-le-d%C3%A9troit-s-embrase-t-il-les-houthis-frappent-l-arabie-saoudite-et-gagnent-du-terrain",
+          "title": "Des fausses vidéos pour illustrer les frappes houthis en Arabie Saoudite",
+          "link": "https://www.france24.com/fr/%C3%A9missions/info-ou-intox/20260914-des-fausses-vid%C3%A9os-pour-illustrer-les-frappes-houthis-en-arabie-saoudite",
           "source": "France 24",
           "zone": "8. Moyen-Orient",
-          "theme": "M",
+          "theme": "S",
           "relevance": "A",
           "rating": "A1"
         },
         {
-          "title": "Govt increases petrol by Rs4.42 per litre, HSD by Rs6.10 per litre amid rising global oil prices",
-          "link": "https://www.dawn.com/news/2029913/govt-increases-petrol-by-rs442-per-litre-hsd-by-rs610-per-litre-amid-rising-global-oil-prices",
-          "source": "Dawn (Pakistan)",
+          "title": "Le baril de pétrole à plus de 100 dollars alors que la tension monte au Moyen-Orient",
+          "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260914-le-baril-de-p%C3%A9trole-%C3%A0-plus-de-100-dollars-alors-que-la-tension-monte-au-moyen-orient",
+          "source": "France 24",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
+          "theme": "M",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A2"
         },
         {
-          "title": "UN voices 'deep concern' over Israeli strikes killing civilians across Gaza",
-          "link": "https://www.aa.com.tr/en/middle-east/un-voices-deep-concern-over-israeli-strikes-killing-civilians-across-gaza/4057064",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Oil hits $109 after Saudi Arabia closes vital export pipeline",
+          "link": "https://www.ft.com/content/4845a503-3ddd-4bb7-a469-c51f275bc873?syn-25a6b1a6=1",
+          "source": "Financial Times World",
           "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
         }
       ]
     },
@@ -1492,16 +1491,16 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 151,
+      "count": 158,
       "top": [
         {
-          "title": "Le progressisme IA a trouvé son discours fondateur",
-          "link": "https://legrandcontinent.eu/fr/2026/09/14/le-progressisme-ia-a-trouve-son-discours-fondateur/",
-          "source": "Le Grand Continent",
+          "title": "Trump’s Kennedy Center Shakedown",
+          "link": "https://www.theatlantic.com/ideas/2026/09/trump-kennedy-center/688618/?utm_source=feed",
+          "source": "The Atlantic",
           "zone": "16. Amérique du Nord",
           "theme": "P",
           "relevance": "L",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
           "title": "KP CM claims he was 'abducted' by authorities in Lahore; Punjab minister denies allegations",
@@ -1531,11 +1530,11 @@
           "rating": "C2"
         },
         {
-          "title": "Taiwan defence logistics under fire over missing chargers for US drones",
-          "link": "https://www.scmp.com/news/china/military/article/3367474/taiwan-defence-logistics-under-fire-over-missing-chargers-us-drones?utm_source=rss_feed",
-          "source": "South China Morning Post",
-          "zone": "14. Extrême-Orient",
-          "theme": "S",
+          "title": "Investissements : le Président Diomaye Faye présente les priorités du Sénégal au secteur privé américain",
+          "link": "https://lesoleil.sn/actualites/investissements-le-president-diomaye-faye-presente-les-priorites-du-senegal-au-secteur-prive-americain/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
           "relevance": "L",
           "rating": "A2"
         }
@@ -1555,42 +1554,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-14T19:50:34.762Z",
+      "at": "2026-09-14T23:51:57.086Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-14T19:50:34.770Z",
+      "at": "2026-09-14T23:51:57.093Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-14T19:51:04.276Z",
+      "at": "2026-09-14T23:52:23.800Z",
       "agent": "Agent Collecte RSS",
-      "message": "108/170 flux OK, 1893 articles"
+      "message": "106/170 flux OK, 1859 articles"
     },
     {
-      "at": "2026-09-14T19:51:07.358Z",
+      "at": "2026-09-14T23:52:27.073Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-14T19:51:07.651Z",
+      "at": "2026-09-14T23:52:27.399Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-14T19:51:07.657Z",
+      "at": "2026-09-14T23:52:27.404Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 3 alertes"
     },
     {
-      "at": "2026-09-14T19:51:07.657Z",
+      "at": "2026-09-14T23:52:27.405Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-14T19:51:07.657Z",
+      "at": "2026-09-14T23:52:27.405Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
