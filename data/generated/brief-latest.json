@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-15T04:54:40.310Z",
+  "generatedAt": "2026-09-15T11:44:36.405Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 109,
-    "failed": 61,
-    "articles": 1897,
+    "ok": 110,
+    "failed": 60,
+    "articles": 1920,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -36,6 +36,11 @@
         "id": "rss_lepays_bf",
         "name": "Le Pays (BF)",
         "count": 12
+      },
+      {
+        "id": "rss_eco_faso",
+        "name": "L'Économiste du Faso",
+        "count": 10
       },
       {
         "id": "rss_faso7",
@@ -258,11 +263,6 @@
         "count": 10
       },
       {
-        "id": "rss_ifri",
-        "name": "IFRI — Institut Français RI",
-        "count": 10
-      },
-      {
         "id": "rss_lemonde",
         "name": "Le Monde International",
         "count": 20
@@ -286,6 +286,11 @@
         "id": "rss_f24afr",
         "name": "France 24 Afrique",
         "count": 29
+      },
+      {
+        "id": "rss_jeuneafr",
+        "name": "Jeune Afrique",
+        "count": 30
       },
       {
         "id": "rss_rfiafr",
@@ -375,7 +380,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_fp",
@@ -400,7 +405,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 29
       },
       {
         "id": "rss_bbc_africa",
@@ -420,7 +425,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 13
+        "count": 12
       },
       {
         "id": "rss_tass",
@@ -505,7 +510,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 29
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -554,11 +559,6 @@
       }
     ],
     "failedSources": [
-      {
-        "id": "rss_eco_faso",
-        "name": "L'Économiste du Faso",
-        "error": "This operation was aborted"
-      },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
@@ -667,7 +667,7 @@
       {
         "id": "rss_adiac",
         "name": "ADIAC — Dépêches Brazzaville",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_dailynation",
@@ -740,14 +740,14 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_ifri",
+        "name": "IFRI — Institut Français RI",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_frs",
         "name": "FRS — Fondation Recherche Stratégique",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_jeuneafr",
-        "name": "Jeune Afrique",
-        "error": "HTTP 403"
       },
       {
         "id": "rss_tv5afr",
@@ -863,12 +863,208 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 60,
-    "alerts": 1,
-    "criticalAlerts": 1,
-    "sourcesDistinct": 73
+    "bfAes": 52,
+    "alerts": 5,
+    "criticalAlerts": 3,
+    "sourcesDistinct": 69
   },
   "topDevelopments": [
+    {
+      "title": "Coopération transfrontalière : Les États de l’AES examinent de nouveaux projets de textes",
+      "link": "https://www.minute.bf/cooperation-transfrontaliere-les-etats-de-laes-examinent-de-nouveaux-projets-de-textes/",
+      "pubDate": "2026-09-15T10:54:46.000Z",
+      "description": "Le ministre de l’Administration territoriale et de la Mobilité, Émile Zerbo, représentant le premier ministre Rimtalba Jean Emmanuel Ouédraogo, a présidé, ce mardi 15 septembre 2026 à Ouagadougou, la cérémonie d’ouverture de la rencontre de validation et de signature des projets de textes sur la coopération transfrontalière entre les États membres de la Confédération des États du Sahel (AES). La rencontre se tient du 15 au 16 septembre. Pendant deux jours, les autorités administratives des régions frontalières des États membres de l’AES se réunissent pour échanger sur les mécanismes de renforcement de la coopération transfrontalière. Les travaux visent notamment à favoriser le dialogue entre les autorités des zones frontalières afin de contribuer à la stabilité, à la libre circulation des personnes et des biens, ainsi qu’au développement intégré des espaces frontaliers. Plus de détails à venir sur Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Ouverture à Niamey de la 4e édition de la Foire des industries culturelles du Niger sous le signe de la Refondation",
+      "link": "https://www.aib.media/ouverture-a-niamey-de-la-4e-edition-de-la-foire-des-industries-culturelles-du-niger-sous-le-signe-de-la-refondation/",
+      "pubDate": "2026-09-15T10:40:18.000Z",
+      "description": "NIGER-OUVERTURE-FICNI-2026 Ouverture à Niamey de la 4e édition de la Foire des industries culturelles du Niger sous le signe de la Refondation Ouagadougou, 15 sept. 2026 (AIB)- La 4ᵉ édition de la Foire des industries culturelles du Niger (FICNI), couplée à la réunion des ministres de la Culture de l’Alliance des États du Sahel (AES), s’est ouverte lundi 14 septembre 2026 à Niamey, sous le thème : « Quels rôles peuvent jouer les industries culturelles dans la refondation de la République ? » La cérémonie d’ouverture a été présidée par le ministre nigérien des Transports et de l’Aviation civile, le colonel-major Abdourahamane Amadou, représentant le Premier ministre, Ali Mahaman Lamine Zeine, en présence des ministres burkinabè et malien de la Culture, Pingdwendé Gilbert Ouédraogo et Mamou Daffé. La FICNI 2026 réunit des acteurs du secteur culturel, artistes, créateurs, producteurs, éditeurs, cinéastes, stylistes et artisans. Elle vise à mettre en valeur le potentiel culturel du Niger à travers plusieurs chaînes de valeurs, notamment le livre et l’édition, la mode et le design, le cinéma et l’audiovisuel, les arts plastiques, la musique et les spectacles. Le programme prévoit des expositions consacrées au livre, au spectacle, au cinéma et à l’audiovisuel, à la mode et au design, aux arts visuels et à la photographie. Des stands sont également consacrés aux structures d’accompagnement du secteur culturel, tandis que des conférences et des spectacles animés par des artistes nigériens sont programmés. Dans son discours, le Colonel-Major Abdourahamane Amadou a estimé que le couplage de la FICNI avec la rencontre des ministres de la Culture de l’AES constitue « une étape décisive ». Il a souligné qu’il s’agit de revisiter le cadre stratégique de la politique culturelle commune, d’évaluer les progrès accomplis et d’identifier les obstacles à l’opérationnalisation du plan d’action adopté en février 2025. Pour le ministre, « la culture n’est pas seulement un héritage à préserver », mais aussi « une force vivante », une source de créativité et d’épanouissement, un levier de développement économique et social et un vecteur de création d’emplois. Il a ainsi soutenu que « les métiers de la culture sont des métiers d’avenir ». Le Colonel-Major Abdourahamane Amadou a appelé les institutions publiques et privées, les opérateurs économiques, les responsables de programmes et projets ainsi que la population à consommer davantage les produits culturels nigériens et à soutenir les créateurs. Il a invité le public à visiter massivement la foire, du 14 au 18 septembre, et surtout à acheter les produits exposés. Prenant la parole au nom de l’AES, le ministre malien de la Culture, Mamou Daffé, a transmis les salutations des Présidents burkinabè Ibrahim Traoré et malien Assimi Goïta aux autorités nigériennes, avec à leur tête le général d’armée Abdourahamane Tiani. Il a relevé que les industries culturelles et créatives occupent une place stratégique dans la dynamique de refondation engagée au Sahel, pour valoriser les ressources endogènes, renforcer la souveraineté culturelle et économique et offrir de nouvelles perspectives à la jeunesse. Le Gouverneur de la région de Niamey, le Général de Division Assoumane Abdou Harouna, a, pour sa part, souligné le rôle des industries culturelles dans le développement identitaire et socio-économique, ainsi que dans la création d’emplois et le renforcement de la cohésion sociale. La cérémonie s’est déroulée en présence des membres du CNSP, du gouvernement et de plusieurs invités. La FICNI 2026 se tient du 14 au 18 septembre au Palais du 29 juillet de Niamey. Agence d'Information du Burkina Source: ANP",
+      "_source": "AIB — Agence Information BF",
+      "_sourceId": "rss_aib",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Les dessous de la rupture entre l’Algérie et les Émirats",
+      "link": "https://kapitalis.com/tunisie/2026/09/15/les-dessous-de-la-rupture-entre-lalgerie-et-les-emirats/",
+      "pubDate": "2026-09-15T07:59:00.000Z",
+      "description": "L’Algérie a justifié la rupture de ses relations diplomatiques avec les Émirats arabes unis par «une accumulation d’actes provocateurs et hostiles» sans pour autant révéler «ces actes». Aucune explication. En réalité, cette rupture n’est pas un différend bilatéral, c’est l’influence régionale grandissante de l’Axe Rabat-Abou Dhabi-Tel Aviv qui agace Alger, un axe concurrent et aux intérêts divergents. Le modèle d’influence des Émirats gagne en puissance alors le modèle traditionnel de l’Algérie est confronté à une pression grandissante et ses outils ne sont plus efficaces et adaptées au contexte régional actuel. L’architecture régionale est en pleine mutation et l’influence n’est plus dictée automatiquement par la taille du territoire. La donne a changé et les outils ont évolué. (Photo : Abdelmadjid Tebboune discute avec Mohammed Ben Zayed , lors du sommet du G7 en Italie le 14 juin 2024). Imed Bahri L’analyste politique marocain Amine Ayoub a publié une analyse dans Ynet Global , version anglophone en ligne du journal israélien Yediot Aharonot , dans laquelle il revient sur le divorce houleux entre Alger et Abou Dhabi. Selon lui, lorsque l’Algérie a ordonné à l’ambassadeur des Émirats de quitter son territoire sous quarante-huit heures, le 10 septembre 2026, et a annoncé des restrictions visant les aéronefs militaires et civils immatriculés aux Émirats —tout en exemptant les vols commerciaux jusqu’à la fin de l’année—, cette rupture a immédiatement mis en lumière un réalignement régional plus profond. Les déclarations officielles algériennes ont fait état d’une accumulation d’actes «provocateurs et hostiles» , sans toutefois désigner un incident déclencheur unique. Deux modèles de puissance régionale distincts Abou Dhabi a exprimé ses regrets et a dit espérer que cette rupture pourrait, à terme, être annulée. L’absence d’une cause bien déterminée est, en soi, un élément révélateur. Il ne s’agit pas tant d’un différend bilatéral que d’une confrontation ouverte entre deux modèles de puissance régionale distincts, s’étendant de l’Afrique du Nord au Sahel et au Moyen-Orient au sens large. L’Algérie s’appuie sur un modèle étatique fondé sur l’étendue de son territoire, ses ressources énergétiques, sa capacité militaire et une diplomatie formelle. Les Émirats, quant à eux, opèrent selon un modèle en réseau, déployant capitaux, logistique, infrastructures commerciales et partenariats de sécurité ciblés bien au-delà de leurs frontières. Dans des environnements politiques fragmentés, ce modèle en réseau permet de générer un levier d’influence plus rapidement et avec plus de souplesse que le poids géographique traditionnel. Cette différence est devenue de plus en plus manifeste à mesure que l’Algérie et les Émirats ont poursuivi des intérêts divergents sur plusieurs théâtres régionaux au cours des dernières années. La très controversée politique étrangère des Émirats arabes unis Le Maroc, ligne de fracture Le Maroc en offre l’illustration la plus frappante. Pendant des décennies, la rivalité entre Alger et Rabat a été centrée sur la question du Sahara occidental, l’Algérie apportant un soutien de longue date au Front Polisario. La nature de cette confrontation bilatérale a changé en novembre 2020, lorsque les Émirats ont ouvert un consulat à Laâyoune, dans la partie marocaine du territoire contesté, et exprimé leur soutien à l’intégrité territoriale du Maroc. Cette initiative s’inscrivait dans le contexte de la normalisation des relations entre le Maroc et Israël dans le cadre des Accords d’Abraham et de la reconnaissance, par les États-Unis, de la souveraineté marocaine sur le Sahara occidental. Il n’en a pas résulté une alliance militaire formelle dirigée contre l’Algérie mais plutôt un réseau de plus en plus dense de partenariats qui se chevauchent. Parmi les exemples concrets, on peut citer les investissements émiratis dans les infrastructures et l’énergie au Maroc —notamment des projets majeurs dans les secteurs de l’eau et de l’électricité— ainsi que le développement, depuis 2020, d’une coopération industrielle et de défense entre Rabat et Tel Aviv. La portée de ces initiatives dépasse le simple cadre économique. Selon Amine Ayoub, elles renforcent les capacités du Maroc, approfondissent ses partenariats extérieurs et confèrent à des acteurs tiers des intérêts croissants dans l’environnement stratégique entourant le Sahara occidental, autant de formes d’influence que l’Algérie ne peut aisément contrer par la diplomatie traditionnelle ou des pressions bilatérales. Le Maroc ne fait plus face à l’Algérie en tant que voisin isolé. Cela s’inscrit dans un réseau en pleine expansion reliant Rabat, Abou Dabi, Tel Aviv et Washington. Pour Israël, cet aspect est crucial, car la relation avec le Maroc renforce sa présence stratégique et ses liens de défense vers l’ouest. La coopération avec Rabat étend l’influence d’Israël le long des façades atlantique et méditerranéenne de l’Afrique du Nord, selon des modalités inédites il y a dix ans. La combinaison de la reconnaissance diplomatique, des investissements économiques et de la coopération sécuritaire a modifié l’équilibre des influences aux abords de la frontière occidentale de l’Algérie, sans pour autant nécessiter un pacte militaire formel. Cette évolution a des conséquences concrètes sur la manière dont l’Algérie évalue ses options régionales et sur la façon dont les puissances extérieures interagissent avec le Maghreb. Le Sahel, théâtre d’une rivalité plus profonde Une évolution parallèle s’observe au sud de l’Algérie. Alger a longtemps considéré le Sahel comme un terrain privilégié pour la médiation diplomatique. L’Accord d’Alger de 2015 sur le Mali a marqué l’apogée de cette approche, fondée sur des négociations formelles entre États et des engagements institutionnels. Les coups d’État militaires survenus au Mali, au Burkina Faso et au Niger entre 2020 et 2023 ont bouleversé le paysage institutionnel sur lequel reposait la diplomatie algérienne. Les nouveaux gouvernements militaires se sont montrés moins réceptifs aux médiations extérieures, perçues comme une entrave à leur souveraineté et plus ouverts à des partenariats alternatifs offrant des ressources sans les mêmes conditions politiques. Des acteurs extérieurs proposant des ressources flexibles ont investi l’espace ainsi libéré. ​​Les Émirats ont apporté capitaux, projets commerciaux et capacités logistiques dans des zones où l’Algérie misait davantage sur la proximité géographique et une médiation fondée sur la souveraineté. Dans la Corne de l’Afrique, les investissements émiratis dans les infrastructures portuaires, aériennes et de sécurité —notamment leur présence de longue date à Berbera dans le Somaliland— ont créé des canaux d’influence opérant largement en dehors des cadres traditionnels de médiation diplomatique. Ces relations confèrent à Abou Dhabi un accès concret et un levier d’action, même là où les institutions politiques formelles sont faibles ou fragmentées. Ce contraste est également visible en Libye. L’Algérie a généralement privilégié les institutions formelles et les processus soutenus par l’Onu visant la réconciliation nationale. À l’inverse, les Émirats ont entretenu des liens plus étroits avec les forces militaires de l’Est associées à Khalifa Haftar, privilégiant des objectifs sécuritaires ciblés au détriment de règlements politiques globaux. Cette divergence d’approche ne relève pas de la simple tactique, elle reflète deux conceptions distinctes de l’exercice de l’influence dans des contextes politiques fragmentés où l’autorité de l’État est contestée ou incomplète. Le cas du Soudan accentue cette même divergence. Les Émirats ont fait face à de graves accusations de la part d’enquêteurs de l’Onu et de Human Rights Watch concernant des réseaux assurant la logistique et le soutien aux Forces de soutien rapide (FSR), Abou Dabi dément fermement avoir apporté un tel soutien. Au-delà du différend sur ces accusations précises, cet épisode illustre une tendance plus large. Dans des environnements politiques fragmentés, les capitaux, la logistique et les réseaux informels peuvent générer un levier d’influence plus rapidement que la médiation diplomatique traditionnelle. Pour l’Algérie, cela représente un défi majeur, alors que les États africains fragiles deviennent le théâtre d’une concurrence accrue pour l’influence extérieure. Israël, bénéficiaire discret L’auteur estime que l’angle israélien constitue l’élément le plus déterminant de cette rupture, bien qu’il faille l’aborder avec précaution. Il considère qu’Israël n’est pas à l’origine de la rupture entre Alger et Abou Dabi mais cette que rupture renforce une configuration régionale dans laquelle le Maroc et les Émirats sont de plus en plus liés à Israël, tandis que l’Algérie demeure en marge de ce réseau. Les Accords d’Abraham ne se limitaient pas à de simples accords commerciaux bilatéraux. Ils ont jeté les bases de partenariats croisés dans les domaines du renseignement, de la sécurité maritime, de la défense aérienne et des technologies de défense. L’intensification de la coopération entre Israël, le Maroc et les Émirats a tissé une toile de plus en plus dense de relations sécuritaires couvrant certaines parties de l’Afrique du Nord. Ces relations englobent une coopération industrielle dans le domaine de la défense, le partage de renseignements sur les menaces communes et une coordination des positions diplomatiques sur des questions régionales clés. L’Algérie, qui applique une politique stricte de non-normalisation et place la question palestinienne au cœur de son identité régionale, reste en dehors de ce réseau. Et Washington dans tout ça ! La politique américaine doit éviter de considérer l’Algérie et les partenaires des Accords d’Abraham comme des piliers interchangeables de sa stratégie en Afrique du Nord. L’Algérie demeure un fournisseur d’énergie important pour l’Europe et conserve un rôle dans certains dispositifs de lutte antiterroriste. Toutefois, sa posture stratégique est limitée par une doctrine d’autonomie et par des liens étroits en matière de défense avec des fournisseurs non occidentaux. Selon les données du Sipri*, la Russie a représenté 48% des importations d’armes majeures de l’Algérie entre 2020 et 2024, alors même que le volume global des importations d’armes algériennes a diminué en valeur absolue sur cette période, chutant d’environ 73% par rapport au quinquennat précédent. Dans son analyse, Amine Ayoub estime que Washington aurait tout intérêt à accorder une importance accrue au réseau Maroc-Israël-Émirats en tant que cadre émergent pour la sécurité régionale, le commerce et la coopération technologique, tout en maintenant un engagement pragmatique avec l’Algérie lorsque les intérêts américains l’exigent. Il convient également d’encourager les partenaires à la prudence sur les théâtres d’opérations africains fragiles afin que les rivalités n’exacerbent pas les conflits et ne profitent pas, en fin de compte, aux acteurs hostiles. L’objectif ne doit pas être d’isoler l’Algérie de façon permanente. Il s’agit de reconnaître que l’architecture régionale est en pleine mutation et d’aligner la politique américaine sur les partenaires les plus disposés et les plus aptes à approfondir la coopération concrète en matière de sécurité et d’intérêts économiques communs. Maroc : Bientôt quatre ans dans le sillage d'Israël Un ordre régional en mutation La rupture entre l’Algérie et les Émirats ne signifie pas l’effondrement de la diplomatie arabe. Elle confirme que l’influence régionale ne se transmet plus automatiquement par la taille du territoire ou une hiérarchie formelle. Le pouvoir se génère de plus en plus grâce à la mobilité des capitaux, aux infrastructures commerciales, aux réseaux logistiques et aux partenariats de sécurité adaptatifs qui transcendent les frontières traditionnelles. L’Algérie conserve des atouts considérables : son territoire, ses ressources énergétiques, une armée puissante et des décennies d’expérience diplomatique. Ces atouts demeurent pertinents. Toutefois, ils se traduisent moins efficacement en ce levier d’influence transfrontalier propre aux puissances agissant en réseau. La rupture entre Alger et Abou Dhabi n’a pas engendré le nouvel ordre régional, elle a mis en lumière l’ampleur de l’érosion de l’ancien. L’avantage dont bénéficie Israël ne réside donc ni dans une nouvelle alliance spectaculaire ni dans un gain militaire immédiat. Il tient à l’expansion constante d’un réseau stratégique dans une région où la position de l’Algérie est de plus en plus contestée. Dans la nouvelle configuration qui se dessine en Afrique du Nord et en Méditerranée orientale, le Maroc et les Émirats arabes unis renforcent leurs liens avec Tel Aviv, tandis que l’Algérie s’éloigne davantage de cette dynamique émergente. C’est pourquoi, selon Amine Ayoub, Israël s’impose comme le vainqueur discret. * L’indice ou les bases de données du SIPRI (Stockholm International Peace Research Institute) mesurent les dépenses militaires mondiales, le volume des transferts d’armes et la production d’armements à travers des rapports de référence. L’article Les dessous de la rupture entre l’Algérie et les Émirats est apparu en premier sur Kapitalis .",
+      "_source": "Kapitalis (Tunisie)",
+      "_sourceId": "rss_kapitalis",
+      "_sourceCat": "maghreb",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 7,
+      "_theme": "D",
+      "_zoneShort": "7. Maghreb & Afr. Nord",
+      "_relevance": "A",
+      "_desk": "A4"
+    },
+    {
+      "title": "À Niaguis, des femmes rurales sèment les graines du changement",
+      "link": "https://lesoleil.sn/agriculture/a-niaguis-des-femmes-rurales-sement-les-graines-du-changement/",
+      "pubDate": "2026-09-15T07:00:28.000Z",
+      "description": "Du 14 au 20 septembre 2026, des femmes rurales de plusieurs pays d'Afrique de l'Ouest se retrouvent dans le cadre du CIFAP 5, au centre agroécologique Karonghen de Niaguis, dans le département de Ziguinchor autour d’un même défi : produire autrement pour nourrir durablement les populations. ZIGUINCHOR- Au centre Karonghen, le décor invite à une autre manière de penser l’agriculture. Dans cet espace agroécologique niché au cœur de la commune de Niaguis, les savoirs paysans, la préservation des ressources naturelles et les techniques de production durable se conjuguent au quotidien. C’est ici que des femmes venues du Bénin, du Burkina Faso, de la Côte d’Ivoire, du Ghana, de la Gambie, de la Guinée-Bissau, de la Guinée, du Mali, du Togo et du Sénégal ont choisi de poser leurs valises pour apprendre, partager et surtout construire des solutions face aux défis alimentaires. Organisée à l’initiative du mouvement panafricain des femmes rurales « Nous sommes la solution », cette cinquième édition du Camp international de formation sur l’agroécologie paysanne (Cifap), est consacrée aux « techniques de conduite de la production avicole en agroécologie paysanne ». Pendant une semaine, les participantes vont explorer des pratiques d’élevage respectueuses de l’environnement, économiquement accessibles et adaptées aux réalités des communautés rurales. Présidant la cérémonie d’ouverture, l’adjoint au sous-préfet de l’arrondissement de Niaguis, Idy Gomel Bâ, a salué l’engagement des femmes rurales. « Votre mouvement mérite d’être davantage entendu. L’élevage de volailles contribue directement à la santé de nos enfants, tandis que l’agroécologie permet de valoriser nos terres et de préserver la biodiversité », a-t-il souligné. Pour lui, la souveraineté alimentaire passe nécessairement par la valorisation de l’agriculture familiale. « Pour vaincre l’insécurité alimentaire, nous devons miser sur une agriculture paysanne capable de créer de la richesse. Ce Camp est un véritable espace de co-construction de notre avenir. Profitez-en pour apprendre et devenez, chacune dans vos communautés, des ambassadrices de la souveraineté alimentaire », a insisté M. Bâ. Repenser les modèles de production À la tête du mouvement « Nous sommes la solution », Mariama Sonko veut faire de cette rencontre un nouveau point de départ. « La souveraineté alimentaire est à notre portée, mais il faut oser changer et s’engager résolument dans l’agroécologie pour préserver les ressources naturelles de nos pays », a-t-elle déclaré. Le choix de l’aviculture n’est pas fortuit. « Pour cette cinquième édition du CIFAP, nous avons décidé de mettre l’accent sur les bonnes pratiques agroécologiques dans l’élevage de volailles. C’est un thème essentiel, car nous devons repenser nos modes de production et retrouver des pratiques inspirées des savoir-faire de nos parents, sans engager des dépenses excessives », a expliqué Mariama Sonko. Dans les salles du centre Karonghen, cette ambition trouve un écho particulier auprès des populations locales. Le chef de village de Niaguis et président de l’Association des chefs de villages de l’arrondissement, Alassane Ndiaye, voit dans cette dynamique une véritable révolution rurale. « Nous sommes les témoins des progrès accomplis par les femmes de “Nous sommes la solution”. Cette révolution est porteuse d’espoir et ne doit surtout pas s’arrêter », a-t-il affirmé. Venue de Guinée, Fanta Condé, doyenne du groupe, porte elle aussi cette conviction. « Nous devons transformer nos pratiques agricoles pour aller vers une agriculture saine, rentable et respectueuse de l’environnement, capable de répondre aux besoins des générations futures. Nous, les femmes de “Nous sommes la solution”, pouvons changer la donne. Nous ne devons pas abandonner ce combat », a-t-elle martelé. À Niaguis, les échanges ne se limitent donc pas à une simple formation. Ils dessinent les contours d’une agriculture africaine plus autonome, où la femme rurale devient à la fois productrice, gardienne des ressources naturelles et actrice de la souveraineté alimentaire. Gaustin DIATTA (Correspondant)",
+      "_source": "Le Soleil (Sénégal)",
+      "_sourceId": "rss_lesoleil",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mali : Kamissa Camara, du cœur du pouvoir à l’analyse des coups d’État",
+      "link": "https://www.jeuneafrique.com/1842837/politique/mali-kamissa-camara-du-coeur-du-pouvoir-a-lanalyse-des-coups-detat/",
+      "pubDate": "2026-09-15T07:00:00.000Z",
+      "description": "Elle fut, à 35 ans, la plus jeune ministre des Affaires étrangères du Mali, juste avant le coup d’État de 2020 qui renversa le pouvoir d’Ibrahim Boubacar Keïta. Désormais, Kamissa Camara cherche à comprendre les motivations des militaires qui ont pris le pouvoir à Bamako, mais aussi à Ouagadougou.",
+      "_source": "Jeune Afrique",
+      "_sourceId": "rss_jeuneafr",
+      "_sourceCat": "africa",
+      "_sourceBloc": "occident_fr",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Disparition du journaliste Moussa Kaka au Niger: «Le Sahel ne doit pas devenir un trou noir de l'information»",
+      "link": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20260915-disparition-du-journaliste-moussa-kaka-au-niger-il-faut-que-le-sahel-ne-soit-pas-un-trou-noir-de-l-information",
+      "pubDate": "2026-09-15T06:09:41.000Z",
+      "description": "Au Niger, deux semaines après sa disparition, on est toujours sans nouvelles de notre confrère Moussa Kaka. Mais aujourd'hui, Reporters sans frontières (RSF) parle de « disparition forcée » et dit avoir de bonnes raisons de penser que les autorités militaires de Niamey y sont pour quelque chose. Où en est la liberté de la presse au Niger et dans les deux autres pays du Sahel central, le Mali et le Burkina Faso ? Sadibou Marong est le directeur du bureau de RSF pour l'Afrique subsaharienne. En ligne de Dakar, il répond aux questions de Christophe Boisbouvier.",
+      "_source": "RFI Afrique",
+      "_sourceId": "rss_rfiafr",
+      "_sourceCat": "africa",
+      "_sourceBloc": "occident_fr",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
     {
       "title": "IIes Jeux de l’AES : fortunes diverses, satisfaction partagée",
       "link": "https://www.sidwaya.info/iies-jeux-de-laes-fortunes-diverses-satisfaction-partagee/",
@@ -933,217 +1129,86 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb",
-      "link": "https://www.aib.media/cooperation-mali-algerie-le-president-assimi-goita-recoit-le-premier-ministre-algerien-sifi-ghrieb/",
-      "pubDate": "2026-09-14T19:43:31.000Z",
-      "description": "COOPÉRATION-MALI-ALGÉRIE Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb Ouagadougou, 14 sept. 2026 (AIB) – Le Président de la Transition du Mali, le Général d’Armée Assimi Goïta, a reçu lundi 14 septembre 2026, à Bamako le Premier ministre algérien, Sifi Ghrieb, en visite de travail au Mali. Les échanges ont porté sur le renforcement de la coopération bilatérale et les défis sécuritaires régionaux. Le Premier ministre, Sifi Ghrieb a transmis au chef de l’État malien les salutations fraternelles du Président algérien Abdelmadjid Tebboune et son engagement à renforcer les liens de fraternité et de bon voisinage entre les deux pays. En retour, le Général d’Armée Assimi Goïta l’a chargé de transmettre ses salutations sincères au Président Tebboune. Les deux parties ont réaffirmé leur volonté de poursuivre l’action commune visant à renforcer leurs relations de coopération. Le Premier ministre algérien a souligné que sa visite à Bamako, quelques jours après celle du Premier ministre malien, le Général de division Abdoulaye Maïga, en Algérie, traduit la volonté politique des deux chefs d’État de consolider la solidarité et la coopération bilatérale. Sifi Ghrieb a également annoncé la préparation active, avec le Premier ministre malien, de la prochaine visite du Président Assimi Goïta en Algérie, à l’invitation de son homologue Abdelmadjid Tebboune. Sur le plan sécuritaire, les deux parties ont réaffirmé l’importance d’une approche globale et solidaire, fondée sur les capacités propres des États de la région, pour promouvoir la paix, la sécurité et le développement. Le Premier ministre algérien, accompagné d’une forte délégation, a exprimé sa gratitude aux autorités maliennes pour l’hospitalité accordée depuis son arrivée à Bamako. Agence d'information du Burkina Source: Présidence de la République du Mali",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Moringa au Sahel : La science et la filière s’unissent pour relever le défi de la qualité de la semence à la plante médicinale",
-      "link": "https://burkina24.com/2026/09/14/moringa-au-sahel-la-science-et-la-filiere-sunissent-pour-relever-le-defi-de-la-qualite-de-la-semence-a-la-plante-medicinale/",
-      "pubDate": "2026-09-14T17:48:32.000Z",
-      "description": "À l’occasion de la Journée internationale du Moringa dans l’espace de l’Alliance des États du Sahel (AES), l’Institut Supérieur Privé du Sahel (ISP-Sahel) a abrité un panel d’experts de premier plan le 14 septembre 2026. Organisée par le groupe SOLANG (Éducation, Valorisation, Recherche) en partenariat avec l’ISP-Sahel, l’entreprise Naanfin Agroalimentaire et la Filière Moringa du … The post Moringa au Sahel : La science et la filière s'unissent pour relever le défi de la qualité de la semence à la plante médicinale appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Modernisation de l’Administration : cap sur des services publics plus efficaces et proches du Peuple",
-      "link": "https://netafrique.net/modernisation-de-ladministration-cap-sur-des-services-publics-plus-efficaces-et-proches-du-peuple/",
-      "pubDate": "2026-09-15T01:24:28.000Z",
-      "description": "Le Camarade Premier ministre, Chef du Gouvernement, Rimtalba Jean Emmanuel Ouédraogo, a présidé, ce lundi 14 septembre 2026 à Ouagadougou, la session ordinaire du Conseil national de la modernisation de l’Administration et de la bonne gouvernance (CN-MABG). Les travaux ont permis d’évaluer les performances de l’Administration publique, d’identifier les insuffisances persistantes et de définir les orientations pour l’année 2027. À l’ouverture de la session, le Chef du Gouvernement a rappelé que la modernisation de l’Administration publique constitue un enjeu de souveraineté, de dignité et d’efficacité de l’action publique. Elle ne saurait, selon lui, se limiter à des réformes techniques ou à la dématérialisation des procédures. « Notre ambition doit être claire : faire de l’Administration publique un véritable instrument de souveraineté et de transformation du Burkina Faso », a-t-il déclaré. Le Premier ministre a ainsi appelé à un changement profond des pratiques, des méthodes de travail et du rapport de l’Administration au Peuple. L’objectif est de bâtir une Administration disciplinée, intègre, compétente, performante, innovante et redevable, capable de produire des résultats et de rendre compte de l’utilisation des ressources publiques. La performance globale de l’Administration au titre de l’année 2025, établie à 85,38 %, témoigne, selon le Chef du Gouvernement, d’une dynamique appréciable. Tout en félicitant les agents publics ayant contribué à ce résultat, il les a invités à se garder de toute autosatisfaction. « La performance n’est pas une fin en soi : elle est une exigence permanente », a-t-il souligné, insistant sur la nécessité de traduire les résultats administratifs en améliorations concrètes dans la vie des populations. Les travaux ont également permis d’examiner les principales insuffisances qui affectent encore le fonctionnement de l’Administration. Elles concernent notamment la faible couverture de l’évaluation de certaines institutions, l’appropriation insuffisante des outils de gouvernance, les contraintes liées aux ressources humaines et aux infrastructures, les difficultés des systèmes d’information ainsi que l’authenticité de certains documents produits dans le cadre de la commande publique. L’appropriation des plateformes de services numériques par les citoyens figure également parmi les défis identifiés. À ce sujet, le Premier ministre a appelé à une transformation numérique inclusive, adaptée aux réalités nationales et qui ne crée pas de nouvelles formes d’exclusion. Il a notamment souhaité que les langues nationales trouvent progressivement leur place dans les systèmes d’information et les services numériques. Au cours de la session, les participants ont examiné trois principaux documents : le rapport annuel de mise en œuvre de la Stratégie nationale de modernisation de l’Administration publique, le rapport sur l’état de la gouvernance au Burkina Faso et le rapport global sur la performance des structures de l’Administration publique, tous au titre de l’année 2025. Ils ont également analysé les résultats des évaluations des stratégies nationales relatives à la déconcentration administrative, à la modernisation de l’Administration publique et à la promotion de la bonne gouvernance. À la clôture des travaux, le Premier ministre a engagé les responsables concernés à transformer les recommandations adoptées en actions concrètes, assorties de responsabilités clairement définies et de mécanismes rigoureux de suivi. Il a précisé que les insuffisances relevées ne remettent pas en cause les performances enregistrées, mais constituent des défis prioritaires auxquels des réponses doivent être apportées. Les orientations définies pour 2027 devront notamment permettre à l’Administration d’accompagner la reconquête du territoire et le retour effectif de l’État auprès des populations. « Là où nos Forces combattantes reconquièrent des espaces, notre Administration doit être prête à rétablir durablement la présence et l’autorité de l’État », a affirmé le Chef du Gouvernement. Pour Rimtalba Jean Emmanuel Ouédraogo, le rétablissement de la sécurité doit s’accompagner du retour de services publics adaptés aux besoins des populations, notamment dans les domaines de l’éducation, de la santé, de l’état civil, de la justice, de l’action sociale et de l’administration territoriale. Le Premier ministre a enfin appelé chaque ministère, institution, structure et agent public à prendre sa part dans la refondation de l’Administration, sous le sceau de la primauté de l’intérêt général. Il a chargé le ministère des Serviteurs du Peuple, à travers le Secrétariat permanent de la modernisation de l’Administration et de la bonne gouvernance, d’assurer un suivi rigoureux de la mise en œuvre des conclusions et orientations issues de la session. DCRP/Primature L’article Modernisation de l’Administration : cap sur des services publics plus efficaces et proches du Peuple est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Religion et développement de l’Afrique : et si le véritable combat était aussi celui de nos consciences ?",
-      "link": "https://www.sidwaya.info/religion-et-developpement-de-lafrique-et-si-le-veritable-combat-etait-aussi-celui-de-nos-consciences/",
-      "pubDate": "2026-09-15T00:03:28.000Z",
-      "description": "En abordant frontalement la question de la religion, le 4 septembre 2026, lors de son adresse à la communauté éducative, le camarade Président du Faso, le capitaine Ibrahim Traoré, n’a pas simplement ouvert un débat sur la foi. Il a posé une question beaucoup plus profonde sur le rapport de l’Africain à la connaissance, à la raison, à l’histoire et, surtout, à sa propre responsabilité dans la construction de son avenir. Dans une société où la religion occupe une place importante dans la vie individuelle et collective, une telle interpellation ne pouvait que susciter des réactions. Elle mérite pourtant mieux que les réactions épidermiques, les procès en impiété ou les applaudissements automatiques. Elle invite surtout à réfléchir au rôle que la religion peut jouer dans la formation des consciences africaines et dans notre capacité à comprendre notre environnement pour mieux le transformer. Le propos présidentiel semble d’ailleurs moins remettre en cause la foi elle-même que sa mauvaise compréhension, son mauvais enseignement et, surtout, son instrumentalisation à des fins politiques, idéologiques ou de domination. Le véritable sujet n’est donc peut-être pas de savoir s’il faut croire ou ne pas croire. Il est plutôt de savoir comment nous croyons, ce que nous croyons et surtout ce que nous faisons de nos croyances. Le problème commence lorsque la foi cesse d’éclairer la conscience pour se substituer à elle. Lorsqu’un individu finit par penser qu’il n’a plus besoin de chercher, de comprendre, de questionner, de vérifier ou de travailler parce que tout serait déjà écrit et que Dieu finira nécessairement par régler ses problèmes, la croyance peut alors devenir un refuge contre la responsabilité. Or, aucun peuple ne s’est durablement développé en attendant que son destin soit transformé de l’extérieur. La foi peut donner du sens à l’action. Elle ne peut pas remplacer l’action. Il ne s’agit donc pas de faire le procès de la religion. Pour des milliards d’êtres humains, elle reste une source de spiritualité, de morale, de solidarité et d’espérance. La difficulté apparaît lorsque la croyance devient une dispense de réfléchir. C’est précisément à ce niveau que l’interpellation du capitaine Ibrahim Traoré prend tout son sens. En rappelant que Dieu a doté l’être humain d’une intelligence et de capacités physiques, le président invite implicitement chacun à considérer ces facultés comme des moyens d’agir sur son environnement. Demander l’aide de Dieu ne dispense donc pas l’homme d’utiliser son intelligence. La distinction peut paraître évidente. Elle devient pourtant essentielle dans des sociétés confrontées au fatalisme, à l’ignorance, à la manipulation et à diverses formes de dépendance. L’Africain doit pouvoir croire sans renoncer à comprendre. Il doit pouvoir prier sans renoncer à agir. Il doit pouvoir espérer sans renoncer à construire. L’Afrique se trouve aujourd’hui face à une contradiction historique. Le continent dispose d’une jeunesse nombreuse, de ressources naturelles considérables et d’un potentiel agricole, minier, énergétique et humain immense. Pourtant, il demeure largement dépendant des technologies, des capitaux, des équipements et des savoirs produits ailleurs. Cette situation ne saurait évidemment être expliquée par les seules insuffisances africaines. La colonisation, l’exploitation des ressources, les rapports de domination, les dépendances économiques et les mécanismes de l’ordre international ont profondément marqué les trajectoires du continent. Mais reconnaître les responsabilités extérieures ne doit pas conduire à nier les nôtres. C’est précisément là que la question religieuse rejoint celle de la souveraineté. La dépendance commence aussi dans les esprits. Elle commence lorsque nous renonçons à comprendre par nous-mêmes, lorsque nous estimons que la solution à nos problèmes doit nécessairement venir d’ailleurs, lorsque nous consommons les savoirs produits par les autres sans développer suffisamment nos propres capacités de recherche, ou lorsque nous importons des modèles sociaux, culturels, économiques ou religieux sans les confronter à notre histoire, à nos réalités et à nos besoins. L’éveil des consciences suppose donc une rupture avec cette culture de l’attente. Il ne s’agit cependant pas de tomber dans l’excès inverse en transformant cette réflexion en procès contre les religions. Une telle démarche manquerait l’essentiel. La question n’est pas de savoir si le Christianisme, l’Islam ou les spiritualités traditionnelles africaines doivent disparaître de l’espace social. Elle est plutôt de savoir comment les croyants peuvent préserver leur foi tout en développant leur esprit critique. Une religion enseignée avec intelligence peut contribuer à la morale, à la solidarité et à la cohésion sociale. Une religion mal comprise ou instrumentalisée peut, à l’inverse, devenir un puissant outil de domination. L’histoire en a donné suffisamment d’exemples. C’est pourquoi l’éducation constitue un enjeu stratégique. Plus un citoyen possède des connaissances historiques, scientifiques, économiques, philosophiques et culturelles, plus il dispose des outils nécessaires pour examiner les discours qu’on lui propose et exercer son propre discernement. Cette question prend une importance particulière dans le contexte sahélien. Les groupes terroristes ont exploité les fragilités sociales, l’ignorance, la pauvreté, les frustrations et certaines interprétations radicales de la religion pour recruter, endoctriner et manipuler. La réponse au phénomène terroriste ne peut donc pas être uniquement militaire. Elle doit aussi être éducative, culturelle, économique et intellectuelle. Un esprit habitué à analyser, à confronter les idées et à exercer son discernement est moins vulnérable aux idéologies de haine. Au fond, la question posée par le président du Faso dépasse largement la seule religion. Elle renvoie à la capacité des Africains à penser par eux-mêmes. Un peuple qui ne produit pas suffisamment ses propres connaissances reste dépendant de ceux qui les produisent. Un pays qui ne maîtrise pas sa science et sa technologie demeure tributaire de ceux qui détiennent ces technologies. Une société qui ne connaît pas suffisamment son histoire laisse à d’autres le soin de la raconter à sa place. L’indépendance véritable ne saurait donc être uniquement politique. Elle doit également être intellectuelle, scientifique, culturelle et économique. C’est pourquoi l’école doit se trouver au cœur de cette bataille. Elle doit former des citoyens capables de croire, s’ils le souhaitent, mais aussi de questionner. Des citoyens capables de respecter leurs traditions sans devenir prisonniers du passé. Des citoyens capables de recevoir les apports du monde sans perdre leur capacité de discernement. Il faut aussi apprendre à distinguer l’ouverture au monde de la soumission aux modèles venus d’ailleurs. L’Afrique n’a aucune raison de rejeter ce que les autres peuples ont produit. Elle doit au contraire s’approprier les connaissances universelles, les adapter à ses réalités et, surtout, contribuer elle-même à l’enrichissement du savoir universel. C’est à cette condition que l’échange devient véritablement fécond et cesse d’être une relation de dépendance. Le Burkina Faso a ainsi besoin d’une jeunesse qui ne soit ni enfermée dans le fatalisme ni prisonnière d’un assistanat intellectuel. Une jeunesse qui apprend, cherche, invente, entreprend et construit. Une jeunesse capable de regarder les problèmes du pays non seulement à travers leurs manifestations, mais aussi à travers leurs origines, leurs causes profondes et les solutions qu’ils appellent. Il faut donc entendre le message présidentiel dans toute sa profondeur. Il ne s’agit pas de choisir entre Dieu et la science, entre la foi et la raison, entre la spiritualité et le développement. Il s’agit plutôt de refuser que la croyance devienne un substitut à la pensée. L’Afrique n’a pas besoin de moins de spiritualité. Elle a besoin de davantage de connaissance. Elle n’a pas besoin de renoncer à Dieu. Elle doit plutôt renoncer à l’idée que Dieu fera à sa place ce que ses propres enfants refusent d’accomplir. Elle n’a pas davantage besoin de rejeter le monde. Elle doit apprendre à y prendre toute sa place avec ses propres savoirs, ses propres compétences, ses propres industries et sa propre vision. Autrement dit, l’Africain peut croire et prier, mais il doit surtout apprendre à comprendre le monde qui l’entoure, à agir sur sa propre réalité et à transformer ses espérances en connaissances, en travail et en réalisations concrètes. Le véritable défi de l’éveil des consciences concerne ainsi le continent tout entier. Il commence lorsque l’homme accepte de regarder ses problèmes en face, d’en rechercher les véritables causes et d’assumer sa part de responsabilité dans leur résolution. Car l’indépendance véritable commence peut-être précisément là où cesse notre dépendance à penser par procuration. Jolivet Emmaüs SIDIBE",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "IVe édition de la foire des industries culturelles du Niger : la culture au cœur de la refondation et de l’intégration sahélienne",
-      "link": "https://www.sidwaya.info/ive-edition-de-la-foire-des-industries-culturelles-du-niger-la-culture-au-coeur-de-la-refondation-et-de-lintegration-sahelienne/",
-      "pubDate": "2026-09-14T23:56:44.000Z",
-      "description": "Le Palais du 29 juillet de Niamey a servi de cadre, ce 14 septembre 2026, pour la cérémonie d’ouverture de la IVe édition de la Foire des industries culturelles du Niger (FICNI), placée sur un thème hautement stratégique : « Quels Rôles peuvent jouer les industries culturelles dans la Refondation de la République ? ». La cérémonie a été présidée par le ministre des Transports et de l’Aviation, le colonel-major Adourahamane Amdou, représentant le Premier ministre, Ali Mahaman Lamine Zeine. Cette cérémonie grandeur nature a été rehaussée par la présence des membres du Conseil national pour la sauvegarde de la patrie (CNSP) et du gouvernement, des ministres en charge de la culture des trois pays membres de la Confédération des Etats du Sahel, ( Sidi Mohamed Almahmoud du Niger, Pingdwendé Gilbert Ouédraogo du Burkina Faso et Mamou Daffé du Mali ) Dans un contexte de réaffirmation historique de notre souveraineté, cet événement majeur met en exergue le rôle crucial de la culture. Plus qu’un simple héritage, elle s’impose désormais comme un vecteur de développement économique et un puissant levier d’intégration sahélienne. Ensemble, valorisons nos industries culturelles pour bâtir l’avenir de notre République. Plusieurs temps forts ont marqué cette cérémonie. Il s’agit des prestations artistiques et culturelles, de la coupure du ruban marquant l’ouverture officielle de la foire et enfin la visite des stands d’exposition. Pour cette foire, on note la participation de plusieurs exposants venus des 8 régions du Niger et des pays de l’AES. Ministère des Sports, de la Jeunesse et de la Culture du Niger",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Mines et énergie: les Etats de l’AES veulent faire des ressources un levier de souveraineté",
-      "link": "https://www.sidwaya.info/mines-et-energie-les-etats-de-laes-veulent-faire-des-ressources-un-levier-de-souverainete/",
-      "pubDate": "2026-09-14T23:50:04.000Z",
-      "description": "Le ministère de l’Energie, des Mines et des Carrières a organisé une conférence publique sur les potentialités minières, énergétiques et des hydrocarbures de l’espace confédéral de l’AES, lundi 14 septembre 2026, à Ouagadougou. Cette rencontre se tient dans le cadre de la VIIIe édition de la Semaine des activités minières, couplée à la Ire édition de la semaine de l’énergie, des mines et des hydrocarbures de l’AES. Le Burkina Faso, le Mali et le Niger entendent renforcer leur maîtrise des ressources minières, énergétiques et des hydrocarbures, afin d’en faire de véritables leviers de développement et de souveraineté. Cette ambition a été réaffirmée par la tenue d’une conférence publique consacrée aux potentialités minières, énergétiques et pétrolières de la Confédération des Etats du Sahel (AES), lundi 14 septembre 2026, à Ouagadougou. Organisée en marge de la VIIIe édition de la Semaine des activités minières (SAMAO) couplée à la Ire édition de la Semaine de l’énergie, des mines et des hydrocarbures de l’AES (SEMH-AES), la rencontre a réuni des délégations des trois pays, ainsi que des enseignants-chercheurs et des étudiants. Les trois pays en tandem Selon le ministre de l’Energie, des Mines et des Carrières, Yacouba Zabré Gouba, la conférence publique a pour but de faire connaitre les ressources stratégiques des pays de l’AES, les défis liés à leur valorisation et les opportunités qu’offre une gestion concertée. « Ce sont des secteurs hautement stratégiques pour nous et la gouvernance de ces secteurs doit permettre d’aller vers une souveraineté beaucoup plus renforcée », a-t-il affirmé. Pour le ministre nigérien chargé du Pétrole, Hamadou Tini, la souveraineté dans le secteur des mines est la capacité à maitriser la chaine des valeurs. « Il s’agit de connaître les ressources et décider de leur exploitation, négocier équitablement, transformer localement, sécuriser les corridors, développer les infrastructures et utiliser les revenus tirés de ces ressources pour transformer durablement les économies », a-t-il précisé. Le ministre nigérien chargé du Pétrole a déclaré que l’enjeu pour ses collègues et lui est de dépasser les approches nationales pour mettre en place une coopération d’une meilleure maitrise des ressources stratégiques et une plus grande autonomie économique. Pour le ministre chargé des Mines du Mali, Amadou Keïta, cette volonté s’inscrit dans la dynamique de construction d’un espace commun fondé sur la solidarité, la diplomatie concertée et la défense collective. « Nous avons compris aussi qu’il fallait qu’on harmonise les politiques et le cadre juridique », a-t-il poursuivi.La conférence publique a été le lieu pour le ministre chargé des Mines de présenter le programme de la SAMAO et de la SEMH-AES. En plus des panels, des sessions techniques sont programmées autour de différentes thématiques liées aux mines, à l’énergie et aux hydrocarbures. Galedie Kétoura SIMPORE Déborah YAMEOGO (Stagiaire)",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Une journée de deuil observée après le triple assassinat de Butanuka à Beni",
-      "link": "https://www.radiookapi.net/2026/09/15/actualite/securite/une-journee-de-deuil-observee-apres-le-triple-assassinat-de-butanuka",
-      "source": "Radio Okapi (RDC)",
-      "date": "2026-09-14T18:13:00.000Z",
+      "title": "Japan says reconnaissance drone likely crashed off Tottori",
+      "link": "https://www.japantimes.co.jp/news/2026/09/15/japan/japan-asdf-global-hawk-drone-missing/",
+      "source": "The Japan Times",
+      "date": "2026-09-15T11:08:00.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "title": "18e Sommet des BRICS : Le Président Xi Jinping participe à la première session et prononce une allocution importante",
+      "link": "https://www.sidwaya.info/18e-sommet-des-brics-le-president-xi-jinping-participe-a-la-premiere-session-et-prononce-une-allocution-importante/",
+      "source": "Sidwaya",
+      "date": "2026-09-15T11:00:51.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Australia’s Indigenous population estimated at 2.2m before ‘demographic catastrophe’ of colonisation",
+      "link": "https://www.theguardian.com/australia-news/2026/sep/15/australia-indigenous-population-before-colonisation-underestimated-ntwnfb",
+      "source": "The Guardian World",
+      "date": "2026-09-15T09:00:31.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
       "majors": [
         {
+          "type": "crise",
+          "keyword": "catastrophe"
+        }
+      ]
+    },
+    {
+      "title": "Canada–États-Unis : l’escalade commerciale pousse Ottawa à changer de cap",
+      "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260915-canada%E2%80%93%C3%A9tats-unis-l-escalade-commerciale-pousse-ottawa-%C3%A0-changer-de-cap",
+      "source": "France 24",
+      "date": "2026-09-15T07:42:51.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
           "type": "rupture",
-          "keyword": "assassinat"
+          "keyword": "escalade"
+        }
+      ]
+    },
+    {
+      "title": "Hong Kong visitor arrivals hit post-pandemic monthly high in August",
+      "link": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3367569/hong-kong-visitor-arrivals-hit-post-pandemic-monthly-high-august?utm_source=rss_feed",
+      "source": "South China Morning Post",
+      "date": "2026-09-15T07:34:32.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "pandemic"
         }
       ]
     }
@@ -1151,43 +1216,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      199
-    ],
-    [
-      "occident_fr",
-      118
+      207
     ],
     [
       "autre",
-      115
+      125
+    ],
+    [
+      "occident_fr",
+      117
     ],
     [
       "occident_us",
-      102
+      105
     ],
     [
       "golfe_mo",
-      72
-    ],
-    [
-      "bf_local",
-      48
-    ],
-    [
-      "turquie",
-      45
+      55
     ],
     [
       "russie",
-      42
+      53
+    ],
+    [
+      "turquie",
+      47
+    ],
+    [
+      "bf_local",
+      41
     ],
     [
       "chine",
-      33
+      32
     ],
     [
       "sahel",
-      26
+      18
     ]
   ],
   "desks": [
@@ -1195,52 +1260,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 105,
+      "count": 93,
       "top": [
         {
-          "title": "IIes Jeux de l’AES : fortunes diverses, satisfaction partagée",
-          "link": "https://www.sidwaya.info/iies-jeux-de-laes-fortunes-diverses-satisfaction-partagee/",
-          "source": "Sidwaya",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Santé animale dans l’espace AES : la nécessité de mutualiser les efforts",
-          "link": "https://www.sidwaya.info/sante-animale-dans-lespace-aes-la-necessite-de-mutualiser-les-efforts/",
-          "source": "Sidwaya",
+          "title": "Coopération transfrontalière : Les États de l’AES examinent de nouveaux projets de textes",
+          "link": "https://www.minute.bf/cooperation-transfrontaliere-les-etats-de-laes-examinent-de-nouveaux-projets-de-textes/",
+          "source": "Minute BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         },
         {
-          "title": "Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb",
-          "link": "https://www.aib.media/cooperation-mali-algerie-le-president-assimi-goita-recoit-le-premier-ministre-algerien-sifi-ghrieb/",
+          "title": "Ouverture à Niamey de la 4e édition de la Foire des industries culturelles du Niger sous le signe de la Refondation",
+          "link": "https://www.aib.media/ouverture-a-niamey-de-la-4e-edition-de-la-foire-des-industries-culturelles-du-niger-sous-le-signe-de-la-refondation/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
-          "theme": "P",
+          "theme": "E",
           "relevance": "A",
           "rating": "C1"
         },
         {
-          "title": "Moringa au Sahel : La science et la filière s’unissent pour relever le défi de la qualité de la semence à la plante médicinale",
-          "link": "https://burkina24.com/2026/09/14/moringa-au-sahel-la-science-et-la-filiere-sunissent-pour-relever-le-defi-de-la-qualite-de-la-semence-a-la-plante-medicinale/",
-          "source": "Burkina24",
+          "title": "À Niaguis, des femmes rurales sèment les graines du changement",
+          "link": "https://lesoleil.sn/agriculture/a-niaguis-des-femmes-rurales-sement-les-graines-du-changement/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Mali : Kamissa Camara, du cœur du pouvoir à l’analyse des coups d’État",
+          "link": "https://www.jeuneafrique.com/1842837/politique/mali-kamissa-camara-du-coeur-du-pouvoir-a-lanalyse-des-coups-detat/",
+          "source": "Jeune Afrique",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Modernisation de l’Administration : cap sur des services publics plus efficaces et proches du Peuple",
-          "link": "https://netafrique.net/modernisation-de-ladministration-cap-sur-des-services-publics-plus-efficaces-et-proches-du-peuple/",
-          "source": "Net Afrique (BF)",
+          "title": "Disparition du journaliste Moussa Kaka au Niger: «Le Sahel ne doit pas devenir un trou noir de l'information»",
+          "link": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20260915-disparition-du-journaliste-moussa-kaka-au-niger-il-faut-que-le-sahel-ne-soit-pas-un-trou-noir-de-l-information",
+          "source": "RFI Afrique",
           "zone": "1. Sahel & AO franco.",
-          "theme": "P",
+          "theme": "S",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A2"
         }
       ]
     },
@@ -1248,29 +1313,38 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 61,
+      "count": 59,
       "top": [
         {
-          "title": "Food prices in Ghana remain largely stable – AGRA report",
-          "link": "https://www.myjoyonline.com/food-prices-in-ghana-remain-largely-stable-agra-report/",
+          "title": "Gambie : Les États-Unis vont restituer les fonds issus de la vente d’un bien de Yahya Jammeh",
+          "link": "https://burkina24.com/2026/09/15/gambie-les-etats-unis-vont-restituer-les-fonds-issus-de-la-vente-dun-bien-de-yahya-jammeh/",
+          "source": "Burkina24",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "WAFU B U-17 Girls Cup: Joe Nana Adarkwa eyes title defence with Black Maidens",
+          "link": "https://www.myjoyonline.com/wafu-b-u-17-girls-cup-joe-nana-adarkwa-eyes-title-defence-with-black-maidens/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "C",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Obi, Makinde and hurdles against opposition coalition",
-          "link": "https://www.vanguardngr.com/2026/09/obi-makinde-and-hurdles-against-opposition-coalition/",
-          "source": "Vanguard (Nigeria)",
+          "title": "If the Ghana Premier League is financially weak and structurally fragile, Africa will expose its weaknesses",
+          "link": "https://www.myjoyonline.com/if-the-ghana-premier-league-is-financially-weak-and-structurally-fragile-africa-will-expose-its-weaknesses/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "FG targets 172 LGAs with maternal health incentives",
-          "link": "https://www.vanguardngr.com/2026/09/fg-targets-172-lgas-with-maternal-health-incentives/",
+          "title": "Petrol at N1,350 cheaper in Nigeria than neighbouring countries — Dangote",
+          "link": "https://www.vanguardngr.com/2026/09/petrol-at-n1350-cheaper-in-nigeria-than-neighbouring-countries-dangote/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1278,20 +1352,11 @@
           "rating": "F1"
         },
         {
-          "title": "Nigeria must protect the classroom",
-          "link": "https://www.vanguardngr.com/2026/09/nigeria-must-protect-the-classroom/",
+          "title": "NARD backs LASUTH strike, demands urgent Sanwo-Olu intervention",
+          "link": "https://www.vanguardngr.com/2026/09/nard-backs-lasuth-strike-demands-urgent-sanwo-olu-intervention/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "FG raises N1.23trn to tackle N4trn GenCos’ legacy debt",
-          "link": "https://www.vanguardngr.com/2026/09/fg-raises-n1-23trn-to-tackle-n4trn-gencos-legacy-debt/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1301,24 +1366,42 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 18,
+      "count": 23,
       "top": [
         {
-          "title": "Une journée de deuil observée après le triple assassinat de Butanuka à Beni",
-          "link": "https://www.radiookapi.net/2026/09/15/actualite/securite/une-journee-de-deuil-observee-apres-le-triple-assassinat-de-butanuka",
-          "source": "Radio Okapi (RDC)",
+          "title": "Afrique-ONU : 5 questions pour comprendre les enjeux de la 81e Assemblée générale",
+          "link": "https://www.jeuneafrique.com/1843215/politique/afrique-onu-5-questions-pour-comprendre-les-enjeux-de-la-81e-assemblee-generale/",
+          "source": "Jeune Afrique",
           "zone": "4. Grands Lacs",
-          "theme": "E",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Cameroun : Hadja Haoua, Mgr Bala, Martinez Zogo, le syndrome de « l’enquête ouverte » qui n’aboutit jamais ?",
+          "link": "https://fr.journalducameroun.com/cameroun-hadja-haoua-mgr-bala-martinez-zogo-le-syndrome-de-lenquete-ouverte-qui-naboutit-jamais/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "J",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Les ressortissants étrangers ciblés par l’explosion des extorsions en Afrique du Sud",
-          "link": "https://lesoleil.sn/international/infos-afrique/les-ressortissants-etrangers-cibles-par-lexplosion-des-extorsions-en-afrique-du-sud/",
-          "source": "Le Soleil (Sénégal)",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "E",
-          "relevance": "A",
+          "title": "Bolt, Yango, Gozem… Qui saura profiter du retrait progressif d’Uber en Afrique ?",
+          "link": "https://www.jeuneafrique.com/1842852/economie-entreprises/bolt-yango-gozem-qui-saura-profiter-du-retrait-progressif-duber-en-afrique/",
+          "source": "Jeune Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Tracasseries administratives dans les communes : Comment y mettre fin ?",
+          "link": "https://www.radiookapi.net/2026/09/15/emissions/okapi-service/tracasseries-administratives-dans-les-communes-comment-y-mettre",
+          "source": "Radio Okapi (RDC)",
+          "zone": "3. Afrique centrale",
+          "theme": null,
+          "relevance": ".",
           "rating": "A2"
         },
         {
@@ -1329,24 +1412,6 @@
           "theme": "P",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "GUERRE AU SOUDAN : La partition du pays est-elle encore évitable ?",
-          "link": "https://lepays.bf/guerre-au-soudan-la-partition-du-pays-est-elle-encore-evitable-2/",
-          "source": "Le Pays (BF)",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Manifestation du 15 septembre à Kinshasa : accord entre l’opposition et l’Hôtel de ville sur l’itinéraire",
-          "link": "https://www.radiookapi.net/2026/09/15/actualite/politique/manifestation-du-15-septembre-kinshasa-accord-entre-lopposition-et",
-          "source": "Radio Okapi (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1357,49 +1422,49 @@
       "count": 23,
       "top": [
         {
-          "title": "Bamako: quand les Premiers ministres malien et algérien se retrouvent",
-          "link": "https://www.wakatsera.com/bamako-quand-les-premiers-ministres-malien-et-algerien-se-retrouvent/",
-          "source": "Wakat Séra",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Mali : le Premier ministre algérien Sifi Ghrieb à Bamako pour relancer la coopération",
-          "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20260914-mali-le-premier-ministre-alg%C3%A9rien-sifi-ghrieb-%C3%A0-bamako-pour-relancer-la-coop%C3%A9ration",
-          "source": "France 24",
+          "title": "Les dessous de la rupture entre l’Algérie et les Émirats",
+          "link": "https://kapitalis.com/tunisie/2026/09/15/les-dessous-de-la-rupture-entre-lalgerie-et-les-emirats/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "D",
           "relevance": "A",
-          "rating": "A1"
+          "rating": "F2"
         },
         {
-          "title": "Le Premier ministre algérien au Mali, la grande commission mixte au cœur de la visite",
-          "link": "https://www.studiotamani.org/207718-le-premier-ministre-algerien-au-mali-la-grande-commission-mixte-au-coeur-de-la-visite",
-          "source": "Studio Tamani (Mali)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Élections 2026 : Khalid Bekkali veut réinstaller le PDN dans le jeu politique",
-          "link": "https://fr.hespress.com/488365-elections-2026-khalid-bekkali-veut-reinstaller-le-pdn-dans-le-jeu-politique.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "France : deux maires d’origine algérienne risquent de perdre leur mandat",
+          "link": "https://www.tsa-algerie.com/france-deux-maires-dorigine-algerienne-risquent-de-perdre-leur-mandat/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "​SNCFT | Reprise de la ligne Tunis-Annaba ce 15 septembre",
-          "link": "https://kapitalis.com/tunisie/2026/09/14/sncft-reprise-de-la-ligne-tunis-annaba-ce-15-septembre/",
+          "title": "La Tunisie œuvre pour une refonte globale de la loi antidrogue",
+          "link": "https://kapitalis.com/tunisie/2026/09/15/la-tunisie-oeuvre-pour-une-refonte-globale-de-la-loi-antidrogue/",
           "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": null,
-          "relevance": ".",
+          "theme": "J",
+          "relevance": "L",
           "rating": "F2"
+        },
+        {
+          "title": "ISO 9001:2026 | Vers un système de management intelligent et durable",
+          "link": "https://kapitalis.com/tunisie/2026/09/15/iso-90012026-vers-un-systeme-de-management-intelligent-et-durable/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Jared Kushner, le Maroc et les milliards promis des accords d’Abraham",
+          "link": "https://www.jeuneafrique.com/1841750/politique/jared-kushner-le-maroc-et-les-milliards-promis-des-accords-dabraham/",
+          "source": "Jeune Afrique",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "B2"
         }
       ]
     },
@@ -1407,34 +1472,16 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 104,
+      "count": 71,
       "top": [
         {
-          "title": "Le splendide isolement de l’Arabie saoudite",
-          "link": "https://www.iris-france.org/le-splendide-isolement-de-larabie-saoudite/",
-          "source": "IRIS France",
+          "title": "Iran : Le chef du nucléaire empêché d’assister à une réunion de l’AIEA à Vienne",
+          "link": "https://burkina24.com/2026/09/15/iran-le-chef-du-nucleaire-empeche-dassister-a-une-reunion-de-laiea-a-vienne/",
+          "source": "Burkina24",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "N",
           "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Oil climbs as Saudi pipeline outage, fresh attacks heighten supply concerns",
-          "link": "https://www.myjoyonline.com/oil-climbs-as-saudi-pipeline-outage-fresh-attacks-heighten-supply-concerns/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Govt mulling revival of austerity measures, decision to be taken soon: Tarar",
-          "link": "https://www.dawn.com/news/2029872/govt-mulling-revival-of-austerity-measures-decision-to-be-taken-soon-tarar",
-          "source": "Dawn (Pakistan)",
-          "zone": "8. Moyen-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
+          "rating": "C2"
         },
         {
           "title": "ENQUETE VIDEO Comment Israël arme les colons de Cisjordanie",
@@ -1446,13 +1493,31 @@
           "rating": "B2"
         },
         {
-          "title": "Iran’s allies squeeze Saudi Arabia",
-          "link": "https://www.ft.com/content/a143e08d-e979-410a-8e81-160fd4eba367?syn-25a6b1a6=1",
-          "source": "Financial Times World",
+          "title": "UN rights chief says recovery of hundreds of bodies from rubble in Gaza raises concerns of war crimes",
+          "link": "https://www.dawn.com/news/2030126/un-rights-chief-says-recovery-of-hundreds-of-bodies-from-rubble-in-gaza-raises-concerns-of-war-crimes",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "B2"
+          "rating": "F2"
+        },
+        {
+          "title": "A Diagnosis for Social Conflict That Gets Lost Along the Way",
+          "link": "https://www.theatlantic.com/books/2026/09/art-of-fighting-priya-parker-book-review/688598/?utm_source=feed",
+          "source": "The Atlantic",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Has a Chinese DF missile been used for the first time in the Middle East?",
+          "link": "https://www.scmp.com/news/china/military/article/3367581/has-chinese-df-missile-been-used-first-time-middle-east?utm_source=rss_feed",
+          "source": "South China Morning Post",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A2"
         }
       ]
     },
@@ -1460,8 +1525,44 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 168,
+      "count": 171,
       "top": [
+        {
+          "title": "18e Sommet des BRICS : Le Président Xi Jinping participe à la première session et prononce une allocution importante",
+          "link": "https://www.sidwaya.info/18e-sommet-des-brics-le-president-xi-jinping-participe-a-la-premiere-session-et-prononce-une-allocution-importante/",
+          "source": "Sidwaya",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Canada–États-Unis : l’escalade commerciale pousse Ottawa à changer de cap",
+          "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260915-canada%E2%80%93%C3%A9tats-unis-l-escalade-commerciale-pousse-ottawa-%C3%A0-changer-de-cap",
+          "source": "France 24",
+          "zone": "16. Amérique du Nord",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "A2"
+        },
+        {
+          "title": "How India's transnational repression cases expose unequal accountability across borders",
+          "link": "https://www.dawn.com/news/2029916/india-transnational-repression-unequal-accountability",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Life of the party: Democrats and the search for a post-Trump future",
+          "link": "https://ecfr.eu/publication/life-of-the-party-democrats-and-the-search-for-a-post-trump-future/",
+          "source": "ECFR — European Council on Foreign Relations",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A2"
+        },
         {
           "title": "Économie russe : les personnes fuyant le pays font exploser les prix des logements à Erevan",
           "link": "https://legrandcontinent.eu/fr/2026/09/15/economie-russe-les-personnes-fuyant-le-pays-font-exploser-les-prix-des-logements-a-erevan/",
@@ -1470,42 +1571,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
-        },
-        {
-          "title": "The secretive German ‘guerrilla unit’ buying up arms for Ukraine",
-          "link": "https://www.ft.com/content/aa94565e-6dab-4e2a-a33f-6de7ceba9a67?syn-25a6b1a6=1",
-          "source": "Financial Times World",
-          "zone": "9. Europe occidentale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B2"
-        },
-        {
-          "title": "Supreme Court blocks Trump’s plan to restrict mail-in ballots",
-          "link": "https://www.myjoyonline.com/supreme-court-blocks-trumps-plan-to-restrict-mail-in-ballots/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "16. Amérique du Nord",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "F1"
-        },
-        {
-          "title": "Trump’s Kennedy Center Shakedown",
-          "link": "https://www.theatlantic.com/ideas/2026/09/trump-kennedy-center/688618/?utm_source=feed",
-          "source": "The Atlantic",
-          "zone": "16. Amérique du Nord",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "F2"
-        },
-        {
-          "title": "KP CM claims he was 'abducted' by authorities in Lahore; Punjab minister denies allegations",
-          "link": "https://www.dawn.com/news/2029911/kp-cm-claims-he-was-abducted-by-authorities-in-lahore-punjab-minister-denies-allegations",
-          "source": "Dawn (Pakistan)",
-          "zone": "12. Asie du Sud",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "F2"
         }
       ]
     }
@@ -1523,42 +1588,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-15T04:54:09.219Z",
+      "at": "2026-09-15T11:44:07.411Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-15T04:54:09.227Z",
+      "at": "2026-09-15T11:44:07.418Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-15T04:54:36.704Z",
+      "at": "2026-09-15T11:44:33.032Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1897 articles"
+      "message": "110/170 flux OK, 1920 articles"
     },
     {
-      "at": "2026-09-15T04:54:39.945Z",
+      "at": "2026-09-15T11:44:36.038Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-15T04:54:40.307Z",
+      "at": "2026-09-15T11:44:36.402Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-15T04:54:40.312Z",
+      "at": "2026-09-15T11:44:36.407Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 1 alertes"
+      "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-09-15T04:54:40.312Z",
+      "at": "2026-09-15T11:44:36.407Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-15T04:54:40.312Z",
+      "at": "2026-09-15T11:44:36.407Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
