@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-09-14T23:52:27.402Z",
+  "generatedAt": "2026-09-15T04:54:40.310Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 106,
-    "failed": 64,
-    "articles": 1859,
+    "ok": 109,
+    "failed": 61,
+    "articles": 1897,
     "okSources": [
+      {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "count": 30
+      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -33,11 +38,6 @@
         "count": 12
       },
       {
-        "id": "rss_eco_faso",
-        "name": "L'Économiste du Faso",
-        "count": 10
-      },
-      {
         "id": "rss_faso7",
         "name": "Faso7",
         "count": 10
@@ -51,6 +51,11 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -95,6 +100,11 @@
       {
         "id": "rss_journ_tch",
         "name": "Journal du Tchad",
+        "count": 10
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -228,6 +238,11 @@
         "count": 10
       },
       {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "count": 10
+      },
+      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -265,17 +280,12 @@
       {
         "id": "rss_f24fr",
         "name": "France 24",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_f24afr",
         "name": "France 24 Afrique",
         "count": 29
-      },
-      {
-        "id": "rss_jeuneafr",
-        "name": "Jeune Afrique",
-        "count": 30
       },
       {
         "id": "rss_rfiafr",
@@ -331,6 +341,11 @@
         "id": "rss_brookings",
         "name": "Brookings Institution",
         "count": 0
+      },
+      {
+        "id": "rss_ecfr",
+        "name": "ECFR — European Council on Foreign Relations",
+        "count": 25
       },
       {
         "id": "rss_carnegie",
@@ -490,7 +505,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -540,19 +555,14 @@
     ],
     "failedSources": [
       {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "error": "HTTP 415"
+        "id": "rss_eco_faso",
+        "name": "L'Économiste du Faso",
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -593,11 +603,6 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -662,7 +667,7 @@
       {
         "id": "rss_adiac",
         "name": "ADIAC — Dépêches Brazzaville",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_dailynation",
@@ -692,7 +697,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "HTTP 415"
+        "error": "fetch failed"
       },
       {
         "id": "rss_le360",
@@ -712,7 +717,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 415"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_moibrahim",
@@ -730,11 +735,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "error": "HTTP 415"
-      },
-      {
         "id": "rss_friedrich",
         "name": "Friedrich Ebert Stiftung Afrique",
         "error": "HTTP 404"
@@ -743,6 +743,11 @@
         "id": "rss_frs",
         "name": "FRS — Fondation Recherche Stratégique",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_jeuneafr",
+        "name": "Jeune Afrique",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_tv5afr",
@@ -778,11 +783,6 @@
         "id": "rss_iiss",
         "name": "IISS — International Institute Strategic Studies",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_ecfr",
-        "name": "ECFR — European Council on Foreign Relations",
-        "error": "HTTP 415"
       },
       {
         "id": "rss_chinadaily",
@@ -863,19 +863,19 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 70,
-    "alerts": 3,
-    "criticalAlerts": 2,
+    "bfAes": 60,
+    "alerts": 1,
+    "criticalAlerts": 1,
     "sourcesDistinct": 73
   },
   "topDevelopments": [
     {
-      "title": "Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb",
-      "link": "https://www.aib.media/cooperation-mali-algerie-le-president-assimi-goita-recoit-le-premier-ministre-algerien-sifi-ghrieb/",
-      "pubDate": "2026-09-14T19:43:31.000Z",
-      "description": "COOPÉRATION-MALI-ALGÉRIE Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb Ouagadougou, 14 sept. 2026 (AIB) – Le Président de la Transition du Mali, le Général d’Armée Assimi Goïta, a reçu lundi 14 septembre 2026, à Bamako le Premier ministre algérien, Sifi Ghrieb, en visite de travail au Mali. Les échanges ont porté sur le renforcement de la coopération bilatérale et les défis sécuritaires régionaux. Le Premier ministre, Sifi Ghrieb a transmis au chef de l’État malien les salutations fraternelles du Président algérien Abdelmadjid Tebboune et son engagement à renforcer les liens de fraternité et de bon voisinage entre les deux pays. En retour, le Général d’Armée Assimi Goïta l’a chargé de transmettre ses salutations sincères au Président Tebboune. Les deux parties ont réaffirmé leur volonté de poursuivre l’action commune visant à renforcer leurs relations de coopération. Le Premier ministre algérien a souligné que sa visite à Bamako, quelques jours après celle du Premier ministre malien, le Général de division Abdoulaye Maïga, en Algérie, traduit la volonté politique des deux chefs d’État de consolider la solidarité et la coopération bilatérale. Sifi Ghrieb a également annoncé la préparation active, avec le Premier ministre malien, de la prochaine visite du Président Assimi Goïta en Algérie, à l’invitation de son homologue Abdelmadjid Tebboune. Sur le plan sécuritaire, les deux parties ont réaffirmé l’importance d’une approche globale et solidaire, fondée sur les capacités propres des États de la région, pour promouvoir la paix, la sécurité et le développement. Le Premier ministre algérien, accompagné d’une forte délégation, a exprimé sa gratitude aux autorités maliennes pour l’hospitalité accordée depuis son arrivée à Bamako. Agence d'information du Burkina Source: Présidence de la République du Mali",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "IIes Jeux de l’AES : fortunes diverses, satisfaction partagée",
+      "link": "https://www.sidwaya.info/iies-jeux-de-laes-fortunes-diverses-satisfaction-partagee/",
+      "pubDate": "2026-09-15T00:14:27.000Z",
+      "description": "A quelques heures de la fin de la seconde édition des Jeux de l’AES, plusieurs disciplines ont livré leur verdict avec des fortunes diverses pour les différentes délégations engagées. Le Burkina Faso domine en athlétisme, au kung fu wushu, au handball, le Niger confirme sa suprématie en lutte traditionnelle, au tir à l’arc olympique et au taekwondo et le Mali règne en maître au football. A la suite des jeunes handballeuses burki-nabè, les Etalons U18 se sont imposés face à leurs homologues du Mena (34-31) au terme d’une finale âprement disputée. Ils décrochent ainsi le titre de champions et inscrivent leur nom au palmarès de ces Jeux de l’Alliance des Etats du Sahel (AES). Une belle consécration pour les Etalons cadets qui offrent au Burkina Faso sa seconde médaille d’or dans la discipline à cette IIe édition après celle des cadettes. Les U18 filles, elles, ont en effet pris le dessus sur les Aiglonnes cadettes du Mali par (41-33). Le pays hôte a également brillé au kung fu wushu. Au terme des épreuves techniques (Taolu) et des combats (Sanda), les Etalons terminent en tête avec 14 médailles d’or, 6 d’argent et 2 de bronze, soit 22 médailles. Le Mali occupe la deuxième place avec 17 médailles dont 7 d’or, 9 d’argent et une de bronze, et le Niger ferme la marche avec 9 médailles dont une d’or, 5 d’argent et 3 de bronze. Les compétitions en individuel de judo se sont disputées dans les catégories cadets et juniors. A l’issue des combats, les judokas burkinabè ont remporté au total 12 médailles, dont 5 d’or, 4 d’argent et 3 de bronze. En confrontations par équipe, le Niger s’est hissé à la première place, devant le Burkina Faso, classé deuxième, et le Mali, qui occupe la troisième place du podium. Si au tir à l’arc traditionnel la razzia des Burkinabè a été sans partage, ce sont les Nigériens qui ont confirmé leur domination sur l’épreuve de tir à l’arc olympique. La délégation du Niger s’est octroyé l’or et l’argent aussi bien en individuel hommes, dames, mixte et par équipe. Le Burkina Faso se classe 2e à ce niveau devant le Mali (3e). Suprématie également des Nigériens en lutte traditionnelle. Hilla Hassane (-60 kg), Djimilou Bakoye (-66 kg) et Ibrahim Mahaman (-100 kg) ont permis au Niger de décrocher les médailles d’or dans ces différentes catégories. Le Burkina a été supérieur au kung fu wushu. \" data-large-file=\"https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-1024x683.jpg\" class=\"size-medium wp-image-169582\" src=\"https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-300x200.jpg\" alt=\"\" width=\"300\" height=\"200\" srcset=\"https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-300x200.jpg 300w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-1024x683.jpg 1024w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-768x512.jpg 768w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-1536x1024.jpg 1536w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-630x420.jpg 630w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-150x100.jpg 150w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-696x464.jpg 696w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu-1068x712.jpg 1068w, https://www.sidwaya.info/wp-content/uploads/2026/09/Kung-fu-wushu.jpg 1575w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Le Burkina a été supérieur au kung fu wushu. En compétition par équipe, la sélection nigérienne a surclassé ses rivales en battant le Mali (5-0) et le Burkina Faso (3-2). Le Burkina Faso, grâce à Koni Diallo, remporte l’or dans la catégorie des -76 kg, tandis que le Mali se hisse sur la plus haute marche du podium avec Seydou Fangoro, sacré champion chez les -86 kg. Chez les dames, la compétition s’est jouée entre Bur-kinabè et Maliennes. A ce niveau Aoulatou Kafando (-55 kg), Feekandi Kouaré (-60 kg) et Edith Kourané (-65 kg) ont été sans pitié avec leurs concurrentes et s’adjugent les titres de championnes AES. A l’issue des différentes épreuves au taekwondo, le Niger s’empare de la première place au classement général avec 3 médailles d’or et 3 médailles d’argent. Il est suivi du Mali, qui totalise 3 médailles d’or, 2 médailles d’argent et 1 médaille de bronze. Le Burkina Faso complète le podium avec 1 médaille d’argent et 5 médailles de bronze. Sur le plan individuel, la compétition a également consacré les performances de deux athlètes. Le Nigérien Abdoul Aziz Issoufou a été désigné meilleur combattant, tandis que la Malienne Mariam Diallo a été distinguée comme meilleure combattante. Les lauriers sont plutôt partagés en cyclisme. A la domination des Etalons cyclistes au contre-la-montre individuel et à celui par équipe, le Mali a répondu par une victoire de Tiémoko Diamouténé à l’occasion de la finale du critérium Elite. Au terme d’une course animée et longtemps indécise, le Malien a eu le dernier mot au sprint. Il devance les Burkinabè Mouni Vincent et Saturnin Yaméogo. Les épreuves de l’athlétisme toujours en cours augurent d’une bonne moisson pour les représentants burkinabè. Après la première journée couronnée de succès avec 11 médailles récoltées dont cinq d’or, le Burkina Faso a confirmé sa belle entame de compétition en remportant l’or au 110 m haies et 400m ainsi qu’au saut en longueur. Zalissa Zongo remporte le saut en longueur et le 100m haies. En football, c’est la Mali qui règne en maître. En attendant la finale prévue pour cet après-midi au stade du 4-Août, les cadets maliens sont en effet bien partis pour enfiler l’or après avoir pris le meilleur sur l’équipe des U17 nigériens et sur les deux représentants burki-nabè. Les finales des différentes catégories de la compétition de boxe sont également pour ce 15 septembre à partir 15h30 dans la salle des arts martiaux du CNOSB. Voro KORAHIRE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -892,21 +892,53 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
+      "_rating": "C2",
       "_score": 127,
       "_zone": 1,
-      "_theme": "P",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Coopération Mali-Algérie: le Premier ministre algérien à Bamako pour une visite de travail et d’amitié",
-      "link": "https://www.aib.media/cooperation-mali-algerie-le-premier-ministre-algerien-a-bamako-pour-une-visite-de-travail-et-damitie/",
-      "pubDate": "2026-09-14T15:03:59.000Z",
-      "description": "COOPERATION-MALI-ALGERIE-VISITE-PREMIER-MINISTRE-ALGER Coopération Mali-Algérie: le Premier ministre algérien à Bamako pour une visite de travail et d’amitié Bamako, 14 sept. 2026 (AIB)- Le Premier ministre algérien Sifi Ghrieb est arrivé, dans la matinée du lundi 14 septembre 2026 à Bamako, pour une visite de travail et d’amitié, sur invitation du Général de Division Abdoulaye Maïga, Premier ministre et Chef du Gouvernement du Mali. Ce déplacement s’inscrit dans le cadre de la redynamisation des relations entre le Mali et l’Algérie, à la suite de la visite de travail effectuée par le Premier ministre, le Général de Division Abdoulaye Maïga, à Alger le 24 août 2026. Il permettra d’amplifier le dialogue direct entre les deux pays, dans le respect des intérêts de chaque État. À l’occasion de cette visite, le Premier ministre Sifi Ghrieb portera un message du Président Abdelmadjid Tebboune à l’attention du Président de la Transition, le Général d’Armée Assimi Goïta. Il sera reçu par le Chef de l’État et tiendra une séance de travail avec son homologue, le Général de Division Abdoulaye Maïga. Agence d’Information du Burkina Source: Primature du Mali",
+      "title": "Santé animale dans l’espace AES : la nécessité de mutualiser les efforts",
+      "link": "https://www.sidwaya.info/sante-animale-dans-lespace-aes-la-necessite-de-mutualiser-les-efforts/",
+      "pubDate": "2026-09-14T23:53:17.000Z",
+      "description": "Le ministère de l’Agriculture, de l’Eau, des Ressources animales et halieutiques organise un atelier confédéral de validation des documents pour l’harmonisation et l’amélioration de la réponse aux maladies animales transfrontalières dans l’AES, du 14 au 16 septembre 2026, à Ouagadougou. Les pays de la Confédération des Etats du Sahel que sont le Burkina, le Mali et le Niger, ont décidé de faire front commun face aux défis principaux auxquels ils sont confrontés dans le domaine de la production, la santé animales et la santé publique vétérinaire. Un atelier confédéral réunissant les experts de ces trois pays pour valider des documents en vue de l’harmonisation et de l’amélioration de la réponse aux maladies animales transfrontalières dans l’espace AES se tient, à Ouagadougou, du 14 au 16 septembre 2026. Pendant trois jours de travaux, les participants vont analyser trois instruments soumis à leur examen. Il s’agit de la surveillance épidémiologique harmonisée, la création d’une banque confédérale des vaccins vétérinaires et la campagne de vaccination concertée. Selon le directeur général des services vétérinaires, vétérinaire, capitaine Aboubacar Nacro, cette rencontre constitue l'aboutissement d'un long processus d’échanges sur les principaux défis auxquels font face les trois pays. « Il nous appartient désormais de bâtir ensemble la réponse, en faisant de cette rencontre un véritable espace de proposition de solutions fondées sur l'expertise de nos trois pays, le partage d'expériences, la confiance et la recherche de résultats concrets », a-t-il signifié. Une réponse coordonnée Selon le représentant du ministre délégué chargé des Ressources animales, Hiver Boussini, les pays de l’AES partagent des espaces pastoraux, des bassins de production, des couloirs de transhumance, des marchés à bétail et des circuits commerciaux étroitement interconnectés. « Des maladies animales transfrontalières dont la péripneumonie contagieuse bovine, la peste des petits ruminants, l'influenza aviaire hautement pathogène et la rage constituent des menaces qui affectent simultanément nos systèmes d’élevage et pour certaines, la santé de nos populations », a-t-il-fait savoir. Pour lui, la coopération entre les services vétérinaires de ces Etats représente un véritable instrument de la souveraineté de l'espace confédéral. « L’objectif ultime est qu'une menace détectée, dans une partie de l'espace confédéral, puisse être connue rapidement par les services vétérinaires des autres pays et une réponse d’ensemble puisse être déclenchée, avant que la maladie ne se propage davantage », a précisé Hiver Boussim. Le représentant du ministre délégué chargé des Ressources animales a notifié que les zoonoses telles que la rage, le charbon bactérien et plusieurs autres maladies animales constituant une menace directe pour les populations. « C’est pourquoi, la coopération devra intégrer une véritable approche « une seule santé » associant les secteurs de la santé animale, de la santé humaine et de l'environnement », a-t-il précisé. Hiver Boussim a déclaré aux experts que leur mission n'est pas simplement de relier les projets de déploiement. « Vous êtes appelés à construire les fondations techniques d'un dispositif confédéral durable de santé animale et de protection des productions animales », a signifié le représentant du ministre délégué chargé des Ressources animales aux participants. Kadi RABO",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 127,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb",
+      "link": "https://www.aib.media/cooperation-mali-algerie-le-president-assimi-goita-recoit-le-premier-ministre-algerien-sifi-ghrieb/",
+      "pubDate": "2026-09-14T19:43:31.000Z",
+      "description": "COOPÉRATION-MALI-ALGÉRIE Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb Ouagadougou, 14 sept. 2026 (AIB) – Le Président de la Transition du Mali, le Général d’Armée Assimi Goïta, a reçu lundi 14 septembre 2026, à Bamako le Premier ministre algérien, Sifi Ghrieb, en visite de travail au Mali. Les échanges ont porté sur le renforcement de la coopération bilatérale et les défis sécuritaires régionaux. Le Premier ministre, Sifi Ghrieb a transmis au chef de l’État malien les salutations fraternelles du Président algérien Abdelmadjid Tebboune et son engagement à renforcer les liens de fraternité et de bon voisinage entre les deux pays. En retour, le Général d’Armée Assimi Goïta l’a chargé de transmettre ses salutations sincères au Président Tebboune. Les deux parties ont réaffirmé leur volonté de poursuivre l’action commune visant à renforcer leurs relations de coopération. Le Premier ministre algérien a souligné que sa visite à Bamako, quelques jours après celle du Premier ministre malien, le Général de division Abdoulaye Maïga, en Algérie, traduit la volonté politique des deux chefs d’État de consolider la solidarité et la coopération bilatérale. Sifi Ghrieb a également annoncé la préparation active, avec le Premier ministre malien, de la prochaine visite du Président Assimi Goïta en Algérie, à l’invitation de son homologue Abdelmadjid Tebboune. Sur le plan sécuritaire, les deux parties ont réaffirmé l’importance d’une approche globale et solidaire, fondée sur les capacités propres des États de la région, pour promouvoir la paix, la sécurité et le développement. Le Premier ministre algérien, accompagné d’une forte délégation, a exprimé sa gratitude aux autorités maliennes pour l’hospitalité accordée depuis son arrivée à Bamako. Agence d'information du Burkina Source: Présidence de la République du Mali",
       "_source": "AIB — Agence Information BF",
       "_sourceId": "rss_aib",
       "_sourceCat": "bf_local",
@@ -967,19 +999,19 @@
       "_desk": "A1"
     },
     {
-      "title": "Pépiniéristes de Bobo-Dioulasso : entre passion et engagement pour l’environnement",
-      "link": "https://www.sidwaya.info/pepinieristes-de-bobo-dioulasso-entre-passion-et-engagement-pour-lenvironnement/",
-      "pubDate": "2026-09-14T23:42:37.000Z",
-      "description": "La production de plants constitue une activité à la fois économique et environnementale qui gagne du terrain au Burkina Faso. A Bobo-Dioulasso, les pépiniéristes s’investissent au quotidien dans la sauvegarde de l’environnement et le développement de leurs activités. Pour les acteurs de la filière, l’arbre représente à la fois une richesse naturelle, une source de revenus et un investissement pour l’avenir. C’est le constat fait dans la zone pépinière de Kôkô à Bobo-Dioulasso. Bobo-Dioulasso, mardi 25 août 2026. La journée commence au milieu des plants de la zone de production de pépinière dénommée : « coopérative Faso vert » située dans le quartier Kôkô de la ville. Dans les pépinières visitées, les plants d’arbres fruitiers, d’espèces sauvages et de plantes ornementales occupent les espaces disponibles. Les jeunes plants sont disposés dans des sachets, alignés les uns à côté des autres, en attendant d’être vendus et transférés vers les sites de plantation. Plusieurs acteurs exercent dans le secteur avec le double objectif de contribuer au reboisement de la région du Guiriko et du reste du pays, tout en tirant des revenus de leurs activités. Depuis 2005, Sami Crépin Tioyé travaille dans ce domaine. Il a fait ses premiers pas auprès de son « petit papa », qui lui a transmis des techniques de production, avant de suivre des formations pour approfondir ses connaissances. Pour Fousseni Sanou, le métier est le fruit d’un long parcours. Alors qu’il était encore élève, il profitait de ses vacances pour aider un patron dans de petites tâches. Ce qui devait être une occupation temporaire s’est transformée en véritable vocation. Devenu apprenti en 2006, il a commencé à pratiquer les travaux de terrain entre 2010 et 2015. Plusieurs formations organisées par le gouvernement et des projets lui ont ensuite permis de consolider son expérience. Des techniquesmaitrisées pour la production La production des plants obéit à des techniques précises. Le semis consiste à placer les graines dans un substrat afin d’obtenir de jeunes plants. Les producteurs ont également recours au bouturage, au marcottage. Ces méthodes de multiplication végétative permettent de reproduire de nouvelles plantes à partir d’une plante mère. Le temps nécessaire à la production dépend de l’espèce et de la technique utilisée. Selon Sami Crépin Tioyé, les délais de production varient considérablement. Les plants issus de semis peuvent nécessiter une année ou plus avant d’être proposés à la vente. Certains plants obtenus par bouturage sont, en revanche, commercialisables après trois à cinq mois. Leur production comprend des arbres fruitiers, des espèces sauvages et des plantes ornementales. Les plants sont issus de plusieurs provenances, notamment du Burkina Faso, de la Côte d’Ivoire, du Ghana et du Mali. Cette diversité permet aux acteurs de répondre aux demandes des particuliers, des producteurs, des entreprises et des initiatives de reboisement. Le constat fait sur le terrain est celui d’une activité qui bénéficie d’un marché favorable. « Le marché est bon actuellement », affirme Tioyé Sami Crépin. Selon les pépiniéristes, l’intérêt des autorités pour la plantation d’arbres et la promotion d’un Burkina Faso vert ont contribué à accroitre la commande. Les plants destinés au reboisement et les agrumes, notamment les tangelos, les orangers et les citronniers, figurent parmi les espèces les plus recherchées en saison pluvieuse. Les plantes ornementales sont également demandées par les particuliers et certaines structures. Le prix des plants est fixé de 100 F CFA au-delà de 50 000 F CFA en fonction de leurs variétés. Pour certains, comme le souligne Sibiri Sanou, les producteurs peuvent se retrouver avec des plants prêts à être commercialisés, mais une demande insuffisante. Cette situation fragilise leur activité. La production ne s’arrête pas à la vente. Les pépiniéristes assurent parfois le suivi des clients et se rendent sur les sites pour planter les arbres lorsque cela est nécessaire. Les plants doivent ensuite être régulièrement entretenus et protégés contre les vers, les insectes et les mouches blanches. Selon Fousseni Sanou, les traitements favorisent la croissance des arbres et peuvent leur permettre de commencer à produire des fruits à partir de la deuxième année. « Nos équipes accompagnent les clients qui le souhaitent jusque dans les plantations. Elles peuvent notamment assurer la mise en terre des plants et donner des conseils sur leur entretien », explique-t-il. Une importante source d’emploi Au fil des échanges, les producteurs présentent une activité qui exige de la patience, de la maîtrise technique et un suivi régulier, mais qui offre également des perspectives économiques intéressantes. La production des plants reste une source de revenus pour de nombreux acteurs. Elle contribue à soutenir des familles et à financer des réalisations importantes. Les revenus permettent à certains producteurs de construire, d’acquérir des moyens de déplacement. Pour Sami Crépin Tioyé, cette activité permet à plusieurs acteurs de subvenir à leurs besoins et d’améliorer leur condition de vie. La filière constitue également une importante source d’emploi dans la ville. Plusieurs personnes tirent des revenus de ce travail. Fousseni Sanou affirme qu’il emploie aujourd’hui plus d’une dizaine de personnes et participe à la formation de nouveaux acteurs. La production des plants offre un terrain de pratique aux étudiants des écoles professionnelles de la ville de Bobo-Dioulasso. « Des étudiants envoyés par des universités viennent se former dans les pépinières à la recherche d’une expérience professionnelle », confie Fousseni Sanou. Des élèves et des étudiants passionnés du travail viennent y travailler pendant les vacances dans le but de gagner des ressources pour subvenir à leurs besoins scolaires. C’est le cas de Christian Somé, un élève qui travaille dans une pépinière à chaque vacance. « Depuis la classe de CM2, je viens travailler pendant les vacances et repartir fréquenter », témoigne-t-il. Pour lui, cette activité représente une occasion de soutenir ses études tout en apprenant un métier. Les pépinières constituent un outil important de reboisement, de lutte contre la désertification, de conservation de la biodiversité et d’amélioration du cadre de vie au Burkina Faso. Plusieurs témoignages illustrent l’importance de l’arboriculture. Karim Diarra, planteur contribuant au reboisement et promoteur de la ferme Diarra à Dédougou, s’est approvisionné en plants au centre Coopérative Faso vert. Sa ferme couvre aujourd’hui plus de 15 hectares. Six hectares sont consacrés aux tangelos, aux orangers, aux citronniers et aux goyaviers. L’anacardier occupe neuf hectares, auxquels s’ajoutent des eucalyptus et d’autres variétés. « J’ai commencé la plantation, il y a trois ans et la majorité des plantes ont commencé à produire », déclare Karim Diarra. Cette première récolte représente une étape importante pour lui, car, elle concrétise les efforts consentis depuis le lancement de son activité. Yacouba Sawadogo, client et planteur également depuis 8 ans à Dawéra dans la province du Houet est aussi venu acheter des arbres dans la pépinière de Kôkô. Il affirme qu’il possède plusieurs hectares de plantation, dont plus de dix hectares d’anacardiers. Il cultive également le manguier, le citronnier, l’oranger et le baobab. « L’arbre est très bénéfique pour moi, j’en ai déjà tiré plusieurs avantages », souligne-t-il. M. Sawadogo affirme que les visites de son champ lui ont valu des cadeaux dont trois motos. Cette année, la vente de sa production d’anacarde lui a rapporté près de deux millions F CFA selon ses dires. Enseignante et passionnée de l’arboriculture, Djeneba Sawadogo s’est rendue sur le site avec une amie pour acheter des plants destinés à être mis en terre. Dans son établissement, elle a transformé la cour de l’école en véritable espace de verdure, où elle pratique le jardinage et cultive notamment des arbres fruitiers dont les récoltes sont consommées. Pour elle, l’arbre joue un rôle essentiel dans l’environnement scolaire. « L’ombre constitue un cadre d’étude pour les enfants et les exercices pratiques », a-t-elle souligné. Un investissement de longue haleine Dans les plantations, la réussite dépend aussi du suivi. Le traitement régulier des plants favorise la croissance des plants. Pour Karim Diarra et Yacouba Sawadogo, l’arboriculture est une activité qui demande de la passion, de la patience et une présence constante. « Il ne suffit pas de planter un arbre : il faut également le protéger, l’arroser et suivre son évolution jusqu’à sa pleine production. », insiste Karim Diarra Le promoteur de ferme explique que les plants doivent être traités avant leur mise en terre. Une attention particulière est accordée à la lutte contre les termites, qui peuvent détruire les jeunes arbres. Après un à deux mois, un apport de fumure organique est effectué afin de favoriser la croissance des plants. Environ six mois plus tard, le traitement contre les termites doit être renouvelé, tandis que l’arrosage reste indispensable, surtout durant les périodes de forte chaleur. Cette exigence d’entretien explique, selon Yacouba Sawadogo, pourquoi certains projets de plantation n’atteignent pas les résultats escomptés. « L’arbre est un investissement de longue durée. Il ne produit pas immédiatement et nécessite des soins réguliers avant de devenir une source de revenus ou de nourriture », soutient-il. C’est ainsi qu’il explique que son parcours n’est toutefois pas exempt de difficultés. Pour arroser ses manguiers et ses agrumes, il dépend d’un puits. « Le travail est avantageux, mais le début reste difficile. Il nécessite un sacrifice », prévient-il. « Certains arbres meurent malgré l’entretien et les traitements appliqués. Ces pertes représentent un manque à gagner et obligent le producteur à renouveler régulièrement les plants », ajoute Karim Diarra. Il encourage néanmoins les populations à s’intéresser davantage à l’arboriculture fruitière. Il y voit un moyen de renforcer l’autosuffisance alimentaire et de réduire la dépendance aux importations de fruits. Une production locale plus importante pourrait favoriser la transformation à travers la création des unités de transformation selon la vision des autorités actuelles pour promouvoir la politique du « consommons local ». Des contraintes qui appellent un accompagnement L’accès à l’eau conditionne l’avenir de la filière. Malgré ses potentialités, la production de plants demeure fragile. La principale difficulté reste l’accès à l’eau. « L’eau est à la base de tout », rappelle Sami Crépin Tioyé. En 2024, la pénurie a conduit certains producteurs à envisager de renoncer à leur activité. Pour continuer à travailler, Fousseni Sanou a creusé un puits. Le manque d’eau a obligé parfois les travailleurs à parcourir de longues distances avec des barriques afin d’alimenter les pépinières. Cette opération est pénible et coûteuse. Selon Sibiri Sanou, une barrique d’eau peut coûter environ 250 F CFA alors qu’il faut arroser un vaste champ de pépinière. Sans arrosage régulier, les jeunes plants se dessèchent rapidement. La période sèche exige davantage de temps, de main-d’œuvre et de moyens financiers. La réalisation d’un grand forage à Bolomakoté par l’Organisation catholique pour le développement et la solidarité (OCADES) a permis d’atténuer les difficultés, selon les pépiniéristes. Les maladies représentent une autre menace. Lorsqu’un arbre tombe malade, les travailleurs doivent traiter l’ensemble de la production, car, un seul plant contaminé peut transmettre la maladie aux autres. La prévention est donc essentielle. Le manque d’espace constitue une autre préoccupation. « Les commandes de l’Etat et de certaines entreprises exigent parfois une production en grande quantité et les superficies disponibles ne permettent pas toujours de répondre à ces demandes. Pourtant c’est dans la production de quantité qu’il y a de l’argent », fait remarquer Fousseni Sanou. Les producteurs souhaitent donc disposer d’espaces plus vastes, dotés de points d’eau et d’équipements adaptés. La main-d’œuvre qualifiée et permanente fait également défaut. Les jeunes, selon les producteurs, sont de moins en moins nombreux à accepter le temps nécessaire à l’apprentissage du métier. Pour faire face à cette situation, les responsables de pépinières mobilisent leurs enfants pendant les vacances et accueillent des élèves et des étudiants à la recherche de revenus pour leurs besoins scolaires. Pour les pépiniéristes comme pour les planteurs, l’arbre doit être davantage valorisé. Ils appellent à la création d’espaces de production plus grands, à la sécurisation de l’approvisionnement en eau et à l’accompagnement des spécialistes. Au regard de l’importance de l’arbre à l’école, Djeneba Sawadogo a affirmé qu’elle avait élaboré un projet destiné au ministère chargé de l’Enseignement de base. Son ambition est d’intégrer la production de plants dans les écoles et d’en faire une activité éducative à part entière. Ce projet va initier les élèves à la plantation, à l’entretien des arbres et à leur importance dans la vie quotidienne. « L’enfant doit comprendre comment l’arbre évolue jusqu’à donner des fruits, Il faut concrétisertout ça à l’école », conseille-t-elle. Elle affirme que son projet qui a coïncidé, avec la Covid-19, n’a pas reçu de suite favorable. Malgré ce contretemps, elle a réussi à mettre un jardin pédagogique en place dans l’école où elle exerce à Ouahigouya. Elle vise la réalisation de jardins pédagogiques dans quatre écoles et l’Etat, les organisations, les associations et toutes les personnes de bonne volonté à soutenir les passionnés engagés dans la promotion de l’environnement et de l’économie verte. Cet accompagnement pourrait porter sur la mise à disposition de plants, de matériel d’arrosage, de clôtures, de semences et de moyens de formation. Tioyé Sami Crépin invite, pour sa part, les jeunes à s’intéresser à l’arboriculture. Dans les pépinières de Bobo-Dioulasso, la production de plants apparaît ainsi comme un métier de patience et de sacrifice, mais aussi comme une activité porteuse d’espoir pour l’environnement, l’emploi et l’économie locale. Pengd Wendé Charles BAMOGO (Stagiaire) Investir dans l’arbre, c’est investir dans l’avenir L’arbre est un véritable allié de la vie. Il purifie l’air en absorbant le dioxyde de carbone, produit de l’oxygène, protège les sols contre l’érosion et contribue à la régulation du climat. Il offre également de l’ombre, favorise la biodiversité, améliore le paysage et peut fournir des fruits, et des revenus aux familles. La plantation des arbres devient nécessaire dans le contexte actuel du Burkina Faso où la déforestation, la sècheresse constituent un enjeu. Ensemble investissons dans l’arbre, ne serait-ce que planter même un seul arbre est un acte bénéfique à l’environnement, en nous et à la génération future. En plantant ou en protégeant un arbre, vous participez à la restauration de l’environnement et à la création d’un avenir plus sain pour tous. Chaque plant compte : investissons ensemble dans la plantation et la protection des arbres. P.W.C.B",
-      "_source": "Sidwaya",
-      "_sourceId": "rss_sidwaya",
+      "title": "Modernisation de l’Administration : cap sur des services publics plus efficaces et proches du Peuple",
+      "link": "https://netafrique.net/modernisation-de-ladministration-cap-sur-des-services-publics-plus-efficaces-et-proches-du-peuple/",
+      "pubDate": "2026-09-15T01:24:28.000Z",
+      "description": "Le Camarade Premier ministre, Chef du Gouvernement, Rimtalba Jean Emmanuel Ouédraogo, a présidé, ce lundi 14 septembre 2026 à Ouagadougou, la session ordinaire du Conseil national de la modernisation de l’Administration et de la bonne gouvernance (CN-MABG). Les travaux ont permis d’évaluer les performances de l’Administration publique, d’identifier les insuffisances persistantes et de définir les orientations pour l’année 2027. À l’ouverture de la session, le Chef du Gouvernement a rappelé que la modernisation de l’Administration publique constitue un enjeu de souveraineté, de dignité et d’efficacité de l’action publique. Elle ne saurait, selon lui, se limiter à des réformes techniques ou à la dématérialisation des procédures. « Notre ambition doit être claire : faire de l’Administration publique un véritable instrument de souveraineté et de transformation du Burkina Faso », a-t-il déclaré. Le Premier ministre a ainsi appelé à un changement profond des pratiques, des méthodes de travail et du rapport de l’Administration au Peuple. L’objectif est de bâtir une Administration disciplinée, intègre, compétente, performante, innovante et redevable, capable de produire des résultats et de rendre compte de l’utilisation des ressources publiques. La performance globale de l’Administration au titre de l’année 2025, établie à 85,38 %, témoigne, selon le Chef du Gouvernement, d’une dynamique appréciable. Tout en félicitant les agents publics ayant contribué à ce résultat, il les a invités à se garder de toute autosatisfaction. « La performance n’est pas une fin en soi : elle est une exigence permanente », a-t-il souligné, insistant sur la nécessité de traduire les résultats administratifs en améliorations concrètes dans la vie des populations. Les travaux ont également permis d’examiner les principales insuffisances qui affectent encore le fonctionnement de l’Administration. Elles concernent notamment la faible couverture de l’évaluation de certaines institutions, l’appropriation insuffisante des outils de gouvernance, les contraintes liées aux ressources humaines et aux infrastructures, les difficultés des systèmes d’information ainsi que l’authenticité de certains documents produits dans le cadre de la commande publique. L’appropriation des plateformes de services numériques par les citoyens figure également parmi les défis identifiés. À ce sujet, le Premier ministre a appelé à une transformation numérique inclusive, adaptée aux réalités nationales et qui ne crée pas de nouvelles formes d’exclusion. Il a notamment souhaité que les langues nationales trouvent progressivement leur place dans les systèmes d’information et les services numériques. Au cours de la session, les participants ont examiné trois principaux documents : le rapport annuel de mise en œuvre de la Stratégie nationale de modernisation de l’Administration publique, le rapport sur l’état de la gouvernance au Burkina Faso et le rapport global sur la performance des structures de l’Administration publique, tous au titre de l’année 2025. Ils ont également analysé les résultats des évaluations des stratégies nationales relatives à la déconcentration administrative, à la modernisation de l’Administration publique et à la promotion de la bonne gouvernance. À la clôture des travaux, le Premier ministre a engagé les responsables concernés à transformer les recommandations adoptées en actions concrètes, assorties de responsabilités clairement définies et de mécanismes rigoureux de suivi. Il a précisé que les insuffisances relevées ne remettent pas en cause les performances enregistrées, mais constituent des défis prioritaires auxquels des réponses doivent être apportées. Les orientations définies pour 2027 devront notamment permettre à l’Administration d’accompagner la reconquête du territoire et le retour effectif de l’État auprès des populations. « Là où nos Forces combattantes reconquièrent des espaces, notre Administration doit être prête à rétablir durablement la présence et l’autorité de l’État », a affirmé le Chef du Gouvernement. Pour Rimtalba Jean Emmanuel Ouédraogo, le rétablissement de la sécurité doit s’accompagner du retour de services publics adaptés aux besoins des populations, notamment dans les domaines de l’éducation, de la santé, de l’état civil, de la justice, de l’action sociale et de l’administration territoriale. Le Premier ministre a enfin appelé chaque ministère, institution, structure et agent public à prendre sa part dans la refondation de l’Administration, sous le sceau de la primauté de l’intérêt général. Il a chargé le ministère des Serviteurs du Peuple, à travers le Secrétariat permanent de la modernisation de l’Administration et de la bonne gouvernance, d’assurer un suivi rigoureux de la mise en œuvre des conclusions et orientations issues de la session. DCRP/Primature L’article Modernisation de l’Administration : cap sur des services publics plus efficaces et proches du Peuple est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "humanitarian",
+        "military",
         "political"
       ],
       "_majors": [],
@@ -989,55 +1021,23 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C2"
+        "rating": "F1"
       },
-      "_rating": "C2",
+      "_rating": "F1",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "À Bobo-Dioulasso, les élèves du Guiriko invités à devenir les acteurs du réarmement mental",
-      "link": "https://www.aib.media/a-bobo-dioulasso-les-eleves-du-guiriko-invites-a-devenir-les-acteurs-du-rearmement-mental/",
-      "pubDate": "2026-09-14T20:46:22.000Z",
-      "description": "À Bobo-Dioulasso, les élèves du Guiriko invités à devenir les acteurs du réarmement mental Bobo-Dioulasso, 14 sept. 2026 (AIB) – La Direction régionale de l’Enseignement secondaire et de la Formation professionnelle et technique du Guiriko a ouvert le samedi 12 septembre 2026, un espace de dialogue avec les élèves autour d’un enjeu majeur : mieux comprendre la Révolution Progressiste Populaire (RPP) et ses implications pour la jeunesse. Les échanges ont eu lieu en présence du Ministre de l’Enseignement secondaire et de la Formation professionnelle et technique, Pr Moumouni Zoungrana de ses proches collaborateurs et du Gouverneur de la région du Guiriko, Mariama Konaté/Gnanou. Pendant près de deux heures, les panelistes se sont succédé pour apporter des éclairages complémentaires sur le sujet. Le Commandant de la 2ᵉ Région militaire Lieutenant-colonel Lassané Porgo a introduit les échanges, avant que le Directeur général de la Police municipale, le chargé de mission à la Présidence du Faso pour la région du Guiriko et l’écrivaine Maiga/Ouédraogo Nobila Mariam ne se penchent chacun sur les fondements et les orientations de la Révolution Progressiste Populaire pour la jeunesse. Le Pr Moumouni Zoungrana a rappelé une chose « les jeunes doivent comprendre que cette révolution est là pour eux ». Modérés par le Directeur régional de l’Enseignement secondaire et de la Formation professionnelle et technique du Guiriko, Tanga Ouédraogo, les échanges ont surtout permis de rapprocher les grandes orientations de la RPP des réalités quotidiennes de l’école. Civisme, responsabilité, engagement, formation professionnelle, développement des compétences et contribution à la souveraineté nationale ont ainsi nourri les discussions. La phase des questions a donné aux élèves l’occasion d’exprimer leurs préoccupations et de mieux saisir leur rôle dans les réformes en cours. Avant le début du panel, les appelés de l'immersion patriotique obligatoire présents ont reçu des kits de connexion Telecel. Chaque participant est reparti avec un exemplaire du Manifeste de la RPP. À travers cette initiative, la Direction régionale du Guiriko entend contribuer à une meilleure appropriation des idéaux de la Révolution Progressiste Populaire, ce qui permettra à chacun de jouer harmonieusement sa partition. Agence d’information du Burkina En collaboration avec DCRP/MESFPT",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Université Daniel Ouezzin Coulibaly : le Pr Aboudramane Guiro veut faire de l’université un moteur de développement de Bankui",
-      "link": "https://www.aib.media/universite-daniel-ouezzin-coulibaly-le-pr-aboudramane-guiro-veut-faire-de-luniversite-un-moteur-de-developpement-de-bankui/",
-      "pubDate": "2026-09-14T18:49:13.000Z",
-      "description": "BURKINA-UDOC-INNOVATION-DEVELOPPEMENT-ENTRETIEN Université Daniel Ouezzin Coulibaly : le Pr Aboudramane Guiro veut faire de l’université un moteur de développement de Bankui Ouagadougou, 14 sept. 2026 (AIB)- Le Président de l’Université Daniel Ouezzin Coulibaly (UDOC), Pr Aboudramane Guiro, entend faire de l’institution un moteur de transformation de la Boucle du Mouhoun, en s’appuyant sur la recherche, l’innovation, le numérique et l’entrepreneuriat pour relever les défis du développement territorial, dans un entretien accordé à l’AIB. Agence d’information du Burkina (AIB) : Quelle est aujourd’hui votre vision stratégique pour faire de l’UDOC un véritable pôle d’excellence académique et scientifique ? Pr Aboudramane Guiro : Notre vision est de faire de l’UDOC une université de territoire, mais pas une université territoriale au sens restrictif : une université ancrée localement, ouverte nationalement et connectée internationalement. La décentralisation universitaire ne doit pas se limiter à déplacer des formations existantes. Elle doit plutôt permettre de construire, au cœur des territoires, des universités capables de produire des connaissances et des innovations adaptées aux réalités locales. Pour l’UDOC, notre ambition repose sur trois verbes : former, produire et transformer. Former des talents compétents et responsables, produire des savoirs scientifiques utiles et transformer les territoires grâce à l’innovation. Nous bâtissons progressivement une université d’excellence autour de domaines stratégiques dans la Boucle du Mouhoun et au Burkina Faso : l’agriculture et l’agritech, l’environnement et la gestion des ressources naturelles, le numérique et l’intelligence artificielle, l’énergie, l’ingénierie, les sciences des données et l’innovation entrepreneuriale. En tant que mathématicien travaillant sur la modélisation des systèmes complexes, nous sommes particulièrement convaincus qu’une université moderne doit être capable de comprendre les interactions entre les différents systèmes : agriculture, climat, eau, économie, population, technologie et environnement. C’est cette approche systémique qui guide à la fois notre recherche et notre formation. Notre objectif n’est donc pas simplement d’accueillir davantage d’étudiants. Il s’agit surtout de construire une université où la qualité de la formation, la recherche, l’innovation et l’impact sur le territoire constituent les principaux indicateurs de performance. AIB : Comment l’UDOC adapte-t-elle ses offres de formation aux besoins du marché de l’emploi et aux priorités nationales ? Pr Aboudramane Guiro : L’université ne peut plus former selon une logique exclusivement disciplinaire, déconnectée des transformations économique et technologique. Les métiers évoluent rapidement, notamment sous l’effet de l’intelligence artificielle, de la transition énergétique, de la transformation numérique et des changements climatiques. A l’UDOC, nous partons donc davantage des besoins du territoire et des compétences recherchées par les secteurs professionnels pour construire nos formations. Cela suppose de renforcer les formations professionnalisantes, de développer les compétences numériques dans toutes les filières et à d’accorder une place accrue aux pédagogies par projets, aux stages, aux études de cas et à la résolution de problèmes réels. Nous promouvons également des formations interdisciplinaires. Par exemple, l’agriculture de demain ne sera pas uniquement une affaire d’agronomes : elle mobilisera les mathématiques, la statistique, la science des données, l’intelligence artificielle, les drones, les capteurs, l’énergie solaire, la télédétection et l’économie. Notre ambition est donc de former non seulement des diplômés capables de rechercher un emploi, mais aussi des jeunes capables de créer de la valeur, de développer leur propre activité et d’apporter des réponses aux problèmes de leur environnement. AIB : Comment la recherche de l’UDOC peut-elle contribuer à la sécurité alimentaire, à la gestion durable des ressources et au développement local ? Pr Aboudramane Guiro : La Boucle du Mouhoun dispose d’un potentiel agricole considérable. Mais pour le valoriser pleinement, nous devons aujourd’hui nous appuyer sur les outils scientifiques et technologiques contemporains. Notre ambitionnons développer à l’UDOC une recherche fortement orientée vers les réalités et les problèmes du territoire. Dans mon domaine, par exemple, la modélisation mathématique permet de représenter des systèmes complexes et d’étudier leur évolution. Elle peut être utilisée pour mieux comprendre les dynamiques agricoles, hydrologiques, épidémiologiques ou environnementales, mais aussi pour simuler différents scénarios avant de prendre des décisions. Prenons une question à la fois simple et importante : comment optimiser l’utilisation de l’eau dans une exploitation agricole en tenant compte du climat, du type de sol, des cultures et des ressources disponibles ? C’est un problème complexe qui peut être abordé grâce à la modélisation, aux données et à l’intelligence artificielle. Nous voulons ainsi rapprocher chercheurs, producteurs, techniciens, collectivités et entreprises afin que la recherche ne reste pas confinée aux laboratoires, mais qu’elle débouche sur des solutions concrètes. Notre conception est simple : un problème du territoire doit pouvoir devenir une question de recherche, et un résultat de recherche doit pouvoir devenir une solution pour le territoire. AIB : Quels dispositifs pour encourager la recherche appliquée, l’entrepreneuriat et le transfert de technologies ? Pr Aboudramane Guiro : L’université du XXIᵉ siècle ne peut plus fonctionner uniquement selon le modèle classique « enseigner–publier ». Elle doit également être capable de transformer les connaissances en innovations, puis les innovations en valeur économique et sociale. C’est pourquoi nous renforçons progressivement à l’UDOC tout l’écosystème de l’innovation : recherche appliquée, projets étudiants, entrepreneuriat, incubation, partenariats avec les entreprises et valorisation des résultats scientifiques. Par exemple, un étudiant en informatique peut développer une solution numérique pour un producteur; un étudiant en agronomie peut travailler sur l’optimisation d’une production ; un étudiant en énergie peut concevoir une solution solaire ; un mathématicien ou un informaticien peut, quant à lui, développer un modèle prédictif. L’objectif ici est de créer une véritable chaîne : problème → recherche → prototype → expérimentation → innovation → entreprise ou transfert technologique.C’est de cette manière que l’université pourra devenir un véritable acteur économique de son territoire. AIB : Quelles innovations numériques pour moderniser les pratiques pédagogiques et améliorer les apprentissages ? Pr Aboudramane Guiro : La transformation numérique ne consiste pas simplement à installer des ordinateurs ou une connexion Internet dans une université. Elle implique une évolution profonde de la manière d’enseigner et d’apprendre. Nous devons donc progressivement développer des environnements numériques d’apprentissage, des ressources pédagogiques numériques, l’enseignement hybride, des plateformes collaboratives ainsi que l’exploitation des données pour améliorer le suivi des étudiants. L’intelligence artificielle constitue également une opportunité considérable, à condition de l’utiliser de manière responsable. Elle peut aider l’étudiant dans son apprentissage, l’enseignant dans la préparation de ses cours et l’université dans l’analyse des parcours académiques. Mais nous voudrions insister sur un point essentiel : l’intelligence artificielle ne doit pas remplacer l’intelligence humaine. Notre responsabilité, en tant qu’université, est précisément de former des étudiants capables de comprendre, de vérifier, de raisonner et de prendre des décisions. Nous devons donc développer chez nos étudiants une véritable culture numérique et scientifique, fondée sur l’esprit critique, l’éthique et la créativité. AIB : L’UDOC entretient-elle des partenariats avec les collectivités, les entreprises et les partenaires internationaux ? Pr Aboudramane Guiro : Pour une université implantée dans un territoire, les partenariats ne sont pas accessoires. Ils sont une véritable condition de son impact. L’UDOC est une université ouverte sur son environnement. Cela signifie qu’elle travaille avec les collectivités territoriales, les entreprises, les organisations professionnelles, les producteurs, les ONG, les centres de recherche ainsi qu’avec les universités nationales et internationales. Nous recherchons des partenariats capables de produire des résultats mesurables : mobilité des étudiants et des enseignants, projets de recherche conjoints, équipements, formations spécialisées, stages, financement de projets, transfert de technologies et création d’emplois. Notre stratégie internationale va également au-delà d’une simple signature de conventions. Une convention n’a de véritable valeur que lorsqu’elle débouche sur des activités concrètes. Nous construisons donc des partenariats gagnant-gagnant, dans lesquels l’UDOC apporte elle aussi son expertise et sa connaissance du territoire. AIB : Comment accompagnez-vous les étudiants vers l’insertion professionnelle ? Pr Aboudramane Guiro : L’insertion professionnelle doit être pensée dès l’entrée à l’université, et non à la veille de la diplomation. Nous renforçons progressivement l’orientation, le développement des compétences transversales, les stages, les relations avec les entreprises, l’entrepreneuriat et l’accompagnement à la recherche d’emploi. Un étudiant l’UDOC sort avec trois éléments essentiels : un diplôme reconnu, des compétences réellement opérationnelles et une expérience lui permettant de démontrer ce qu’il sait faire. Nous développons également des compétences devenues indispensables dans presque tous les métiers : communication, anglais, numérique, analyse de données, travail en équipe, gestion de projet, leadership et capacité à résoudre des problèmes complexes. Nous souhaitons aussi que nos formations accordent davantage de place à la culture entrepreneuriale. Dans notre contexte, l’université contribue à former des créateurs d’emplois et pas uniquement des demandeurs d’emploi en témoignent des Alumni de l’institution travaillant à leur propre compte. AIB : Quels sont les principaux défis de l’UDOC pour les prochaines années ? Pr Aboudramane Guiro : Le premier défi est évidemment celui de la qualité. La croissance d’une université ne doit jamais se faire au détriment de la qualité de l’enseignement et de la recherche. Le deuxième concerne les infrastructures et les équipements scientifiques et numériques. Une université moderne doit disposer de laboratoires, de plateformes technologiques, de bibliothèques numériques et d’espaces favorisant l’innovation. Sur ce point, nous saluons les efforts des plus hautes autorités de notre pays, en particulier Son Excellence le Président du Faso, le Camarade Capitaine Ibrahim TRAORE qui, grâce à l’Initiative Présidentielle pour une Éducation de Qualité pour tous (IPEQ), permet à notre université de bénéficier d’un amphithéâtre de 500 places et d’un bâtiment pédagogique en R+2 comportant des laboratoires et des salles de cours en voie de finition. Le troisième défi est celui des ressources humaines. Nous travaillerons à attirer, développer et à fidéliser les enseignants-chercheurs ainsi que les personnels administratifs compétents. Le quatrième est celui du financement. Dans un contexte budgétaire contraint, nous développerons davantage une véritable culture de recherche de financements compétitifs, de partenariats et de valorisation. Enfin, le cinquième défi est celui de la visibilité scientifique. Nous continuerons d’œuvrer pour que l’UDOC soit progressivement reconnue non seulement au Burkina Faso, mais aussi dans l’espace scientifique africain et international. En résumé, notre défi est de construire une université performante tout en préservant son identité de service public et son ancrage territorial. AIB : Comment faire de l’UDOC un laboratoire d’innovations au service du développement territorial ? Pr Aboudramane Guiro : Nous croyons profondément à l’idée d’une université-laboratoire du territoire. La Boucle du Mouhoun peut devenir un véritable terrain d’expérimentation scientifique et technologique. Les questions liées à l’agriculture, à l’eau, au climat, à l’énergie, à l’environnement, au numérique et au développement urbain constituent autant de problèmes complexes sur lesquels l’université peut travailler. Pour cela, nous mettrons en place des mécanismes permettant aux populations et aux collectivités de faire remonter leurs préoccupations et leurs problèmes vers l’université. Nous pourrions alors fonctionner selon une logique de laboratoires vivants, ou living labs, dans lesquels chercheurs, étudiants, collectivités, entreprises et populations travaillent ensemble sur un problème réel, expérimentent une solution, mesurent les résultats et l’améliorent. Cette approche est particulièrement importante pour moi en tant que spécialiste de la modélisation des systèmes complexes. Un territoire est lui-même un système complexe. On ne peut pas traiter séparément l’eau, l’agriculture, le climat, l’économie, la démographie et les technologies. Il faut plutôt comprendre les interactions entre ces différents éléments. L’UDOC demeurera cet espace où la science rencontre le territoire et où le territoire nourrit la science. AIB : Pourquoi un jeune bachelier devrait-il choisir l’UDOC ? Pr Aboudramane Guiro : Nous lui dirions d’abord ceci : ne choisissez pas seulement une université ; choisissez un environnement dans lequel vous pourrez construire votre avenir. A l’UDOC, nous voulons offrir aux jeunes une université proche du territoire, mais ouverte sur le monde, avec une formation exigeante, une recherche orientée vers les problèmes réels et une forte culture de l’innovation. Notre ambition est de former des jeunes qui maîtrisent leur discipline, tout en étant capables de travailler en équipe, d’utiliser les technologies, de communiquer, d’entreprendre et de résoudre des problèmes complexes. Aussi, nous dirions au jeune bachelier que l’UDOC veut être une université où le territoire n’est pas une limite, mais un laboratoire. La Boucle du Mouhoun possède des ressources agricoles, humaines, culturelles et naturelles considérables. Nous continuerons de donner à notre jeunesse les connaissances et les technologies nécessaires pour les transformer en véritables opportunités. Surtout, notre ambition est de construire une université dont les diplômés pourront être compétitifs au Burkina Faso, en Afrique et à l’international. Former les talents, produire les savoirs et transformer les territoires : c’est finalement la promesse que nous portons avec l’UDOC en tant premier responsable de l’institution. Agence d’Information du Burkina SB/HB/BBP",
-      "_source": "AIB — Agence Information BF",
-      "_sourceId": "rss_aib",
+      "title": "Religion et développement de l’Afrique : et si le véritable combat était aussi celui de nos consciences ?",
+      "link": "https://www.sidwaya.info/religion-et-developpement-de-lafrique-et-si-le-veritable-combat-etait-aussi-celui-de-nos-consciences/",
+      "pubDate": "2026-09-15T00:03:28.000Z",
+      "description": "En abordant frontalement la question de la religion, le 4 septembre 2026, lors de son adresse à la communauté éducative, le camarade Président du Faso, le capitaine Ibrahim Traoré, n’a pas simplement ouvert un débat sur la foi. Il a posé une question beaucoup plus profonde sur le rapport de l’Africain à la connaissance, à la raison, à l’histoire et, surtout, à sa propre responsabilité dans la construction de son avenir. Dans une société où la religion occupe une place importante dans la vie individuelle et collective, une telle interpellation ne pouvait que susciter des réactions. Elle mérite pourtant mieux que les réactions épidermiques, les procès en impiété ou les applaudissements automatiques. Elle invite surtout à réfléchir au rôle que la religion peut jouer dans la formation des consciences africaines et dans notre capacité à comprendre notre environnement pour mieux le transformer. Le propos présidentiel semble d’ailleurs moins remettre en cause la foi elle-même que sa mauvaise compréhension, son mauvais enseignement et, surtout, son instrumentalisation à des fins politiques, idéologiques ou de domination. Le véritable sujet n’est donc peut-être pas de savoir s’il faut croire ou ne pas croire. Il est plutôt de savoir comment nous croyons, ce que nous croyons et surtout ce que nous faisons de nos croyances. Le problème commence lorsque la foi cesse d’éclairer la conscience pour se substituer à elle. Lorsqu’un individu finit par penser qu’il n’a plus besoin de chercher, de comprendre, de questionner, de vérifier ou de travailler parce que tout serait déjà écrit et que Dieu finira nécessairement par régler ses problèmes, la croyance peut alors devenir un refuge contre la responsabilité. Or, aucun peuple ne s’est durablement développé en attendant que son destin soit transformé de l’extérieur. La foi peut donner du sens à l’action. Elle ne peut pas remplacer l’action. Il ne s’agit donc pas de faire le procès de la religion. Pour des milliards d’êtres humains, elle reste une source de spiritualité, de morale, de solidarité et d’espérance. La difficulté apparaît lorsque la croyance devient une dispense de réfléchir. C’est précisément à ce niveau que l’interpellation du capitaine Ibrahim Traoré prend tout son sens. En rappelant que Dieu a doté l’être humain d’une intelligence et de capacités physiques, le président invite implicitement chacun à considérer ces facultés comme des moyens d’agir sur son environnement. Demander l’aide de Dieu ne dispense donc pas l’homme d’utiliser son intelligence. La distinction peut paraître évidente. Elle devient pourtant essentielle dans des sociétés confrontées au fatalisme, à l’ignorance, à la manipulation et à diverses formes de dépendance. L’Africain doit pouvoir croire sans renoncer à comprendre. Il doit pouvoir prier sans renoncer à agir. Il doit pouvoir espérer sans renoncer à construire. L’Afrique se trouve aujourd’hui face à une contradiction historique. Le continent dispose d’une jeunesse nombreuse, de ressources naturelles considérables et d’un potentiel agricole, minier, énergétique et humain immense. Pourtant, il demeure largement dépendant des technologies, des capitaux, des équipements et des savoirs produits ailleurs. Cette situation ne saurait évidemment être expliquée par les seules insuffisances africaines. La colonisation, l’exploitation des ressources, les rapports de domination, les dépendances économiques et les mécanismes de l’ordre international ont profondément marqué les trajectoires du continent. Mais reconnaître les responsabilités extérieures ne doit pas conduire à nier les nôtres. C’est précisément là que la question religieuse rejoint celle de la souveraineté. La dépendance commence aussi dans les esprits. Elle commence lorsque nous renonçons à comprendre par nous-mêmes, lorsque nous estimons que la solution à nos problèmes doit nécessairement venir d’ailleurs, lorsque nous consommons les savoirs produits par les autres sans développer suffisamment nos propres capacités de recherche, ou lorsque nous importons des modèles sociaux, culturels, économiques ou religieux sans les confronter à notre histoire, à nos réalités et à nos besoins. L’éveil des consciences suppose donc une rupture avec cette culture de l’attente. Il ne s’agit cependant pas de tomber dans l’excès inverse en transformant cette réflexion en procès contre les religions. Une telle démarche manquerait l’essentiel. La question n’est pas de savoir si le Christianisme, l’Islam ou les spiritualités traditionnelles africaines doivent disparaître de l’espace social. Elle est plutôt de savoir comment les croyants peuvent préserver leur foi tout en développant leur esprit critique. Une religion enseignée avec intelligence peut contribuer à la morale, à la solidarité et à la cohésion sociale. Une religion mal comprise ou instrumentalisée peut, à l’inverse, devenir un puissant outil de domination. L’histoire en a donné suffisamment d’exemples. C’est pourquoi l’éducation constitue un enjeu stratégique. Plus un citoyen possède des connaissances historiques, scientifiques, économiques, philosophiques et culturelles, plus il dispose des outils nécessaires pour examiner les discours qu’on lui propose et exercer son propre discernement. Cette question prend une importance particulière dans le contexte sahélien. Les groupes terroristes ont exploité les fragilités sociales, l’ignorance, la pauvreté, les frustrations et certaines interprétations radicales de la religion pour recruter, endoctriner et manipuler. La réponse au phénomène terroriste ne peut donc pas être uniquement militaire. Elle doit aussi être éducative, culturelle, économique et intellectuelle. Un esprit habitué à analyser, à confronter les idées et à exercer son discernement est moins vulnérable aux idéologies de haine. Au fond, la question posée par le président du Faso dépasse largement la seule religion. Elle renvoie à la capacité des Africains à penser par eux-mêmes. Un peuple qui ne produit pas suffisamment ses propres connaissances reste dépendant de ceux qui les produisent. Un pays qui ne maîtrise pas sa science et sa technologie demeure tributaire de ceux qui détiennent ces technologies. Une société qui ne connaît pas suffisamment son histoire laisse à d’autres le soin de la raconter à sa place. L’indépendance véritable ne saurait donc être uniquement politique. Elle doit également être intellectuelle, scientifique, culturelle et économique. C’est pourquoi l’école doit se trouver au cœur de cette bataille. Elle doit former des citoyens capables de croire, s’ils le souhaitent, mais aussi de questionner. Des citoyens capables de respecter leurs traditions sans devenir prisonniers du passé. Des citoyens capables de recevoir les apports du monde sans perdre leur capacité de discernement. Il faut aussi apprendre à distinguer l’ouverture au monde de la soumission aux modèles venus d’ailleurs. L’Afrique n’a aucune raison de rejeter ce que les autres peuples ont produit. Elle doit au contraire s’approprier les connaissances universelles, les adapter à ses réalités et, surtout, contribuer elle-même à l’enrichissement du savoir universel. C’est à cette condition que l’échange devient véritablement fécond et cesse d’être une relation de dépendance. Le Burkina Faso a ainsi besoin d’une jeunesse qui ne soit ni enfermée dans le fatalisme ni prisonnière d’un assistanat intellectuel. Une jeunesse qui apprend, cherche, invente, entreprend et construit. Une jeunesse capable de regarder les problèmes du pays non seulement à travers leurs manifestations, mais aussi à travers leurs origines, leurs causes profondes et les solutions qu’ils appellent. Il faut donc entendre le message présidentiel dans toute sa profondeur. Il ne s’agit pas de choisir entre Dieu et la science, entre la foi et la raison, entre la spiritualité et le développement. Il s’agit plutôt de refuser que la croyance devienne un substitut à la pensée. L’Afrique n’a pas besoin de moins de spiritualité. Elle a besoin de davantage de connaissance. Elle n’a pas besoin de renoncer à Dieu. Elle doit plutôt renoncer à l’idée que Dieu fera à sa place ce que ses propres enfants refusent d’accomplir. Elle n’a pas davantage besoin de rejeter le monde. Elle doit apprendre à y prendre toute sa place avec ses propres savoirs, ses propres compétences, ses propres industries et sa propre vision. Autrement dit, l’Africain peut croire et prier, mais il doit surtout apprendre à comprendre le monde qui l’entoure, à agir sur sa propre réalité et à transformer ses espérances en connaissances, en travail et en réalisations concrètes. Le véritable défi de l’éveil des consciences concerne ainsi le continent tout entier. Il commence lorsque l’homme accepte de regarder ses problèmes en face, d’en rechercher les véritables causes et d’assumer sa part de responsabilité dans leur résolution. Car l’indépendance véritable commence peut-être précisément là où cesse notre dépendance à penser par procuration. Jolivet Emmaüs SIDIBE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1060,18 +1060,18 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "T",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
+      "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "SAMAO 2026 : Les participants s’offrent une pause sportive avant les échanges techniques",
-      "link": "https://www.minute.bf/samao-2026-les-participants-soffrent-une-pause-sportive-avant-les-echanges-techniques/",
-      "pubDate": "2026-09-14T18:46:57.000Z",
-      "description": "En marge de la 8e édition de la Semaine des activités minières de l’Afrique de l’Ouest (SAMAO) et de la 1re édition de la Semaine de l’énergie, des mines et des hydrocarbures de la Confédération des États du Sahel (SEMH-AES), le Comité d'organisation a organisé ce lundi 14 septembre 2026, un cross populaire suivi d'une séance aérobic au SIAO, à Ouagadougou. Les activités de la 8e édition de la Semaine des activités minières de l’Afrique de l’Ouest (SAMAO) et la 1re édition de la Semaine de l’énergie, des mines et des hydrocarbures de la Confédération des États du Sahel (SEMH-AES) ont débuté dans la capitale burkinabè. Placée sous le thème « Gouvernance des ressources extractives : enjeux géopolitiques, défis et opportunités pour les États africains », l’édition 2026 est marquée par plusieurs activités, dont une marche populaire suivie d’une séance d’aérobic. Les participants se sont mis en jambe à l'occasion de cette activité « Il n’y a qu’un esprit sain dans un corps sain », a rappelé Salif Boussim, Directeur de Cabinet du ministre de l’Énergie, invitant les participants à pratiquer régulièrement le sport. Pour lui, cette activité permet également de rappeler que « l’espace aérobic n’est pas seulement que la potentialité minière, c’est aussi la potentialité sportive ». Salif Boussim, Directeur de Cabinet du ministre de l’Énergie La séance d’aérobic est intervenue après une marche populaire sur un circuit présenté comme relativement court par les organisateurs. En effet, a indiqué M. Boussim, cette séance vise à permettre aux participants de se maintenir en forme dans une atmosphère détendue, loin des échanges techniques qui rythmeeront la Semaine des activités minières de l’Afrique de l’Ouest et la 1re édition de la Semaine de l’énergie, des mines et des hydrocarbures de la Confédération des États du Sahel. Avant ces activités sportives, la journée avait débuté par une visite du Mémorial Thomas Sankara, marquée par un instant de mémoire et de recueillement. Les participants ont ensuite pris part à une conférence publique consacrée aux potentialités des ressources minières, énergétiques et des hydrocarbures. Placée sous le patronage, du Premier ministre, chef du Gouvernement, Rimtalba Jean Emmanuel Ouédraogo, l'ouverture officielle de cette édition est prévue pour demain 15 septembre et va se poursuivre jusqu'au 19 septembre 2026 à Ouagadougou, avec plusieurs activités au programme. Nadège KINDA Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "IVe édition de la foire des industries culturelles du Niger : la culture au cœur de la refondation et de l’intégration sahélienne",
+      "link": "https://www.sidwaya.info/ive-edition-de-la-foire-des-industries-culturelles-du-niger-la-culture-au-coeur-de-la-refondation-et-de-lintegration-sahelienne/",
+      "pubDate": "2026-09-14T23:56:44.000Z",
+      "description": "Le Palais du 29 juillet de Niamey a servi de cadre, ce 14 septembre 2026, pour la cérémonie d’ouverture de la IVe édition de la Foire des industries culturelles du Niger (FICNI), placée sur un thème hautement stratégique : « Quels Rôles peuvent jouer les industries culturelles dans la Refondation de la République ? ». La cérémonie a été présidée par le ministre des Transports et de l’Aviation, le colonel-major Adourahamane Amdou, représentant le Premier ministre, Ali Mahaman Lamine Zeine. Cette cérémonie grandeur nature a été rehaussée par la présence des membres du Conseil national pour la sauvegarde de la patrie (CNSP) et du gouvernement, des ministres en charge de la culture des trois pays membres de la Confédération des Etats du Sahel, ( Sidi Mohamed Almahmoud du Niger, Pingdwendé Gilbert Ouédraogo du Burkina Faso et Mamou Daffé du Mali ) Dans un contexte de réaffirmation historique de notre souveraineté, cet événement majeur met en exergue le rôle crucial de la culture. Plus qu’un simple héritage, elle s’impose désormais comme un vecteur de développement économique et un puissant levier d’intégration sahélienne. Ensemble, valorisons nos industries culturelles pour bâtir l’avenir de notre République. Plusieurs temps forts ont marqué cette cérémonie. Il s’agit des prestations artistiques et culturelles, de la coupure du ruban marquant l’ouverture officielle de la foire et enfin la visite des stands d’exposition. Pour cette foire, on note la participation de plusieurs exposants venus des 8 régions du Niger et des pays de l’AES. Ministère des Sports, de la Jeunesse et de la Culture du Niger",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1087,9 +1087,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C2"
       },
-      "_rating": "F2",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
       "_theme": "E",
@@ -1098,18 +1098,19 @@
       "_desk": "A1"
     },
     {
-      "title": "Jeux de l’AES : Le Niger domine la lutte masculine, le Burkina Faso brille chez les dames",
-      "link": "https://burkina24.com/2026/09/14/jeux-de-laes-le-niger-domine-la-lutte-masculine-le-burkina-faso-brille-chez-les-dames/",
-      "pubDate": "2026-09-14T18:24:19.000Z",
-      "description": "Les épreuves de lutte traditionnelle des 2es Jeux de la Confédération des États du Sahel (AES) ont livré leurs derniers verdicts le samedi 12 septembre 2026 à l’hippodrome de Nonsin, à Ouagadougou. Chez les hommes, le Niger a particulièrement marqué les esprits avec 03 médailles d’or et 02 médailles d’argent, tandis que le Burkina Faso … The post Jeux de l’AES : Le Niger domine la lutte masculine, le Burkina Faso brille chez les dames appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
+      "title": "Mines et énergie: les Etats de l’AES veulent faire des ressources un levier de souveraineté",
+      "link": "https://www.sidwaya.info/mines-et-energie-les-etats-de-laes-veulent-faire-des-ressources-un-levier-de-souverainete/",
+      "pubDate": "2026-09-14T23:50:04.000Z",
+      "description": "Le ministère de l’Energie, des Mines et des Carrières a organisé une conférence publique sur les potentialités minières, énergétiques et des hydrocarbures de l’espace confédéral de l’AES, lundi 14 septembre 2026, à Ouagadougou. Cette rencontre se tient dans le cadre de la VIIIe édition de la Semaine des activités minières, couplée à la Ire édition de la semaine de l’énergie, des mines et des hydrocarbures de l’AES. Le Burkina Faso, le Mali et le Niger entendent renforcer leur maîtrise des ressources minières, énergétiques et des hydrocarbures, afin d’en faire de véritables leviers de développement et de souveraineté. Cette ambition a été réaffirmée par la tenue d’une conférence publique consacrée aux potentialités minières, énergétiques et pétrolières de la Confédération des Etats du Sahel (AES), lundi 14 septembre 2026, à Ouagadougou. Organisée en marge de la VIIIe édition de la Semaine des activités minières (SAMAO) couplée à la Ire édition de la Semaine de l’énergie, des mines et des hydrocarbures de l’AES (SEMH-AES), la rencontre a réuni des délégations des trois pays, ainsi que des enseignants-chercheurs et des étudiants. Les trois pays en tandem Selon le ministre de l’Energie, des Mines et des Carrières, Yacouba Zabré Gouba, la conférence publique a pour but de faire connaitre les ressources stratégiques des pays de l’AES, les défis liés à leur valorisation et les opportunités qu’offre une gestion concertée. « Ce sont des secteurs hautement stratégiques pour nous et la gouvernance de ces secteurs doit permettre d’aller vers une souveraineté beaucoup plus renforcée », a-t-il affirmé. Pour le ministre nigérien chargé du Pétrole, Hamadou Tini, la souveraineté dans le secteur des mines est la capacité à maitriser la chaine des valeurs. « Il s’agit de connaître les ressources et décider de leur exploitation, négocier équitablement, transformer localement, sécuriser les corridors, développer les infrastructures et utiliser les revenus tirés de ces ressources pour transformer durablement les économies », a-t-il précisé. Le ministre nigérien chargé du Pétrole a déclaré que l’enjeu pour ses collègues et lui est de dépasser les approches nationales pour mettre en place une coopération d’une meilleure maitrise des ressources stratégiques et une plus grande autonomie économique. Pour le ministre chargé des Mines du Mali, Amadou Keïta, cette volonté s’inscrit dans la dynamique de construction d’un espace commun fondé sur la solidarité, la diplomatie concertée et la défense collective. « Nous avons compris aussi qu’il fallait qu’on harmonise les politiques et le cadre juridique », a-t-il poursuivi.La conférence publique a été le lieu pour le ministre chargé des Mines de présenter le programme de la SAMAO et de la SEMH-AES. En plus des panels, des sessions techniques sont programmées autour de différentes thématiques liées aux mines, à l’énergie et aux hydrocarbures. Galedie Kétoura SIMPORE Déborah YAMEOGO (Stagiaire)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic"
+        "diplomatic",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -1123,48 +1124,16 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": null,
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
+      "_relevance": "A",
       "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Benue blockade: Ominous start to 2027 campaigns",
-      "link": "https://punchng.com/benue-blockade-ominous-start-to-2027-campaigns/?utm_source=rss.punchng.com&utm_medium=web",
-      "source": "Punch (Nigeria)",
-      "date": "2026-09-15T00:06:24.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "US reconnaissance drone flies over Persian Gulf for several hours",
-      "link": "https://tass.com/world/2187529",
-      "source": "TASS (Russie, EN)",
-      "date": "2026-09-14T18:54:22.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "reconnaissance"
-        }
-      ]
-    },
-    {
-      "title": "Beni : une journée de deuil observée après le triple assassinat de Butanuka",
-      "link": "https://www.radiookapi.net/2026/09/14/actualite/securite/beni-une-journee-de-deuil-observee-apres-le-triple-assassinat-de",
+      "title": "Une journée de deuil observée après le triple assassinat de Butanuka à Beni",
+      "link": "https://www.radiookapi.net/2026/09/15/actualite/securite/une-journee-de-deuil-observee-apres-le-triple-assassinat-de-butanuka",
       "source": "Radio Okapi (RDC)",
       "date": "2026-09-14T18:13:00.000Z",
       "rating": "F2",
@@ -1182,43 +1151,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      224
+      199
     ],
     [
       "occident_fr",
-      110
-    ],
-    [
-      "occident_us",
-      105
+      118
     ],
     [
       "autre",
-      83
+      115
+    ],
+    [
+      "occident_us",
+      102
     ],
     [
       "golfe_mo",
-      74
-    ],
-    [
-      "turquie",
-      57
+      72
     ],
     [
       "bf_local",
       48
     ],
     [
-      "russie",
-      43
+      "turquie",
+      45
     ],
     [
-      "sahel",
-      33
+      "russie",
+      42
     ],
     [
       "chine",
-      23
+      33
+    ],
+    [
+      "sahel",
+      26
     ]
   ],
   "desks": [
@@ -1226,20 +1195,29 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 125,
+      "count": 105,
       "top": [
+        {
+          "title": "IIes Jeux de l’AES : fortunes diverses, satisfaction partagée",
+          "link": "https://www.sidwaya.info/iies-jeux-de-laes-fortunes-diverses-satisfaction-partagee/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Santé animale dans l’espace AES : la nécessité de mutualiser les efforts",
+          "link": "https://www.sidwaya.info/sante-animale-dans-lespace-aes-la-necessite-de-mutualiser-les-efforts/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
         {
           "title": "Coopération Mali-Algérie: le Président Assimi Goïta reçoit le Premier ministre algérien Sifi Ghrieb",
           "link": "https://www.aib.media/cooperation-mali-algerie-le-president-assimi-goita-recoit-le-premier-ministre-algerien-sifi-ghrieb/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "Coopération Mali-Algérie: le Premier ministre algérien à Bamako pour une visite de travail et d’amitié",
-          "link": "https://www.aib.media/cooperation-mali-algerie-le-premier-ministre-algerien-a-bamako-pour-une-visite-de-travail-et-damitie/",
           "source": "AIB — Agence Information BF",
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
@@ -1256,22 +1234,13 @@
           "rating": "A2"
         },
         {
-          "title": "Pépiniéristes de Bobo-Dioulasso : entre passion et engagement pour l’environnement",
-          "link": "https://www.sidwaya.info/pepinieristes-de-bobo-dioulasso-entre-passion-et-engagement-pour-lenvironnement/",
-          "source": "Sidwaya",
+          "title": "Modernisation de l’Administration : cap sur des services publics plus efficaces et proches du Peuple",
+          "link": "https://netafrique.net/modernisation-de-ladministration-cap-sur-des-services-publics-plus-efficaces-et-proches-du-peuple/",
+          "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "À Bobo-Dioulasso, les élèves du Guiriko invités à devenir les acteurs du réarmement mental",
-          "link": "https://www.aib.media/a-bobo-dioulasso-les-eleves-du-guiriko-invites-a-devenir-les-acteurs-du-rearmement-mental/",
-          "source": "AIB — Agence Information BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
+          "rating": "F1"
         }
       ]
     },
@@ -1279,23 +1248,41 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 72,
+      "count": 61,
       "top": [
         {
-          "title": "Black Maidens confident of WAFU B title defense ahead of Burkina Faso clash",
-          "link": "https://www.myjoyonline.com/black-maidens-confident-of-wafu-b-title-defense-ahead-of-burkina-faso-clash/",
+          "title": "Food prices in Ghana remain largely stable – AGRA report",
+          "link": "https://www.myjoyonline.com/food-prices-in-ghana-remain-largely-stable-agra-report/",
           "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "C",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Benue blockade: Ominous start to 2027 campaigns",
-          "link": "https://punchng.com/benue-blockade-ominous-start-to-2027-campaigns/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
+          "title": "Obi, Makinde and hurdles against opposition coalition",
+          "link": "https://www.vanguardngr.com/2026/09/obi-makinde-and-hurdles-against-opposition-coalition/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "FG targets 172 LGAs with maternal health incentives",
+          "link": "https://www.vanguardngr.com/2026/09/fg-targets-172-lgas-with-maternal-health-incentives/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "Nigeria must protect the classroom",
+          "link": "https://www.vanguardngr.com/2026/09/nigeria-must-protect-the-classroom/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1305,24 +1292,6 @@
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Tinubu orders release of funds to regional commissions",
-          "link": "https://punchng.com/tinubu-orders-release-of-funds-to-regional-commissions-2/?utm_source=rss.punchng.com&utm_medium=web",
-          "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "When the throne takes sides: Delta’s traditional institution must not become political campaign platform, by Ejiro Ofoye",
-          "link": "https://www.vanguardngr.com/2026/09/when-the-throne-takes-sides-deltas-traditional-institution-must-not-become-political-campaign-platform-by-ejiro-ofoye/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1335,8 +1304,8 @@
       "count": 18,
       "top": [
         {
-          "title": "Beni : une journée de deuil observée après le triple assassinat de Butanuka",
-          "link": "https://www.radiookapi.net/2026/09/14/actualite/securite/beni-une-journee-de-deuil-observee-apres-le-triple-assassinat-de",
+          "title": "Une journée de deuil observée après le triple assassinat de Butanuka à Beni",
+          "link": "https://www.radiookapi.net/2026/09/15/actualite/securite/une-journee-de-deuil-observee-apres-le-triple-assassinat-de-butanuka",
           "source": "Radio Okapi (RDC)",
           "zone": "4. Grands Lacs",
           "theme": "E",
@@ -1353,13 +1322,13 @@
           "rating": "A2"
         },
         {
-          "title": "Régularisation foncière : 24 052 dossiers traités en sept mois, l’État accélère la sécurisation des propriétés",
-          "link": "https://www.gabonreview.com/regularisation-fonciere-24-052-dossiers-traites-en-sept-mois-letat-accelere-la-securisation-des-proprietes/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "D",
+          "title": "RDC: Felix Tshisekedi prépare son monologue exclusif!",
+          "link": "https://www.wakatsera.com/rdc-felix-tshisekedi-prepare-son-monologue-exclusif/",
+          "source": "Wakat Séra",
+          "zone": "4. Grands Lacs",
+          "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "C2"
         },
         {
           "title": "GUERRE AU SOUDAN : La partition du pays est-elle encore évitable ?",
@@ -1371,13 +1340,13 @@
           "rating": "F2"
         },
         {
-          "title": "Cameroun : Alamine Ousmane Mey, l’électron libre du pouvoir",
-          "link": "https://www.jeuneafrique.com/1841972/politique/cameroun-alamine-ousmane-mey-lelectron-libre-du-pouvoir/",
-          "source": "Jeune Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "E",
+          "title": "Manifestation du 15 septembre à Kinshasa : accord entre l’opposition et l’Hôtel de ville sur l’itinéraire",
+          "link": "https://www.radiookapi.net/2026/09/15/actualite/politique/manifestation-du-15-septembre-kinshasa-accord-entre-lopposition-et",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "P",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         }
       ]
     },
@@ -1385,7 +1354,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 33,
+      "count": 23,
       "top": [
         {
           "title": "Bamako: quand les Premiers ministres malien et algérien se retrouvent",
@@ -1395,15 +1364,6 @@
           "theme": "E",
           "relevance": "A",
           "rating": "C2"
-        },
-        {
-          "title": "Algérie – Émirats : Amar Belani recadre Anwar Gargash, conseiller de MBZ",
-          "link": "https://www.tsa-algerie.com/algerie-emirats-amar-belani-recadre-anwar-gargash-conseiller-de-mbz/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
         },
         {
           "title": "Mali : le Premier ministre algérien Sifi Ghrieb à Bamako pour relancer la coopération",
@@ -1424,6 +1384,15 @@
           "rating": "A1"
         },
         {
+          "title": "Élections 2026 : Khalid Bekkali veut réinstaller le PDN dans le jeu politique",
+          "link": "https://fr.hespress.com/488365-elections-2026-khalid-bekkali-veut-reinstaller-le-pdn-dans-le-jeu-politique.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "​SNCFT | Reprise de la ligne Tunis-Annaba ce 15 septembre",
           "link": "https://kapitalis.com/tunisie/2026/09/14/sncft-reprise-de-la-ligne-tunis-annaba-ce-15-septembre/",
           "source": "Kapitalis (Tunisie)",
@@ -1438,7 +1407,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 105,
+      "count": 104,
       "top": [
         {
           "title": "Le splendide isolement de l’Arabie saoudite",
@@ -1450,39 +1419,39 @@
           "rating": "A2"
         },
         {
-          "title": "Govt mulling revival of austerity measures, decision to be taken soon: Tarar",
-          "link": "https://www.dawn.com/news/2029872/govt-mulling-revival-of-austerity-measures-decision-to-be-taken-soon-tarar",
-          "source": "Dawn (Pakistan)",
+          "title": "Oil climbs as Saudi pipeline outage, fresh attacks heighten supply concerns",
+          "link": "https://www.myjoyonline.com/oil-climbs-as-saudi-pipeline-outage-fresh-attacks-heighten-supply-concerns/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "8. Moyen-Orient",
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Des fausses vidéos pour illustrer les frappes houthis en Arabie Saoudite",
-          "link": "https://www.france24.com/fr/%C3%A9missions/info-ou-intox/20260914-des-fausses-vid%C3%A9os-pour-illustrer-les-frappes-houthis-en-arabie-saoudite",
-          "source": "France 24",
+          "title": "Govt mulling revival of austerity measures, decision to be taken soon: Tarar",
+          "link": "https://www.dawn.com/news/2029872/govt-mulling-revival-of-austerity-measures-decision-to-be-taken-soon-tarar",
+          "source": "Dawn (Pakistan)",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F1"
+        },
+        {
+          "title": "ENQUETE VIDEO Comment Israël arme les colons de Cisjordanie",
+          "link": "https://www.lemonde.fr/videos/video/2026/09/15/comment-israel-arme-les-colons-de-cisjordanie-occupee_6774325_1669088.html",
+          "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "A1"
+          "rating": "B2"
         },
         {
-          "title": "Le baril de pétrole à plus de 100 dollars alors que la tension monte au Moyen-Orient",
-          "link": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260914-le-baril-de-p%C3%A9trole-%C3%A0-plus-de-100-dollars-alors-que-la-tension-monte-au-moyen-orient",
-          "source": "France 24",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Oil hits $109 after Saudi Arabia closes vital export pipeline",
-          "link": "https://www.ft.com/content/4845a503-3ddd-4bb7-a469-c51f275bc873?syn-25a6b1a6=1",
+          "title": "Iran’s allies squeeze Saudi Arabia",
+          "link": "https://www.ft.com/content/a143e08d-e979-410a-8e81-160fd4eba367?syn-25a6b1a6=1",
           "source": "Financial Times World",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "B2"
         }
       ]
@@ -1491,8 +1460,35 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 158,
+      "count": 168,
       "top": [
+        {
+          "title": "Économie russe : les personnes fuyant le pays font exploser les prix des logements à Erevan",
+          "link": "https://legrandcontinent.eu/fr/2026/09/15/economie-russe-les-personnes-fuyant-le-pays-font-exploser-les-prix-des-logements-a-erevan/",
+          "source": "Le Grand Continent",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "The secretive German ‘guerrilla unit’ buying up arms for Ukraine",
+          "link": "https://www.ft.com/content/aa94565e-6dab-4e2a-a33f-6de7ceba9a67?syn-25a6b1a6=1",
+          "source": "Financial Times World",
+          "zone": "9. Europe occidentale",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Supreme Court blocks Trump’s plan to restrict mail-in ballots",
+          "link": "https://www.myjoyonline.com/supreme-court-blocks-trumps-plan-to-restrict-mail-in-ballots/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "16. Amérique du Nord",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "F1"
+        },
         {
           "title": "Trump’s Kennedy Center Shakedown",
           "link": "https://www.theatlantic.com/ideas/2026/09/trump-kennedy-center/688618/?utm_source=feed",
@@ -1510,33 +1506,6 @@
           "theme": "P",
           "relevance": "L",
           "rating": "F2"
-        },
-        {
-          "title": "Russian Strike on Train Station Near Ukraine-Poland Border Seen as Warning to Kyiv’s Allies",
-          "link": "https://www.nytimes.com/2026/09/14/world/europe/ukraine-railway-strike-europe.html",
-          "source": "NYT World",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B1"
-        },
-        {
-          "title": "Le réseau ferroviaire, artère vitale de l’Ukraine, dans le viseur de Moscou",
-          "link": "https://www.liberation.fr/international/europe/le-reseau-ferroviaire-artere-vitale-de-lukraine-dans-le-viseur-de-moscou-20260914_SIB6C7SL3RDWLIAPGE3ZSJPTOE/",
-          "source": "Libération International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Investissements : le Président Diomaye Faye présente les priorités du Sénégal au secteur privé américain",
-          "link": "https://lesoleil.sn/actualites/investissements-le-president-diomaye-faye-presente-les-priorites-du-senegal-au-secteur-prive-americain/",
-          "source": "Le Soleil (Sénégal)",
-          "zone": "16. Amérique du Nord",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "A2"
         }
       ]
     }
@@ -1554,42 +1523,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-14T23:51:57.086Z",
+      "at": "2026-09-15T04:54:09.219Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-14T23:51:57.093Z",
+      "at": "2026-09-15T04:54:09.227Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-14T23:52:23.800Z",
+      "at": "2026-09-15T04:54:36.704Z",
       "agent": "Agent Collecte RSS",
-      "message": "106/170 flux OK, 1859 articles"
+      "message": "109/170 flux OK, 1897 articles"
     },
     {
-      "at": "2026-09-14T23:52:27.073Z",
+      "at": "2026-09-15T04:54:39.945Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-14T23:52:27.399Z",
+      "at": "2026-09-15T04:54:40.307Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-14T23:52:27.404Z",
+      "at": "2026-09-15T04:54:40.312Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 3 alertes"
+      "message": "8 developpements, 1 alertes"
     },
     {
-      "at": "2026-09-14T23:52:27.405Z",
+      "at": "2026-09-15T04:54:40.312Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-14T23:52:27.405Z",
+      "at": "2026-09-15T04:54:40.312Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
