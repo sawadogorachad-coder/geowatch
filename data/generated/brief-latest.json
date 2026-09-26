@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-26T21:10:52.030Z",
+  "generatedAt": "2026-09-26T23:38:21.748Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 109,
-    "failed": 61,
-    "articles": 1860,
+    "ok": 108,
+    "failed": 62,
+    "articles": 1882,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -56,11 +56,6 @@
         "id": "rss_observ_bf",
         "name": "L'Observateur Paalga",
         "count": 0
-      },
-      {
-        "id": "rss_minute_bf",
-        "name": "Minute BF",
-        "count": 10
       },
       {
         "id": "rss_maliweb",
@@ -290,7 +285,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 24
+        "count": 26
       },
       {
         "id": "rss_rfimo",
@@ -370,7 +365,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 9
+        "count": 8
       },
       {
         "id": "rss_fp",
@@ -395,7 +390,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 26
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
@@ -485,7 +480,7 @@
       {
         "id": "rss_pressTV",
         "name": "Press TV (Iran)",
-        "count": 0
+        "count": 30
       },
       {
         "id": "rss_tehran",
@@ -562,6 +557,11 @@
       {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_minute_bf",
+        "name": "Minute BF",
         "error": "fetch failed"
       },
       {
@@ -642,7 +642,7 @@
       {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
-        "error": "HTTP 404"
+        "error": "fetch failed"
       },
       {
         "id": "rss_togoinfos",
@@ -865,7 +865,7 @@
     "articles": 800,
     "bfAes": 35,
     "alerts": 15,
-    "criticalAlerts": 9,
+    "criticalAlerts": 8,
     "sourcesDistinct": 67
   },
   "topDevelopments": [
@@ -1130,6 +1130,22 @@
   ],
   "alerts": [
     {
+      "title": "Hormuz blockade to create food insecurity for at least 45 million people: UN",
+      "link": "https://presstv.co.uk/Detail/2026/09/26/777035/Hormuz-blockade-to-threaten-to-least-45-million-people-with-food-shortages-UN-Jorge-Moreira-da-Silva",
+      "source": "Press TV (Iran)",
+      "date": "2026-09-26T23:38:15.367Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
       "title": "Turkey uncovers new fragment of oldest known peace treaty between Egypt and Hittites",
       "link": "https://www.jpost.com/archaeology/article-909698",
       "source": "Jerusalem Post",
@@ -1278,7 +1294,7 @@
       "link": "https://www.bbc.co.uk/news/videos/cwp933mr9v1xo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
       "date": "2026-09-26T15:34:18.000Z",
-      "rating": "B1",
+      "rating": "B2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1352,22 +1368,6 @@
           "keyword": "disaster"
         }
       ]
-    },
-    {
-      "title": "Bangkok roads submerged as flood disaster declared",
-      "link": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "date": "2026-09-26T07:21:30.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
@@ -1376,40 +1376,40 @@
       234
     ],
     [
+      "golfe_mo",
+      108
+    ],
+    [
       "occident_fr",
-      113
+      104
     ],
     [
       "autre",
-      107
+      101
     ],
     [
       "occident_us",
-      83
-    ],
-    [
-      "golfe_mo",
       77
     ],
     [
       "russie",
-      66
+      58
     ],
     [
       "turquie",
       46
     ],
     [
-      "chine",
+      "sahel",
       30
     ],
     [
-      "sahel",
-      26
+      "chine",
+      27
     ],
     [
       "bf_local",
-      18
+      15
     ]
   ],
   "desks": [
@@ -1417,7 +1417,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 108,
+      "count": 116,
       "top": [
         {
           "title": "Les 100 Visages du Burkina Digital : Aboubacar Ouattara, du dioula à l'intelligence artificielle, rapprocher deux mondes",
@@ -1470,17 +1470,8 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 64,
+      "count": 62,
       "top": [
-        {
-          "title": "Gov’t directs release of 50,000 bags of grain to ECOWAS",
-          "link": "https://www.myjoyonline.com/govt-directs-release-of-50000-bags-of-grain-to-ecowas/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Nigeria demands fairer pandemic financing, vaccine access at UN meeting",
           "link": "https://www.premiumtimesng.com/news/top-news/912597-nigeria-demands-fairer-pandemic-financing-vaccine-access-at-un-meeting.html",
@@ -1509,13 +1500,22 @@
           "rating": "F2"
         },
         {
-          "title": "Don Jazzy has been helping me since university days – Mr Macaroni",
-          "link": "https://www.vanguardngr.com/2026/09/don-jazzy-has-been-helping-me-since-university-days-mr-macaroni/",
+          "title": "10m beneficiaries of cash transfers don’t have phones, not on social media – APC Chairman",
+          "link": "https://www.vanguardngr.com/2026/09/nigerians-who-got-cash-transfers-have-no-phones-social-media-says-apc-chairman/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
+          "theme": "P",
+          "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "VIDEO: EOCO’s attempted arrest of Baffour Awuah was flawed beyond saving – Law Lecturer",
+          "link": "https://www.myjoyonline.com/video-eocos-attempted-arrest-of-baffour-awuah-was-flawed-beyond-saving-law-lecturer/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1523,7 +1523,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 30,
+      "count": 26,
       "top": [
         {
           "title": "Éthiopie: le conflit s'étend dans le nord, le Haut-Commissaire de l'ONU appelle à «désamorcer d’urgence les tensions»",
@@ -1535,28 +1535,10 @@
           "rating": "A2"
         },
         {
-          "title": "En Centrafrique, la guerre des prérogatives autour de Faustin-Archange Touadéra",
-          "link": "https://www.jeuneafrique.com/1846560/politique/en-centrafrique-la-guerre-des-prerogatives-autour-de-faustin-archange-touadera/",
-          "source": "Jeune Afrique",
-          "zone": "3. Afrique centrale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
           "title": "Walikale : reprise des combats entre l'AFC/M23 et l'armée sur les collines de Kazumba, Kasumba et Tchad, près de Mindjendje",
           "link": "https://actualite.cd/2026/09/26/walikale-reprise-des-combats-entre-lafcm23-et-larmee-sur-les-collines-de-kazumba-kasumba",
           "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Crash de Kenge : l’armée annonce la mort de deux officiers généraux",
-          "link": "https://www.radiookapi.net/2026/09/26/actualite/justice/crash-de-kenge-larmee-annonce-la-mort-de-deux-officiers-generaux",
-          "source": "Radio Okapi (RDC)",
-          "zone": "3. Afrique centrale",
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
@@ -1569,6 +1551,24 @@
           "theme": "S",
           "relevance": "A",
           "rating": "A3"
+        },
+        {
+          "title": "AS salue les premiers pas \"très remarqués\" de Abdellah Ouazane",
+          "link": "https://fr.hespress.com/490129-as-salue-les-premiers-pas-tres-remarques-de-abdellah-ouazane.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Crash de Kenge: le CSM se mobilise, attend les résultats de l’enquête et réconforte les familles de ses deux membres",
+          "link": "https://actualite.cd/2026/09/26/crash-de-kenge-le-csm-se-mobilise-attend-les-resultats-de-lenquete-et-reconforte-les",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "F2"
         }
       ]
     },
@@ -1576,7 +1576,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 31,
+      "count": 32,
       "top": [
         {
           "title": "Algérie – Zambie : la vraie raison des larmes de Mohamed Amoura",
@@ -1629,7 +1629,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 100,
+      "count": 106,
       "top": [
         {
           "title": "Trump rejects Iran's Hormuz plan, asserts US has imposed 'greatest blockade in military history'",
@@ -1682,7 +1682,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 209,
+      "count": 206,
       "top": [
         {
           "title": "Thai capital Bangkok declares flood disaster after heavy rain leave canals full, roads submerged",
@@ -1700,7 +1700,7 @@
           "zone": "13. Asie du Sud-Est",
           "theme": null,
           "relevance": ".",
-          "rating": "B1"
+          "rating": "B2"
         },
         {
           "title": "Modern Media Weaken the Presidency",
@@ -1745,42 +1745,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-09-26T21:10:13.987Z",
+      "at": "2026-09-26T23:37:47.375Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-09-26T21:10:13.994Z",
+      "at": "2026-09-26T23:37:47.382Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-09-26T21:10:48.519Z",
+      "at": "2026-09-26T23:38:18.417Z",
       "agent": "Agent Collecte RSS",
-      "message": "109/170 flux OK, 1860 articles"
+      "message": "108/170 flux OK, 1882 articles"
     },
     {
-      "at": "2026-09-26T21:10:51.685Z",
+      "at": "2026-09-26T23:38:21.414Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-09-26T21:10:52.027Z",
+      "at": "2026-09-26T23:38:21.745Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-09-26T21:10:52.032Z",
+      "at": "2026-09-26T23:38:21.750Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 15 alertes"
     },
     {
-      "at": "2026-09-26T21:10:52.032Z",
+      "at": "2026-09-26T23:38:21.751Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-09-26T21:10:52.033Z",
+      "at": "2026-09-26T23:38:21.751Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
