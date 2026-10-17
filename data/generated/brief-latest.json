@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-17T20:37:00.072Z",
+  "generatedAt": "2026-10-17T23:08:16.242Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 101,
-    "failed": 69,
-    "articles": 1822,
+    "ok": 103,
+    "failed": 67,
+    "articles": 1849,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -16,6 +16,11 @@
         "id": "rss_burkina24",
         "name": "Burkina24",
         "count": 6
+      },
+      {
+        "id": "rss_sidwaya",
+        "name": "Sidwaya",
+        "count": 10
       },
       {
         "id": "rss_wakatsera",
@@ -35,7 +40,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -98,6 +103,11 @@
         "count": 0
       },
       {
+        "id": "rss_lesoleil",
+        "name": "Le Soleil (Sénégal)",
+        "count": 24
+      },
+      {
         "id": "rss_myjoyonline",
         "name": "MyJoyOnline (Ghana)",
         "count": 30
@@ -111,11 +121,6 @@
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
         "count": 30
-      },
-      {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "count": 12
       },
       {
         "id": "rss_guineenews",
@@ -191,6 +196,11 @@
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
+      },
+      {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "count": 0
       },
       {
         "id": "rss_madamasr",
@@ -360,7 +370,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 23
+        "count": 27
       },
       {
         "id": "rss_bbc_africa",
@@ -435,7 +445,7 @@
       {
         "id": "rss_jpost",
         "name": "Jerusalem Post",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_dailysabah",
@@ -445,6 +455,11 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
+        "count": 30
+      },
+      {
+        "id": "rss_pressTV",
+        "name": "Press TV (Iran)",
         "count": 30
       },
       {
@@ -503,22 +518,12 @@
         "count": 0
       },
       {
-        "id": "rss_hrw",
-        "name": "Human Rights Watch",
-        "count": 20
-      },
-      {
         "id": "rss_iaea",
         "name": "AIEA — Top News (nucléaire)",
         "count": 15
       }
     ],
     "failedSources": [
-      {
-        "id": "rss_sidwaya",
-        "name": "Sidwaya",
-        "error": "This operation was aborted"
-      },
       {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
@@ -600,11 +605,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_lesoleil",
-        "name": "Le Soleil (Sénégal)",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_dakaractu",
         "name": "Dakaractu",
         "error": "HTTP 404"
@@ -630,6 +630,11 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "error": "fetch failed"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -637,7 +642,7 @@
       {
         "id": "rss_camer",
         "name": "Camer.be (Cameroun)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_7sur7",
@@ -647,7 +652,7 @@
       {
         "id": "rss_adiac",
         "name": "ADIAC — Dépêches Brazzaville",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_dailynation",
@@ -688,11 +693,6 @@
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
         "error": "HTTP 403"
-      },
-      {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "error": "fetch failed"
       },
       {
         "id": "rss_libya_obs",
@@ -815,11 +815,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_pressTV",
-        "name": "Press TV (Iran)",
-        "error": "This operation was aborted"
-      },
-      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -833,6 +828,11 @@
         "id": "rss_folha",
         "name": "Folha de São Paulo (Brésil)",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_hrw",
+        "name": "Human Rights Watch",
+        "error": "HTTP 403"
       },
       {
         "id": "rss_amnesty",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 42,
+    "bfAes": 52,
     "alerts": 7,
     "criticalAlerts": 2,
-    "sourcesDistinct": 63
+    "sourcesDistinct": 65
   },
   "topDevelopments": [
     {
@@ -903,6 +903,131 @@
       "_desk": "A1"
     },
     {
+      "title": "‎Coopération CEDEAO-AES : Des groupes de travail prévus pour définir un cadre de coopération ‎ ‎",
+      "link": "https://lefaso.net/spip.php?article150031",
+      "pubDate": "2026-10-17T23:00:00.000Z",
+      "description": "‎La Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) et la Confédération des États du Sahel (AES) ont convenu de mettre en place des groupes de travail thématiques conjoints en vue de définir un cadre de coopération entre les deux organisations. La décision a été annoncée à l'issue d'une séance de prise de contact et d'échanges destinée à poser les bases de leur coopération tenue le 17 octobre 2026 à Dakar, au Sénégal. ‎La délégation de la CEDEAO était conduite par Cheikh Niang, ministre sénégalais de l'Intégration africaine, des Affaires étrangères et des Sénégalais de l'extérieur, et président du Conseil des ministres de l'organisation. Celle de la Confédération AES était dirigée par Karamoko Jean-Marie Traoré, ministre des Affaires étrangères du Burkina Faso et président du Comité ministériel de pilotage de la Confédération. Les deux responsables ont coprésidé les travaux, qui se sont déroulés dans un esprit de fraternité, de respect mutuel et d'ouverture, selon le communiqué conjoint publié à l'issue de la rencontre. ‎ ‎ ‎Les participants ont également rappelé les liens historiques, socioculturels et économiques qui unissent les peuples ouest-africains. Ils ont convenu que les relations entre les deux organisations devraient reposer sur les principes de bon voisinage, de respect de la souveraineté, de la dignité et du bien-être des populations. Dans la perspective de concrétiser leur volonté de coopération, la CEDEAO et l'AES ont décidé de mettre en place des groupes de travail thématiques conjoints. Ces instances seront chargées de conduire les échanges techniques sur les domaines d'intérêt commun, avec pour objectif final de parvenir à la conclusion d'un accord-cadre de coopération entre les deux organisations. Les résultats de ces travaux seront soumis à l'appréciation des ministres avant la prochaine session ministérielle. La date et le lieu de cette rencontre seront déterminés ultérieurement, à l'issue de consultations par voie diplomatique. ‎Cette initiative s'inscrit dans la continuité des consultations engagées entre les deux parties le 22 mai 2025 à Bamako, au Mali. Elle traduit leur volonté de rechercher un cadre de coopération équilibré, réaliste et respectueux des intérêts de leurs populations. ‎ ‎ ‎Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Sahel states restart dialogue with ECOWAS",
+      "link": "https://www.vanguardngr.com/2026/10/sahel-states-restart-dialogue-with-ecowas/",
+      "pubDate": "2026-10-17T22:15:16.000Z",
+      "description": "Three junta-ruled Sahel states on Saturday resumed dialogue with the ECOWAS regional bloc which they quit over 18 months ago, agreeing to work together towards a cooperation “framework agreement”. Niger, Mali and Burkina Faso, led by juntas that came to power between 2020 and 2023, left the Economic Community of West African States in January 2025, after teaming up to create their own group, the Alliance of Sahel States (AES). Talks between ECOWAS and the AES had been under way since January 2025 but Saturday was their first official ministerial meeting. In a joint statement issued Saturday evening, the two sides “welcomed the spirit of fraternity, mutual respect and openness” of the talks, and stressed the importance of maintaining relations of “good neighbourliness” particularly with “respect for sovereignty”. They agreed to “set up joint thematic working groups (…) to reach a framework cooperation agreement”. The AES delegation was led by Karamoko Jean-Marie Traore, Burkina Faso’s foreign minister, and the Ecowas delegation by Cheikh Niang, his Senegalese counterpart. The AES juntas have all turned their backs on France, the former colonial power, and by extension on several countries in the region such as Cete d’Ivoire and Benin, which they consider too close to Paris. The trio have moved closer politically to Moscow, claiming an anti-imperialist and pro-sovereignty vision, and they have bitterly criticised west African coastal countries which have remained close to France. The post Sahel states restart dialogue with ECOWAS appeared first on Vanguard News .",
+      "_source": "Vanguard (Nigeria)",
+      "_sourceId": "rss_vanguard",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Confédération AES – CEDEAO: un partenariat axé sur le bien-être des populations ouest-africaines",
+      "link": "https://www.wakatsera.com/confederation-aes-cedeao-un-partenariat-axe-sur-le-bien-etre-des-populations-ouest-africaines/",
+      "pubDate": "2026-10-17T21:18:20.000Z",
+      "description": "(Dakar, le 17 octobre 2026) Le segment ministériel des premières négociations formelles entre la Confédération des Etats du Sahel et la Communauté économique des Etats de l’Afrique de l’Ouest, s'est achevé dans la soirée de ce 17 octobre à Dakar. L’esprit d'ouverture, de responsabilité et de compréhension mutuelle, a abouti à la signature d'un communiqué conjoint par les chefs des délégations des deux entités. Le ministre des Affaires étrangères sénégalais S.E.M. Cheikh NIANG, a félicité les membres des deux délégations pour les dispositions constructives qui ont animé les travaux et la volonté partagée de transcender les divergences et jeter les fondements d’une collaboration dans le respect mutuel. Saluant les convergences subtentielles qui se sont degagées des travaux, le Camarade ministre des Affaires étrangères du Burkina Faso Karamoko Jean Marie TRAORE a, au nom de la délégation de l’AES, réitéré la disponibilité de l'espace confédéral, à travailler en collaboration avec la CEDEAO, pour consolider ce nouveau cadre en tenant compte des priorités communes et des aspirations légitimes des peuples des Etats de la CEDEAO et de l'AES. Communiqué conjoint DCRP/MAE L’article Confédération AES – CEDEAO: un partenariat axé sur le bien-être des populations ouest-africaines est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "AES-CEDEAO : Des groupes de travail conjoints prévus pour bâtir un cadre de coopération",
+      "link": "https://burkina24.com/2026/10/17/aes-cedeao-des-groupes-de-travail-conjoints-prevus-pour-batir-un-cadre-de-cooperation/",
+      "pubDate": "2026-10-17T20:35:09.000Z",
+      "description": "La Confédération des États du Sahel (AES) et la Communauté économique des États de l’Afrique de l’Ouest (CEDEAO) ont convenu de mettre en place des groupes de travail thématiques conjoints en vue de parvenir à un accord-cadre de coopération. Cette décision figure dans le communiqué conjoint publié à l’issue de la première session de la … The post AES-CEDEAO : Des groupes de travail conjoints prévus pour bâtir un cadre de coopération appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "WAFU-B U-17 Championship: Nigeria’s Golden Eaglets crash out, to miss AFCON, World Cup again",
       "link": "https://www.premiumtimesng.com/sports/football/917870-wafu-b-u-17-championship-nigerias-golden-eaglets-crash-out-to-miss-afcon-world-cup-again.html",
       "pubDate": "2026-10-17T20:02:10.000Z",
@@ -931,70 +1056,6 @@
       "_zoneShort": "2. AO anglo. & côtière",
       "_relevance": ".",
       "_desk": "A2"
-    },
-    {
-      "title": "AES-CEDEAO : Des groupes de travail conjoints prévus pour bâtir un cadre de coopération",
-      "link": "https://burkina24.com/2026/10/17/aes-cedeao-des-groupes-de-travail-conjoints-prevus-pour-batir-un-cadre-de-cooperation/",
-      "pubDate": "2026-10-17T19:34:09.000Z",
-      "description": "La Confédération des États du Sahel (AES) et la Communauté économique des États de l’Afrique de l’Ouest (CEDEAO) ont convenu de mettre en place des groupes de travail thématiques conjoints en vue de parvenir à un accord-cadre de coopération. Cette décision figure dans le communiqué conjoint publié à l’issue de la première session de la … The post AES-CEDEAO : Des groupes de travail conjoints prévus pour bâtir un cadre de coopération appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina/Innovations technologiques : Le Faso Digital lance sa 2ᵉ édition sous le signe de l'inclusion et de la souveraineté numérique",
-      "link": "https://lefaso.net/spip.php?article150026",
-      "pubDate": "2026-10-17T18:42:42.000Z",
-      "description": "La deuxième édition de Le Faso Digital a été officiellement lancée ce samedi 17 octobre 2026 à Ouagadougou sous le thème « Inclusion, souveraineté et innovation vers un Burkina digital pour tous. » La cérémonie d'ouverture s'est déroulée sous la présidence de la ministre en charge de la Transition digitale, des Postes et des Communications électroniques, Dr Aminata Zerbo/Sabané, et la coprésidence du ministre en charge de la Communication, de la Culture, des Arts et du Tourisme, Pingdwendé Gilbert Ouédraogo. Initiée par le média en ligne Lefaso.net, cette foire virtuelle, qui se tiendra jusqu'au 24 octobre 2026, ambitionne, selon le promoteur, de donner une meilleure visibilité aux innovations burkinabè et de faciliter leur appropriation par les entreprises, les institutions et les citoyens. Cette initiative répond également à la nécessité de mieux faire connaître les solutions numériques développées par les Burkinabè. « Le Faso Digital est une initiative qui vise à se servir du numérique pour mettre en valeur les solutions digitales susceptibles de contribuer à la résilience de notre pays. Ce sont des solutions numériques proposées par des Burkinabè de tous âges pour permettre au Burkina Faso de se développer dans différents secteurs. Ces solutions existent, les compétences sont présentes, mais les innovations ne sont pas suffisamment connues. Les porteurs de projets ne disposent pas toujours d'une vitrine pour les exposer. En tant que média qui informe et met en lumière les initiatives, nous avons pensé pouvoir être utiles en proposant un espace virtuel où les concepteurs peuvent présenter leurs réalisations et les réponses qu'ils apportent aux problèmes rencontrés dans différents domaines », a expliqué le promoteur, par ailleurs fondateur du média en ligne Lefaso.net, Dr Cyriaque Paré. Selon le promoteur, le faso digital ambitionne de donner une meilleure visibilité aux innovations burkinabè Durant la semaine du 17 au 24 octobre 2026, les entreprises, les institutions et les porteurs de projets peuvent ainsi présenter leurs produits et services à travers des stands virtuels accessibles depuis un téléphone ou un ordinateur. Au-delà de cette exposition, le promoteur entend favoriser les rencontres entre les concepteurs de solutions et les personnes susceptibles de les utiliser ou de les accompagner. Des conférences, des panels et des masterclass sont également programmés pour approfondir les réflexions sur les enjeux du développement numérique. L'objectif est de faire de la plateforme un espace de découverte, de partage d'expériences et de mise en relation entre les acteurs de l'écosystème numérique. Le président du Conseil supérieur de la communication (CSC), Louis Modeste Ouédraogo, a salué l'organisation de cette foire virtuelle, qu'il considère comme une innovation en matière de promotion des produits et services numériques. Selon lui, Le Faso Digital offre aux entreprises et aux créateurs un cadre pour présenter leurs inventions au public et mieux faire connaître les solutions qu'ils développent. Il a estimé également que cette initiative s'inscrit dans les priorités nationales, au regard de la place grandissante qu'occupe le numérique dans la modernisation de l'administration et dans le développement des entreprises privées. Le président du CSC, Louis Modeste Ouédraogo, a salué l'organisation de cette foire virtuelle, qu'il considère comme une innovation en matière de promotion des produits et services numériques « C'est une très belle initiative que d'organiser une foire virtuelle consacrée au digital. Cette plateforme permet aux exposants de présenter leurs créations et leurs inventions, mais également de faire connaître les innovations que les entreprises mettent à la disposition du public à travers les outils numériques. Nous saluons cette démarche parce que c'est déjà une grande innovation que de penser à organiser une foire virtuelle. C'est aussi une véritable vitrine pour la promotion des produits issus du numérique. Le développement digital de notre pays fait partie des priorités de nos dirigeants. Lorsque nous regardons les évolutions au sein de l'administration, nous constatons que la digitalisation constitue une priorité, notamment à travers les initiatives du gouvernement en faveur de l'administration électronique. Le numérique contribue à améliorer la productivité de l'administration publique, mais il permet également aux entreprises privées d'innover et de créer des emplois. Toute une économie s'est développée autour de ces activités, au point que l'on parle aujourd'hui de nouvelle économie. Le digital est donc un secteur important pour notre économie et pour notre développement », a-t-il déclaré. Pour le président du CSC, l'intérêt de cette foire réside également dans les possibilités d'apprentissage qu'elle offre aux visiteurs. Au-delà de la découverte des innovations, les participants peuvent approfondir leurs connaissances sur des questions liées à la régulation, aux bonnes pratiques d'utilisation des outils numériques et aux comportements à adopter sur les réseaux sociaux. Il a ainsi encouragé les entreprises, les institutions et les citoyens à s'approprier cet espace virtuel. Le thème de cette édition met l'accent sur trois enjeux majeurs à savoir l'inclusion, la souveraineté et l'innovation. Pour les organisateurs, le développement numérique ne doit pas profiter uniquement aux personnes disposant d'une bonne connexion Internet, d'équipements adaptés ou de compétences techniques avancées. Il doit également tenir compte des besoins des personnes vivant avec un handicap, des populations éloignées des grands centres urbains et de toutes les catégories sociales susceptibles de rencontrer des difficultés d'accès aux services numériques. Représentant la ministre en charge de la transition digitale, son directeur de cabinet Abdoulaye Mamboné a salué la tenue de cette deuxième édition et félicité le comité d'organisation conduit par le Dr Cyriaque Paré. « Le thème retenu pour cette deuxième édition est particulièrement pertinent. Il nous invite à dépasser la seule question du développement technologique pour réfléchir à la finalité de notre transformation numérique. Pour qui construisons-nous le numérique et comment pouvons-nous faire en sorte que ses bénéfices profitent réellement à l'ensemble de nos concitoyens ? L'inclusion numérique consiste à ne laisser personne de côté. Le numérique ne doit pas accentuer les inégalités existantes ; au contraire, il doit contribuer à les réduire. Nous devons veiller à ce que les jeunes, les femmes, les populations vivant dans les zones éloignées et les personnes vivant avec un handicap puissent accéder davantage aux services numériques et utiliser les technologies pour apprendre, entreprendre et développer leurs activités. Une technologie utile est une technologie qui permet à une personne d'accéder plus facilement à un service, à une information, à une formation ou à une opportunité économique », a-t-il déclaré. Abdoulaye Mamboné a également insisté sur la souveraineté numérique, présentée comme une condition de l'autonomie technologique du pays, car, poursuit-il, le Burkina Faso doit renforcer ses compétences nationales, soutenir la conception de solutions locales, mieux maîtriser ses infrastructures et protéger ses données. Cette ambition suppose une mobilisation de l'État, des entreprises, des universités, des centres de recherche et des jeunes innovateurs. Le numérique ne doit pas faire des Burkinabè de simples consommateurs de technologies conçues ailleurs, mais leur permettre de devenir des concepteurs, des développeurs et des producteurs de connaissances. Le troisième axe, celui de l'innovation, doit privilégier des solutions concrètes, adaptées aux réalités nationales et capables de répondre aux besoins dans l'éducation, la santé, l'agriculture, les services publics, la finance et l'entrepreneuriat. Abdoulaye Mamboné, le directeur de cabinet du ministre en charge de la transition digitale a encouragé les porteurs de projets et les partenaires à poursuivre leurs efforts pour faire émerger des solutions viables Saluant les 201 candidatures enregistrées au concours national d'innovation digitale, la ministre, à travers son représentant, a encouragé les porteurs de projets et les partenaires à poursuivre leurs efforts pour faire émerger des solutions viables. L'objectif ne doit pas se limiter à distinguer les meilleurs projets, mais aussi à favoriser leur financement, leur accompagnement et leur adoption par les utilisateurs. Il a par ailleurs appelé les entreprises à s'intéresser davantage aux innovations locales, susceptibles d'améliorer leur productivité et leur compétitivité. Le ministre en charge de la communication, Pingdwendé Gilbert Ouédraogo, représenté également par son directeur de cabinet Sy Christian Innocent Ouattara, a pour sa part salué une initiative située au croisement de la transformation numérique et de l'évolution des pratiques de communication. Il a souligné que Le Faso Digital constitue un espace de rencontre entre les institutions publiques, les entreprises, les start-up, les chercheurs, les médias, les acteurs culturels, les étudiants et les promoteurs de projets. Pour lui, cette diversité permet de valoriser les talents, de favoriser le dialogue et de faire émerger des solutions répondant aux besoins du Burkina Faso. « Le Faso Digital constitue bien plus qu'un rendez-vous consacré aux technologies. C'est un espace de rencontres et d'échanges entre les institutions publiques, les entreprises, les start-up, les chercheurs, les médias, les acteurs culturels, les étudiants et les promoteurs de projets. Il favorise l'expression de l'innovation, la valorisation des talents et l'émergence de solutions adaptées aux besoins de notre pays. Le parcours de Lefaso.net nous rappelle qu'une innovation naît d'une vision, mais aussi de la volonté de répondre à un besoin concret. Il démontre également qu'un média peut contribuer à la transformation de la société, non seulement par l'information qu'il diffuse, mais aussi par les initiatives qu'il porte et les espaces de dialogue qu'il crée. À cet égard, je voudrais saluer l'ensemble des acteurs de la presse, de la communication et du numérique, dont l'engagement est essentiel pour favoriser une information de qualité et accompagner les mutations de notre société », a déclaré le représentant du ministre de la Communication. Le département en charge de la communication a par ailleurs insisté sur les défis liés à la circulation de l'information dans l'environnement numérique, notamment la désinformation, la manipulation des contenus et les discours de haine. Face à ces risques, il a appelé les professionnels des médias à renforcer la vérification des faits, l'éthique et la responsabilité, tout en développant l'éducation aux médias et à l'information. L'essor de l'intelligence artificielle offre de nouvelles possibilités de production et de diffusion des contenus, mais ne saurait remplacer le discernement humain. Le ministre en charge de la communication, par la voix de son directeur de cabinet, a également mis en avant les opportunités du numérique pour la culture, les arts et le tourisme, en particulier la valorisation du patrimoine, des traditions et des langues nationales. Pour lui, un numérique véritablement inclusif doit aussi être accessible dans des langues que les citoyens comprennent et utilisent. De son côté, le parrain de cette deuxième édition, Issifou Sorgo, président de SOBATIC SAS, a justifié son engagement par l'importance du numérique dans la participation des personnes handicapées à la vie économique et sociale. « J'ai accepté de parrainer cette édition parce que le digital est, pour la personne vivant avec un handicap, l'outil qui lui manquait pour collaborer efficacement avec le reste du monde. Le thème de cette année, qui met l'accent sur l'inclusion, la souveraineté et l'innovation pour un Burkina digital pour tous, me parle particulièrement. L'inclusion doit prendre en compte la personne en situation de handicap, celui qui ne peut pas parler, celui qui n'entend pas, mais aussi celui qui ne dispose pas d'une bonne connexion Internet. C'est également le combat que nous menons à SOBATIC, qui est de travailler à rendre le numérique accessible à tout le monde. L'innovation ne doit pas seulement consister à créer de nouvelles technologies, elle doit aussi permettre de lever les obstacles qui empêchent certaines personnes d'accéder aux mêmes opportunités que les autres », a-t-il soutenu. « L'innovation ne doit pas seulement consister à créer de nouvelles technologies, elle doit aussi permettre de lever les obstacles qui empêchent certaines personnes d'accéder aux mêmes opportunités que les autres », a souligné le parrain, Issifou Sorgo Issifou Sorgo a également rappelé sa participation à la première édition de Le Faso Digital, au cours de laquelle il avait animé une conférence sur les outils numériques susceptibles de faciliter la vie des personnes handicapées. Sa présence à cette deuxième édition traduit, selon lui, la nécessité de poursuivre les réflexions sur l'accessibilité et de promouvoir des solutions adaptées aux réalités des populations. L'enjeu est de permettre aux personnes handicapées d'accéder à l'information, à la formation, aux services et aux opportunités économiques dans des conditions plus équitables. Pour cette deuxième édition, Le Faso Digital a choisi le Rwanda comme pays invité d'honneur. Cette participation du pays des mille collines vise à encourager les échanges entre les écosystèmes numériques burkinabè et rwandais, à partager les expériences en matière de gouvernance numérique et à ouvrir de nouvelles perspectives de coopération. La présence du Rwanda illustre aussi la volonté des organisateurs de faire de la foire un espace de dialogue dépassant les frontières nationales, afin que les acteurs africains puissent s'inspirer de leurs expériences respectives et renforcer leurs capacités d'innovation. Hanifa Koussoubé Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "T",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
-      "_desk": "A1"
     },
     {
       "title": "Premières discussions entre l'AES et la Cédéao au Sénégal pour une future collaboration",
@@ -1057,75 +1118,41 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
-    },
-    {
-      "title": "Banfora : 75 journalistes et communicateurs formés contre la désinformation et les discours de haine",
-      "link": "https://www.minute.bf/banfora-75-journalistes-et-communicateurs-formes-contre-la-desinformation-et-les-discours-de-haine/",
-      "pubDate": "2026-10-17T09:15:01.000Z",
-      "description": "Dans le cadre de la valorisation de l'image du Burkina Faso à l'étranger, Banfora, chef-lieu de la région des Tannounyan, a accueilli, du 14 au 16 octobre 2026, la deuxième session d'élaboration de contenus alternatifs aux messages subversifs et à la désinformation contre le pays. Cette initiative, qui a regroupé 75 participants venus de plusieurs localités du pays, visait à renforcer les capacités des journalistes et des communicants pour promouvoir la cohésion sociale, le vivre-ensemble et la souveraineté informationnelle dans un contexte de foisonnement médiatique international. Les travaux ont été ouverts et clôturés par le chargé de mission du ministre en charge de la Communication, Amidou Paul Bamogo. Face à la crise sécuritaire au Burkina Faso, la lutte contre la désinformation et les discours de haine apparaît comme un enjeu majeur. C'est dans cette dynamique que s'est inscrite la deuxième session d'élaboration de contenus alternatifs aux messages subversifs et à la désinformation, organisée à Banfora, dans la région des Tannounyan. Cette session a mobilisé les professionnels de l'information et de la communication autour de la déconstruction de ces récits hostiles au Pays des hommes. Elle visait également à encourager la production de contenus favorables à la paix, à la cohésion sociale et au vivre-ensemble. Une vue des officiels Le thème principal de cette session était : « Communication stratégique et lutte contre la désinformation et les messages subversifs contre le Burkina Faso : Contributions des journalistes, des communicants, des blogueurs et FDS dans la lutte contre les discours de haine et le renforcement de l'image du Burkina Faso à l'international ». Cette thématique a été introduite par le journaliste et enseignant Moussa Sawadogo. À cela s'ajoutaient six sous-thèmes relatifs au branding du Burkina Faso. Ils ont été développés par San Simon Coulibaly, ambassadeur et expert stratégique au ministère des Affaires étrangères, le Dr Luc Diarra, également expert audit ministère, Moussa Sawadogo, enseignant-formateur en journalisme, et le lieutenant-colonel Aziz Ouédraogo, porte-parole des Forces armées nationales. Dans ce contexte, les journalistes et les communicants ont été appelés à jouer un rôle stratégique au-delà de la diffusion de l'information. Ils ont été invités à contribuer à la déconstruction des stéréotypes, à la prévention de la désinformation et à la promotion de récits favorisant la cohésion sociale. Moussa Sawadogo, Formateur La session a également permis de renforcer les compétences des professionnels des médias en matière de compréhension des phénomènes de radicalisation dans le contexte burkinabè. Vers des contenus alternatifs aux discours hostiles sur le Faso… Les travaux tenus dans la cité du paysan noir ont abouti à la création d'un cadre d'échanges entre journalistes, communicants publics, acteurs diplomatiques et leaders d'opinion. L'objectif était d'identifier des synergies et des mécanismes permettant de déconstruire les stéréotypes véhiculés sur le Burkina Faso. Selon le formateur Moussa Sawadogo, il ne s'agit plus pour les journalistes de s'attarder sur le train qui arrive toujours en retard, mais de se pencher sur les raisons qui lui permettent désormais d'arriver à l'heure. Dans sa communication, il a préconisé aux participants de privilégier le journalisme sensible aux conflits et le journalisme de solutions. « J'ai proposé que les journalistes privilégient le journalisme sensible aux conflits et le journalisme de solutions. Le journalisme sensible aux conflits suppose de faire attention aux mots employés, au contexte dans lequel on s’exprime et aux personnes auxquelles on s’adresse. Il s’agit d’éviter d’ajouter de l’huile sur le feu dans ce contexte actuel. La deuxième approche est le journalisme de solutions. Dans cette crise, le gouvernement entreprend de nombreuses initiatives. (…). Il s’agit donc d’exercer un regard critique, mais constructif, en utilisant des mots appropriés, sans passion ni discours de haine. C’est aussi de cette manière que les autorités peuvent comprendre l’importance du rôle des journalistes et des communicants et être disposées à les écouter » , a-t-il déclaré à l'issue des travaux. Une vue des participants Au cours des échanges, les participants et les experts ont notamment évoqué les réserves liées à l'utilisation des termes « djihadisme » et « islamisme » dans le traitement de la question de l'idéologie « fondamentaliste islamiste » propagée par les terroristes, en raison des risques d'amalgame et de stigmatisation. « Pour ma part, j’ai expliqué le jihad sous l’angle de la quête de vérité et de connaissance. Lorsque je vais à l’école et que j’apprends la géographie ou l’histoire, j’acquiers des connaissances qui me permettent de mieux comprendre le monde et de sortir de l’obscurantisme. Dans la religion musulmane, il n’est pas nécessaire de contraindre les gens pour qu’ils découvrent l’islam », a expliqué Moussa Sawadogo. À l'issue de ces trois jours de formation consacrés à la production de contenus alternatifs face à la désinformation sur le Burkina Faso, le participant Sansan Somé, de Bafudjiinfos, s'est dit « vraiment grandi » par les échanges et les communications suivis. Il retient particulièrement l'importance du journalisme de solutions, qui consiste à mettre en lumière les initiatives positives dans les domaines sécuritaire, social et économique, afin de valoriser les soldats, les artisans, les agriculteurs et l'ensemble des acteurs qui contribuent au développement du pays. « Au lieu de voir le verre à moitié vide, regardons le verre à moitié plein », a-t-il souligné, tout en saluant la déconstruction de certains stéréotypes sur les ressources naturelles du Burkina Faso. Sansan Somé, participant Dans son mot de clôture, le chargé de mission du ministre en charge de la Communication, Amidou Paul Bamogo, s'est réjoui du succès des travaux et a invité les journalistes à intégrer les acquis de cette rencontre dans leurs pratiques quotidiennes. « C'est une satisfaction pour nous au regard de l'engouement et les questions que les différentes communications ont suscité. Je suis convaincu que nos journalistes disposent actuellement de tous les outils pour déconstruire la fausse identité qu'on tente de nos au Burkina Faso », a-t-il fait savoir. En rappel, cette session s'inscrit dans les orientations de la stratégie de communication de guerre élaborée par le ministère de la Communication, de la Culture, des Arts et du Tourisme (MCCAT). Ce référentiel vise à renforcer la communication de proximité, à accompagner la reconquête du territoire national et à améliorer l'image du Burkina Faso à l'international. Jean-François SOMÉ Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "I",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "SYMPO GRANIT 2026 : 45 sculpteurs de 13 pays attendus à Laongo du 2 au 23 novembre prochain",
-      "link": "https://www.minute.bf/sympo-granit-2026-45-sculpteurs-de-13-pays-attendus-a-laongo-du-2-au-23-novembre-prochain/",
-      "pubDate": "2026-10-17T08:53:49.000Z",
-      "description": "La 15e édition du Symposium international de sculpture sur granite de Laongo se tiendra du 2 au 23 novembre 2026 dans la région d’Oubri. L'annonce a été faite par le comité d'organisation lors d’un point de presse tenu ce vendredi 16 octobre 2026 à Ziniaré. Le Symposium international de sculpture sur granite de Laongo est une manifestation artistique qui réunit des sculpteurs de différents pays sur le site de Laongo, au Burkina Faso. Pour cette 15e édition, 45 sculpteurs de 13 pays d’Afrique, d’Europe, d’Amérique et d’Asie sont attendus. Ils seront composés de sculpteurs professionnels, d’assistants et de stagiaires. Vue du site de sculpture sur granite de Laongo Selon Moctar Sanfo, secrétaire général du ministère de la Communication, de la Culture, des Arts et du Tourisme, le Symposium international constitue un espace de rencontre entre artistes, chercheurs et publics. Pour lui, pour cette édition quatre objectifs majeurs sont poursuivis : favoriser l’accès à la culture, renforcer la coopération artistique régionale, promouvoir la transmission des savoir-faire et contribuer à la valorisation économique des acteurs locaux. Moctar Sanfo a expliqué que la 15 e édition se distingue par la diversité de ses activités qui sont entre autres la création artistique, formation, recherche scientifique et échanges commerciaux.« Au total, on aura 20 artistes sculpteurs professionnels nationaux et internationaux venus du Burkina Faso et de plusieurs pays d’Afrique, d’Asie, d’Europe et d’Amérique du Sud », a-t-il informé Les journalistes présents à la conférence de presse Pour lui, parmi les temps forts de cette édition figure le colloque scientifique international, le parrainage artistique de l’artiste malien Abdoulaye Konaté ainsi que la foire « Village Sympo Granite » qui se tiendra du 10 au 23 novembre 2026. « Elle ambitionne de consolider le rayonnement culturel du Burkina Faso et de renforcer la coopération artistique, notamment avec les pays de la Confédération des États du Sahel (AES) » a déclaré le secrétaire général du ministère de la communication. À cette occasion, Moctar Sanfo a invité l’ensemble des artistes, chercheurs, enseignants, artisans, élèves et étudiants à s’approprier pleinement cette manifestation. Il a également appelé les populations, les familles, les jeunes et les visiteurs à venir nombreux découvrir les artistes à l’œuvre et célébrer la richesse du patrimoine culturel burkinabè. « Ensemble, faisons de cette 15e édition une réussite artistique, scientifique, culturelle et populaire », a-t-il lancé. Moctar Sanfo, secrétaire général du ministère de la Communication, de la Culture, des Arts et du Tourisme Pour sa part, Saïdou Guigma, haut-commissaire du Bassitenga, a souligné l’importance du Symposium international de sculpture sur granite de Laongo pour la région et pour le Burkina Faso. Selon lui, cet événement fait du site de Laongo un cadre exceptionnel de création artistique. « C’est un joyau, un musée à ciel ouvert, unique à son genre où la pierre brute s’incline depuis 1989 devant le génie, la créativité et la finesse de la main de l’homme », a rappelé Saïdou Guigma. Il a, à cet effet, réaffirmé la disponibilité des autorités provinciales à accompagner les initiatives visant à assurer le bon déroulement de l’événement et à renforcer son ancrage dans la vie culturelle et sociale du territoire. Saïdou Guigma, haut-commissaire du Bassitenga, Laongo dépasse un simple espace d’exposition Au programme de cette édition figurent notamment un chantier-école, une résidence de création, un colloque scientifique, une foire artistique et commerciale ainsi que des excursions touristiques. L’accès aux activités sera gratuit afin de permettre au plus grand nombre de découvrir les œuvres et d’échanger avec les artistes. Sakinatou ZOUNDI Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
     }
   ],
   "alerts": [
+    {
+      "title": "Israeli blockade leaves thousands of diabetic children in Gaza without life-saving insulin: Report",
+      "link": "https://presstv.co.uk/Detail/2026/10/17/778525/Israeli-blockade-leaves-thousands-of-diabetic-children-in-Gaza-without-life-saving-insulin--Report",
+      "source": "Press TV (Iran)",
+      "date": "2026-10-17T23:08:09.162Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "Iran exports LPG, jet fuel despite US naval blockade: Report",
+      "link": "https://presstv.co.uk/Detail/2026/10/16/778479/Iran-exports-LPG-jet-fuel-despite-US-blockade",
+      "source": "Press TV (Iran)",
+      "date": "2026-10-17T23:08:09.161Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
     {
       "title": "Israeli drone attacks kill six Palestinians across Gaza despite ‘ceasefire’",
       "link": "https://www.aljazeera.com/news/2026/10/17/israeli-drone-attacks-kill-six-palestinians-across-gaza-despite-ceasefire?traffic_source=rss",
@@ -1191,22 +1218,6 @@
       ]
     },
     {
-      "title": "Coopération Togo-Russie : Une exposition photographique à Lomé en prélude au 3ᵉ Sommet de Moscou",
-      "link": "https://atop.tg/cooperation-togo-russie-une-exposition-photographique-a-lome-en-prelude-au-3%E1%B5%89-sommet-de-moscou/",
-      "source": "ATOP (Togo)",
-      "date": "2026-10-17T14:16:55.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
       "title": "Au sommet européen de Bruxelles, la surenchère sans fin du Danemark et de l’Italie sur l’immigration",
       "link": "https://www.lemonde.fr/international/article/2026/10/17/au-sommet-europeen-de-bruxelles-la-surenchere-sans-fin-du-danemark-et-de-l-italie-sur-l-immigration_6796203_3210.html",
       "source": "Le Monde International",
@@ -1221,64 +1232,48 @@
           "keyword": "sommet"
         }
       ]
-    },
-    {
-      "title": "Over 340 children killed in Gaza since ceasefire, says Unicef",
-      "link": "https://www.dawn.com/news/2037798/over-340-children-killed-in-gaza-since-ceasefire-says-unicef",
-      "source": "Dawn (Pakistan)",
-      "date": "2026-10-17T06:58:19.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      220
-    ],
-    [
-      "autre",
-      110
-    ],
-    [
-      "occident_fr",
-      106
-    ],
-    [
-      "occident_us",
-      97
+      229
     ],
     [
       "golfe_mo",
-      80
+      110
     ],
     [
-      "russie",
-      62
+      "autre",
+      102
+    ],
+    [
+      "occident_fr",
+      90
+    ],
+    [
+      "occident_us",
+      85
     ],
     [
       "turquie",
-      53
+      54
     ],
     [
-      "chine",
-      30
+      "russie",
+      54
     ],
     [
       "sahel",
-      23
+      26
+    ],
+    [
+      "chine",
+      26
     ],
     [
       "bf_local",
-      19
+      24
     ]
   ],
   "desks": [
@@ -1286,7 +1281,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 81,
+      "count": 101,
       "top": [
         {
           "title": "Cinéma guinéen : le Salon du cinéma et les FIF Awards unissent leurs forces pour bâtir une industrie",
@@ -1298,40 +1293,40 @@
           "rating": "A1"
         },
         {
+          "title": "‎Coopération CEDEAO-AES : Des groupes de travail prévus pour définir un cadre de coopération ‎ ‎",
+          "link": "https://lefaso.net/spip.php?article150031",
+          "source": "Lefaso.net",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "Sahel states restart dialogue with ECOWAS",
+          "link": "https://www.vanguardngr.com/2026/10/sahel-states-restart-dialogue-with-ecowas/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Confédération AES – CEDEAO: un partenariat axé sur le bien-être des populations ouest-africaines",
+          "link": "https://www.wakatsera.com/confederation-aes-cedeao-un-partenariat-axe-sur-le-bien-etre-des-populations-ouest-africaines/",
+          "source": "Wakat Séra",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
           "title": "AES-CEDEAO : Des groupes de travail conjoints prévus pour bâtir un cadre de coopération",
           "link": "https://burkina24.com/2026/10/17/aes-cedeao-des-groupes-de-travail-conjoints-prevus-pour-batir-un-cadre-de-cooperation/",
           "source": "Burkina24",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
           "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "Burkina/Innovations technologiques : Le Faso Digital lance sa 2ᵉ édition sous le signe de l'inclusion et de la souveraineté numérique",
-          "link": "https://lefaso.net/spip.php?article150026",
-          "source": "Lefaso.net",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "Premières discussions entre l'AES et la Cédéao au Sénégal pour une future collaboration",
-          "link": "https://www.rfi.fr/fr/afrique/20261017-premi%C3%A8res-discussions-entre-l-aes-et-la-c%C3%A9d%C3%A9ao-au-s%C3%A9n%C3%A9gal-pour-une-future-collaboration",
-          "source": "RFI Afrique",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C2"
-        },
-        {
-          "title": "COMMUNIQUE DE PRESSE DE LA RÉUNION DU COMITÉ MINISTÉRIEL DE PILOTAGE DE LA CONFÉDÉRATION DES ETATS DU SAHEL (AES), PRÉPARATOIRE AUX NÉGOCIATIONS FORMELLES AVEC LA CEDEAO",
-          "link": "https://malijet.com/actualite-sur-aes/312374-communique-de-presse-de-la-reunion-du-comite-ministeriel-de.html",
-          "source": "Malijet",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
+          "rating": "C1"
         }
       ]
     },
@@ -1339,7 +1334,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 57,
+      "count": 60,
       "top": [
         {
           "title": "WAFU-B U-17 Championship: Nigeria’s Golden Eaglets crash out, to miss AFCON, World Cup again",
@@ -1360,15 +1355,6 @@
           "rating": "F1"
         },
         {
-          "title": "Defend Tinubu’s reforms with facts – Shettima tells APC think tank",
-          "link": "https://www.vanguardngr.com/2026/10/defend-tinubus-reforms-with-facts-shettima-tells-apc-think-tank/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Youth population is Nigeria’s greatest asset – Tinubu",
           "link": "https://www.vanguardngr.com/2026/10/youth-population-is-nigerias-greatest-asset-tinubu/",
           "source": "Vanguard (Nigeria)",
@@ -1385,6 +1371,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Soldiers kill two suspected kidnappers, recover N10m ransom",
+          "link": "https://punchng.com/soldiers-kill-two-suspected-kidnappers-recover-n10m-ransom/?utm_source=rss.punchng.com&utm_medium=web",
+          "source": "Punch (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F1"
         }
       ]
     },
@@ -1392,7 +1387,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 26,
+      "count": 23,
       "top": [
         {
           "title": "Ligue des champions CAF : le Coach du Horoya fixe le cap face à Al Merrikh",
@@ -1413,15 +1408,6 @@
           "rating": "F2"
         },
         {
-          "title": "Octobre rose : au ministère de la Planification, le dépistage au cœur de la prévention",
-          "link": "https://www.gabonreview.com/octobre-rose-au-ministere-de-la-planification-le-depistage-au-coeur-de-la-prevention/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Pourquoi l'accord du Rwanda pour le Grand Prix de Formule 1 reste controversé",
           "link": "https://www.bbc.com/afrique/articles/cq0ldnx12pj4o?at_medium=RSS&at_campaign=rss",
           "source": "BBC Afrique (FR)",
@@ -1438,6 +1424,15 @@
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "RDC: les députés du Nord-Kivu condamnent la création du mouvement politico-militaire Front pour la Réfondation de la Nation",
+          "link": "https://actualite.cd/2026/10/17/rdc-les-deputes-du-nord-kivu-condamnent-la-creation-du-mouvement-politico-militaire",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "F2"
         }
       ]
     },
@@ -1445,7 +1440,7 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 32,
+      "count": 33,
       "top": [
         {
           "title": "Naturalisation en France depuis 2000 : les Marocains devancent les Algériens",
@@ -1466,6 +1461,24 @@
           "rating": "A2"
         },
         {
+          "title": "Soutien au Pr Aida Borgi | Stop au harcèlement en ligne des professionnels de santé",
+          "link": "https://kapitalis.com/tunisie/2026/10/17/soutien-au-pr-aida-borgi-stop-au-harcelement-en-ligne-des-professionnels-de-sante/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "I",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Akhannouch quitte la présidence du Gouvernement \"la conscience tranquille\"",
+          "link": "https://fr.hespress.com/492863-akhannouch-quitte-la-presidence-du-gouvernement-la-conscience-tranquille.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Innovation sociale : WeXchange réunit plus de 400 participants à Casablanca",
           "link": "https://fr.hespress.com/492634-innovation-sociale-wexchange-reunit-plus-de-400-participants-a-casablanca.html",
           "source": "Hespress (Maroc, FR)",
@@ -1473,24 +1486,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Ahmed Mehdi Mezouari, un parcours partisan à l’épreuve des défis de la pêche maritime",
-          "link": "https://fr.hespress.com/492786-ahmed-mehdi-mezouari-un-parcours-partisan-a-lepreuve-des-defis-de-la-peche-maritime.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Hydrocarbures : l’Algérie mobilise 71,6 milliards $ d’investissements à l’horizon 2030",
-          "link": "https://www.tsa-algerie.com/hydrocarbures-lalgerie-mobilise-716-milliards-dinvestissements-a-lhorizon-2030/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A1"
         }
       ]
     },
@@ -1498,17 +1493,8 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 80,
+      "count": 94,
       "top": [
-        {
-          "title": "Over 340 children killed in Gaza since ceasefire, says Unicef",
-          "link": "https://www.dawn.com/news/2037798/over-340-children-killed-in-gaza-since-ceasefire-says-unicef",
-          "source": "Dawn (Pakistan)",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Ceasefire must cover all fronts to end regional war, says diplomat",
           "link": "https://www.tehrantimes.com/news/531177/Ceasefire-must-cover-all-fronts-to-end-regional-war-says-diplomat",
@@ -1517,6 +1503,15 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Saudi-led coalition says it intercepted 2 Houthi ballistic missiles headed for southwestern Saudi Arabia",
+          "link": "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-says-it-intercepted-2-houthi-ballistic-missiles-headed-for-southwestern-saudi-arabia/4092323",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A2"
         },
         {
           "title": "Pakistan suspends Iran trade corridors over 'security, smuggling concerns'",
@@ -1551,7 +1546,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 198,
+      "count": 176,
       "top": [
         {
           "title": "France : Des manifestations contre la vie chère dégénèrent dans plusieurs villes",
@@ -1590,12 +1585,12 @@
           "rating": "B2"
         },
         {
-          "title": "Coopération Togo-Russie : Une exposition photographique à Lomé en prélude au 3ᵉ Sommet de Moscou",
-          "link": "https://atop.tg/cooperation-togo-russie-une-exposition-photographique-a-lome-en-prelude-au-3%E1%B5%89-sommet-de-moscou/",
-          "source": "ATOP (Togo)",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
+          "title": "Any miscalculation by adversaries will invite response beyond their ‘imagination, calculation’, warns CNSC",
+          "link": "https://www.dawn.com/news/2037799/any-miscalculation-by-adversaries-will-invite-response-beyond-their-imagination-calculation-warns-cnsc",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "S",
+          "relevance": "L",
           "rating": "F2"
         }
       ]
@@ -1614,42 +1609,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-10-17T20:36:15.332Z",
+      "at": "2026-10-17T23:07:40.466Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-10-17T20:36:15.338Z",
+      "at": "2026-10-17T23:07:40.474Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-10-17T20:36:57.421Z",
+      "at": "2026-10-17T23:08:13.113Z",
       "agent": "Agent Collecte RSS",
-      "message": "101/170 flux OK, 1822 articles"
+      "message": "103/170 flux OK, 1849 articles"
     },
     {
-      "at": "2026-10-17T20:36:59.804Z",
+      "at": "2026-10-17T23:08:15.933Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-10-17T20:37:00.070Z",
+      "at": "2026-10-17T23:08:16.239Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-10-17T20:37:00.074Z",
+      "at": "2026-10-17T23:08:16.245Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 7 alertes"
     },
     {
-      "at": "2026-10-17T20:37:00.074Z",
+      "at": "2026-10-17T23:08:16.245Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-10-17T20:37:00.074Z",
+      "at": "2026-10-17T23:08:16.245Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
