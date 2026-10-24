@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-24T11:00:13.500Z",
+  "generatedAt": "2026-10-24T11:57:01.102Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 104,
-    "failed": 66,
-    "articles": 1855,
+    "ok": 103,
+    "failed": 67,
+    "articles": 1877,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -16,11 +16,6 @@
         "id": "rss_burkina24",
         "name": "Burkina24",
         "count": 6
-      },
-      {
-        "id": "rss_sidwaya",
-        "name": "Sidwaya",
-        "count": 10
       },
       {
         "id": "rss_wakatsera",
@@ -203,11 +198,6 @@
         "count": 10
       },
       {
-        "id": "rss_webmanager",
-        "name": "Webmanagercenter (Tunisie)",
-        "count": 0
-      },
-      {
         "id": "rss_madamasr",
         "name": "Mada Masr (Égypte)",
         "count": 10
@@ -266,6 +256,11 @@
         "id": "rss_f24fr",
         "name": "France 24",
         "count": 24
+      },
+      {
+        "id": "rss_f24afr",
+        "name": "France 24 Afrique",
+        "count": 30
       },
       {
         "id": "rss_jeuneafr",
@@ -370,7 +365,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 26
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -455,7 +450,7 @@
       {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
-        "count": 21
+        "count": 22
       },
       {
         "id": "rss_pressTV",
@@ -480,7 +475,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 26
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -529,6 +524,11 @@
       }
     ],
     "failedSources": [
+      {
+        "id": "rss_sidwaya",
+        "name": "Sidwaya",
+        "error": "This operation was aborted"
+      },
       {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
@@ -695,6 +695,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_webmanager",
+        "name": "Webmanagercenter (Tunisie)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_libya_obs",
         "name": "Libya Observer",
         "error": "HTTP 404"
@@ -733,11 +738,6 @@
         "id": "rss_frs",
         "name": "FRS — Fondation Recherche Stratégique",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_f24afr",
-        "name": "France 24 Afrique",
-        "error": "HTTP 403"
       },
       {
         "id": "rss_tv5afr",
@@ -847,7 +847,7 @@
       {
         "id": "rss_icrc",
         "name": "CICR — Croix-Rouge",
-        "error": "HTTP 403"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_imf",
@@ -863,7 +863,7 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 39,
+    "bfAes": 37,
     "alerts": 5,
     "criticalAlerts": 2,
     "sourcesDistinct": 64
@@ -1210,19 +1210,19 @@
   "narrativesByBloc": [
     [
       "afrique",
-      215
+      211
     ],
     [
       "autre",
-      120
-    ],
-    [
-      "occident_us",
-      106
+      118
     ],
     [
       "golfe_mo",
-      101
+      108
+    ],
+    [
+      "occident_us",
+      108
     ],
     [
       "occident_fr",
@@ -1230,23 +1230,23 @@
     ],
     [
       "russie",
-      39
+      42
     ],
     [
       "turquie",
-      37
+      36
     ],
     [
       "chine",
       32
     ],
     [
-      "bf_local",
-      25
+      "sahel",
+      22
     ],
     [
-      "sahel",
-      24
+      "bf_local",
+      22
     ]
   ],
   "desks": [
@@ -1254,7 +1254,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 102,
+      "count": 97,
       "top": [
         {
           "title": "SIAO 2026 : Plus de 800 000 visiteurs attendus, des innovations majeures annoncées",
@@ -1307,7 +1307,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 55,
+      "count": 57,
       "top": [
         {
           "title": "Clean house or face defeat in 2027 — Onoh tasks Tinubu over claims of multi-billion Naira ministerial slots",
@@ -1328,8 +1328,17 @@
           "rating": "F2"
         },
         {
-          "title": "Tinubu appointed Muri-Okunola because of Gbajabiamila’s failure — Laolu Akande",
-          "link": "https://www.vanguardngr.com/2026/10/tinubu-appointed-muri-okunola-because-of-gbajabiamilas-failure-laolu-akande/",
+          "title": "10 killed as armed bandits raid Taraba community, loot food stores",
+          "link": "https://www.vanguardngr.com/2026/10/10-killed-as-armed-bandits-raid-taraba-community-loot-food-stores/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Keyamo accuses Atiku of fearing APC’s Northern support",
+          "link": "https://www.vanguardngr.com/2026/10/keyamo-accuses-atiku-of-fearing-apcs-northern-support/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1337,20 +1346,11 @@
           "rating": "F2"
         },
         {
-          "title": "Obuasi SHTS sexual abuse: FIDA Ghana calls offence first-degree felony, says it’s not bailable",
-          "link": "https://www.myjoyonline.com/obuasi-shts-sexual-abuse-fida-ghana-calls-offence-first-degree-felony-says-its-not-bailable/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "OKUAMA: When the court speaks, who answers?",
-          "link": "https://www.vanguardngr.com/2026/10/okuama-when-the-court-speaks-who-answers/",
+          "title": "2027: Basiru urges ex-Assembly speakers to back Tinubu",
+          "link": "https://www.vanguardngr.com/2026/10/2027-basiru-urges-ex-assembly-speakers-to-back-tinubu/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "J",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1360,8 +1360,17 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 23,
+      "count": 21,
       "top": [
+        {
+          "title": "Fizi : le conseil territorial de sécurité supprime plus de 20 barrières et cachots illégaux",
+          "link": "https://actualite.cd/2026/10/24/fizi-le-conseil-territorial-de-securite-supprime-plus-de-20-barrieres-et-cachots",
+          "source": "ActualitéCD (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
         {
           "title": "Bank Al-Maghrib : avis favorable du CEC sur dix textes",
           "link": "https://fr.hespress.com/493776-bank-al-maghrib-avis-favorable-du-cec-sur-dix-textes.html",
@@ -1370,15 +1379,6 @@
           "theme": "T",
           "relevance": "L",
           "rating": "F2"
-        },
-        {
-          "title": "Woman, 65, becomes second patient to die of Ebola in Kenya",
-          "link": "https://www.myjoyonline.com/woman-65-becomes-second-patient-to-die-of-ebola-in-kenya/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "3. Afrique centrale",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
         },
         {
           "title": "Kinshasa : Insécurité à Mbudi-CPA, la population exige plus des moyens pour la Police de proximité",
@@ -1396,7 +1396,7 @@
           "zone": "5. Corne de l’Afrique",
           "theme": "M",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "C1"
         },
         {
           "title": "Beni : les jeunes du Nord-Kivu et du Sud-Kivu s’engagent pour la paix Une cinquantaine de jeunes du Nord-",
@@ -1416,6 +1416,15 @@
       "count": 26,
       "top": [
         {
+          "title": "Parlement : réunion extraordinaire des deux chambres dimanche 25 octobre",
+          "link": "https://www.tsa-algerie.com/parlement-reunion-extraordinaire-des-deux-chambres-reunies-dimanche-25-octobre/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
           "title": "Au Sahel, l’Algérie revient dans un jeu dont les règles ont changé",
           "link": "https://www.jeuneafrique.com/1854748/politique/au-sahel-lalgerie-revient-dans-un-jeu-dont-les-regles-ont-change/",
           "source": "Jeune Afrique",
@@ -1425,18 +1434,18 @@
           "rating": "B2"
         },
         {
-          "title": "Paiements numériques : le virement instantané grimpe de 78%",
-          "link": "https://fr.hespress.com/493473-paiements-numeriques-le-virement-instantane-grimpe-de-78.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "SILA 2026 : Benjamin Stora, Yasmina Khadra, John Kaiser et plus de 200 écrivains attendus",
+          "link": "https://www.tsa-algerie.com/sila-2026-benjamin-stora-yasmina-khadra-john-kaiser-et-plus-de-200-ecrivains-attendus/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "M",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Médicaments importés : douane et AMMPS, alliance aux frontières",
-          "link": "https://telquel.ma/2026/10/23/medicaments-importes-douane-et-ammps-alliance-aux-frontieres_2014790",
-          "source": "TelQuel (Maroc)",
+          "title": "Paiements numériques : le virement instantané grimpe de 78%",
+          "link": "https://fr.hespress.com/493473-paiements-numeriques-le-virement-instantane-grimpe-de-78.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
@@ -1450,15 +1459,6 @@
           "theme": "C",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Protect Humanitarians réclame la libération de Saâdia Mosbah",
-          "link": "https://kapitalis.com/tunisie/2026/10/24/protect-humanitarians-reclame-la-liberation-de-saadia-mosbah/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "C2"
         }
       ]
     },
@@ -1466,7 +1466,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 113,
+      "count": 110,
       "top": [
         {
           "title": "Netanyahu threatens ‘aggressive’ offensive after West Bank shooting",
@@ -1487,15 +1487,6 @@
           "rating": "F1"
         },
         {
-          "title": "Iran says US military not allowed to enter Gulf ‘under any circumstances’",
-          "link": "https://www.vanguardngr.com/2026/10/iran-says-us-military-not-allowed-to-enter-gulf-under-any-circumstances/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Israel launches major West Bank operation after soldiers killed",
           "link": "https://www.dawn.com/news/2039462/israel-launches-major-west-bank-operation-after-soldiers-killed",
           "source": "Dawn (Pakistan)",
@@ -1512,6 +1503,15 @@
           "theme": "L",
           "relevance": "A",
           "rating": "A1"
+        },
+        {
+          "title": "Netanyahu Orders Large-Scale Military Operation in West Bank",
+          "link": "https://foreignpolicy.com/2026/10/23/netanyahu-israel-military-operation-west-bank-hebron-refugee-camps/",
+          "source": "Foreign Policy",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B1"
         }
       ]
     },
@@ -1519,7 +1519,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 172,
+      "count": 176,
       "top": [
         {
           "title": "White House says Melania Trump brokered truce for Ukraine city 'on brink of disaster'",
@@ -1558,13 +1558,13 @@
           "rating": "F2"
         },
         {
-          "title": "Expo sur Amilcar Cabral: «On a voulu présenter un intellectuel africain qui a mis la dignité au centre de son action»",
-          "link": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20261024-expo-sur-amilcar-cabral-on-a-voulu-pr%C3%A9senter-un-intellectuel-africain-qui-a-mis-la-dignit%C3%A9-au-centre-de-son-action",
-          "source": "RFI Afrique",
-          "zone": "9. Europe occidentale",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
+          "title": "Mondial U-15 2026 : le Maroc démarre par une victoire face aux Philippines",
+          "link": "https://fr.hespress.com/493814-mondial-u-15-2026-le-maroc-demarre-par-une-victoire-face-aux-philippines.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "13. Asie du Sud-Est",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "F2"
         }
       ]
     }
@@ -1578,48 +1578,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-10-24T10:59:44.744Z",
+      "at": "2026-10-24T11:56:26.365Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-10-24T10:59:44.751Z",
+      "at": "2026-10-24T11:56:26.372Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-10-24T11:00:10.337Z",
+      "at": "2026-10-24T11:56:58.044Z",
       "agent": "Agent Collecte RSS",
-      "message": "104/170 flux OK, 1855 articles"
+      "message": "103/170 flux OK, 1877 articles"
     },
     {
-      "at": "2026-10-24T11:00:13.196Z",
+      "at": "2026-10-24T11:57:00.836Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-10-24T11:00:13.497Z",
+      "at": "2026-10-24T11:57:01.100Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-10-24T11:00:13.502Z",
+      "at": "2026-10-24T11:57:01.105Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 5 alertes"
     },
     {
-      "at": "2026-10-24T11:00:13.502Z",
+      "at": "2026-10-24T11:57:01.105Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-10-24T11:00:13.502Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
