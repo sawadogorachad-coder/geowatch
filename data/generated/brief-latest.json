@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-10-30T22:19:22.283Z",
+  "generatedAt": "2026-10-31T05:40:27.953Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 102,
-    "failed": 68,
-    "articles": 1863,
+    "ok": 99,
+    "failed": 71,
+    "articles": 1810,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -28,8 +23,18 @@
         "count": 10
       },
       {
+        "id": "rss_lepays_bf",
+        "name": "Le Pays (BF)",
+        "count": 12
+      },
+      {
         "id": "rss_eco_faso",
         "name": "L'Économiste du Faso",
+        "count": 10
+      },
+      {
+        "id": "rss_faso7",
+        "name": "Faso7",
         "count": 10
       },
       {
@@ -41,11 +46,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -80,11 +80,6 @@
       {
         "id": "rss_tchadinfos",
         "name": "Tchadinfos",
-        "count": 10
-      },
-      {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
         "count": 10
       },
       {
@@ -168,6 +163,11 @@
         "count": 30
       },
       {
+        "id": "rss_dabanga",
+        "name": "Dabanga Sudan",
+        "count": 12
+      },
+      {
         "id": "rss_tsa",
         "name": "TSA — Tout sur l'Algérie",
         "count": 10
@@ -210,11 +210,6 @@
       {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -265,7 +260,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -383,16 +378,6 @@
         "count": 11
       },
       {
-        "id": "rss_tass",
-        "name": "TASS (Russie, EN)",
-        "count": 30
-      },
-      {
-        "id": "rss_rt_fr",
-        "name": "RT en français",
-        "count": 10
-      },
-      {
         "id": "rss_sputnik_fr",
         "name": "Sputnik Afrique (FR)",
         "count": 30
@@ -470,7 +455,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 27
+        "count": 29
       },
       {
         "id": "rss_nikkei",
@@ -520,24 +505,24 @@
     ],
     "failedSources": [
       {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "error": "HTTP 404"
       },
       {
-        "id": "rss_lepays_bf",
-        "name": "Le Pays (BF)",
-        "error": "This operation was aborted"
-      },
-      {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -588,6 +573,11 @@
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -670,11 +660,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_dabanga",
-        "name": "Dabanga Sudan",
-        "error": "HTTP 500"
-      },
-      {
         "id": "rss_news24",
         "name": "News24 (Afrique du Sud)",
         "error": "fetch failed"
@@ -687,7 +672,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -707,7 +692,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -723,6 +708,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -788,6 +778,16 @@
         "id": "rss_wapo",
         "name": "Washington Post World",
         "error": "HTTP 502"
+      },
+      {
+        "id": "rss_tass",
+        "name": "TASS (Russie, EN)",
+        "error": "fetch failed"
+      },
+      {
+        "id": "rss_rt_fr",
+        "name": "RT en français",
+        "error": "fetch failed"
       },
       {
         "id": "rss_chinadaily",
@@ -866,9 +866,47 @@
     "bfAes": 49,
     "alerts": 19,
     "criticalAlerts": 7,
-    "sourcesDistinct": 73
+    "sourcesDistinct": 71
   },
   "topDevelopments": [
+    {
+      "title": "Sommet Russie–Afrique à Moscou : Concertation fraternelle des pays de l’AES autour du Général Assimi Goïta",
+      "link": "https://netafrique.net/sommet-russie-afrique-a-moscou-concertation-fraternelle-des-pays-de-laes-autour-du-general-assimi-goita/",
+      "pubDate": "2026-10-31T03:22:14.000Z",
+      "description": "En marge des travaux du troisième Sommet Russie–Afrique à Moscou, le Président de la Transition du Mali, le Général d’Armée Assimi Goïta, a accordé une audience fraternelle, dans la soirée du jeudi 29 octobre 2026, au Premier ministre burkinabè, Rimtalba Jean Emmanuel Ouédraogo, accompagné de la délégation nigérienne. Porteurs des salutations fraternelles du Président du Faso, le Capitaine Ibrahim Traoré, et du Président de la République du Niger, le Général d’Armée Abdourahamane Tiani, les représentants sahéliens ont tiré un premier bilan de leur participation au rendez-vous moscovite. Cette rencontre au sommet illustre la volonté de la Confédération des États du Sahel (AES) d'harmoniser ses démarches bilatérales et confédérales afin de bâtir un partenariat stratégique et souverain avec la Fédération de Russie. L’esprit de solidarité et d’entente mutuelle de la Confédération des États du Sahel (AES) s'est matérialisé au cœur de la capitale russe. Dans la soirée du jeudi 29 octobre 2026, le Président de la Transition du Mali, le Général d’Armée Assimi Goïta, a reçu à sa résidence de séjour moscovite le Chef du Gouvernement burkinabè, le Camarade Premier ministre Rimtalba Jean Emmanuel Ouédraogo, venu en compagnie des membres de la délégation nigérienne. Organisée en marge des assises du troisième Sommet Russie–Afrique, cette audience a témoigné avec force des liens étroits et de la confiance mutuelle qui unissent les capitales sahéliennes. À cette occasion, les émissaires ont transmis au Chef de l'État malien les salutations chaleureuses et fraternelles du Président du Faso, le Capitaine Ibrahim Traoré, ainsi que du Président de la République du Niger, le Général d’Armée Abdourahamane Tiani. Au-delà des civilités d'usage, cette séance de travail a permis d'articuler une vision commune des négociations en cours avec Moscou. Comme l'a précisé le Premier ministre burkinabè, l'entrevue a été l'occasion de témoigner admiration et respect au Général Goïta, tout en dressant un premier bilan méthodique de la participation des trois États membres au sommet. Les délégations burkinabè et nigérienne ont ainsi recueilli les conseils et les orientations stratégiques du dirigeant malien en vue de consolider les accords conclus avec la Fédération de Russie. L'enjeu est de concilier harmonieusement les priorités propres à chaque État avec la dynamique collective de la Confédération. Face aux défis partagés, les trois nations réaffirment leur détermination à marcher d'un même pas. « Nous avons bénéficié de ses orientations, nous avons bénéficié de ses conseils » , a souligné Rimtalba Jean Emmanuel Ouédraogo, traduisant la volonté inébranlable des représentants de poursuivre les actions engagées avec une vigueur renouvelée. En terre moscovite, la concertation directe entre Bamako, Ouagadougou et Niamey donne une démonstration concrète de l'idéal confédéral : faire du dialogue permanent un outil pour défendre souverainement les intérêts des peuples du Sahel. L’article Sommet Russie–Afrique à Moscou : Concertation fraternelle des pays de l'AES autour du Général Assimi Goïta est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
+      "_score": 152,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
     {
       "title": "Boxe : Sou Toké « Le Bombardier » livrera son dernier combat ce samedi au Palais des sports de Ouaga 2000",
       "link": "https://www.minute.bf/boxe-sou-toke-le-bombardier-livrera-son-dernier-combat-ce-samedi-au-palais-des-sports-de-ouaga-2000/",
@@ -969,10 +1007,10 @@
       "_desk": "A1"
     },
     {
-      "title": "A l’épreuve du terrain, l’armée burkinabè a développé des « modes de combat uniques au monde», PM",
-      "link": "https://netafrique.net/a-lepreuve-du-terrain-larmee-burkinabe-a-developpe-des-modes-de-combat-uniques-au-monde-pm/",
-      "pubDate": "2026-10-30T21:17:36.000Z",
-      "description": "Les Forces combattantes burkinabè ont développé, grâce à l’expérience acquise sur le terrain, des modes de combat uniques au monde qu’elles peuvent partager avec leurs frères russes, s’est félicité le Premier ministre Rimtalba Jean Emmanuel Ouédraogo, lors d’une interview à Moscou avec la télévision russe RT. « Sur le terrain des opérations, nos forces combattantes, grâce au retour d’expérience, se sont progressivement améliorées et ont développé des modes de combat qui sont uniques, parce que ce sont des modes d’opérations inspirés du terrain burkinabè », a déclaré le chef du gouvernement Rimtalba Ouédraogo, le 27 octobre 2026. Il fait allusion aux avancées territoriales arrachées de hautes luttes par les FDS et les VDP aux terroristes et à leurs sponsors. Selon Rimtalba Jean Emmanuel Ouédraogo, cette expertise propre place le Burkina Faso dans une relation de partage d’expérience avec la Fédération de Russie, et non plus dans une simple position de bénéficiaire. « Dans ce contexte, nous avons aussi l’opportunité de partager des expériences avec nos partenaires russes », a-t-il souligné, avant de qualifier cette coopération de motif de satisfaction pour les deux pays. Interrogé sur le rôle des instructeurs russes, Rimtalba Jean Emmanuel Ouédraogo a précisé que leur présence s’inscrit dans le cadre du partenariat stratégique entre les deux pays et de l’acquisition d’équipements militaires. Ces instructeurs accompagnent les Forces combattantes dans la prise en main de ces équipements, une pratique « très courante » prévue dans les contrats d’acquisition. Il a ajouté que ce partenariat a contribué à l’amélioration des capacités opérationnelles des troupes. Le Premier ministre a inscrit la bravoure des combattants dans ce qu’il qualifie de « combat existentiel » et de « guerre de libération » menée par le peuple burkinabè, pour reprendre définitivement en main son destin. Sur le terrain, la situation sécuritaire s’améliore « de façon très significative et de façon constante », a-t-il assuré. Il a précisé que plus de soixante-quatorze pour cent du territoire national sont aujourd’hui consolidés. Ce chiffre désigne, selon lui, les zones non seulement reconquises, mais aussi dépolluées et dotées d’une présence permanente des forces, où les populations déplacées ont pu se réinstaller et vaquer tranquillement à leurs occupations. « Il n’y a pas un seul centimètre carré du Burkina Faso aujourd’hui qui échappe à nos forces de défense et de sécurité, parce qu’elles interviennent partout », a insisté le chef du gouvernement. À la sortie de la saison des pluies, le Premier ministre a rappelé que le Président du Faso, le Capitaine Ibrahim Traoré, avait annoncé l’engagement de grandes opérations pour consolider de nouvelles zones. « Dans les semaines et les mois à venir, vous allez être témoins des progressions de nos braves combattants pour reconquérir jusqu’au dernier centimètre carré du territoire », a-t-il affirmé. Agence d’information du Burkina L’article A l’épreuve du terrain, l’armée burkinabè a développé des « modes de combat uniques au monde», PM est apparu en premier sur NetAfrique.net .",
+      "title": "Devant le Tribunal | Démoralisation des forces armées et d’outrage… : Lebinoua condamné à 2 mois ferme, le parquet fait appel",
+      "link": "https://netafrique.net/devant-le-tribunal-demoralisation-des-forces-armees-et-doutrage-lebinoua-condamne-a-2-mois-ferme-le-parquet-fait-appel/",
+      "pubDate": "2026-10-31T03:00:51.000Z",
+      "description": "Le jeudi 15 octobre 2026, Nikièma Lebinoua, administrateur des services financiers, a comparu devant la chambre correctionnelle du Tribunal de grande instance de Ouaga I pour répondre des faits d’incitation à l’atteinte à la sûreté de l’État, de participation à une entreprise de démoralisation des forces armées et d’outrage envers les dépositaires de l’autorité publique. Selon les éléments présentés dans le dossier, ses publications sur Facebook, diffusées au début du mois de septembre 2026, contenaient des affirmations considérées comme fausses ou non étayées concernant l'armée burkinabè. Il a été interpellé par la Brigade centrale de lutte contre la cybercriminalité (BCLCC). Dans une vidéo, le prévenu avait reconnu ses torts et présenté ses excuses aux institutions ainsi qu'au peuple burkinabè. Par ailleurs, le Conseil des ministres du 24 septembre 2026 a officiellement mis fin à ses fonctions à la Commission nationale des droits humains (CNDH). Il a ensuite été placé sous mandat de dépôt à la Maison d'arrêt et de correction de Ouagadougou (MACO), dans l'attente de son jugement. « Je n'ai jamais voulu chasser les autorités » À la barre, Nikièma Lebinoua a reconnu avoir publié des messages sur sa page Facebook. Il a toutefois contesté avoir voulu provoquer le départ des autorités en place. Pour lui, ses publications relevaient de l'expression d'une opinion. Il a également estimé que le débat devait se faire à travers les idées plutôt que par le combat. Le procureur lui a alors demandé si ses écrits traduisaient une opposition à la Révolution progressiste populaire (RPP). « Vous vous opposez à ça à travers vos écrits ? Vous voulez qu'on vous traite comment ? », lui a lancé le représentant du ministère public. En réponse, le prévenu a déclaré : « Je ne partage pas l'idéologie. Par contre, je n'ai jamais été hostile aux autorités actuelles, qui m'ont nommé en 2024 à la CNDH. » Le parquet requiert 36 mois de prison ferme Dans ses réquisitions, le ministère public a estimé que les trois infractions reprochées au prévenu étaient caractérisées. Il a demandé au tribunal de le maintenir dans les liens de la prévention et de le déclarer coupable des faits qui lui étaient reprochés. En répression, le procureur a requis une peine de 36 mois d’emprisonnement ferme, assortie d'une amende ferme d'un million de FCFA. La défense a, pour sa part, contesté la caractérisation des infractions et sollicité la clémence du tribunal. « Camarade président, mon client, Nikièma Lebinoua, a formellement reconnu certains faits. Je voudrais que vous teniez compte de sa personnalité. Il n'est pas logique avec lui-même, parce qu'il a déclaré devant votre barre qu'il est contre le mode politique, tandis qu'il accepte une nomination à un poste relevant de ce dernier », a plaidé son avocat. Pour la défense, les infractions n'étaient pas constituées. L'avocat a donc demandé au tribunal de prononcer une peine d'amende ou, à défaut, une peine d’emprisonnement assortie du sursis. Invité à prononcer ses derniers mots, Nikièma Lebinoua a sollicité la clémence des juges. « Je demande la clémence du tribunal. Dès que j'aurai la liberté, je travaillerai pour la bonne marche du RPP », a-t-il déclaré. Le tribunal prononce 12 mois de prison, dont 2 mois ferme Dans sa décision rendue le mardi 27 octobre 2026, la chambre correctionnelle du Tribunal de grande instance de Ouaga I a relaxé Nikièma Lebinoua du chef d'incitation à l'atteinte à la sûreté de l'État, au motif que l'infraction n'était pas constituée. En revanche, le tribunal l'a déclaré coupable de participation à une entreprise de démoralisation des forces armées et d'outrage envers les dépositaires de l'autorité publique. En répression, il l'a condamné à 12 mois d’emprisonnement, dont 2 mois ferme, ainsi qu'à une amende ferme d'un million de FCFA. La contrainte judiciaire a été fixée à six mois. Aussitôt la décision prononcée, le parquet a interjeté appel. Par Reine Zongo | Zoodomail.com L’article Devant le Tribunal | Démoralisation des forces armées et d'outrage… : Lebinoua condamné à 2 mois ferme, le parquet fait appel est apparu en premier sur NetAfrique.net .",
       "_source": "Net Afrique (BF)",
       "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
@@ -996,7 +1034,7 @@
       "_rating": "F2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "J",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1063,21 +1101,18 @@
       "_desk": "A1"
     },
     {
-      "title": "SIAO 2026 : Le Ghana plaide pour une coopération économique renforcée avec le Burkina Faso",
-      "link": "https://www.minute.bf/siao-2026-le-ghana-plaide-pour-une-cooperation-economique-renforcee-avec-le-burkina-faso/",
-      "pubDate": "2026-10-30T16:01:30.000Z",
-      "description": "À l’ouverture de la 18ᵉ édition du Salon international de l’artisanat de Ouagadougou (SIAO), ce vendredi 30 octobre 2026, le Ghana, pays invité d’honneur, à travers sa ministre du Commerce, de l’Agroalimentaire et de l’Industrie, Elisabeth Ofosu-Adjare, a réaffirmé sa volonté de renforcer ses relations commerciales avec le Burkina Faso. La cheffe de la délégation ghanéenne a plaidé pour un accord bilatéral sur le commerce et l’investissement, fondé sur la complémentarité des économies des deux pays. La capitale burkinabè accueille, depuis la matinée de ce vendredi 30 octobre, la 18ᵉ édition du Salon international de l’artisanat de Ouagadougou (SIAO). Présent à cette cérémonie d’ouverture, le Ghana, pays invité d’honneur, a salué le rayonnement de cette manifestation et exprimé sa reconnaissance aux autorités burkinabè pour cette marque de confiance. Porteuse des salutations fraternelles du président ghanéen, John Dramani Mahama, au président du Faso, Ibrahim Traoré, la ministre Elisabeth Ofosu-Adjare a insisté sur les liens historiques, culturels et économiques qui unissent les deux peuples. « Nous sommes un même peuple », a-t-elle déclaré, évoquant les communautés transfrontalières, les langues partagées, les échanges commerciaux et les liens matrimoniaux qui rapprochent les populations du Burkina Faso et du Ghana depuis des générations, selon elle. Pour la représentante ghanéenne, l’artisanat africain ne doit plus être considéré comme une activité essentiellement traditionnelle. Il doit constituer un véritable levier de développement économique, de création d’emplois et d’affirmation de l’identité culturelle du continent. À cet effet, elle a rappelé que l’initiative Artisanat 84, lancée sous le leadership du président Thomas Sankara, avait permis de réunir des artisans venus des différentes provinces du Burkina Faso. Cette dynamique a ensuite évolué pour donner naissance, en 1988, à la Foire internationale de l’artisanat de Ouagadougou. « Près de quatre décennies plus tard, le SIAO poursuit cette ambition avec des objectifs importants : plus de 6 000 exposants provenant d’une trentaine de pays et près de 800 000 visiteurs attendus », a fait savoir Elisabeth Ofosu-Adjare. Le SIAO 2026 s'est ouvert ce matin À l’échelle mondiale, le marché de l’artisanat représentait environ 740 milliards de dollars en 2024 et pourrait atteindre 1 000 milliards de dollars d’ici à 2030. Pour la ministre ghanéenne chargée de l’Industrie, ces perspectives illustrent les possibilités économiques offertes par un secteur qui demeure encore insuffisamment structuré dans plusieurs pays africains. Elle a ainsi appelé à une meilleure articulation entre les entreprises, les institutions de recherche, les établissements financiers et les autorités de régulation, afin de faciliter la transformation des créations artisanales en produits compétitifs sur les marchés internationaux. Au-delà de la promotion de l’artisanat, Accra entend consolider les échanges commerciaux avec Ouagadougou. La représentante ghanéenne a souligné la complémentarité des deux économies, estimant que celle-ci constitue un atout pour développer des partenariats durables. Le Ghana approvisionne notamment le Burkina Faso en produits plastiques, articles ménagers, fer, acier, engrais, ciment, produits pharmaceutiques, papier et emballages, ainsi qu’en intrants destinés à l’industrie minière. En retour, le Burkina Faso exporte vers le marché ghanéen du bétail, des oignons, de la tomate, du sésame, du beurre de karité, des mangues et d’autres produits agricoles. Dans cette perspective, le Ghana s’est déclaré disposé à conclure un accord bilatéral sur le commerce et l’investissement avec le Burkina Faso, dans le respect des engagements des deux pays au titre de la Zone de libre-échange continentale africaine (ZLECAf). Selon Elisabeth Ofosu-Adjare, cet accord pourrait notamment favoriser l’harmonisation des normes sanitaires et phytosanitaires, la reconnaissance mutuelle des certificats et une meilleure coordination de la gestion des frontières. L’objectif est de fluidifier la circulation des marchandises entre les deux pays sur le corridor Tema-Ouagadougou. La coopération envisagée concerne également les industries créatives. Le Ghana souhaite encourager les partenariats entre artisans, écoles de design et institutions de recherche, faciliter les échanges de compétences et promouvoir conjointement les produits issus des savoir-faire des deux pays. La transformation locale des matières premières, notamment dans les filières du karité, du cuir et de la poterie, figure aussi parmi les pistes de coopération évoquées. Des partenariats dans les chaînes de valeur de la tomate et de la volaille sont également envisagés. Lire aussi : Burkina : C’est parti pour le SIAO 2026 ! Toujours selon Elisabeth Ofosu-Adjare, le Ghana entend, à travers sa participation au SIAO 2026, valoriser la diversité et la qualité de son patrimoine artisanal. Sa délégation, composée de responsables gouvernementaux, d’artisans et d’entrepreneurs issus de ses seize régions, présente notamment des étoffes kente, des créations inspirées des symboles Adinkra, des smocks du Nord, ainsi que des produits artisanaux de Bolgatanga et des créations de mode contemporaines. Ce faisant, elle a invité les visiteurs à découvrir ces produits et à nouer des relations d’affaires avec les exposants. Elle a également annoncé la Journée du Ghana, prévue le mardi 3 novembre 2026, qui sera consacrée à la promotion de la culture et du savoir-faire de son pays. S’adressant aux artisans présents à Ouagadougou, elle les a encouragés à valoriser leurs créations, à défendre leur savoir-faire et à fixer leurs prix avec assurance. Selon elle, l’authenticité, la durabilité et la profondeur culturelle sont désormais des critères recherchés par les consommateurs internationaux. Pour terminer, la représentante du Ghana a salué l’engagement des autorités burkinabè, du comité national d’organisation et des volontaires mobilisés pour la tenue du SIAO. Elle a souhaité une édition fructueuse aux exposants et réaffirmé son attachement à l’amitié entre les deux pays. En somme, le SIAO 2026 constitue une occasion de rapprocher les peuples, de stimuler les échanges et de faire du savoir-faire local un moteur de développement économique. Jean-François SOMÉ Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "SIAO 2026 : Les ministres de l’AES et du Ghana tracent une nouvelle feuille de route pour la promotion de l’artisanat",
+      "link": "https://faso7.com/2026/10/30/siao-2026-les-ministres-de-laes-et-du-ghana-tracent-une-nouvelle-feuille-de-route-pour-la-promotion-de-lartisanat/",
+      "pubDate": "2026-10-30T17:40:32.000Z",
+      "description": "La 18e édition du Salon international de l’artisanat de Ouagadougou (SIAO) se tient du 30 octobre au 8 novembre 2026 sous le thème « Artisanat africain et industrialisation : quelle synergie pour une meilleure organisation et valorisation des produits locaux et du patrimoine culturel ? ». En marge de l’événement, les ministres en charge de l’artisanat des pays membres de l’Alliance des États du Sahel (AES) Burkina Faso, Mali et Niger et du Ghana se sont réunis, ce 30 octobre 2026 pour définir les priorités stratégiques de la sous-région pour les deux années à venir. Au cœur des discussions figurent la transformation structurelle des économies locales, la valorisation des ressources endogènes et la nécessité de rapprocher l’artisanat des exigences du marché international. Les ministres ont ainsi examiné plusieurs axes de travail, notamment la normalisation, l’harmonisation, la formation et la coopération entre les autorités des différents pays en matière de production artisanale. Selon Mamou Daffé, ministre malien chargé de l’Artisanat, cette rencontre vise à promouvoir l’artisanat africain et à renforcer la collaboration ainsi que l’harmonisation entre les pays. Elle doit également stimuler la production artisanale, développer de meilleurs outils de promotion et valoriser les industries culturelles et la souveraineté du continent. Le ministre estime que cette étape permettra de définir un plan d’action pour les deux années à venir autour de priorités clés, dont la normalisation, l’harmonisation et le lien entre artisanat et industries culturelles. « Nous avons jugé très honorifique d’accueillir cet événement, puisque vous savez que nos pays ont des héritages communs, des ancêtres en commun, des réflexions en commun, et que nos artisans travaillent ensemble depuis fort longtemps. Aujourd’hui, nous nous reconnectons avec nos réalités profondes, nos traditions », a-t-il déclaré. Les différentes parties se sont engagées à poursuivre le travail collectif au cours des prochains jours afin de doter le continent d’un meilleur outil de promotion de l’artisanat à partir des terres de l’AES. À noter que cette édition met en lumière la nécessité d’une synergie d’action renforcée entre les pays africains. En consolidant les acquis des éditions précédentes, le SIAO ambitionne d’offrir de nouveaux débouchés commerciaux et de stimuler l’inventivité d’une nouvelle génération d’artisans fiers de leur patrimoine. Lazard KOLA Faso7 L’article SIAO 2026 : Les ministres de l’AES et du Ghana tracent une nouvelle feuille de route pour la promotion de l’artisanat est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
+        "diplomatic"
       ],
       "_majors": [],
       "_bf": true,
@@ -1091,40 +1126,9 @@
       "_rating": "F2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "A taƙaice: Prix Dan Gourmou, Gobara a Birnin ƙonni, ƙollo ƙafa…labaran wannan mako",
-      "link": "https://www.studiokalangou.org/142976-dan-gourmou-a-ta%c6%99aice-aladu-gobara-a-birnin-%c6%99onni-%c6%99ollo-%c6%99afa-labaran-wannan-mako",
-      "pubDate": "2026-10-30T15:30:43.000Z",
-      "description": "Litinin 26 ga Oktoba, 2026 Yankin Agadez na shirin samar da tsarin tsara amfani da filaye Yankin Agadez na shirye-shiryen samar da tsarin tsara amfani da filaye na farko. A wannan ɓangare, tawagogi uku sun zagaya sassa daban-daban na yankin, tun daga ranar 12 ga watan Oktoba har zuwa ƙarshen makon da ya wuce. Adamou Hamidou Garba, daraktan tsara yankuna da ci gaban ƙananan hukumomi na reshen Arlit, ya bada ƙarin bayani kan wannan shiri. Muhimmancin kiyaye bayanai da kayayyakin sauti da fotuna A daidai lokacin da ake shirin bikin ranar duniya ta kiyaye kayayyakin sauti da fotuna, a ranar 27 ga watan Oktoba, an mayar da hankali kan ƙalubalen adana irin waɗannan kayayyaki a tsarin zamanin dijital. Bayanan sauti da fotuna da ake wallafawa a shafukan sada zumunta na haifar da tambayoyi dangane da yadda ake amfani da su da kuma hanyoyin adana su. Ousmane Mamoudou, ɗan jarida ƙwararre a fannin aikin jaridancin intanet, ya bada ƙarin haske kan wannan batu. Talata 27 ga Oktoba, 2026 Sharuɗɗan zaɓen wadanda zasu lashe kyautar gasar Prix Dan Gourmou An fara gasannin kide kide da wake wake na Prix Dan Gourmou a ƙarshen makon da ya gabata, kuma za su ci gaba har zuwa ranar 29 ga watan Oktoba. Taken gasar ta bana shi ne &laquo; L'artiste musicien au c&oelig;ur de la Refondation du Niger &raquo;, wato rawar da mawaƙi ke takawa a cikin aikin sake gina Nijar. Daladi Adamou, daga ma'aikatar al'adu da fasaha, ya bayyana cewa ana amfani da sharuɗɗa da dama wajen zaɓen waɗanda za su lashe gasar. Yayi ƙarin bayani kan waɗannan sharuɗɗa. Baje kolin kayayyakin Albasa a Niamey An gudanar da bikin ranar albasa ta kasa karo na shida daga ranar 25 zuwa 27 ga watan Oktoba a birnin Niamey. Bikin na bana ya mayar da hankali kan shigar matasa cikin ayyukan sarrafa kayayyakin noma zuwa abinci da kuma kasuwanci ta yanar gizo. A wannan lokaci, an shirya baje kolin kayayyaki a zauren Stade du 29 Juillet, inda aka nuna kayayyaki daban-daban da aka sarrafa daga albasa. Wasu mata masu baje kolin kayayyakin sun yi ƙarin bayani. Laraba 28 ga Oktoba, 2026 Gobara ta yi barna a kasuwar Birnin Konni A daren Talata zuwa Laraba, wata gobara ta lalata wani ɓangare na kasuwar Birnin Konni, da ke cikin yankin Tahoua. A cewar shugaban 'yan kasuwa na birnin, duk da cewa ba a samu asarar rayukan mutane ba, amma an yi asarar dukiyoyi masu yawa. Alhaji Ado Issa yayi ƙarin bayani kan wannan gobara da irin ɓarnar da ta yi. Alhamis 29 ga Oktoba, 2026 Jami'ar Abdou Moumouni ta shirya ayyukan wayar da kai kan lafiyar Ƙwaƙwalwa Jami'ar Abdou Moumouni ta Niamey ta shirya wasu ayyuka da safiyar Alhamis, a cikin tsarin bikin ranar duniya ta lafiyar Ƙwaƙwalwa, wadda ake gudanarwa a kowace ranar 10 ga watan Oktoba. Manufar ayyukan ita ce wayar da kan al'umma da kuma inganta hanyoyin kula da mutanen da ke fama da matsalolin lafiyar ƙwaƙwalwa. Dokta Jafar Hamadou, ƙwararre a fannin ilimin halayyar ɗan Adam kuma malami a jami'ar Abdou Moumouni, ya yi ƙarin bayani. Juma'a 30 ga Oktoba, 2026 Nijar na halarta wasannin Olympics na Matasa a Dakar Daga ranar 31 ga Oktoba zuwa 13 ga Nuwamba, birnin Dakar zai karɓi bakuncin Wasannin Olympics na Matasa. Wannan ne karo na farko da za a gudanar da irin wannan taron Olympics a nahiyar Afirka. Kimanin matasa 'yan wasa 2,700 daga ƙasashe fiye da 200 za su halarci gasar. Nijar ma za ta samu wakilci, inda 'yan wasa shida za su fafata a fannonin wasa biyar. Salamatou Kadri ta kawo ƙarin bayani. A gefe guda, Mena U15 ta kammala halartar gasar Coupe du Monde et Festival U15 a Azerba&iuml;djan da nasarar ci 3 da 2 a kan Afirka ta Kudu. Nijar ta kammala gasar a matsayi na 43 cikin ƙasashe 189 da suka halarta. Nijar da Mali Baƙi na Musamman a SIAO 2026 An buɗe bikin baje kolin sana'o'in hannu na ƙasa da ƙasa na Ouagadougou, SIAO, karo na 18, a ranar 30 ga Oktoba. Za a ci gaba da gudanar da shi har zuwa ranar 8 ga Nuwamba 2026 a babban birnin Burkina Faso. Taken bikin shi ne: &laquo; Artisanat africain et industrialisation : quelle synergie pour une meilleure organisation et valorisation des produits locaux et du patrimoine culturel ? wato aikin hannun Afrika da zamanintar kmafani : wane hada karfi domin wani kyautatuwar shiryawa da darajata kayayyakin gida da arzikin al'adu &raquo; Nijar da Mali ne baƙi na musamman na wannan karo, yayin da Ghana ke matsayin ƙasar dake haskakawa. Ƙasashe 30 ne ke halarta, tare da rumfunan baje koli 700, kuma ana sa ran kimanin mutane dubu 500 za su ziyarci bikin cikin kwanaki goma. An Kammala Prix Dan Gourmou Karo na 13 a Tahoua Bayan kwanaki da dama na wasannin kiɗa da suka nuna bambancin al'adun kiɗan ƙasa, an kammala Prix Dan Gourmou karo na 13 a Tahoua da yammacin Alhamis, bayan sanar da sakamakon alƙalan gasar. A rukunin mawaƙi ɗaya, yankin Tahoua ne ya lashe kyauta ta farko. Niamey kuma ta samu kyauta ta farko a rukunin ƙungiyar mawaƙa da kuma rukunin orchestra. Masu shirya gasar da mahalarta sun bayyana ra'ayoyinsu game da sakamakon wannan karo. Za a ji bayanansu da Ibrahim Badage ya tattara.",
-      "_source": "Studio Kalangou (Niger)",
-      "_sourceId": "rss_kalangou",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": null,
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
       "_desk": "A1"
     }
   ],
@@ -1133,7 +1137,7 @@
       "title": "IRGC Aerospace Force seizes second US MQM-170 reconnaissance drone over Qeshm Island",
       "link": "https://presstv.co.uk/Detail/2026/10/30/779565/irgc-aerospace-force-seizes-second-us-mqm-170-reconnaissance-drone-over-qeshm-island",
       "source": "Press TV (Iran)",
-      "date": "2026-10-30T22:19:14.837Z",
+      "date": "2026-10-31T05:40:19.094Z",
       "rating": "A2",
       "evidence": "Corrobore",
       "level": "high",
@@ -1142,6 +1146,70 @@
         {
           "type": "diplo_majeur",
           "keyword": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "title": "Sommet Russie–Afrique à Moscou : Concertation fraternelle des pays de l’AES autour du Général Assimi Goïta",
+      "link": "https://netafrique.net/sommet-russie-afrique-a-moscou-concertation-fraternelle-des-pays-de-laes-autour-du-general-assimi-goita/",
+      "source": "Net Afrique (BF)",
+      "date": "2026-10-31T03:22:14.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": true,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Hundreds evacuated from Melania-brokered ceasefire town of Oleshky",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/10/31/hundreds-evacuated-from-melania-brokered-ceasefire-town-of-oleshky?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-10-31T02:44:38.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "US conducting nightly missions to enforce Hormuz blockade, straining aircraft, crew - report",
+      "link": "https://www.jpost.com/middle-east/article-913368",
+      "source": "Jerusalem Post",
+      "date": "2026-10-31T02:05:20.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "How has the ceasefire in Russian-occupied Oleshky been unfolding?",
+      "link": "https://www.bbc.co.uk/news/videos/cmp3gp2vg078o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "date": "2026-10-30T23:19:17.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
         }
       ]
     },
@@ -1242,22 +1310,6 @@
       ]
     },
     {
-      "title": "Hundreds evacuated from Russian-occupied Oleshky during rare Ukraine ceasefire",
-      "link": "https://www.myjoyonline.com/hundreds-evacuated-from-russian-occupied-oleshky-during-rare-ukraine-ceasefire/",
-      "source": "MyJoyOnline (Ghana)",
-      "date": "2026-10-30T18:57:28.000Z",
-      "rating": "F1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "Las grandes ciudades y los comercios se blindan ante posibles disturbios por las movilizaciones espontáneas de Blocus",
       "link": "https://elpais.com/espana/2026-10-30/las-grandes-ciudades-y-los-comercios-se-blindan-ante-posibles-disturbios-por-las-movilizaciones-espontaneas-de-blocus.html",
       "source": "El País (Espagne, ES)",
@@ -1338,22 +1390,6 @@
       ]
     },
     {
-      "title": "Russia observes rare Ukraine ceasefire to allow evacuations",
-      "link": "https://www.ft.com/content/a6e29400-95bb-453e-8cc6-55c54d857024",
-      "source": "Financial Times World",
-      "date": "2026-10-30T16:13:29.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
       "title": "«On nous maintient dans une sorte d’espérance» : les familles de victimes de la catastrophe ferroviaire en Espagne entre colère et désarroi",
       "link": "https://www.liberation.fr/international/europe/on-nous-maintient-dans-une-sorte-desperance-les-familles-de-victimes-de-la-catastrophe-ferroviaire-en-espagne-entre-colere-et-desarroi-20261030_IHJOZAQ45ZDKZCSU7YGP6IUOVU/",
       "source": "Libération International",
@@ -1390,7 +1426,7 @@
       "link": "https://www.bbc.co.uk/news/articles/c6zxj2e5qlxxo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
       "date": "2026-10-30T15:03:39.000Z",
-      "rating": "B1",
+      "rating": "B2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1400,80 +1436,48 @@
           "keyword": "disaster"
         }
       ]
-    },
-    {
-      "title": "Redada contra ‘Blocus’: detenido el presunto fundador en España y siete jóvenes más",
-      "link": "https://elpais.com/espana/comunidad-valenciana/2026-10-30/detenido-un-segundo-miembro-de-blocus-valencia-por-instigar-a-fabricar-y-arrojar-cocteles-molotov.html",
-      "source": "El País (Espagne, ES)",
-      "date": "2026-10-30T14:04:48.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blocus"
-        }
-      ]
-    },
-    {
-      "title": "Russie-Afrique : commerce, énergie et sécurité au cœur de la déclaration finale du sommet",
-      "link": "https://telquel.ma/instant-t/2026/10/30/russie-afrique-commerce-energie-et-securite-au-coeur-de-la-declaration-finale-du-sommet_2015759/",
-      "source": "TelQuel (Maroc)",
-      "date": "2026-10-30T13:00:56.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      241
-    ],
-    [
-      "occident_us",
-      119
+      238
     ],
     [
       "occident_fr",
-      106
+      130
+    ],
+    [
+      "occident_us",
+      113
     ],
     [
       "golfe_mo",
-      101
+      97
     ],
     [
       "autre",
-      71
-    ],
-    [
-      "russie",
-      46
-    ],
-    [
-      "sahel",
-      40
-    ],
-    [
-      "turquie",
-      36
+      92
     ],
     [
       "chine",
-      20
+      37
+    ],
+    [
+      "sahel",
+      33
+    ],
+    [
+      "turquie",
+      33
     ],
     [
       "bf_local",
-      20
+      21
+    ],
+    [
+      "russie",
+      6
     ]
   ],
   "desks": [
@@ -1481,8 +1485,17 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 116,
+      "count": 121,
       "top": [
+        {
+          "title": "Sommet Russie–Afrique à Moscou : Concertation fraternelle des pays de l’AES autour du Général Assimi Goïta",
+          "link": "https://netafrique.net/sommet-russie-afrique-a-moscou-concertation-fraternelle-des-pays-de-laes-autour-du-general-assimi-goita/",
+          "source": "Net Afrique (BF)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F1"
+        },
         {
           "title": "Boxe : Sou Toké « Le Bombardier » livrera son dernier combat ce samedi au Palais des sports de Ouaga 2000",
           "link": "https://www.minute.bf/boxe-sou-toke-le-bombardier-livrera-son-dernier-combat-ce-samedi-au-palais-des-sports-de-ouaga-2000/",
@@ -1511,22 +1524,13 @@
           "rating": "F2"
         },
         {
-          "title": "A l’épreuve du terrain, l’armée burkinabè a développé des « modes de combat uniques au monde», PM",
-          "link": "https://netafrique.net/a-lepreuve-du-terrain-larmee-burkinabe-a-developpe-des-modes-de-combat-uniques-au-monde-pm/",
+          "title": "Devant le Tribunal | Démoralisation des forces armées et d’outrage… : Lebinoua condamné à 2 mois ferme, le parquet fait appel",
+          "link": "https://netafrique.net/devant-le-tribunal-demoralisation-des-forces-armees-et-doutrage-lebinoua-condamne-a-2-mois-ferme-le-parquet-fait-appel/",
           "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "J",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Burkina Faso : antiterrorisme ou répression, pourquoi Ibrahim Traoré a rétabli la peine de mort",
-          "link": "https://www.jeuneafrique.com/1857569/politique/burkina-faso-antiterrorisme-ou-repression-pourquoi-ibrahim-traore-a-retabli-la-peine-de-mort/",
-          "source": "Jeune Afrique",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B1"
         }
       ]
     },
@@ -1534,7 +1538,7 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 61,
+      "count": 67,
       "top": [
         {
           "title": "InTouch décroche un contrat de dix ans en Gambie pour sécuriser les recettes de l’État",
@@ -1546,38 +1550,38 @@
           "rating": "F2"
         },
         {
-          "title": "FG assures ECOWAS of peaceful 2027 elections",
-          "link": "https://www.vanguardngr.com/2026/10/fg-assures-ecowas-of-peaceful-2027-elections/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Gunmen attack ADC guber candidate’s convoy in Sokoto, candidate escapes",
           "link": "https://www.vanguardngr.com/2026/10/gunmen-attack-adc-guber-candidates-convoy-in-sokoto-candidate-escapes/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
-          "title": "Fake soldier arrested for attacking employer, stealing car",
-          "link": "https://www.vanguardngr.com/2026/10/fake-soldier-arrested-for-attacking-employer-stealing-car/",
+          "title": "Can Tinubu’s education reforms rescue a generation? – Inside Alausa’s ambitious agenda",
+          "link": "https://www.vanguardngr.com/2026/10/can-tinubus-education-reforms-rescue-a-generation-inside-alausas-ambitious-agenda/",
           "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Süper Lig: Osimhen scores again as Galatasaray thrash Konyaspor",
+          "link": "https://www.premiumtimesng.com/sports/football/921671-super-lig-osimhen-scores-again-as-galatasaray-thrash-konyaspor.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": null,
           "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "₦70,000 transport allowance: Federal pensioners decry exclusion, unpaid ₦25,000 palliative",
-          "link": "https://www.vanguardngr.com/2026/10/%e2%82%a670000-transport-allowance-federal-pensioners-decry-exclusion-unpaid-%e2%82%a625000-palliative/",
+          "title": "Orlu Senatorial Seat: War in Imo as Okorocha battles Uzodimma",
+          "link": "https://www.vanguardngr.com/2026/10/orlu-senatorial-seat-war-in-imo-as-okorocha-battles-uzodimma/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "H",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1587,7 +1591,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 18,
+      "count": 16,
       "top": [
         {
           "title": "Premier sommet africain de la sécurité sociale : la CANAM prend part aux échanges de haut niveau à Addis-Abeba",
@@ -1626,13 +1630,13 @@
           "rating": "F2"
         },
         {
-          "title": "New US Sanctions Target Rwanda’s Abusive Role in Eastern Congo",
-          "link": "https://www.hrw.org/news/2026/10/30/new-us-sanctions-target-rwandas-abusive-role-in-eastern-congo",
-          "source": "Human Rights Watch",
-          "zone": "4. Grands Lacs",
-          "theme": "D",
+          "title": "Carburants au Cameroun : comment la Sonara a fait affaire avec Aliko Dangote",
+          "link": "https://www.jeuneafrique.com/1857756/economie-entreprises/carburants-au-cameroun-comment-la-sonara-a-fait-affaire-avec-aliko-dangote/",
+          "source": "Jeune Afrique",
+          "zone": "3. Afrique centrale",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "B2"
         }
       ]
     },
@@ -1640,8 +1644,17 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 16,
+      "count": 21,
       "top": [
+        {
+          "title": "CS-ONU : Omar Hilale remet l'Algérie au centre du dossier du Sahara",
+          "link": "https://fr.hespress.com/494585-cs-onu-omar-hilale-remet-lalgerie-au-centre-du-dossier-du-sahara.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "PLF 2027 : vers un nouvel encadrement du télétravail et des emplois émergents",
           "link": "https://fr.hespress.com/494464-plf-2027-vers-un-nouvel-encadrement-du-teletravail-et-des-emplois-emergents.html",
@@ -1661,31 +1674,22 @@
           "rating": "F2"
         },
         {
-          "title": "Théâtre tunisien | La 4e édition des « Saisons de la Création » célèbre Mohamed Driss et Taoufik Jebali",
-          "link": "https://kapitalis.com/tunisie/2026/10/30/theatre-tunisien-la-4e-edition-des-saisons-de-la-creation-celebre-mohamed-driss-et-taoufik-jebali/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Fès : Operation Smile Morocco lance une mission chirurgicale gratuite",
+          "link": "https://fr.hespress.com/494463-fes-operation-smile-morocco-lance-une-mission-chirurgicale-gratuite.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "A2"
         },
         {
-          "title": "Le Maroc satisfait de la non reconduction du mandat de la Minurso et demeure fermement attaché au respect de son intégrité territoriale",
-          "link": "https://fr.hespress.com/494572-le-maroc-satisfait-de-la-non-reconduction-du-mandat-de-la-minurso-et-demeure-fermement-attache-au-respect-de-son-integrite-territoriale.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "“Laissez-les rentrer au Maroc” : Le discours complet d'Omar Hilale au Conseil de Sécurité",
+          "link": "https://telquel.ma/instant-t/2026/10/30/%e2%9c%85laissez-les-rentrer-au-maroc-le-discours-complet-domar-hilale-au-conseil-de-securite_2016054/",
+          "source": "TelQuel (Maroc)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Grand Prix de la Presse : le délai de dépôt des candidatures prolongé jusqu’au 10 novembre",
-          "link": "https://fr.hespress.com/494537-grand-prix-de-la-presse-le-delai-de-depot-des-candidatures-prolonge-jusquau-10-novembre.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "A2"
+          "theme": null,
+          "relevance": ".",
+          "rating": "A1"
         }
       ]
     },
@@ -1693,7 +1697,7 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 90,
+      "count": 78,
       "top": [
         {
           "title": "The Internet Might Need to Be Rebuilt From Scratch",
@@ -1702,15 +1706,6 @@
           "zone": "8. Moyen-Orient",
           "theme": "T",
           "relevance": "L",
-          "rating": "F2"
-        },
-        {
-          "title": "Yémen : les révélations sur une coopération clandestine entre les Émirats et les Houthis",
-          "link": "https://www.tsa-algerie.com/yemen-les-revelations-sur-une-cooperation-clandestine-entre-les-emirats-et-les-houthis/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
           "rating": "F2"
         },
         {
@@ -1732,13 +1727,22 @@
           "rating": "C2"
         },
         {
-          "title": "Yemeni army says Houthis targeted Aden airport, presidential palace with ballistic missiles",
-          "link": "https://www.aa.com.tr/en/middle-east/yemeni-army-says-houthis-targeted-aden-airport-presidential-palace-with-ballistic-missiles/4106932",
-          "source": "Anadolu Agency (Turquie)",
+          "title": "Qatari delegation arrives in Tehran for peace talks",
+          "link": "https://www.dawn.com/news/2041098/qatari-delegation-arrives-in-tehran-for-peace-talks",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
-          "theme": "P",
+          "theme": "M",
           "relevance": "A",
-          "rating": "A1"
+          "rating": "F2"
+        },
+        {
+          "title": "Pénurie de navires et tarifs record : comment la guerre au Moyen-Orient fait bondir les prix du transport de pétrole",
+          "link": "https://www.lemonde.fr/economie/article/2026/10/31/penurie-de-navires-et-tarifs-record-comment-la-guerre-au-moyen-orient-fait-bondir-les-prix-du-transport-de-petrole_6803378_3234.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "B2"
         }
       ]
     },
@@ -1746,7 +1750,7 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 187,
+      "count": 173,
       "top": [
         {
           "title": "SOMMET RUSSIE-AFRIQUE : Le Président de la Transition échange avec la délégation du secteur privé malien",
@@ -1756,6 +1760,15 @@
           "theme": "P",
           "relevance": "L",
           "rating": "F1"
+        },
+        {
+          "title": "Rencontre bilatérale au Kremlin : le Président Assimi GOÏTA et Vladimir POUTINE ouvrent une nouvelle étape du partenariat Mali-Russie",
+          "link": "https://malijet.com/a_la_une_du_mali/312607-rencontre-bilaterale-au-kremlin-le-president-assimi-goita.html",
+          "source": "Malijet",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "F2"
         },
         {
           "title": "« Comme un jour de fête » : les habitants de Kherson savourent un cessez-le-feu inédit entre l’Ukraine et la Russie",
@@ -1768,15 +1781,6 @@
         },
         {
           "title": "Hundreds evacuated from Russian-occupied Oleshky during rare Ukraine ceasefire",
-          "link": "https://www.myjoyonline.com/hundreds-evacuated-from-russian-occupied-oleshky-during-rare-ukraine-ceasefire/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "F1"
-        },
-        {
-          "title": "Hundreds evacuated from Russian-occupied Oleshky during rare Ukraine ceasefire",
           "link": "https://www.bbc.co.uk/news/articles/c60me298k1yeo?at_medium=RSS&at_campaign=rss",
           "source": "BBC World",
           "zone": "10. Europe orient. & Balkans",
@@ -1785,13 +1789,13 @@
           "rating": "B1"
         },
         {
-          "title": "Sommet Russie-Afrique : plus de 3 500 participants venus de 74 pays",
-          "link": "https://malijet.com/a_la_une_du_mali/312598-sommet-russie-afrique-plus-de-3-500-participants-venus-de.html",
-          "source": "Malijet",
+          "title": "How has the ceasefire in Russian-occupied Oleshky been unfolding?",
+          "link": "https://www.bbc.co.uk/news/videos/cmp3gp2vg078o?at_medium=RSS&at_campaign=rss",
+          "source": "BBC World",
           "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F1"
+          "theme": null,
+          "relevance": ".",
+          "rating": "B1"
         }
       ]
     }
@@ -1809,42 +1813,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-10-30T22:18:51.173Z",
+      "at": "2026-10-31T05:39:52.701Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-10-30T22:18:51.178Z",
+      "at": "2026-10-31T05:39:52.706Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-10-30T22:19:19.631Z",
+      "at": "2026-10-31T05:40:25.210Z",
       "agent": "Agent Collecte RSS",
-      "message": "102/170 flux OK, 1863 articles"
+      "message": "99/170 flux OK, 1810 articles"
     },
     {
-      "at": "2026-10-30T22:19:21.998Z",
+      "at": "2026-10-31T05:40:27.660Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-10-30T22:19:22.281Z",
+      "at": "2026-10-31T05:40:27.950Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-10-30T22:19:22.285Z",
+      "at": "2026-10-31T05:40:27.955Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 19 alertes"
     },
     {
-      "at": "2026-10-30T22:19:22.286Z",
+      "at": "2026-10-31T05:40:27.955Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-10-30T22:19:22.286Z",
+      "at": "2026-10-31T05:40:27.955Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
