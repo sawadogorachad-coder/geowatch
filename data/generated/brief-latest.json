@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-11-19T02:34:12.562Z",
+  "generatedAt": "2026-11-19T11:39:06.736Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 102,
-    "failed": 68,
-    "articles": 1878,
+    "ok": 99,
+    "failed": 71,
+    "articles": 1862,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -40,7 +35,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -51,11 +46,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -93,11 +83,6 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -111,11 +96,6 @@
         "id": "rss_myjoyonline",
         "name": "MyJoyOnline (Ghana)",
         "count": 30
-      },
-      {
-        "id": "rss_citi",
-        "name": "Citi Newsroom (Ghana)",
-        "count": 0
       },
       {
         "id": "rss_beninwebtv",
@@ -225,11 +205,6 @@
       {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -468,6 +443,11 @@
         "count": 30
       },
       {
+        "id": "rss_thehindu",
+        "name": "The Hindu (Inde)",
+        "count": 30
+      },
+      {
         "id": "rss_wire_in",
         "name": "The Wire (Inde)",
         "count": 0
@@ -475,7 +455,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 27
       },
       {
         "id": "rss_nikkei",
@@ -516,9 +496,19 @@
         "id": "rss_hrw",
         "name": "Human Rights Watch",
         "count": 20
+      },
+      {
+        "id": "rss_iaea",
+        "name": "AIEA — Top News (nucléaire)",
+        "count": 15
       }
     ],
     "failedSources": [
+      {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
       {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
@@ -528,6 +518,11 @@
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -580,6 +575,11 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_abidjan",
         "name": "Abidjan.net",
         "error": "HTTP 404"
@@ -613,6 +613,11 @@
         "id": "rss_ghanaweb",
         "name": "GhanaWeb",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_citi",
+        "name": "Citi Newsroom (Ghana)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_lanation_bj",
@@ -672,7 +677,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -692,7 +697,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -708,6 +713,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -810,11 +820,6 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_thehindu",
-        "name": "The Hindu (Inde)",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
         "error": "HTTP 402"
@@ -853,36 +858,30 @@
         "id": "rss_worldbank",
         "name": "Banque Mondiale",
         "error": "HTTP 404"
-      },
-      {
-        "id": "rss_iaea",
-        "name": "AIEA — Top News (nucléaire)",
-        "error": "HTTP 403"
       }
     ]
   },
   "stats": {
     "articles": 800,
-    "bfAes": 47,
-    "alerts": 9,
-    "criticalAlerts": 1,
-    "sourcesDistinct": 74
+    "bfAes": 36,
+    "alerts": 18,
+    "criticalAlerts": 7,
+    "sourcesDistinct": 71
   },
   "topDevelopments": [
     {
-      "title": "Rodrigue Guiguemdé, président de Digitales Solidaires : « Votre nom de domaine fait partie du patrimoine de votre entreprise »",
-      "link": "https://lefaso.net/spip.php?article150872",
-      "pubDate": "2026-11-18T23:22:00.000Z",
-      "description": "La première édition du DNS & Brand Lab Ouagadougou, organisée le 29 octobre 2026, a mis en lumière un enjeu encore insuffisamment pris en compte par les entreprises burkinabè : la maîtrise de leur identité numérique. Propriété des noms de domaine, protection des marques, cybersécurité, promotion du « .bf » et souveraineté numérique ont nourri les échanges. Dans cet entretien accordé à Lefaso.net, Rodrigue Guiguemdé, président de Digitales Solidaires, dresse le bilan de cette initiative, revient sur les vulnérabilités des entreprises et présente les perspectives de déploiement du programme au Burkina Faso et dans la sous-région. Lefaso.net : Quel bilan général tirez-vous de cette première édition du DNS & Brand Lab Ouagadougou ? Rodrigue Guiguemdé : Le bilan dépasse nos attentes. Nous sommes partis d'une conviction : beaucoup d'entreprises ne savent pas réellement qui contrôle leur nom de domaine. Le 29 octobre, nous avons constaté que cette préoccupation intéressait de nombreux acteurs. Notre objectif n'était pas simplement d'expliquer le fonctionnement du système des noms de domaine (DNS). Nous voulions faire comprendre qu'un nom de domaine fait partie du patrimoine de l'entreprise, au même titre que sa marque ou sa clientèle. Le perdre peut entraîner une atteinte à sa réputation et, parfois, des pertes financières importantes. Pour Digitales Solidaires, ce Lab constitue la première traduction concrète de notre stratégie 2026-2030 consacrée à la confiance numérique et aux ressources de l'Internet. Nous voulions dépasser la sensibilisation ponctuelle pour proposer des outils et un accompagnement. Il s'agit de faire évoluer les mentalités : ne plus se contenter d'être présent sur Internet, mais apprendre à maîtriser son patrimoine numérique. Sur ce point, nous avons franchi une première étape. Le plus difficile reste à faire : transformer cette prise de conscience en pratiques durables. Combien de personnes ont participé à cette rencontre et quels étaient leurs profils ? Nous avons mobilisé une cinquantaine de participants en ligne, auxquels se sont ajoutées les personnes présentes au siège de l'Alliance burkinabè des domaines Internet (ABDI), qui accueillait la rencontre. Notre objectif initial était de réunir 35 à 40 personnes. La participation réelle pourrait être légèrement supérieure, puisque certaines personnes suivaient les échanges à plusieurs devant un même écran. Dix intervenants, issus de différentes organisations, ont animé les travaux. Le format hybride nous a permis de toucher des participants au-delà de Ouagadougou et de faire intervenir à distance des experts internationaux. Nous avons accueilli des chefs d'entreprise, des prestataires du web, des porteurs de projets, des étudiants, des représentants de l'ABDI et des membres des communautés Internet du Burkina Faso et du Bénin. Cette diversité était recherchée. Le nom de domaine n'est plus seulement une affaire de techniciens. Il concerne également le dirigeant qui protège sa marque, le commercial qui utilise une messagerie professionnelle ou encore le juriste chargé de la propriété intellectuelle. Quelles sont les principales préoccupations exprimées par les participants concernant les noms de domaine et la protection des marques ? Trois préoccupations reviennent régulièrement : qui contrôle réellement l'identité numérique de l'entreprise ? Comment la protéger ? Et que faire lorsqu'un problème survient ? Prenons un exemple fréquent. Une entreprise confie la création de son site Internet à un prestataire. Celui-ci enregistre le nom de domaine à son propre nom. Tant que les relations sont bonnes, personne ne s'en préoccupe. Mais en cas de différend, l'entreprise peut découvrir qu'elle ne maîtrise pas l'adresse de son propre site. Elle risque alors de perdre l'accès à son site, à sa messagerie professionnelle et à une partie de sa visibilité. Une autre difficulté tient à la confusion entre nom commercial, marque déposée et nom de domaine. Ces éléments sont complémentaires, mais ils relèvent de mécanismes de protection différents. Je rappelle souvent aux dirigeants que le coût d'enregistrement d'un nom de domaine est généralement faible au regard des conséquences que peut entraîner sa perte. Sa gestion doit donc relever d'une décision stratégique de l'entreprise et ne pas être considérée comme une simple dépense informatique. Quelle place le domaine national « .bf » peut-il occuper dans le développement de l'économie numérique burkinabè ? Le « .bf » représente notre identité sur Internet. Il constitue également une opportunité économique pour tout un écosystème national : le registre, les bureaux d'enregistrement, les hébergeurs, les développeurs et les entreprises utilisatrices. De nombreux noms intéressants sont encore disponibles. Les entreprises burkinabè ont donc intérêt à s'y positionner. Il faut aussi faire évoluer la perception du « .bf ». Certains pensent encore que cette extension est réservée aux administrations ou aux grandes entreprises. Or, elle peut également être utilisée par les startups, les PME et les associations. Cependant, le patriotisme ne suffira pas à convaincre les utilisateurs. Pour rendre le « .bf » attractif, il faut des procédures simples, des tarifs compétitifs, des services fiables et un bon niveau de sécurité. Le cadre institutionnel existe, avec l'ARCEP comme régulateur et l'ABDI comme gestionnaire du registre. Nous avons notamment suggéré la création d'un « Pack Lab .bf », qui pourrait proposer des conditions préférentielles la première année et un accompagnement à la configuration sécurisée du domaine. Au-delà du « .bf », l'Afrique doit aussi mieux se positionner dans l'industrie mondiale des noms de domaine, notamment dans les opportunités liées aux nouvelles extensions génériques de l'ICANN. Vous avez proposé un exercice pratique appelé « Domain & Brand Check ». Quels risques cet outil permet-il d'identifier ? Nous avons conçu cet outil pour aider les entreprises à détecter des vulnérabilités qui passent souvent inaperçues tant qu'aucun incident ne survient. Le diagnostic repose sur six vérifications essentielles : l'identité du titulaire du nom de domaine, la maîtrise des accès, la date d'expiration et le renouvellement, la protection du compte de gestion, la situation de la marque et la sécurité de la messagerie professionnelle. Ces vérifications peuvent révéler plusieurs faiblesses : un domaine enregistré au nom d'un ancien prestataire, un renouvellement non surveillé, un compte insuffisamment sécurisé ou encore une marque non déposée. Je dois reconnaître que l'atelier pratique a été plus court que prévu, en raison de l'intérêt suscité par les échanges. Nous comptons lui réserver davantage de temps lors des prochaines éditions. Les fiches recueillies sont en cours d'analyse. Il serait donc prématuré d'avancer un bilan chiffré des vulnérabilités identifiées. Notre ambition est de proposer aux PME un diagnostic simple de leur patrimoine numérique, adapté à leurs moyens. Quel niveau de connaissance les entreprises ont-elles des risques de cybersquatting, d'usurpation d'identité et des moyens de protection ? Il existe une différence entre connaître une menace et savoir s'en protéger. La plupart des acteurs ont entendu parler du piratage ou des arnaques en ligne. En revanche, les risques spécifiques liés à l'identité numérique restent moins bien compris. Une personne malveillante peut, par exemple, enregistrer un nom de domaine ressemblant à celui d'une entreprise, parfois avec une simple faute de frappe, pour tromper ses clients. Elle peut aussi créer un faux site ou utiliser une adresse électronique imitant celle d'un dirigeant. Dans ces situations, l'entreprise n'est pas la seule victime. Ses clients et ses partenaires peuvent également subir des préjudices. Pourtant, plusieurs mesures de prévention sont accessibles : activer l'authentification multifacteur, protéger le domaine contre les transferts non autorisés, sécuriser la messagerie et surveiller les noms de domaine susceptibles de créer une confusion. Il faut également connaître les mécanismes de recours. Pour les extensions génériques, il existe notamment la procédure UDRP. Pour le « .bf », un dispositif national de règlement des litiges est prévu, sans exclure les recours judiciaires. L'essentiel est de passer d'une logique de réaction à une culture de prévention. Quels retours avez-vous recueillis auprès des participants à l'issue de cette première édition ? Les nombreuses questions posées constituent déjà un indicateur de l'intérêt suscité par la rencontre. Les participants ont voulu savoir comment obtenir une nouvelle extension Internet, comment rejoindre AFRALO, comment régler un litige concernant un domaine « .bf » ou encore s'il existe des alternatives africaines aux grands fournisseurs internationaux de services DNS. Cette dernière préoccupation m'a particulièrement marqué. Elle montre que la question de la souveraineté numérique commence à intéresser les entrepreneurs eux-mêmes. La FED Numérique a également exprimé le souhait de voir le Lab devenir un rendez-vous régulier. Les participants attendent désormais des outils pratiques, une information fiable et des interlocuteurs capables de les orienter lorsqu'ils rencontrent des difficultés. Nous voulons inscrire cette démarche dans les programmes existants d'accompagnement des entreprises, plutôt que de créer une initiative isolée. Notre réussite devra être appréciée à travers les changements réellement observés dans les entreprises, et pas seulement à partir du nombre de personnes sensibilisées. Quel bilan tirez-vous de la collaboration entre les différents partenaires de cette première édition ? C'est l'un des acquis majeurs de cette rencontre. Nous avons réussi à réunir, dans un même cadre, des acteurs de la gestion des noms de domaine, de la gouvernance de l'Internet, de la société civile et du secteur privé. Chaque partenaire a apporté une expertise particulière. L'ICANN a présenté les enjeux internationaux du système des noms de domaine. AFRALO a mis en lumière la participation des utilisateurs africains à la gouvernance de l'Internet. L'ABDI a partagé son expérience de la gestion du « .bf » et des mécanismes de règlement des litiges. Internet Society Burkina Faso a contribué à la mobilisation de sa communauté, tandis que la FED Numérique a relayé les préoccupations du secteur privé. ECODEV International et l'expertise venue de l'Internet Society Bénin sur l'acceptation universelle ont enrichi les échanges, avec l'appui de Zepintel. Digitales Solidaires a assuré la conception et la coordination du Lab, en veillant à ce que les discussions restent proches des besoins des entreprises. Cette collaboration montre que la gouvernance de l'Internet doit être inclusive. Elle ne doit pas se limiter aux conférences internationales, mais produire des effets concrets pour les entreprises burkinabè. Quelles leçons retenez-vous de cette édition pilote et quelles améliorations envisagez-vous ? La première leçon est que les exemples concrets parlent davantage aux participants que les explications purement techniques. Lorsqu'on explique comment une entreprise peut perdre le contrôle de son nom de domaine, les enjeux deviennent immédiatement compréhensibles. Nous avons également constaté que les besoins diffèrent selon les profils. Une startup qui lance son premier service ne rencontre pas nécessairement les mêmes difficultés qu'une entreprise possédant plusieurs marques et noms de domaine. Il faudra donc adapter les prochaines éditions aux différents publics. Enfin, nous avons compris que la sensibilisation ne suffit pas. Nous devons mesurer les changements intervenus après la formation. Nous souhaitons accorder davantage de place aux exercices pratiques, proposer des diagnostics personnalisés, renforcer la participation des femmes et des jeunes et associer davantage de spécialistes de la propriété intellectuelle et de la cybersécurité. Nous aimerions aussi organiser des activités dans d'autres villes du Burkina Faso. Quelles sont les prochaines étapes du DNS & Brand Lab au Burkina Faso ? Notre priorité est de passer de la sensibilisation à l'accompagnement. Nous travaillons à la préparation d'un kit pédagogique comprenant notamment l'enregistrement de la rencontre, les présentations et des fiches pratiques sur le choix d'un nom de domaine « .bf », la sécurisation des accès et les démarches à entreprendre en cas de litige. Nous réfléchissons également, avec l'ABDI et les bureaux d'enregistrement, à un dispositif permettant d'orienter les participants qui auraient identifié des problèmes concernant leurs noms de domaine. Un suivi devra nous permettre de vérifier, dans les prochains mois, les mesures correctives effectivement mises en œuvre. Pour 2027, nous souhaitons faire du DNS & Brand Lab un rendez-vous annuel, avec des éditions thématiques destinées notamment aux banques, aux administrations, aux médias et aux acteurs du commerce électronique. D'autres pistes sont envisagées avec l'ABDI, comme la création d'un baromètre de santé des domaines « .bf » ou d'un label « Domaine de confiance .bf ». Nous prévoyons également d'intégrer ce module à Digitales Academy et de former des relais, avec un objectif d'au moins 40 % de femmes parmi les formateurs. Enfin, nous souhaitons proposer à nos partenaires un cadre de collaboration durable, reposant sur un comité de pilotage et une charte commune. Les indicateurs de réussite seront concrets : nombre de domaines correctement enregistrés au nom des entreprises, renouvellements sécurisés, messageries mieux protégées et marques effectivement déposées. Vous envisagez également des déclinaisons régionales, notamment le « DNS & Brand Lab Sahel » et le « DNS & Brand Lab OAPI ». Quelles ambitions portent ces projets ? Ces deux projets reposent sur une même conviction : le Burkina Faso et les pays du Sahel ne doivent pas se contenter d'utiliser l'Internet mondial. Ils doivent aussi participer à sa construction et à sa gouvernance. Le « DNS & Brand Lab Sahel » pourrait être organisé à Bamako, puis à Niamey, en associant les gestionnaires des extensions nationales « .bf », « .ml » et « .ne », les régulateurs, les bureaux d'enregistrement, les spécialistes de la propriété intellectuelle, les entreprises, les chercheurs et la société civile. Les échanges pourraient porter sur la sécurité du DNS, la gestion des extensions nationales, le règlement des litiges et la prise en compte des langues africaines sur Internet. Notre souhait serait d'aboutir à une feuille de route commune pour l'espace de l'Alliance des États du Sahel (AES). Le « DNS & Brand Lab OAPI » aurait une portée plus large. Les entreprises africaines développent leurs activités au-delà de leurs frontières, mais elles sont également exposées à des risques concernant leurs marques et leurs noms de domaine. L'Organisation africaine de la propriété intellectuelle (OAPI) permet déjà d'obtenir une protection des marques dans ses 17 États membres. Nous souhaitons rapprocher davantage cette démarche de la réservation et de la protection des noms de domaine. Avec des partenaires comme l'OAPI, l'Organisation mondiale de la propriété intellectuelle (OMPI) et l'ICANN, nous pourrions, par exemple, élaborer un guide commun à destination des entreprises. Il ne s'agit pas de créer de nouvelles institutions, mais de renforcer la coopération entre les structures existantes. Nous comptons également nous appuyer sur des réseaux régionaux, notamment le ROPTIC-UEMOA et Smart Africa, pour explorer les possibilités de mise en œuvre de ces projets. Le Burkina Faso peut jouer un rôle moteur en proposant des solutions utiles et en mobilisant les compétences disponibles. Pour conclure, quel message adressez-vous aux entrepreneurs, aux startups et aux PME burkinabè ? Je voudrais leur rappeler qu'un nom de domaine n'est pas une simple adresse Internet. Il porte l'identité, la réputation et une partie de la valeur de leur entreprise. On peut consacrer plusieurs années à construire une marque et à gagner la confiance de ses clients. Tout cela peut être fragilisé par une négligence dans la gestion d'un nom de domaine. Chaque dirigeant devrait donc se poser quelques questions essentielles : mon domaine est-il enregistré au nom de mon entreprise ? Qui détient les accès ? Ma marque est-elle protégée ? Que se passerait-il si je perdais ce domaine demain ? Nous parlons beaucoup de souveraineté numérique à travers les grandes infrastructures et les stratégies nationales. Mais elle se construit également à travers les décisions quotidiennes de milliers d'entrepreneurs. Pendant longtemps, nos efforts ont porté sur l'accès à Internet et la digitalisation. Ces étapes étaient indispensables, mais elles ne suffisent plus. Le défi n'est plus seulement de connecter et de digitaliser nos entreprises, mais de leur donner les moyens de maîtriser leur identité numérique, de sécuriser leurs actifs et de créer de la valeur. C'est toute l'ambition du DNS & Brand Lab : contribuer à l'émergence d'un Burkina Faso et d'une Afrique qui ne soient pas seulement connectés, mais qui maîtrisent et valorisent leur patrimoine numérique. Entretien réalisé par Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
+      "title": "COP31 : les délégations de l’AES mutualisent leurs expériences",
+      "link": "https://www.sidwaya.info/2026/11/19/cop31-les-delegations-de-laes-mutualisent-leurs-experiences/",
+      "pubDate": "2026-11-19T06:25:23.000Z",
+      "description": "En marge de la COP31, les pays membres de la Confédération des Etats du Sahel (AES) ont tenu, le lundi 16 novembre 2026, à Antalya, en Turquie, une rencontre de partage d’expériences sur la lutte contre le changement climatique. Le Burkina Faso, le Mali et le Niger partagent les mêmes préoccupations climatiques. Présentes à la COP31, les délégations de ces trois pays de la Confédération des Etats du Sahel (AES) ont saisi l’occasion pour échanger sur leurs expériences et renforcer leur coopération dans la lutte contre le changement climatique. « Nous nous trouvons ici à la COP31 pour les négociations sur les changements climatiques et le développement durable. Il était de bon ton que nous puissions nous rencontrer, nous saluer fraternellement, échanger entre nous. Nous avons voulu nous retrouver pour un partage d’expériences. L’objectif est de faire connaissance et de voir ensemble comment faire progresser la construction de notre espace commun. Nous pouvons nous entretenir et ensuite porter les conclusions de nos travaux au plus haut niveau », a expliqué le secrétaire permanent de la Coordination des politiques sectorielles agri-coles et du développement durable (SP/CPSADD) du Burkina Faso, Dr Rémy Palé, président de la rencontre. Deux représentants de chaque pays, issus de l’administration publique et de la société civile, ont pris part à cette concertation. Pour le Burkina Faso, Marcus Zoungrana, du SP/CPSADD, a présenté la stratégie nationale de sécurité climatique. Celle-ci vise à renforcer, à l’horizon 2028, la résilience climatique des populations. Elle repose sur quatre axes à savoir la gouvernance de la sécurité climatique, la gestion durable des ressources naturelles et la justice climatique, la protection des populations contre les crises et catastrophes ainsi que le financement climatique, notamment au profit des communautés. « Avant tout, une crise de l’eau » Au nom de la société civile burkinabè, le directeur du département politique, plaidoyer et communication de WaterAid Burkina, Célestin Pouya, a présenté les interventions de cette ONG dans les domaines de l’eau potable, de l’hygiène et de l’assainissement au Burkina Faso, au Mali et au Niger. « Au niveau de WaterAid, nous travaillons à ce que les communautés soient résilientes au changement climatique, puissent avoir accès à l’eau potable, à l’hygiène et à l’assainissement. Car, la crise climatique est avant tout une crise de l’eau. Quand il y a sécheresse, ce sont les ressources en eau qui disparaissent. Quand il y a également des inondations, ce sont les ressources en eau qui sont polluées », a-t-il indiqué. Il a également présenté un projet commun aux trois pays, axé sur la sécurité de l’eau et le renforcement des capacités des communautés face aux changements climatiques. Il a plaidé pour l’adoption d’une politique communautaire de l’AES en matière d’eau potable, d’hygiène et d’assainissement. Pour le Mali, le conseiller national au conseil des collectivités, Thierno Seydou Diarra, a présenté la stratégie nationale de sécurité climatique. Il a notamment souligné les liens entre paix et changement climatique, tout en insistant sur la nécessité d’une synergie d’actions entre les trois Etats. Vers des politiques communautaires du climat « Dans l’espace AES, si nous nous donnons véritablement la main, nous pouvons ensemble lever des fonds pour toutes nos différentes missions par rapport à la protection de l’environnement », a-t-il affirmé. Il a également appelé au renforcement des capacités des collectivités pour une meilleure prise en compte des enjeux climatiques à l’échelle locale. Il a, par ailleurs, invité la jeunesse à acquérir des connaissances et à profiter de la COP31 pour développer des partenariats. La représentante de la société civile malienne, Rokia Traoré, de Herou Alliance, a partagé l’expérience de sa structure en matière d’économie circulaire et d’agroforesterie. Son organisation ambitionne de planter 10 millions d’arbres d’ici à 2040 et de former 15 000 producteurs à l’agroforesterie. Du côté du Niger, Ramata Abba Kiari, représentante du ministère de l’Environnement, a évoqué la mobilité climatique provoquée par les sécheresses, les inon-dations, la dégradation des terres et l’assèchement des cours d’eau. Face à ce phénomène qui touche particulièrement les femmes, elle a insisté sur le renforcement des capacités des populations, en s’appuyant sur les savoirs endogènes. Le représentant de la société civile nigérienne, Issa Garba, a, pour sa part, présenté les programmes d’irrigation de son pays. Ces initiatives visent notamment à créer des emplois en milieu rural, réduire les migrations, favoriser l’autonomisa- tion des femmes et renforcer la sécurité alimentaire ainsi que la cohésion sociale. Mahamadi SEBOGO Windmad76@gmail.com (Depuis Antalya, Turquie)",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
+      "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
         "humanitarian",
         "political"
       ],
@@ -896,89 +895,26 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "T",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
-      "_desk": "A1"
-    },
-    {
-      "title": "COMMUNIQUÉ DE PRESSE: EQUIP AUTO Côte d’Ivoire 2026 : Le carrefour ouest-africain de la pièce et de la maintenance automobile ouvre grand ses portes aux professionnels burkinabè",
-      "link": "https://leconomistedufaso.com/2026/11/18/communique-de-presse-equip-auto-cote-divoire-2026-le-carrefour-ouest-africain-de-la-piece-et-de-la-maintenance-automobile-ouvre-grand-ses-portes-aux-professionnels-burkinabe/",
-      "pubDate": "2026-11-18T16:06:19.000Z",
-      "description": "Du 26 au 28 novembre 2026, le Parc des Expositions d’Abidjan accueille la première édition régionale d'EQUIP AUTO en Afrique de l'Ouest. Une opportunité stratégique pour les transporteurs, garagistes, distributeurs et gestionnaires de flottes du Burkina Faso d'accéder sans intermédiaire aux fabricants mondiaux et aux technologies de pointe. Ouagadougou / Abidjan, novembre 2026 — Alors que le secteur des transports au Burkina Faso accélère la modernisation de son parc roulant et de ses corridors logistiques, EQUIP AUTO Côte d’Ivoire s’impose comme l’événement professionnel de référence pour relever les défis de l’après-vente, de la durabilité et de la sécurité routière. Porté par la marque cinquantenaire du salon parisien et soutenu dans la sous-région par la délégation Promosalons, le salon réunira pendant trois jours les plus grands équipementiers, industriels de la rechange, fabricants d’outillages de garage et innovateurs de la mobilité. Pour les opérateurs burkinabè, la tenue de cet événement à Abidjan (espace UEMOA/CEDEAO, sans formalités de visa et partageant le Franc CFA) représente un accès de proximité inédit aux chaînes d'approvisionnement directes. Une opportunité d'affaires concrète : Fabricants en direct et rendez-vous B2B qualifiés Face à la prolifération des pièces de rechange non homologuées et à la complexification des pannes électroniques, EQUIP AUTO Côte d'Ivoire offre aux entrepreneurs et techniciens du Burkina Faso : Un accès direct aux industriels et équipementiers internationaux : contourner les intermédiaires pour négocier des contrats d’importation et d'approvisionnement compétitifs. Un service de rendez-vous B2B sur-mesure : un agenda d'affaires planifié en amont du salon pour rencontrer directement les fournisseurs correspondant aux besoins précis de chaque entreprise (pièces détachées, pneumatiques, lubrifiants, maintenance poids lourds, diagnostic). Au cœur de l’événement : Un Espace Démonstration inédit en conditions réelles L'une des grandes attractions de cette édition 2026 est son Espace Démonstration , conçu comme un véritable atelier grandeur nature. Les professionnels y découvriront : Des tests en direct d’outils de diagnostic de dernière génération (mécatronique, lecture de calculateurs, systèmes ADAS). Des démonstrations pratiques de maintenance sur moteurs thermiques modernes, hybrides et véhicules lourds. Les dernières solutions de levage, de carrosserie-peinture et d'outillage rapide présentées par les formateurs et techniciens d'usine. « Le Burkina Faso est un carrefour stratégique pour le fret et le transit de marchandises en Afrique de l'Ouest. Face aux exigences de rentabilité des flottes et à la modernisation des ateliers, EQUIP AUTO Abidjan est le lieu où les professionnels burkinabè peuvent trouver des solutions immédiates, fiables et directement négociées avec les fabricants, sans les contraintes de coût d'un voyage en Europe. » — La Délégation Promosalons (Sénégal & Burkina Faso) Modalités pratiques et gratuité pour les professionnels Pour encourager une forte participation des acteurs économiques du Burkina Faso, l’accès au salon est entièrement gratuit sur pré-enregistrement : Obtention du badge d’accès gratuit : https://equipauto.mybadgeonline.com/Pro-Login Présentation du salon : Cliquez ici Présentation de la zone expérentielle : CCliquez ici Les organisations professionnelles, coopératives de transporteurs et groupements d'entreprises souhaitant coordonner une venue en délégation peuvent contacter directement le bureau de promotion. Contact Presse & Relations Professionnelles (Burkina Faso & Sénégal) : Promosalons Délégation Régionale Contact : Madjiguène NDOYE / Al Ousseynou GUEYE Téléphone / WhatsApp : +221 78 103 25 90 / +221 77 521 16 90 Courriel : mndoye@promosalons.com Site officiel : equipauto.com À propos d'EQUIP AUTO : Créé il y a 50 ans, EQUIP AUTO est l'un des leaders mondiaux des salons professionnels B2B consacrés à l'après-vente automobile, aux équipements pour tous les véhicules et aux services pour la mobilité. Son déploiement à Abidjan répond à la demande croissante de structuration et de montée en compétences de la filière automobile en Afrique de l'Ouest. The post COMMUNIQUÉ DE PRESSE: EQUIP AUTO Côte d’Ivoire 2026 : Le carrefour ouest-africain de la pièce et de la maintenance automobile ouvre grand ses portes aux professionnels burkinabè appeared first on L'economiste du faso .",
-      "_source": "L'Économiste du Faso",
-      "_sourceId": "rss_eco_faso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 123,
-      "_zone": 1,
-      "_theme": "L",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Confédération des Etats du Sahel : les ambassadeurs à la retraite prêts à mettre leurs expertises et leurs expériences au service de la dynamique confédérale",
-      "link": "https://burkina24.com/2026/11/18/confederation-des-etats-du-sahel-les-ambassadeurs-a-la-retraite-prets-a-mettre-leurs-expertises-et-leurs-experiences-au-service-de-la-dynamique-confederale/",
-      "pubDate": "2026-11-18T21:05:25.000Z",
-      "description": "Les ambassadeurs à la retraite de la Confédération des Etats du Sahel se réunissent dans la capitale burkinabè, du 18 au 20 novembre 2026, à la faveur de leur premier forum placé sur le thème « Expériences et expertises des diplomates à la retraite au service de la sécurité et du développement dans l’espace confédéral … The post Confédération des Etats du Sahel : les ambassadeurs à la retraite prêts à mettre leurs expertises et leurs expériences au service de la dynamique confédérale appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "C",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Burkina Faso : Le GRAD-A lance un projet d’inclusion économique au profit de 70 femmes rurales à Yako",
-      "link": "https://faso7.com/2026/11/18/faso7-burkina-faso-le-grad-a-lance-un-projet-dinclusion-economique-au-profit-de-70-femmes-rurales-a-yako/",
-      "pubDate": "2026-11-18T20:55:26.000Z",
-      "description": "La salle des fêtes de la mairie de Yako, dans la région du Yaadga, a abrité, ce 18 novembre 2026, la cérémonie officielle de lancement du projet intitulé « Inclusion économique des femmes rurales ». Elle a été présidée par le haut-commissaire de la province du Passoré, représenté par le secrétaire général de la province, en présence des bénéficiaires, des membres de l’organisation de mise en œuvre, le Groupe de réflexion et d’action pour le développement en Afrique (GRAD-A), ainsi que de ses partenaires financiers, la ville de Vienne en Autriche à travers le Mouvement autrichien des jeunes ouvriers (MAJO). L’autonomisation économique des femmes, en particulier en milieu rural, constitue un enjeu majeur de développement et de transformation sociale. Elles jouent un rôle capital dans la production agricole, la gestion des ménages, l’éducation des enfants et la préservation de la cohésion sociale. Malgré cette contribution déterminante, elles demeurent confrontées à de nombreuses contraintes, notamment le faible accès aux ressources financières, aux opportunités économiques, aux compétences techniques et aux moyens de production. C’est en réponse à ces défis que GRAD-A et ses partenaires ont initié ce projet pilote à travers les Associations villageoises d’épargne et de crédit (AVEC) de Lilbouré et de Song-Naba, dans la commune de Yako. Au total, 70 femmes issues de ces AVEC bénéficieront d'un renforcement de compétences en saponification ainsi que de noyaux reproducteurs de volaille de races locales, selon le directeur exécutif de GRAD-A, Oumarou Savadogo. Elles seront également formées en leadership et en entrepreneuriat. Il a précisé que ce projet pilote s’étend sur une durée de 12 mois pour un coût total d’investissement de 26 millions de F CFA. « Le projet consiste à renforcer les capacités des femmes dans la fabrication du savon afin de promouvoir l’hygiène et l’assainissement, tout en améliorant leur situation économique grâce à la vente de leur production. Il consiste également à doter chaque bénéficiaire d’un noyau reproducteur de volaille de race locale composé de neuf poules et d’un coq. À l’issue du processus annuel, chaque femme devra restituer les dix têtes reçues au profit de nouvelles bénéficiaires », a expliqué le Directeur exécutif de GRAD-A. Saïdou Ouédraogo, Secrétaire général du Passoré, a invité les services techniques à apporter leur expertise et leurs conseils afin de garantir la qualité de l’intervention et l’accompagnement des bénéficiaires. Il a également encouragé les autorités coutumières et communautaires à contribuer à la mobilisation sociale, à la cohésion entre les bénéficiaires et à la pérennisation de l'initiative, soulignant qu'elle répond à la vision de la Révolution progressiste populaire (RPP) et des plus hautes autorités du pays. « Le projet s’inscrit en droite ligne de la politique du gouvernement visant à booster l’Agriculture dans la dynamique de la RPP. (…) L’appel que nous lançons consiste d’abord à inviter les bénéficiaires à faire un très bon usage de leurs kits. Nous invitons également les chefs coutumiers des deux villages à s’investir pour que le projet soit un succès. Quant aux structures étatiques, l’assurance a été donnée de leur entière disponibilité à accompagner sa mise en œuvre » , a déclaré le Secrétaire général du Passoré. Très enthousiastes, les bénéficiaires n’ont pas tari de bénédictions et de remerciements à l’endroit des initiateurs du projet et des autorités pour leur soutien. Elles ont pris la ferme résolution d’anticiper l’aménagement des poulaillers, de convaincre leurs conjoints d’adhérer à l'initiative pour le bien de toute la famille, de restituer chacune les 10 reproducteurs de volaille en fin de projet au profit d’autres AVEC, et de planter et entretenir chacune deux arbres à domicile. Le projet « Inclusion économique des femmes rurales » vise à réduire les inégalités socio-économiques des femmes vulnérables de Yako, en renforçant leurs compétences, leurs revenus et leur participation aux instances de décision. Babess OUEDRAOGO (Correspondant) Faso7 L’article Burkina Faso : Le GRAD-A lance un projet d’inclusion économique au profit de 70 femmes rurales à Yako est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "Orpailleurs expulsés de la Guinée : le dernier convoi regagne la mère patrie",
+      "link": "https://www.sidwaya.info/2026/11/19/orpailleurs-expulses-de-la-guinee-le-dernier-convoi-regagne-la-mere-patrie/",
+      "pubDate": "2026-11-19T05:55:29.000Z",
+      "description": "La présidente du conseil régional de secours d’urgence et de réhabilitation du Guiriko, Mariama Konaté, et ses collaborateurs ont accueilli le dernier convoi des Burkinabè refoulés de la Guinée, dans la soirée du mercredi 18 novembre 2026. Mariama Konaté a rassuré les milliers de personnes descendues de la vingtaine de cars des dispositions prises pour leur assurer une prise en charge digne. Après plusieurs jours d’attente et de mobilisation, le dernier convoi des Burkinabè refoulés de la Guinée a regagné le territoire national. Composé de vingt cars transportant environ un millier de passagers, il est arrivé en début de soirée du mercredi 18 novembre 2026 à Bobo-Dioulasso. A leur descente des véhicules, les compatriotes ont été accueillis par les membres du Conseil régional de secours d’urgence et de réhabilitation (CORESUR), conduits par sa présidente, le gouverneur de la région du Guiriko, Mariama Konaté. Un sentiment de soulagement et de retrouvailles avec la mère patrie. C’est dans cette atmosphère que s’est déroulée l’arrivée du dernier convoi des compatriotes refoulés. Après un parcours éprouvant, ces quelques mille Burkinabè ont enfin foulé le sol burkinabè. Mandatée par le gouvernement, la présidente du CORESUR, Mariama Konaté, est venue souhaiter la bienvenue aux compatriotes. Dans son adresse, elle leur a exprimé la solidarité de la Nation et les a rassurés quant à leur retour au bercail. « Vous êtes nos fils. Vous êtes nos frères. Vous êtes bien arrivés chez vous et vous n’avez plus d’inquiétude à vous faire », leur a-t-elle lancé. Le gouverneur a également salué le comportement des passagers qui sont descendus des cars dans l’ordre et la discipline. Elle a, par ailleurs, rendu hommage à l’ensemble des acteurs mobilisés pour rendre possible cette opération. “Prendre leur part dans le développement du pays” Ils étaient un millier de passagers à bord de 20 cars qui ont regagné Bobo-Dioulasso par ce dernier convoi. Selon elle, depuis plusieurs jours, les membres du CORESUR, les autorités et les populations se sont investis pour offrir aux compatriotes des conditions d’accueil dignes. Elle a particulièrement salué l’engagement des femmes qui, de jour comme de nuit, se sont relayées autour des marmites pour servir des repas chauds aux arrivants. Les contributions en nature, en espèces et les autres formes de solidarité ont également été déterminantes dans l'accompagnement de ces compatriotes. Mariama Konaté a saisi l’occasion pour adresser un message de sensibilisation aux jeunes. Elle les a invités à tirer les enseignements de cette « amère » expérience, en évitant de se laisser séduire par les promesses mirobolantes d’enrichissement à l’étranger. Pour elle, si l’on peut se tromper de chemin dans la quête d’une vie meilleure, l’essentiel est de savoir rebrousser chemin lorsqu’on prend conscience de son erreur. « La richesse ne s’acquiert que par le travail », a-t-elle rappelé, invitant les jeunes à s’investir dans les activités économiques au Burkina Faso. Elle a insisté sur le potentiel de cette jeunesse, dont le dynamisme et la force de travail constituent des atouts pour la construction nationale. Elle les a ainsi exhortés à prendre leur part dans le développement du pays. La présidente du CORESUR a aussi exprimé la reconnaissance du Burkina Faso au peuple et au gouvernement malien pour leur solidarité. Elle a salué leur accompagnement tout au long du processus, notamment la prise en charge des compatriotes, les soins apportés à ceux qui en avaient besoin et la mise à disposition de moyens roulants pour escorter les convois jusqu’au Burkina. Kamélé FAYAMA",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military",
         "political"
       ],
       "_majors": [],
@@ -988,55 +924,21 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "C1"
       },
-      "_rating": "F2",
+      "_rating": "C1",
       "_score": 115,
       "_zone": 1,
-      "_theme": "E",
+      "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Du laboratoire au champ : le long chemin des variétés de riz améliorées au Burkina Faso",
-      "link": "https://faso7.com/2026/11/18/du-laboratoire-au-champ-le-long-chemin-des-varietes-de-riz-ameliorees-au-burkina-faso/",
-      "pubDate": "2026-11-18T18:42:38.000Z",
-      "description": "SOURA Sibiri¹ ¹ Centre national de la recherche scientifique et technologique (CNRST), Burkina Faso Auteur correspondant : SOURA Sibiri, Email : sibiri.soura@cnrst.gov.bf Introduction Le riz occupe une place croissante dans l'alimentation des Burkinabè. Or, la production nationale couvre moins de la moitié des besoins, et le pays doit importer le reste. Pourtant, les solutions techniques existent. En effet, depuis les années 1970, la recherche agricole nationale, portée par l'Institut de l'environnement et de recherches agricoles (INERA), a mis au point plus de cinquante variétés de riz à haut rendement, adaptées aux périmètres irrigués, aux bas-fonds et à la culture sous pluie. Cependant, ces variétés ne donnent pas dans les champs ce qu'elles donnent dans les stations de recherche. Alors qu'elles peuvent produire 5 à 7 tonnes par hectare, la plupart des exploitations récoltent entre 1 et 2,6 tonnes par hectare en riziculture pluviale et de bas-fonds (Koutou et al., 2021 ; Yaméogo et al., 2019). L'écart est donc considérable. Dès lors, cet article explique pourquoi les variétés améliorées peinent à passer du laboratoire au champ. Il montre que ce passage n'est pas un simple transfert technique. Il dépend en effet du prix des semences et des engrais, de la présence des agents de conseil, du jugement des producteurs eux-mêmes et du travail de leurs organisations. Ces résultats s'adressent d'abord aux producteurs et à leurs organisations, mais aussi aux agents de vulgarisation, aux services agricoles, aux ONG et aux chercheurs. Ils aident ainsi à repérer où le chemin se bloque, et sur quels relais s'appuyer pour le débloquer. Méthodologie L'étude repose sur une démarche qualitative : elle cherche à comprendre les raisons d'agir des acteurs plutôt qu'à mesurer des quantités. Elle combine deux sources d'information. D'une part, l'auteur a examiné des documents : stratégies nationales de développement de la riziculture, rapports des administrations et des institutions de recherche, travaux scientifiques sur la filière. D'autre part, quinze entretiens ont été réalisés à Ouagadougou entre mai et août 2025. Les personnes interrogées étaient des chercheurs d'instituts nationaux, des cadres de l'administration et des responsables d'organisations paysannes ou semencières, notamment la Confédération paysanne du Faso et l'Union nationale des producteurs semenciers du Burkina. Les entretiens ont ensuite été transcrits, puis codés à l'aide du logiciel QualCoder selon une analyse thématique. Autrement dit, les propos ont été regroupés par thèmes, par exemple les obstacles à l'utilisation des résultats, les relations entre chercheurs et producteurs ou le rôle des intermédiaires. En outre, ces propos ont été confrontés aux documents et aux chiffres disponibles sur la filière, afin de vérifier les faits. Il convient toutefois de préciser que l'étude ne mesure pas elle-même les rendements : elle s'appuie sur les données existantes et analyse ce que les acteurs font des innovations. Cette démarche a permis de dégager quatre résultats, présentés ci-dessous dans un ordre logique : d'abord l'ampleur de l'écart entre la station et le champ, ensuite les obstacles concrets, puis la manière dont les producteurs s'approprient les variétés, enfin le rôle des organisations paysannes. Résultats 1. Un écart important entre la station de recherche et le champ Le premier résultat mesure la distance qui sépare la recherche des exploitations. En effet, les variétés améliorées atteignent 5 à 7 tonnes par hectare en station, alors que les rendements réels se situent entre 1 et 2,6 tonnes par hectare dans les systèmes pluviaux et les bas-fonds non aménagés. De même, les semences certifiées, c'est-à-dire contrôlées et garanties, ne sont utilisées qu'à hauteur d'environ 11,7 % au niveau national. Toutefois, cette moyenne cache une forte différence entre les zones. Dans les grands périmètres irrigués, où les variétés améliorées sont imposées par les cahiers des charges, leur utilisation approche les 100 %. En revanche, elle reste marginale dans le reste du pays. Par conséquent, l'objectif fixé par la stratégie nationale de développement de la riziculture, qui vise 85 % de semences certifiées et 3 millions de tonnes de riz paddy à l'horizon 2030, suppose de lever des obstacles bien précis. 2. Des obstacles concrets : le prix, le conseil et l'information Le deuxième résultat identifie ces obstacles. Le premier est le coût. En effet, les semences améliorées se vendent entre 800 et 1 000 francs CFA le kilo, alors que les producteurs manquent souvent d'argent disponible au moment des semis (Ouattara et al., 2021). De plus, les engrais sont chers, la mécanisation est faible et le crédit agricole reste difficile d'accès. À cela s'ajoutent les retards de livraison des intrants subventionnés, qui arrivent parfois trop tard pour la campagne. Le deuxième obstacle est le manque de conseil de proximité. Ainsi, un agent d'appui-conseil couvre couramment sept à huit villages, alors que la norme recommandée est de cinq. Par ailleurs, beaucoup de producteurs ne savent pas lire, ce qui limite leur accès à l'information technique. Le troisième obstacle tient à la circulation de l'information elle-même. Pendant longtemps, en effet, la recherche a fonctionné du haut vers le bas : le chercheur trouvait, l'agent technique diffusait, le paysan appliquait. « Les chercheurs n'attendaient aucun feed-back des paysans », se souvient un chercheur à la retraite. Or, ce défaut de dialogue n'a pas entièrement disparu. Un cadre du ministère en charge de l'agriculture le constate : « Les travaux des chercheurs généralement ne sont même pas connus à l'interne par leurs collègues, encore moins à l'extérieur par les utilisateurs potentiels ». 3. Des producteurs qui jugent, adaptent et contournent Le troisième résultat montre que les producteurs ne reçoivent pas les innovations passivement. Au contraire, ils les évaluent selon leurs propres critères. À la Vallée du Kou, par exemple, ils ont donné aux variétés de l'INERA des noms tirés de leur quotidien (Ouoba et al., 2023) : « Macaroni » pour la FKR62N, en raison de la longueur de son grain et de son goût ; « Fantan dèmè », c'est-à-dire « l'aide aux pauvres », pour la FKR28, parce qu'elle demande peu d'engrais ; « 4×4 » pour la FKR19, parce qu'elle s'adapte à tous les terrains. Ces noms révèlent ce qui compte pour les producteurs : le goût, l'économie d'intrants et la robustesse, et pas seulement le rendement maximal. D'ailleurs, beaucoup de techniques ont été adoptées sans bruit. « Beaucoup de technologies ont été intégrées par les producteurs dans leurs activités […]. Malheureusement tous les résultats ne sont pas perceptibles tellement les gens les ont intégrés », observe un responsable d'organisation paysanne. Cependant, l'adoption a aussi un coût social. En effet, dans les périmètres aménagés, le calendrier de culture est strict : dates de pépinière, repiquage en ligne, désherbage, traitements. Il laisse donc moins de temps à la vie familiale et communautaire. De plus, pour acheter semences, engrais et services mécanisés, les producteurs doivent emprunter. Il en résulte que l'argent prend une place nouvelle dans les familles : l'autorité des chefs de famille s'affaiblit, tandis que des cadets ou des femmes étuveuses gagnent en autonomie grâce au commerce du riz. C'est pourquoi de nombreux producteurs gardent des solutions de rechange. Ils continuent ainsi à échanger des semences par le troc ou le don, et à sélectionner eux-mêmes leurs meilleurs grains. Ce faisant, ils préservent leur liberté de choix et la diversité de leurs variétés. 4. Les organisations paysannes, traductrices entre chercheurs et producteurs Le quatrième résultat met en avant un acteur décisif. En effet, entre le laboratoire et le champ, il faut des intermédiaires capables de parler aux deux mondes. Ce rôle revient de plus en plus aux organisations paysannes, comme la Confédération paysanne du Faso (CPF), l'Union nationale des producteurs de riz du Burkina (UNPRB) et l'Union nationale des producteurs semenciers (UNPSB). Ces organisations accomplissent un double travail. D'une part, elles expliquent aux riziculteurs, dans un langage accessible, les résultats de la recherche et les exigences techniques des nouvelles variétés. D'autre part, elles font remonter aux décideurs et aux partenaires financiers les contraintes réelles du monde rural et le savoir pratique des producteurs. En outre, elles permettent de négocier collectivement avec les rizeries et les banques, notamment dans la plaine de Bama et à Bagré. Les chercheurs eux-mêmes passent par elles : « Je travaille également avec le monde agricole, surtout les organisations avec qui j'implémente les résultats de mes recherches », explique un agronome. Grâce à ce travail, d'autres façons de produire ont été reconnues par les politiques publiques, à côté de la grande irrigation : l'aménagement des bas-fonds ou le système de riziculture intensive, par exemple. Néanmoins, ce relais reste fragile. En effet, une variété peut être abandonnée si les producteurs la jugent trop coûteuse ou peu conforme au goût local. Autrement dit, une innovation ne dure que si ceux qui la cultivent continuent d'y trouver leur intérêt. Conclusion En définitive, l'étude montre que le faible usage des variétés améliorées de riz ne s'explique pas par un refus du progrès. Il s'explique plutôt par des obstacles précis et par des choix raisonnés des producteurs. Trois enseignements se dégagent. D'abord, l'écart entre la station et le champ tient surtout au prix des semences et des engrais, au manque de conseil et à une information qui circule difficilement. Ensuite, les producteurs jugent les variétés selon leurs propres critères, les adaptent et gardent leurs réseaux d'échange de semences. Enfin, les organisations paysannes sont devenues le relais indispensable entre chercheurs, producteurs et décideurs. Ainsi, pour les chercheurs et les services agricoles, la leçon est d'associer les producteurs dès le choix des variétés et de tenir compte du goût, du coût et de la robustesse. Quant aux organisations paysannes, l'étude confirme l'utilité de leur rôle de traduction et de négociation. Autrement dit, une variété ne devient une réussite que lorsqu'elle est à la fois performante, accessible et acceptée. Ce document de vulgarisation est tiré de l'article scientifique : SOURA, Sibiri (2026), « Gouverner l'agriculture par la preuve ? Usages et mises en scène de l'expertise rizicole au Burkina Faso », Afrilex , p. 1‑27. Références bibliographiques KOUTOU, Mahamoudou, CORTESE, Matteo, D'ALESSANDRO, Cecilia, TONDEL, Fabien et KNAEPEN, Hanne (2021), Évolutions récentes du secteur rizicole au Burkina Faso. Contraintes de développement et opportunités d'investissement privé , Rome, FAO. OUATTARA, Issa, TRAORE, Arahama et KABORE, Amado (2021), « Analyse des contraintes à la vulgarisation des résultats de la recherche agricole de l'Institut de l'Environnement et de Recherches Agricoles (INERA) du Burkina Faso », Science et technique, Sciences Naturelles et Appliquées , vol. 40, n° 2, p. 86-98. OUOBA, Justine, YMBA, Awa et KAM, Honoré (2023), « Introduction des variétés améliorées de riz à la vallée du Kou (Burkina Faso) : quels enjeux ? », Sciences Naturelles et Appliquées , vol. 42, n° 1, p. 228-242. SOURA, Sibiri (2026), « Gouverner l'agriculture par la preuve ? Usages et mises en scène de l'expertise rizicole au Burkina Faso », Afrilex , p. 1‑27. YAMÉOGO, Lassané, YANOGO, Pawendkisgou Isidore et SANOU, Korotimi (2019), « Dynamique spatiale et enjeux stratégiques de la riziculture au Burkina Faso », L'Espace Politique , n° 39. L’article Du laboratoire au champ : le long chemin des variétés de riz améliorées au Burkina Faso est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Moov Africa-ONATEL: la fibre optique double ses débits et casse ses prix jusqu’à 65%",
-      "link": "https://www.wakatsera.com/moov-africa-onatel-la-fibre-optique-double-ses-debits-et-casse-ses-prix-jusqua-65/",
-      "pubDate": "2026-11-18T15:51:12.000Z",
-      "description": "À compter du 27 novembre 2026, Moov Africa-ONATEL va frapper un grand coup sur le marché de l’Internet fixe au Burkina Faso. L’opérateur annonce le doublement gratuit des débits pour ses abonnés actuels et une réduction pouvant atteindre 65% sur les tarifs de ses offres fibre pour les nouveaux souscripteurs. Une offensive commerciale qui ambitionne de rendre le très haut débit plus accessible aux ménages, aux étudiants et aux acteurs économiques. La fibre optique prend un nouveau virage chez Moov Africa-ONATEL. L’opérateur de télécommunications entend faire tomber davantage les barrières financières et technologiques qui limitent encore l’accès des populations au très haut débit au Burkina Faso. Deux mesures phares sont ainsi annoncées: une augmentation gratuite des débits pouvant aller jusqu’à 100% pour les abonnés actuels et une baisse tarifaire pouvant atteindre 65% pour les nouveaux clients. Ces nouvelles dispositions entreront en vigueur le 27 novembre 2026. Moov Africa-ONATEL annonce le doublement gratuit des débits pour ses abonnés actuels et une réduction pouvant atteindre 65% sur les tarifs de ses offres fibre pour les nouveaux souscripteurs. L’annonce a été faite ce mercredi 18 novembre 2026, à Ouagadougou, au cours d’une conférence de presse organisée par Moov Africa-ONATEL. Présentant les nouvelles orientations commerciales de l’entreprise devant les professionnels des médias et des membres de son personnel, Mamadou Idogo, chef du département marketing et communication produit et digital, a relayé le message du Directeur général, Mohamed Karim, absent de la rencontre pour des raisons de calendrier. «À compter du 27 novembre 2026, nous réduirons le prix de la fibre et augmenterons gratuitement les débits de nos clients», a-t-il fait savoir. Derrière cette annonce, l’opérateur affiche une ambition claire: démocratiser l’accès à la connexion Internet à haut débit et permettre au plus grand nombre de profiter des opportunités offertes par le numérique. «Notre ambition est de faire en sorte que la fibre optique ne soit plus un privilège réservé à quelques-uns, mais un service accessible au plus grand nombre. Nous voulons offrir davantage de puissance à nos clients, tout en réduisant considérablement leur effort financier», a souligné Mamadou Idogo. Une double offensive pour les anciens et les nouveaux abonnés La nouvelle politique commerciale repose sur deux leviers complémentaires. Pour les abonnés actuels, la principale innovation est le doublement gratuit des débits, sans augmentation de la facture mensuelle. Concrètement, une formule de 50 Mbps passera à 100 Mbps, tandis qu'un abonnement de 100 Mbps évoluera à 200 Mbps. Une amélioration substantielle qui permettra aux clients de bénéficier d'une connexion plus puissante sans débourser un franc supplémentaire. Des participants à la conférence de presse Autre avantage, cette migration se fera automatiquement et à distance. Les abonnés n'auront donc aucune démarche administrative à entreprendre, aucun déplacement en agence à effectuer et aucun équipement à remplacer, notamment leur box ou leur terminal optique (ONT). Une manière pour l'opérateur de récompenser la fidélité de sa clientèle tout en simplifiant l'expérience utilisateur. Pour les nouveaux souscripteurs, l'effort porte essentiellement sur les prix. Les tarifs des différentes offres fibre connaîtront des réductions pouvant atteindre 65%. Une baisse significative qui vise à lever l'un des principaux obstacles à l'adoption de l'Internet fixe à très haut débit: le coût de l'abonnement. Le cap des 500 Mbps et un réseau de plus en plus étendu Au-delà de la baisse des prix et de l'augmentation des débits, Moov Africa-ONATEL entend également repousser les limites de ses performances commerciales et technologiques. À partir du 27 novembre, l'opérateur proposera une offre pouvant atteindre 500 Mbps. Une capacité qui, selon l'entreprise, constitue une exclusivité sur le marché national des fournisseurs d'accès à Internet. À compter du 27 novembre 2026, Moov Africa-ONATEL va frapper un grand coup sur le marché de l’Internet fixe au Burkina Faso. Cette montée en puissance répond à l'évolution des usages numériques. Télétravail, enseignement à distance, visioconférences, jeux en ligne, streaming, création de contenus et activités professionnelles nécessitent désormais une connexion rapide, stable et capable de supporter plusieurs utilisateurs simultanément. Les ménages comme les entreprises sont ainsi au cœur de cette nouvelle stratégie. Pour soutenir cette ambition, l'entreprise mise également sur la qualité de l'expérience client, avec une attention particulière portée à la stabilité et à la couverture du Wi-Fi ainsi qu'à la réactivité de son assistance technique. Car, au-delà des performances affichées, la fiabilité de la connexion demeure un critère déterminant pour les consommateurs. Un leadership territorial au service de l'inclusion numérique Cette offensive commerciale s'appuie sur un réseau dont l'extension constitue l'un des axes majeurs de développement de Moov Africa-ONATEL. Grâce aux investissements consentis dans le déploiement de la fibre optique jusqu'au domicile, l'opérateur revendique aujourd'hui le maillage territorial le plus étendu du pays, avec une présence dans une quarantaine de localités. Mamadou Idogo, chef du département marketing et communication produit et digital Cette couverture constitue un atout pour rapprocher les services numériques des populations, y compris au-delà des grands centres urbains. L'entreprise entend ainsi accompagner les orientations nationales en matière de transformation digitale et contribuer à faire du numérique un véritable levier de développement économique et social. L'initiative est également présentée comme le résultat d'une démarche d'écoute du marché. Les échanges réguliers avec les associations de consommateurs auraient notamment permis à l'opérateur de mieux cerner les attentes des utilisateurs et d'adapter ses investissements ainsi que sa politique tarifaire aux réalités du terrain. Au-delà de la baisse des prix et de l'augmentation des débits, Moov Africa-ONATEL entend également repousser les limites de ses performances commerciales et technologiques En définitive, avec le doublement gratuit des débits pour ses abonnés actuels, des réductions tarifaires pouvant atteindre 65% pour les nouveaux clients et une offre culminant à 500 Mbps, Moov Africa-ONATEL entend donner un nouveau souffle à la fibre optique au Burkina Faso. Le rendez-vous est désormais fixé au 27 novembre 2026, date à laquelle ces engagements commerciaux entreront en application. Un pari sur l'accessibilité, la performance et l'inclusion numérique, dont les consommateurs seront les premiers juges. Par Valentin SOMANDE L’article Moov Africa-ONATEL: la fibre optique double ses débits et casse ses prix jusqu’à 65% est apparu en premier sur Wakat Séra .",
+      "title": "Retour des Burkinabè contraints de quitter la Guinée: le dernier convoi accueilli à Bobo-Dioulasso",
+      "link": "https://www.wakatsera.com/retour-des-burkinabe-contraints-de-quitter-la-guinee-le-dernier-convoi-accueilli-a-bobo-dioulasso/",
+      "pubDate": "2026-11-19T10:30:05.000Z",
+      "description": "Le dernier convoi de nos compatriotes contraints de quitter la Guinée-Conakry est arrivé ce mercredi 18 novembre 2026, à 18h38, au stade Général Aboubacar Sangoulé Lamizana de Bobo-Dioulasso. Cette arrivée marque l’aboutissement de la phase de rapatriement d’une vaste opération humanitaire et logistique conduite par le Gouvernement burkinabè. Parti de Bamako au Mali dans la nuit précédente, le convoi, composé d’une vingtaine d’autocars, transportait 1200 compatriotes, dont des femmes et des enfants. Plusieurs ambulances médicalisées ont également assuré le transfert de ressortissants burkinabè jusque-là hospitalisés dans des structures sanitaires de Bamako, avec un dispositif garantissant la continuité de leur prise en charge médicale. À leur arrivée, les compatriotes ont été accueillis par le Camarade Gouverneur de la région du Guiriko, en présence des autorités administratives régionales. Après plusieurs jours d’épreuve, ces compatriotes retrouvent enfin leur terre natale, entourés de la solidarité de la Nation. Avec l’arrivée de ce dernier convoi, une étape majeure vient d’être franchie. Les efforts se poursuivront désormais en faveur de l’accompagnement psychosocial, de la réunification familiale et de la réinsertion socio-économique des compatriotes de retour. L’enjeu est de faire de ce retour au pays le point de départ d’une reconstruction durable des conditions de vie de nos compatriotes. DRFS/Guiriko -DCRP/MFS L’article Retour des Burkinabè contraints de quitter la Guinée: le dernier convoi accueilli à Bobo-Dioulasso est apparu en premier sur Wakat Séra .",
       "_source": "Wakat Séra",
       "_sourceId": "rss_wakatsera",
       "_sourceCat": "bf_local",
@@ -1044,9 +946,70 @@
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "diplomatic",
-        "military",
         "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C1"
+      },
+      "_rating": "C1",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mali: HDP Nexus Programming in the Sahel: Partnering for Social Cohesion in a Changing Geopolitical and Aid Landscape",
+      "link": "https://reliefweb.int/report/mali/hdp-nexus-programming-sahel-partnering-social-cohesion-changing-geopolitical-and-aid-landscape",
+      "pubDate": "2026-11-19T08:30:08.000Z",
+      "description": "Countries: Mali, Burkina Faso, Niger Source: Stockholm International Peace Research Institute Please refer to the attached file. Summary The evolving geopolitical landscape in the Central Sahel, persistent insecurity and declining international aid are challenging approaches to the humanitarian–development–peacebuilding (HDP) nexus. Focusing on Burkina Faso, Mali and Niger, this research policy paper examines how international actors can sustain their engagement and promote peace amid political fragmentation and constrained operating environments. Drawing on academic and policy literature, as well as interviews with international humanitarian and development actors, the paper identifies opportunities and challenges peacebuilding. It argues that the HDP nexus remains relevant but requires more pragmatic, politically modest and context-sensitive implementation. International interventions should support local efforts to manage, resolve or transform community-level direct and structural violence, while connecting these efforts to the wider peacebuilding architecture. This means supporting conditions in which locally grounded peace can emerge and endure while remaining attentive to local inequalities and the wider political and structural forces that shape what is possible at the community level.",
+      "_source": "ReliefWeb — Mali",
+      "_sourceId": "rss_reliefweb_mali",
+      "_sourceCat": "humanitarian",
+      "_sourceBloc": "autre",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": null,
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": ".",
+      "_desk": "A1"
+    },
+    {
+      "title": "Fonds de soutien patriotique : des Burkinabè vivant en Afrique Centrale et en Belgique font don de 7 millions F CFA",
+      "link": "https://www.sidwaya.info/2026/11/19/fonds-de-soutien-patriotique-des-burkinabe-vivant-en-afrique-centrale-et-en-belgique-font-don-de-7-millions-f-cfa/",
+      "pubDate": "2026-11-19T05:48:14.000Z",
+      "description": "Le camarade ministre des Affaires étrangères, Karamoko Jean Marie Traoré, accompagné de la camarade ministre déléguée, Bêbgnasgnan Stella Eldine Kabré, a reçu le mardi 17 novembre 2026, deux délégations de Burkinabè vivant en Afrique centrale et en Belgique, venues apporter leurs contributions au fonds de soutien patriotique. D'un montant de 3 millions F CFA, la contribution des Burkinabè vivant en Afrique centrale notamment en République Démocratique du Congo et en République Centrafricaine, traduit leur engagement et leur volonté de participer à l'édification d'un Burkina Faso prospère. Pour le consul honoraire du Burkina Faso en République Démocratique du Congo et chef de la délégation, le, au regard des actions entreprises en faveur du développement du pays. « Nous voyons les preuves tangibles de tous les efforts qui sont faits sur les plans économique et militaire pour que notre pays soit totalement libéré. Pour cela, nous n'avons pas voulu rester en marge », a-t-il expliqué. Un sentiment de fierté également partagé par la camarade Fatouma Badini, promotrice du festival Benkadi, à la tête de la délégation venue de la Belgique. Elle a remis une quittance de quatre millions F CFA au camarade ministre des Affaires étrangères, représentant la contribution des Burkinabè vivant en Belgique au Fonds de soutien patriotique. La promotrice du festival Benkadi a remis au FSP un chèque 4 millions F CFA collecté en Belgique lors de l’édition 2026 du festival. Ce don est le fruit d'une collecte organisée à l'occasion de son festival » Benkadi » dédié à la promotion de la culture burkinabè et qui se tient chaque année en Belgique.A ces deux délégations, le camarade Karamoko Jean Marie Traoré a indiqué que les dons des Burkinabè contribuent significativement à la dynamique de reconquête et à la restauration du pays, éprouvé par l'insécurité. « La bonne nouvelle c'est que le Burkina est en train de changer de visage. Les villages brûlés, les populations déplacées, font place à des chantiers, à des bas-fonds aménagés et à une reprise des économies villageoises. Et cela, grâce aux efforts de chacun de nous, Burkinabè de l'extérieur comme de l'intérieur », a-t-il soutenu. Tout en témoignant la gratitude du gouvernement pour les différents dons, le camarade ministre des Affaires étrangères, a invité l'ensemble des Burkinabè à rester mobilisés autour du président du Faso afin de consolider les acquis engrangés dans divers domaines, notamment ceux de la défense et de la sécurité, ainsi que les défis du développement national. DCRP/MAE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
         "political"
       ],
       "_majors": [],
@@ -1059,11 +1022,11 @@
         "rating": "C2"
       },
       "_rating": "C2",
-      "_score": 115,
+      "_score": 107,
       "_zone": 1,
-      "_theme": "T",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
+      "_relevance": "A",
       "_desk": "A1"
     },
     {
@@ -1129,14 +1092,300 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
+    },
+    {
+      "title": "Intelligence artificielle : La BAD alerte sur le retard de l’Afrique face au boom mondial des investissements",
+      "link": "https://burkina24.com/2026/11/19/intelligence-artificielle-la-bad-alerte-sur-le-retard-de-lafrique-face-au-boom-mondial-des-investissements/",
+      "pubDate": "2026-11-19T09:28:56.000Z",
+      "description": "L’Afrique risque de passer à côté des retombées économiques du boom mondial des investissements dans l’intelligence artificielle (IA) et les technologies informatiques. C’est l’avertissement lancé par la Banque africaine de développement (BAD) dans son rapport de novembre 2026 intitulé « Performance et perspectives macroéconomiques de l’Afrique ». Pourtant, selon les estimations de l’institution, une adoption … The post Intelligence artificielle : La BAD alerte sur le retard de l’Afrique face au boom mondial des investissements appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
+      "_source": "Burkina24",
+      "_sourceId": "rss_burkina24",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "A2"
+      },
+      "_rating": "A2",
+      "_score": 103,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Magnitude 5.7 quake jolts Kumamoto Prefecture, but no tsunami warning issued",
-      "link": "https://www.japantimes.co.jp/news/2026/11/19/japan/kumamoto-quake-no-tsunami-warning/",
+      "title": "EN DIRECT – Sommet à Shenzhen : à l’issue de la rencontre, la Chine, la Russie et les Etats-Unis adoptent une «déclaration de paix»",
+      "link": "https://www.liberation.fr/international/asie-pacifique/en-direct-trump-poutine-et-xi-suivez-la-rencontre-au-sommet-a-shenzhen-20261119_NCAHEZDLBNFVXBZWTWEWFRCJTQ/",
+      "source": "Libération International",
+      "date": "2026-11-19T11:29:00.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "🔴 En direct : après leur sommet inédit, Trump, Poutine et Xi promettent de \"préserver la stabilité\" internationale",
+      "link": "https://www.france24.com/fr/asie-pacifique/20261119-sommet-apec-en-direct-rencontres-diplomatiques-attendues-shenzhen-trump-poutine-xi-jinping",
+      "source": "France 24",
+      "date": "2026-11-19T11:09:12.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "La CIJ établit que la Birmanie a commis un génocide à l’encontre de la population rohingya",
+      "link": "https://www.liberation.fr/international/asie-pacifique/la-cij-juge-que-la-birmanie-avait-lintention-de-detruire-la-population-rohingya-20261119_IKE5JJSBERHPVKPN3DVBODRX5U/",
+      "source": "Libération International",
+      "date": "2026-11-19T10:42:43.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "génocide"
+        }
+      ]
+    },
+    {
+      "title": "Trump, Poutine et Xi réunis pour un sommet historique",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20261119-trump-poutine-et-xi-r%C3%A9unis-pour-un-sommet-historique",
+      "source": "France 24",
+      "date": "2026-11-19T09:58:47.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "La Coalition des volontaires pour l'Ukraine à Berlin concurrencée par le sommet tripartite en Chine",
+      "link": "https://www.france24.com/fr/europe/20261119-coalition-volontaires-ukraine-berlin-sommet-tripartite-chine-poutine-jinping-trump-zelensky",
+      "source": "France 24",
+      "date": "2026-11-19T09:57:24.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "EN DIRECT, guerre en Ukraine : le sommet entre Xi Jinping, Donald Trump et Vladimir Poutine est terminé",
+      "link": "https://www.lemonde.fr/international/live/2026/11/19/en-direct-guerre-en-ukraine-etats-unis-chine-et-russie-dans-une-position-unique-pour-reduire-les-arsenaux-nucleaires-affirme-donald-tump_6810982_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-11-19T09:54:07.000Z",
+      "rating": "B1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Türkiye grants Red Crescent expanded disaster response powers",
+      "link": "https://www.dailysabah.com/politics/legislation/turkiye-grants-red-crescent-expanded-disaster-response-powers",
+      "source": "Daily Sabah (Turquie)",
+      "date": "2026-11-19T09:36:00.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Apec : le sommet du siècle ?",
+      "link": "https://www.france24.com/fr/%C3%A9missions/on-va-plus-loin/20261119-apec-vers-le-sommet-du-si%C3%A8cle",
+      "source": "France 24",
+      "date": "2026-11-19T09:06:48.000Z",
+      "rating": "A3",
+      "evidence": "Source fiable unique",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Guerre en Iran : doit-on craindre une nouvelle escalade entre Washington et Téhéran?",
+      "link": "https://www.rfi.fr/fr/podcasts/appels-sur-l-actualit%C3%A9/20261119-guerre-en-iran-doit-on-craindre-une-nouvelle-escalade-entre-washington-et-t%C3%A9h%C3%A9ran",
+      "source": "RFI Moyen-Orient",
+      "date": "2026-11-19T09:00:52.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "escalade"
+        }
+      ]
+    },
+    {
+      "title": "Les alliés de l'Ukraine en sommet à Berlin, un oeil sur Trump, Poutine et Xi",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20261119-les-alli%C3%A9s-de-l-ukraine-en-sommet-%C3%A0-berlin-un-oeil-sur-trump-poutine-et-xi",
+      "source": "France 24",
+      "date": "2026-11-19T08:49:27.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Poutine et Trump s’entretiennent en Chine sur le conflit ukrainien et les relations russo-américaines avant le sommet trilatéral avec Xi Jinping",
+      "link": "https://rtenfrancais.tv/russie/140276-poutine-trump-chine",
+      "source": "RT en français",
+      "date": "2026-11-19T08:27:36.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Türkiye looks beyond reconstruction to build disaster-ready cities",
+      "link": "https://www.dailysabah.com/turkiye/turkiye-looks-beyond-reconstruction-to-build-disaster-ready-cities/news",
+      "source": "Daily Sabah (Turquie)",
+      "date": "2026-11-19T08:08:15.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "‘Too early’ to determine impact of US blockade on Iran, with Tehran defiant",
+      "link": "https://www.aljazeera.com/economy/2026/11/19/too-early-to-determine-impact-of-us-siege-on-iran-with-tehran-defiant?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-11-19T07:08:57.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "En direct : deuxième journée du sommet de l’APEC",
+      "link": "https://rtenfrancais.tv/international/140279-direct-deuxieme-journee-sommet-apec",
+      "source": "RT en français",
+      "date": "2026-11-19T07:00:50.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Congo: l'avocat William Bourdon porte plainte pour un projet d'assassinat sur sa personne",
+      "link": "https://www.rfi.fr/fr/afrique/20261119-congo-avocat-william-bourdon-porte-plainte-projet-assassinat-sherpa-sassou-nguesso-famille",
+      "source": "RFI Afrique",
+      "date": "2026-11-19T05:34:49.000Z",
+      "rating": "C2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "assassinat"
+        }
+      ]
+    },
+    {
+      "title": "Sommet de Shenzhen : «Pékin veut dépeindre les Etats-Unis comme une puissance déclinante»",
+      "link": "https://www.liberation.fr/international/amerique/sommet-de-shenzhen-pekin-veut-depeindre-les-etats-unis-comme-une-puissance-declinante-20261119_U6DULYFRXNC3DJZYKKD4KVMBQA/",
+      "source": "Libération International",
+      "date": "2026-11-19T05:25:00.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Tokyo’s mixed blessing after America’s ‘blue tsunami’",
+      "link": "https://www.japantimes.co.jp/commentary/2026/11/19/japan/blue-tsunami-tokyo-blessing/",
       "source": "The Japan Times",
-      "date": "2026-11-19T01:22:00.000Z",
+      "date": "2026-11-19T04:24:00.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1149,130 +1398,18 @@
       ]
     },
     {
-      "title": "Sommet de Shenzen en direct : une rencontre historique entre Trump, Poutine et Xi",
-      "link": "https://www.france24.com/fr/asie-pacifique/20261119-sommet-apec-en-direct-rencontres-diplomatiques-attendues-shenzhen-trump-poutine-xi-jinping",
-      "source": "France 24",
-      "date": "2026-11-19T00:00:34.000Z",
-      "rating": "C1",
+      "title": "Assassinat du président haïtien Jovenel Moïse : un pasteur américano-haïtien reconnu coupable d’implication",
+      "link": "https://www.lemonde.fr/international/article/2026/11/19/assassinat-du-president-haitien-jovenel-moise-un-pasteur-americano-haitien-reconnu-coupable-aux-etats-unis-d-implication_6813218_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-11-19T02:57:00.000Z",
+      "rating": "B1",
       "evidence": "Corrobore",
-      "level": "high",
+      "level": "critical",
       "bf": false,
       "majors": [
         {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Rencontre Trump-Xi-Poutine : les Européens, grands absents du sommet de Shenzhen",
-      "link": "https://www.liberation.fr/international/europe/rencontre-trump-xi-poutine-les-europeens-grands-absents-du-sommet-de-shenzhen-20261118_4RVJ5AADHBB6LGJUC7SWIEAUKI/",
-      "source": "Libération International",
-      "date": "2026-11-18T19:45:55.000Z",
-      "rating": "A1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Aliou Gori Diouf au sommet de la Cop31: « L’Afrique ne veut plus répondre aux transitions qui lui sont imposées »",
-      "link": "https://lesoleil.sn/actualites/environnement/aliou-gori-diouf-au-sommet-de-la-cop31-lafrique-ne-veut-plus-repondre-aux-transitions-qui-lui-sont-imposees/",
-      "source": "Le Soleil (Sénégal)",
-      "date": "2026-11-18T19:32:07.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "À Shenzhen, un sommet Xi-Trump-Poutine «historique» et la crainte d’un nouveau Yalta",
-      "link": "https://www.lefigaro.fr/international/a-shenzhen-un-sommet-xi-trump-poutine-historique-et-la-crainte-d-un-nouveau-yalta-20261117",
-      "source": "Le Figaro International",
-      "date": "2026-11-18T19:11:33.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Israël lance une opération militaire terrestre à Gaza dans une zone contrôlée par le Hamas, en dépit du cessez-le-feu",
-      "link": "https://www.liberation.fr/international/moyen-orient/israel-lance-une-operation-militaire-terrestre-a-gaza-dans-une-zone-controlee-par-le-hamas-en-depit-du-cessez-le-feu-20261118_PAZCJLTBJNFMHJL7M4KCGEUPBU/",
-      "source": "Libération International",
-      "date": "2026-11-18T19:01:14.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "Trump, Xi et Poutine : une rencontre au sommet et en faux-semblants",
-      "link": "https://www.liberation.fr/idees-et-debats/editorial/trump-xi-et-poutine-une-rencontre-au-sommet-et-en-faux-semblants-20261118_SSDSREFAMJFK3ENOD2AZHBLYZA/",
-      "source": "Libération International",
-      "date": "2026-11-18T18:49:08.000Z",
-      "rating": "C1",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "IDF sends tanks into Hamas-controlled Gaza for first time since 2025 ceasefire",
-      "link": "https://www.jpost.com/israel-news/defense-news/article-915349",
-      "source": "Jerusalem Post",
-      "date": "2026-11-18T18:40:39.000Z",
-      "rating": "F6",
-      "evidence": "Source unique",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Sommet Chine - États-Unis - Russie: l’Europe, à la fois au centre et hors-jeu",
-      "link": "https://www.mediapart.fr/journal/international/181126/sommet-chine-etats-unis-russie-l-europe-la-fois-au-centre-et-hors-jeu",
-      "source": "Mediapart International",
-      "date": "2026-11-18T18:16:38.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
+          "type": "rupture",
+          "keyword": "assassinat"
         }
       ]
     }
@@ -1280,43 +1417,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      207
-    ],
-    [
-      "occident_us",
-      136
-    ],
-    [
-      "occident_fr",
-      121
+      183
     ],
     [
       "autre",
-      81
+      143
     ],
     [
-      "golfe_mo",
-      73
+      "occident_fr",
+      126
+    ],
+    [
+      "occident_us",
+      98
     ],
     [
       "russie",
-      54
-    ],
-    [
-      "bf_local",
-      37
+      57
     ],
     [
       "turquie",
-      35
+      55
+    ],
+    [
+      "golfe_mo",
+      54
     ],
     [
       "chine",
-      30
+      35
+    ],
+    [
+      "bf_local",
+      26
     ],
     [
       "sahel",
-      26
+      23
     ]
   ],
   "desks": [
@@ -1324,52 +1461,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 112,
+      "count": 81,
       "top": [
         {
-          "title": "Rodrigue Guiguemdé, président de Digitales Solidaires : « Votre nom de domaine fait partie du patrimoine de votre entreprise »",
-          "link": "https://lefaso.net/spip.php?article150872",
-          "source": "Lefaso.net",
+          "title": "COP31 : les délégations de l’AES mutualisent leurs expériences",
+          "link": "https://www.sidwaya.info/2026/11/19/cop31-les-delegations-de-laes-mutualisent-leurs-experiences/",
+          "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "COMMUNIQUÉ DE PRESSE: EQUIP AUTO Côte d’Ivoire 2026 : Le carrefour ouest-africain de la pièce et de la maintenance automobile ouvre grand ses portes aux professionnels burkinabè",
-          "link": "https://leconomistedufaso.com/2026/11/18/communique-de-presse-equip-auto-cote-divoire-2026-le-carrefour-ouest-africain-de-la-piece-et-de-la-maintenance-automobile-ouvre-grand-ses-portes-aux-professionnels-burkinabe/",
-          "source": "L'Économiste du Faso",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Confédération des Etats du Sahel : les ambassadeurs à la retraite prêts à mettre leurs expertises et leurs expériences au service de la dynamique confédérale",
-          "link": "https://burkina24.com/2026/11/18/confederation-des-etats-du-sahel-les-ambassadeurs-a-la-retraite-prets-a-mettre-leurs-expertises-et-leurs-experiences-au-service-de-la-dynamique-confederale/",
-          "source": "Burkina24",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
+          "theme": "C",
           "relevance": "A",
           "rating": "C2"
         },
         {
-          "title": "Burkina Faso : Le GRAD-A lance un projet d’inclusion économique au profit de 70 femmes rurales à Yako",
-          "link": "https://faso7.com/2026/11/18/faso7-burkina-faso-le-grad-a-lance-un-projet-dinclusion-economique-au-profit-de-70-femmes-rurales-a-yako/",
-          "source": "Faso7",
+          "title": "Orpailleurs expulsés de la Guinée : le dernier convoi regagne la mère patrie",
+          "link": "https://www.sidwaya.info/2026/11/19/orpailleurs-expulses-de-la-guinee-le-dernier-convoi-regagne-la-mere-patrie/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "Retour des Burkinabè contraints de quitter la Guinée: le dernier convoi accueilli à Bobo-Dioulasso",
+          "link": "https://www.wakatsera.com/retour-des-burkinabe-contraints-de-quitter-la-guinee-le-dernier-convoi-accueilli-a-bobo-dioulasso/",
+          "source": "Wakat Séra",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "Mali: HDP Nexus Programming in the Sahel: Partnering for Social Cohesion in a Changing Geopolitical and Aid Landscape",
+          "link": "https://reliefweb.int/report/mali/hdp-nexus-programming-sahel-partnering-social-cohesion-changing-geopolitical-and-aid-landscape",
+          "source": "ReliefWeb — Mali",
+          "zone": "1. Sahel & AO franco.",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Du laboratoire au champ : le long chemin des variétés de riz améliorées au Burkina Faso",
-          "link": "https://faso7.com/2026/11/18/du-laboratoire-au-champ-le-long-chemin-des-varietes-de-riz-ameliorees-au-burkina-faso/",
-          "source": "Faso7",
+          "title": "Fonds de soutien patriotique : des Burkinabè vivant en Afrique Centrale et en Belgique font don de 7 millions F CFA",
+          "link": "https://www.sidwaya.info/2026/11/19/fonds-de-soutien-patriotique-des-burkinabe-vivant-en-afrique-centrale-et-en-belgique-font-don-de-7-millions-f-cfa/",
+          "source": "Sidwaya",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "C2"
         }
       ]
     },
@@ -1377,50 +1514,50 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 70,
+      "count": 53,
       "top": [
         {
-          "title": "Restoring Acheampong’s General rank would legitimise coup – Bomfeh",
-          "link": "https://www.myjoyonline.com/restoring-acheampongs-general-rank-would-legitimise-coup-bomfeh/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Blindness: Eritrea, 10 others eliminate trachoma from Africa as Nigeria lags",
-          "link": "https://www.vanguardngr.com/2026/11/blindness-eritrea-10-others-eliminate-trachoma-from-africa-as-nigeria-lags-2/",
-          "source": "Vanguard (Nigeria)",
+          "title": "Nigeria to host ECOWAS’ regional payment settlement system – Liberia Central Bank governor",
+          "link": "https://www.premiumtimesng.com/business/business-news/926385-nigeria-to-host-ecowas-regional-payment-settlement-system-liberia-central-bank-governor.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": null,
           "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Food security: Nigerian farmers risk wasting billions on fertilisers without soil testing, experts warn",
-          "link": "https://www.vanguardngr.com/2026/11/food-security-nigerian-farmers-risk-wasting-billions-on-fertilisers-without-soil-testing-experts-warn/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Army seeks land for armoured corps training in Bauchi",
-          "link": "https://www.vanguardngr.com/2026/11/army-seeks-land-for-armoured-corps-training-in-bauchi/",
+          "title": "GOKA BET Strengthens Brand Strategy, Signs Obafemi Martins As Brand Ambassador",
+          "link": "https://www.vanguardngr.com/2026/11/goka-bet-strengthens-brand-strategy-signs-obafemi-martins-as-brand-ambassador/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "D",
           "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Police rescue 15 kidnapped victims in Kogi forest after gun battle",
+          "link": "https://www.vanguardngr.com/2026/11/police-rescue-15-kidnapped-victims-in-kogi-forest-after-gun-battle/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F1"
+        },
+        {
+          "title": "Northern leaders have failed the people, need collective agenda — Uba Sani",
+          "link": "https://www.vanguardngr.com/2026/11/northern-leaders-have-failed-the-people-need-collective-agenda-uba-sani/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Afrique/Église catholique : Des religieuses victimes de violences sexuelles, certaines enceintes puis contraintes de quitter leur communauté",
-          "link": "https://netafrique.net/afrique-eglise-catholique-des-religieuses-victimes-de-violences-sexuelles-certaines-enceintes-puis-contraintes-de-quitter-leur-communaute/",
-          "source": "Net Afrique (BF)",
+          "title": "Au Nigeria, le combat des sourds pour faire exister les nombreuses langues des signes locales",
+          "link": "https://lesoleil.sn/actualites/societe-fait-divers/au-nigeria-le-combat-des-sourds-pour-faire-exister-les-nombreuses-langues-des-signes-locales/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1430,52 +1567,52 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 38,
+      "count": 39,
       "top": [
         {
-          "title": "World: A record high of nearly one in four children now live in conflict zones - Save the Children report",
-          "link": "https://reliefweb.int/report/world/record-high-nearly-one-four-children-now-live-conflict-zones-save-children-report",
-          "source": "ReliefWeb",
+          "title": "Congo: l'avocat William Bourdon porte plainte pour un projet d'assassinat sur sa personne",
+          "link": "https://www.rfi.fr/fr/afrique/20261119-congo-avocat-william-bourdon-porte-plainte-projet-assassinat-sherpa-sassou-nguesso-famille",
+          "source": "RFI Afrique",
           "zone": "3. Afrique centrale",
-          "theme": "D",
+          "theme": "L",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "C2"
         },
         {
-          "title": "Guerre au Soudan : « Beaucoup de familles marient leurs filles de force en pensant qu’un mari les protégera du viol »",
-          "link": "https://www.lemonde.fr/afrique/article/2026/11/18/guerre-au-soudan-beaucoup-de-familles-marient-leurs-filles-de-force-en-pensant-qu-un-mari-les-protegera-du-viol_6813179_3212.html",
-          "source": "Le Monde International",
+          "title": "Entre Émiratis et Saoudiens, Djibouti arbitre une nouvelle guerre du Golfe",
+          "link": "https://www.jeuneafrique.com/1860286/politique/entre-emiratis-et-saoudiens-djibouti-arbitre-une-nouvelle-guerre-du-golfe/",
+          "source": "Jeune Afrique",
           "zone": "5. Corne de l’Afrique",
           "theme": null,
           "relevance": ".",
           "rating": "B2"
         },
         {
-          "title": "Candidature du fils de Museveni à la présidence ougandaise: «La plus grande opposition vient de la vieille garde du MRN»",
-          "link": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-afrique-midi/20261118-candidature-du-fils-de-museveni-%C3%A0-la-pr%C3%A9sidence-ougandaise-la-plus-grande-opposition-vient-de-la-vieille-garde-du-mrn",
+          "title": "Ouganda: un opposant enlevé en août 2025 réapparaît devant un tribunal militaire",
+          "link": "https://www.rfi.fr/fr/afrique/20261119-ouganda-opposant-enlev%C3%A9-ao%C3%BBt-2025-r%C3%A9appara%C3%AEt-devant-un-tribunal-militaire",
           "source": "RFI Afrique",
           "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Enregistrement des naissances : le BUNEC et l’UNICEF lancent la grande campagne nationale",
-          "link": "https://fr.journalducameroun.com/enregistrement-des-naissances-le-bunec-et-lunicef-lancent-la-grande-campagne-nationale-2/",
-          "source": "Journal du Cameroun",
-          "zone": "3. Afrique centrale",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "«Aujourd’hui plus un jour ne se passe sans une frappe» : au Soudan, les drones sèment la terreur parmi les populations",
-          "link": "https://www.lefigaro.fr/international/aujourd-hui-plus-un-jour-ne-se-passe-sans-une-frappe-au-soudan-les-drones-sement-la-terreur-parmi-les-populations-20261118",
-          "source": "Le Figaro International",
-          "zone": "5. Corne de l’Afrique",
           "theme": "S",
           "relevance": "A",
           "rating": "C2"
+        },
+        {
+          "title": "La MONUSCO, les FARDC et l’UPDF inaugurent un Centre conjoint de coordination des opérations à Beni",
+          "link": "https://www.radiookapi.net/2026/11/19/actualite/securite/la-monusco-les-fardc-et-lupdf-inaugurent-un-centre-conjoint-de",
+          "source": "Radio Okapi (RDC)",
+          "zone": "3. Afrique centrale",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Délivrance des extraits d’actes de naissance : le ministre Georges Elanga Obam interpelle les maires",
+          "link": "https://fr.journalducameroun.com/delivrance-des-extraits-dactes-de-naissance-le-ministre-georges-elanga-obam-interpelle-les-maires/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1483,20 +1620,20 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 23,
+      "count": 25,
       "top": [
         {
-          "title": "Algérie : après la débâcle de Lomé, Walid Sadi sous le feu des critiques",
-          "link": "https://fr.hespress.com/496956-algerie-apres-la-debacle-de-lome-walid-sadi-sous-le-feu-des-critiques.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Présidence de la FIFA : Gianni Infantino face à Philippe Diallo et Kohzo Tashima",
+          "link": "https://lesoleil.sn/actualites/sports/presidence-de-la-fifa-gianni-infantino-face-a-philippe-diallo-et-kohzo-tashima/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
         },
         {
-          "title": "Industrie de défense : 40 % des besoins des FAR couverts en 2035",
-          "link": "https://fr.hespress.com/496969-industrie-de-defense-40-des-besoins-des-far-couverts-en-2035.html",
+          "title": "Textile marocain : La concurrence asiatique et le recul de la demande européenne mettent la filière sous pression",
+          "link": "https://fr.hespress.com/496361-textile-marocain-la-concurrence-asiatique-et-le-recul-de-la-demande-europeenne-mettent-la-filiere-sous-pression.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
@@ -1504,17 +1641,17 @@
           "rating": "F2"
         },
         {
-          "title": "Cybermenaces et pannes bancaires : Pourquoi le système marocain ne serait pas concerné",
-          "link": "https://fr.hespress.com/496929-cybermenaces-et-pannes-bancaires-pourquoi-le-systeme-marocain-ne-serait-pas-concerne.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Les potins du cardiologue | Les Prostatès ou le cabinet de l’ombre de la cardiologie",
+          "link": "https://kapitalis.com/tunisie/2026/11/19/les-potins-du-cardiologue-les-prostates-ou-le-cabinet-de-lombre-de-la-cardiologie/",
+          "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "T",
-          "relevance": "L",
+          "theme": "P",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Festival de Marrakech : Une société algérienne impose le retrait d’un film malgré l’opposition du réalisateur",
-          "link": "https://fr.hespress.com/496941-festival-de-marrakech-une-societe-algerienne-impose-le-retrait-dun-film-malgre-lopposition-du-realisateur.html",
+          "title": "Casablanca : les fonctionnaires territoriaux rejettent le pointage électronique sans garanties",
+          "link": "https://fr.hespress.com/496914-casablanca-les-fonctionnaires-territoriaux-rejettent-le-pointage-electronique-sans-garanties.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
@@ -1522,13 +1659,13 @@
           "rating": "F2"
         },
         {
-          "title": "Sahara Occidental: bataille d’infox entre des comptes marocains et algériens",
-          "link": "https://www.rfi.fr/fr/afrique/20261118-sahara-occidental-bataille-d-infox-entre-des-comptes-marocains-et-alg%C3%A9riens",
-          "source": "RFI Afrique",
+          "title": "Défaite de l’équipe d’Algérie face au Togo : Maamar Djebbour charge la FAF",
+          "link": "https://www.tsa-algerie.com/defaite-de-lequipe-dalgerie-face-au-togo-maamar-djebbour-charge-la-faf/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "I",
+          "theme": "P",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         }
       ]
     },
@@ -1536,52 +1673,52 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 82,
+      "count": 60,
       "top": [
         {
-          "title": "Israël lance une opération militaire terrestre à Gaza dans une zone contrôlée par le Hamas, en dépit du cessez-le-feu",
-          "link": "https://www.liberation.fr/international/moyen-orient/israel-lance-une-operation-militaire-terrestre-a-gaza-dans-une-zone-controlee-par-le-hamas-en-depit-du-cessez-le-feu-20261118_PAZCJLTBJNFMHJL7M4KCGEUPBU/",
-          "source": "Libération International",
+          "title": "Guerre en Iran : doit-on craindre une nouvelle escalade entre Washington et Téhéran?",
+          "link": "https://www.rfi.fr/fr/podcasts/appels-sur-l-actualit%C3%A9/20261119-guerre-en-iran-doit-on-craindre-une-nouvelle-escalade-entre-washington-et-t%C3%A9h%C3%A9ran",
+          "source": "RFI Moyen-Orient",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "C2"
         },
         {
-          "title": "Atrocity Alert No. 503: Israel and the Occupied Palestinian Territory, Ethiopia and Afghanistan",
-          "link": "https://reliefweb.int/report/occupied-palestinian-territory/atrocity-alert-no-503-israel-and-occupied-palestinian-territory-ethiopia-and-afghanistan",
-          "source": "ReliefWeb",
+          "title": "Air Defenses Repel Houthi Missile Attack on Riyadh - Saudi-Led Coalition",
+          "link": "https://sputnikglobe.com/20261119/air-defenses-repel-houthi-missile-attack-on-riyadh---saudi-led-coalition-1125107307.html",
+          "source": "RIA Novosti (EN)",
           "zone": "8. Moyen-Orient",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Conflict Escalation in Yemen - Situation Report #12 (Reporting period: 11 – 17 November 2026 | Issued: 17 November 2026)",
-          "link": "https://reliefweb.int/report/yemen/conflict-escalation-yemen-situation-report-12-reporting-period-11-17-november-2026-issued-17-november-2026",
-          "source": "ReliefWeb",
-          "zone": "8. Moyen-Orient",
-          "theme": "H",
-          "relevance": "L",
+          "theme": null,
+          "relevance": ".",
           "rating": "A1"
         },
         {
-          "title": "Un nouvel antisémitisme ? Avec Michel Wieviorka",
-          "link": "https://www.iris-france.org/un-nouvel-antisemitisme-avec-michel-wieviorka/",
-          "source": "IRIS France",
+          "title": "La CIJ établit que la Birmanie a commis un génocide à l’encontre de la population rohingya",
+          "link": "https://www.liberation.fr/international/asie-pacifique/la-cij-juge-que-la-birmanie-avait-lintention-de-detruire-la-population-rohingya-20261119_IKE5JJSBERHPVKPN3DVBODRX5U/",
+          "source": "Libération International",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
+          "theme": "J",
+          "relevance": "L",
+          "rating": "C2"
         },
         {
-          "title": "L’armée israélienne annonce le lancement d’une opération dans une zone de la bande de Gaza contrôlée par le Hamas",
-          "link": "https://www.lemonde.fr/guerre-au-proche-orient/article/2026/11/18/l-armee-israelienne-annonce-le-lancement-d-une-operation-dans-une-zone-de-la-bande-de-gaza-controlee-par-le-hamas_6813156_6325529.html",
-          "source": "Le Monde International",
+          "title": "Saudi-led coalition intercepts Houthi missiles targeting Riyadh and south",
+          "link": "https://www.aljazeera.com/news/2026/11/19/saudi-led-coalition-intercepts-houthi-missiles-targeting-riyadh-and-south?traffic_source=rss",
+          "source": "Al Jazeera English",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A1"
+        },
+        {
+          "title": "Israël est en train de perdre le soutien inconditionnel des Etats-Unis",
+          "link": "https://kapitalis.com/tunisie/2026/11/19/israel-est-en-train-de-perdre-le-soutien-inconditionnel-des-etats-unis/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "8. Moyen-Orient",
+          "theme": "P",
           "relevance": "A",
-          "rating": "B2"
+          "rating": "F2"
         }
       ]
     },
@@ -1589,52 +1726,52 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 196,
+      "count": 232,
       "top": [
         {
-          "title": "Rencontre Trump-Xi-Poutine : les Européens, grands absents du sommet de Shenzhen",
-          "link": "https://www.liberation.fr/international/europe/rencontre-trump-xi-poutine-les-europeens-grands-absents-du-sommet-de-shenzhen-20261118_4RVJ5AADHBB6LGJUC7SWIEAUKI/",
+          "title": "La Coalition des volontaires pour l'Ukraine à Berlin concurrencée par le sommet tripartite en Chine",
+          "link": "https://www.france24.com/fr/europe/20261119-coalition-volontaires-ukraine-berlin-sommet-tripartite-chine-poutine-jinping-trump-zelensky",
+          "source": "France 24",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "C1"
+        },
+        {
+          "title": "EN DIRECT, guerre en Ukraine : le sommet entre Xi Jinping, Donald Trump et Vladimir Poutine est terminé",
+          "link": "https://www.lemonde.fr/international/live/2026/11/19/en-direct-guerre-en-ukraine-etats-unis-chine-et-russie-dans-une-position-unique-pour-reduire-les-arsenaux-nucleaires-affirme-donald-tump_6810982_3210.html",
+          "source": "Le Monde International",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "B1"
+        },
+        {
+          "title": "Assassinat du président haïtien Jovenel Moïse : un pasteur américano-haïtien reconnu coupable d’implication",
+          "link": "https://www.lemonde.fr/international/article/2026/11/19/assassinat-du-president-haitien-jovenel-moise-un-pasteur-americano-haitien-reconnu-coupable-aux-etats-unis-d-implication_6813218_3210.html",
+          "source": "Le Monde International",
+          "zone": "17. Amérique C. & Caraïbes",
+          "theme": "L",
+          "relevance": ".",
+          "rating": "B1"
+        },
+        {
+          "title": "Sommet de Shenzhen : «Pékin veut dépeindre les Etats-Unis comme une puissance déclinante»",
+          "link": "https://www.liberation.fr/international/amerique/sommet-de-shenzhen-pekin-veut-depeindre-les-etats-unis-comme-une-puissance-declinante-20261119_U6DULYFRXNC3DJZYKKD4KVMBQA/",
+          "source": "Libération International",
+          "zone": "14. Extrême-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "EN DIRECT – Sommet à Shenzhen : à l’issue de la rencontre, la Chine, la Russie et les Etats-Unis adoptent une «déclaration de paix»",
+          "link": "https://www.liberation.fr/international/asie-pacifique/en-direct-trump-poutine-et-xi-suivez-la-rencontre-au-sommet-a-shenzhen-20261119_NCAHEZDLBNFVXBZWTWEWFRCJTQ/",
           "source": "Libération International",
           "zone": "10. Europe orient. & Balkans",
           "theme": "D",
           "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "« La Francophonie se situe au carrefour de son existence »",
-          "link": "https://lesoleil.sn/actualites/la-francophonie-se-situe-au-carrefour-de-son-existence/",
-          "source": "Le Soleil (Sénégal)",
-          "zone": "9. Europe occidentale",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Sommet de Shenzen en direct : une rencontre historique entre Trump, Poutine et Xi",
-          "link": "https://www.france24.com/fr/asie-pacifique/20261119-sommet-apec-en-direct-rencontres-diplomatiques-attendues-shenzhen-trump-poutine-xi-jinping",
-          "source": "France 24",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
           "rating": "C1"
-        },
-        {
-          "title": "À Shenzhen, un sommet Xi-Trump-Poutine «historique» et la crainte d’un nouveau Yalta",
-          "link": "https://www.lefigaro.fr/international/a-shenzhen-un-sommet-xi-trump-poutine-historique-et-la-crainte-d-un-nouveau-yalta-20261117",
-          "source": "Le Figaro International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "Le chef du Pentagone annonce un accord de coopération militaire entre les Etats-Unis et le Venezuela",
-          "link": "https://www.lemonde.fr/international/article/2026/11/18/le-chef-du-pentagone-annonce-un-accord-de-cooperation-militaire-entre-les-etats-unis-et-le-venezuela_6813193_3210.html",
-          "source": "Le Monde International",
-          "zone": "16. Amérique du Nord",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "B2"
         }
       ]
     }
@@ -1652,42 +1789,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-11-19T02:33:36.132Z",
+      "at": "2026-11-19T11:38:37.215Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-11-19T02:33:36.137Z",
+      "at": "2026-11-19T11:38:37.222Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-11-19T02:34:09.770Z",
+      "at": "2026-11-19T11:39:03.535Z",
       "agent": "Agent Collecte RSS",
-      "message": "102/170 flux OK, 1878 articles"
+      "message": "99/170 flux OK, 1862 articles"
     },
     {
-      "at": "2026-11-19T02:34:12.247Z",
+      "at": "2026-11-19T11:39:06.461Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-11-19T02:34:12.559Z",
+      "at": "2026-11-19T11:39:06.733Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-11-19T02:34:12.563Z",
+      "at": "2026-11-19T11:39:06.738Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 9 alertes"
+      "message": "8 developpements, 18 alertes"
     },
     {
-      "at": "2026-11-19T02:34:12.563Z",
+      "at": "2026-11-19T11:39:06.738Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-11-19T02:34:12.563Z",
+      "at": "2026-11-19T11:39:06.738Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
