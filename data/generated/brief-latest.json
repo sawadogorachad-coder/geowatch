@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-21T11:00:19.193Z",
+  "generatedAt": "2026-11-21T15:15:40.682Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
     "ok": 102,
     "failed": 68,
-    "articles": 1819,
+    "articles": 1804,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -36,6 +36,11 @@
         "id": "rss_eco_faso",
         "name": "L'Économiste du Faso",
         "count": 10
+      },
+      {
+        "id": "rss_faso7",
+        "name": "Faso7",
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -183,16 +188,6 @@
         "count": 10
       },
       {
-        "id": "rss_telquel",
-        "name": "TelQuel (Maroc)",
-        "count": 30
-      },
-      {
-        "id": "rss_hespress",
-        "name": "Hespress (Maroc, FR)",
-        "count": 10
-      },
-      {
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
@@ -256,6 +251,11 @@
         "id": "rss_lemondeafr",
         "name": "Le Monde Afrique",
         "count": 20
+      },
+      {
+        "id": "rss_f24fr",
+        "name": "France 24",
+        "count": 24
       },
       {
         "id": "rss_f24afr",
@@ -340,7 +340,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 14
+        "count": 13
       },
       {
         "id": "rss_fp",
@@ -433,6 +433,11 @@
         "count": 25
       },
       {
+        "id": "rss_arabnews",
+        "name": "Arab News (Arabie Saoudite)",
+        "count": 30
+      },
+      {
         "id": "rss_almonitor",
         "name": "Al-Monitor",
         "count": 20
@@ -440,7 +445,7 @@
       {
         "id": "rss_jpost",
         "name": "Jerusalem Post",
-        "count": 25
+        "count": 23
       },
       {
         "id": "rss_dailysabah",
@@ -466,11 +471,6 @@
         "id": "rss_wire_in",
         "name": "The Wire (Inde)",
         "count": 0
-      },
-      {
-        "id": "rss_dawn",
-        "name": "Dawn (Pakistan)",
-        "count": 26
       },
       {
         "id": "rss_nikkei",
@@ -525,11 +525,6 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_faso7",
-        "name": "Faso7",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
@@ -577,7 +572,7 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_alakhbar",
@@ -667,7 +662,7 @@
       {
         "id": "rss_news24",
         "name": "News24 (Afrique du Sud)",
-        "error": "HTTP 403"
+        "error": "fetch failed"
       },
       {
         "id": "rss_dailymav",
@@ -685,8 +680,18 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_telquel",
+        "name": "TelQuel (Maroc)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
+        "error": "HTTP 403"
+      },
+      {
+        "id": "rss_hespress",
+        "name": "Hespress (Maroc, FR)",
         "error": "HTTP 403"
       },
       {
@@ -728,11 +733,6 @@
         "id": "rss_frs",
         "name": "FRS — Fondation Recherche Stratégique",
         "error": "fetch failed"
-      },
-      {
-        "id": "rss_f24fr",
-        "name": "France 24",
-        "error": "HTTP 403"
       },
       {
         "id": "rss_tv5afr",
@@ -795,11 +795,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_arabnews",
-        "name": "Arab News (Arabie Saoudite)",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_ttoi",
         "name": "Times of Israel",
         "error": "HTTP 403"
@@ -820,9 +815,14 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_dawn",
+        "name": "Dawn (Pakistan)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
-        "error": "HTTP 402"
+        "error": "HTTP 451"
       },
       {
         "id": "rss_jakartap",
@@ -852,7 +852,7 @@
       {
         "id": "rss_imf",
         "name": "FMI — World Economic Outlook",
-        "error": "HTTP 429"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_worldbank",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 42,
-    "alerts": 7,
-    "criticalAlerts": 6,
-    "sourcesDistinct": 68
+    "bfAes": 38,
+    "alerts": 4,
+    "criticalAlerts": 1,
+    "sourcesDistinct": 61
   },
   "topDevelopments": [
     {
@@ -956,9 +956,9 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "F2"
       },
-      "_rating": "F1",
+      "_rating": "F2",
       "_score": 115,
       "_zone": 1,
       "_theme": "P",
@@ -998,9 +998,73 @@
       "_desk": "A1"
     },
     {
+      "title": "On ne touche pas à mon Président Mamadi Doumbouya (Par Billy Keita)",
+      "link": "https://mediaguinee.com/2026/11/on-ne-touche-pas-a-mon-president-mamadi-doumbouya-par-billy-keita/",
+      "pubDate": "2026-11-21T14:21:03.000Z",
+      "description": "Droit de réponse à la RTB : « Drôle de justice » ? Non. Drôle de leçon venue d'un État qui a perdu ses repères . C'est à la Radio Télévision Burkinabè que nous répondons aujourd'hui. Pas par colère. Par devoir. Votre édito, intitulé « La caricature de Zoetaba : drôle de justice dans le royaume de l'or », n'est ni une analyse, ni un éditorial. C'est une propagande. Une propagande d'un État défaillant, qui a perdu le sens de la démocratie, le sens des droits de l'homme, et qui s'est réfugié dans le populisme et le règlement de comptes. Vous vous faites passer pour des donneurs de leçons. Mais de quelles leçons parlez-vous ? Vous, autorités du Burkina, qui peinez à balayer devant vos propres portes, qui peinez à garantir la sécurité sur votre propre sol, vous vous permettez de juger la Guinée ? Quand le Président Mamadi Doumbouya, guide suprême des Guinéens, reprend le contrôle de sa souveraineté territoriale, rétablit l'ordre, protège l'environnement de son pays et défend ses ressources, cela devient soudain un crime pour vous. Pourquoi ? Parce que la Guinée souveraine dérange. Parce que la Guinée qui dit non dérange. Parce que la Guinée qui ne se couche pas dérange. Alors vous lancez vos mercenaires des plumes. Des journalistes sans déontologie, sans éthique, qui n'ont qu'une seule vision : s'en prendre à Président Mamadi Doumbouya. Nous le disons haut et fort : La République de Guinée n'a ni vocation à recevoir des injonctions de ceux qui peinent à balayer devant leurs propres portes, ni obligation de courber l'échine devant une provocation médiatique déguisée en sentinelle politique. La Guinée n'est pas votre royaume. La Guinée n'est pas votre caricature. La Guinée est un État souverain. President Mamadi Doumbouya n'est pas un homme qu'on caricature. C'est un homme éclairé. Un homme qui défend son peuple. Un homme qui a choisi la dignité là où d'autres ont choisi la soumission. Vous parlez de justice ? Parlons-en. La vraie justice, c'est celle qui protège les faibles, qui protège l'environnement, qui protège les ressources d'un peuple contre le pillage. La fausse justice, c'est celle qu'on brandit à la télévision pour régler des comptes politiques. Alors, à la RTB, à vos éditorialistes, à vos propagandistes, nous disons ceci : « Ne touchez pas à notre Président. Ne touchez pas à notre souveraineté. Ne touchez pas à la Guinée ». La Guinée avance. Avec ou sans votre permission. Billy Keita, auteur du livre «Dans la tête du Général Mamadi Doumbouya* L’article On ne touche pas à mon Président Mamadi Doumbouya (Par Billy Keita) est apparu en premier sur Mediaguinee.com .",
+      "_source": "Mediaguinee",
+      "_sourceId": "rss_mediaguinee",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Humour : Gérard Ouédraogo lance « Ça se passe chez nous » pour sensibiliser et divertir le public burkinabè",
+      "link": "https://www.minute.bf/humour-gerard-ouedraogo-lance-ca-se-passe-chez-nous-pour-sensibiliser-et-divertir-le-public-burkinabe/",
+      "pubDate": "2026-11-21T13:43:20.000Z",
+      "description": "L'humoriste burkinabè Kiswendsida Gérard Ouédraogo, dit « Son excellence », a officiellement présenté, ce vendredi 20 novembre 2026, son album audio intitulé « Ça se passe chez nous », lors d'un point de presse à Ouagadougou. Composé de 10 sketchs d'une durée totale de 100 minutes, il aborde des thématiques sociales, dont le chômage des jeunes, l'alcoolisme, les relations amoureuses et les rapports entre l'Afrique et l'Occident. Derrière le titre « Ça se passe chez nous ! » se cache une création humoristique voulue par Kiswendsida Gérard Ouédraogo pour faire une peinture du quotidien de la société burkinabè, une source inépuisable d'histoires. Les difficultés financières, les relations de couple, le chômage, les comportements sociaux, les rapports avec les institutions ou encore les questions de souveraineté culturelle sont autant de réalités qui nourrissent l'imagination de l'artiste. L'artiste Son Excellence Gérard promet du rire au public dans cet album À travers 10 sketchs indépendants, « Son excellence Gérard » explore ces situations avec un regard qui mêle humour, ironie et observation sociale. Chaque épisode possède son propre univers et sa propre histoire. L'auditeur peut ainsi écouter les sketchs séparément, sans avoir besoin de suivre un ordre particulier. La série, en mooré et en français, alterne les sujets légers et les thèmes plus engagés. Elle invite à rire, mais aussi à prendre du recul sur certaines attitudes et contradictions de notre société. Selon Kiswendsida Gérard Ouédraogo, dit « Son excellence », la série s'adresse à un public large et diversifié, avec une attention particulière portée aux personnes aveugles et malvoyantes, pour lesquelles le support audio constitue un moyen privilégié d'accès à la culture, aux populations des zones rurales, souvent confrontées aux difficultés d'accès à Internet et aux coûts de connexion, ainsi qu'aux personnes âgées, qui demeurent attachées à la radio et aux médias traditionnels. Une vue du public à cette dédicace Au-delà de ces publics prioritaires, cette production entend toucher toutes les catégories de personnes qui apprécient l'humour et les histoires inspirées de situations de la vie quotidienne dans lesquelles chacun peut se reconnaître. « J'ai décidé de rentrer à la résidence d'écriture pour produire ce spectacle et mettre à la disposition du grand public, des radios et aussi et surtout répondre aux besoins de ces personnes défavorisées. Ce que je recherche, c'est sensibiliser et provoquer le rire, la bonne humeur chez les gens parce que nous vivons dans un monde où, quand l'être humain est heureux, il arrive à sourire. Il y a plein de choses qui se passent positivement et nous, en tant qu'artistes et humoristes, nous devons aussi travailler pour rendre les gens heureux. Chacun a sa mission sur terre », a-t-il déclaré. Les titres sont entre autres : « Le Kindingomdmyé », « Le chômage n'est pas camarade de quelqu'un », « L'aventure de Sayouba », « Le Pacte », « Quelqu'un et le même », etc. Le parrain de la cérémonie, Hippolyte Ouangrawa, alias M'ba Boanga, a, pour sa part, expliqué les raisons de son engagement aux côtés de « Son excellence ». Selon lui, son soutien relève avant tout d'un devoir d'accompagnement et d'encouragement envers un enfant qui sollicite l'appui de son père. Il dit avoir accepté d'associer son image à la cérémonie afin de donner à ce dernier la force et la détermination nécessaires pour poursuivre son initiative et faire connaître ses créations. Hyppolite Ouangrawa, parrain Appréciant le travail réalisé, il lui a attribué une note de plus de 100 %. Il a encouragé l'humoriste à persévérer pour toucher davantage de publics, notamment ceux qui n'ont pas accès à la télévision ou à Internet. « J'apprécie à 150 % ce qu'il a eu à faire. Il a toujours des faiblesses, mais tout en travaillant, il va encore continuer à faire de lui son moi intérieur », a-t-il déclaré. À noter que le parrain artistique de cette série audio est le Pr Hamadou Mandé, professeur titulaire d'études théâtrales à l'Université Joseph Ki-Zerbo. La clé USB contenant l'album est disponible au prix unitaire de 10 000 F CFA. Le contenu sera également diffusé sur les antennes des radios partenaires, notamment Savane FM. Jean-François SOMÉ Minute.bf",
+      "_source": "Minute BF",
+      "_sourceId": "rss_minute_bf",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 107,
+      "_zone": 1,
+      "_theme": "L",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
       "title": "Kouba : Un militaire initie une formation en art plastique et marketing digital au profit de 20 jeunes vulnérables",
       "link": "https://burkina24.com/2026/11/21/kouba-un-militaire-initie-une-formation-en-art-plastique-et-marketing-digital-au-profit-de-20-jeunes-vulnerables/",
-      "pubDate": "2026-11-21T10:14:35.000Z",
+      "pubDate": "2026-11-21T12:33:35.000Z",
       "description": "Vingt jeunes issus de familles vulnérables ont entamé, le vendredi 20 novembre 2026, une formation de 45 jours en art plastique et en marketing digital à Kouba, une banlieue de Ouagadougou. Cette initiative est portée par le maréchal des logis-chef Athanase Tarnadga, alias Antonov Art, en collaboration avec une équipe d’artistes plasticiens. La formation se … The post Kouba : Un militaire initie une formation en art plastique et marketing digital au profit de 20 jeunes vulnérables appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
       "_source": "Burkina24",
       "_sourceId": "rss_burkina24",
@@ -1029,82 +1093,16 @@
       "_desk": "A1"
     },
     {
-      "title": "Orpailleurs refoulés de Guinée: 76 169 personnes enregistrées au Burkina dont «983 Togolais, 580 Béninois, 150 Ivoiriens, 133 Nigériens, 44 Maliens…»",
-      "link": "https://www.wakatsera.com/orpailleurs-refoules-de-guinee-76-169-personnes-enregistrees-au-burkina-dont-983-togolais-580-beninois-150-ivoiriens-133-nigeriens-44-maliens/",
-      "pubDate": "2026-11-20T19:32:46.000Z",
-      "description": "Dans un communiqué, ce vendredi 20 novembre 2026, le gouvernement déclare la fin de rapatriement des orpailleurs refoulés des sites miniers en Guinée, soulignant que ce sont 76 169 personnes qui ont été enregistrés à la date du 18 novembre dont «983 Togolais, 580 Béninois, 150 Ivoiriens, 133 Nigériens, 53 Nigérians, 44 Maliens, 38 Ghanéens, 7 Guinéens, 3 Sierra léonais, 2 Tchadiens et 1 Sénégalais» qui ont été pris en charge. L’article Orpailleurs refoulés de Guinée: 76 169 personnes enregistrées au Burkina dont «983 Togolais, 580 Béninois, 150 Ivoiriens, 133 Nigériens, 44 Maliens…» est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Université Norbert Zongo : Sawadogo T. Roger décroche son doctorat avec la mention Très honorable",
-      "link": "https://www.minute.bf/universite-norbert-zongo-sawadogo-t-roger-decroche-son-doctorat-avec-la-mention-tres-honorable/",
-      "pubDate": "2026-11-21T10:31:40.000Z",
-      "description": "L'Université Norbert Zongo de Koudougou compte un nouveau docteur en économie appliquée. Sawadogo T. Roger a soutenu sa thèse de doctorat ce vendredi 20 novembre 2026 à Koudougou. Intitulée « Essais sur le financement bancaire des économies de l'Union économique et monétaire ouest-africaine (UEMOA) », sa recherche a été validée par le jury avec la mention très honorable. Une distinction accueillie dans une ambiance de joie par ses collègues, amis et membres de sa famille. Pendant une dizaine de minutes, l'impétrant a présenté les résultats de ses travaux de recherche consacrés aux contraintes qui entravent l'accès au financement des économies de l'UEMOA. Trois principaux enseignements ressortent de son étude. D'abord, la concentration du secteur bancaire et le niveau de concurrence influencent les taux d'intérêt appliqués aux entreprises. Ensuite, les banques disposent de possibilités de refinancement auprès de la Banque centrale des États de l'Afrique de l'Ouest (BCEAO), contrairement à certaines perceptions faisant de celle-ci un facteur de limitation du financement. Enfin, la stabilité politique et sécuritaire apparaît comme un élément déterminant dans l'appréciation des risques par les banques et leur capacité à financer le secteur privé. L'impétrant a brillamment défendu son travail À l'issue de sa présentation, les membres du jury ont procédé à une analyse critique du document, formulé des observations et adressé plusieurs questions au candidat, qui a apporté des réponses satisfaisantes. Des recommandations lui ont également été faites en vue d'améliorer la qualité de son travail. Directeur de thèse du désormais docteur, le professeur titulaire Mahamadou Diarra a salué la pertinence et l'actualité du sujet, notamment au regard des difficultés de financement des économies africaines et du secteur privé. Il a également apprécié l'engagement du candidat dans le processus de recherche. Mahamadou Diarra, Directeur de thèse Selon lui, SAWADOGO T. Roger s'est montré particulièrement réceptif aux observations formulées tout au long de son parcours. Une grande partie des recommandations des trois rapporteurs ayant été prise en compte, son directeur de thèse y voit la preuve de son dévouement et de sa passion pour la recherche en sciences économiques. Visiblement heureux de cette consécration après plusieurs années de travail, le nouveau docteur a exprimé sa reconnaissance à son directeur de thèse, qui l'a accompagné et encouragé depuis ses premières années de formation, ainsi qu'à l'ensemble des professeurs ayant pris part à la délibération. Une vue des membres du jury Au terme des échanges, le jury a prononcé la validation de la thèse avec la mention très honorable. Une annonce qui a déclenché des cris de joie dans la salle, consacrant ainsi une nouvelle étape dans le parcours académique de SAWADOGO T. Roger, désormais docteur en économie appliquée de l'Université Norbert Zongo. Pr CHABOSSOU Augustin Foster C., Président du jury, Professeur titulaire en économie du développement à l’Université d’Abomey-Calavi (Bénin).Pr DIARRA Mahamadou : Directeur de thèse, Professeur titulaire en politique économique à l’Université Norbert-Zongo du Burkina Faso. Dr METOIOLE SOMÉ Dommbévin Juste, Rapporteur, Maître de conférences agrégé en sciences économiques à l’Université Norbert-Zongo. Dr KINDA Mohamed Tidjane , Rapporteur, Maître de conférences agrégé en économie du développement à l’Université Joseph-Ki-Zerbo. Dr DIANDA Issa , Examinateur, Maître de conférences agrégé en économie du développement à l’Université Nazi-Boni. Ces cinq universitaires ont constitué le jury chargé d'évaluer les travaux de recherche du doctorant sur le financement bancaire des économies de l'UEMOA. Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 103,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Guinée : 580 Béninois accueillis au Burkina Faso après les expulsions d’orpailleurs",
-      "link": "https://beninwebtv.com/guinee-580-beninois-accueillis-burkina-faso-rapatriement/",
-      "pubDate": "2026-11-21T08:49:28.000Z",
-      "description": "Guinée : 580 Béninois accueillis au Burkina Faso après les expulsions d’orpailleurs",
+      "title": "Guinée : le Bénin dépêche une mission consulaire au Mali et au Burkina Faso",
+      "link": "https://beninwebtv.com/guinee-le-benin-depeche-une-mission-consulaire-au-mali-et-au-burkina-faso/",
+      "pubDate": "2026-11-21T11:49:16.000Z",
+      "description": "Guinée : le Bénin dépêche une mission consulaire au Mali et au Burkina Faso",
       "_source": "Bénin Web TV",
       "_sourceId": "rss_beninwebtv",
       "_sourceCat": "ouest_afr",
       "_sourceBloc": "afrique",
       "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic"
-      ],
+      "_tags": [],
       "_majors": [],
       "_bf": true,
       "_aes": true,
@@ -1112,31 +1110,63 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "A1"
       },
-      "_rating": "F1",
-      "_score": 103,
+      "_rating": "A1",
+      "_score": 107,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "M",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
+      "_relevance": ".",
       "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "GNFS firefighters avert disaster as tanker catches fire at Tamale filling station",
-      "link": "https://www.myjoyonline.com/gnfs-firefighters-avert-disaster-as-tanker-catches-fire-at-tamale-filling-station/",
-      "source": "MyJoyOnline (Ghana)",
-      "date": "2026-11-21T08:42:19.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
+      "title": "TASS: swedish reconnaissance plane spent almost five hours over Black Sea",
+      "link": "https://tass.com/world/2222891",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-11-21T14:18:57.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
       "bf": false,
       "majors": [
         {
-          "type": "crise",
-          "keyword": "disaster"
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "title": "Un an après un prétendu cessez-le-feu, Gaza est de nouveau livré à la famine",
+      "link": "https://www.mediapart.fr/journal/international/211126/un-apres-un-pretendu-cessez-le-feu-gaza-est-de-nouveau-livre-la-famine",
+      "source": "Mediapart International",
+      "date": "2026-11-21T12:28:27.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "cessez-le-feu"
+        }
+      ]
+    },
+    {
+      "title": "Avant le sommet de l’UE consacré à son budget, la France s’oppose à la baisse de 204 milliards proposés par le Conseil européen",
+      "link": "https://www.liberation.fr/international/europe/avant-le-sommet-de-lue-consacre-a-son-budget-la-france-soppose-a-la-baisse-de-204-milliards-proposes-par-le-conseil-europeen-20261121_WO3IZVG2DZEUNIT5XYNT56C6RA/",
+      "source": "Libération International",
+      "date": "2026-11-21T11:56:25.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
         }
       ]
     },
@@ -1155,116 +1185,36 @@
           "keyword": "séisme"
         }
       ]
-    },
-    {
-      "title": "EN DIRECT, guerre en Ukraine : Ursula von der Leyen condamne la tentative d’assassinat au Danemark attribuée à Moscou",
-      "link": "https://www.lemonde.fr/international/live/2026/11/21/en-direct-guerre-en-ukraine-deux-morts-et-47-blesses-dans-des-frappes-russes-sur-kryvy-rih-ville-natale-de-volodymyr-zelensky_6810982_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-11-21T05:38:14.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "Génocide des Rohingya : la Cour internationale de justice rend un arrêt pour l’histoire",
-      "link": "https://www.lemonde.fr/international/article/2026/11/20/genocide-des-rohingya-la-cour-internationale-de-justice-confirme-qu-elle-est-indubitablement-la-boussole-du-droit-international_6813702_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-11-20T20:38:52.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
-    },
-    {
-      "title": "Le Danemark accuse la Russie d’avoir commandité la tentative d’assassinat d’un rappeur ukrainien sur son territoire",
-      "link": "https://www.lemonde.fr/international/article/2026/11/20/le-danemark-accuse-la-russie-d-avoir-commandite-la-tentative-d-assassinat-d-un-rappeur-ukrainien-sur-son-territoire_6813695_3210.html",
-      "source": "Le Monde International",
-      "date": "2026-11-20T19:00:08.000Z",
-      "rating": "B1",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
-    },
-    {
-      "title": "World closer than ever to nuclear disaster, Kuznick warns",
-      "link": "https://www.tehrantimes.com/news/532357/World-closer-than-ever-to-nuclear-disaster-Kuznick-warns",
-      "source": "Tehran Times",
-      "date": "2026-11-20T18:36:50.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
-    },
-    {
-      "title": "Ukraine : la Pologne refuse d'envoyer des soldats après un éventuel cessez-le-feu, malgré les projets de la coalition occidentale",
-      "link": "https://rtenfrancais.tv/news/140366-ukraine-pologne-refuse-envoyer-soldats",
-      "source": "RT en français",
-      "date": "2026-11-20T16:44:14.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      220
+      198
+    ],
+    [
+      "occident_fr",
+      117
     ],
     [
       "occident_us",
       113
     ],
     [
-      "autre",
-      111
-    ],
-    [
-      "occident_fr",
-      107
-    ],
-    [
       "golfe_mo",
-      67
+      92
+    ],
+    [
+      "autre",
+      84
     ],
     [
       "russie",
-      61
+      62
     ],
     [
       "turquie",
-      37
+      50
     ],
     [
       "chine",
@@ -1272,11 +1222,11 @@
     ],
     [
       "bf_local",
-      26
+      27
     ],
     [
       "sahel",
-      22
+      21
     ]
   ],
   "desks": [
@@ -1284,7 +1234,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 98,
+      "count": 99,
       "top": [
         {
           "title": "Mali et Burkina : Le Bénin déploie une mission d’assistance à ses ressortissants refoulés de Guinée",
@@ -1311,7 +1261,7 @@
           "zone": "1. Sahel & AO franco.",
           "theme": "P",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
           "title": "Alerte sanitaire au Burkina Faso : Du sildénafil découvert dans le « Jus Colas Puissant », la consommation et la vente suspendues",
@@ -1323,13 +1273,13 @@
           "rating": "A1"
         },
         {
-          "title": "Kouba : Un militaire initie une formation en art plastique et marketing digital au profit de 20 jeunes vulnérables",
-          "link": "https://burkina24.com/2026/11/21/kouba-un-militaire-initie-une-formation-en-art-plastique-et-marketing-digital-au-profit-de-20-jeunes-vulnerables/",
-          "source": "Burkina24",
+          "title": "On ne touche pas à mon Président Mamadi Doumbouya (Par Billy Keita)",
+          "link": "https://mediaguinee.com/2026/11/on-ne-touche-pas-a-mon-president-mamadi-doumbouya-par-billy-keita/",
+          "source": "Mediaguinee",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "P",
           "relevance": "A",
-          "rating": "C2"
+          "rating": "F2"
         }
       ]
     },
@@ -1337,29 +1287,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 62,
+      "count": 52,
       "top": [
         {
-          "title": "Why Nigeria is seeking stronger EU partnership to combat terrorism – Defence Minister",
-          "link": "https://www.vanguardngr.com/2026/11/why-nigeria-is-seeking-stronger-eu-partnership-to-combat-terrorism-defence-minister/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "GNFS firefighters avert disaster as tanker catches fire at Tamale filling station",
-          "link": "https://www.myjoyonline.com/gnfs-firefighters-avert-disaster-as-tanker-catches-fire-at-tamale-filling-station/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
-          "rating": "F2"
-        },
-        {
-          "title": "Obi best hope for Nigerians, NDC chairman Cleopas declares",
-          "link": "https://www.vanguardngr.com/2026/11/obi-best-hope-for-nigerians-ndc-chairman-cleopas-declares/",
+          "title": "Tinubu inaugurates UI medical hostel, promises 50,000 bed spaces in federal varsities",
+          "link": "https://www.vanguardngr.com/2026/11/tinubu-inaugurates-ui-medical-hostel-promises-50000-bed-spaces-in-federal-varsities/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1367,13 +1299,13 @@
           "rating": "F2"
         },
         {
-          "title": "UNICEF raises alarm over 624,000 out-of-school children",
-          "link": "https://www.vanguardngr.com/2026/11/unicef-raises-alarm-over-624000-out-of-school-children/",
+          "title": "FG increases medical student admission to 12,000, targets 20,000 annually — Alausa",
+          "link": "https://www.vanguardngr.com/2026/11/fg-increases-medical-student-admission-to-12000-targets-20000-annually-alausa/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "H",
+          "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
           "title": "Rent Control registers 3,000 landlords in Greater Accra in three months – Commissioner",
@@ -1383,6 +1315,24 @@
           "theme": "J",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Rent Control to go digital by first quarter of 2027 – Rent Commissioner",
+          "link": "https://www.myjoyonline.com/rent-control-to-go-digital-by-first-quarter-of-2027-rent-commissioner/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "NLC denies November 30 Jigawa strike over transport allowance",
+          "link": "https://www.vanguardngr.com/2026/11/nlc-denies-planned-november-30-jigawa-strike-over-transport-allowance/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
         }
       ]
     },
@@ -1390,7 +1340,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 18,
+      "count": 16,
       "top": [
         {
           "title": "Problématique locale et dynamique globale (Par Aly DIOUF)",
@@ -1398,6 +1348,15 @@
           "source": "Le Soleil (Sénégal)",
           "zone": "4. Grands Lacs",
           "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Le gouverneur du Nord-Kivu appelle à intensifier les opérations contre les ADF après les massacres de Cantine",
+          "link": "https://www.radiookapi.net/2026/11/21/actualite/securite/le-gouverneur-du-nord-kivu-appelle-intensifier-les-operations-contre",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
@@ -1427,15 +1386,6 @@
           "theme": null,
           "relevance": ".",
           "rating": "C2"
-        },
-        {
-          "title": "RDC : l’élu démocrate américain Gregory Meeks estime que supprimer la limite des mandats risquerait de menacer les possibilités de partenariat avec les États-Unis",
-          "link": "https://actualite.cd/2026/11/21/rdc-lelu-democrate-americain-gregory-meeks-estime-que-supprimer-la-limite-des-mandats",
-          "source": "ActualitéCD (RDC)",
-          "zone": "4. Grands Lacs",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
         }
       ]
     },
@@ -1443,16 +1393,34 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 31,
+      "count": 20,
       "top": [
         {
-          "title": "Tunisie : le gouvernement relance les grands chantiers d’infrastructures de transport terrestre, aéroportuaire et portuaire",
-          "link": "https://rtenfrancais.tv/afrique/140370-tunisie-grands-chantiers-infrastructures-transport",
-          "source": "RT en français",
+          "title": "Belkacem, Ben Barka, Ben Youssef : ces assassinats politiques qui ont marqué les premières années post-indépendance au Maghreb",
+          "link": "https://www.jeuneafrique.com/1861986/politique/belkacem-ben-barka-ben-youssef-ces-assassinats-politiques-qui-ont-marque-les-premieres-annees-post-independance-au-maghreb/",
+          "source": "Jeune Afrique",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "L",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Algérie : 17 narcotrafiquants arrêtés, 1,9 tonne de kif traité marocain saisie",
+          "link": "https://www.tsa-algerie.com/algerie-17-narcotrafiquants-arretes-19-tonne-de-kif-traite-marocain-saisie/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F1"
+        },
+        {
+          "title": "Présidentielle française : l’Algérie, un « ascenseur électoral » en panne ? Décryptage",
+          "link": "https://www.tsa-algerie.com/presidentielle-francaise-lalgerie-un-ascenseur-electoral-en-panne-decryptage/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
         },
         {
           "title": "Tourisme : l’Algérie vise 8 millions de visiteurs en 2029 et mobilise sa diaspora",
@@ -1464,29 +1432,11 @@
           "rating": "F2"
         },
         {
-          "title": "Sous-marins : Scorpène ou Dolphin AIP pour la Marine royale ?",
-          "link": "https://fr.hespress.com/497284-sous-marins-scorpene-ou-dolphin-aip-pour-la-marine-royale.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
           "title": "Deux narcotrafiquants marocains abattus par les Garde-frontières algériens",
           "link": "https://www.tsa-algerie.com/deux-narcotrafiquants-marocains-abattus-par-les-garde-frontieres-algeriens/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "L",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Colloque «فِعْل · Faire» à Tunis, ou la nécessité de repenser les savoirs du projet",
-          "link": "https://kapitalis.com/tunisie/2026/11/21/colloque-%d9%81%d9%90%d8%b9%d9%92%d9%84-%c2%b7-faire-a-tunis-ou-la-necessite-de-repenser-les-savoirs-du-projet/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1496,50 +1446,50 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 67,
+      "count": 84,
       "top": [
         {
-          "title": "Crises des routes maritimes et vulnérabilité énergétique de l’Afrique : l’intégration régionale comme réponse stratégique (Dr Kemoko DIAKITÉ)",
-          "link": "https://lesoleil.sn/opinions/crises-des-routes-maritimes-et-vulnerabilite-energetique-de-lafrique-lintegration-regionale-comme-reponse-strategique/",
-          "source": "Le Soleil (Sénégal)",
+          "title": "Fighting a Radical Militia Was Not Part of the Plan",
+          "link": "https://www.theatlantic.com/international/2026/11/houthis-saudi-arabia-war/689532/?utm_source=feed",
+          "source": "The Atlantic",
           "zone": "8. Moyen-Orient",
-          "theme": "E",
+          "theme": "S",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "World closer than ever to nuclear disaster, Kuznick warns",
-          "link": "https://www.tehrantimes.com/news/532357/World-closer-than-ever-to-nuclear-disaster-Kuznick-warns",
-          "source": "Tehran Times",
+          "title": "Gaza aid mission turns deadly as Israeli strike kills 3 Palestinians",
+          "link": "https://www.dailysabah.com/world/mid-east/gaza-aid-mission-turns-deadly-as-israeli-strike-kills-3-palestinians",
+          "source": "Daily Sabah (Turquie)",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
-          "title": "Saudi-led coalition intercepts three Houthi missiles headed for Riyadh",
-          "link": "https://www.aljazeera.com/news/2026/11/21/saudi-led-coalition-intercepts-three-houthi-missiles-headed-for-riyadh?traffic_source=rss",
-          "source": "Al Jazeera English",
-          "zone": "8. Moyen-Orient",
-          "theme": "L",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Saudi-led coalition says downed 3 Houthi missiles headed for Riyadh",
-          "link": "https://www.thehindu.com/news/international/saudi-led-coalition-says-downed-3-houthi-missiles-headed-for-riyadh/article71727179.ece",
-          "source": "The Hindu (Inde)",
-          "zone": "8. Moyen-Orient",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A1"
-        },
-        {
-          "title": "Trump considering new Iran strikes as US military warns of strain on forces",
-          "link": "https://www.ft.com/content/2daf570c-189a-4362-a128-828c520b902e",
-          "source": "Financial Times World",
+          "title": "Iran facing ‘silent economic war’ that is 'tougher' than missile war, says President Pezeshkian",
+          "link": "https://www.aa.com.tr/en/middle-east/iran-facing-silent-economic-war-that-is-tougher-than-missile-war-says-president-pezeshkian/4132988",
+          "source": "Anadolu Agency (Turquie)",
           "zone": "8. Moyen-Orient",
           "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "L'Arabie saoudite dit avoir intercepté des missiles lancés par les Houthis vers Riyad",
+          "link": "https://www.france24.com/fr/moyen-orient/20261121-l-arabie-saoudite-dit-avoir-intercept%C3%A9-des-missiles-lanc%C3%A9s-par-les-houthis-vers-riyad",
+          "source": "France 24",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Israël : qui sont les haredim, ces juifs ultraorthodoxes qui suscitent tant de débats dans le pays ? Comprendre en trois minutes",
+          "link": "https://www.lemonde.fr/comprendre-en-3-minutes/video/2026/11/21/israel-qui-sont-les-haredim-ces-juifs-ultraorthodoxes-qui-suscitent-tant-de-debats-dans-le-pays-comprendre-en-trois-minutes_6813925_6176282.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
           "relevance": "A",
           "rating": "B2"
         }
@@ -1549,52 +1499,52 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 187,
+      "count": 172,
       "top": [
         {
-          "title": "EN DIRECT, guerre en Ukraine : Ursula von der Leyen condamne la tentative d’assassinat au Danemark attribuée à Moscou",
-          "link": "https://www.lemonde.fr/international/live/2026/11/21/en-direct-guerre-en-ukraine-deux-morts-et-47-blesses-dans-des-frappes-russes-sur-kryvy-rih-ville-natale-de-volodymyr-zelensky_6810982_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Le Danemark accuse la Russie d’avoir commandité la tentative d’assassinat d’un rappeur ukrainien sur son territoire",
-          "link": "https://www.lemonde.fr/international/article/2026/11/20/le-danemark-accuse-la-russie-d-avoir-commandite-la-tentative-d-assassinat-d-un-rappeur-ukrainien-sur-son-territoire_6813695_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B1"
-        },
-        {
-          "title": "Xi Jinping a-t-il rendu son pouvoir éternel ?",
-          "link": "https://legrandcontinent.eu/fr/2026/11/20/xi-jinping-a-t-il-rendu-son-pouvoireternel/",
-          "source": "Le Grand Continent",
-          "zone": "14. Extrême-Orient",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Rugby | La Tunisie affronte la Suisse ce samedi lors d’un test-match international",
-          "link": "https://kapitalis.com/tunisie/2026/11/20/rugby-la-tunisie-affronte-la-suisse-ce-samedi-lors-dun-test-match-international/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Recherche : Le doctorant Souleymane Ouédraogo contribue à la découverte d'un système stellaire",
+          "link": "https://lefaso.net/spip.php?article150942",
+          "source": "Lefaso.net",
           "zone": "9. Europe occidentale",
           "theme": "P",
           "relevance": "L",
+          "rating": "C2"
+        },
+        {
+          "title": "Avant le sommet de l’UE consacré à son budget, la France s’oppose à la baisse de 204 milliards proposés par le Conseil européen",
+          "link": "https://www.liberation.fr/international/europe/avant-le-sommet-de-lue-consacre-a-son-budget-la-france-soppose-a-la-baisse-de-204-milliards-proposes-par-le-conseil-europeen-20261121_WO3IZVG2DZEUNIT5XYNT56C6RA/",
+          "source": "Libération International",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "Missiles russes en Pologne : les actions hostiles contre l’Europe ont plus que doublé depuis octobre",
-          "link": "https://legrandcontinent.eu/fr/2026/11/20/missiles-russes-en-pologne-les-actions-hostiles-contre-leurope-ont-plus-que-double-depuis-octobre/",
-          "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
+          "title": "Pérou : un séisme de magnitude 6,7 secoue les Andes et fait sortir les habitants de Lima",
+          "link": "https://beninwebtv.com/perou-un-seisme-de-magnitude-67-secoue-les-andes-et-fait-sortir-les-habitants-de-lima/",
+          "source": "Bénin Web TV",
+          "zone": "18. Amérique du Sud",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Sánchez pide en Tenerife un 75% de participación para sumar “176 escaños progresistas”",
+          "link": "https://elpais.com/espana/2026-11-21/sanchez-pide-en-tenerife-un-75-de-participacion-para-sumar-176-escanos-progresistas.html",
+          "source": "El País (Espagne, ES)",
+          "zone": "18. Amérique du Sud",
+          "theme": "P",
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Sonacos : la Chine prête à absorber toute la production de la prochaine campagne",
+          "link": "https://lesoleil.sn/actualites/economie/sonacos-la-chine-prete-a-absorber-toute-la-production-de-la-prochaine-campagne/",
+          "source": "Le Soleil (Sénégal)",
+          "zone": "14. Extrême-Orient",
+          "theme": "E",
           "relevance": "A",
-          "rating": "A1"
+          "rating": "F2"
         }
       ]
     }
@@ -1608,48 +1558,43 @@
   ],
   "mail": {
     "sent": false,
-    "reason": "disabled"
+    "reason": "EMAIL_TO missing"
   },
   "agentLog": [
     {
-      "at": "2026-11-21T10:59:57.887Z",
+      "at": "2026-11-21T15:15:21.320Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-11-21T10:59:57.892Z",
+      "at": "2026-11-21T15:15:21.326Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-11-21T11:00:16.678Z",
+      "at": "2026-11-21T15:15:38.283Z",
       "agent": "Agent Collecte RSS",
-      "message": "102/170 flux OK, 1819 articles"
+      "message": "102/170 flux OK, 1804 articles"
     },
     {
-      "at": "2026-11-21T11:00:18.906Z",
+      "at": "2026-11-21T15:15:40.476Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-11-21T11:00:19.190Z",
+      "at": "2026-11-21T15:15:40.680Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-11-21T11:00:19.195Z",
+      "at": "2026-11-21T15:15:40.684Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 7 alertes"
+      "message": "8 developpements, 4 alertes"
     },
     {
-      "at": "2026-11-21T11:00:19.195Z",
+      "at": "2026-11-21T15:15:40.684Z",
       "agent": "Agent Email",
-      "message": "Envoi email ignore (SEND_EMAIL=false)"
-    },
-    {
-      "at": "2026-11-21T11:00:19.195Z",
-      "agent": "Agent Email",
-      "message": "Email non envoye: disabled"
+      "message": "Email non envoye: EMAIL_TO missing"
     }
   ]
 }
