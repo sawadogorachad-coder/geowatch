@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-25T19:15:33.170Z",
+  "generatedAt": "2026-11-26T03:33:58.496Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 104,
-    "failed": 66,
-    "articles": 1946,
+    "ok": 102,
+    "failed": 68,
+    "articles": 1830,
     "okSources": [
       {
         "id": "rss_lefaso",
@@ -40,7 +40,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 10
+        "count": 0
       },
       {
         "id": "rss_mutations",
@@ -123,11 +123,6 @@
         "count": 30
       },
       {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "count": 12
-      },
-      {
         "id": "rss_guineenews",
         "name": "Guineenews",
         "count": 30
@@ -185,16 +180,6 @@
       {
         "id": "rss_tsa",
         "name": "TSA — Tout sur l'Algérie",
-        "count": 10
-      },
-      {
-        "id": "rss_telquel",
-        "name": "TelQuel (Maroc)",
-        "count": 30
-      },
-      {
-        "id": "rss_hespress",
-        "name": "Hespress (Maroc, FR)",
         "count": 10
       },
       {
@@ -343,6 +328,11 @@
         "count": 10
       },
       {
+        "id": "rss_sipri",
+        "name": "SIPRI — Stockholm Intl Peace Research",
+        "count": 0
+      },
+      {
         "id": "rss_nyt",
         "name": "NYT World",
         "count": 30
@@ -350,7 +340,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 15
+        "count": 16
       },
       {
         "id": "rss_fp",
@@ -375,7 +365,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 28
+        "count": 30
       },
       {
         "id": "rss_bbc_africa",
@@ -443,6 +433,11 @@
         "count": 25
       },
       {
+        "id": "rss_arabnews",
+        "name": "Arab News (Arabie Saoudite)",
+        "count": 30
+      },
+      {
         "id": "rss_almonitor",
         "name": "Al-Monitor",
         "count": 20
@@ -478,11 +473,6 @@
         "count": 0
       },
       {
-        "id": "rss_dawn",
-        "name": "Dawn (Pakistan)",
-        "count": 27
-      },
-      {
         "id": "rss_nikkei",
         "name": "Nikkei Asia",
         "count": 30
@@ -505,17 +495,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
       },
       {
         "id": "rss_reliefweb_burkina",
         "name": "ReliefWeb — Burkina Faso",
-        "count": 20
+        "count": 0
       },
       {
         "id": "rss_reliefweb_mali",
         "name": "ReliefWeb — Mali",
-        "count": 20
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -635,6 +625,11 @@
         "error": "HTTP 500"
       },
       {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_saharang",
         "name": "Sahara Reporters (Nigeria)",
         "error": "HTTP 404"
@@ -690,8 +685,18 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_telquel",
+        "name": "TelQuel (Maroc)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
+        "error": "HTTP 403"
+      },
+      {
+        "id": "rss_hespress",
+        "name": "Hespress (Maroc, FR)",
         "error": "HTTP 403"
       },
       {
@@ -780,11 +785,6 @@
         "error": "HTTP 403"
       },
       {
-        "id": "rss_sipri",
-        "name": "SIPRI — Stockholm Intl Peace Research",
-        "error": "fetch failed"
-      },
-      {
         "id": "rss_chinadaily",
         "name": "China Daily",
         "error": "HTTP 404"
@@ -792,11 +792,6 @@
       {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
-        "error": "HTTP 403"
-      },
-      {
-        "id": "rss_arabnews",
-        "name": "Arab News (Arabie Saoudite)",
         "error": "HTTP 403"
       },
       {
@@ -820,9 +815,14 @@
         "error": "fetch failed"
       },
       {
+        "id": "rss_dawn",
+        "name": "Dawn (Pakistan)",
+        "error": "HTTP 403"
+      },
+      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
-        "error": "HTTP 402"
+        "error": "HTTP 451"
       },
       {
         "id": "rss_jakartap",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 46,
-    "alerts": 5,
-    "criticalAlerts": 2,
-    "sourcesDistinct": 73
+    "bfAes": 38,
+    "alerts": 6,
+    "criticalAlerts": 3,
+    "sourcesDistinct": 70
   },
   "topDevelopments": [
     {
@@ -902,45 +902,12 @@
       "_desk": "A1"
     },
     {
-      "title": "FIFM : Othmane Zine, le regard marocain derrière « Leïla et la nuit »",
-      "link": "https://fr.hespress.com/497829-fifm-othmane-zine-le-regard-marocain-derriere-leila-et-la-nuit.html",
-      "pubDate": "2026-11-25T18:45:14.000Z",
-      "description": "Présenté en première mondiale dans la section Gala du Festival international du film de Marrakech, « Leïla et la nuit » est le fruit d’une co-réalisation entre le Brésilien Fellipe Barbosa et le Marocain Othmane Zine. Mais derrière cette collaboration franco-maroco-brésilienne se cache surtout une histoire d’amitié ancienne et un lien intime avec la famille Alaoui. Co-scénariste et co-réalisateur du film, Othmane Zine apporte un regard marocain essentiel à une œuvre qui ne cherche pas à raconter la vie de Leïla Alaoui, mais à sonder ce que sa disparition a laissé derrière elle. Pour Othmane Zine, « Leïla et la nuit » ne pouvait être un projet comme les autres. Le réalisateur marocain connaissait Leïla Alaoui depuis l’enfance. « Leïla et moi, on se connaît depuis qu’on a l’âge de 5 ans », raconte-t-il. Une proximité qui s’est étendue à toute la famille et qui explique, en partie, la naissance naturelle de cette co-réalisation. Lorsque Leïla part étudier aux États-Unis au début des années 2000, elle y rencontre Fellipe Barbosa. Leur amitié devient rapidement très forte et le jeune cinéaste brésilien découvre à son tour le Maroc, où il passe un été auprès de Leïla et de ses amis. Les liens se poursuivent au fil des années. Zine collaborera notamment avec Barbosa sur son premier long métrage, « Casa Grande ». Lorsque Leïla est tuée en 2016 dans l’attaque de Ouagadougou, puis que son père Aziz Alaoui publie son livre, le projet de film apparaît presque naturellement. « Fellipe voulait en faire un film, et notre collaboration s’est faite vraiment naturellement. C’est basé d’abord sur une amitié », résume Othmane Zine. Deux regards pour une même histoire Si Fellipe Barbosa porte avec lui le souvenir de son amie et une relation profondément personnelle à la famille, Othmane Zine représente une autre proximité : celle d’un Marocain qui a grandi avec Leïla, connaît sa famille et partage avec elle une partie de son environnement culturel. Cette double appartenance était, pour lui, essentielle à l’équilibre du film. « C’étaient deux regards qui se complétaient » , explique-t-il. Si Barbosa connaît très bien le Maroc, son regard reste celui d’un cinéaste brésilien vivant à l’étranger, issu d’une culture différente. Or le film traverse des questions liées à la religion, à l’islam et à la société marocaine. Zine a donc apporté ce que son parcours et sa proximité avec la famille lui permettaient de comprendre de l’intérieur. En retour, Barbosa a apporté son propre regard, extérieur et complémentaire. « La combinaison des deux fait que voilà, ça a apporté quelque chose de spécial à ce film », estime le réalisateur. C’est probablement l’un des choix fondamentaux du film. Le spectateur qui s’attendrait à découvrir la trajectoire de la photographe, son parcours professionnel ou les différentes étapes de sa vie peut être surpris. Othmane Zine tient à le préciser : « Il ne faut pas se tromper parce que ce n’est pas du tout un biopic. » Le film ne cherche donc pas à retracer la vie de Leïla Alaoui. Il s’intéresse à ce qui se passe après. À l’espace laissé vide par sa disparition. À la manière dont une famille tente de continuer à vivre lorsque l’un de ses membres disparaît brutalement. Le point de départ reste le livre écrit par son père, Aziz Alaoui. Les cinéastes ont voulu rester au plus près de sa vision et de son expérience. « Ce n’est pas un film sur Leïla : c’est un film qui parle de la perte de Leïla à travers les yeux de ses parents », souligne Zine. Cette nuance est essentielle. Le personnage absent devient le centre d’une histoire qui parle finalement de ceux qui restent : des parents, d’un couple, des frères et sœurs et des liens familiaux bouleversés par le deuil. Tourner dans la maison de Leïla à Marrakech Dans la ville ocre, le tournage a pris une dimension particulière. Une grande partie du film a été tournée dans la véritable maison familiale des Alaoui, là où Leïla a grandi. Pour Zine, ce choix a immédiatement changé l’atmosphère du plateau. « Le fait d’avoir tourné dans la vraie maison des Alaoui, tout de suite on se connecte avec Leïla qui a vécu dans cette maison, qui a grandi dans cette maison » , confie-t-il. La famille était également présente au quotidien pendant le tournage. Cette proximité a créé une forme de silence et de respect partagé par toute l’équipe. « Il y avait vraiment cette espèce de calme sur le plateau » , se souvient le réalisateur. Cette proximité avec la famille a également influencé le travail des comédiens. Pour Zine, les acteurs ne jouaient pas dans un environnement totalement fictif : ils étaient quotidiennement confrontés aux véritables personnes qui avaient vécu cette histoire. « Les acteurs aussi se nourrissaient du fait d’être quotidiennement avec les personnages qu’ils interprétaient », explique-t-il. La frontière entre fiction et réalité devenait ainsi particulièrement fine. Sans transformer le tournage en reconstitution documentaire, la présence de la famille apportait aux comédiens une matière humaine impossible à reproduire artificiellement. C’est aussi ce qui donne au film cette sensation d’intimité, sans que celle-ci ne devienne intrusive. Préserver la femme derrière la tragédie Au-delà du deuil, une autre exigence traverse le film : ne pas réduire Leïla à son statut de victime. Pour Othmane Zine, cette question était fondamentale. Parce que lui-même la connaissait, mais aussi parce que la tragédie pouvait facilement prendre toute la place. « Ce sont des sujets très graves, très douloureux, qu’il faut traiter avec pudeur » , affirme-t-il. La volonté était donc de préserver la femme derrière le drame, sans nier ce qui lui est arrivé. Le film part d’une tragédie profondément intime, mais cherche progressivement à lui donner une portée plus universelle. « Elle était une victime, certes, mais si on ouvre, le sujet est beaucoup plus vaste et beaucoup plus universel » , estime le réalisateur. C’est finalement dans cette tension entre proximité et distance que se situe le regard d’Othmane Zine. Lui qui a connu Leïla depuis l’enfance aurait pu choisir de raconter celle qu’il connaissait, ses souvenirs, son parcours, sa personnalité. Avec Fellipe Barbosa, il a fait un autre choix : raconter ce que sa disparition a produit autour d’elle. Un film sur l’absence plutôt qu’un portrait. Sur la famille plutôt que sur la carrière. Sur le deuil plutôt que sur la tragédie elle-même. Et peut-être est-ce précisément cette approche qui permet à « Leïla et la nuit » de dépasser l’histoire personnelle de Leïla Alaoui. En partant d’une famille et d’une perte profondément réelles, le film cherche finalement à parler d’une expérience que chacun peut reconnaître : celle de devoir apprendre à vivre avec l’absence. The post FIFM : Othmane Zine, le regard marocain derrière « Leïla et la nuit » appeared first on Hespress Français - Actualités du Maroc .",
-      "_source": "Hespress (Maroc, FR)",
-      "_sourceId": "rss_hespress",
-      "_sourceCat": "maghreb",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 18,
-      "_theme": "L",
-      "_zoneShort": "18. Amérique du Sud",
-      "_relevance": ".",
-      "_desk": "A6"
-    },
-    {
-      "title": "Journée du Tirailleur africain : Les anciens combattants ravivent la mémoire du 15 octobre 1987 au Mémorial Thomas Sankara",
-      "link": "https://faso7.com/2026/11/25/journee-du-tirailleur-africain-les-anciens-combattants-ravivent-la-memoire-du-15-octobre-1987-au-memorial-thomas-sankara/",
-      "pubDate": "2026-11-25T18:10:12.000Z",
-      "description": "Dans le cadre de la commémoration de la Journée du Tirailleur africain, la Délégation aux anciens combattants et anciens militaires a organisé, ce 25 novembre 2026, une visite au Mémorial Thomas Sankara à Ouagadougou. Cette initiative a permis aux anciens militaires de revisiter une page marquante de l'histoire du Burkina Faso et de partager leurs souvenirs du 15 octobre 1987. Les premiers cars arrivent au Mémorial Thomas Sankara. À leur descente, les anciens combattants et anciens militaires affichent de larges sourires. Vêtus de beaux habits en pagne traditionnel burkinabè, ils avancent dans une ambiance chaleureuse. Ici, des retrouvailles. Là, des salutations militaires et des accolades. Les taquineries se mêlent aux causeries en petits groupes. Dans les gestes comme dans les regards, la joie des retrouvailles côtoie déjà la nostalgie. Après ces moments de convivialité, l’heure est à la découverte. En file indienne, les visiteurs font leur entrée dans le Mémorial. Certains retrouvent des lieux chargés de souvenirs. D’autres redécouvrent une partie de l’histoire qu’ils ont pourtant vécue. Au fil des explications de la guide, les regards se posent sur les différents espaces. Les récits, livrés avec précision, ramènent progressivement chacun à une époque marquante de l’histoire du Burkina Faso. Les souvenirs ont parfois le poids de toute une vie Cette visite, pour l’adjudant-chef-major à la retraite Aimé Ouédraogo, également chef du village de Bissiga, s’inscrit dans le cadre des activités commémoratives dédiées aux forces armées. Au-delà de la découverte du site, elle constitue une occasion de confronter les récits à la mémoire de ceux qui ont vécu les événements. « Quand on écoute les récits, l’émotion est très forte. Cela nous renvoie à plus d’une trentaine d’années en arrière. La plupart de nos camarades ont été des témoins vivants du tragique événement du 15 octobre 1987. Nous en avons gardé des souvenirs très douloureux » , a-t-il confié. Pour lui, cette démarche doit se poursuivre. Il indique que des échanges ont été engagés avec le président de la Délégation aux anciens combattants et anciens militaires (DACA), en vue d’organiser une rencontre avec les anciens militaires désireux d’apporter leurs témoignages et leurs contributions à l’enrichissement de la mémoire historique. L’émotion est encore plus palpable chez Alzouma Soubou, adjudant-chef-major à la retraite, de la classe 1974. Ancien collaborateur de Thomas Sankara, il affirme avoir travaillé aux côtés de celui qui était alors capitaine, de 1975 jusqu’à sa disparition. Il faisait notamment partie des hommes chargés d’assurer la sécurité sur le site. Le 15 octobre 1987 reste gravé dans sa mémoire. Absent au moment de l’assassinat, il raconte avoir découvert les corps à son arrivée. Une scène insoutenable qui l’a profondément marqué. Incapable de supporter ce qu’il venait de voir, il a fait demi-tour. Il sera ensuite conduit, avec d’autres collègues, dans une salle où ils seront retenus pendant trois jours avant de retrouver leurs familles. Près de quatre décennies plus tard, son retour au Mémorial ravive cette douloureuse séquence. Depuis le 15 octobre 1987, il n’avait plus remis les pieds sur les lieux. Entre souvenirs de collaboration, douleur de la perte et fierté de l’héritage laissé par l’ancien président, sa voix traduit une émotion difficile à contenir. « Je suis fier de l’héritage qu’il nous a laissé. Nous avons travaillé ensemble et passé du temps à ses côtés. Sa disparition a créé un grand vide dans mon entourage et dans ma vie. Aujourd’hui, revenir ici me rappelle beaucoup de choses. C’est une très grande émotion. Cela me fait repenser à tout ce que nous avons vécu ensemble et à ce qu’il représentait pour nous » , a-t-il témoigné, visiblement ému. À travers cette visite, les anciens combattants, en plus de se remémorer une page de leur histoire, ont exprimé leur volonté de contribuer à la transmission d’une mémoire riche aux jeunes générations. Éléonore Savadogo Faso7 L’article Journée du Tirailleur africain : Les anciens combattants ravivent la mémoire du 15 octobre 1987 au Mémorial Thomas Sankara est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "rumeurs sur les vols d’argent sur les comptes Mobile Money : Orange Burkina rassure sur la sécurité de l’application Max it",
+      "link": "https://netafrique.net/affaire-vols-dargent-sur-les-comptes-mobile-money-orange-burkina-rassure-sur-la-securite-de-lapplication-max-it/",
+      "pubDate": "2026-11-25T23:45:29.000Z",
+      "description": "Face à la multiplication de rumeurs sur les réseaux sociaux faisant état d'un prétendu piratage de l'application Max it et de compromissions de comptes Orange Money, la Direction générale d'Orange a publié une mise au point ferme ce mercredi 25 novembre 2026. Dans un communiqué de presse officiel, l'opérateur dément catégoriquement toute intrusion sur ses systèmes et rassure sa clientèle sur le niveau de protection de sa nouvelle version Max it 2.0. Explicitant le véritable mode opératoire des fraudeurs fondé sur le piège des logiciels malveillants et le contrôle à distance des téléphones , la compagnie appelle ses abonnés à une vigilance accrue et détaille les consignes de sécurité essentielles pour protéger leurs transactions. Intervenant à la suite de publications alarmistes affirmant qu'une faille au sein de l'application Max it permettrait d'accéder frauduleusement aux comptes Orange Money, la Direction générale a tenu à apporter des clarifications précises. L'opérateur confirme que la super application Max it est hautement sécurisée, repose sur des normes internationales rigoureuses, fait l'objet d'une surveillance permanente et n'a subi aucune intrusion. Pour offrir un parcours plus fluide et renforcer la protection des accès, l'ancienne version (1.0) a été volontairement désactivée au profit de Max it 2.0. Cette mise à jour intègre notamment une gestion sécurisée des codes OTP, désormais détectés ou intégrés automatiquement au clavier (sur iOS comme sur Android) afin d'éviter toute saisie manuelle ou interception. Selon l'analyse des équipes techniques, le risque ne provient pas d'une faille applicative, mais de la compromission directe des téléphones des victimes. Les cybercriminels utilisent des techniques d'ingénierie sociale bien rodées pour prendre la main sur les appareils. En diffusant par SMS, WhatsApp ou sur les réseaux sociaux des liens piégés promettant des gains, du crédit gratuit ou des cadeaux, ou en infectant des sites de téléchargement d'applications et de films piratés, les escrocs incitent les utilisateurs à installer un logiciel malveillant ( malware ). Une fois le programme espion installé à l'insu du propriétaire, les pirates parviennent à visualiser l'écran et à contrôler le téléphone à distance, leur permettant de manipuler les applications financières comme s'ils tenaient l'appareil entre leurs mains. Face à ces menaces ciblées, l'opérateur rappelle que la prudence individuelle constitue la première ligne de défense. La Direction générale exhorte les clients à ne jamais cliquer sur des liens suspects (même transmis par des proches), à télécharger l'application exclusivement sur les magasins officiels (Google Play Store et App Store) et à ne jamais communiquer leur code secret ni leurs codes OTP. Par ailleurs, l'entreprise met en garde contre les faux conseillers se faisant passer pour des agents de la marque afin de réclamer des opérations guidées : elle précise que ses appels officiels s'effectuent désormais uniquement depuis le +121 (avec un service client joignable au 121). Enfin, tout utilisateur confronté à un appel douteux est invité à raccrocher immédiatement et à signaler le numéro suspect au 128, la ligne dédiée à la lutte anti-arnaque. L’article rumeurs sur les vols d'argent sur les comptes Mobile Money : Orange Burkina rassure sur la sécurité de l'application Max it est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -948,7 +915,7 @@
         "economic",
         "diplomatic",
         "military",
-        "political"
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -961,19 +928,19 @@
       },
       "_rating": "F2",
       "_score": 115,
-      "_zone": 8,
-      "_theme": "S",
-      "_zoneShort": "8. Moyen-Orient",
+      "_zone": 1,
+      "_theme": "I",
+      "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
-      "_desk": "A5"
+      "_desk": "A1"
     },
     {
-      "title": "Ouagadougou : L’Armée de Terre et la Brigade verte main dans la main pour assainir le camp Sangoulé Lamizana",
-      "link": "https://faso7.com/2026/11/25/ouagadougou-larmee-de-terre-et-la-brigade-verte-main-dans-la-main-pour-assainir-le-camp-sangoule-lamizana/",
-      "pubDate": "2026-11-25T16:13:55.000Z",
-      "description": "L’Etat-Major Général de l’Armée de Terre, en collaboration avec la commune de Ouagadougou, a organisé la troisième édition de sa journée de salubrité ce mercredi 25 novembre 2026 au camp Général Aboubacar Sangoulé Lamizana. Cette initiative a mobilisé plusieurs dizaines de militaires et des femmes de la brigade verte pour assainir et embellir le cadre de vie et de travail au sein de la caserne. De 7h à 10h, les participants, munis de pelles, de râteaux, de balais et de houes, ont procédé au nettoyage de plusieurs espaces du camp. L’activité a également permis de sensibiliser les personnels et les usagers à l’importance de maintenir leur environnement propre. Pour le Chef d’État-Major Général de l’Armée de Terre, le Colonel Rouamba Ahmed Hermann, cette journée constitue un rendez-vous important pour préserver la salubrité de la caserne et renforcer la cohésion entre les différentes entités mobilisées. « C’est d’abord un événement particulier pour maintenir le cadre de vie, le cadre de travail très, très propre. Et on profite de cette opportunité pour passer un bon message à travers des messages relatifs à la salubrité de la caserne » , a-t-il expliqué. La propreté, une exigence pour la vie en caserne-©Faso7 Le Chef d’État-Major Général de l’Armée de Terre a insisté sur la nécessité de faire de la propreté une responsabilité collective. Selon lui, l’état de salubrité d’une caserne constitue un élément essentiel de son image et des conditions de travail des personnels. « Une caserne, le premier réflexe dans la perception de tout ce qui se passe ici, c’est la propreté. C’est quelque chose qui doit être visible. Donc faisons l’essentiel pour que chacun comprenne qu’il doit y contribuer afin que nous puissions travailler dans les meilleures conditions, dans les meilleures dispositions possibles », a déclaré le Colonel Rouamba Ahmed Hermann. La participation de la commune de Ouagadougou à cette activité s’inscrit dans la dynamique de promotion d’un cadre de vie sain. Saïdou Nassouri, directeur de la salubrité publique et de l’hygiène de la commune, a salué l’initiative de l’État-Major Général de l’Armée de Terre. « La première carte de visite d’un site de cette taille, c’est son état de propreté » , a-t-il souligné, estimant que la salubrité contribue à la fois à la santé des personnes qui vivent dans le camp et à l’image de l’institution auprès des visiteurs. Un appel à la responsabilité de tous-©Faso7 Pour Saïdou Nassouri, les journées de salubrité ne doivent pas se limiter à des opérations ponctuelles de nettoyage. Elles doivent également servir à conscientiser les personnels et les usagers sur les comportements à adopter pour préserver durablement les espaces publics et collectifs. « En matière de propreté, tout le monde doit mettre la main pour que le cadre devienne propre. […] Si un usager vient trouver propre, il a peur de salir. Voilà, c’est une façon de sensibiliser ceux qui y sont et ceux qui sont dehors » , a-t-il affirmé. Le directeur de la salubrité publique et de l’hygiène a par ailleurs rappelé que cette initiative rejoint les objectifs de l’Initiative présidentielle pour le développement communautaire, qui promeut l’amélioration du cadre de vie. « Si chacun fait cela, je pense que nous allons réussir ce que les plus hautes autorités veulent de ce pays. […] La meilleure image de notre pays, on doit la montrer. Et cela passe également par la propreté » , a-t-il conclu. À travers cette troisième édition, l’état-major général de l’armée de terre et la commune de Ouagadougou entendent encourager l’adoption de gestes citoyens au quotidien, afin de maintenir un environnement sain au sein du camp Sangoulé Lamizana. Josué TIENDREBEOGO Faso7 L’article Ouagadougou : L’Armée de Terre et la Brigade verte main dans la main pour assainir le camp Sangoulé Lamizana est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
+      "title": "Affaire Arthur Zagré : La réserve de la Mauritanie menace la qualification des Étalons de la CAN 2027",
+      "link": "https://netafrique.net/affaire-arthur-zagre-la-reserve-de-la-mauritanie-menace-la-qualification-des-etalons-de-la-can-2027/",
+      "pubDate": "2026-11-25T23:29:13.000Z",
+      "description": "À la suite de la double confrontation des éliminatoires de la CAN 2027 disputée les 13 et 17 novembre 2026, la Fédération mauritanienne de football (FFRIM) a officialisé le dépôt d'une réclamation auprès de la Confédération Africaine de Football (CAF) contestant l'éligibilité de l'international burkinabè Arthur Zagré. Ayant représenté la France dans les catégories de jeunes (U19), le latéral des Étalons se retrouve au centre d'un litige portant sur la validation formelle de son changement d'association sportive auprès de la FIFA. Alors que la Fédération burkinabè de football (FBF) a transmis le dossier à ses conseils juridiques, l'équipe nationale du Burkina Faso s'expose potentiellement à des sanctions de défaite par forfait (3-0) en cas d'irrégularité administrative. La qualification acquise sur le terrain par les Étalons du Burkina Faso fait face à une contestation sur le tapis vert. Dans un communiqué de presse publié le 25 novembre 2026, la Fédération mauritanienne de football (FFRIM) a confirmé avoir saisi, dès le 19 novembre 2026, les instances compétentes de la Confédération Africaine de Football (CAF). Cette réclamation porte directement sur l'éligibilité du joueur burkinabè Arthur Zagré lors des deux rencontres des éliminatoires de la Coupe d’Afrique des Nations (CAN) 2027 jouées les 13 et 17 novembre 2026. Pour défendre ses intérêts, la FFRIM a confié le suivi de la procédure à un cabinet d'avocats international. De son côté, la Fédération burkinabè de football (FBF) a reçu la notification de la CAF et a indiqué que ses avocats étaient saisis du dossier. L'enjeu central de cette procédure repose sur la distinction entre la nationalité civile et la nationalité sportive d'un athlète. Si Arthur Zagré détient le passeport burkinabè, son parcours international antérieur sous le maillot de la Fédération Française de Football (FFF) encadre strictement son éligibilité avec les Étalons. Entre octobre 2018 et février 2020, le défenseur a disputé 13 rencontres avec la sélection française U19, dont 5 matchs officiels lors des qualifications et de la phase finale du Championnat d'Europe U19. En vertu de l'article 9 du Règlement d'application des Statuts de la FIFA, tout joueur ayant représenté une association lors d'une compétition officielle de jeunes doit obtenir l'accord préalable du Tribunal du Football de la FIFA pour changer d'association. Après deux matchs amicaux avec le Burkina Faso et un passage sur le banc contre le Bénin, Arthur Zagré a disputé son premier match officiel contre la Centrafrique avant d'être aligné lors de la double confrontation face à la Mauritanie. La question décisive devant le jury disciplinaire de la CAF est de déterminer si l'autorisation de la FIFA a été formellement délivrée avant ces rencontres officielles. Dans l'hypothèse où l'inéligibilité du joueur serait établie, le barème des sanctions de la CAF s'avère particulièrement rigoureux. Conformément aux articles 38.1 et 40 du règlement de la CAN ainsi qu'à l'article 150 du Code disciplinaire de la CAF, la participation d'un joueur non qualifié entraîne la perte de la rencontre par forfait sur le score de 3-0, assortie d'une amende financière. L’article 47 du règlement de la CAN prévoit également des risques de suspension pour l'édition suivante en cas d'erreur administrative majeure dans l'enregistrement d'un joueur. La Mauritanie connaît d'ailleurs parfaitement cette jurisprudence : en juillet 2023, la CAF avait donné gain de cause à la RDC dans l'affaire Khadim Diaw, infligeant à la sélection mauritanienne deux défaites par forfait (3-0) et 10 000 dollars d'amende pour l'alignement d'un joueur n'ayant pas finalisé son changement d'association après le CHAN. Dans l'attente du verdict des instances continentales, le football burkinabè retient son souffle. L’article Affaire Arthur Zagré : La réserve de la Mauritanie menace la qualification des Étalons de la CAN 2027 est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -995,7 +962,72 @@
       "_rating": "F2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "S",
+      "_theme": "D",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Semaine du numérique 2026 : L'open source, l'IA, les langues nationales et l'accompagnement des start-up au cœur d'un panel",
+      "link": "https://lefaso.net/spip.php?article151033",
+      "pubDate": "2026-11-25T23:21:00.000Z",
+      "description": "La 21e édition de la Semaine du numérique se poursuit ce mercredi 25 novembre 2026 au Parc d'exposition du Salon international de l'artisanat de Ouagadougou (SIAO). Pour cette deuxième journée, les échanges ont mis en lumière plusieurs défis liés à la souveraineté technologique du Burkina Faso tels que l'appropriation des technologies ouvertes, le développement de l'intelligence artificielle dans les langues nationales, la formation des compétences locales et le financement des entreprises numériques. Les échanges ont été modérés par Abdoul Kader Ky, directeur national de l'économie numérique du Niger. Pour Idriss Tinto, conseiller technique au ministère de la Transition digitale, des postes et des communications électroniques, l'open source est un levier de souveraineté. L'accès aux codes sources permet d'adapter les solutions existantes et réduit la dépendance aux grandes plateformes. Il met en garde contre les hausses de tarifs, les restrictions d'accès ou les interruptions de service décidées par les fournisseurs d'intelligence artificielle (IA), et plaide pour des compétences locales capables d'assurer la maintenance des outils. M. Tinto reconnaît les risques de l'ouverture, mais estime que la collaboration entre développeurs et utilisateurs aide à détecter les failles. Il invite les États à soutenir les communautés locales et voit aussi dans l'automatisation du code une occasion de faire évoluer les métiers plutôt qu'une simple menace pour l'emploi. Idriss Tinto, conseiller technique au ministère de la transition digitale, des postes et des communications électroniques. Faire parler l'IA en mooré La souveraineté passe aussi par les langues. Dr Rodrigue Kafando, enseignant-chercheur à l'Université virtuelle du Burkina Faso et chargé de recherche au Centre d'excellence en intelligence artificielle (CITADEL), a présenté des travaux sur quatre langues nationales : le mooré, le dioula, le fulfuldé et le gulmancema. Les équipes adaptent des modèles existants, notamment ceux de la famille NLLB de Meta, à partir de données collectées localement. Dr Rodrigue Kafando, enseignant-chercheur à l'Université virtuelle du Burkina Faso. Le principal obstacle reste selon lui la rareté de ressources variées. À l'en croire, les premiers essais en mooré se sont appuyés sur des textes bibliques et des documents relatifs aux droits humains, ce qui limite le vocabulaire maîtrisé par les modèles. M. Kafando préconise d'élargir la collecte aux traductions, aux transcriptions et aux enregistrements vocaux du quotidien, et de faire valider les évaluations par des locuteurs. Il cite l'outil ( https://lessentiel.bf ) qui rend l'actualité accessible en mooré par traduction automatique, et envisage des usages dans l'éducation, la santé et l'agriculture. Il appelle à mutualiser les données linguistiques entre chercheurs, développeurs, associations et institutions publiques. Vue partielle de participants du Mali et du Niger . Des compétences, mais aussi des clients Ounténi T. Cyril Ouoba, directeur général de RIGO, a identifié cinq domaines de formation prioritaires : le génie logiciel, les infrastructures, la cybersécurité, les données et l'IA, et la commercialisation. Sur ce dernier point, il juge l'écosystème insuffisant, car une innovation technique ne devient pas un produit viable sans compétences en marketing. Il demande que l'État et les grandes entreprises recourent davantage aux solutions locales, la commande publique pouvant constituer un débouché déterminant. Les innovations primées lors des hackathons devraient, selon lui, être déployées au-delà de la remise des prix. Ounténi T. Cyril Ouoba, directeur général de RIGO. Il recommande des formations courtes, de trois à six mois, pour les jeunes et les femmes déscolarisés, et l'introduction de l'algorithmique dès le collège. Il évoque aussi les commerçantes des marchés et des zones rurales, qui pourraient gérer stocks, ventes et comptabilité avec des applications vocales dans les langues nationales. M. Ouoba a également proposé de recenser les solutions numériques matures dans la comptabilité, la recherche, l'agriculture ou la santé. Les États de l'AES pourraient conduire ce travail et le présenter lors de la prochaine édition de la Semaine. Il suggère enfin un réseau de mentors, constitué avec les associations professionnelles des trois pays, pour accompagner les jeunes talents jusqu'à l'aboutissement de leurs projets. Il se dit réservé sur les aides financières immédiates. Des étudiants ont suivi avec attention les échanges qui ont duré plus de 2 heures de temps. Accompagner avant de financer Cette réserve a trouvé un écho dans l'intervention de Bourhanoud-Dine Sawadogo, chargé d'analyse économique et financière au Fonds burkinabè de développement économique et social (FBDES). Il a rappelé le bilan de l'Initiative Burkina Startups, lancée en 2017 avec une enveloppe annoncée de 10 milliards de francs CFA et l'ambition de faire naître 500 start-up. L'expérience a révélé des insuffisances dans la préparation et l'encadrement de certains porteurs de projets. Les échanges ont été modérés par Abdoul Kader Ky, directeur national de l'économie numérique du Niger. . Pour lui, il faut évaluer les besoins réels avant de mobiliser des fonds car certaines start-up manquent davantage de formation, d'équipements, de réseau ou d'appui technique que d'argent. Le parcours envisagé comprend la formation initiale, la sélection, la maturation des projets et l'accompagnement vers le marché, avec une attention particulière à l'existence d'une demande réelle. [ Cliquez ici pour lire l'intégralité ] Fredo Bassolé Lefaso.net",
+      "_source": "Lefaso.net",
+      "_sourceId": "rss_lefaso",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "T",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "L",
+      "_desk": "A1"
+    },
+    {
+      "title": "AES : les ministres du Commerce du Burkina et du Mali reçus par le Général Tiani",
+      "link": "https://malijet.com/actualite-sur-aes/312978-aes-les-ministres-du-commerce-du-burkina-et-du-mali-recus.html",
+      "pubDate": "2026-11-25T22:44:14.000Z",
+      "description": "Le Général Abdourahamane Tiani, Président du Niger, s'est entretenu le 25 novembre 2026 au palais présidentiel de Niamey avec les ministres du Commerce et de l'Industrie de l'AES: Serge Gnaniodem Poda pour le Burkina Faso et Moussa Alassane Diallo pour le Mali.",
+      "_source": "Malijet",
+      "_sourceId": "rss_malijet",
+      "_sourceCat": "sahel",
+      "_sourceBloc": "sahel",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1033,17 +1065,19 @@
       "_desk": "A1"
     },
     {
-      "title": "AES : le Burkina Faso, le Mali et le Niger préparent des achats communs de médicaments",
-      "link": "https://beninwebtv.com/aes-burkina-mali-niger-achats-groupes-medicaments/",
-      "pubDate": "2026-11-25T14:56:24.000Z",
-      "description": "AES : le Burkina Faso, le Mali et le Niger préparent des achats communs de médicaments",
-      "_source": "Bénin Web TV",
-      "_sourceId": "rss_beninwebtv",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
+      "title": "Aéroport de Ouagadougou: 181 drones, des kits Starlink, la Douane Burkinabè coupe une chaîne d’approvisionnement majeure en matériel militaire de pointe",
+      "link": "https://netafrique.net/aeroport-de-ouagadougou-181-drones-des-kits-starlink-la-douane-burkinabe-coupe-une-chaine-dapprovisionnement-majeure-en-materiel-militaire-de-pointe/",
+      "pubDate": "2026-11-25T23:52:36.000Z",
+      "description": "Dans le cadre de la protection du territoire et du renforcement du dispositif sécuritaire, la Brigade spéciale des Douanes de l’Aéroport (BSA) a réalisé une saisie stratégique comprenant 181 drones, des terminaux de communication par satellite Starlink et divers équipements militaires, pour une valeur estimée à plus de 80 millions de francs CFA. Annoncée ce mercredi par la Direction générale des Douanes, cette interception permet d'écarter une menace directe contre les forces engagées sur le terrain et d'entraver l'approvisionnement de réseaux hostiles. La vigilance constante des services douaniers a permis d'intercepter une cargaison d'équipements particulièrement sensibles. Lors d' un contrôle mené à l'aéroport, la Brigade spéciale des Douanes de l’Aéroport (BSA) a réussi à saisir un ensemble de matériels comprenant 181 drones, des terminaux de communication par satellite de type Starlink ainsi que divers équipements militaires. Selon les précisions apportées ce mercredi par la Direction générale des Douanes, la valeur marchande totale de ce lot est estimée à plus de 80 millions de francs CFA. Au-delà de l'aspect financier, l'enjeu prioritaire de cette opération réside dans la préservation de la sécurité nationale. Selon l'administration douanière, la circulation incontrôlée de ces technologies pose un risque grave, au moment où les outils numériques et matériels de pointe occupent une place grandissante dans les conflits armés. Un détournement de ces équipements à des fins hostiles aurait pu mettre en péril les populations ainsi que les forces armées engagées dans les opérations de reconquête du territoire. Ainsi, la douane souligne que la valeur de cette saisie repose principalement sur la neutralisation de ces risques et le frein mis à l'approvisionnement de réseaux hostiles. Face à ce succès opérationnel, le commandement douanier a salué le travail accompli par les équipes de terrain. Le directeur général des Douanes, l’inspecteur divisionnaire Yves Kafando, a félicité les agents de la BSA pour leur rigueur, leur vigilance et leur engagement patriotique. Il a également réitéré l'importance pour les populations de respecter scrupuleusement la réglementation régissant l'importation de matériels sensibles, tout en les invitant à collaborer avec les services compétents pour stopper toute introduction illégale d'équipements menaçant la sécurité. « Sur le front de la souveraineté nationale, chaque saisie compte, chaque vigilance importe, chaque vie mérite d’être protégée », conclut le communiqué officiel. L’article Aéroport de Ouagadougou: 181 drones, des kits Starlink, la Douane Burkinabè coupe une chaîne d'approvisionnement majeure en matériel militaire de pointe est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
-        "diplomatic"
+        "economic",
+        "military",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -1052,25 +1086,25 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F2"
+        "rating": "F1"
       },
-      "_rating": "F2",
+      "_rating": "F1",
       "_score": 107,
       "_zone": 1,
-      "_theme": null,
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": ".",
+      "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Brigade spéciale de l’aéroport : 181 drones et divers matériels militaires saisis",
-      "link": "https://burkina24.com/2026/11/25/brigade-speciale-de-laeroport-181-drones-et-divers-materiels-militaires-saisis/",
-      "pubDate": "2026-11-25T14:36:17.000Z",
-      "description": "Matériels militaires, drones et équipements de communication par satellite Starlink : les soldats de l’économie aux avant-postes de la sécurité nationale. Dans un contexte national marqué par les impératifs de reconquête du territoire et de protection des populations, la Brigade spéciale des Douanes de l’Aéroport (BSA) vient, une fois de plus, de démontrer toute la … The post Brigade spéciale de l’aéroport : 181 drones et divers matériels militaires saisis appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "Burkina Faso : les douanes annoncent la saisie de 181 drones, estimés à plus de 80 millions de FCFA",
+      "link": "https://beninwebtv.com/burkina-faso-douanes-saisie-181-drones-80-millions-fcfa/",
+      "pubDate": "2026-11-25T20:54:06.000Z",
+      "description": "Burkina Faso : les douanes annoncent la saisie de 181 drones, estimés à plus de 80 millions de FCFA",
+      "_source": "Bénin Web TV",
+      "_sourceId": "rss_beninwebtv",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
@@ -1083,44 +1117,12 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": "S",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Gestion de la performance sportive : Le cabinet Rodel organise un forum du 1er au 5 décembre à Ouagadougou",
-      "link": "https://faso7.com/2026/11/25/gestion-de-la-performance-sportive-le-cabinet-rodel-organise-un-forum-du-1er-au-5-decembre-a-ouagadougou/",
-      "pubDate": "2026-11-25T18:21:48.000Z",
-      "description": "Le Forum Sport et Développement Durable se tiendra du 1er au 5 décembre 2026 à Ouagadougou, autour du thème « La gestion de la performance dans le sport : enjeux et défis ». L’événement, annoncé lors d’une conférence de presse ce 25 novembre au Stade du 4-Août, entend renforcer les capacités des acteurs sportifs et rapprocher les connaissances scientifiques des pratiques de terrain. Organisé par le cabinet Rodel, le forum se déroulera en deux étapes. Les 1er et 2 décembre, les échanges auront lieu dans la salle polyvalente du Centre international de conférences de Ouaga 2000. Les 3 et 4 décembre seront consacrés à des formations au Stade du 4-Août. Pour Alexandre Le Grand Rouamba, président du comité d’organisation, le choix du thème répond aux exigences actuelles du sport de haut niveau. « Le talent brut, bien qu’indispensable, ne suffit plus pour hisser nos athlètes et nos équipes sur les plus hautes marches des podiums internationaux. La performance ne s’improvise plus. Elle se planifie, se mesure, s’analyse et se gère avec rigueur » , a-t-il déclaré. Selon lui, la préparation physique et mentale, le suivi médical, la nutrition, l’analyse des données et la gouvernance des structures sportives sont autant de facteurs qui influencent les résultats des athlètes. Réduire l’écart entre potentiel et exigences du haut niveau Le comité d’organisation ambitionne de contribuer à combler le fossé entre le potentiel des sportifs burkinabè et les exigences de la compétition internationale. Il s’agit notamment de mettre à la disposition des fédérations, des clubs, des entraîneurs et des encadreurs techniques des outils méthodologiques et scientifiques adaptés. « Il s'agit de doter nos fédérations, nos clubs, nos entraîneurs et nos encadreurs techniques des outils méthodologiques et scientifiques les plus récents pour optimiser le rendement de nos athlètes tout en préservant leur santé et leur intégrité » , a expliqué Alexandre Le Grand Rouamba. Durant les cinq jours, les participants pourront prendre part à des panels, des master class et des échanges d’expériences avec des spécialistes nationaux et étrangers, d’anciens champions et des gestionnaires de structures sportives. Les thématiques annoncées portent notamment sur la gouvernance des organisations sportives, la détection et la formation des talents, la récupération, la préparation psychologique et mentale, la nutrition, l’utilisation des nouvelles technologies ainsi que l’impact du changement climatique sur les infrastructures sportives. Le président du comité d’organisation a également appelé les acteurs du sport à s’approprier cette rencontre. « Aux acteurs du monde sportif, ce forum est le vôtre. Saisissez cette opportunité unique pour questionner vos pratiques et franchir un nouveau cap » , a-t-il lancé. Un projet qui entend se poursuivre après le forum-©Faso7 Pour Edgar Lelo, Directeur général du cabinet Rodel et porteur de l’événement, cette initiative s’inscrit dans une démarche d’accompagnement du secteur sportif burkinabè. Le cabinet, qui intervient notamment dans le conseil aux entreprises et la gestion de projets, affirme s’intéresser depuis plusieurs années aux questions de jeunesse et de sport. Il a rappelé que le cabinet avait participé à l’élaboration du premier document de politique nationale de la jeunesse et formulé des propositions ayant contribué à la création d’un espace de proximité destiné à la pratique du sport et des loisirs. « Pour le cabinet Rodel, on ne fait pas le forum pour faire un forum. […] Pour cette édition, nous sommes dans la même dynamique : faire un forum, mais suivre derrière par un projet qu’on va proposer aux autorités » , a-t-il indiqué, exprimant l’espoir que cette proposition puisse être retenue. Le choix de la performance comme thème central découle, selon Edgar Lelo, des enjeux de compétitivité du sport. Il estime que cette notion ne concerne pas uniquement les athlètes déjà au sommet, mais l’ensemble du parcours qui conduit un jeune sportif vers le haut niveau. « Nous partons de zéro à amener quelqu’un sur le podium. Et c’est tout ce processus que nous voulons [aborder] dans ce forum à travers les panels qui sont proposés » , a-t-il expliqué. La gouvernance et la formation au cœur du parcours Le directeur général de Rodel a souligné que la performance dépend d’abord de la gouvernance des structures sportives. Les décisions prises au niveau des bureaux fédéraux et des clubs influencent, selon lui, les conditions de préparation et les résultats obtenus sur le terrain. La détection et la formation des jeunes constituent un autre déterminant. « Si vous avez mal détecté les jeunes, vous ne pouvez pas forcément produire un champion » , a-t-il relevé. Les échanges porteront également sur le suivi mental, psychologique et nutritionnel des sportifs, ainsi que sur l’apport des nouvelles technologies, notamment l’intelligence artificielle et les données dans l’accompagnement des athlètes. L’impact du changement climatique sur les infrastructures sportives figure aussi au programme. À travers ces différents axes, les organisateurs souhaitent faire de la performance une démarche structurée, depuis la détection des talents jusqu’à leur accompagnement vers les compétitions de haut niveau. Le Forum Sport et Développement Durable se veut ainsi un cadre de partage entre les institutions sportives, les scientifiques, le secteur privé et les médias, avec l’ambition de contribuer à une gestion plus méthodique et durable de la performance au Burkina Faso. Josué TIENDREBEOGO Faso7 L’article Gestion de la performance sportive : Le cabinet Rodel organise un forum du 1er au 5 décembre à Ouagadougou est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 103,
+      "_score": 107,
       "_zone": 1,
-      "_theme": "C",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1140,6 +1142,22 @@
         {
           "type": "rupture",
           "keyword": "génocide"
+        }
+      ]
+    },
+    {
+      "title": "Colombia quiet as Beijing says lawmakers’ Taiwan trip crossed its ‘first red line’",
+      "link": "https://www.scmp.com/news/china/diplomacy/article/3375815/colombia-quiet-china-says-lawmakers-taiwan-trip-crossed-its-first-red-line",
+      "source": "South China Morning Post",
+      "date": "2026-11-25T19:52:34.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "red line"
         }
       ]
     },
@@ -1211,43 +1229,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      223
+      187
+    ],
+    [
+      "occident_us",
+      131
     ],
     [
       "occident_fr",
       122
     ],
     [
-      "occident_us",
-      108
+      "golfe_mo",
+      114
     ],
     [
       "autre",
-      99
-    ],
-    [
-      "golfe_mo",
-      84
+      82
     ],
     [
       "russie",
-      48
-    ],
-    [
-      "turquie",
       44
     ],
     [
-      "bf_local",
-      28
+      "turquie",
+      41
     ],
     [
       "chine",
-      24
+      35
+    ],
+    [
+      "bf_local",
+      26
     ],
     [
       "sahel",
-      20
+      18
     ]
   ],
   "desks": [
@@ -1255,7 +1273,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 98,
+      "count": 93,
       "top": [
         {
           "title": "Le Niger organise son premier forum international de l’investissement",
@@ -1267,40 +1285,40 @@
           "rating": "A2"
         },
         {
-          "title": "Ouagadougou : L’Armée de Terre et la Brigade verte main dans la main pour assainir le camp Sangoulé Lamizana",
-          "link": "https://faso7.com/2026/11/25/ouagadougou-larmee-de-terre-et-la-brigade-verte-main-dans-la-main-pour-assainir-le-camp-sangoule-lamizana/",
-          "source": "Faso7",
+          "title": "rumeurs sur les vols d’argent sur les comptes Mobile Money : Orange Burkina rassure sur la sécurité de l’application Max it",
+          "link": "https://netafrique.net/affaire-vols-dargent-sur-les-comptes-mobile-money-orange-burkina-rassure-sur-la-securite-de-lapplication-max-it/",
+          "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "I",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Coopération: le Premier ministre reçoit l’ambassadeur iranien en fin de mission",
-          "link": "https://www.wakatsera.com/cooperation-le-premier-ministre-recoit-lambassadeur-iranien-en-fin-de-mission/",
-          "source": "Wakat Séra",
+          "title": "Affaire Arthur Zagré : La réserve de la Mauritanie menace la qualification des Étalons de la CAN 2027",
+          "link": "https://netafrique.net/affaire-arthur-zagre-la-reserve-de-la-mauritanie-menace-la-qualification-des-etalons-de-la-can-2027/",
+          "source": "Net Afrique (BF)",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
           "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "AES : le Burkina Faso, le Mali et le Niger préparent des achats communs de médicaments",
-          "link": "https://beninwebtv.com/aes-burkina-mali-niger-achats-groupes-medicaments/",
-          "source": "Bénin Web TV",
-          "zone": "1. Sahel & AO franco.",
-          "theme": null,
-          "relevance": ".",
           "rating": "F2"
         },
         {
-          "title": "Brigade spéciale de l’aéroport : 181 drones et divers matériels militaires saisis",
-          "link": "https://burkina24.com/2026/11/25/brigade-speciale-de-laeroport-181-drones-et-divers-materiels-militaires-saisis/",
-          "source": "Burkina24",
+          "title": "Semaine du numérique 2026 : L'open source, l'IA, les langues nationales et l'accompagnement des start-up au cœur d'un panel",
+          "link": "https://lefaso.net/spip.php?article151033",
+          "source": "Lefaso.net",
           "zone": "1. Sahel & AO franco.",
-          "theme": "S",
+          "theme": "T",
+          "relevance": "L",
+          "rating": "C2"
+        },
+        {
+          "title": "AES : les ministres du Commerce du Burkina et du Mali reçus par le Général Tiani",
+          "link": "https://malijet.com/actualite-sur-aes/312978-aes-les-ministres-du-commerce-du-burkina-et-du-mali-recus.html",
+          "source": "Malijet",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
           "relevance": "A",
-          "rating": "C1"
+          "rating": "F2"
         }
       ]
     },
@@ -1308,21 +1326,21 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 68,
+      "count": 64,
       "top": [
         {
-          "title": "Minority asks government to enforce Ghanaian-only retail trade restrictions after Suame clashes",
-          "link": "https://www.myjoyonline.com/minority-asks-government-to-enforce-ghanaian-only-retail-trade-restrictions-after-suame-clashes/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Wole Olanipekun on law, democracy and the limits of power",
+          "link": "https://www.vanguardngr.com/2026/11/wole-olanipekun-on-law-democracy-and-the-limits-of-power/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Africa is importing financial regulations that weren’t designed for its reality",
-          "link": "https://www.myjoyonline.com/africa-is-importing-financial-regulations-that-werent-designed-for-its-reality/",
-          "source": "MyJoyOnline (Ghana)",
+          "title": "Awka City chosen for AfDB -funded Action Plan for Africa’s coordinated urban development",
+          "link": "https://www.vanguardngr.com/2026/11/awka-city-chosen-for-afdb-funded-action-plan-for-africas-coordinated-urban-development/",
+          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
@@ -1338,20 +1356,20 @@
           "rating": "F2"
         },
         {
-          "title": "Southern Nigeria deserves eight years in presidency like North — Shehu Sani",
-          "link": "https://www.vanguardngr.com/2026/11/southern-nigeria-deserves-fight-years-in-presidency-like-north-shehu-sani/",
-          "source": "Vanguard (Nigeria)",
+          "title": "Le gouvernement de l'État de Katsina au Nigeria suspend l'émir de Daura en raison d'allégations d'agression sexuelle",
+          "link": "https://www.bbc.com/afrique/articles/cqj9mvyp2k27o?at_medium=RSS&at_campaign=rss",
+          "source": "BBC Afrique (FR)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "B2"
         },
         {
-          "title": "Shettima ties Nigeria’s safety to economic stability",
-          "link": "https://www.vanguardngr.com/2026/11/shettima-ties-nigerias-safety-to-economic-stability/",
-          "source": "Vanguard (Nigeria)",
+          "title": "Security operatives assault lawmaker’s aide attempting to access 2026 budget review meeting venue",
+          "link": "https://www.premiumtimesng.com/news/top-news/928077-security-operatives-assault-lawmakers-aide-attempting-to-access-2026-budget-review-meeting-venue.html",
+          "source": "Premium Times (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "P",
+          "theme": "E",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1361,7 +1379,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 31,
+      "count": 20,
       "top": [
         {
           "title": "Génocide des Tutsi au Rwanda : au procès de Madjaliwa Safari, l’ombre des barrières",
@@ -1391,20 +1409,20 @@
           "rating": "C1"
         },
         {
-          "title": "DR Congo: Gavi signe un accord avec le Serum Institute of India afin de garantir un accès rapide aux vaccins contre le virus Ebola Bundibugyo",
-          "link": "https://reliefweb.int/report/democratic-republic-congo/gavi-signe-un-accord-avec-le-serum-institute-india-afin-de-garantir-un-acces-rapide-aux-vaccins-contre-le-virus-ebola-bundibugyo",
-          "source": "ReliefWeb",
+          "title": "CAMES 2026 : la Guinée célèbre ses 34 nouveaux maîtres de conférences agrégés",
+          "link": "https://guineenews.org/2026/11/25/cames-2026-la-guinee-celebre-ses-34-nouveaux-maitres-de-conferences-agreges/",
+          "source": "Guineenews",
           "zone": "3. Afrique centrale",
-          "theme": "H",
+          "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Congrès extraordinaire du RPM : Barro Chambrier va-t-il tourner la page au profit de l’UDB ?",
-          "link": "https://www.gabonreview.com/congres-extraordinaire-du-rpm-barro-chambrier-va-t-il-tourner-la-page-au-profit-de-ludb/",
+          "title": "CPHIA 2026 : le Gabon rejoint la dynamique africaine contre les cancers féminins",
+          "link": "https://www.gabonreview.com/cphia-2026-le-gabon-rejoint-la-dynamique-africaine-contre-les-cancers-feminins/",
           "source": "Gabon Review",
           "zone": "3. Afrique centrale",
-          "theme": "P",
+          "theme": "D",
           "relevance": "A",
           "rating": "F2"
         }
@@ -1414,43 +1432,25 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 36,
+      "count": 17,
       "top": [
         {
-          "title": "Industrie de défense et de sécurité : le Roi préside la cérémonie de signature de deux conventions-cadres",
-          "link": "https://fr.hespress.com/497869-industrie-de-defense-et-de-securite-le-roi-preside-la-ceremonie-de-signature-de-deux-conventions-cadres.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Agent consulaire algérien détenu en France : graves révélations de l’APS",
+          "link": "https://www.tsa-algerie.com/agent-consulaire-algerien-detenu-en-france-graves-revelations-de-laps/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
+          "theme": "D",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "F2"
         },
         {
           "title": "Comment l’Ukraine perturbe les opérations russes en Afrique en frappant des navires de transport d’armes en Méditerranée",
           "link": "https://www.lemonde.fr/afrique/article/2026/11/25/comment-l-ukraine-perturbe-les-operations-russes-en-afrique-en-frappant-des-navires-de-transport-d-armes-en-mediterranee_6815117_3212.html",
-          "source": "Le Monde International",
+          "source": "Le Monde Afrique",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "S",
           "relevance": "A",
           "rating": "B1"
-        },
-        {
-          "title": "Rjim Maatoug | Une réalisation emblématique du partenariat tuniso-italien",
-          "link": "https://kapitalis.com/tunisie/2026/11/25/rjim-maatoug-une-realisation-emblematique-du-partenariat-tuniso-italien/",
-          "source": "Kapitalis (Tunisie)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "France : les gros mensonges de Paul Amar sur l’Algérie et les musulmans",
-          "link": "https://www.tsa-algerie.com/france-les-gros-mensonges-de-paul-amar-sur-lalgerie-et-les-musulmans/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
         },
         {
           "title": "Investissement en Algérie : l’AAPI « libère » 100 hectares dans 13 wilayas",
@@ -1460,6 +1460,24 @@
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "La Tunisie valorise son artisanat et sa destination touristique au marché de Noël de Grenoble",
+          "link": "https://kapitalis.com/tunisie/2026/11/25/la-tunisie-valorise-son-artisanat-et-sa-destination-touristique-au-marche-de-noel-de-grenoble/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Démantèlement d’un réseau de trafic de drogue opérant entre Kairouan et le Grand-Tunis",
+          "link": "https://kapitalis.com/tunisie/2026/11/25/demantelement-dun-reseau-de-trafic-de-drogue-operant-entre-kairouan-et-le-grand-tunis/",
+          "source": "Kapitalis (Tunisie)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "J",
+          "relevance": "L",
+          "rating": "A2"
         }
       ]
     },
@@ -1467,17 +1485,8 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 85,
+      "count": 89,
       "top": [
-        {
-          "title": "Journée du Tirailleur africain : Les anciens combattants ravivent la mémoire du 15 octobre 1987 au Mémorial Thomas Sankara",
-          "link": "https://faso7.com/2026/11/25/journee-du-tirailleur-africain-les-anciens-combattants-ravivent-la-memoire-du-15-octobre-1987-au-memorial-thomas-sankara/",
-          "source": "Faso7",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "Iran reiterates to counter blockade",
           "link": "https://www.tehrantimes.com/news/532551/Iran-reiterates-to-counter-blockade",
@@ -1488,31 +1497,40 @@
           "rating": "F2"
         },
         {
-          "title": "Strong Iran humiliated America",
-          "link": "https://www.tehrantimes.com/news/532548/Strong-Iran-humiliated-America",
-          "source": "Tehran Times",
+          "title": "Iran war live: Explosion rocks Sanaa; missiles intercepted over Riyadh",
+          "link": "https://www.aljazeera.com/news/liveblog/2026/11/26/iran-war-live-explosion-rocks-sanaa-missiles-intercepted-over-riyadh?traffic_source=rss",
+          "source": "Al Jazeera English",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Gaza : une boussole morale. Avec Aymeric Caron",
-          "link": "https://www.iris-france.org/gaza-une-boussole-morale-avec-aymeric-caron/",
-          "source": "IRIS France",
-          "zone": "8. Moyen-Orient",
-          "theme": "L",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "A2"
         },
         {
-          "title": "Delphine Horvilleur: «Sermons sous les décombres»",
-          "link": "https://www.rfi.fr/fr/podcasts/le-grand-entretien-du-soir/20261125-delphine-horvilleur-sermons-sous-les-d%C3%A9combres",
-          "source": "RFI Moyen-Orient",
+          "title": "Saudis down missiles targeting capital after Yemen port strikes",
+          "link": "https://www.al-monitor.com/originals/2026/11/saudis-down-missiles-targeting-capital-after-yemen-port-strikes",
+          "source": "Al-Monitor",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Saudi-led coalition intercepts 2 Houthi ballistic missiles launched toward Riyadh",
+          "link": "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-intercepts-2-houthi-ballistic-missiles-launched-toward-riyadh/4138108",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A1"
+        },
+        {
+          "title": "Au Yémen, des positions des houthistes à nouveau bombardées ; des ports saoudiens pris pour cible en représailles",
+          "link": "https://www.lemonde.fr/international/article/2026/11/25/au-yemen-des-positions-des-houthistes-a-nouveau-bombardees-des-ports-saoudiens-pris-pour-cible-en-represailles_6815174_3210.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
         }
       ]
     },
@@ -1520,17 +1538,8 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 166,
+      "count": 172,
       "top": [
-        {
-          "title": "FIFM : Othmane Zine, le regard marocain derrière « Leïla et la nuit »",
-          "link": "https://fr.hespress.com/497829-fifm-othmane-zine-le-regard-marocain-derriere-leila-et-la-nuit.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "18. Amérique du Sud",
-          "theme": "L",
-          "relevance": ".",
-          "rating": "F2"
-        },
         {
           "title": "A Madagacar, l’éviction du numéro deux de la junte, symptôme des divisions au sommet",
           "link": "https://www.lemonde.fr/afrique/article/2026/11/25/a-madagacar-l-eviction-du-numero-deux-de-la-junte-symptome-des-divisions-au-sommet_6815164_3212.html",
@@ -1541,13 +1550,22 @@
           "rating": "B2"
         },
         {
-          "title": "Trump Doesn’t Care Who Might Get Hurt",
-          "link": "https://www.theatlantic.com/ideas/2026/11/nvidia-china-dictators/689577/?utm_source=feed",
-          "source": "The Atlantic",
+          "title": "États-Unis : l’administration Trump brandit de nouveaux droits de douane, notamment contre l’UE",
+          "link": "https://rtenfrancais.tv/international/140514-etats-unis-trump-brandit-tarifs",
+          "source": "RT en français",
           "zone": "16. Amérique du Nord",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "F6"
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A1"
+        },
+        {
+          "title": "4 African countries to have produced Miss Universe winners",
+          "link": "https://www.vanguardngr.com/2026/11/4-african-countries-to-have-produced-miss-universe-winners/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "6. Afrique australe",
+          "theme": null,
+          "relevance": ".",
+          "rating": "A2"
         },
         {
           "title": "L’accord signé entre l’Australie et les Îles Salomon marque un revers pour Pékin",
@@ -1556,7 +1574,7 @@
           "zone": "15. Océanie & Pacifique",
           "theme": "D",
           "relevance": "L",
-          "rating": "A1"
+          "rating": "A2"
         },
         {
           "title": "L’OTAN s’oppose à l’interception de missiles russes au-dessus de l’Ukraine, selon Varsovie",
@@ -1583,42 +1601,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-11-25T19:15:04.775Z",
+      "at": "2026-11-26T03:33:38.292Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-11-25T19:15:04.781Z",
+      "at": "2026-11-26T03:33:38.298Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-11-25T19:15:30.291Z",
+      "at": "2026-11-26T03:33:56.049Z",
       "agent": "Agent Collecte RSS",
-      "message": "104/170 flux OK, 1946 articles"
+      "message": "102/170 flux OK, 1830 articles"
     },
     {
-      "at": "2026-11-25T19:15:32.883Z",
+      "at": "2026-11-26T03:33:58.261Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-11-25T19:15:33.167Z",
+      "at": "2026-11-26T03:33:58.493Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-11-25T19:15:33.171Z",
+      "at": "2026-11-26T03:33:58.498Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 5 alertes"
+      "message": "8 developpements, 6 alertes"
     },
     {
-      "at": "2026-11-25T19:15:33.171Z",
+      "at": "2026-11-26T03:33:58.498Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-11-25T19:15:33.171Z",
+      "at": "2026-11-26T03:33:58.498Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
