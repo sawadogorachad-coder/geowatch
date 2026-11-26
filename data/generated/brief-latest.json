@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-11-26T03:33:58.496Z",
+  "generatedAt": "2026-11-26T16:53:52.102Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 102,
-    "failed": 68,
-    "articles": 1830,
+    "ok": 99,
+    "failed": 71,
+    "articles": 1867,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -40,7 +35,7 @@
       {
         "id": "rss_faso7",
         "name": "Faso7",
-        "count": 0
+        "count": 10
       },
       {
         "id": "rss_mutations",
@@ -51,11 +46,6 @@
         "id": "rss_netafrique",
         "name": "Net Afrique (BF)",
         "count": 10
-      },
-      {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
       },
       {
         "id": "rss_minute_bf",
@@ -93,11 +83,6 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -113,14 +98,14 @@
         "count": 30
       },
       {
-        "id": "rss_citi",
-        "name": "Citi Newsroom (Ghana)",
-        "count": 0
-      },
-      {
         "id": "rss_beninwebtv",
         "name": "Bénin Web TV",
         "count": 30
+      },
+      {
+        "id": "rss_atop",
+        "name": "ATOP (Togo)",
+        "count": 12
       },
       {
         "id": "rss_guineenews",
@@ -183,6 +168,16 @@
         "count": 10
       },
       {
+        "id": "rss_telquel",
+        "name": "TelQuel (Maroc)",
+        "count": 30
+      },
+      {
+        "id": "rss_hespress",
+        "name": "Hespress (Maroc, FR)",
+        "count": 10
+      },
+      {
         "id": "rss_kapitalis",
         "name": "Kapitalis (Tunisie)",
         "count": 10
@@ -210,11 +205,6 @@
       {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -340,7 +330,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 16
+        "count": 15
       },
       {
         "id": "rss_fp",
@@ -365,7 +355,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 30
+        "count": 28
       },
       {
         "id": "rss_bbc_africa",
@@ -385,7 +375,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 13
       },
       {
         "id": "rss_tass",
@@ -400,11 +390,6 @@
       {
         "id": "rss_sputnik_fr",
         "name": "Sputnik Afrique (FR)",
-        "count": 30
-      },
-      {
-        "id": "rss_ria",
-        "name": "RIA Novosti (EN)",
         "count": 30
       },
       {
@@ -431,11 +416,6 @@
         "id": "rss_aje",
         "name": "Al Jazeera English",
         "count": 25
-      },
-      {
-        "id": "rss_arabnews",
-        "name": "Arab News (Arabie Saoudite)",
-        "count": 30
       },
       {
         "id": "rss_almonitor",
@@ -473,6 +453,11 @@
         "count": 0
       },
       {
+        "id": "rss_dawn",
+        "name": "Dawn (Pakistan)",
+        "count": 27
+      },
+      {
         "id": "rss_nikkei",
         "name": "Nikkei Asia",
         "count": 30
@@ -495,17 +480,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_reliefweb_burkina",
         "name": "ReliefWeb — Burkina Faso",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_reliefweb_mali",
         "name": "ReliefWeb — Mali",
-        "count": 0
+        "count": 20
       },
       {
         "id": "rss_hrw",
@@ -520,6 +505,11 @@
     ],
     "failedSources": [
       {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "error": "HTTP 404"
@@ -528,6 +518,11 @@
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -572,12 +567,17 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -615,6 +615,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_citi",
+        "name": "Citi Newsroom (Ghana)",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_lanation_bj",
         "name": "La Nation (Bénin)",
         "error": "HTTP 404"
@@ -623,11 +628,6 @@
         "id": "rss_togoinfos",
         "name": "Togo Infos",
         "error": "HTTP 500"
-      },
-      {
-        "id": "rss_atop",
-        "name": "ATOP (Togo)",
-        "error": "This operation was aborted"
       },
       {
         "id": "rss_saharang",
@@ -677,7 +677,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -685,18 +685,8 @@
         "error": "HTTP 404"
       },
       {
-        "id": "rss_telquel",
-        "name": "TelQuel (Maroc)",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_medias24",
         "name": "Médias 24 (Maroc)",
-        "error": "HTTP 403"
-      },
-      {
-        "id": "rss_hespress",
-        "name": "Hespress (Maroc, FR)",
         "error": "HTTP 403"
       },
       {
@@ -707,7 +697,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -723,6 +713,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -785,6 +780,11 @@
         "error": "HTTP 403"
       },
       {
+        "id": "rss_ria",
+        "name": "RIA Novosti (EN)",
+        "error": "This operation was aborted"
+      },
+      {
         "id": "rss_chinadaily",
         "name": "China Daily",
         "error": "HTTP 404"
@@ -792,6 +792,11 @@
       {
         "id": "rss_alarabiya",
         "name": "Al Arabiya (EN)",
+        "error": "HTTP 403"
+      },
+      {
+        "id": "rss_arabnews",
+        "name": "Arab News (Arabie Saoudite)",
         "error": "HTTP 403"
       },
       {
@@ -815,14 +820,9 @@
         "error": "fetch failed"
       },
       {
-        "id": "rss_dawn",
-        "name": "Dawn (Pakistan)",
-        "error": "HTTP 403"
-      },
-      {
         "id": "rss_bangkok",
         "name": "Bangkok Post",
-        "error": "HTTP 451"
+        "error": "HTTP 402"
       },
       {
         "id": "rss_jakartap",
@@ -863,25 +863,27 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 38,
-    "alerts": 6,
-    "criticalAlerts": 3,
-    "sourcesDistinct": 70
+    "bfAes": 69,
+    "alerts": 11,
+    "criticalAlerts": 8,
+    "sourcesDistinct": 73
   },
   "topDevelopments": [
     {
-      "title": "Le Niger organise son premier forum international de l’investissement",
-      "link": "https://rtenfrancais.tv/afrique/140510-niger-organise-son-premier-forum-international-investissement-pour-diversifier-partenariat",
-      "pubDate": "2026-11-25T17:03:34.000Z",
-      "description": "Le Niger a lance le 24 novembre 2026 a Niamey son premier forum international de l'investissement, avec l'objectif de mobiliser 5 500 milliards de francs CFA, soit plus de 9 milliards de dollars, sous forme d'engagements ou d'accords d'investissement. Inaugure par le Premier ministre Ali Mahaman Lamine Zeine, le forum se tient jusqu'au 26 novembre avec l'appui du Programme des Nations unies pour le developpement (PNUD). Quelque 1 000 participants, dont pres de 300 investisseurs venus d'au moins 30 pays, sont attendus. Au total, 50 projets couvrant 13 secteurs strategiques sont presentes aux participants. Parmi eux figurent la mise en valeur du potentiel gazier du bloc d'Agadem, avec un gazoduc et une centrale de 300 MW, la creation d'unites agroalimentaires et la construction d'une ligne ferroviaire de 140 kilometres reliant Niamey a Dosso. Une ouverture internationale fondee sur la souverainete Le Niger entend diversifier ses relations economiques et developper de nouveaux partenariats, notamment avec la Russie, la Chine et la Turquie, dont les delegations figurent parmi celles que Niamey souhaite convaincre. Le chef du gouvernement a affirme la volonte de son pays de definir lui-meme ses priorites et de construire des relations economiques mutuellement avantageuses. &laquo; Nous ne cherchons pas des donateurs. Nous cherchons des associations, des investisseurs, des entrepreneurs, des partenaires fiables, engages, sinceres &raquo;, a-t-il declare. L'ouverture s'accompagne de reformes destinees a faciliter les investissements etrangers. Revise en fevrier 2025, le Code des investissements garantit l'egalite de traitement des investisseurs, la protection de la propriete privee et la liberte de transfert des benefices. Les etats du Sahel renforcent leur cooperation economique La dynamique engagee par Niamey revet aussi une dimension regionale. Le ministre burkinabe du Commerce, Serge Gnaniodem Poda, a reaffirme l'ouverture de la Confederation des etats du Sahel aux partenaires respectueux de la souverainete de ses membres. La cooperation concerne aussi la securisation des investissements, au c&oelig;ur du premier panel du forum, ainsi que les infrastructures, avec notamment le projet de corridor ferroviaire Niamey-Ouagadougou-Bamako. Avec une croissance de 6,9 % en 2025 et une prevision de 7 % en 2026, selon les donnees du Fonds monetaire international citees par le representant du PNUD, le Niger entend accelerer son industrialisation, transformer ses matieres premieres sur son territoire et creer des emplois durables. &laquo; Hier, nos richesses partaient brutes. Demain, avec la volonte de Dieu, elles partiront transformees, avec une notion simple : Made in Niger . &raquo; C'est en ces termes que le chef du gouvernement a resume les ambitions economiques du pays.",
-      "_source": "RT en français",
-      "_sourceId": "rss_rt_fr",
-      "_sourceCat": "geopol",
-      "_sourceBloc": "russie",
+      "title": "L’or de Siguiri à l’épreuve du panafricanisme : quand la souveraineté minière fissure le voisinage ouest-africain (Par Mohamed Hady Barry)",
+      "link": "https://mediaguinee.com/2026/11/lor-de-siguiri-a-lepreuve-du-panafricanisme-quand-la-souverainete-miniere-fissure-le-voisinage-ouest-africain-par-mohamed-hady-barry/",
+      "pubDate": "2026-11-26T09:54:30.000Z",
+      "description": "Introduction À l’aube de ce mois de novembre 2026, les pistes latéritiques reliant la préfecture de Siguiri, en Haute-Guinée, à la frontière malienne de Kourémalé ont offert le spectacle d’un exode aussi soudain que massif. Des files interminables de camions surchargés, de motos et de marcheurs exténués ont marqué l’épilogue brutal d’une opération de déguerpissement d’envergure menée par les forces de défense et de sécurité guinéennes sur les sites d’orpaillage artisanal du bassin du Bouré . Quelques jours tôt, les affrontements meurtriers de Bouré-Balato avaient agi comme un détonateur, précipitant l’intervention de l’État guinéen dans une zone devenue, au fil des années, l’épicentre d’une ruée vers l’or incontrôlée. Selon les décomptes établis par les autorités de transition à Bamako et Ouagadougou, ce sont plus de 160 000 ressortissants ouest-africains qui ont été refoulés ou contraints de quitter le territoire guinéen en l’espace de quelques semaines, dont plus de 76 000 citoyens burkinabè rapatriés dans l’urgence par un pont terrestre d’exception. Au-delà de l’urgence humanitaire et de la détresse matérielle de dizaines de milliers de travailleurs migrants, cet épisode a provoqué une onde de choc diplomatique inédite dans la sous-région. La suspension par Conakry de la diffusion de la Radiodiffusion Télévision du Burkina (RTB), accusée de relayer des récits jugés tendancieux sur les conditions de rapatriement, a cristallisé le malaise entre des capitales pourtant unies par une proximité géographique, culturelle et, surtout, par un discours politique convergent. Depuis les ruptures institutionnelles survenues entre 2020 et 2023 à Bamako, Conakry et Ouagadougou, les régimes militaires de la région ont érigé la souveraineté nationale, la reconquête des ressources naturelles et la solidarité panafricaine en dogmes cardinaux de leur légitimité. Or, la crise de Siguiri vient heurter de plein fouet cette rhétorique d’intégration par le bas : elle révèle combien l’affirmation unilatérale de la souveraineté d’un État sur son sous-sol peut entrer en collision frontale avec le principe historique de libre circulation des personnes en Afrique de l’Ouest. Dès lors, une question centrale s’impose à l’observateur de la géopolitique ouest-africaine : comment concilier l’exercice légitime des prérogatives régaliennes d’un État sur ses ressources stratégiques et sa sécurité nationale avec les exigences du droit communautaire, de la solidarité régionale et de la stabilité d’un espace sahélo-guinéen déjà fragilisé ? Pour répondre à cette interrogation, il convient d’abord d’analyser la rationalité économique, environnementale et sécuritaire qui sous-tend l’intervention de Conakry, avant d’examiner les angles morts juridiques et les conséquences diplomatiques d’une réponse unilatérale, afin d’esquisser, enfin, les contours d’une gouvernance minière et migratoire concertée. I. L’impératif régalien de Conakry : reprendre le contrôle d’un « Far West » aurifère Pour saisir la fermeté avec laquelle les autorités guinéennes ont agi en novembre 2026, il est indispensable de replacer Siguiri au cœur de l’architecture économique et sécuritaire du pays. Loin d’être une simple opération de police des étrangers, le démantèlement des sites clandestins répond à une triple urgence : économique, écologique et sécuritaire. A. La reconquête de la rente aurifère et la sauvegarde des écosystèmes La Guinée, souvent qualifiée de « scandale géologique », tire une part croissante de ses recettes d’exportation de la filière aurifère. Contrairement aux idées reçues qui focalisent l’attention sur les grands groupes internationaux — à l’image de la Société AngloGold Ashanti de Guinée (SAG), qui opère la mine industrielle de Siguiri avec une participation de 15 % de l’État guinéen et vise une production de 400 000 onces par an d’ici 2030 —, le secteur artisanal pèse d’un poids considérable dans l’économie nationale. Selon les données consolidées de la Banque centrale de la République de Guinée (BCRG) et du ministère des Mines, l’orpaillage artisanal représente près de 46 % des volumes d’or officiellement exportés par le pays. Toutefois, cette statistique masque une hémorragie financière massive. Une proportion importante de l’or extrait manuellement à Siguiri échappe aux circuits formels de commercialisation et à la fiscalité guinéenne, alimentant des réseaux de contrebande transfrontalière vers le Mali, le Sénégal ou les Émirats arabes unis. L’afflux massif d’orpailleurs venus des pays voisins, dotés parfois de moyens techniques semi-mécanisés (dragues, détecteurs de métaux performants, concasseurs), a progressivement évincé les communautés locales et transformé le bassin du Bouré en une zone de non-droit économique. En outre, l’article 52 du Code minier guinéen est sans équivoque : l’autorisation d’exploitation artisanale est strictement réservée aux personnes physiques de nationalité guinéenne. En tolérant pendant des années une présence étrangère massive sur les placers, l’État avait laissé s’installer une privatisation de fait d’une ressource publique stratégique. À ce manque à gagner fiscal s’ajoute un désastre écologique d’une gravité extrême. L’intensification de l’orpaillage clandestin s’est accompagnée d’un usage massif et illégal de produits chimiques hautement toxiques, au premier rang desquels le mercure et le cyanure. Le détournement anarchique des cours d’eau, le creusement de galeries à ciel ouvert non réhabilitées et le rejet des boues contaminées menacent directement le bassin supérieur du fleuve Niger, véritable château d’eau de l’Afrique de l’Ouest. Face à la destruction irréversible des terres arables et à l’empoisonnement des nappes phréatiques, l’intervention de l’État guinéen se présente d’abord comme un acte de salubrité publique et de protection du patrimoine naturel national. B. Le prisme sécuritaire face à la menace de contagion sahélienne Le second déterminant de l’action gouvernementale relève de la sécurité nationale. Depuis une décennie, la dégradation sécuritaire au Sahel, marquée par l’expansion des groupes armés terroristes affiliés à Al-Qaïda (JNIM) et à l’État islamique, redessine la carte des menaces en Afrique de l’Ouest. Longtemps épargnée par les attaques directes, la Guinée observe avec une inquiétude grandissante la progression de l’arc de crise vers les frontières des pays côtiers. Or, les travaux des experts des Nations unies et des centres de recherche sur la sécurité régionale (tels que l’Institut d’études de sécurité ou le Groupe d’action financière) ont largement documenté le lien étroit entre l’exploitation artisanale de l’or et le financement du terrorisme au Sahel. Dans les zones grisées où l’autorité de l’État s’efface, les sites d’orpaillage deviennent des espaces de blanchiment d’argent, de trafic d’armes, de circulation de stupéfiants et de recrutement pour les groupes armés. La porosité des frontières entre la Haute-Guinée et les régions méridionales du Mali — elles-mêmes soumises à une pression croissante des groupes djihadistes — fait de Siguiri un point de vulnérabilité stratégique majeur. Pour l’appareil sécuritaire guinéen, la présence de dizaines de milliers d’individus non enregistrés, échappant à tout contrôle administratif et policier à quelques kilomètres de la frontière malienne, constitue une menace directe pour l’intégrité du territoire. L’assainissement des mines de Siguiri obéit ainsi à une logique de verrouillage préventif : reprendre le contrôle physique du terrain avant que l’économie informelle de l’or ne serve de cheval de Troie à l’insécurité régionale. C. La recherche d’une légitimation par la voie judiciaire Conscientes de la sensibilité politique d’une telle opération et soucieuses d’écarter toute accusation de xénophobie d’État ou de chasse aux sorcières, les autorités guinéennes ont tenu à inscrire leur démarche dans un cadre strictement légaliste et judiciaire. Contrairement aux expulsions sommaires observées par le passé dans certaines régions du continent, Conakry a mis en avant le traitement individuel des infractions devant les tribunaux compétents, notamment à Kankan et à Conakry. Les chiffres communiqués par la justice guinéenne témoignent de cette volonté de judiciarisation : plus de 1 557 ressortissants étrangers ont été déférés devant les parquets, jugés pour exploitation illicite de substances minières, dégradation de l’environnement et séjour irrégulier. Ces procédures ont abouti à des condamnations assorties de peines d’emprisonnement ferme ou avec sursis, d’amendes s’élevant généralement à 3 millions de francs guinéens et d’interdictions du territoire national pouvant aller jusqu’à dix ans, avant l’exécution des mesures de reconduite à la frontière. Par ce déploiement judiciaire, le gouvernement guinéen entend démontrer qu’il ne vise aucune nationalité en particulier, mais qu’il applique avec rigueur la loi pénale et minière à tout contrevenant, conformément au principe universel de souveraineté territoriale. II. L’onde de choc régionale : les limites d’une réponse unilatérale Si les impératifs économiques, écologiques et sécuritaires avancés par Conakry reposent sur des réalités tangibles, les modalités d’exécution de l’opération de Siguiri et son ampleur démographique ont mis en lumière les angles morts d’une démarche strictement unilatérale. Entre la rigueur procédurale proclamée dans les prétoires guinéens et la brutalité de l’exode observé aux frontières, un fossé profond s’est creusé. Cette dissonance met aujourd’hui à rude épreuve l’édifice juridique régional, la solidarité politique entre régimes voisins et l’équilibre sécuritaire de l’ensemble de l’espace sahélo-guinéen. A. Les frictions avec le droit communautaire et les normes internationales Le discours légaliste des autorités guinéennes se heurte d’abord à la disproportion manifeste entre les procédures judiciaires individualisées et l’ampleur des déplacements massifs de populations. Certes, en droit international public, tout État souverain dispose de la prérogative de réglementer l’accès, le séjour et l’exercice des activités économiques des non-nationaux sur son territoire. L’article 10 du Protocole A/P1/5/79 de la CEDEAO relatif à la libre circulation des personnes, au droit de résidence et d’établissement subordonne explicitement le bénéfice de ces droits au respect des lois et règlements de l’État d’accueil. Toutefois, ce pouvoir d’éloignement n’est ni absolu ni discrétionnaire : il est rigoureusement encadré par des garanties procédurales et matérielles destinées à prévenir tout arbitraire. L’article 11 de ce même Protocole impose ainsi des obligations précises à tout État membre décidant d’expulser un citoyen de la Communauté : il doit notifier formellement la décision à l’intéressé, au gouvernement dont ce dernier est ressortissant ainsi qu’au Secrétariat exécutif de l’organisation. Sur le plan matériel, l’article 11 exige également que l’État expulsant garantisse la sécurité des biens des personnes éloignées et assume intégralement les frais liés au rapatriement jusqu’à la frontière. Parallèlement, l’article 12, alinéa 5, de la Charte africaine des droits de l’homme et des peuples — instrument ratifié par la République de Guinée et doté d’une valeur constitutionnelle et supra-législative dans l’ordre juridique interne — prohibe sans équivoque « l’expulsion collective d’étrangers ». La jurisprudence de la Commission africaine définit cette interdiction comme toute mesure visant globalement des groupes nationaux ou socioprofessionnels sans examen individuel, objectif et raisonnable de la situation de chaque personne, et sans possibilité de recours effectif. Or, la confrontation entre la statistique judiciaire et la réalité démographique de novembre 2026 révèle une faille juridique majeure. Tandis que les parquets de Kankan et de Conakry ont effectivement jugé et condamné individuellement 1 557 ressortissants étrangers pour exploitation illicite de substances minières et atteinte à l’environnement, ce sont plus de 160 000 personnes qui ont été contraintes de franchir la frontière malienne en l’espace de quelques semaines. Pour plus de 99 % de ces travailleurs migrants, le départ ne résulte d’aucun jugement ni d’aucun arrêté individuel d’expulsion, mais d’une évacuation précipitée sous la contrainte du déploiement militaire, des bouclages de sites et de l’incendie des abris de fortune dans les districts aurifères de Bouré , Kintinian ou Doko. Les relevés effectués par les organisations humanitaires et les autorités locales aux postes-frontières de Kourémalé , Dakoro et Nafadji documentent concrètement les conséquences matérielles de cette précipitation : abandon forcé d’équipements coûteux (motopompes, détecteurs, groupes électrogènes), impossibilité de recouvrer les créances auprès des acheteurs locaux d’or, et départ sans les économies accumulées. En l’absence de notification diplomatique préalable, de délais de grâce permettant de liquider les affaires courantes et de prise en charge logistique par l’État guinéen, l’opération de déguerpissement a produit, sur le terrain, tous les effets juridiques et humains d’une expulsion collective de fait. B. Le dilemme diplomatique des États de l’AES et le paradoxe souverainiste Sur le plan géopolitique, la crise de Siguiri a plongé les capitales voisines, en particulier Bamako et Ouagadougou, dans un profond embarras stratégique. Depuis l’avènement des régimes de transition au Mali (2020-2021), en Guinée (2021) et au Burkina Faso (2022), ces trois capitales avaient construit une proximité politique fondée sur une critique commune des ingérences extérieures, une défiance partagée envers les institutions régionales traditionnelles et une exaltation constante du panafricanisme. Lorsque la CEDEAO avait imposé un embargo économique et financier rigoureux contre le Mali au premier semestre 2022, Conakry avait refusé de s’y associer, maintenant son territoire et le port autonome de Conakry ouverts au transit malien. Cet acte avait scellé l’image d’une solidarité sans faille entre régimes souverainistes. L’afflux soudain de dizaines de milliers de rapatriés démunis en novembre 2026 est venu fissurer cette entente politique. Confronté au retour d’urgence de plus de 76 000 de ses ressortissants, le gouvernement burkinabè a dû organiser dans la précipitation un véritable pont terrestre, affrétant plus d’une centaine de bus entre la frontière guinéo-malienne et Bobo-Dioulasso, ouvrant des sites d’hébergement d’urgence et mobilisant un fonds spécial de solidarité nationale pour assurer l’aide alimentaire et sanitaire. Du côté malien, la gestion administrative, sanitaire et sécuritaire de plus de 160 000 personnes transitant par le cercle de Kangaba et la région de Sikasso a représenté un choc logistique considérable pour des collectivités locales déjà exsangues. Pour les dirigeants de l’Alliance des États du Sahel (AES), l’équation diplomatique s’est révélée particulièrement délicate. Critiquer publiquement et frontalement l’opération de Conakry aurait exposé au grand jour les limites de la solidarité panafricaniste face aux intérêts nationaux immédiats ; mais observer un silence total face aux récits de spoliations et de traumatismes rapportés par des dizaines de milliers de citoyens risquait d’éroder leur légitimité auprès de leurs propres opinions publiques. La décision de la Haute Autorité de la Communication (HAC) guinéenne de suspendre la diffusion de la Radiodiffusion Télévision du Burkina (RTB) sur les bouquets distribués en Guinée, après la diffusion de reportages donnant la parole aux expulsés, a rendu visible au grand public la tension feutrée entre les chancelleries. À cette crispation bilatérale s’ajoute un vide institutionnel inédit. Le retrait formel du Burkina Faso, du Mali et du Niger de la CEDEAO a privé la sous-région d’un cadre multilatéral neutre de médiation, d’arbitrage et de prévention des crises. Sans les bons offices de la Commission de la CEDEAO ni la saisine possible de sa Cour de justice communautaire pour faire respecter le Protocole de 1979, les différends migratoires et frontaliers se trouvent désormais livrés à des rapports de force bilatéraux bruts, où la raison d’État de chaque capitale prime sur la recherche d’un compromis régional. C. L’effet boomerang sécuritaire sur l’ensemble du bassin sahélo-guinéen Au-delà des frictions diplomatiques immédiates, la méthode employée à Siguiri comporte un risque stratégique majeur : celui d’un effet boomerang sécuritaire susceptible de fragiliser directement la Guinée à moyen terme. L’objectif affiché par Conakry consistait à assécher les circuits de financement occultes des groupes armés et à ériger un cordon sanitaire contre l’expansion djihadiste venue du Sahel. Toutefois, la sécurité en Afrique de l’Ouest obéit au principe des vases communicants : aucun État ne peut durablement sanctuariser ses frontières en exportant brutalement ses vulnérabilités socio-économiques chez ses voisins immédiats. Dans les faits, l’orpaillage artisanal à Siguiri jouait, malgré son caractère informel, le rôle d’une véritable soupape de sécurité économique et sociale pour l’ensemble de la sous-région. Il offrait une alternative économique vitale à des dizaines de milliers de jeunes actifs originaires des régions rurales du Mali (Kayes, Koulikoro, Sikasso, Mopti) et du Burkina Faso (Boucle du Mouhoun, Hauts-Bassins, Centre-Nord), durement frappées par l’insécurité, la chute des rendements agricoles et le sous-emploi chronique. Les transferts de fonds réguliers envoyés depuis la Haute-Guinée permettaient à des centaines de milliers de ménages sahéliens de subvenir à leurs besoins essentiels sans dépendre de l’économie de guerre locale. En privant soudainement cette masse de travailleurs de leurs moyens de subsistance et en les refoulant sans accompagnement économique ni programme de réinsertion vers des territoires où la présence de l’État demeure fragile, l’opération guinéenne a créé un immense réservoir de précarité, de déclassement et de ressentiment social. Or, les études de terrain menées sur les dynamiques insurrectionnelles au Sahel démontrent de manière constante que les groupes armés affiliés au Groupe de soutien à l’islam et aux musulmans (JNIM) ou à l’État islamique au Grand Sahara (EIGS) recrutent prioritairement parmi les jeunes ruraux désœuvrés, endettés ou animés par un sentiment d’injustice. En déstabilisant brutalement l’équilibre socio-économique des zones frontalières du sud du Mali — une région où les incursions des groupes armés se sont précisément multipliées ces dernières années le long des axes menant vers la Guinée —, le refoulement massif de Siguiri risque d’alimenter directement les viviers de recrutement et les réseaux logistiques des groupes terroristes à quelques dizaines de kilomètres de Mandiana et de Siguiri. En privilégiant une réponse exclusivement coercitive et unilatérale, Conakry s’expose ainsi au paradoxe d’avoir affaibli la résilience sociale de son propre glacis protecteur. III. Dépasser la crise : vers une gouvernance minière et migratoire concertée La crise de novembre 2026 ne doit pas être appréhendée comme une fatalité géopolitique, mais comme un électrochoc politique appelant une refondation profonde des modes de régulation en Afrique de l’Ouest. L’espace sahélo-guinéen ne pourra concilier durablement souveraineté économique, impératif écologique et sécurité collective qu’en substituant une ingénierie institutionnelle concertée aux opérations de police unilatérales. Pour sortir de l’impasse actuelle, trois chantiers opérationnels s’imposent désormais aux décideurs de Conakry, de Bamako et de Ouagadougou. A. Réactiver les mécanismes bilatéraux de coopération frontalière La première urgence consiste à dépasser une conception strictement sécuritaire et hermétique de la frontière pour lui substituer une véritable politique de co-gestion des espaces transfrontaliers. Sur le plan géographique, historique et sociologique, les bassins aurifères du Bouré en Guinée et du Mandé au Mali — prolongés vers les régions aurifères de Sikasso et de l’ouest burkinabè — forment un continuum naturel et humain séculaire. Les tracés frontaliers hérités de la période coloniale ne sauraient fragmenter artificiellement ces bassins de vie sans provoquer des tensions chroniques. Plutôt que d’agir par à-coups répressifs, Conakry, Bamako et Ouagadougou doivent réactiver et doter de moyens permanents leurs commissions mixtes paritaires de démarcation, de sécurité et de coopération transfrontalière, en s’appuyant notamment sur le Programme frontière de l’Union africaine (PFUA). Concrètement, cette coopération opérationnelle doit s’articuler autour de deux leviers prioritaires. D’une part, l’institutionnalisation de patrouilles militaires et douanières conjointes le long des corridors sensibles — notamment sur les axes Siguiri– Kourémalé – Kangaba et Mandiana – Yanfolila –Sikasso — permettrait d’assurer une surveillance efficace des mouvements transfrontaliers tout en prévenant les incidents entre forces de sécurité et populations civiles. Un mécanisme d’alerte précoce et de liaison directe entre les gouverneurs des régions frontalières (Kankan côté guinéen, Koulikoro et Sikasso côté malien, Hauts-Bassins côté burkinabè) éviterait à l’avenir que des tensions locales, comme celles de Bouré-Balato , ne dégénèrent en crises humanitaires régionales. D’autre part, la lutte contre le financement du terrorisme et le pillage fiscal exige de déplacer l’effort répressif du bas vers le haut de la chaîne de valeur aurifère. Les dizaines de milliers de petits extracteurs migrants refoulés en novembre 2026 ne constituent que la main-d’œuvre précaire d’une économie souterraine pilotée par de grands négociants, des bailleurs de fonds informels finançant les dragues et des réseaux internationaux de raffinage. L’activation d’une coopération judiciaire et financière étroite entre les Cellules nationales de traitement des informations financières (CENTIF) de Guinée, du Mali et du Burkina Faso permettrait de tracer les flux financiers illicites, de geler les avoirs des commanditaires des réseaux de contrebande et de démanteler les comptoirs clandestins d’achat d’or, frappant ainsi au cœur de l’économie criminelle sans pénaliser les travailleurs pauvres. B. Substituer la formalisation encadrée à l’exclusion systématique Sur le plan de la politique minière interne, la crise de Siguiri illustre l’échec d’un modèle réglementaire binaire qui oscille entre une tolérance informelle prolongée et une répression militaire brutale. L’article 52 du Code minier guinéen, qui réserve exclusivement l’autorisation d’exploitation artisanale aux nationaux, s’est révélé inapplicable dans la pratique face à l’ampleur des mobilités régionales et à l’attractivité économique des placers de Haute-Guinée. En droit économique, lorsqu’une norme légale ignore totalement la réalité sociologique d’un marché du travail, elle favorise mécaniquement la clandestinité, la corruption des agents de contrôle et l’évaporation fiscale. Une approche pragmatique et souveraine consisterait à engager une réforme structurelle de formalisation de l’exploitation minière artisanale et à petite échelle (EMAPE). À l’image des dispositifs de sécurisation expérimentés dans d’autres pays miniers africains comme la Tanzanie ou le Ghana, l’État guinéen aurait tout intérêt à délimiter officiellement des « couloirs d’orpaillage artisanaux encadrés » dans les zones non couvertes par les permis industriels tels que celui de la Société AngloGold Ashanti de Guinée (SAG). À l’intérieur de ces périmètres dédiés, l’exercice de l’activité serait strictement subordonné à l’enregistrement biométrique des exploitants, à leur regroupement obligatoire au sein de coopératives agréées et au respect d’un cahier des charges environnemental contraignant interdisant le mercure, le cyanure et le dragage des lits mineurs du fleuve Niger. Dans ce cadre juridique rénové, Conakry pourrait négocier avec Bamako et Ouagadougou des accords bilatéraux de migration circulaire prévoyant la délivrance de contingents de cartes professionnelles minières transfrontalières, valables pour une durée déterminée et soumises au paiement d’une redevance fiscale forfaitaire auprès des collectivités locales de Siguiri. Ce dispositif offrirait un double dividende stratégique : d’une part, l’État guinéen restaurerait sa pleine souveraineté fiscale et écologique en captant une part substantielle de la rente aurifère — via l’obligation faite aux coopératives de vendre leur production aux comptoirs agréés par la Banque centrale de la République de Guinée (BCRG) — tout en imposant des techniques gravimétriques propres ; d’autre part, les travailleurs migrants bénéficieraient d’un statut légal, d’une sécurité juridique de leurs biens et d’une couverture sanitaire minimale, désamorçant ainsi les conflits fonciers avec les communautés autochtones. C. Harmoniser les politiques minières et environnementales en Afrique de l’Ouest Enfin, la résorption durable de l’orpaillage clandestin exige une convergence normative à l’échelle de l’ensemble de l’espace ouest-africain, transcendant les fractures institutionnelles actuelles entre la CEDEAO et l’Alliance des États du Sahel (AES). L’expérience des deux dernières décennies démontre que toute opération d’assainissement menée isolément par un État produit un effet mécanique de vases communicants : expulsés des sites de Siguiri, les orpailleurs et les réseaux de financement se redéploient immédiatement vers les placers de Kéniéba au Mali, de Kédougou au Sénégal, de Tengrela en Côte d’Ivoire ou du nord du Ghana, reproduisant ailleurs les mêmes dégâts écologiques et les mêmes vulnérabilités sécuritaires. Il devient dès lors impératif d’engager une harmonisation des codes miniers, des régimes douaniers et de la fiscalité applicable à l’or brut à l’échelle régionale. Tant que des différentiels significatifs subsisteront entre les taxes à l’exportation et les redevances minières pratiquées par Conakry, Bamako, Dakar ou Abidjan, les contrebandiers exploiteront ces écarts fiscaux pour acheminer clandestinement l’or vers le pays offrant la fiscalité la plus avantageuse ou les contrôles les plus lâches. À terme, les États ouest-africains gagneraient à mettre en place un mécanisme régional commun de certification et de traçabilité de l’or artisanal, s’inspirant directement du Mécanisme régional de certification de la Conférence internationale sur la région des Grands Lacs (CIRGL) et des standards de diligence raisonnable de l’OCDE. Un tel passeport régional de l’or, adossé à des outils numériques de traçabilité du puits jusqu’à l’affinage, permettrait d’exclure des marchés internationaux l’or issu des zones de conflit ou de sites pollués au mercure, d’accroître les recettes budgétaires de tous les États producteurs et de rassurer les investisseurs industriels. L’or de Siguiri et du Sahel cessera alors d’être un facteur de concurrence fiscale et de friction diplomatique pour devenir le socle d’une véritable politique industrielle, écologique et souveraine partagée. Conclusion Les événements survenus autour des mines d’or de Siguiri en novembre 2026 resteront dans l’histoire récente comme un moment de vérité pour l’Afrique de l’Ouest contemporaine. Loin de constituer un simple fait divers frontalier ou une banale opération de police administrative, cette crise agit comme un puissant révélateur des lignes de faille qui traversent des États confrontés simultanément à des impératifs contradictoires. D’un côté s’exprime l’urgence vitale de restaurer l’autorité régalienne sur des territoires périphériques, de capter une rente minière trop longtemps abandonnée aux circuits informels, de sauver l’écosystème du bassin supérieur du fleuve Niger et de contenir la contagion sécuritaire venue du Sahel. De l’autre demeure la nécessité tout aussi impérieuse de préserver des solidarités humaines séculaires, de respecter les engagements juridiques internationaux et de maintenir la cohésion politique d’une sous-région en pleine recomposition. Nul observateur objectif des réalités économiques et sécuritaires de la Haute-Guinée ne saurait contester à Conakry le droit légitime et souverain de faire respecter sa législation nationale. Face à la dégradation accélérée des terres arables sous l’effet du mercure et du cyanure, face à l’évaporation fiscale massive d’une ressource stratégique et face aux risques d’infiltration de réseaux criminels ou terroristes le long de frontières poreuses, l’inaction de l’État guinéen aurait constitué une faute politique majeure. En cherchant à reprendre le contrôle physique et administratif du bassin du Bouré , et en s’efforçant d’inscrire une partie de cette action dans le cadre de procédures judiciaires individuelles devant les tribunaux de Kankan et de Conakry, les autorités guinéennes ont affirmé une exigence élémentaire de souveraineté territoriale et d’État de droit. Cependant, la crise diplomatique et humanitaire provoquée par le refoulement précipité de plus de 160 000 ressortissants des pays voisins — dont plus de 76 000 citoyens burkinabè rapatriés dans l’urgence — met crûment en lumière les limites d’une souveraineté exercée sur un mode exclusivement unilatéral et coercitif. Lorsque la réponse de l’État privilégie le choc sécuritaire au détriment de la concertation préalable avec les capitales voisines, elle produit mécaniquement des fractures profondes. L’écart entre la lettre des garanties prévues par le Protocole de 1979 de la CEDEAO ou par la Charte africaine des droits de l’homme et des peuples et la brutalité de l’exode observé aux postes-frontières de Kourémalé et de Dakoro a fragilisé l’édifice juridique régional. Plus encore, la crispation médiatique autour de la suspension de la Radiodiffusion Télévision du Burkina a démontré combien le discours panafricaniste, si volontiers brandi par les régimes de transition à Conakry, Bamako et Ouagadougou face aux acteurs extérieurs, demeure vulnérable dès lors qu’il est mis à l’épreuve de crises de voisinage concrètes. Au-delà des tensions bilatérales immédiates, cet épisode rappelle une loi fondamentale de la géopolitique ouest-africaine : aucun État de la région ne peut construire sa stabilité intérieure en exportant brutalement ses déséquilibres socio-économiques chez ses voisins immédiats. Dans l’espace mandingue et sahélien, les frontières ne sont pas des murs étanches mais des zones de respiration économique et humaine. En privant soudainement des dizaines de milliers de jeunes travailleurs ruraux du Mali et du Burkina Faso d’une source de revenus vitale sans mécanisme de transition ni coopération transfrontalière, la méthode employée à Siguiri risque d’alimenter le désœuvrement et la précarité dans des zones déjà exposées à l’emprise des groupes armés. La sécurité de la Haute-Guinée est indissociable de la stabilité économique et sociale du sud du Mali et de l’ouest du Burkina Faso. L’avenir de la stabilité régionale se joue donc désormais dans la capacité des dirigeants ouest-africains à dépasser une conception défensive et solitaire de la souveraineté pour inventer une souveraineté partagée, concertée et responsable. L’histoire de l’intégration régionale montre que les crises frontalières les plus aiguës peuvent devenir des catalyseurs de réformes durables lorsqu’elles sont saisies avec lucidité. Plutôt que d’osciller perpétuellement entre le laisser-faire informel et l’expulsion de masse, Conakry, Bamako et Ouagadougou ont l’opportunité historique de bâtir un modèle inédit de co-gestion des bassins aurifères transfrontaliers. Cela suppose de réactiver les commissions mixtes de sécurité pour traquer les véritables commanditaires financiers de la contrebande plutôt que les petits extracteurs, de substituer la formalisation encadrée et les permis de travail circulaires à l’interdiction aveugle, et d’engager une harmonisation fiscale et environnementale à l’échelle de toute l’Afrique de l’Ouest. Finalement , l’or de Siguiri porte en lui une double promesse contradictoire. S’il continue d’être géré dans l’urgence sécuritaire et l’unilatéralisme, il demeurera un foyer permanent de litiges diplomatiques, de drames humains et de prédation écologique. En revanche, s’il devient le terrain d’expérimentation d’une gouvernance minière et migratoire concertée entre États voisins, il pourra alors se transformer en un véritable levier d’émergence économique pour la Guinée et en un laboratoire d’une intégration africaine enfin ancrée dans le réel. C’est à ce prix — et à ce prix seulement — que l’affirmation de la souveraineté des États cessera d’entrer en collision avec la fraternité des peuples. Références bibliographiques et juridiques de référence : 1. Ouédraogo, Séni (2025). Droit et politiques minières en Afrique de l'Ouest francophone . Ouagadougou : Presses Universitaires. (Ouvrage de référence analysant le rapport de force entre la souveraineté des États ouest-africains sur leurs ressources naturelles, la gouvernance des codes miniers et les impératifs de justice sociale). 2. Tychsen, John & Charles, Nicolas ( dir .) (2019). La mine artisanale en Afrique de l’Ouest francophone . Copenhague / Orléans : Service géologique du Danemark et du Groenland (GEUS) et Bureau de recherches géologiques et minières (BRGM). (Étude technique et socio-économique de référence sur les dynamiques de l'orpaillage artisanal, les flux transfrontaliers et les impacts environnementaux dans le bassin ouest-africain). 3. Diallo, Mamadou Ciré (2025). L’efficacité du cadre juridique des opérations minières en Afrique de l’Ouest : étude des cas de la Guinée et du Sénégal . Thèse de doctorat en droit public, Université Clermont Auvergne / Centre Michel de l'Hospital. (Analyse approfondie de l'application du Code minier guinéen et des mécanismes de régulation face aux défis de l'exploitation illicite). 4. CEDEAO (29 mai 1979). Protocole A/P1/5/79 relatif à la libre circulation des personnes, au droit de résidence et d’établissement. Dakar : Communauté économique des États de l'Afrique de l'Ouest. (Texte communautaire fondamental encadrant les droits des migrants régionaux et fixant, à son article 11, les garanties obligatoires en cas d'expulsion : notification, protection des biens et prise en charge des frais). 5. Organisation de coopération et de développement économiques (OCDE) (2016). Guide OCDE sur le devoir de diligence pour des chaînes d'approvisionnement responsables en minerais provenant de zones de conflit ou à haut risque (3e éd.). Paris : Éditions OCDE. (Référence internationale incontournable pour documenter les enjeux de traçabilité de l'or artisanal, la lutte contre le blanchiment et la prévention du financement des groupes armés au Sahel). Mohamed-Hady BARRY, Ancien Secrétaire Général du Ministère des Affaires étrangères, de la coopération international e et de l’Intégration africaine de la République de Guinée L’article L’or de Siguiri à l’épreuve du panafricanisme : quand la souveraineté minière fissure le voisinage ouest-africain (Par Mohamed Hady Barry) est apparu en premier sur Mediaguinee.com .",
+      "_source": "Mediaguinee",
+      "_sourceId": "rss_mediaguinee",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
+        "military",
+        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -894,7 +896,7 @@
         "rating": "A2"
       },
       "_rating": "A2",
-      "_score": 123,
+      "_score": 135,
       "_zone": 1,
       "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -902,43 +904,10 @@
       "_desk": "A1"
     },
     {
-      "title": "rumeurs sur les vols d’argent sur les comptes Mobile Money : Orange Burkina rassure sur la sécurité de l’application Max it",
-      "link": "https://netafrique.net/affaire-vols-dargent-sur-les-comptes-mobile-money-orange-burkina-rassure-sur-la-securite-de-lapplication-max-it/",
-      "pubDate": "2026-11-25T23:45:29.000Z",
-      "description": "Face à la multiplication de rumeurs sur les réseaux sociaux faisant état d'un prétendu piratage de l'application Max it et de compromissions de comptes Orange Money, la Direction générale d'Orange a publié une mise au point ferme ce mercredi 25 novembre 2026. Dans un communiqué de presse officiel, l'opérateur dément catégoriquement toute intrusion sur ses systèmes et rassure sa clientèle sur le niveau de protection de sa nouvelle version Max it 2.0. Explicitant le véritable mode opératoire des fraudeurs fondé sur le piège des logiciels malveillants et le contrôle à distance des téléphones , la compagnie appelle ses abonnés à une vigilance accrue et détaille les consignes de sécurité essentielles pour protéger leurs transactions. Intervenant à la suite de publications alarmistes affirmant qu'une faille au sein de l'application Max it permettrait d'accéder frauduleusement aux comptes Orange Money, la Direction générale a tenu à apporter des clarifications précises. L'opérateur confirme que la super application Max it est hautement sécurisée, repose sur des normes internationales rigoureuses, fait l'objet d'une surveillance permanente et n'a subi aucune intrusion. Pour offrir un parcours plus fluide et renforcer la protection des accès, l'ancienne version (1.0) a été volontairement désactivée au profit de Max it 2.0. Cette mise à jour intègre notamment une gestion sécurisée des codes OTP, désormais détectés ou intégrés automatiquement au clavier (sur iOS comme sur Android) afin d'éviter toute saisie manuelle ou interception. Selon l'analyse des équipes techniques, le risque ne provient pas d'une faille applicative, mais de la compromission directe des téléphones des victimes. Les cybercriminels utilisent des techniques d'ingénierie sociale bien rodées pour prendre la main sur les appareils. En diffusant par SMS, WhatsApp ou sur les réseaux sociaux des liens piégés promettant des gains, du crédit gratuit ou des cadeaux, ou en infectant des sites de téléchargement d'applications et de films piratés, les escrocs incitent les utilisateurs à installer un logiciel malveillant ( malware ). Une fois le programme espion installé à l'insu du propriétaire, les pirates parviennent à visualiser l'écran et à contrôler le téléphone à distance, leur permettant de manipuler les applications financières comme s'ils tenaient l'appareil entre leurs mains. Face à ces menaces ciblées, l'opérateur rappelle que la prudence individuelle constitue la première ligne de défense. La Direction générale exhorte les clients à ne jamais cliquer sur des liens suspects (même transmis par des proches), à télécharger l'application exclusivement sur les magasins officiels (Google Play Store et App Store) et à ne jamais communiquer leur code secret ni leurs codes OTP. Par ailleurs, l'entreprise met en garde contre les faux conseillers se faisant passer pour des agents de la marque afin de réclamer des opérations guidées : elle précise que ses appels officiels s'effectuent désormais uniquement depuis le +121 (avec un service client joignable au 121). Enfin, tout utilisateur confronté à un appel douteux est invité à raccrocher immédiatement et à signaler le numéro suspect au 128, la ligne dédiée à la lutte anti-arnaque. L’article rumeurs sur les vols d'argent sur les comptes Mobile Money : Orange Burkina rassure sur la sécurité de l'application Max it est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "I",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Affaire Arthur Zagré : La réserve de la Mauritanie menace la qualification des Étalons de la CAN 2027",
-      "link": "https://netafrique.net/affaire-arthur-zagre-la-reserve-de-la-mauritanie-menace-la-qualification-des-etalons-de-la-can-2027/",
-      "pubDate": "2026-11-25T23:29:13.000Z",
-      "description": "À la suite de la double confrontation des éliminatoires de la CAN 2027 disputée les 13 et 17 novembre 2026, la Fédération mauritanienne de football (FFRIM) a officialisé le dépôt d'une réclamation auprès de la Confédération Africaine de Football (CAF) contestant l'éligibilité de l'international burkinabè Arthur Zagré. Ayant représenté la France dans les catégories de jeunes (U19), le latéral des Étalons se retrouve au centre d'un litige portant sur la validation formelle de son changement d'association sportive auprès de la FIFA. Alors que la Fédération burkinabè de football (FBF) a transmis le dossier à ses conseils juridiques, l'équipe nationale du Burkina Faso s'expose potentiellement à des sanctions de défaite par forfait (3-0) en cas d'irrégularité administrative. La qualification acquise sur le terrain par les Étalons du Burkina Faso fait face à une contestation sur le tapis vert. Dans un communiqué de presse publié le 25 novembre 2026, la Fédération mauritanienne de football (FFRIM) a confirmé avoir saisi, dès le 19 novembre 2026, les instances compétentes de la Confédération Africaine de Football (CAF). Cette réclamation porte directement sur l'éligibilité du joueur burkinabè Arthur Zagré lors des deux rencontres des éliminatoires de la Coupe d’Afrique des Nations (CAN) 2027 jouées les 13 et 17 novembre 2026. Pour défendre ses intérêts, la FFRIM a confié le suivi de la procédure à un cabinet d'avocats international. De son côté, la Fédération burkinabè de football (FBF) a reçu la notification de la CAF et a indiqué que ses avocats étaient saisis du dossier. L'enjeu central de cette procédure repose sur la distinction entre la nationalité civile et la nationalité sportive d'un athlète. Si Arthur Zagré détient le passeport burkinabè, son parcours international antérieur sous le maillot de la Fédération Française de Football (FFF) encadre strictement son éligibilité avec les Étalons. Entre octobre 2018 et février 2020, le défenseur a disputé 13 rencontres avec la sélection française U19, dont 5 matchs officiels lors des qualifications et de la phase finale du Championnat d'Europe U19. En vertu de l'article 9 du Règlement d'application des Statuts de la FIFA, tout joueur ayant représenté une association lors d'une compétition officielle de jeunes doit obtenir l'accord préalable du Tribunal du Football de la FIFA pour changer d'association. Après deux matchs amicaux avec le Burkina Faso et un passage sur le banc contre le Bénin, Arthur Zagré a disputé son premier match officiel contre la Centrafrique avant d'être aligné lors de la double confrontation face à la Mauritanie. La question décisive devant le jury disciplinaire de la CAF est de déterminer si l'autorisation de la FIFA a été formellement délivrée avant ces rencontres officielles. Dans l'hypothèse où l'inéligibilité du joueur serait établie, le barème des sanctions de la CAF s'avère particulièrement rigoureux. Conformément aux articles 38.1 et 40 du règlement de la CAN ainsi qu'à l'article 150 du Code disciplinaire de la CAF, la participation d'un joueur non qualifié entraîne la perte de la rencontre par forfait sur le score de 3-0, assortie d'une amende financière. L’article 47 du règlement de la CAN prévoit également des risques de suspension pour l'édition suivante en cas d'erreur administrative majeure dans l'enregistrement d'un joueur. La Mauritanie connaît d'ailleurs parfaitement cette jurisprudence : en juillet 2023, la CAF avait donné gain de cause à la RDC dans l'affaire Khadim Diaw, infligeant à la sélection mauritanienne deux défaites par forfait (3-0) et 10 000 dollars d'amende pour l'alignement d'un joueur n'ayant pas finalisé son changement d'association après le CHAN. Dans l'attente du verdict des instances continentales, le football burkinabè retient son souffle. L’article Affaire Arthur Zagré : La réserve de la Mauritanie menace la qualification des Étalons de la CAN 2027 est apparu en premier sur NetAfrique.net .",
+      "title": "Douane burkinabè: sentinelle de la nation et bouclier de la sécurité",
+      "link": "https://netafrique.net/douane-burkinabe-sentinelle-de-la-nation-et-bouclier-de-la-securite/",
+      "pubDate": "2026-11-26T14:43:18.000Z",
+      "description": "Cent quatre-vingt-un (181) drones, des équipements militaires et des terminaux de communication par satellite Starlink interceptés à l’aéroport de Ouagadougou. Au-delà de leur valeur estimée à plus de 80 millions de FCFA, ces matériels sensibles rappellent toute la portée du travail des Douanes burkinabè. Dans un contexte où la sécurité nationale demeure une priorité absolue, les gabelous se dressent, avec une vigilance à toute épreuve, comme une sentinelle aux frontières, un rempart contre les trafics dangereux et un bouclier pour les populations. Ce sont des saisies dont la portée dépasse largement les chiffres inscrits dans les procès-verbaux. Celle réalisée par la Brigade spéciale des douanes de l’aéroport de Ouagadougou en fait partie. En interceptant 181 drones et divers matériels militaires, auxquels s’ajoutent des équipements de communication par satellite Starlink, les agents ont mis hors circuit un ensemble de matériels dont la nature particulière commande une vigilance accrue. Dans le Burkina Faso engagé dans la reconquête de son territoire et la protection de ses populations, de tels équipements ne sauraient être considérés comme de simples marchandises. Leur destination, leur utilisation et les risques liés à leur circulation irrégulière constituent des enjeux majeurs. Un drone peut servir à des usages civils légitimes, mais, entre de mauvaises mains, il peut aussi devenir un instrument de surveillance, de renseignement ou d’action hostile. Les équipements de communication, eux, peuvent contribuer à des opérations dont les conséquences échappent à tout contrôle. C’est pourquoi cette interception mérite d’être saluée à sa juste valeur. Elle témoigne du professionnalisme des gabelous, de leur capacité à déceler les marchandises sensibles et de leur contribution directe à la sécurité nationale. Des saisies qui frappent au cœur de l’économie criminelle Cette opération s’inscrit dans une dynamique plus large de lutte contre les trafics illicites. En 2024, les Douanes burkinabè ont saisi 11 fusils d’assaut AK-47, 5 125 munitions, 76 715 bâtons d’explosifs, 9 360 détonateurs et des centaines de rouleaux de cordon détonant. Les saisies de marchandises liées aux trafics illicites avaient atteint une valeur estimée à 3,4 milliards de FCFA. Ces résultats illustrent la diversité des menaces auxquelles les services douaniers font face. Armes, munitions, explosifs, stupéfiants, médicaments prohibés, cyanure, mercure ou carburant frauduleux : autant de produits susceptibles d’alimenter des réseaux clandestins, de fragiliser l’économie nationale ou de mettre en danger la vie des citoyens. En 2026, l’opération de lutte contre la contrebande menée du 10 juillet au 15 octobre a permis de saisir des marchandises évaluées à plus de 10,8 milliards de FCFA. Parmi les produits interceptés figuraient notamment des millions de comprimés de tapentadol, des médicaments contrefaits, des explosifs, du cyanure et du mercure. De telles prises portent un coup aux circuits de fraude et aux réseaux qui prospèrent sur l’illégalité. Elles contribuent à assécher des sources de financement criminelles, à protéger les consommateurs contre les produits dangereux et à préserver les recettes de l’État. Une vigilance qui protège, un engagement qui honore La Douane est bien plus qu’une administration chargée de percevoir les droits et taxes. Elle est une force de surveillance, de contrôle et de protection. À l’aéroport comme sur les axes routiers, aux frontières comme dans les zones de transit, ses agents veillent à ce que les marchandises qui entrent, circulent ou sortent du territoire respectent les lois et ne constituent pas une menace pour la collectivité. Cette mission exige du sang-froid, de la rigueur, de l’expérience et une vigilance constante. Elle impose parfois de déceler l’anomalie là où tout semble ordinaire, de contrôler avec méthode et de prendre la mesure d’un risque avant qu’il ne se transforme en drame. Les gabelous méritent donc la reconnaissance de la nation. Leur travail, souvent discret, s’inscrit au cœur de la défense de la souveraineté économique et sécuritaire du Burkina Faso. Chaque saisie importante est une victoire contre la fraude. Chaque matériel dangereux intercepté est un risque de moins pour les populations. Chaque réseau contrarié est une menace potentielle qui recule. À travers ces résultats, la Douane burkinabè confirme sa place de sentinelle aux frontières, de rempart contre les trafics et de bouclier protecteur de la nation. Donatien FOFANA, Pour Netafrique.net L’article Douane burkinabè: sentinelle de la nation et bouclier de la sécurité est apparu en premier sur NetAfrique.net .",
       "_source": "Net Afrique (BF)",
       "_sourceId": "rss_netafrique",
       "_sourceCat": "bf_local",
@@ -960,26 +929,188 @@
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 115,
+      "_score": 127,
       "_zone": 1,
-      "_theme": "D",
+      "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Semaine du numérique 2026 : L'open source, l'IA, les langues nationales et l'accompagnement des start-up au cœur d'un panel",
-      "link": "https://lefaso.net/spip.php?article151033",
-      "pubDate": "2026-11-25T23:21:00.000Z",
-      "description": "La 21e édition de la Semaine du numérique se poursuit ce mercredi 25 novembre 2026 au Parc d'exposition du Salon international de l'artisanat de Ouagadougou (SIAO). Pour cette deuxième journée, les échanges ont mis en lumière plusieurs défis liés à la souveraineté technologique du Burkina Faso tels que l'appropriation des technologies ouvertes, le développement de l'intelligence artificielle dans les langues nationales, la formation des compétences locales et le financement des entreprises numériques. Les échanges ont été modérés par Abdoul Kader Ky, directeur national de l'économie numérique du Niger. Pour Idriss Tinto, conseiller technique au ministère de la Transition digitale, des postes et des communications électroniques, l'open source est un levier de souveraineté. L'accès aux codes sources permet d'adapter les solutions existantes et réduit la dépendance aux grandes plateformes. Il met en garde contre les hausses de tarifs, les restrictions d'accès ou les interruptions de service décidées par les fournisseurs d'intelligence artificielle (IA), et plaide pour des compétences locales capables d'assurer la maintenance des outils. M. Tinto reconnaît les risques de l'ouverture, mais estime que la collaboration entre développeurs et utilisateurs aide à détecter les failles. Il invite les États à soutenir les communautés locales et voit aussi dans l'automatisation du code une occasion de faire évoluer les métiers plutôt qu'une simple menace pour l'emploi. Idriss Tinto, conseiller technique au ministère de la transition digitale, des postes et des communications électroniques. Faire parler l'IA en mooré La souveraineté passe aussi par les langues. Dr Rodrigue Kafando, enseignant-chercheur à l'Université virtuelle du Burkina Faso et chargé de recherche au Centre d'excellence en intelligence artificielle (CITADEL), a présenté des travaux sur quatre langues nationales : le mooré, le dioula, le fulfuldé et le gulmancema. Les équipes adaptent des modèles existants, notamment ceux de la famille NLLB de Meta, à partir de données collectées localement. Dr Rodrigue Kafando, enseignant-chercheur à l'Université virtuelle du Burkina Faso. Le principal obstacle reste selon lui la rareté de ressources variées. À l'en croire, les premiers essais en mooré se sont appuyés sur des textes bibliques et des documents relatifs aux droits humains, ce qui limite le vocabulaire maîtrisé par les modèles. M. Kafando préconise d'élargir la collecte aux traductions, aux transcriptions et aux enregistrements vocaux du quotidien, et de faire valider les évaluations par des locuteurs. Il cite l'outil ( https://lessentiel.bf ) qui rend l'actualité accessible en mooré par traduction automatique, et envisage des usages dans l'éducation, la santé et l'agriculture. Il appelle à mutualiser les données linguistiques entre chercheurs, développeurs, associations et institutions publiques. Vue partielle de participants du Mali et du Niger . Des compétences, mais aussi des clients Ounténi T. Cyril Ouoba, directeur général de RIGO, a identifié cinq domaines de formation prioritaires : le génie logiciel, les infrastructures, la cybersécurité, les données et l'IA, et la commercialisation. Sur ce dernier point, il juge l'écosystème insuffisant, car une innovation technique ne devient pas un produit viable sans compétences en marketing. Il demande que l'État et les grandes entreprises recourent davantage aux solutions locales, la commande publique pouvant constituer un débouché déterminant. Les innovations primées lors des hackathons devraient, selon lui, être déployées au-delà de la remise des prix. Ounténi T. Cyril Ouoba, directeur général de RIGO. Il recommande des formations courtes, de trois à six mois, pour les jeunes et les femmes déscolarisés, et l'introduction de l'algorithmique dès le collège. Il évoque aussi les commerçantes des marchés et des zones rurales, qui pourraient gérer stocks, ventes et comptabilité avec des applications vocales dans les langues nationales. M. Ouoba a également proposé de recenser les solutions numériques matures dans la comptabilité, la recherche, l'agriculture ou la santé. Les États de l'AES pourraient conduire ce travail et le présenter lors de la prochaine édition de la Semaine. Il suggère enfin un réseau de mentors, constitué avec les associations professionnelles des trois pays, pour accompagner les jeunes talents jusqu'à l'aboutissement de leurs projets. Il se dit réservé sur les aides financières immédiates. Des étudiants ont suivi avec attention les échanges qui ont duré plus de 2 heures de temps. Accompagner avant de financer Cette réserve a trouvé un écho dans l'intervention de Bourhanoud-Dine Sawadogo, chargé d'analyse économique et financière au Fonds burkinabè de développement économique et social (FBDES). Il a rappelé le bilan de l'Initiative Burkina Startups, lancée en 2017 avec une enveloppe annoncée de 10 milliards de francs CFA et l'ambition de faire naître 500 start-up. L'expérience a révélé des insuffisances dans la préparation et l'encadrement de certains porteurs de projets. Les échanges ont été modérés par Abdoul Kader Ky, directeur national de l'économie numérique du Niger. . Pour lui, il faut évaluer les besoins réels avant de mobiliser des fonds car certaines start-up manquent davantage de formation, d'équipements, de réseau ou d'appui technique que d'argent. Le parcours envisagé comprend la formation initiale, la sélection, la maturation des projets et l'accompagnement vers le marché, avec une attention particulière à l'existence d'une demande réelle. [ Cliquez ici pour lire l'intégralité ] Fredo Bassolé Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
+      "title": "CRADAT : la Guinée prend la présidence du C.A, Amadou Oury Bah appelle à adapter le droit du travail aux mutations du monde professionnel",
+      "link": "https://mediaguinee.com/2026/11/cradat-la-guinee-prend-la-presidence-du-c-a-amadou-oury-bah-appelle-a-adapter-le-droit-du-travail-aux-mutations-du-monde-professionnel/",
+      "pubDate": "2026-11-26T15:30:37.000Z",
+      "description": "La République de Guinée a officiellement pris la présidence du Conseil d’administration du Centre régional africain d’administration du travail (CRADAT), à l’occasion de la 45ᵉ session ordinaire de cette institution, ouverte ce jeudi 26 novembre 2026 à Conakry. La cérémonie d’ouverture a été présidée par le Premier ministre, chef du gouvernement, Amadou Oury Bah, en présence de plusieurs ministres, de représentants des États membres, de partenaires techniques et financiers ainsi que d’experts du monde du travail. À l’issue de cette session, la présidence du Conseil d’administration est désormais assurée par la ministre guinéenne de l’Emploi, du Travail et de la Protection sociale, Ramatoulaye Camara, succédant au représentant du Burkina Faso. Cette rencontre régionale intervient dans un contexte marqué par les profondes mutations du monde du travail, notamment l’essor de l’intelligence artificielle, la transformation des relations professionnelles et les nouveaux défis liés à l’emploi et à la protection sociale. Au nom du président sortant du Conseil d’administration, le ministre burkinabè des Serviteurs du peuple, Mathias Traoré, représenté par son directeur de cabinet, Cyprien Ilboudo, a exprimé sa gratitude aux autorités guinéennes pour l’accueil réservé aux délégations et les moyens mobilisés pour la tenue de cette session. Dans son message, il a salué l’engagement des États membres et des partenaires internationaux, tout en rappelant que le CRADAT demeure un instrument essentiel de développement des compétences et de modernisation des administrations du travail. Il a également insisté sur la nécessité de renforcer les moyens institutionnels, financiers et pédagogiques du Centre afin de lui permettre de répondre efficacement aux nouvelles exigences du monde professionnel. « Au moment où les mutations du travail s'accélèrent avec l'avènement de l'intelligence artificielle, le Centre s'arrime aux évolutions du monde du travail », a-t-il indiqué dans son intervention. Le représentant du président sortant a enfin exhorté les États membres à poursuivre leur soutien au CRADAT et à renforcer leur confiance en cette institution commune. De son côté, la ministre de l’Emploi, du Travail et de la Protection sociale, Ramatoulaye Camara, a exprimé la fierté de la Guinée d’accueillir cette 45ᵉ session ordinaire. Elle a salué l’engagement des délégations et des partenaires ayant contribué à la préparation de cette rencontre. La ministre a mis en avant les enjeux liés à la modernisation des administrations du travail, notamment l’accompagnement des jeunes vers l’emploi, la digitalisation des services publics et l’élargissement de la protection sociale aux travailleurs qui en sont encore éloignés. Elle a également souligné la responsabilité de son département dans le cadre du programme Simandou 2040, afin que les emplois générés par les grands projets structurants soient accompagnés de formations adaptées, de conditions de travail sûres et d’un accès effectif à la protection sociale. Ramatoulaye Camara a rappelé que le CRADAT joue depuis plus de six décennies un rôle déterminant dans le renforcement des compétences des inspecteurs et contrôleurs du travail, des acteurs syndicaux, des cadres des organismes de prévoyance sociale et des services publics de l’emploi. Elle a invité les membres du Conseil d’administration à examiner les recommandations issues des travaux du comité d’experts et à définir les orientations stratégiques permettant au Centre de consolider son statut de pôle d’excellence africain. Prenant la parole à cette occasion, le Premier ministre Amadou Oury Bah a souhaité la bienvenue aux différentes délégations, au nom du président de la République, Mamadi Doumbouya, du gouvernement et du peuple de Guinée. Il a salué la présence des représentants des pays frères et des partenaires du CRADAT, notamment l’Organisation internationale du travail (OIT), partenaire historique de l’institution. Le chef du gouvernement a rappelé le rôle essentiel du Centre régional africain d’administration du travail, qui regroupe 18 États membres et œuvre depuis plusieurs décennies à la formation, à l’étude et à la recherche dans le domaine de l’administration du travail. Selon lui, les transformations rapides du marché de l’emploi imposent désormais aux États africains de repenser leurs dispositifs juridiques et institutionnels afin de mieux répondre aux réalités contemporaines. « Aujourd'hui, face aux multiples mutations rapides et massives du marché du travail, avec à la clé l'avènement de l'intelligence artificielle et aux grands projets structurants qui transforment notre pays, l'exigence de compétences pointues n'a jamais été aussi forte », a-t-il souligné. Amadou Oury Bah a notamment évoqué l’évolution des formes d’emploi, l’émergence de nouvelles modalités contractuelles, la subordination numérique et le développement du travail à distance. Autant de phénomènes qui, selon lui, fragilisent les fondements traditionnels du droit du travail et rendent nécessaire une adaptation des législations nationales. « Ces changements s'accentuent, accentuent la désuétude du Code du travail actuel », a-t-il déclaré, insistant sur l’urgence pour les pays africains de s’adapter à un environnement professionnel en constante évolution. Pour le Premier ministre, le CRADAT constitue un cadre privilégié de coopération et de mutualisation des expériences entre les États membres. Il a invité les participants à mettre à profit cette session pour approfondir les échanges et identifier des réponses communes aux défis auxquels sont confrontées les administrations du travail. Le chef du gouvernement a également réaffirmé l’engagement de la Guinée, qui assure désormais la présidence du Conseil d’administration, à soutenir le rayonnement de cette institution panafricaine et à promouvoir la valorisation de ses diplômes. Il a par ailleurs inscrit cette dynamique dans le cadre du programme Simandou 2040, présenté comme un projet de transformation dépassant les frontières guinéennes et susceptible de contribuer au développement de l’ensemble de l’Afrique de l’Ouest. « Le président Mamadi Doumbouya, président de la République, voit dans les travaux qui s'ouvrent une opportunité sur la valorisation du travail et l'ancrage de la justice sociale », a-t-il affirmé. La 45ᵉ session ordinaire du Conseil d’administration du CRADAT constitue ainsi une étape importante dans la coopération africaine en matière de travail. Elle ouvre la voie à de nouvelles orientations visant à moderniser les administrations, à adapter les législations aux transformations du marché de l’emploi et à promouvoir une justice sociale durable au sein des États membres. Youssouf Keita L’article CRADAT : la Guinée prend la présidence du C.A, Amadou Oury Bah appelle à adapter le droit du travail aux mutations du monde professionnel est apparu en premier sur Mediaguinee.com .",
+      "_source": "Mediaguinee",
+      "_sourceId": "rss_mediaguinee",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
+        "military",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "P",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Rencontre régionale à Dakar pour trouver des solutions aux crises pastorales en Afrique de l'Ouest et centrale",
+      "link": "https://www.rfi.fr/fr/afrique/20261126-rencontre-r%C3%A9gionale-%C3%A0-dakar-pour-trouver-des-solutions-aux-crises-pastorales-en-afrique-de-l-ouest-et-centrale",
+      "pubDate": "2026-11-26T15:10:31.000Z",
+      "description": "Dix pays de la zone sahélienne sont réunis à Dakar pour deux jours, jusqu'au 26 novembre, afin de trouver des solutions d'urgence à la crise pastorale qui sévit dans la région. Face à un manque d'eau et de fourrage critique, des associations d'éleveurs et des organisations pastorales du Burkina Faso, du Mali, de Mauritanie, du Niger, de Gambie, du Ghana, de Guinée, du Sénégal, du Togo et du Tchad sont venues plaider auprès de leurs États et des bailleurs de fonds afin que des solutions soient trouvées pour les quelques 20 millions de personnes qui vivent directement de l'élevage.",
+      "_source": "RFI Afrique",
+      "_sourceId": "rss_rfiafr",
+      "_sourceCat": "africa",
+      "_sourceBloc": "occident_fr",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "C",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Souveraineté sanitaire dans l’espace AES : La deuxième édition du SIPSIS s’ouvre à Ouagadougou",
+      "link": "https://faso7.com/2026/11/26/souverainete-sanitaire-dans-lespace-aes-la-deuxieme-edition-du-sipsis-souvre-a-ouagadougou/",
+      "pubDate": "2026-11-26T14:32:42.000Z",
+      "description": "La deuxième édition du Salon international des professionnels de santé et d’intégration des soins (SIPSIS) s’est ouverte le 25 novembre 2026, à Ouagadougou. Placée sous le thème des défis sanitaires de la décennie 2027-2036, cette rencontre réunit le Burkina Faso, le Mali et le Niger autour d’un objectif commun : renforcer la souveraineté sanitaire de l’espace AES. Après une première édition organisée en 2024, le SIPSIS revient avec l’ambition de créer un cadre d’échanges entre les acteurs du secteur de la santé. Jusqu’au 27 novembre, des panels et des rencontres permettront aux professionnels de réfléchir aux solutions pour mieux répondre aux besoins sanitaires des populations au cours des dix prochaines années. Dans son discours prononcé au nom du chef de l’État, Émile Zerbo, ministre d’État, ministre de l’Administration territoriale et de la Mobilité, a rappelé que la souveraineté sanitaire passe par la capacité des États à définir leurs priorités, à mobiliser des financements et à garantir l’accès aux soins, même dans les zones les plus éloignées. Il a également insisté sur l’importance de la production locale des produits de santé. « Produire localement les produits de santé dont notre peuple a besoin relève d’un choix de souveraineté. Cet effort rappelle la mutualisation de nos compétences, la mobilisation de nos financements et la pleine participation de notre jeunesse » , a-t-il déclaré. Pour Ésaïe Kindo, secrétaire général du SIPSIS, cette deuxième édition vise à mobiliser l’ensemble des acteurs du secteur de la santé autour de la souveraineté sanitaire. L’objectif est également d’anticiper les défis sanitaires de la prochaine décennie et de proposer des réponses adaptées aux réalités des pays participants. À travers cette rencontre, le SIPSIS entend ainsi encourager la coopération entre les pays de l’AES et favoriser des actions communes pour construire des systèmes de santé plus solides et accessibles aux populations. L’article Souveraineté sanitaire dans l’espace AES : La deuxième édition du SIPSIS s’ouvre à Ouagadougou est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "H",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Que savons-nous de la saisie par le Burkina Faso de 181 drones et du matériel militaire ?",
+      "link": "https://www.bbc.com/afrique/articles/cmpqrvd172j1o?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-11-26T13:58:12.000Z",
+      "description": "Les autorités douanières burkinabées affirment avoir saisi mercredi 181 drones, des vêtements de type militaire, du matériel de communication, des appareils Starlink, des gilets pare-balles et d'autres articles à l'aéroport de Ouagadougou.",
+      "_source": "BBC Afrique (FR)",
+      "_sourceId": "rss_bbc_afr",
+      "_sourceCat": "africa",
+      "_sourceBloc": "occident_us",
+      "_sourceVerified": true,
+      "_tags": [
+        "economic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "B1"
+      },
+      "_rating": "B1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Journée du tirailleur africain : A 103 ans, le vétéran Kanré Ouédraogo et ses compagnons mobilisent 900 500 F CFA pour la défense de la patrie",
+      "link": "https://faso7.com/2026/11/26/journee-du-tirailleur-africain-a-103-ans-le-veteran-kanre-ouedraogo-et-ses-compagnons-mobilisent-900-500-f-cfa-pour-la-defense-de-la-patrie/",
+      "pubDate": "2026-11-26T13:44:51.000Z",
+      "description": "Le Burkina Faso a commémoré, ce 26 novembre 2026, la Journée du tirailleur africain, à la place de la Révolution, à Ouagadougou. La cérémonie officielle de dépôt de gerbes a été présidée par le Chef d’État-Major Général des Armées, le Général de Division Moussa Diallo. Placée sous le thème « Engagement des vétérans, quels enseignements tirer ? », cette journée a été marquée par des témoignages sur les sacrifices des tirailleurs africains et un appel à préserver leur mémoire. Les anciens combattants présents à l’exposition ont partagé des souvenirs de leur engagement sur différents théâtres d’opérations. Certains ont participé à la guerre d’Indochine, entre 1946 et 1954, tandis que d’autres ont été engagés dans la guerre d’Algérie, de 1954 à 1962. À 103 ans, le vétéran rend grâce à Dieu-©Faso7 Parmi les vétérans rencontrés, le caporal à la retraite Kanré Ouédraogo, âgé de 103 ans, a raconté son parcours militaire. Il affirme avoir participé aux deux conflits, d’abord en Indochine, puis en Algérie. Ses documents présentés sur place montrent qu’il a fait partie d’un régiment de parachutistes d’infanterie de marine. « J’ai fait l’Indochine, j’ai fait l’Algérie. Deux guerres. Je suis allé en Indochine en 1952 et j’ai fini en 1954. J’ai poursuivi en Algérie parce qu’ils avaient engagé là-bas aussi. J’y ai participé. Grâce à Dieu, j’ai survécu », a-t-il témoigné. Après neuf ans et neuf mois de service dans l’armée, Kanré Ouédraogo a pris sa retraite en 1964. Son récit rappelle le parcours de ces hommes engagés sur des fronts parfois éloignés de leurs terres et de leurs familles. « La nation burkinabè n’oubliera jamais les sacrifices des tirailleurs »-©Faso7 Le Chef d’État-Major Général des Armées, le Général de Division Moussa Diallo, a salué la bravoure et le sens du sacrifice des tirailleurs africains. Il a souligné que leur engagement constitue un héritage toujours vivant dans les forces combattantes actuelles. « Aujourd’hui, nous affirmons avec force et conviction que la nation burkinabè n’oubliera jamais les sacrifices de ces tirailleurs ni l’héritage de courage et de loyauté qu’ils nous ont légué » , a-t-il déclaré. Pour le Général de Divison Moussa Diallo, les tirailleurs africains ont démontré, sur plusieurs fronts, que « la bravoure africaine ne connaît pas de frontières » . Leur héritage, a-t-il poursuivi, se retrouve dans les soldats burkinabè engagés dans la défense de la patrie. S’adressant aux Forces de défense et de sécurité ainsi qu’aux Volontaires pour la défense de la patrie, il a établi un lien direct entre leur engagement actuel et celui des anciens combattants. « Vous êtes les héritiers directs des tirailleurs africains. Par votre engagement, votre courage et votre détermination, vous portez le flambeau de leurs sacrifices et écrivez une nouvelle page de la résistance burkinabè » , a-t-il affirmé. Le Chef d’État-Major Général des Armées a toutefois reconnu que la mémoire et les droits des anciens combattants n’ont pas toujours bénéficié de la reconnaissance attendue. Il a évoqué des pensions longtemps inéquitables, des sacrifices passés sous silence et la nécessité de faire la lumière sur certains drames, notamment celui de Thiaroye. Il a assuré que le Burkina Faso entend, aux côtés des familles et des historiens, restaurer la visibilité et la place des tirailleurs africains dans la mémoire nationale. « Dans nos casernes, nos écoles militaires et nos cérémonies, leur histoire doit être transmise comme un patrimoine d’honneur », a-t-il insisté. Le Général de Division Moussa Diallo a également réaffirmé l’engagement des autorités à améliorer les conditions de vie des militaires retraités, à soutenir les blessés de guerre ainsi que leurs familles et celles des disparus. Les anciens combattants appellent les générations sous le drapeau à poursuivre l’engagement-©Faso7 Le président de l’Association unique des anciens combattants, anciens militaires, veuves, orphelins et victimes de guerre (AUACAMVOVG), le Commandant à la retraite Jean Pierre Kaboré, a salué la mobilisation des délégations venues des provinces et des amicales affiliées. Il a rappelé que les tirailleurs africains, autrefois appelés tirailleurs sénégalais, ont servi sur plusieurs théâtres d’opérations au péril de leur vie, parfois pour défendre des territoires et des populations qui n’étaient pas les leurs. Face au contexte sécuritaire actuel, le commandant à la retraite a évoqué la volonté de certains anciens combattants de reprendre les armes pour venir en aide à leurs enfants et petits-enfants. Mais, a-t-il reconnu, leur âge et leurs capacités physiques ne leur permettent plus de s’engager directement sur le terrain. « C’est pourquoi nous, anciens combattants et anciens militaires, exhortons solennellement les générations encore sous le drapeau à poursuivre leur engagement avec responsabilité, constance et résilience » , a-t-il déclaré. Jean Pierre Kaboré a formulé des bénédictions à l’endroit des forces de défense et de sécurité ainsi que des volontaires pour la défense de la patrie, tout en exprimant la compassion de l’association aux veuves et aux orphelins des combattants tombés. Une contribution de 900 500 FCFA à l’effort national-©Faso7 Au cours de son intervention, le président de l’AUACAMVOVG a également annoncé une contribution financière des anciens combattants et anciens militaires à l’effort de défense et de reconquête du territoire. Selon lui, malgré la modestie de leurs pensions, les membres de l’association ont répondu à l’appel à contribution lancé par le chef de l’État, le Capitaine Ibrahim Traoré. « Grâce à cette mobilisation, nous avons pu réunir la somme de neuf cent mille cinq cents francs que j’ai l’insigne honneur de remettre au camarade Chef d’État-Major Général des Armées pour qu’il la transmette au camarade ministre d’État, ministre chargé de la Défense patriotique » , a-t-il indiqué. La commémoration de la Journée du Tirailleur africain permet de mettre en lumière les témoignages des vétérans, les sacrifices consentis au cours des conflits passés et la nécessité de transmettre leur histoire aux générations actuelles. À travers cette journée, les anciens combattants ont également réaffirmé leur solidarité avec les forces engagées dans la défense du Burkina Faso. Josué TIENDREBEOGO Faso7 L’article Journée du tirailleur africain : A 103 ans, le vétéran Kanré Ouédraogo et ses compagnons mobilisent 900 500 F CFA pour la défense de la patrie est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
+        "humanitarian",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F1"
+      },
+      "_rating": "F1",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "S",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Région de la Sirba : La sécurité, la paix et le développement, priorités du premier gouverneur, Auguste Kinda",
+      "link": "https://www.sidwaya.info/2026/11/26/region-de-la-sirba-la-securite-la-paix-et-le-developpement-priorites-du-premier-gouverneur-auguste-kinda/",
+      "pubDate": "2026-11-26T12:52:28.000Z",
+      "description": "Le tout premier gouverneur de la région de la Sirba, Auguste Kinda, a été installé, officiellement, dans ses fonctions, mercredi 25 novembre 2026, à Bogandé, par le ministre des Serviteurs du Peuple, Mathias Traoré. Aux commandes désormais de cette nouvelle entité administrative, le camarade Kinda entend placer l a sécurité, la paix et le développement au cœur de son action. « Camarade Auguste Kinda, au nom du camarade Président du Faso, chef de l’Etat et du camarade Premier ministre, chef du gouvernement, je vous déclare officiellement installé dans vos fonctions de gouverneur de la région de la Sirba avec tous les droits et obligations attachés à cette charge ». C’est par cette formule solennelle que le ministre des Serviteurs du Peuple, Mathias Traoré, a procédé à l’installation officielle du premier gouverneur de la région de la Sirba, mercredi 25 novembre 2026, à Bogandé. Sous les bénédictions des autorités coutumières et religieuses, Auguste Kinda prend ainsi les rênes de cette nouvelle région avec la lourde responsabilité de coordonner l’action de l’Etat et d’accompagner le développement de la région. Le ministre des Serviteurs du Peuple, Mathias Traoré (droite), a installé le premier gouverneur de la région de la Sirba, Auguste Kinda (gauche), dans ses fonctions. \" data-large-file=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?fit=696%2C660&ssl=1\" class=\"size-full wp-image-174854\" src=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=696%2C660&ssl=1\" alt=\"\" width=\"696\" height=\"660\" srcset=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?w=1724&ssl=1 1724w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=300%2C285&ssl=1 300w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=1024%2C971&ssl=1 1024w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=768%2C728&ssl=1 768w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=1536%2C1457&ssl=1 1536w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=443%2C420&ssl=1 443w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=150%2C142&ssl=1 150w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=696%2C660&ssl=1 696w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?resize=1068%2C1013&ssl=1 1068w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1.JPG-1-1.jpeg?w=1392&ssl=1 1392w\" sizes=\"auto, (max-width: 696px) 100vw, 696px\" /> Le ministre des Serviteurs du Peuple, Mathias Traoré (droite), a installé le premier gouverneur de la région de la Sirba, Auguste Kinda (gauche), dans ses fonctions. Administrateur civil chevronné, le nouveau gouverneur dispose d’une expérience professionnelle acquise à travers plusieurs responsabilités au sein de l’administration publique. Nommé à ce poste le 8 octobre 2026, il était précédemment secrétaire général de la région du Liptako. Auparavant, il a successivement servi en qualité de haut-commissaire des provinces du Kouritenga, du Sanmatenga et du Nahouri. Il a également exercé les fonctions de secrétaire général des communes de Gaoua, de Pouytenga et de Djibo. Son parcours administratif l’a conduit aussi à la préfecture de Dori et au Conseil régional du Nakambé . Une administration plus proche des populations Pour le ministre Mathias Traoré, cette installation marque une étape importante dans la mise en œuvre du nouveau dispositif d’organisation du territoire voulu par le Président du Faso. Cette réforme, a-t-il dit, vise notamment à répondre aux défis sécuritaires et humanitaires, à travers une meilleure défense du territoire, le rétablissement et la consolidation de la sécurité, l’assistance aux Personnes déplacées internes (PDI) et leur réinstallation. S’adressant au nouveau gouverneur, le ministre a rappelé qu’il devra être le garant de l’autorité de l’Etat, assurer la continuité du service public et œuvrer au renforcement de la cohésion entre les communautés. « Avec vos homologues des trois autres nouvelles régions, vous êtes des pionniers », a-t-il souligné. Ainsi, Mathias Traoré a invité le premier gouverneur de la Sirba à travailler à rapprocher l’administration des administrés. Il lui a recommandé notamment de promouvoir une administration présente jusque dans les localités les plus reculées, accessible et à l’écoute des usagers. Sur le plan sécuritaire, il devra renforcer la coordination entre les autorités administratives, les forces combattantes et les populations engagées dans la reconquête du territoire. Le camarade Mathias Traoré l’a invité également à privilégier la médiation et le dialogue intercommunautaire pour prévenir les conflits et consolider la cohésion sociale. A ces missions s’ajoutent la conduite du processus de réinstallation des PDI, le soutien à la relance des activités productives et le suivi de l’exécution des grands chantiers de l’Etat. Le ministre a, par ailleurs, exhorté le nouveau gouverneur à faire preuve d’exemplarité, de rigueur et de transparence dans la gestion des affaires publiques. Il est attendu de lui des résultats mesurables, des rapports réguliers et une remontée fidèle des préoccupations des populations. De fortes attentes des populations Auguste Kinda a dit mesurer la portée historique de sa mission ainsi que le poids des responsabilités qui lui incombent. Il s’est engagé à exercer ses fonctions avec humilité, loyauté et détermination dans le respect des orientations du Président du Faso et du gouvernement, notamment celles portées par le Plan Relance, fondé sur le travail, le sacrifice, la résilience et la solidarité. « Notre première priorité demeure la sécurité, la paix et le développement », a-t-il affirmé. A cet effet, il entend accompagner les efforts de reconquête et de stabilisation du territoire, renforcer la collaboration entre les autorités administratives et les forces combattantes et valoriser l’engagement des VDP. Il a salué de vives voix le courage et les sacrifices des forces combattantes, avant d’exprimer sa solidarité aux populations éprouvées par l’insécurité. Au-delà de la question sécuritaire, Auguste Kinda ambitionne de mettre en place une administration rigoureuse, efficace et proche des populations. La présence effective des agents à leurs postes, le respect des horaires de travail, la célérité dans le traitement des dossiers, la qualité de l’accueil des usagers et l’exécution diligente des instructions sont, a-t-il martelé, des exigences auxquelles chaque agent doit se conformer. Le développement économique et social figure également parmi les priorités du nouveau gouverneur. Le tout premier gouverneur de la région de la Sirba, Auguste Kinda, a dit mesurer la portée historique de sa mission. \" data-large-file=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?fit=691%2C1024&ssl=1\" class=\"size-full wp-image-174855\" src=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=696%2C1032&ssl=1\" alt=\"\" width=\"696\" height=\"1032\" srcset=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?w=1178&ssl=1 1178w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=202%2C300&ssl=1 202w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=691%2C1024&ssl=1 691w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=768%2C1138&ssl=1 768w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=1036%2C1536&ssl=1 1036w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=283%2C420&ssl=1 283w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=150%2C222&ssl=1 150w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=300%2C445&ssl=1 300w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=696%2C1032&ssl=1 696w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/2.JPG-2-1.jpeg?resize=1068%2C1583&ssl=1 1068w\" sizes=\"auto, (max-width: 696px) 100vw, 696px\" /> Le tout premier gouverneur de la région de la Sirba, Auguste Kinda, a dit mesurer la portée historique de sa mission. A ce titre, il compte valoriser les potentialités humaines et économiques de la région, en accompagnant notamment les producteurs, les artisans, les femmes, les jeunes et les entrepreneurs. Pour réussir cette mission, le premier gouverneur de la Sirba a dit miser sur la concertation avec les autorités administratives, coutumières et religieuses, les services techniques, les acteurs économiques et les populations. Cette ambition suscite beaucoup d’espoir chez les populations. Pour Henriette Lankoandé, ressortissante de la Sirba, avec ce nouveau statut, la région est promise à un bel avenir. Elle a souhaité que, parallèlement aux actions de reconquête du territoire, les autorités accordent une attention particulière au développement des infrastructures routières, sanitaires et scolaires afin d’améliorer durablement les conditions de vie des populations. Joanny SOW",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "military",
         "humanitarian",
         "political"
       ],
@@ -995,134 +1126,7 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "T",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
-      "_desk": "A1"
-    },
-    {
-      "title": "AES : les ministres du Commerce du Burkina et du Mali reçus par le Général Tiani",
-      "link": "https://malijet.com/actualite-sur-aes/312978-aes-les-ministres-du-commerce-du-burkina-et-du-mali-recus.html",
-      "pubDate": "2026-11-25T22:44:14.000Z",
-      "description": "Le Général Abdourahamane Tiani, Président du Niger, s'est entretenu le 25 novembre 2026 au palais présidentiel de Niamey avec les ministres du Commerce et de l'Industrie de l'AES: Serge Gnaniodem Poda pour le Burkina Faso et Moussa Alassane Diallo pour le Mali.",
-      "_source": "Malijet",
-      "_sourceId": "rss_malijet",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Coopération: le Premier ministre reçoit l’ambassadeur iranien en fin de mission",
-      "link": "https://www.wakatsera.com/cooperation-le-premier-ministre-recoit-lambassadeur-iranien-en-fin-de-mission/",
-      "pubDate": "2026-11-25T16:12:45.000Z",
-      "description": "Le Premier ministre, le Camarade Rimtalba Jean Emmanuel Ouédraogo, a reçu en audience, ce mercredi 25 novembre 2026, l’ambassadeur extraordinaire et plénipotentiaire de la République islamique d’Iran auprès du Burkina Faso, SEM Mojtaba Faghihi, en fin de mission. Le diplomate a dressé le bilan de son séjour et remercié les autorités burkinabè pour leur accompagnement dans le renforcement des relations entre Ouagadougou et Téhéran. ‎« Étant en fin de mission au Burkina Faso, il était de ma responsabilité de rendre visite aux autorités burkinabè pour leur dire au revoir et surtout leur exprimer ma reconnaissance pour leur accompagnement et leur engagement dans le renforcement de la coopération entre nos deux pays », a-t-il expliqué à l’issue de l’audience. ‎Mojtaba Faghihi a particulièrement salué la contribution du Chef du Gouvernement : « Son Excellence le Premier ministre Rimtalba Jean Emmanuel Ouédraogo a joué un rôle très important dans le renforcement de la coopération entre l’Iran et le Burkina Faso », a-t-il déclaré. ‎Parmi les étapes marquantes de sa mission figure la première Commission mixte de coopération, tenue à Ouagadougou en octobre 2023. Elle a abouti à la signature de plusieurs accords, notamment dans les domaines de la formation, de la santé et de la protection sociale. Le diplomate a ensuite participé, avec les autorités burkinabè, au suivi de leur mise en œuvre. ‎Cette coopération a produit des résultats dans le domaine de la formation. En octobre 2025, quinze étudiants burkinabè bénéficiaires de bourses iraniennes sont partis poursuivre leurs études, notamment en ingénierie minière, en génie civil, en industrie pharmaceutique et en agriculture. Sur le plan économique, une délégation officielle, accompagnée d’une vingtaine d’hommes d’affaires burkinabè, a participé en avril 2025, à Téhéran, à la troisième Conférence de coopération économique Iran–Afrique. ‎L’ambassadeur a également entretenu le dialogue sur de nouveaux axes de partenariat. Ses échanges avec le ministre chargé de la Santé, en avril 2025, ont porté sur les possibilités de coopération médicale. En janvier 2026, ses discussions avec le ministre des Affaires étrangères ont concerné la préparation de la deuxième session de la Commission mixte, l’élargissement des offres de formation ainsi que les perspectives dans les domaines de l’énergie solaire et de la santé. ‎L’engagement de Mojtaba Faghihi en faveur des relations bilatérales lui a valu d’être élevé, le 18 novembre 2026, au rang d’Officier de l’Ordre de l’Étalon. Au terme de son séjour, le diplomate a salué l’hospitalité des autorités et l’accueil des populations burkinabè. Il a résumé son expérience en ces termes : « Le Burkina Faso est un pays d’espoir avec un avenir prometteur. » ‎Le Camarade Premier ministre a adressé au diplômate iranien ses vœux de succès pour la suite de sa carrière et a souhaité que la coopération entre le Burkina Faso et l’Iran continue de se renforcer. DCRP/Primature L’article Coopération: le Premier ministre reçoit l'ambassadeur iranien en fin de mission est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "A2"
-      },
-      "_rating": "A2",
-      "_score": 111,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Aéroport de Ouagadougou: 181 drones, des kits Starlink, la Douane Burkinabè coupe une chaîne d’approvisionnement majeure en matériel militaire de pointe",
-      "link": "https://netafrique.net/aeroport-de-ouagadougou-181-drones-des-kits-starlink-la-douane-burkinabe-coupe-une-chaine-dapprovisionnement-majeure-en-materiel-militaire-de-pointe/",
-      "pubDate": "2026-11-25T23:52:36.000Z",
-      "description": "Dans le cadre de la protection du territoire et du renforcement du dispositif sécuritaire, la Brigade spéciale des Douanes de l’Aéroport (BSA) a réalisé une saisie stratégique comprenant 181 drones, des terminaux de communication par satellite Starlink et divers équipements militaires, pour une valeur estimée à plus de 80 millions de francs CFA. Annoncée ce mercredi par la Direction générale des Douanes, cette interception permet d'écarter une menace directe contre les forces engagées sur le terrain et d'entraver l'approvisionnement de réseaux hostiles. La vigilance constante des services douaniers a permis d'intercepter une cargaison d'équipements particulièrement sensibles. Lors d' un contrôle mené à l'aéroport, la Brigade spéciale des Douanes de l’Aéroport (BSA) a réussi à saisir un ensemble de matériels comprenant 181 drones, des terminaux de communication par satellite de type Starlink ainsi que divers équipements militaires. Selon les précisions apportées ce mercredi par la Direction générale des Douanes, la valeur marchande totale de ce lot est estimée à plus de 80 millions de francs CFA. Au-delà de l'aspect financier, l'enjeu prioritaire de cette opération réside dans la préservation de la sécurité nationale. Selon l'administration douanière, la circulation incontrôlée de ces technologies pose un risque grave, au moment où les outils numériques et matériels de pointe occupent une place grandissante dans les conflits armés. Un détournement de ces équipements à des fins hostiles aurait pu mettre en péril les populations ainsi que les forces armées engagées dans les opérations de reconquête du territoire. Ainsi, la douane souligne que la valeur de cette saisie repose principalement sur la neutralisation de ces risques et le frein mis à l'approvisionnement de réseaux hostiles. Face à ce succès opérationnel, le commandement douanier a salué le travail accompli par les équipes de terrain. Le directeur général des Douanes, l’inspecteur divisionnaire Yves Kafando, a félicité les agents de la BSA pour leur rigueur, leur vigilance et leur engagement patriotique. Il a également réitéré l'importance pour les populations de respecter scrupuleusement la réglementation régissant l'importation de matériels sensibles, tout en les invitant à collaborer avec les services compétents pour stopper toute introduction illégale d'équipements menaçant la sécurité. « Sur le front de la souveraineté nationale, chaque saisie compte, chaque vigilance importe, chaque vie mérite d’être protégée », conclut le communiqué officiel. L’article Aéroport de Ouagadougou: 181 drones, des kits Starlink, la Douane Burkinabè coupe une chaîne d'approvisionnement majeure en matériel militaire de pointe est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina Faso : les douanes annoncent la saisie de 181 drones, estimés à plus de 80 millions de FCFA",
-      "link": "https://beninwebtv.com/burkina-faso-douanes-saisie-181-drones-80-millions-fcfa/",
-      "pubDate": "2026-11-25T20:54:06.000Z",
-      "description": "Burkina Faso : les douanes annoncent la saisie de 181 drones, estimés à plus de 80 millions de FCFA",
-      "_source": "Bénin Web TV",
-      "_sourceId": "rss_beninwebtv",
-      "_sourceCat": "ouest_afr",
-      "_sourceBloc": "afrique",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 107,
-      "_zone": 1,
-      "_theme": "E",
+      "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1130,26 +1134,58 @@
   ],
   "alerts": [
     {
-      "title": "Génocide des Tutsi au Rwanda : au procès de Madjaliwa Safari, l’ombre des barrières",
-      "link": "https://www.jeuneafrique.com/1865211/politique/genocide-des-tutsi-au-rwanda-au-proces-de-madjaliwa-safari-lombre-des-barrieres/",
-      "source": "Jeune Afrique",
-      "date": "2026-11-25T19:58:45.000Z",
-      "rating": "B2",
+      "title": "UEMOA : Wadagni tente de réunir les huit chefs d’État autour d’un sommet en 2027",
+      "link": "https://beninwebtv.com/uemoa-wadagni-sommet-2027-enjeux/",
+      "source": "Bénin Web TV",
+      "date": "2026-11-26T15:51:23.000Z",
+      "rating": "F2",
       "evidence": "Corrobore",
-      "level": "critical",
+      "level": "high",
       "bf": false,
       "majors": [
         {
-          "type": "rupture",
-          "keyword": "génocide"
+          "type": "diplo_majeur",
+          "keyword": "sommet"
         }
       ]
     },
     {
-      "title": "Colombia quiet as Beijing says lawmakers’ Taiwan trip crossed its ‘first red line’",
-      "link": "https://www.scmp.com/news/china/diplomacy/article/3375815/colombia-quiet-china-says-lawmakers-taiwan-trip-crossed-its-first-red-line",
-      "source": "South China Morning Post",
-      "date": "2026-11-25T19:52:34.000Z",
+      "title": "Qatari, Egyptian leaders discuss Gaza ‘ceasefire’ and regional security",
+      "link": "https://www.aljazeera.com/news/2026/11/26/qatari-egyptian-leaders-discuss-gaza-ceasefire-and-regional-security?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-11-26T15:45:59.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "ceasefire"
+        }
+      ]
+    },
+    {
+      "title": "Confrontation with Russia always turned into disaster for Germany — Foreign Ministry",
+      "link": "https://tass.com/politics/2225445",
+      "source": "TASS (Russie, EN)",
+      "date": "2026-11-26T15:20:49.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "LAMATA adds 24 train coaches to ease red line disruptions",
+      "link": "https://punchng.com/lamata-adds-24-train-coaches-to-ease-red-line-disruptions/?utm_source=rss.punchng.com&utm_medium=web",
+      "source": "Punch (Nigeria)",
+      "date": "2026-11-26T14:48:40.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1162,66 +1198,114 @@
       ]
     },
     {
-      "title": "A Madagacar, l’éviction du numéro deux de la junte, symptôme des divisions au sommet",
-      "link": "https://www.lemonde.fr/afrique/article/2026/11/25/a-madagacar-l-eviction-du-numero-deux-de-la-junte-symptome-des-divisions-au-sommet_6815164_3212.html",
+      "title": "Génocide des Tutsi au Rwanda : en Belgique, faute de moyens, la justice laisse vieillir les dossiers et les suspects",
+      "link": "https://www.lemonde.fr/afrique/article/2026/11/26/genocide-des-tutsi-au-rwanda-en-belgique-faute-de-moyens-la-justice-laisse-vieillir-les-dossiers-et-les-suspects_6815545_3212.html",
       "source": "Le Monde International",
-      "date": "2026-11-25T18:30:05.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Sommet de l’Apec : aidée par Donald Trump, la Chine accentue l’isolement du Japon dans le Pacifique",
-      "link": "https://www.lefigaro.fr/international/sommet-de-l-apec-aidee-par-donald-trump-la-chine-accentue-l-isolement-du-japon-dans-le-pacifique-20261125",
-      "source": "Le Figaro International",
-      "date": "2026-11-25T17:00:00.000Z",
-      "rating": "C2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Iran ready to withstand US naval blockade: VP",
-      "link": "https://www.tehrantimes.com/news/532553/Iran-ready-to-withstand-US-naval-blockade-VP",
-      "source": "Tehran Times",
-      "date": "2026-11-25T16:54:50.000Z",
-      "rating": "F6",
-      "evidence": "Source unique",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "blockade"
-        }
-      ]
-    },
-    {
-      "title": "Iran reiterates to counter blockade",
-      "link": "https://www.tehrantimes.com/news/532551/Iran-reiterates-to-counter-blockade",
-      "source": "Tehran Times",
-      "date": "2026-11-25T16:49:47.000Z",
-      "rating": "F2",
+      "date": "2026-11-26T14:30:00.000Z",
+      "rating": "A2",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
       "majors": [
         {
           "type": "rupture",
-          "keyword": "blockade"
+          "keyword": "génocide"
+        }
+      ]
+    },
+    {
+      "title": "‘Disaster’ unfolding as Sydney fire ant outbreak partly blamed on ignored biosecurity recommendations",
+      "link": "https://www.theguardian.com/australia-news/2026/nov/27/sydney-fire-ants-outbreak-biosecurity-experts-ignored",
+      "source": "The Guardian World",
+      "date": "2026-11-26T14:00:39.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Net Migration to U.K. Falls to Lowest Level Since 1997, Excluding Pandemic",
+      "link": "https://www.nytimes.com/2026/11/26/world/europe/uk-net-migration-data.html",
+      "source": "NYT World",
+      "date": "2026-11-26T13:51:57.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "pandemic"
+        }
+      ]
+    },
+    {
+      "title": "Disaster Management Reference Handbook (November 2026) - Bangladesh",
+      "link": "https://reliefweb.int/report/bangladesh/disaster-management-reference-handbook-november-2026-bangladesh",
+      "source": "ReliefWeb",
+      "date": "2026-11-26T13:05:18.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Serbia moves to keep small businesses running when disaster strikes",
+      "link": "https://reliefweb.int/report/serbia/serbia-moves-keep-small-businesses-running-when-disaster-strikes",
+      "source": "ReliefWeb",
+      "date": "2026-11-26T12:03:09.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
+        }
+      ]
+    },
+    {
+      "title": "Royaume-Uni : l’immigration nette enregistre sa plus forte baisse depuis 1997, hors pandémie de Covid-19",
+      "link": "https://www.lemonde.fr/international/article/2026/11/26/royaume-uni-l-immigration-nette-enregistre-sa-plus-forte-baisse-depuis-1997-hors-periode-du-covid-19_6815526_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-11-26T11:56:55.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "pandémie"
+        }
+      ]
+    },
+    {
+      "title": "Egypt prosecutors announce arrest of man over deadly truck disaster",
+      "link": "https://www.al-monitor.com/originals/2026/11/egypt-prosecutors-announce-arrest-man-over-deadly-truck-disaster",
+      "source": "Al-Monitor",
+      "date": "2026-11-26T11:30:22.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "crise",
+          "keyword": "disaster"
         }
       ]
     }
@@ -1229,43 +1313,43 @@
   "narrativesByBloc": [
     [
       "afrique",
-      187
-    ],
-    [
-      "occident_us",
-      131
+      226
     ],
     [
       "occident_fr",
-      122
-    ],
-    [
-      "golfe_mo",
-      114
+      112
     ],
     [
       "autre",
-      82
+      109
     ],
     [
-      "russie",
-      44
+      "occident_us",
+      106
     ],
     [
       "turquie",
-      41
+      60
     ],
     [
-      "chine",
-      35
+      "golfe_mo",
+      54
     ],
     [
-      "bf_local",
-      26
+      "russie",
+      40
     ],
     [
       "sahel",
-      18
+      35
+    ],
+    [
+      "chine",
+      30
+    ],
+    [
+      "bf_local",
+      28
     ]
   ],
   "desks": [
@@ -1273,52 +1357,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 93,
+      "count": 116,
       "top": [
         {
-          "title": "Le Niger organise son premier forum international de l’investissement",
-          "link": "https://rtenfrancais.tv/afrique/140510-niger-organise-son-premier-forum-international-investissement-pour-diversifier-partenariat",
-          "source": "RT en français",
+          "title": "L’or de Siguiri à l’épreuve du panafricanisme : quand la souveraineté minière fissure le voisinage ouest-africain (Par Mohamed Hady Barry)",
+          "link": "https://mediaguinee.com/2026/11/lor-de-siguiri-a-lepreuve-du-panafricanisme-quand-la-souverainete-miniere-fissure-le-voisinage-ouest-africain-par-mohamed-hady-barry/",
+          "source": "Mediaguinee",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
           "rating": "A2"
         },
         {
-          "title": "rumeurs sur les vols d’argent sur les comptes Mobile Money : Orange Burkina rassure sur la sécurité de l’application Max it",
-          "link": "https://netafrique.net/affaire-vols-dargent-sur-les-comptes-mobile-money-orange-burkina-rassure-sur-la-securite-de-lapplication-max-it/",
+          "title": "Douane burkinabè: sentinelle de la nation et bouclier de la sécurité",
+          "link": "https://netafrique.net/douane-burkinabe-sentinelle-de-la-nation-et-bouclier-de-la-securite/",
           "source": "Net Afrique (BF)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "I",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Affaire Arthur Zagré : La réserve de la Mauritanie menace la qualification des Étalons de la CAN 2027",
-          "link": "https://netafrique.net/affaire-arthur-zagre-la-reserve-de-la-mauritanie-menace-la-qualification-des-etalons-de-la-can-2027/",
-          "source": "Net Afrique (BF)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Semaine du numérique 2026 : L'open source, l'IA, les langues nationales et l'accompagnement des start-up au cœur d'un panel",
-          "link": "https://lefaso.net/spip.php?article151033",
-          "source": "Lefaso.net",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
-          "title": "AES : les ministres du Commerce du Burkina et du Mali reçus par le Général Tiani",
-          "link": "https://malijet.com/actualite-sur-aes/312978-aes-les-ministres-du-commerce-du-burkina-et-du-mali-recus.html",
-          "source": "Malijet",
           "zone": "1. Sahel & AO franco.",
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "CRADAT : la Guinée prend la présidence du C.A, Amadou Oury Bah appelle à adapter le droit du travail aux mutations du monde professionnel",
+          "link": "https://mediaguinee.com/2026/11/cradat-la-guinee-prend-la-presidence-du-c-a-amadou-oury-bah-appelle-a-adapter-le-droit-du-travail-aux-mutations-du-monde-professionnel/",
+          "source": "Mediaguinee",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Rencontre régionale à Dakar pour trouver des solutions aux crises pastorales en Afrique de l'Ouest et centrale",
+          "link": "https://www.rfi.fr/fr/afrique/20261126-rencontre-r%C3%A9gionale-%C3%A0-dakar-pour-trouver-des-solutions-aux-crises-pastorales-en-afrique-de-l-ouest-et-centrale",
+          "source": "RFI Afrique",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Souveraineté sanitaire dans l’espace AES : La deuxième édition du SIPSIS s’ouvre à Ouagadougou",
+          "link": "https://faso7.com/2026/11/26/souverainete-sanitaire-dans-lespace-aes-la-deuxieme-edition-du-sipsis-souvre-a-ouagadougou/",
+          "source": "Faso7",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F1"
         }
       ]
     },
@@ -1326,20 +1410,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 64,
+      "count": 61,
       "top": [
         {
-          "title": "Wole Olanipekun on law, democracy and the limits of power",
-          "link": "https://www.vanguardngr.com/2026/11/wole-olanipekun-on-law-democracy-and-the-limits-of-power/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Awka City chosen for AfDB -funded Action Plan for Africa’s coordinated urban development",
-          "link": "https://www.vanguardngr.com/2026/11/awka-city-chosen-for-afdb-funded-action-plan-for-africas-coordinated-urban-development/",
+          "title": "Delta attack: PANDEF writes IGP, DSS DG, demands probe",
+          "link": "https://www.vanguardngr.com/2026/11/delta-attack-pandef-writes-igp-dss-dg-demands-probe/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
@@ -1347,31 +1422,40 @@
           "rating": "F2"
         },
         {
-          "title": "58% of Nigerian women who suffer violence remain silent – Survey",
-          "link": "https://www.vanguardngr.com/2026/11/58-of-nigerian-women-who-suffer-violence-remain-silent-survey/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "J",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Le gouvernement de l'État de Katsina au Nigeria suspend l'émir de Daura en raison d'allégations d'agression sexuelle",
-          "link": "https://www.bbc.com/afrique/articles/cqj9mvyp2k27o?at_medium=RSS&at_campaign=rss",
-          "source": "BBC Afrique (FR)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "B2"
-        },
-        {
-          "title": "Security operatives assault lawmaker’s aide attempting to access 2026 budget review meeting venue",
-          "link": "https://www.premiumtimesng.com/news/top-news/928077-security-operatives-assault-lawmakers-aide-attempting-to-access-2026-budget-review-meeting-venue.html",
-          "source": "Premium Times (Nigeria)",
+          "title": "Control without confiscation: How Ghana can own the chain from pit to port, and turn raw exports into jobs",
+          "link": "https://www.myjoyonline.com/control-without-confiscation-how-ghana-can-own-the-chain-from-pit-to-port-and-turn-raw-exports-into-jobs/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
           "theme": "E",
           "relevance": "A",
           "rating": "F2"
+        },
+        {
+          "title": "Tinubu willing to grant more interviews to Nigerian journalists — Bwala",
+          "link": "https://www.vanguardngr.com/2026/11/tinubu-willing-to-grant-more-interviews-to-nigerian-journalists-bwala/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Take ​‌‍‍‍‍⁠⁠‍⁠​‌‍‍​⁠‌‌​APC’s reform message to Nigerians: Fashola tells party members",
+          "link": "https://www.vanguardngr.com/2026/11/take-%e2%81%a0%e2%81%a0%e2%81%a0%e2%81%a0apcs-reform-mes/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "NHIA warns healthcare providers against illegal charges as it commissions new Wa office",
+          "link": "https://www.myjoyonline.com/nhia-warns-healthcare-providers-against-illegal-charges-as-it-commissions-new-wa-office/",
+          "source": "MyJoyOnline (Ghana)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "A2"
         }
       ]
     },
@@ -1379,52 +1463,52 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 20,
+      "count": 29,
       "top": [
         {
-          "title": "Génocide des Tutsi au Rwanda : au procès de Madjaliwa Safari, l’ombre des barrières",
-          "link": "https://www.jeuneafrique.com/1865211/politique/genocide-des-tutsi-au-rwanda-au-proces-de-madjaliwa-safari-lombre-des-barrieres/",
-          "source": "Jeune Afrique",
+          "title": "Génocide des Tutsi au Rwanda : en Belgique, faute de moyens, la justice laisse vieillir les dossiers et les suspects",
+          "link": "https://www.lemonde.fr/afrique/article/2026/11/26/genocide-des-tutsi-au-rwanda-en-belgique-faute-de-moyens-la-justice-laisse-vieillir-les-dossiers-et-les-suspects_6815545_3212.html",
+          "source": "Le Monde International",
           "zone": "4. Grands Lacs",
           "theme": "J",
           "relevance": "L",
+          "rating": "A2"
+        },
+        {
+          "title": "RDC : contesté à l’UNC, Kamerhe en rupture avec la majorité ?",
+          "link": "https://www.jeuneafrique.com/1865501/politique/rdc-conteste-a-lunc-kamerhe-en-rupture-avec-la-majorite/",
+          "source": "Jeune Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
           "rating": "B2"
         },
         {
-          "title": "Sudan rejects Ethiopia’s initiative to host peace talks",
-          "link": "https://www.dabangasudan.org/en/all-news/article/sudan-rejects-ethiopias-initiative-to-host-peace-talks",
-          "source": "Dabanga Sudan",
-          "zone": "5. Corne de l’Afrique",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Au Gabon, le combat d'une militante et de son ONG contre les violences faites aux femmes",
-          "link": "https://www.rfi.fr/fr/afrique/20261125-au-gabon-le-combat-d-une-militante-et-de-son-ong-contre-les-violences-faites-aux-femmes",
-          "source": "RFI Afrique",
+          "title": "DR Congo: Ebola disease survivors share their stories",
+          "link": "https://reliefweb.int/report/democratic-republic-congo/ebola-disease-survivors-share-their-stories",
+          "source": "ReliefWeb",
           "zone": "3. Afrique centrale",
           "theme": "L",
           "relevance": "A",
-          "rating": "C1"
-        },
-        {
-          "title": "CAMES 2026 : la Guinée célèbre ses 34 nouveaux maîtres de conférences agrégés",
-          "link": "https://guineenews.org/2026/11/25/cames-2026-la-guinee-celebre-ses-34-nouveaux-maitres-de-conferences-agreges/",
-          "source": "Guineenews",
-          "zone": "3. Afrique centrale",
-          "theme": "P",
-          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "CPHIA 2026 : le Gabon rejoint la dynamique africaine contre les cancers féminins",
-          "link": "https://www.gabonreview.com/cphia-2026-le-gabon-rejoint-la-dynamique-africaine-contre-les-cancers-feminins/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
+          "title": "Inga III, PPP, dette de la Snel… Les grands chantiers de la RDC pour sortir du délestage",
+          "link": "https://www.jeuneafrique.com/1865251/economie-entreprises/inga-iii-ppp-dette-de-la-snel-les-grands-chantiers-de-la-rdc-pour-sortir-du-delestage/",
+          "source": "Jeune Afrique",
+          "zone": "4. Grands Lacs",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Que gagne la RDC à rester membre de l’organisation internationale de la francophonie OIF ?",
+          "link": "https://www.radiookapi.net/2026/11/26/emissions/parole-aux-auditeurs/que-gagne-la-rdc-rester-membre-de-lorganisation",
+          "source": "Radio Okapi (RDC)",
+          "zone": "4. Grands Lacs",
           "theme": "D",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         }
       ]
     },
@@ -1432,52 +1516,52 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 17,
+      "count": 35,
       "top": [
         {
-          "title": "Agent consulaire algérien détenu en France : graves révélations de l’APS",
-          "link": "https://www.tsa-algerie.com/agent-consulaire-algerien-detenu-en-france-graves-revelations-de-laps/",
-          "source": "TSA — Tout sur l'Algérie",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Comment l’Ukraine perturbe les opérations russes en Afrique en frappant des navires de transport d’armes en Méditerranée",
-          "link": "https://www.lemonde.fr/afrique/article/2026/11/25/comment-l-ukraine-perturbe-les-operations-russes-en-afrique-en-frappant-des-navires-de-transport-d-armes-en-mediterranee_6815117_3212.html",
-          "source": "Le Monde Afrique",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B1"
-        },
-        {
-          "title": "Investissement en Algérie : l’AAPI « libère » 100 hectares dans 13 wilayas",
-          "link": "https://www.tsa-algerie.com/investissement-en-algerie-laapi-libere-100-hectares-dans-13-wilayas/",
+          "title": "Pour les États-Unis, l’Algérie est le « partenaire sécuritaire le plus compétent » au Sahel",
+          "link": "https://www.tsa-algerie.com/pour-les-etats-unis-lalgerie-est-le-partenaire-securitaire-le-plus-competent-au-sahel/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
-          "title": "La Tunisie valorise son artisanat et sa destination touristique au marché de Noël de Grenoble",
-          "link": "https://kapitalis.com/tunisie/2026/11/25/la-tunisie-valorise-son-artisanat-et-sa-destination-touristique-au-marche-de-noel-de-grenoble/",
-          "source": "Kapitalis (Tunisie)",
+          "title": "Dialogue social : 50 milliards de dirhams pour concrétiser les accords avec les syndicats",
+          "link": "https://fr.hespress.com/498011-dialogue-social-50-milliards-de-dirhams-pour-concretiser-les-accords-avec-les-syndicats.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Démantèlement d’un réseau de trafic de drogue opérant entre Kairouan et le Grand-Tunis",
-          "link": "https://kapitalis.com/tunisie/2026/11/25/demantelement-dun-reseau-de-trafic-de-drogue-operant-entre-kairouan-et-le-grand-tunis/",
+          "title": "Le Maroc et Israël préparent leur plan de coopération militaire pour 2027",
+          "link": "https://telquel.ma/instant-t/2026/11/26/le-maroc-et-israel-preparent-leur-plan-de-cooperation-militaire-pour-2027_2020020/",
+          "source": "TelQuel (Maroc)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Attaque contre deux navires russes en Libye : l’Algérie réagit",
+          "link": "https://www.tsa-algerie.com/attaque-contre-deux-navires-russes-en-libye-lalgerie-reagit/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Le Tunisien Noureddine Guizani élu à la tête de l’AFNDT",
+          "link": "https://kapitalis.com/tunisie/2026/11/26/le-tunisien-noureddine-guizani-elue-a-la-tete-de-lafndt/",
           "source": "Kapitalis (Tunisie)",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "A2"
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1485,52 +1569,52 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 89,
+      "count": 57,
       "top": [
         {
-          "title": "Iran reiterates to counter blockade",
-          "link": "https://www.tehrantimes.com/news/532551/Iran-reiterates-to-counter-blockade",
-          "source": "Tehran Times",
-          "zone": "8. Moyen-Orient",
-          "theme": "M",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Iran war live: Explosion rocks Sanaa; missiles intercepted over Riyadh",
-          "link": "https://www.aljazeera.com/news/liveblog/2026/11/26/iran-war-live-explosion-rocks-sanaa-missiles-intercepted-over-riyadh?traffic_source=rss",
-          "source": "Al Jazeera English",
+          "title": "Iran suspected to be developing new variants of ballistic missiles, assessments show - report",
+          "link": "https://www.jpost.com/middle-east/iran-news/article-916219",
+          "source": "Jerusalem Post",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
-          "title": "Saudis down missiles targeting capital after Yemen port strikes",
-          "link": "https://www.al-monitor.com/originals/2026/11/saudis-down-missiles-targeting-capital-after-yemen-port-strikes",
-          "source": "Al-Monitor",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Saudi-led coalition intercepts 2 Houthi ballistic missiles launched toward Riyadh",
-          "link": "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-intercepts-2-houthi-ballistic-missiles-launched-toward-riyadh/4138108",
-          "source": "Anadolu Agency (Turquie)",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A1"
-        },
-        {
-          "title": "Au Yémen, des positions des houthistes à nouveau bombardées ; des ports saoudiens pris pour cible en représailles",
-          "link": "https://www.lemonde.fr/international/article/2026/11/25/au-yemen-des-positions-des-houthistes-a-nouveau-bombardees-des-ports-saoudiens-pris-pour-cible-en-represailles_6815174_3210.html",
+          "title": "Gaza : un nouveau haut responsable du Hamas, Khaled Abou Nada, tué dans un bombardement israélien",
+          "link": "https://www.lemonde.fr/international/article/2026/11/26/gaza-un-nouveau-haut-responsable-du-hamas-khaled-abou-nada-tue-dans-un-bombardement-israelien_6815551_3210.html",
           "source": "Le Monde International",
           "zone": "8. Moyen-Orient",
           "theme": "S",
           "relevance": "A",
           "rating": "B2"
+        },
+        {
+          "title": "L’Irak confronté au démantèlement des milices chiites engagées dans la guerre aux côtés de l’Iran",
+          "link": "https://www.lemonde.fr/international/article/2026/11/26/l-irak-confronte-au-demantelement-des-milices-chiites-engagees-dans-la-guerre-aux-cotes-de-l-iran_6815549_3210.html",
+          "source": "Le Monde International",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "B2"
+        },
+        {
+          "title": "Yemen: Calling for Collective Action and Resource Mobilization to Scale Up the Urgent Humanitarian Response",
+          "link": "https://reliefweb.int/report/yemen/calling-collective-action-and-resource-mobilization-scale-urgent-humanitarian-response",
+          "source": "ReliefWeb",
+          "zone": "8. Moyen-Orient",
+          "theme": "H",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "Makkah pact nations to discuss conflict between Saudi Arabia and Yemen's Houthis in Islamabad meeting, Asif says",
+          "link": "https://www.dawn.com/news/2047228/makkah-pact-nations-to-discuss-conflict-between-saudi-arabia-and-yemens-houthis-in-islamabad-meeting-asif-says",
+          "source": "Dawn (Pakistan)",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1538,52 +1622,52 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 172,
+      "count": 173,
       "top": [
         {
-          "title": "A Madagacar, l’éviction du numéro deux de la junte, symptôme des divisions au sommet",
-          "link": "https://www.lemonde.fr/afrique/article/2026/11/25/a-madagacar-l-eviction-du-numero-deux-de-la-junte-symptome-des-divisions-au-sommet_6815164_3212.html",
-          "source": "Le Monde International",
-          "zone": "6. Afrique australe",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "B2"
-        },
-        {
-          "title": "États-Unis : l’administration Trump brandit de nouveaux droits de douane, notamment contre l’UE",
-          "link": "https://rtenfrancais.tv/international/140514-etats-unis-trump-brandit-tarifs",
-          "source": "RT en français",
-          "zone": "16. Amérique du Nord",
+          "title": "Serbia moves to keep small businesses running when disaster strikes",
+          "link": "https://reliefweb.int/report/serbia/serbia-moves-keep-small-businesses-running-when-disaster-strikes",
+          "source": "ReliefWeb",
+          "zone": "10. Europe orient. & Balkans",
           "theme": "E",
           "relevance": "A",
-          "rating": "A1"
+          "rating": "F2"
         },
         {
-          "title": "4 African countries to have produced Miss Universe winners",
-          "link": "https://www.vanguardngr.com/2026/11/4-african-countries-to-have-produced-miss-universe-winners/",
-          "source": "Vanguard (Nigeria)",
-          "zone": "6. Afrique australe",
-          "theme": null,
-          "relevance": ".",
-          "rating": "A2"
-        },
-        {
-          "title": "L’accord signé entre l’Australie et les Îles Salomon marque un revers pour Pékin",
-          "link": "https://legrandcontinent.eu/fr/2026/11/25/laccord-signe-entre-laustralie-et-les-iles-salomon-marque-un-revers-pour-pekin/",
-          "source": "Le Grand Continent",
-          "zone": "15. Océanie & Pacifique",
-          "theme": "D",
-          "relevance": "L",
-          "rating": "A2"
-        },
-        {
-          "title": "L’OTAN s’oppose à l’interception de missiles russes au-dessus de l’Ukraine, selon Varsovie",
-          "link": "https://rtenfrancais.tv/international/140512-otan-s-oppose-categoriquement-interception-missiles-russes-au-dessus-de-ukraine-selon-pologne",
-          "source": "RT en français",
-          "zone": "10. Europe orient. & Balkans",
+          "title": "Royaume-Uni : l’immigration nette enregistre sa plus forte baisse depuis 1997, hors pandémie de Covid-19",
+          "link": "https://www.lemonde.fr/international/article/2026/11/26/royaume-uni-l-immigration-nette-enregistre-sa-plus-forte-baisse-depuis-1997-hors-periode-du-covid-19_6815526_3210.html",
+          "source": "Le Monde International",
+          "zone": "9. Europe occidentale",
           "theme": "L",
           "relevance": "L",
           "rating": "A2"
+        },
+        {
+          "title": "MNA among senior JUI-F leaders detained in Sargodha: police",
+          "link": "https://www.dawn.com/news/2047178/mna-among-senior-jui-f-leaders-detained-in-sargodha-police",
+          "source": "Dawn (Pakistan)",
+          "zone": "12. Asie du Sud",
+          "theme": "S",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "L’Ukraine a détruit pour la première fois un drone à réaction avec une arme laser",
+          "link": "https://legrandcontinent.eu/fr/2026/11/26/lukraine-a-detruit-pour-la-premiere-fois-un-drone-a-reaction-avec-une-arme-laser/",
+          "source": "Le Grand Continent",
+          "zone": "10. Europe orient. & Balkans",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Dix ans après l’accord avec les FARC en Colombie : « Négocier la paix dans une démocratie est très difficile car elle devient alors un moyen de faire de la politique »",
+          "link": "https://www.lemonde.fr/international/article/2026/11/26/dix-ans-apres-l-accord-avec-les-farc-en-colombie-negocier-la-paix-dans-une-democratie-est-tres-difficile-car-elle-devient-alors-un-moyen-de-faire-de-la-politique_6815536_3210.html",
+          "source": "Le Monde International",
+          "zone": "18. Amérique du Sud",
+          "theme": "S",
+          "relevance": ".",
+          "rating": "B2"
         }
       ]
     }
@@ -1601,42 +1685,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-11-26T03:33:38.292Z",
+      "at": "2026-11-26T16:53:13.430Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-11-26T03:33:38.298Z",
+      "at": "2026-11-26T16:53:13.436Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-11-26T03:33:56.049Z",
+      "at": "2026-11-26T16:53:49.560Z",
       "agent": "Agent Collecte RSS",
-      "message": "102/170 flux OK, 1830 articles"
+      "message": "99/170 flux OK, 1867 articles"
     },
     {
-      "at": "2026-11-26T03:33:58.261Z",
+      "at": "2026-11-26T16:53:51.834Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-11-26T03:33:58.493Z",
+      "at": "2026-11-26T16:53:52.101Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-11-26T03:33:58.498Z",
+      "at": "2026-11-26T16:53:52.104Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 6 alertes"
+      "message": "8 developpements, 11 alertes"
     },
     {
-      "at": "2026-11-26T03:33:58.498Z",
+      "at": "2026-11-26T16:53:52.104Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-11-26T03:33:58.498Z",
+      "at": "2026-11-26T16:53:52.104Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
