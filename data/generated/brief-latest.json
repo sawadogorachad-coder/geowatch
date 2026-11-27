@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-11-27T01:43:34.061Z",
+  "generatedAt": "2026-11-27T12:18:39.575Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 105,
-    "failed": 65,
-    "articles": 1949,
+    "ok": 99,
+    "failed": 71,
+    "articles": 1864,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -53,11 +48,6 @@
         "count": 10
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
         "id": "rss_minute_bf",
         "name": "Minute BF",
         "count": 10
@@ -93,11 +83,6 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -111,11 +96,6 @@
         "id": "rss_myjoyonline",
         "name": "MyJoyOnline (Ghana)",
         "count": 30
-      },
-      {
-        "id": "rss_citi",
-        "name": "Citi Newsroom (Ghana)",
-        "count": 0
       },
       {
         "id": "rss_beninwebtv",
@@ -228,11 +208,6 @@
         "count": 10
       },
       {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
-        "count": 10
-      },
-      {
         "id": "rss_lgc",
         "name": "Le Grand Continent",
         "count": 10
@@ -280,7 +255,7 @@
       {
         "id": "rss_rfiafr",
         "name": "RFI Afrique",
-        "count": 23
+        "count": 24
       },
       {
         "id": "rss_rfimo",
@@ -355,7 +330,7 @@
       {
         "id": "rss_wapo",
         "name": "Washington Post World",
-        "count": 15
+        "count": 13
       },
       {
         "id": "rss_fp",
@@ -400,7 +375,7 @@
       {
         "id": "rss_dw",
         "name": "Deutsche Welle (EN)",
-        "count": 12
+        "count": 11
       },
       {
         "id": "rss_tass",
@@ -458,11 +433,6 @@
         "count": 26
       },
       {
-        "id": "rss_dailysabah",
-        "name": "Daily Sabah (Turquie)",
-        "count": 30
-      },
-      {
         "id": "rss_anadolu",
         "name": "Anadolu Agency (Turquie)",
         "count": 30
@@ -485,7 +455,7 @@
       {
         "id": "rss_dawn",
         "name": "Dawn (Pakistan)",
-        "count": 28
+        "count": 25
       },
       {
         "id": "rss_nikkei",
@@ -535,6 +505,11 @@
     ],
     "failedSources": [
       {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "error": "HTTP 404"
@@ -543,6 +518,11 @@
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -587,12 +567,17 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "This operation was aborted"
+        "error": "HTTP 404"
       },
       {
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -628,6 +613,11 @@
         "id": "rss_ghanaweb",
         "name": "GhanaWeb",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_citi",
+        "name": "Citi Newsroom (Ghana)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_lanation_bj",
@@ -687,7 +677,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -707,7 +697,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -723,6 +713,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -810,6 +805,11 @@
         "error": "HTTP 404"
       },
       {
+        "id": "rss_dailysabah",
+        "name": "Daily Sabah (Turquie)",
+        "error": "HTTP 502"
+      },
+      {
         "id": "rss_trtworld",
         "name": "TRT World (Turquie)",
         "error": "HTTP 404"
@@ -863,25 +863,27 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 62,
-    "alerts": 9,
-    "criticalAlerts": 5,
-    "sourcesDistinct": 73
+    "bfAes": 60,
+    "alerts": 11,
+    "criticalAlerts": 7,
+    "sourcesDistinct": 72
   },
   "topDevelopments": [
     {
-      "title": "JOJ Dakar 2026 : quel bilan pour le Mali, le Burkina Faso et le Niger, quelles perspectives pour le sport de demain ? Deuxième partie",
-      "link": "https://www.studiotamani.org/210761-joj-dakar-2026-quel-bilan-pour-le-mali-le-burkina-faso-et-le-niger-quelles-perspectives-pour-le-sport-de-demain-deuxieme-partie",
-      "pubDate": "2026-11-26T18:00:00.000Z",
-      "description": "Les Jeux olympiques de la jeunesse Dakar 2026 marquent une premiere historique : celle de l'organisation des JOJ sur le continent africain. Pendant plusieurs jours, de jeunes sportifs venus du monde entier se sont affrontes dans differentes disciplines. Pour le Mali, le bilan est sans medaille. Le Niger et le Burkina Faso ont glane chacun deux medailles. Au-dela des resultats, ces Jeux posent une question essentielle : l'Afrique est-elle suffisamment preparee pour accompagner ses jeunes talents vers le haut niveau ? Quelles lecons tirer de Dakar 2026 ? Quels moyens faut-il mobiliser pour mieux preparer les prochaines echeances internationales ? Invites : Abdoul Wahab Zerome, Vice-president du Comite national olympique et sportif du Mali. Daouda Adamou, Secretaire general du Comite national olympique et sportif du Niger. ecoutez l' integralite de l'emission Grand Dialogue : Grand Dialogue https://www.studiotamani.org/wp-content/uploads/2026/11/GD-26112026.mp3 Télécharger L’article JOJ Dakar 2026 : quel bilan pour le Mali, le Burkina Faso et le Niger, quelles perspectives pour le sport de demain ? Deuxième partie est apparu en premier sur Studio Tamani - Informations, débats, magazines : toute l’actualité du Mali, en 5 langues .",
-      "_source": "Studio Tamani (Mali)",
-      "_sourceId": "rss_studio_tam",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
+      "title": "Thiaroye 1944-2026 : Quatorze pays mobilisés autour de la recherche historique",
+      "link": "https://lesoleil.sn/actualites/thiaroye-1944-2026-quatorze-pays-mobilises-autour-de-la-recherche-historique/",
+      "pubDate": "2026-11-27T08:58:38.000Z",
+      "description": "Le Sénégal commémore, le mardi 1er décembre 2026, le 82e anniversaire du massacre de Thiaroye. Au-delà de l’hommage aux victimes, cette édition entend renforcer la dimension africaine de cet épisode historique, à travers un programme de recherche scientifique et de coopération entre quatorze pays . Dans un dossier de presse consacré à cette commémoration, parvenu à notre rédaction, le ministère de la Communication et des Relations avec les institutions annonce un programme articulé autour de la mémoire, de la reconnaissance, de la recherche et de la transmission. L'un des enjeux majeurs de cette 82e commémoration réside dans le renforcement de la dimension africaine du massacre. Le Sénégal entend notamment approfondir les recherches sur l'identité des victimes, leurs parcours individuels et les circonstances historiques de leur mort, en associant leurs pays d'origine, souligne le dossier de presse. Massacre de Thiaroye : le programme des commémorations du 82e anniversaire dévoilé La même source fait état de 2 905 soldats africains identifiés grâce au croisement de plusieurs fonds documentaires, notamment les listes de prisonniers des Frontstalags, les Archives nationales du Sénégal et les registres de décès de Dakar conservés à Nantes. Parmi eux, 1 145 ont déjà été rattachés à leur village d'origine dans une douzaine de pays actuels. Cette démarche de documentation et de reconnaissance sera prolongée par un atelier régional intitulé « Thiaroye et les violences coloniales », prévu le 2 décembre 2026. Cette rencontre constitue une étape du programme collectif de recherche 2026-2029, destiné à consolider les coopérations scientifiques et à élargir les investigations à d'autres violences coloniales, précise la note. Quatorze pays sont associés à cette initiative. Le noyau comprend le Sénégal, le Mali, la Guinée, la Côte d'Ivoire, le Burkina Faso, le Bénin, le Niger et la Mauritanie. Six autres pays sont associés. Il s’agit du Cameroun, de Madagascar, du Tchad, de la Gambie, la Guinée-Bissau et du Cap-Vert. O.BA",
+      "_source": "Le Soleil (Sénégal)",
+      "_sourceId": "rss_lesoleil",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
-        "military"
+        "diplomatic",
+        "military",
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -893,20 +895,20 @@
         "rating": "F2"
       },
       "_rating": "F2",
-      "_score": 119,
+      "_score": 127,
       "_zone": 1,
-      "_theme": "H",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Burkina : Publicitaires associés prépare les étudiants aux exigences du métier de publicitaire",
-      "link": "https://www.minute.bf/burkina-publicitaires-associes-prepare-les-etudiants-aux-exigences-du-metier-de-publicitaire/",
-      "pubDate": "2026-11-26T23:50:02.000Z",
-      "description": "Dans le cadre de sa rentrée publicitaire 2026, Publicitaires associés a organisé une conférence publique au profit des étudiants, le 25 novembre 2026 à Ouagadougou. Placée sous le thème « De l'Université à l'agence : quelles compétences clés pour s'imposer dans la communication publicitaire aujourd'hui ? », la rencontre a réuni étudiants et professionnels du secteur autour des compétences nécessaires à une insertion professionnelle réussie. Entre les exigences du monde universitaire et les réalités du marché de l’emploi, le passage à la vie professionnelle nécessite une préparation adaptée. C'est dans cette dynamique que Publicitaires associés a initié une conférence publique sous le thème « De l'Université à l'agence : quelles compétences clés pour s'imposer dans la communication publicitaire aujourd'hui ? ». Cette conférence vise à offrir aux étudiants l'occasion de découvrir les réalités du secteur de la communication publicitaire à travers les expériences de professionnels. Une vue des etudiants Pour Cheick Sanou, porte-parole du bureau de Publicitaires associés, cette démarche s'inscrit dans la volonté de créer des passerelles entre les professionnels et les étudiants. Poursuivant Cheick Sanou a expliqué que cette rencontre vise à partager des expériences, mais aussi à aider les futurs communicants à mieux valoriser les compétences acquises au cours de leur formation. « Il s'agit d'aider les étudiants à puiser dans les compétences qui leur sont enseignées durant leur cursus pour façonner un profil optimal lorsqu'ils arrivent dans le secteur de la communication », a-t-il indiqué. Le porte-parole du bureau de Publicitaires associés a également précisé que ces échanges ont pour but de susciter chez les apprenants la passion du métier et de renforcer leur confiance avant leur entrée sur le marché de l’emploi. Cheick Sanou, porte-parole du bureau de Publicitaires associés expliquant le but de cette initiative Intervenant sur les compétences indispensables pour réussir dans le secteur, Abdoul Aziz Bamogo, conférencier et ancien président du Conseil supérieur de la communication (CSC), a identifié deux principaux leviers : les compétences techniques et les aptitudes relationnelles. Selon lui, les mutations du secteur imposent aux futurs professionnels de s'adapter aux nouvelles pratiques, notamment à la montée en puissance du numérique. « Ce qu'on faisait en agence il y a 10 à 15 ans, ce n'est plus ce qu'on fait aujourd'hui. Le numérique a pris le pas sur les autres modalités de communication », a-t-il souligné. Abdoul Aziz Bamogo, conférencier, invite les étudiants à accorder une importance particulière au savoir-être, qu’il considère comme une qualité essentielle pour réussir dans l’environnement professionnel. En plus de la maîtrise des outils et des techniques, le conférencier a insisté sur l'importance du savoir-être dans l'environnement professionnel. La capacité à collaborer avec ses collègues, à entretenir de bonnes relations avec sa hiérarchie et à répondre aux attentes des clients constitue, selon M. Bamogo, un facteur déterminant pour réussir en entreprise. Du côté des participants, les échanges ont été appréciés. Sofoni Ki, étudiant en troisième année de marketing et communication digitale à Digital Business School (DBS), s'est réjoui des enseignements reçus. « Cette conférence m'a beaucoup appris. Nous avons découvert les clés essentielles de la communication publicitaire et j'étais vraiment à l'aise durant les échange s », a-t-il confié. Sofoni Ki, étudiant en troisième année de marketing, se réjouit d’avoir acquis de nouvelles connaissances et des clés essentielles pour mieux affronter les réalités du monde professionnel. Outre la conférence publique, plusieurs activités étaient inscrites au programme de la rentrée publicitaire 2026. Il s'agit notamment des opérations de don de sang et des rencontres de networking entre agences, étudiants et professionnels du secteur. Publicitaires associés entend, à travers cette initiative, renforcer les liens entre les acteurs de la communication et contribuer à la formation d'une nouvelle génération de professionnels mieux préparés aux réalités du métier. Sakinatou ZOUNDI Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Exposition itinérante « Les trésors du Liptako » : le ministre Pingdwendé Gilbert Ouédraogo ouvre le bal",
+      "link": "https://www.sidwaya.info/2026/11/27/exposition-itinerante-les-tresors-du-liptako-le-ministre-pingdwende-gilbert-ouedraogo-ouvre-le-bal/",
+      "pubDate": "2026-11-27T05:50:55.000Z",
+      "description": "Le ministre de la Communication, de la Culture, des Arts et du Tourisme, Pingdwendé Gilbert Ouédraogo, a présidé la cérémonie officielle du vernissage de l’exposition itinérante « Les trésors du Liptako », jeudi 26 novembre 2026, à Ouagadougou. Le patrimoine culturel des peuples des pays de la Confédération des Etats du Sahel est à l’honneur, du 26 au 29 novembre 2026, au Musée national du Burkina. En effet le pays des Hommes intègres abrite sur cette période l’exposition itinérante « Les trésors du Liptako ». Le ministre de la Communication, de la Culture, des Arts et du Tourisme, Pingdwendé Gilbert Ouédraogo, a présidé le vernissage de l’exposition. Il a salué les délégations du Mali et du Niger et l’ensemble des acteurs qui ont contribué à son organisation. Il a indiqué que la reconquête de la souveraineté des pays de l’espace confédéral ne doit pas être seulement militaire, politique ou économique, mais doit être aussi culturelle. De ce fait, le ministre chargé de la Culture a estimé que la coopération culturelle doit occuper une place essentielle pour la construction d’une identité confédérale respectueuse de l’histoire, de la tradition et des particularités de chaque pays de l’espace. Pour valoriser davantage le patrimoine culturel, Pingdwendé Gilbert Ouédraogo a invité les musées, universités et centres de recherche à demeurer des espaces de connaissances, de dialogue et de transmission capables de faire connaître l’histoire et les valeurs cultures de l’AES. Le parrain de la cérémonie, le président de la chambre des mines du Burkina Faso, Souleymane Boly, a salué cette belle initiative. Il a relevé la nécessité de préserver et de valoriser le patrimoine culturel. Le développement ne peut être durable sans la valorisation du patrimoine culturel. Il a, à cet effet, invité le secteur privé à jouer sa partition ? car, la responsabilité sociétale des entreprises ne doit pas se limiter uniquement aux actions économiques, sociales ou environnementales. Durant l’exposition, les participants auront droit à la découverte des paysages, du patrimoine et des grandes figures du Liptako, à l’immersion dans les coutumes, les croyances, la gastronomie, les musiques et les instruments, à la présentation des activités économiques et traditionnelles, notamment l’agriculture et l’élevage. A cela s’ajoute l’arbre de la souveraineté et de l’espérance qui invite chacun à réfléchir au patrimoine qu’il souhaite transmettre. Abdoulaye BALBONE",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -914,7 +916,6 @@
         "economic",
         "diplomatic",
         "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -924,10 +925,10 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "F1"
+        "rating": "C2"
       },
-      "_rating": "F1",
-      "_score": 115,
+      "_rating": "C2",
+      "_score": 127,
       "_zone": 1,
       "_theme": "E",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -935,19 +936,51 @@
       "_desk": "A1"
     },
     {
-      "title": "Musique : Sina Kiénou fait dialoguer le Mandé et le rock sur l’album « Révolution Touma »",
-      "link": "https://www.minute.bf/musique-sina-kienou-fait-dialoguer-le-mande-et-le-rock-sur-lalbum-revolution-touma/",
-      "pubDate": "2026-11-26T23:47:54.000Z",
-      "description": "Le guitariste burkinabè, héritier d’une lignée de griots, a dédicacé son album « Révolution Touma » le jeudi 26 novembre 2026. Dix titres pour décoloniser les esprits, célébrer les héros africains et vanter le retour à la terre. Sina Kiénou n’est pas un révolutionnaire de tribune. Sa guitare parle pour lui. Il a mis sur le marché de la musique son album de belle facture « Révolution Touma ». Sur « Révolution Touma », le guitariste et chanteur burkinabè prolonge le projet Mandé Rock qu’il a fondé en 2017. Il s'agit d'une rencontre entre les traditions musicales mandingues d’Afrique de l’Ouest et l’énergie du rock. Le Presidium de la dédicace avec l'article au micro L’album, dont la sortie a été officialisée le 26 novembre 2026 chez SK99PROD, a été enregistré entre l’Afrique et l’Europe, avec une étape marquante chez Eliezer Oubda, ingénieur du son burkinabè. Le titre qui ouvre le propos donne le ton. « Révolution Touma », explique l’artiste, est un hommage à tous ceux qui se battent pour la justice et la liberté des peuples. « Il faut se donner la main, décoloniser les mentalités », insiste-t-il, appelant à « une révolution nette et honnête », à transformer « tout ce qui est négatif vers le positif ». La démarche traverse chaque chanson comme une conviction intime, nourrie par l’histoire familiale de Kiénou, petit-fils du chef des griots du Burkina Faso Baba Abdoulaye Kienou. Sur « Immortel », il rend un hommage appuyé aux héros africains assassinés. « Il faut toujours se battre pour la justice », dit-il. Le nom de ces héros, Thomas Sankara, Patrice Lumumba, etc. ne sera jamais oublié. « Ils ont combattu le bon combat », laisse entendre l'artiste. Plus loin, « Burkindi » vient galvaniser les autorités du pays, tandis que « Non au Racisme » pose un « non stop » sans ambiguïté. « Ceux qui ont déjà pris l’avion pour d’autres continents savent comment c’est difficile », rappelle l’artiste, qui vit en Belgique depuis 2021 et connaît les entraves administratives et les préjugés. L’album ne se limite pourtant pas à la dénonciation. « La paix » invite à l’amour et à la conscience de notre condition de passants sur terre. « Barra » s’adresse aux jeunes avec une exigence simple : le travail. « Seul le travail bien fait paie », martèle Sina Kiénou. Et puis il y a « Villageois vie la joie », sans doute le titre le plus personnel. La ville, dit-il, « est en train de nous anéantir un peu, un peu ». Avant, rappelle-t-il, on cultivait trois mois et on vivait neuf mois. « Aujourd’hui, la ville nous a perdus », insiste Sina Kiénou. La joie, pour lui, se trouve au village, dans ce rapport direct à la terre et aux saisons que la diaspora oublie parfois. L'album La guitare, enfin, occupe une place à part. « Ma guitare magique » raconte l’instrument qui a fait de lui ce qu’il est. « Quand je prends ma guitare, je ne suis plus moi. J’ai un autre sentiment », relate l'artiste. Une déclaration d’amour à la six-cordes qui l’accompagne depuis l’âge de treize ans, et qui lui permet aujourd’hui de faire dialoguer les gammes mandingues avec les riffs électriques, sans jamais sacrifier l’une à l’autre. « Farafina » clôt le voyage par un hymne à la fierté africaine. « Il faut être fier de là où on vient. Moi, je suis fier d’être africain. Partout où je pars, je mets ma culture en avant. J’adore ma peau noire. Arrêtons la dépigmentation », explique Sina Kiénou. L’album est disponible au prix de 7 500 FCFA en CD et 10 000 FCFA en clé USB. Minute.bf",
-      "_source": "Minute BF",
-      "_sourceId": "rss_minute_bf",
+      "title": "Au Burkina Faso, comment l’« armée numérique » d’Ibrahim Traoré fait régner sa loi",
+      "link": "https://www.jeuneafrique.com/1865719/politique/au-burkina-faso-comment-l-armee-numerique-dibrahim-traore-fait-regner-sa-loi/",
+      "pubDate": "2026-11-27T12:11:27.000Z",
+      "description": "Autour du capitaine Ibrahim Traoré, une jeunesse connectée s’est érigée en fer de lance du souverainisme burkinabè. Influenceurs, militants, activistes numériques… Entre engagement sincère, proximité avec le pouvoir et opportunisme, qui sont les « combattants » en première ligne dans cette guerre de l’information ?",
+      "_source": "Jeune Afrique",
+      "_sourceId": "rss_jeuneafr",
+      "_sourceCat": "africa",
+      "_sourceBloc": "occident_fr",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "military"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "B2"
+      },
+      "_rating": "B2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "T",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "L",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mojtaba Faqihi : « Adieu au Burkina Faso, Terre d’Espoir »",
+      "link": "https://faso7.com/2026/11/27/mojtaba-faqihi-adieu-au-burkina-faso-terre-despoir/",
+      "pubDate": "2026-11-27T11:35:36.000Z",
+      "description": "Ceci est le message d’adieu de Mojtaba Faqihi, l’Ambassadeur d’Iran au Burkina Faso en fin de mission. Salut au peuple chaleureux et aux dirigeants du grand Burkina Faso, pays visionnaire, « Terre d’Espoir ». Je suis Mojtaba Faghihi, Ambassadeur de la République islamique d’Iran au Burkina Faso. Je suis arrivé dans votre beau pays en mars 2023. Dès mon arrivée à l’aéroport de Ouagadougou, j’ai ressenti votre énergie positive et votre accueil chaleureux, qui ont renforcé ma motivation à œuvrer pour le développement des relations entre nos deux pays amis. Lors de mes premières rencontres avec vos hautes autorités, sous le leadership de Son Excellence le Président Capitaine Ibrahim Traoré, j’ai pu constater un élan de dynamisme et d’espoir en faveur du renforcement de l’indépendance et du progrès du Burkina Faso. Vous, peuple laborieux du Burkina Faso, semblez avoir retrouvé, avec l’avènement du Président Ibrahim Traoré, après Thomas Sankara, une figure historique que vous recherchiez depuis longtemps. Les graines d’espoir, longtemps enfouies dans votre mémoire collective, ont de nouveau germé sous la pluie porteuse d’espérance des idéaux de votre nouveau leadership, faisant apparaître de nouveaux horizons lumineux dans le ciel du Burkina Faso. Durant plus de trois années de mission diplomatique, j’ai constamment été témoin du renforcement des différentes composantes de la puissance nationale du Burkina Faso. Parmi les réalisations les plus importantes, je citerai notamment : * Les avancées dans les domaines militaire et de la défense nationale, ainsi que dans celui de la sécurité et de la Police nationale ; * Le développement industriel et commercial ; * La conduite d’une politique étrangère active et affirmée sur la scène internationale, portée par une confiance nationale grandissante ; * Les discours marquants du Président Ibrahim Traoré lors des rencontres des dirigeants africains en Russie ; * Le rôle joué par le Burkina Faso au sein des Nations Unies dans l’expression de positions progressistes ; * Une croissance économique annuelle soutenue, à plusieurs reprises confirmée par le FMI et la Banque africaine de développement. Les programmes et les réformes législatives adoptés ces dernières années dans les domaines économique et financier ont progressivement contribué à renforcer la confiance des investisseurs étrangers et à les encourager à investir dans votre pays. Au cours des dernières années, moi-même ainsi que plusieurs autres ambassadeurs étrangers résidant à Ouagadougou avons participé à l’inauguration de nombreux projets industriels et d’infrastructures réalisés dans votre pays. En tant que diplomate étranger ayant plus de trente années d’expérience professionnelle dans différents pays du monde, ainsi qu’un parcours d’études et de recherches dans les domaines des sciences politiques et de l’économie internationale, je peux affirmer que le Burkina Faso a engagé un vaste mouvement de développement et se trouve aujourd’hui sur une trajectoire historique particulièrement prometteuse. La poursuite de cette dynamique de réussite ne peut toutefois se concrétiser que grâce à la solidarité nationale entre les citoyens et au soutien du peuple à son gouvernement. Chaque pays doit choisir lui-même sa propre voie de développement. Les méthodes importées ou imposées de l’extérieur risquent de ramener les nations dans le cercle des douloureuses dépendances du passé. Durant les années où j’ai eu l’honneur de séjourner parmi vous, en tant qu’invité de votre gouvernement et de votre peuple, j’ai toujours agi avec un profond attachement humain, un grand respect pour la culture et les traditions du Burkina Faso, ainsi qu’une conviction sincère quant à la pertinence de la voie de progrès empruntée par votre pays. Conformément aux orientations des hautes autorités de mon pays, j’ai consacré tous mes efforts au renforcement et à l’élargissement des relations bilatérales entre la République islamique d’Iran et le Burkina Faso. Je tiens à exprimer ma profonde gratitude et mes sincères remerciements pour le soutien précieux et constant de Son Excellence Monsieur Ibrahim Traoré, Président du Faso, ainsi que de Leurs Excellences Monsieur le Premier ministre, les ministres des Affaires étrangères, de la Guerre et de la Défense, de l’Industrie et du Commerce, de la Sécurité, de la Communication et de la Culture, de la Santé, de l’Éducation, des Mines et de l’Énergie, ainsi que de tous les autres membres du gouvernement, anciens et actuels. En guise de dernier mot : À l’heure où s’achève ma mission diplomatique, et au regard de l’ensemble de mes observations et analyses, je tiens à déclarer, avec toute mon amitié et mon profond respect, que l’expression « Burkina Faso, Terre d’Espoir » restera profondément gravée dans mon esprit et dans mon cœur. Je prie le Dieu Tout-Puissant et Miséricordieux d’accorder à votre pays un avenir encore plus radieux, prospère et paisible. Votre ami pour toujours, Mojtaba Faqihi Ambassadeur de la République islamique d’Iran L’article Mojtaba Faqihi : « Adieu au Burkina Faso, Terre d’Espoir » est apparu en premier sur Faso7 .",
+      "_source": "Faso7",
+      "_sourceId": "rss_faso7",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "military"
+        "military",
+        "political"
       ],
       "_majors": [],
       "_bf": true,
@@ -967,20 +1000,19 @@
       "_desk": "A1"
     },
     {
-      "title": "Burkina Faso : L’ONU salue les progrès réalisés dans les domaines sécuritaire, économique et diplomatique",
-      "link": "https://netafrique.net/burkina-faso-lonu-salue-les-progres-realises-dans-les-domaines-securitaire-economique-et-diplomatique/",
-      "pubDate": "2026-11-26T22:34:27.000Z",
-      "description": "En visite à Ouagadougou, le Représentant spécial du Secrétaire général des Nations Unies pour l’Afrique de l’Ouest et le Sahel, Leonardo Santos Simão, a salué plusieurs avancées enregistrées par le Burkina Faso, tout en réaffirmant la volonté de l’organisation de renforcer son partenariat avec le pays. Le Burkina Faso a reçu les appréciations positives d’un haut responsable des Nations Unies sur les progrès enregistrés dans plusieurs secteurs. En visite dans le pays, le Représentant spécial du Secrétaire général de l’ONU pour l’Afrique de l’Ouest et le Sahel, Leonardo Santos Simão, a salué les efforts déployés en matière de sécurité, de développement et de diplomatie. L’émissaire onusien a été reçu dans la soirée du mercredi 25 novembre 2026 par le ministre burkinabè des Affaires étrangères, Karamoko Jean Marie Traoré. Cette visite de terrain s’inscrit dans la volonté des Nations Unies de consolider leur coopération avec le Burkina Faso. Sur le plan diplomatique, le Représentant spécial a également mis en avant les initiatives portées par le Burkina Faso et la Confédération des États du Sahel (AES). Selon lui, ces démarches ont contribué à renforcer la visibilité du Burkina Faso, du Mali et du Niger sur la scène internationale. Il a particulièrement salué l’organisation d’un événement parallèle consacré à l’AES, en marge de la dernière Assemblée générale des Nations Unies à New York. Cette rencontre aurait contribué, selon lui, à faire évoluer les perceptions sur le Burkina Faso et l’espace confédéral. Ouagadougou plaide pour un partenariat fondé sur les réalités du terrain Karamoko Jean Marie Traoré s’est réjoui de cette visite, estimant que les déplacements sur le terrain permettent aux partenaires internationaux de mieux appréhender la situation réelle du Burkina Faso. Il a notamment invité les Nations Unies à renforcer les liens entre leur siège et les différentes agences présentes au Burkina Faso. Le ministre a également insisté sur l’importance de s’appuyer sur des sources fiables pour élaborer des solutions consensuelles et prévenir les frustrations. À l’issue de la rencontre, les deux parties ont salué la qualité des relations entre le Burkina Faso et les Nations Unies, après une période de tensions survenue au cours de l’année 2025. Cette visite intervient ainsi dans un contexte de volonté affichée de consolidation du dialogue et de renforcement de la coopération entre Ouagadougou et l’organisation internationale. L’article Burkina Faso : L’ONU salue les progrès réalisés dans les domaines sécuritaire, économique et diplomatique est apparu en premier sur NetAfrique.net .",
-      "_source": "Net Afrique (BF)",
-      "_sourceId": "rss_netafrique",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
+      "title": "Burkina Faso seeks Nigeria’s partnership against terrorism, trafficking",
+      "link": "https://www.vanguardngr.com/2026/11/burkina-faso-seeks-nigerias-partnership-against-terrorism-trafficking/",
+      "pubDate": "2026-11-27T10:02:44.000Z",
+      "description": "By Luminous Jannamike ABUJA — Burkina Faso has pledged to strengthen security cooperation with Nigeria to tackle terrorism, drug trafficking, human trafficking and other cross-border crimes threatening stability in West Africa. Burkina Faso’s Minister of Security, Mahamadou Sana, made the commitment during a meeting with Nigeria’s Ambassador to the country, Syndoph Endoni, in Ouagadougou, according to a statement issued after the meeting. Sana said stronger bilateral cooperation would enable both countries to develop practical responses to terrorism and other transnational crimes. He commended Nigeria’s longstanding relationship with Burkina Faso, recalling its support over the years, particularly its contributions to the country’s 2015 electoral process. The minister also identified Nigeria’s industrial development as an area Burkina Faso could learn from, citing the Dangote Refinery as an example of the country’s growing industrial capacity. He stressed that peace and stability were essential to attracting investment and creating economic opportunities. Responding, Endoni said security and development were inseparable, warning that instability in one West African country could have consequences for its neighbours. “There is no development without peace and security and there is no peace and security without development,” the ambassador said. Describing the relationship between the two countries as deeper than conventional diplomacy, Endoni said their historical ties were founded on “fraternity and brotherhood.” He called for sustained dialogue and stronger bilateral engagement to address shared challenges, particularly transnational organised crime. The proposed areas of cooperation include intelligence sharing, operational coordination, capacity building and technology transfer, potentially involving Nigerian agencies such as NAPTIP, NDLEA, NITDA, NIPC and the Bank of Industry, alongside their Burkinabe counterparts. The post Burkina Faso seeks Nigeria’s partnership against terrorism, trafficking appeared first on Vanguard News .",
+      "_source": "Vanguard (Nigeria)",
+      "_sourceId": "rss_vanguard",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
       "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
-        "humanitarian",
-        "political"
+        "humanitarian"
       ],
       "_majors": [],
       "_bf": true,
@@ -1000,20 +1032,19 @@
       "_desk": "A1"
     },
     {
-      "title": "Innovation et propriété intellectuelle : Dr Moïse Convolbo, un Burkinabè à l'origine d'une invention brevetée aux États-Unis, plaide pour 1 000 demandes de brevets par an au Burkina Faso",
-      "link": "https://lefaso.net/spip.php?article151069",
-      "pubDate": "2026-11-26T21:49:00.000Z",
-      "description": "Anticiper les décisions des utilisateurs d'un service numérique pour agir au moment opportun, sans porter atteinte à leur liberté de choix. C'est le principe de l'invention du Dr Moïse Convolbo, qui a fait l'objet d'un brevet délivré le 24 novembre 2026 par l'Office américain des brevets, au terme de près de six années de procédure et de cinq refus provisoires. Développée au Japon, au sein du groupe Rakuten, cette innovation en intelligence artificielle prédictive ouvre des perspectives dans le commerce électronique, les services financiers, la cybersécurité et les services publics. Dans cet entretien accordé à Lefaso.net, le chercheur burkinabè explique le fonctionnement et la portée de son invention, aborde les enjeux éthiques de l'intelligence artificielle et plaide pour un meilleur rapprochement entre la recherche et le marché en Afrique. Il propose notamment que le Burkina Faso se fixe l'objectif de 1 000 demandes de brevets par an. Dr Moïse Convolbo, l'Office américain des brevets vient de vous délivrer un brevet portant sur un système de prédiction basé sur l'intelligence artificielle. Comment est née cette invention et à quel problème concret cherchiez-vous initialement à apporter une solution ? Permettez-moi d'abord de rendre un vibrant hommage à nos Forces de défense et de sécurité (FDS) et à nos Volontaires pour la défense de la patrie (VDP). Ils se battent jour et nuit pour la sécurité de notre pays. Pour revenir à votre question, je vais partir du cas d'application initial. C'est le plus simple à comprendre. Tout est parti d'une observation. Sur un site de commerce en ligne, beaucoup de visiteurs commencent une démarche sans jamais la terminer. Ils cherchent, comparent, hésitent, puis repartent. Les outils classiques n'expliquaient ces abandons qu'après coup, une fois le client parti. C'est ce que nous appelons l'analyse « à froid ». Je me suis posé la question inverse. Et si l'on pouvait reconnaître ces signaux pendant la visite, quand il est encore possible d'aider le client ? C'est l'analyse « à chaud ». J'ai développé cette idée à Tokyo. Elle a abouti à ce brevet. Vous présentez votre invention à travers une question assez audacieuse : « Et si vous pouviez connaître la décision d'un homme avant même qu'il la prenne ? » Pour le commun des mortels, comment fonctionne concrètement votre modèle d'intelligence artificielle ? Jusqu'à quel point peut-il anticiper les décisions humaines et avec quel degré de fiabilité ? Il faut d'abord rassurer : ce système ne lit pas dans les pensées. Il reconnaît des tendances. Prenons une image. Un vendeur expérimenté observe un client en boutique. À sa façon de se déplacer, de regarder et d'hésiter, le vendeur devine s'il va acheter ou partir. Notre système fait la même chose sur un site internet. Il a appris à partir des parcours de très nombreux visiteurs : les pages consultées, l'ordre des clics, les retours en arrière, c'est le comportement observé. Le système sait aussi comment chaque visite s'est terminée. Quand un nouveau visiteur navigue, le système compare son parcours à ce qu'il a appris. À chaque étape, il estime comment la visite va se terminer : un achat, une réservation, un abandon, ou une simple curiosité. Plus le visiteur avance, plus la prédiction est précise. Il s'agit toujours de probabilités, jamais de certitudes. La décision finale appartient entièrement à l'utilisateur. L'analyse prédictive des comportements humains est déjà utilisée par de nombreuses entreprises technologiques à travers le monde. En quoi votre invention se distingue-t-elle des solutions existantes ? Quelle est précisément l'innovation qui vous a valu la délivrance de ce brevet américain ? La plupart des outils d'analyse produisent une photographie. Ils analysent une visite une fois qu'elle est terminée. Notre approche ressemble plutôt à un film. La prédiction est recalculée à chaque étape du parcours. Pour cela, nous utilisons plusieurs petits modèles d'IA, chacun adapté à un stade de la navigation. La deuxième originalité est de distinguer trois situations souvent confondues : • le client qui va conclure ; • le client qui voulait vraiment acheter, mais qui va abandonner ; • le visiteur qui ne fait que regarder. Cette distinction est essentielle. Le client qui hésite mérite qu'on l'aide. En revanche, solliciter celui qui se renseigne simplement serait inutile, voire contre-productif. Enfin, le système ne s'arrête pas à la prédiction. Il permet de déclencher la bonne action au bon moment. C'est cet ensemble que l'examinateur américain a reconnu comme nouveau. Votre invention a été initialement conçue pour la réservation en ligne, avant d'être mise en production à Tokyo. Pouvez-vous nous donner des exemples concrets de son utilisation et des résultats obtenus ? Quelles retombées économiques les entreprises peuvent-elles attendre de cette technologie, notamment dans le commerce électronique, les services financiers et la cybersécurité ? Dans le commerce en ligne, un client peut montrer des signes d'hésitation. Le système permet alors de lui proposer une aide, une information utile ou une offre adaptée, avant qu'il ne quitte le site. Pour des raisons de confidentialité, je ne peux pas communiquer de chiffres internes. Mais les résultats ont confirmé la pertinence de l'approche. Pour les entreprises, les retombées se situent à plusieurs niveaux : • Commerce électronique : moins de paniers abandonnés, plus de ventes conclues et des clients mieux accompagnés. • Services financiers : aider un client bloqué dans une demande de crédit ou d'ouverture de compte, et détecter les parcours inhabituels. • Cybersécurité : repérer en temps réel un comportement anormal, comme un robot ou une tentative de fraude, avant qu'il ne cause des dégâts. La cybersécurité est un enjeu majeur. Selon certaines estimations, si la cybercriminalité était un pays, elle serait la troisième économie mondiale en PIB, derrière les États-Unis et la Chine, et devant l'Allemagne et le Japon. Imaginez l'impact si une partie des comportements suspects était détectée et bloquée avant de faire des victimes ! Dans tous les cas, le principe est le même : agir au bon moment plutôt que constater après coup. Entre la première idée, les travaux de recherche, la mise en production et la délivrance du brevet, plusieurs années se sont écoulées. Quelles ont été les principales étapes de ce parcours, les difficultés scientifiques, techniques et juridiques rencontrées, et les leçons que vous en tirez en tant que chercheur et innovateur ? Il faut savoir que l'Office américain des brevets est l'un des plus exigeants au monde. Et le nombre de demandes dans le domaine de l'IA ne cesse d'augmenter. Le parcours a duré près de six ans. La demande a été déposée aux États-Unis en décembre 2020. Elle a ensuite attendu plus de trois ans avant d'être examinée. C'est un délai courant à l'Office américain des brevets. L'Office a d'ailleurs ajusté la durée de protection de plus de trois ans pour compenser ce retard. L'examen a ensuite duré près de trois ans. J'ai reçu cinq décisions de refus provisoires. C'est normal dans cette procédure : l'examinateur compare l'invention à tout ce qui existe déjà dans le monde. Au fil des échanges et des entretiens, il a fallu démontrer, point par point, ce que l'invention apportait de nouveau. Le brevet a finalement été délivré le 24 novembre 2026. Sur le plan technique, le principal défi a été double. Il fallait produire des prédictions fiables, en temps réel et à grande échelle. Et il fallait respecter les lois sur la protection des données personnelles. La leçon que j'en tire : une bonne idée ne suffit pas. Il faut de la rigueur pour la prouver, de la patience pour la défendre et une bonne équipe pour la porter jusqu'au bout. Le document délivré par l'Office américain des brevets vous désigne comme inventeur et mentionne le groupe japonais Rakuten comme titulaire du brevet. Comment s'articulent vos droits en tant qu'inventeur et ceux de l'entreprise ? Quelle est la portée juridique, professionnelle et commerciale de ce brevet, et envisagez-vous une protection de l'invention dans d'autres pays ? C'est la règle habituelle dans le monde de l'entreprise. L'invention a été réalisée dans le cadre de mes fonctions. Il est donc normal que Rakuten, qui est l'entreprise dans laquelle je travaillais, soit titulaire du brevet et décide de son exploitation. En tant qu'inventeur, mon nom reste attaché à ce brevet de façon permanente. C'est la reconnaissance officielle de la paternité de l'invention. Juridiquement, ce brevet donne à son titulaire un droit exclusif sur l'invention aux États-Unis, le premier marché technologique mondial. Professionnellement, c'est une validation par l'une des institutions les plus exigeantes au monde. Commercialement, c'est un actif qui renforce la position de l'entreprise. Lire aussi : Les 100 Visages du Burkina Digital : Dr Moïse Convolbo, du cloud à l'IA, un Burkinabè aux frontières de l'innovation mondiale Une intelligence artificielle capable d'anticiper les décisions humaines peut susciter autant d'espoirs que d'inquiétudes. Où se situe, selon vous, la frontière entre l'anticipation des besoins d'un utilisateur et la manipulation de son comportement ? Quelles garanties votre modèle offre-t-il en matière de protection des données personnelles, de respect de la vie privée et de liberté de décision ? C'est une question essentielle, et je la prends très au sérieux. Pour moi, la frontière est claire. Anticiper, c'est aider quelqu'un à obtenir ce qu'il cherche déjà. Manipuler, c'est le pousser vers ce qu'il ne veut pas. Un bon vendeur qui voit un client hésiter lui propose son aide. Il ne l'enferme pas dans le magasin. C'est cet esprit qui guide notre travail : faciliter le parcours de l'utilisateur, jamais décider à sa place. Le respect des lois sur la protection des données a été une exigence dès la conception. Le système s'appuie sur des comportements de navigation, comme l'enchaînement des pages et les clics. Il ne s'appuie pas sur l'identité des personnes. Plus largement, une IA digne de confiance repose selon moi sur trois principes : la transparence, le respect de la vie privée et la liberté de choix de l'utilisateur. Dans quelle mesure cette innovation pourrait-elle être adaptée aux réalités africaines, notamment dans les secteurs de la banque, de la finance mobile, du commerce, des services publics et de la cybersécurité ? Quelles conditions faudrait-il réunir pour permettre aux entreprises burkinabè et africaines de tirer profit de telles technologies ? Le potentiel est réel, car le principe est universel : comprendre un comportement au moment où il se produit, pour mieux servir les personnes ou mieux se protéger. • Finance : détecter en temps réel une transaction inhabituelle sur un compte de mobile money, et protéger les utilisateurs contre la fraude. • Banque : accompagner un client en difficulté dans une démarche en ligne, plutôt que de le perdre. • Commerce : aider les plateformes locales de vente en ligne à mieux comprendre leurs clients, même s'ils sont à l'autre bout du monde et à moindre coût. • Services publics : repérer les étapes où les citoyens abandonnent une démarche administrative en ligne. On peut alors simplifier ces étapes et rendre le service plus fluide pour tous. • Cybersécurité : repérer plus tôt les comportements suspects sur les systèmes numériques critiques, et les bloquer avant qu'ils ne provoquent une crise. Il existe d'autres domaines où l'analyse du comportement humain peut éclairer la prise de décision. Certains sont plus sensibles, et je préfère ne pas les aborder ici. Pour que nos entreprises en profitent, quelques conditions sont nécessaires : • des données numériques de qualité ; • un cadre clair de protection des données personnelles ; • des compétences locales en science des données ; • des partenariats entre entreprises, universités et experts de la diaspora. La technologie existe. L'enjeu est surtout de l'adapter à nos réalités et à nos usages. Votre parcours illustre la capacité des chercheurs africains à contribuer à l'innovation technologique mondiale. Que manque-t-il aujourd'hui au Burkina Faso et, plus largement, à l'Afrique pour transformer davantage les résultats de la recherche en inventions brevetées et en solutions commercialisables ? Quel rôle les États, les universités et le secteur privé devraient-ils jouer dans cette dynamique ? L'Afrique ne manque ni de talents ni d'idées. Ce qui manque surtout, c'est le pont entre la recherche et le marché. • Les États peuvent rendre la protection des inventions plus accessible et moins coûteuse. Ils peuvent aussi sensibiliser à la propriété intellectuelle et financer les dépôts de brevets et les projets innovants. Avec l'Académie Technologique du Faso (ATF), le Burkina dispose d'un atout. Il pourrait se fixer un objectif ambitieux : 1 000 demandes de brevets déposées chaque année. • Les universités gagneraient à orienter davantage la recherche vers des problèmes concrets. Elles pourraient aussi créer des structures pour aider les chercheurs à valoriser leurs travaux. • Le secteur privé a un rôle clé. Il doit exprimer ses besoins, financer la recherche appliquée et donner aux chercheurs l'accès à des cas d'usages réels. Aujourd'hui, la recherche appliquée se fait davantage en entreprise qu'à l'université. Cela montre bien le rôle que le secteur privé doit jouer. Il faut aussi mieux mobiliser la diaspora. Beaucoup de chercheurs africains travaillent dans des environnements d'innovation de pointe. Ils ne demandent qu'à partager leur expérience. Vous ambitionnez désormais de faire de l'intelligence artificielle prédictive un élément central de l'expérience client. Quelles sont vos prochaines ambitions scientifiques et professionnelles ? Envisagez-vous des collaborations avec des universités ou des entreprises burkinabè ? Enfin, quel message adressez-vous aux jeunes chercheurs, ingénieurs et entrepreneurs africains qui souhaitent s'engager dans la recherche et l'innovation technologique ? Mon ambition est de continuer à mettre l'intelligence artificielle au service de l'expérience client et de la création de valeur, en tant que leader de la transformation numérique. [ Cliquez ici pour lire l'intégralité ] Lefaso.net",
-      "_source": "Lefaso.net",
-      "_sourceId": "rss_lefaso",
+      "title": "VIIe édition du forum International sino-burkinabè : des réflexions pour le développement durable",
+      "link": "https://www.sidwaya.info/2026/11/27/region-de-la-sirba-la-securite-la-paix-et-le-developpement-priorites-du-premier-gouverneur-auguste-kinda-2/",
+      "pubDate": "2026-11-27T06:05:02.000Z",
+      "description": "La cérémonie d’ouverture de la VIIe édition du forum international sino-burkinabè du club des jeunes pour la promotion de la coopération sino-burkinabè a eu lieu, jeudi 26 novembre 2026, à Ouagadougou. Organisé par le Club des jeunes pour la promotion de la coopération sino-burkinabè (CJPC-BF), la VIIe édition du forum international sino-burkinabè, se tient, les 26 et 27 novembre 2026, à l’Université libre du Burkina (ULB). Le thème de l’édition est : « Echange culturel et humain Sino-burkinabè : Quelle coopération dans un contexte de révolution ? ». Elle enregistre la participation du Gabon, du Cameroun et du Sénégal. Au cours du forum, les étudiants de l’ULB, le personnel diplomatique de l’ambassade de la Chine, les experts et hommes d’affaires vont avoir des échanges humains, commerciaux et culturels. Le coordonnateur général national du CJPC-BF, Abdoul Razahagou Dénié, a signifié que la rencontre va permettre de s’inspirer de la Révolution chinoise pour développer le Burkina engagé dans la Révolution progressiste populaire ( RPP). Le représentant du ministre chargé de la Culture, Jean-Noël Bonkoungou : « nous invitons les étudiants qui vont en Chine, à revenir mettre leurs expertises au développement du Burkina Faso ». \" data-large-file=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?fit=696%2C573&ssl=1\" class=\"size-medium wp-image-174927\" src=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=300%2C247&ssl=1\" alt=\"\" width=\"300\" height=\"247\" srcset=\"https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=300%2C247&ssl=1 300w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=1024%2C843&ssl=1 1024w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=768%2C632&ssl=1 768w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=1536%2C1265&ssl=1 1536w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=510%2C420&ssl=1 510w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=150%2C124&ssl=1 150w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=696%2C573&ssl=1 696w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?resize=1068%2C879&ssl=1 1068w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?w=1575&ssl=1 1575w, https://i0.wp.com/www.sidwaya.info/wp-content/uploads/2026/11/1-30.jpeg?w=1392&ssl=1 1392w\" sizes=\"(max-width: 300px) 100vw, 300px\" /> Le représentant du ministre chargé de la Culture, Jean-Noël Bonkoungou : « nous invitons les étudiants qui vont en Chine, à revenir mettre leurs expertises au développement du Burkina Faso ». L’ambassadeur de la République populaire de Chine au Burkina Faso, Zhao Deyong, parrain de l’édition, a indiqué que l’objectif du forum est de promouvoir l’amitié entre les deux nations et rapprocher les cultures des deux peuples. « En renforçant la compréhension mutuelle entre les peuples, nous consolidons les fondements de notre coopération, élargissons le soutien de l’opinion publique et donnons un nouveau nouvel élan », a-t-il appuyé. Zhao Deyong a précisé que courant l’année 2026, l’ambassade a mené plusieurs activités dans les domaines humain et culturel avec le gouvernement et les associations burkinabè. Le représentant du ministre chargé de la Culture, Jean-Noël Bonkoungou, a noté que le Burkina et la Chine sont des dépositaires des patrimoines d’une grande richesse et de traditions ancestrales. Promouvoir la connaissance mutuelle Il a poursuivi que les échanges artistiques, universitaires, touristiques et humains constituent autant de leviers susceptibles de rapprocher les populations et d’ouvrir à la coopération des horizons nouveaux. « Dans le contexte de la Révolution populaire progressiste, il nous appartient de magnifier notre identité, nos savoir-faire et notre patrimoine sans pour autant nous fermer aux expériences fécondes de nos partenaires », a-t-il souligné. Jean-Noel Bonkoungou a invité la jeunesse burkinabè à apprendre, entreprendre, jeter des passerelles et porter haut la culture burkinabè au-delà des frontières du pays de Hommes intègres. La représentante du ministre de la Sécurité, Benon Fatoumata Nana, a relevé que la coopération entre les deux nations doit se construire dans les universités, centres de formation et entreprises. En mettant en lumière la place de la jeunesse dans la dynamique, elle a invité les Burkinabè à promouvoir la connaissance mutuelle et contribuer à bâtir des relations solides entre les générations présentes et futures. Le recteur de l’Université libre du Burkina (ULB), Bapio Rosaire Bama, a souhaité que les échanges aboutissent à l’identification de pistes concrètes. Gbetcheni Constantin Bertrand KAMBIRE (Collaborateur )",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
-      "_sourceVerified": true,
+      "_sourceVerified": false,
       "_tags": [
         "economic",
         "diplomatic",
         "military",
-        "humanitarian",
         "political"
       ],
       "_majors": [],
@@ -1028,18 +1059,50 @@
       "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "T",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
+      "_relevance": "A",
       "_desk": "A1"
     },
     {
-      "title": "Mali : SUGU S.A. voit le jour pour sécuriser l’approvisionnement en produits essentiels",
-      "link": "https://burkina24.com/2026/11/26/mali-sugu-s-a-voit-le-jour-pour-securiser-lapprovisionnement-en-produits-essentiels/",
-      "pubDate": "2026-11-26T21:20:01.000Z",
-      "description": "Le Conseil national de Transition (CNT) du Mali a adopté, ce jeudi 26 novembre 2026, le projet de loi portant création de SUGU S.A., une société publique chargée de renforcer la maîtrise des achats stratégiques de l’État et de sécuriser l’approvisionnement du pays en produits et services essentiels, rapporte mali web Réunis en séance plénière … The post Mali : SUGU S.A. voit le jour pour sécuriser l’approvisionnement en produits essentiels appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
+      "title": "Lutte contre la menace sanitaire: les ministres de la Santé mutualisent leurs visions",
+      "link": "https://www.sidwaya.info/2026/11/27/lutte-contre-la-menace-sanitaire-les-ministres-de-la-sante-mutualisent-leurs-visions/",
+      "pubDate": "2026-11-27T05:57:31.000Z",
+      "description": "En marge de la IIe édition du salon international des professionnels de santé et de l’intégration des soins, les ministres de la Santé de la confédération des Etats du Sahel ont animé un panel sur le thème : « Menace de santé dans l’espace AES : quelle priorité pour un programme d’action humain », jeudi 26 novembre 2026, à Ouagadougou. Les défis sanitaires au sein de la Confédération des Etats du Sahel (AES) sont similaires, car, ces trois pays partagent un même espace géographique, épidémiologique et sécuritaire. Cette affirmation a fait l’unanimité des ministres en charge de la Santé du Burkina Faso, Robert Lucien Jean- Claude Kargougou, du Mali, médecin-col major Assa Badiallo Touré et du Niger, médecin-colonel-major Garba Hakimi, lors d’un panel animé, jeudi 26 novembre 2026, à Ouagadougou. Placée sur le thème : « Menace de santé dans l’espace AES : quelle priorité pour un programme d’action humain », cette tribune a permis aux différents ministres de relever la nécessité pour les trois Etats de mutualiser les forces pour y faire face. Selon ministre Kargougou, les principales menaces sanitaires dans l'espèce AES sont les maladies à potentiel épidémique comme la rougeole, la fièvre jaune, le choléra, la méningite etc. « Nous avons une grosse épidémie qui sévit en Afrique. Fort heureusement, jusque-là, l'espace confédéral est exempte de tout cas de maladie à virus Ebola », a-t-il souligné. Pour Robert Lucien Jean-Claude Kargougou, le plus important est que les Etats puissent mutualiser leurs forces en termes de gouvernance, de coordination, de renforcement de la surveillance aux différents points d'entrée… Des axes prioritaires Il a signalé que la tenue de la réunion des ministres de la Santé de l’AES a permis d’adopter des livrables, dont le plan confédéral 2027-2031 de la surveillance intérieure de la maladie et la réponse. Parmi les axes prioritaires dans le domaine sanitaire à privilégier, la ministre malienne de la Santé a évoqué la surveillance épidémiologique intégrée des trois pays, la régulation en pharmacie et l’achat groupé des médicaments. Elle a signifié que dans l’espace confédéral, 90% de tous les produits sont achetés et viennent de l’extérieur. « Il faut qu'on se mette ensemble. Cela va faciliter la prise en charge de nos populations », a souligné le médecin-colonel Touré. Le ministre nigérien de la Santé a confié qu’une fois que les livrables approuvés par les chefs d’Etat, les ministères vont se charger de l’exécution. « La circulation et l'approvisionnement des médicaments ne vont plus poser de problème au niveau de notre espace AES », a-t-il notifié. Aly SAWADOGO",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "H",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Coopération pénitentiaire africaine : le Premier ministre appelle à renforcer les partenariats",
+      "link": "https://www.sidwaya.info/2026/11/27/cooperation-penitentiaire-africaine-le-premier-ministre-appelle-a-renforcer-les-partenariats/",
+      "pubDate": "2026-11-27T05:48:48.000Z",
+      "description": "Le Premier ministre, chef du gouvernement, le camarade Rimtalba Jean Emmanuel Ouédraogo, a reçu en audience, ce jeudi 26 novembre 2026 à Ouagadougou, une délégation de responsables des administrations pénitentiaires africaines. Conduite par Makgothi Samuel Thobakgale, directeur général des services pénitentiaires de l’Afrique du Sud et président de l’Association des services correctionnels africains (ACSA), cette délégation séjourne dans la capitale burkinabè dans le cadre de la cinquième édition de l’Atelier sur les infrastructures pénitentiaires en Afrique (AIPA), qui se tient du 23 au 27 novembre 2026. Placée sur le thème « Architecture pénitentiaire africaine : concevoir des infrastructures plus humaines et adaptées aux réalités locales au service de la réinsertion sociale », cette édition réunit des représentants de plusieurs administrations pénitentiaires du continent autour des enjeux de conception, de gestion et d’amélioration des établissements pénitentiaires. Le Premier ministre a encouragé les responsables pénitentiaires à poursuivre leur dynamique de coopération, à renforcer les partenariats avec des organisations comme le Comité international de la Croix-Rouge (CICR) et à consolider les acquis en matière de gestion pénitentiaire. L’objectif, a-t-il souligné, est de bâtir des services pénitentiaires davantage adaptés aux besoins des personnes détenues et aux exigences de réinsertion sociale. A l’issue de l’audience, Makgothi Samuel Thobakgale a souligné la volonté des administrations pénitentiaires africaines de renforcer leur concertation pour apporter des réponses communes aux défis liés aux infrastructures carcérales. « L’objectif de cette rencontre était aussi de traduire combien les services pénitentiaires travaillent ensemble pour trouver des solutions concertées qui pourront amener les infrastructures pénitentiaires à répondre aux besoins, aux objectifs de réhabilitation et de traitement humain des personnes détenues », a-t-il expliqué. Le président de l’ACSA a salué le leadership des autorités burkinabè, notamment du Président du Faso, du Premier ministre, du ministre de la Justice et des responsables de l’administration pénitentiaire. Il leur a exprimé sa reconnaissance pour leur engagement en faveur de la moder- nisation du système pénitentiaire, de l’amélioration des conditions de détention et de la réinsertion sociale. Il a également mis en avant le caractère pratique de l’atelier, marqué par des visites d’établissements pénitentiaires. Ces visites ont permis aux participants de découvrir des expériences concrètes, d’identifier des solutions innovantes et de partager des pratiques susceptibles d’être adaptées aux réalités de leurs pays respectifs. Organisé par la Direction générale de l’administration pénitentiaire du Burkina Faso (DGAP), en partenariat avec le CICR et en collaboration avec l’ACSA, l’atelier constitue un cadre continental de partage d’expériences et de réflexion sur les politiques et les outils d’amélioration des infrastructures pénitentiaires. Depuis 2017, cet atelier se tient tous les deux ans dans différentes capitales africaines. Cette cinquième édition vise à promouvoir des modèles d’infrastructures adaptés aux réalités culturelles et climatiques du continent, conciliant respect des droits humains, efficacité opérationnelle, durabilité et valorisation des savoir-faire locaux. Les travaux portent également sur la réhabilitation des établissements existants et l’amélioration de leur maintenance. Les délégations participantes viennent notamment de l’Algérie, de l’Afrique du Sud, du Bénin, de la République centrafricaine, de la Côte d’Ivoire, de la Guinée, du Kenya, de Madagascar, du Mali, de la Mauritanie, du Maroc, du Niger, de la République démocratique du Congo, du Sénégal, du Tchad et du Togo. DCRP/Primature",
+      "_source": "Sidwaya",
+      "_sourceId": "rss_sidwaya",
       "_sourceCat": "bf_local",
       "_sourceBloc": "bf_local",
       "_sourceVerified": false,
@@ -1055,76 +1118,12 @@
       "_evidence": {
         "label": "Corrobore",
         "color": "#22c55e",
-        "rating": "C1"
+        "rating": "C2"
       },
-      "_rating": "C1",
+      "_rating": "C2",
       "_score": 115,
       "_zone": 1,
-      "_theme": "L",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Le PDG de Barrick International rencontre le Premier ministre malien lors de sa première visite depuis l’impasse",
-      "link": "https://burkina24.com/2026/11/26/le-pdg-de-barrick-international-rencontre-le-premier-ministre-malien-lors-de-sa-premiere-visite-depuis-limpasse/",
-      "pubDate": "2026-11-26T21:19:20.000Z",
-      "description": "Cette rencontre marque un moment important dans la relation entre Barrick Mining et le Mali, à la suite d’un long différend sur le partage des bénéfices, la fiscalité et le contrôle du plus grand complexe mineur aurifère du pays, Loulo-Gounkoto. Sebastiaan Bock, le nouveau PDG de Barrick International, a rencontré mercredi le Premier ministre malien … The post Le PDG de Barrick International rencontre le Premier ministre malien lors de sa première visite depuis l’impasse appeared first on Burkina24.com - Actualité du Burkina Faso 24h/24 .",
-      "_source": "Burkina24",
-      "_sourceId": "rss_burkina24",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C1"
-      },
-      "_rating": "C1",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "E",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Burkina Faso : Le Dr Amadou Dicko poursuit la mobilisation des éleveurs pour la vaccination animale dans le Djôrô",
-      "link": "https://faso7.com/2026/11/26/burkina-faso-le-dr-amadou-dicko-poursuit-la-mobilisation-des-eleveurs-pour-la-vaccination-animale-dans-le-djoro/",
-      "pubDate": "2026-11-26T20:15:59.000Z",
-      "description": "Après les régions du Nando et du Bankui, le ministre délégué chargé des Ressources animales, Dr Amadou Dicko, a poursuivi sa tournée de suivi de la campagne 2026-2027 de vaccination contre les maladies animales prioritaires et d’insémination artificielle dans le Djôrô, ce jeudi 26 novembre 2026. Dans la ville de Gaoua ainsi que dans les localités de Tantao et de Gomblora, la délégation ministérielle a pu apprécier l’état d’avancement des opérations et échanger directement avec les acteurs du monde de l’élevage. Dans le Djôrô, la campagne se poursuit avec une mobilisation des producteurs autour de deux principaux enjeux que sont la protection du cheptel contre les maladies animales et l’amélioration des performances grâce à l’insémination artificielle. Face aux éleveurs, le ministre a notamment insisté sur la nécessité de renforcer la vaccination, qu’il considère comme une condition essentielle à la réussite des efforts engagés dans le secteur. À Gaoua, les échanges ont ainsi porté sur l’importance de faire vacciner les animaux. Le Dr Amadou Dicko a appelé les éleveurs et l’ensemble des acteurs à adhérer pleinement à l’initiative afin de préserver la santé du cheptel et de donner une nouvelle dynamique à la production animale. « Actuellement, personne ne doit avoir de raison à ne pas vacciner ses animaux. Les prix ont été revus à la baisse, les agents sont disponibles et les produits aussi. Il est donc important que chacun fasse vacciner ses animaux pour qu’on puisse mener le combat ensemble », a-t-il lancé. « Le taux de vaccination est très satisfaisant », Moussa Ramdé Le ministre délégué a également rappelé les efforts financiers consentis par l’État pour soutenir la santé animale. Selon ses explications, environ deux milliards de F CFA ont été investis dans ce domaine. Un engagement qui, estime-t-il, doit s’accompagner d’une participation effective des producteurs pour garantir l’efficacité de la campagne. « Vous-même, vous savez que si tous les animaux ne sont pas vaccinés, tous nos efforts sont vains », a-t-il martelé. Du côté des services techniques, les premiers résultats sont jugés encourageants. Le directeur régional des Ressources animales et halieutiques du Djôrô, Moussa Ramdé, s’est réjoui de la dynamique observée sur le terrain. Selon lui, les actions engagées et l’implication des agents permettent d’enregistrer des avancées satisfaisantes. « Le taux de vaccination est très satisfaisant. Nous avons tout mis en œuvre et les collègues sont engagés pour que nous puissions atteindre les objectifs » , a-t-il indiqué. À travers cette étape dans le Djôrô, le ministre délégué poursuit ainsi son travail de proximité auprès des services techniques et des producteurs. Au-delà du bilan des opérations, cette tournée vise à maintenir la mobilisation autour de la campagne 2026-2027 et à lever les éventuelles difficultés rencontrées sur le terrain. L’ambition reste de parvenir à une couverture vaccinale suffisante pour mieux protéger le cheptel national, tout en encourageant l’adoption de l’insémination artificielle comme levier d’amélioration de la productivité animale. Faso7 L’article Burkina Faso : Le Dr Amadou Dicko poursuit la mobilisation des éleveurs pour la vaccination animale dans le Djôrô est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F1"
-      },
-      "_rating": "F1",
-      "_score": 115,
-      "_zone": 1,
-      "_theme": "C",
+      "_theme": "D",
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
@@ -1132,10 +1131,106 @@
   ],
   "alerts": [
     {
-      "title": "Bayelsa boat tragedy: One disaster too many",
-      "link": "https://punchng.com/bayelsa-boat-tragedy-one-disaster-too-many/?utm_source=rss.punchng.com&utm_medium=web",
-      "source": "Punch (Nigeria)",
-      "date": "2026-11-27T02:00:22.000Z",
+      "title": "Iraq conducts reconnaissance, inspection operation along border with Iran",
+      "link": "https://www.aa.com.tr/en/middle-east/iraq-conducts-reconnaissance-inspection-operation-along-border-with-iran/4140320",
+      "source": "Anadolu Agency (Turquie)",
+      "date": "2026-11-27T11:21:25.000Z",
+      "rating": "A2",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "title": "Budget de l'UE : fin du sommet européen sans accord trouvé",
+      "link": "https://www.france24.com/fr/vid%C3%A9o/20261127-budget-de-l-ue-fin-du-sommet-europ%C3%A9en-sans-accord-trouv%C3%A9",
+      "source": "France 24",
+      "date": "2026-11-27T11:19:12.000Z",
+      "rating": "C1",
+      "evidence": "Corrobore",
+      "level": "high",
+      "bf": false,
+      "majors": [
+        {
+          "type": "diplo_majeur",
+          "keyword": "sommet"
+        }
+      ]
+    },
+    {
+      "title": "Massacre de Shakahola au Kenya : le pasteur Paul Mackenzie encore condamné pour activités criminelles organisées",
+      "link": "https://www.jeuneafrique.com/1866074/politique/massacre-de-shakahola-au-kenya-le-pasteur-paul-mackenzie-encore-condamne-pour-activites-criminelles-organisees/",
+      "source": "Jeune Afrique",
+      "date": "2026-11-27T10:07:15.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "massacre"
+        }
+      ]
+    },
+    {
+      "title": "Génocide des Rohingya : Le président birman Min Aung Hlaing fait peu de cas du verdict de la CIJ",
+      "link": "https://www.lemonde.fr/international/article/2026/11/27/birmanie-le-dictateur-birman-min-aung-hlaing-fait-peu-de-cas-du-verdict-de-la-cij_6815834_3210.html",
+      "source": "Le Monde International",
+      "date": "2026-11-27T10:00:07.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "génocide"
+        }
+      ]
+    },
+    {
+      "title": "Mali : après l’arrivée de l’armée et d’Africa Corps, le Jnim menace Tonka de blocus",
+      "link": "https://www.jeuneafrique.com/1866054/politique/mali-apres-larrivee-de-larmee-et-dafrica-corps-le-jnim-menace-tonka-de-blocus/",
+      "source": "Jeune Afrique",
+      "date": "2026-11-27T09:19:50.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blocus"
+        }
+      ]
+    },
+    {
+      "title": "La Pologne plus divisée que jamais après le premier attentat majeur de son histoire récente",
+      "link": "https://www.lemonde.fr/idees/article/2026/11/27/la-pologne-plus-divisee-que-jamais-apres-le-premier-attentat-majeur-de-son-histoire-recente_6815822_3232.html",
+      "source": "Le Monde International",
+      "date": "2026-11-27T09:00:11.000Z",
+      "rating": "B2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "attentat majeur"
+        }
+      ]
+    },
+    {
+      "title": "Koulikoro : un incendie dans un dépôt d'ordures provoque la panique, sans faire de victimes",
+      "link": "https://malijet.com/les_faits_divers_au_mali/313001-koulikoro-un-incendie-dans-un-depot-dordures-provoque-la.html",
+      "source": "Malijet",
+      "date": "2026-11-27T08:54:21.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1143,7 +1238,39 @@
       "majors": [
         {
           "type": "crise",
-          "keyword": "disaster"
+          "keyword": "panique"
+        }
+      ]
+    },
+    {
+      "title": "Massacre de Thiaroye : le programme des commémorations du 82e anniversaire dévoilé",
+      "link": "https://lesoleil.sn/actualites/thiaroye-1944-2026-le-senegal-prepare-la-commemoration-du-82e-anniversaire-du-massacre/",
+      "source": "Le Soleil (Sénégal)",
+      "date": "2026-11-27T08:43:20.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "massacre"
+        }
+      ]
+    },
+    {
+      "title": "‘Will I get taller?’: Gaza’s children suffer stunting amid war, blockade",
+      "link": "https://www.aljazeera.com/features/2026/11/27/will-i-get-taller-gazas-children-suffer-stunting-amid-war-blockade?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-11-27T08:37:52.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
         }
       ]
     },
@@ -1152,7 +1279,7 @@
       "link": "https://www.al-monitor.com/originals/2026/11/iaea-working-russia-ukraine-ceasefire-repair-power-link-zaporizhzhia-nuclear",
       "source": "Al-Monitor",
       "date": "2026-11-27T00:46:27.000Z",
-      "rating": "F1",
+      "rating": "F2",
       "evidence": "Corrobore",
       "level": "high",
       "bf": false,
@@ -1178,116 +1305,20 @@
           "keyword": "massacre"
         }
       ]
-    },
-    {
-      "title": "IAEA in talks with Russia, Ukraine on ceasefire around ZNPP — Grossi",
-      "link": "https://tass.com/world/2225589",
-      "source": "TASS (Russie, EN)",
-      "date": "2026-11-26T22:19:35.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "‘Disaster’ unfolding as Sydney fire ant outbreak partly blamed on ignored biosecurity recommendations",
-      "link": "https://www.theguardian.com/australia-news/2026/nov/27/sydney-fire-ants-outbreak-biosecurity-experts-ignored",
-      "source": "The Guardian World",
-      "date": "2026-11-26T20:33:26.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "disaster"
-        }
-      ]
-    },
-    {
-      "title": "Net Migration to U.K. Falls to Lowest Level Since 1997, Excluding Pandemic",
-      "link": "https://www.nytimes.com/2026/11/26/world/europe/uk-net-migration-data.html",
-      "source": "NYT World",
-      "date": "2026-11-26T18:52:50.000Z",
-      "rating": "B2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "crise",
-          "keyword": "pandemic"
-        }
-      ]
-    },
-    {
-      "title": "«L’Europe se prépare à la guerre tout en exigeant un cessez-le-feu immédiat en Ukraine» : Lavrov dénonce les contradictions européennes",
-      "link": "https://rtenfrancais.tv/russie/140544-europe-se-prepare-a-la-guerre-tout-en-exigeant-un-cessez-le-feu-ukraine-affirme-lavrov-contradiction",
-      "source": "RT en français",
-      "date": "2026-11-26T17:25:32.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "cessez-le-feu"
-        }
-      ]
-    },
-    {
-      "title": "UEMOA : Wadagni tente de réunir les huit chefs d’État autour d’un sommet en 2027",
-      "link": "https://beninwebtv.com/uemoa-wadagni-sommet-2027-enjeux/",
-      "source": "Bénin Web TV",
-      "date": "2026-11-26T15:51:23.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "high",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "sommet"
-        }
-      ]
-    },
-    {
-      "title": "Génocide des Tutsi au Rwanda : en Belgique, faute de moyens, la justice laisse vieillir les dossiers et les suspects",
-      "link": "https://www.lemonde.fr/afrique/article/2026/11/26/genocide-des-tutsi-au-rwanda-en-belgique-faute-de-moyens-la-justice-laisse-vieillir-les-dossiers-et-les-suspects_6815545_3212.html",
-      "source": "Le Monde International",
-      "date": "2026-11-26T14:30:00.000Z",
-      "rating": "A2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "génocide"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      249
-    ],
-    [
-      "occident_fr",
-      112
+      213
     ],
     [
       "autre",
-      99
+      138
+    ],
+    [
+      "occident_fr",
+      126
     ],
     [
       "occident_us",
@@ -1295,27 +1326,27 @@
     ],
     [
       "golfe_mo",
-      56
-    ],
-    [
-      "turquie",
-      50
-    ],
-    [
-      "bf_local",
-      45
+      62
     ],
     [
       "russie",
-      44
-    ],
-    [
-      "sahel",
-      32
+      47
     ],
     [
       "chine",
-      20
+      35
+    ],
+    [
+      "bf_local",
+      34
+    ],
+    [
+      "turquie",
+      30
+    ],
+    [
+      "sahel",
+      22
     ]
   ],
   "desks": [
@@ -1323,52 +1354,52 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 133,
+      "count": 104,
       "top": [
         {
-          "title": "JOJ Dakar 2026 : quel bilan pour le Mali, le Burkina Faso et le Niger, quelles perspectives pour le sport de demain ? Deuxième partie",
-          "link": "https://www.studiotamani.org/210761-joj-dakar-2026-quel-bilan-pour-le-mali-le-burkina-faso-et-le-niger-quelles-perspectives-pour-le-sport-de-demain-deuxieme-partie",
-          "source": "Studio Tamani (Mali)",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "H",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Burkina : Publicitaires associés prépare les étudiants aux exigences du métier de publicitaire",
-          "link": "https://www.minute.bf/burkina-publicitaires-associes-prepare-les-etudiants-aux-exigences-du-metier-de-publicitaire/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F1"
-        },
-        {
-          "title": "Musique : Sina Kiénou fait dialoguer le Mandé et le rock sur l’album « Révolution Touma »",
-          "link": "https://www.minute.bf/musique-sina-kienou-fait-dialoguer-le-mande-et-le-rock-sur-lalbum-revolution-touma/",
-          "source": "Minute BF",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Burkina Faso : L’ONU salue les progrès réalisés dans les domaines sécuritaire, économique et diplomatique",
-          "link": "https://netafrique.net/burkina-faso-lonu-salue-les-progres-realises-dans-les-domaines-securitaire-economique-et-diplomatique/",
-          "source": "Net Afrique (BF)",
+          "title": "Thiaroye 1944-2026 : Quatorze pays mobilisés autour de la recherche historique",
+          "link": "https://lesoleil.sn/actualites/thiaroye-1944-2026-quatorze-pays-mobilises-autour-de-la-recherche-historique/",
+          "source": "Le Soleil (Sénégal)",
           "zone": "1. Sahel & AO franco.",
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Innovation et propriété intellectuelle : Dr Moïse Convolbo, un Burkinabè à l'origine d'une invention brevetée aux États-Unis, plaide pour 1 000 demandes de brevets par an au Burkina Faso",
-          "link": "https://lefaso.net/spip.php?article151069",
-          "source": "Lefaso.net",
+          "title": "Exposition itinérante « Les trésors du Liptako » : le ministre Pingdwendé Gilbert Ouédraogo ouvre le bal",
+          "link": "https://www.sidwaya.info/2026/11/27/exposition-itinerante-les-tresors-du-liptako-le-ministre-pingdwende-gilbert-ouedraogo-ouvre-le-bal/",
+          "source": "Sidwaya",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "C2"
+        },
+        {
+          "title": "Au Burkina Faso, comment l’« armée numérique » d’Ibrahim Traoré fait régner sa loi",
+          "link": "https://www.jeuneafrique.com/1865719/politique/au-burkina-faso-comment-l-armee-numerique-dibrahim-traore-fait-regner-sa-loi/",
+          "source": "Jeune Afrique",
           "zone": "1. Sahel & AO franco.",
           "theme": "T",
           "relevance": "L",
-          "rating": "C2"
+          "rating": "B2"
+        },
+        {
+          "title": "Mojtaba Faqihi : « Adieu au Burkina Faso, Terre d’Espoir »",
+          "link": "https://faso7.com/2026/11/27/mojtaba-faqihi-adieu-au-burkina-faso-terre-despoir/",
+          "source": "Faso7",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Burkina Faso seeks Nigeria’s partnership against terrorism, trafficking",
+          "link": "https://www.vanguardngr.com/2026/11/burkina-faso-seeks-nigerias-partnership-against-terrorism-trafficking/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1376,11 +1407,11 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 73,
+      "count": 64,
       "top": [
         {
-          "title": "2027: Opposition alliances ‘ll fail again, Fashola declares at APC Lagos rally",
-          "link": "https://www.vanguardngr.com/2026/11/2027-opposition-alliances-ll-fail-again-fashola-declares-at-apc-lagos-rally/",
+          "title": "From fuel subsidy return to Ajaokuta revival; Atiku’s 2027 promises so far",
+          "link": "https://www.vanguardngr.com/2026/11/from-fuel-subsidy-return-to-ajaokuta-revival-atikus-2027-promises-so-far/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1388,17 +1419,26 @@
           "rating": "F2"
         },
         {
-          "title": "Security chiefs hail IGP Disu for suspending declaration of Obaigbena, others wanted",
-          "link": "https://www.vanguardngr.com/2026/11/security-chiefs-hail-igp-disu-for-suspending-declaration-of-obaigbena-others-wanted/",
-          "source": "Vanguard (Nigeria)",
+          "title": "Forgotten Vigilantes: Sad tales of deceased, wounded Nigerian volunteer fighters (1)",
+          "link": "https://www.premiumtimesng.com/investigationspecial-reports/928327-forgotten-vigilantes-sad-tales-of-deceased-wounded-nigerian-volunteer-fighters-1.html",
+          "source": "Premium Times (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "World: UNHCR warns funding cuts are leaving refugee women and girls at greater risk of gender-based violence",
+          "link": "https://reliefweb.int/report/world/unhcr-warns-funding-cuts-are-leaving-refugee-women-and-girls-greater-risk-gender-based-violence",
+          "source": "ReliefWeb",
           "zone": "2. AO anglo. & côtière",
           "theme": "J",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "2027 Elections: INEC raises alarm, warns violence may hurt polls",
-          "link": "https://www.vanguardngr.com/2026/11/2027-elections-inec-raises-alarm-warns-violence-may-hurt-polls/",
+          "title": "Fashola says election riggers deserve jail, not death",
+          "link": "https://www.vanguardngr.com/2026/11/fashola-says-election-riggers-deserve-jail-not-death/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
@@ -1406,22 +1446,13 @@
           "rating": "F2"
         },
         {
-          "title": "Kitto violence: Majority of victims suffer in silence – ISHRAI warns",
-          "link": "https://www.vanguardngr.com/2026/11/kitto-violence-majority-of-victims-suffer-in-silence-ishrai-warns/",
-          "source": "Vanguard (Nigeria)",
+          "title": "CAITEC Group to expand into mining sector, explore new business opportunities over the next 5 years – Chairman",
+          "link": "https://www.myjoyonline.com/caitec-group-to-expand-into-mining-sector-explore-new-business-opportunities-over-the-next-5-years-chairman/",
+          "source": "MyJoyOnline (Ghana)",
           "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
+          "theme": null,
+          "relevance": ".",
           "rating": "F2"
-        },
-        {
-          "title": "How ISWAP uses drones, satellite technology to sustain insurgency in Lake Chad – Report",
-          "link": "https://www.premiumtimesng.com/news/top-news/928249-how-iswap-uses-drones-satellite-technology-to-sustain-insurgency-in-lake-chad-report.html",
-          "source": "Premium Times (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "A2"
         }
       ]
     },
@@ -1429,52 +1460,52 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 25,
+      "count": 31,
       "top": [
         {
-          "title": "Génocide des Tutsi au Rwanda : en Belgique, faute de moyens, la justice laisse vieillir les dossiers et les suspects",
-          "link": "https://www.lemonde.fr/afrique/article/2026/11/26/genocide-des-tutsi-au-rwanda-en-belgique-faute-de-moyens-la-justice-laisse-vieillir-les-dossiers-et-les-suspects_6815545_3212.html",
-          "source": "Le Monde International",
-          "zone": "4. Grands Lacs",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "A2"
-        },
-        {
-          "title": "RDC : contesté à l’UNC, Kamerhe en rupture avec la majorité ?",
-          "link": "https://www.jeuneafrique.com/1865501/politique/rdc-conteste-a-lunc-kamerhe-en-rupture-avec-la-majorite/",
-          "source": "Jeune Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": null,
-          "relevance": ".",
-          "rating": "B2"
-        },
-        {
-          "title": "DR Congo: Ebola disease survivors share their stories",
-          "link": "https://reliefweb.int/report/democratic-republic-congo/ebola-disease-survivors-share-their-stories",
+          "title": "World: El Niño crée de nouveaux foyers de faim tandis que les conflits continuent d’alimenter le risque de famine, alertent la FAO et le PAM",
+          "link": "https://reliefweb.int/report/world/el-nino-cree-de-nouveaux-foyers-de-faim-tandis-que-les-conflits-continuent-dalimenter-le-risque-de-famine-alertent-la-fao-et-le-pam",
           "source": "ReliefWeb",
-          "zone": "3. Afrique centrale",
-          "theme": "L",
+          "zone": "5. Corne de l’Afrique",
+          "theme": "H",
           "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Inga III, PPP, dette de la Snel… Les grands chantiers de la RDC pour sortir du délestage",
-          "link": "https://www.jeuneafrique.com/1865251/economie-entreprises/inga-iii-ppp-dette-de-la-snel-les-grands-chantiers-de-la-rdc-pour-sortir-du-delestage/",
-          "source": "Jeune Afrique",
-          "zone": "4. Grands Lacs",
-          "theme": "E",
+          "title": "DR Congo: Cluster Protection RDC : Points saillants de la situation de protection en République démocratique du Congo du mois d'octobre 2026",
+          "link": "https://reliefweb.int/report/democratic-republic-congo/cluster-protection-rdc-points-saillants-de-la-situation-de-protection-en-republique-democratique-du-congo-du-mois-doctobre-2026",
+          "source": "ReliefWeb",
+          "zone": "3. Afrique centrale",
+          "theme": "H",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F2"
         },
         {
-          "title": "Que gagne la RDC à rester membre de l’organisation internationale de la francophonie OIF ?",
-          "link": "https://www.radiookapi.net/2026/11/26/emissions/parole-aux-auditeurs/que-gagne-la-rdc-rester-membre-de-lorganisation",
+          "title": "DR Congo: RD Congo : une cinquantaine d’enfants et adultes vulnérables retrouvent leurs proches au bout de deux semaines de réunifications familiales complexes.",
+          "link": "https://reliefweb.int/report/democratic-republic-congo/rd-congo-une-cinquantaine-denfants-et-adultes-vulnerables-retrouvent-leurs-proches-au-bout-de-deux-semaines-de-reunifications-familiales-complexes",
+          "source": "ReliefWeb",
+          "zone": "4. Grands Lacs",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Législatives au Cameroun : le Pr Jean-Calvin Aba’a Oyono veut renverser le Rdpc dans le Dja et Lobo",
+          "link": "https://fr.journalducameroun.com/legislatives-au-cameroun-le-pr-jean-calvin-abaa-oyono-veut-renverser-le-rdpc-dans-le-dja-et-lobo/",
+          "source": "Journal du Cameroun",
+          "zone": "3. Afrique centrale",
+          "theme": "P",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "L’armée ougandaise annonce le retrait prochain de ses troupes de Lubero",
+          "link": "https://www.radiookapi.net/2026/11/27/actualite/securite/larmee-ougandaise-annonce-le-retrait-prochain-de-ses-troupes-de-lubero",
           "source": "Radio Okapi (RDC)",
           "zone": "4. Grands Lacs",
-          "theme": "D",
+          "theme": "S",
           "relevance": "A",
-          "rating": "A2"
+          "rating": "F1"
         }
       ]
     },
@@ -1482,52 +1513,52 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 35,
+      "count": 31,
       "top": [
         {
-          "title": "Classement FIFA : Le Maroc chute de la 5e à la 7e place après la décision du TAS",
-          "link": "https://burkina24.com/2026/11/26/classement-fifa-le-maroc-chute-de-la-5e-a-la-7e-place-apres-la-decision-du-tas/",
-          "source": "Burkina24",
+          "title": "Mali : Alger dénonce l’alliance du FLA avec les jihadistes du Jnim",
+          "link": "https://www.jeuneafrique.com/1866089/politique/mali-alger-denonce-lalliance-du-fla-avec-les-jihadistes-du-jnim/",
+          "source": "Jeune Afrique",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "C6"
+          "theme": "S",
+          "relevance": "A",
+          "rating": "B2"
         },
         {
-          "title": "FIFM : À Marrakech, le cinéma se vit aussi dans les regards du public",
-          "link": "https://fr.hespress.com/498083-fifm-a-marrakech-le-cinema-se-vit-aussi-dans-les-regards-du-public.html",
+          "title": "Pourquoi la baisse du chômage ne traduit pas une amélioration réelle de l'emploi au Maroc",
+          "link": "https://fr.hespress.com/497969-pourquoi-la-baisse-du-chomage-ne-traduit-pas-une-amelioration-reelle-de-lemploi-au-maroc.html",
           "source": "Hespress (Maroc, FR)",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "E",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "A2"
         },
         {
-          "title": "Mondial personnes de petite taille : le Maroc bat le Mexique et accède aux demi-finales",
-          "link": "https://fr.hespress.com/498074-mondial-personnes-de-petite-taille-le-maroc-bat-le-mexique-et-accede-aux-demi-finales.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Sahara occidental et fin de la Minurso : les mises au point d’Ahmed Attaf",
-          "link": "https://www.tsa-algerie.com/sahara-occidental-et-fin-de-la-minurso-les-mises-au-point-dahmed-attaf/",
-          "source": "TSA — Tout sur l'Algérie",
+          "title": "Coopération, partenariats, visites : rencontre avec trois artisans de la normalisation Maroc-Israël",
+          "link": "https://www.jeuneafrique.com/1865057/politique/cooperation-partenariats-visites-rencontre-avec-trois-artisans-de-la-normalisation-maroc-israel/",
+          "source": "Jeune Afrique",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "D",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "B2"
         },
         {
-          "title": "L’Algérie va-t-elle travailler avec l’extrême-droite au pouvoir en France ? La réponse d’Ahmed Attaf",
-          "link": "https://www.tsa-algerie.com/lalgerie-va-t-elle-travailler-avec-lextreme-droite-au-pouvoir-en-france-la-reponse-dahmed-attaf/",
+          "title": "« Les hommes d’El Fadjr » : l’initiative et la polémique franchissent les frontières algériennes",
+          "link": "https://www.tsa-algerie.com/les-hommes-del-fadjr-linitiative-et-la-polemique-franchissent-les-frontieres-algeriennes/",
           "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
-          "theme": "P",
+          "theme": "L",
           "relevance": "A",
-          "rating": "F1"
+          "rating": "A2"
+        },
+        {
+          "title": "De l’alerte préventive au danger grave : Voici les mécanismes du système d'alerte MA-INDAR",
+          "link": "https://fr.hespress.com/498111-de-lalerte-preventive-au-danger-grave-voici-les-mecanismes-du-systeme-dalerte-ma-indar.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "C",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1535,52 +1566,52 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 75,
+      "count": 51,
       "top": [
         {
-          "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
-          "link": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
-          "source": "BBC World",
+          "title": "COP31 : WASCAL porte la voix de la science climatique africaine",
+          "link": "https://www.sidwaya.info/2026/11/27/cop31-wascal-porte-la-voix-de-la-science-climatique-africaine/",
+          "source": "Sidwaya",
+          "zone": "8. Moyen-Orient",
+          "theme": "C",
+          "relevance": "L",
+          "rating": "C2"
+        },
+        {
+          "title": "Iraq conducts reconnaissance, inspection operation along border with Iran",
+          "link": "https://www.aa.com.tr/en/middle-east/iraq-conducts-reconnaissance-inspection-operation-along-border-with-iran/4140320",
+          "source": "Anadolu Agency (Turquie)",
+          "zone": "8. Moyen-Orient",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "US Faces Delays Extending Service Life of Tomahawk Missiles - Documents",
+          "link": "https://sputnikglobe.com/20261127/us-faces-delays-extending-service-life-of-tomahawk-missiles---documents-1125150411.html",
+          "source": "RIA Novosti (EN)",
+          "zone": "8. Moyen-Orient",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Israel strikes Hamas leader Khalil al-Hayya's last surviving son in Gaza City - report",
+          "link": "https://www.jpost.com/middle-east/article-916319",
+          "source": "Jerusalem Post",
           "zone": "8. Moyen-Orient",
           "theme": null,
           "relevance": ".",
-          "rating": "B1"
-        },
-        {
-          "title": "Au Koweït, deux techniciens italiens tués par des drones iraniens ; Téhéran nie être à l’origine de l’attaque",
-          "link": "https://www.lemonde.fr/international/article/2026/11/26/deux-italiens-tues-par-des-drones-iraniens-au-koweit_6815554_3210.html",
-          "source": "Le Monde International",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "B1"
-        },
-        {
-          "title": "Tribunal upholds decision to ban two Iran-linked figures from UK charities",
-          "link": "https://www.ft.com/content/fb39f67c-cdd4-4322-895f-e069c95a6166?syn-25a6b1a6=1",
-          "source": "Financial Times World",
-          "zone": "8. Moyen-Orient",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "B2"
-        },
-        {
-          "title": "WATCH: IDF strikes dozens of Hezbollah rockets, launchers at Radwan Force training camp in Lebanon",
-          "link": "https://www.jpost.com/israel-news/defense-news/article-916285",
-          "source": "Jerusalem Post",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Two Italians killed in drone strike on Kuwait",
-          "link": "https://www.ft.com/content/e5f3128d-5f8b-416c-90d1-2549175cb091?syn-25a6b1a6=1",
-          "source": "Financial Times World",
+          "title": "Makkah Defence Alliance meeting in Islamabad begins with Yemen conflict also on agenda",
+          "link": "https://www.dawn.com/news/2047415/makkah-defence-alliance-meeting-in-islamabad-begins-with-yemen-conflict-also-on-agenda",
+          "source": "Dawn (Pakistan)",
           "zone": "8. Moyen-Orient",
-          "theme": "S",
+          "theme": "D",
           "relevance": "A",
-          "rating": "B1"
+          "rating": "F2"
         }
       ]
     },
@@ -1588,52 +1619,52 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 170,
+      "count": 175,
       "top": [
         {
-          "title": "World: From forecasts to action: strengthening Africa's response to El Niño",
-          "link": "https://reliefweb.int/report/world/forecasts-action-strengthening-africas-response-el-nino",
+          "title": "World: Hunger Hotspots FAO-WFP early warnings on acute food insecurity December 2026 to May 2027 outlook",
+          "link": "https://reliefweb.int/report/world/hunger-hotspots-fao-wfp-early-warnings-acute-food-insecurity-december-2026-may-2027-outlook",
           "source": "ReliefWeb",
           "zone": "6. Afrique australe",
-          "theme": "C",
+          "theme": "H",
           "relevance": "L",
           "rating": "F2"
         },
         {
-          "title": "Mozambique Conflict Monitor: Almost 10 years into the insurgency, ISM threatens to expand",
-          "link": "https://reliefweb.int/report/mozambique/mozambique-conflict-monitor-almost-10-years-insurgency-ism-threatens-expand",
-          "source": "ReliefWeb",
-          "zone": "6. Afrique australe",
-          "theme": "S",
-          "relevance": "L",
-          "rating": "F2"
-        },
-        {
-          "title": "EN DIRECT, guerre en Ukraine : Kiev n’a « aucune intention d’étendre la guerre à la Libye », assure le chef de la diplomatie ukrainienne",
-          "link": "https://www.lemonde.fr/international/live/2026/11/27/en-direct-guerre-en-ukraine-kiev-n-a-aucune-intention-d-etendre-la-guerre-a-la-libye-assure-le-chef-de-la-diplomatie-ukrainienne_6814183_3210.html",
-          "source": "Le Monde International",
-          "zone": "10. Europe orient. & Balkans",
+          "title": "Budget de l'UE : fin du sommet européen sans accord trouvé",
+          "link": "https://www.france24.com/fr/vid%C3%A9o/20261127-budget-de-l-ue-fin-du-sommet-europ%C3%A9en-sans-accord-trouv%C3%A9",
+          "source": "France 24",
+          "zone": "9. Europe occidentale",
           "theme": "D",
           "relevance": "A",
-          "rating": "B1"
+          "rating": "C1"
         },
         {
-          "title": "Bukele assoit sa popularité en Haïti",
-          "link": "https://www.france24.com/fr/%C3%A9missions/questions-directes/20261126-bukele-assoit-sa-popularit%C3%A9-en-ha%C3%AFti",
-          "source": "France 24",
-          "zone": "17. Amérique C. & Caraïbes",
-          "theme": "S",
-          "relevance": ".",
-          "rating": "A2"
+          "title": "Génocide des Rohingya : Le président birman Min Aung Hlaing fait peu de cas du verdict de la CIJ",
+          "link": "https://www.lemonde.fr/international/article/2026/11/27/birmanie-le-dictateur-birman-min-aung-hlaing-fait-peu-de-cas-du-verdict-de-la-cij_6815834_3210.html",
+          "source": "Le Monde International",
+          "zone": "13. Asie du Sud-Est",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "B2"
         },
         {
-          "title": "L’Ukraine a détruit pour la première fois un drone à réaction avec une arme laser",
-          "link": "https://legrandcontinent.eu/fr/2026/11/26/lukraine-a-detruit-pour-la-premiere-fois-un-drone-a-reaction-avec-une-arme-laser/",
+          "title": "Plus d’un an après l’imposition de sanctions, les États-Unis concluent un accord pour les actifs de Lukoil",
+          "link": "https://legrandcontinent.eu/fr/2026/11/27/plus-dun-an-apres-limposition-de-sanctions-les-etats-unis-concluent-un-accord-pour-les-actifs-de-lukoil/",
           "source": "Le Grand Continent",
-          "zone": "10. Europe orient. & Balkans",
-          "theme": "S",
+          "zone": "16. Amérique du Nord",
+          "theme": "D",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Qu’est-ce que l’altruisme efficace ?",
+          "link": "https://legrandcontinent.eu/fr/2026/11/27/quest-ce-que-laltruisme-efficace/",
+          "source": "Le Grand Continent",
+          "zone": "16. Amérique du Nord",
+          "theme": "E",
+          "relevance": "A",
+          "rating": "A3"
         }
       ]
     }
@@ -1651,42 +1682,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-11-27T01:43:03.377Z",
+      "at": "2026-11-27T12:18:11.201Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-11-27T01:43:03.383Z",
+      "at": "2026-11-27T12:18:11.209Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-11-27T01:43:31.046Z",
+      "at": "2026-11-27T12:18:36.327Z",
       "agent": "Agent Collecte RSS",
-      "message": "105/170 flux OK, 1949 articles"
+      "message": "99/170 flux OK, 1864 articles"
     },
     {
-      "at": "2026-11-27T01:43:33.771Z",
+      "at": "2026-11-27T12:18:39.268Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-11-27T01:43:34.058Z",
+      "at": "2026-11-27T12:18:39.572Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-11-27T01:43:34.063Z",
+      "at": "2026-11-27T12:18:39.577Z",
       "agent": "Agent Brief BF/AES",
-      "message": "8 developpements, 9 alertes"
+      "message": "8 developpements, 11 alertes"
     },
     {
-      "at": "2026-11-27T01:43:34.063Z",
+      "at": "2026-11-27T12:18:39.577Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-11-27T01:43:34.063Z",
+      "at": "2026-11-27T12:18:39.577Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
