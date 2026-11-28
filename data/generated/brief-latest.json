@@ -1,17 +1,12 @@
 {
-  "generatedAt": "2026-11-27T23:27:21.977Z",
+  "generatedAt": "2026-11-28T07:47:47.950Z",
   "windowHours": 24,
   "sourceHealth": {
     "total": 170,
-    "ok": 105,
-    "failed": 65,
-    "articles": 1937,
+    "ok": 100,
+    "failed": 70,
+    "articles": 1826,
     "okSources": [
-      {
-        "id": "rss_lefaso",
-        "name": "Lefaso.net",
-        "count": 30
-      },
       {
         "id": "rss_burkina24",
         "name": "Burkina24",
@@ -53,11 +48,6 @@
         "count": 10
       },
       {
-        "id": "rss_observ_bf",
-        "name": "L'Observateur Paalga",
-        "count": 0
-      },
-      {
         "id": "rss_minute_bf",
         "name": "Minute BF",
         "count": 10
@@ -93,11 +83,6 @@
         "count": 10
       },
       {
-        "id": "rss_sahara_med",
-        "name": "Sahara Médias",
-        "count": 10
-      },
-      {
         "id": "rss_linfodrome",
         "name": "Linfodrome (CI)",
         "count": 0
@@ -111,11 +96,6 @@
         "id": "rss_myjoyonline",
         "name": "MyJoyOnline (Ghana)",
         "count": 30
-      },
-      {
-        "id": "rss_citi",
-        "name": "Citi Newsroom (Ghana)",
-        "count": 0
       },
       {
         "id": "rss_beninwebtv",
@@ -225,11 +205,6 @@
       {
         "id": "rss_wathi",
         "name": "WATHI — Think tank ouest-africain",
-        "count": 10
-      },
-      {
-        "id": "rss_ipss",
-        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
         "count": 10
       },
       {
@@ -380,7 +355,7 @@
       {
         "id": "rss_bbc",
         "name": "BBC World",
-        "count": 22
+        "count": 21
       },
       {
         "id": "rss_bbc_africa",
@@ -510,17 +485,17 @@
       {
         "id": "rss_reliefweb",
         "name": "ReliefWeb",
-        "count": 20
+        "count": 0
       },
       {
         "id": "rss_reliefweb_burkina",
         "name": "ReliefWeb — Burkina Faso",
-        "count": 20
+        "count": 0
       },
       {
         "id": "rss_reliefweb_mali",
         "name": "ReliefWeb — Mali",
-        "count": 20
+        "count": 0
       },
       {
         "id": "rss_hrw",
@@ -535,6 +510,11 @@
     ],
     "failedSources": [
       {
+        "id": "rss_lefaso",
+        "name": "Lefaso.net",
+        "error": "HTTP 415"
+      },
+      {
         "id": "rss_aib",
         "name": "AIB — Agence Information BF",
         "error": "HTTP 404"
@@ -543,6 +523,11 @@
         "id": "rss_omega",
         "name": "Radio Omega Burkina",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_observ_bf",
+        "name": "L'Observateur Paalga",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_bf24",
@@ -587,12 +572,17 @@
       {
         "id": "rss_cridem",
         "name": "Cridem (Mauritanie)",
-        "error": "HTTP 404"
+        "error": "This operation was aborted"
       },
       {
         "id": "rss_alakhbar",
         "name": "Alakhbar Info (Mauritanie)",
         "error": "fetch failed"
+      },
+      {
+        "id": "rss_sahara_med",
+        "name": "Sahara Médias",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_abidjan",
@@ -628,6 +618,11 @@
         "id": "rss_ghanaweb",
         "name": "GhanaWeb",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_citi",
+        "name": "Citi Newsroom (Ghana)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_lanation_bj",
@@ -677,7 +672,7 @@
       {
         "id": "rss_news24",
         "name": "News24 (Afrique du Sud)",
-        "error": "fetch failed"
+        "error": "HTTP 403"
       },
       {
         "id": "rss_dailymav",
@@ -687,7 +682,7 @@
       {
         "id": "rss_elwatan",
         "name": "El Watan (Algérie)",
-        "error": "fetch failed"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_le360",
@@ -707,7 +702,7 @@
       {
         "id": "rss_acled",
         "name": "ACLED — Armed Conflict Location & Event Data",
-        "error": "HTTP 404"
+        "error": "HTTP 415"
       },
       {
         "id": "rss_moibrahim",
@@ -723,6 +718,11 @@
         "id": "rss_kas_africa",
         "name": "KAS — Konrad Adenauer Africa",
         "error": "HTTP 404"
+      },
+      {
+        "id": "rss_ipss",
+        "name": "IPSS — Institute for Peace and Security (Addis-Abeba)",
+        "error": "HTTP 415"
       },
       {
         "id": "rss_friedrich",
@@ -863,10 +863,10 @@
   },
   "stats": {
     "articles": 800,
-    "bfAes": 66,
+    "bfAes": 53,
     "alerts": 15,
     "criticalAlerts": 11,
-    "sourcesDistinct": 75
+    "sourcesDistinct": 67
   },
   "topDevelopments": [
     {
@@ -937,73 +937,6 @@
       "_desk": "A1"
     },
     {
-      "title": "Ouagadougou : Les ministres de la Santé de l’AES assistent au « faux départ » et reçoivent les bénédictions du Moogho Naaba",
-      "link": "https://faso7.com/2026/11/27/ouagadougou-les-ministres-de-la-sante-de-laes-assistent-au-faux-depart-et-recoivent-les-benedictions-du-moogho-naaba/",
-      "pubDate": "2026-11-27T13:37:47.000Z",
-      "description": "Dans le cadre de la réunion de validation de trois stratégies communes pour renforcer la coopération sanitaire, les ministres de la Santé des pays de l’Alliance des États du Sahel (AES) ont rendu visite à Sa Majesté le Moogho Naaba Baongo, ce 27 novembre 2026, à Ouagadougou. À cette occasion, ils ont assisté à la traditionnelle cérémonie du « faux départ » du Moogho Naaba. Cette tradition se tient chaque vendredi au sein du palais du roi. Les ministres de la Santé du Mali, du Niger et du Burkina Faso ont découvert chaque étape de cette cérémonie ancestrale. À l’arrière-cour du palais, tous les ministres et les notables du roi sont réunis. Un premier coup de canon annonce la sortie du Moogho Naaba Baongo. Il est vêtu de rouge, signe de son départ imminent pour la guerre. Selon les récits, il serait prêt à aller en guerre pour récupérer son fétiche qui a été volé et emporté chez les Yadcé. Tour à tour, les ministres et les notables plaident auprès du roi pour qu’il renonce à son idée. Quelques instants plus tard, il rentre dans son palais et ressort vêtu de blanc pour montrer qu’il a adhéré à la requête de ses sujets. Il privilégie ainsi l’intérêt du peuple au détriment du sien. « On en ressort réconforté et ravi d’avoir vu le roi, Sa Majesté le Moogho Naaba et toute sa cour », s’est réjouie le médecin colonel-major Assa Badiallo Touré, ministre de la Santé et du Développement social du Mali. À l’issue de la cérémonie, Sa Majesté le Moogho Naaba a reçu les trois ministres de la Santé en audience. Le ministre de la Santé burkinabè, Dr Jean-Claude Kargougou, lui a rappelé le contexte de la réunion qui a abouti à la signature de trois documents stratégiques pour renforcer la coopération et bâtir une souveraineté sanitaire au sein de l’espace confédéral. À travers le Larlé Naaba, le Moogho Naaba a exprimé sa satisfaction face aux actions conjointes des pays de l’AES pour améliorer la santé des populations. Il leur a souhaité plein succès en les assurant de sa bénédiction. Cheick Habib Désiré BAYILI Faso7 L’article Ouagadougou : Les ministres de la Santé de l’AES assistent au « faux départ » et reçoivent les bénédictions du Moogho Naaba est apparu en premier sur Faso7 .",
-      "_source": "Faso7",
-      "_sourceId": "rss_faso7",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "humanitarian",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "D",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "L’AES se dotent d’un cadre commun de coopération dans le Numérique et les Postes",
-      "link": "https://www.wakatsera.com/laes-se-dotent-dun-cadre-commun-de-cooperation-dans-le-numerique-et-les-postes/",
-      "pubDate": "2026-11-27T12:52:40.000Z",
-      "description": "Les ministres chargés du numérique et des postes du Burkina Faso, du Mali et du Niger ont tenu, le vendredi 27 novembre 2026 à Ouagadougou, une session ministérielle consacrée à la validation du projet de convention-cadre de coopération entre les pays de l’AES dans les domaines du numérique et des postes en marge de la de la 21ème semaine du numérique. À la suite des présentations du projet, les trois pays ont procédé à la signature de la Convention-cadre de coopération entre les États confédérés dans les domaines du numérique et des postes. Ce document établit les bases d'une coopération structurée autour de la souveraineté numérique, de la mutualisation des ressources et du développement d'un espace numérique et postal confédéral intégré. La Convention-cadre définit plusieurs axes de collaboration. Ils concernent notamment l’interconnexion et le partage des infrastructures numériques, la connectivité, la cybersécurité, l’administration électronique, l’intelligence artificielle, l’innovation technologique et la formation. Le volet postal prévoit, entre autres, la modernisation et l’interconnexion des réseaux nationaux, l’amélioration des services transfrontaliers, le développement des services financiers postaux et du commerce électronique. Il intègre également le déploiement de la plateforme de transfert d’argent PosTransfer et l’émission conjointe de timbres-poste commémoratifs AES. Pour assurer le suivi de ces engagements, les trois États ont prévu la mise en place d’un Comité technique de coopération numérique et postale AES. Celui-ci sera chargé de préparer les projets, de proposer les conventions d’application et de suivre leur mise en œuvre. Pour le ministre burkinabè en charge de la Transition digitale, Dr Aminata ZERBO/SABANE, cette coopération doit permettre aux trois États de « mutualiser leurs efforts, leurs synergies et leurs intelligences » afin d'accélérer leur transformation numérique et de renforcer leur souveraineté. Elle a particulièrement insisté sur la nécessité de passer des engagements aux réalisations concrètes : « On veut une union agissante, pas une union de discours. » Un appel à l'action adressé aux équipes techniques pour assurer un suivi rigoureux et produire des résultats tangibles au profit des populations. Ses homologues Malien et Nigérien ont également salué cette dynamique commune, soulignant l'importance de dépasser les frontières pour mieux valoriser les complémentarités entre les trois pays. Le Burkina Faso, le Mali et le Niger posent les bases d’une action concertée pour mieux maîtriser leurs infrastructures stratégiques, partager leurs compétences et développer des services numériques et postaux au bénéfice de leurs populations. La coopération numérique et postale devient ainsi un chantier commun au service de la souveraineté des États de la Confédération des États du Sahel. DCRP/MTDPCE L’article L'AES se dotent d’un cadre commun de coopération dans le Numérique et les Postes est apparu en premier sur Wakat Séra .",
-      "_source": "Wakat Séra",
-      "_sourceId": "rss_wakatsera",
-      "_sourceCat": "bf_local",
-      "_sourceBloc": "bf_local",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "diplomatic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "C2"
-      },
-      "_rating": "C2",
-      "_score": 127,
-      "_zone": 1,
-      "_theme": "T",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "L",
-      "_desk": "A1"
-    },
-    {
       "title": "Dédougou : La deuxième édition du Grand meeting des sports traditionnels voit le jour",
       "link": "https://www.sidwaya.info/2026/11/27/dedougou-la-deuxieme-edition-du-grand-meeting-des-sports-traditionnels-voit-le-jour/",
       "pubDate": "2026-11-27T17:04:28.000Z",
@@ -1029,38 +962,6 @@
       },
       "_rating": "A2",
       "_score": 123,
-      "_zone": 1,
-      "_theme": "P",
-      "_zoneShort": "1. Sahel & AO franco.",
-      "_relevance": "A",
-      "_desk": "A1"
-    },
-    {
-      "title": "Faux, cette déclaration n’est pas du président de la Transition",
-      "link": "https://www.studiotamani.org/210802-faux-cette-declaration-nest-pas-du-president-de-la-transition",
-      "pubDate": "2026-11-27T14:24:50.000Z",
-      "description": "Une video largement relayee sur TikTok attribue au president de la Transition, le general d'armee Assimi Go&iuml;ta, des propos demandant a son homologue ivoirien, Alassane Ouattara, de recuperer les ressortissants ivoiriens presents au Mali. Si les images sont authentiques, la bande sonore, elle, a ete modifiee. Sur TikTok, la sequence montre Assimi Go&iuml;ta en tenue militaire, devant un micro. Une voix accompagnee de sous-titres lui prete cette declaration : &laquo; Alassane, arrange-toi pour venir chercher les Ivoiriens qui sont ici &raquo;. Dans les commentaires, plusieurs internautes semblent prendre ces propos pour une veritable declaration du chef de l'etat malien. Pourtant, la video est trompeuse. Des images authentiques, mais une voix modifiee Une recherche d'image inversee a permis de retrouver la sequence originale, datee du 22 septembre 2026. La comparaison des deux videos montre que les propos attribues a Assimi Go&iuml;ta ne correspondent pas a son intervention initiale. La bande sonore presente egalement une difference de voix. Cette manipulation est aussi relevee par l'Agence ivoirienne de presse. Selon sa verification, les images diffusees sont authentiques, mais la bande sonore a ete modifiee. Autrement dit, une veritable sequence du president malien a ete utilisee pour lui faire tenir des propos qu'il n'a pas prononces dans l'intervention originale. D'autres videos similaires sur le meme compte Un autre element merite l'attention. Le compte a l'origine de la publication diffuse egalement des videos similaires attribuant de fausses declarations au president de la Transition burkinabe, le capitaine Ibrahim Traore. Certaines de ces sequences cumulent des centaines de milliers de vues. Ces publications montrent comment des images reelles peuvent etre detournees par une modification de leur bande sonore pour faire croire a de fausses declarations. Avant de croire ou de partager une video, il est donc important de verifier sa source, de rechercher sa version originale et de comparer les elements sonores. L'historique du compte qui la publie peut egalement fournir des indices utiles. Lire aussi : une video manipulee attribue de faux propos a Assimi Go&iuml;ta sur les orpailleurs expulses de Guinee L’article Faux, cette déclaration n’est pas du président de la Transition est apparu en premier sur Studio Tamani - Informations, débats, magazines : toute l’actualité du Mali, en 5 langues .",
-      "_source": "Studio Tamani (Mali)",
-      "_sourceId": "rss_studio_tam",
-      "_sourceCat": "sahel",
-      "_sourceBloc": "sahel",
-      "_sourceVerified": false,
-      "_tags": [
-        "economic",
-        "military",
-        "political"
-      ],
-      "_majors": [],
-      "_bf": true,
-      "_aes": true,
-      "_agentGenerated": true,
-      "_evidence": {
-        "label": "Corrobore",
-        "color": "#22c55e",
-        "rating": "F2"
-      },
-      "_rating": "F2",
-      "_score": 119,
       "_zone": 1,
       "_theme": "P",
       "_zoneShort": "1. Sahel & AO franco.",
@@ -1131,14 +1032,126 @@
       "_zoneShort": "1. Sahel & AO franco.",
       "_relevance": "A",
       "_desk": "A1"
+    },
+    {
+      "title": "Burkina Faso : Le gouvernement et l’ONU discutent de nouvelles opportunités d’emploi pour les jeunes",
+      "link": "https://netafrique.net/burkina-faso-le-gouvernement-et-lonu-discutent-de-nouvelles-opportunites-demploi-pour-les-jeunes/",
+      "pubDate": "2026-11-27T20:11:09.000Z",
+      "description": "La ministre des Sports, de la Jeunesse et de l’Emploi, Annick Pikbougoum/Zingué Ouattara, a reçu le 26 novembre 2026 une délégation du Système des Nations Unies conduite par Leonardo Santos Simão. Les échanges ont porté sur les programmes en faveur de la jeunesse et les perspectives d’insertion professionnelle au Burkina Faso. Le Burkina Faso et le Système des Nations Unies souhaitent renforcer leur collaboration en faveur de la jeunesse. C'est dans cette perspective que la ministre des Sports, de la Jeunesse et de l’Emploi, Annick Pikbougoum/Zingué Ouattara, a rencontré, le jeudi 26 novembre 2026, une délégation onusienne conduite par Leonardo Santos Simão, Représentant spécial du Secrétaire général des Nations Unies pour l’Afrique de l’Ouest et le Sahel. Les deux parties ont notamment échangé sur les projets et programmes consacrés à la jeunesse, les mécanismes d'accompagnement à l'insertion professionnelle ainsi que les possibilités de création d'activités économiques. L’emploi des jeunes au cœur des échanges La rencontre a également permis d'aborder les efforts engagés par le Burkina Faso pour dynamiser son économie et favoriser la création d’emplois. L'objectif est notamment d'élargir les possibilités offertes aux jeunes afin de faciliter leur participation au développement économique et social du pays. Pour le Burkina Faso, les enjeux restent importants : faciliter l'accès des jeunes à l’emploi, encourager l'entrepreneuriat et créer des conditions favorables à leur épanouissement économique et social. Toutefois, les échanges rapportés par le ministère ne précisent pas encore les projets qui pourraient découler de cette concertation, ni les financements ou les échéances envisagés. La concrétisation de cette volonté de coopération devrait ainsi se mesurer aux initiatives qui seront effectivement mises en œuvre au bénéfice de la jeunesse burkinabè. L’article Burkina Faso : Le gouvernement et l’ONU discutent de nouvelles opportunités d’emploi pour les jeunes est apparu en premier sur NetAfrique.net .",
+      "_source": "Net Afrique (BF)",
+      "_sourceId": "rss_netafrique",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
+    },
+    {
+      "title": "Wave Burkina: *3560#, le code à composer pour bénéficier des produits et services hors connexion",
+      "link": "https://www.wakatsera.com/wave-burkina-3560-le-code-a-composer-pour-beneficier-des-produits-et-services-hors-connexion/",
+      "pubDate": "2026-11-27T18:53:56.000Z",
+      "description": "Wave Burkina Faso a lancé il y a une dizaine de jours, un USSD, un numéro court pour permettre à ses clients d’avoir accès à ses produits et services. En lançant le code *3560#, la société de mobile money qui renforce sa renommée dans le pays des «Hommes intègres», innove en permettant à ses abonnés de consulter son solde ou faire des transferts d’argent, et ce, même sans connexion. Ce vendredi 27 novembre, Wakat Séra a fait un tour au stand de Wave à l’occasion de la 21 e édition de la Semaine du numérique pour s’entretenir avec son Directeur général, Joël Ky. La société de transfert numérique Wave Burkina Faso est bien présente avec une forte équipe à la 21 e édition de la Semaine du numérique, une initiative du ministère burkinabè de la Transition digitale, des Postes et des Communications électroniques. Et donc, pour le premier responsable de la société de transfert d’argent, Joël Ky, «c'est un ministère qui se bat pour tout ce qui est souveraineté numérique, tout ce qui est transition digitale et c’est naturellement que Wave, qui est un acteur de l'économie numérique, soit présent à cette semaine» pour soutenir le Département. Les dirigeants de Wave Burkina Faso Wave Burkina Faso a une panoplie de produits pour ses clients. Chez Wave, comme l’a rappelé M. Ky, le dépôt est gratuit, le retrait est gratuit et les transferts nationaux sont à 0,5% de même que les paiements des factures qui sont gratuits, donc, à zéro franc. «On a aussi le produit que nous appelons le «Coffre» qui est un moyen aujourd'hui de faire des économies. Et une de nos innovations majeures: on fait une petite promo que nous appelons la carte à gratter, donc, le cadeau Wave», a ajouté le Directeur général Joël Ky, expliquant qu’aujourd'hui, pour leurs clients qui font les transferts, «ils ont la possibilité d'obtenir des petits gains, des transferts gratuits, ou tout simplement des gains qui leurs sont reversés automatiquement sur Wave». Bon nombre d’utilisateurs Wave n'arrivaient pas à utiliser Wave parce qu'ils n'ont pas de téléphone smartphone, Android ou de téléphone iPhone. Si fait que sans la connexion, ils sont handicaper ou couper tout court des service de leur société. Plus de problème, car Wave qui pensait déjà à eux via la QR-Card, une carte qui est mise à leur disposition et qui a été encore améliorée. Le directeur général de Wave Burkina Faso, Joël Ky «On a développé ce qu'on appelle le USSD qui est un numéro court tout simplement que vous pouvez consulter en faisant *3560# avec le petit téléphone et vous avez accès aux produits et services de Wave. Ce code USSD va permettre, à ceux qui n'ont pas de smartphone d'accéder à Wave et aussi à ceux qui sont dans les zones où il n'y a pas Internet, d'accéder à Wave», a rassuré Joël Ky qui a ajouté que le code *3560# qui marche avec tous les réseaux a été lancé, il y a dix jours. Ainsi, désormais avec un petit téléphone, les utilisateurs de Wave Burkina Faso peuvent faire leurs opérations en toute tranquillité. Pour ce service, les produits qui sont accessibles pour l'instant sont les transferts et la consultation de solde. Des échanges entre les clients et les équipes de Wave Burkina Faso Face à l’actualité du moment marquer par des arnaqueurs qui vident les comptes numériques des abonnés, le directeur général de Wave Burkina Faso, Joël Ky, a prodigué des conseils aux populations. Pour lui, la question sécuritaire est très cruciale. Et lorsqu'on parle de sécurité numérique, les institutions ont la responsabilité de sensibiliser leurs clients. «Et ça, c'est ce que nous faisons. Nous passons le temps à faire de la sensibilisation sur tout ce qui est sécurité. C'est super important parce que nous sommes des professionnels et nous devons avertir les usagers», a-t-il dit, déplorant le fait que des arnaqueurs «usent de tous les moyens pour essayer de soutirer de l'argent auprès des utilisateurs». «Et nous, on leur dit, soyez prudents, utilisez de manière consciente votre téléphone. Et cela en faisant quoi ? En évitant tout ce qui est lien qu’on vous envoie, comme ça. Il faut éviter de cliquer ou de télécharger des applications de sources inconnues. Il faut vraiment faire attention et surtout se référer à notre numéro de service clientèle qui est le 80 00 12 57, lorsque vous avez un doute. Si quelqu'un vous appelle et dit: « je suis un conseiller de Wave et je voudrais avoir votre code:, non, Wave ne vous demandera jamais votre code. Jamais », a-t-il affirmé. Le DG de Wave Burkina Faso est allé jusqu’à caricaturer la situation pour faire comprendre l’importance de ses dires. «C'est comme si aujourd'hui, vous bouclez votre porte et vous laissez la clé à la porte. C'est vous qui donnez la clé (aux voleurs). A Wave, nous sensibilisons surtout le client pour qu’il verrouille sa porte et garde sa clé. Donc, il faut vraiment être conscient de ça et travailler en fonction», a-t-il insisté. Il s’est réjoui de leur participation à la Semaine du Numérique 2026, car la société a eu l'opportunité d'ouvrir un stand et d'accueillir ses clients qui sont venus pour prendre des informations sur les produits de Wave. « Ça , c'est vraiment quelque chose de très important. Et nous avons aussi pu nous connecter à tous nos acteurs dont notre ministère. Et j'ai vu les pays invités d'honneur qui sont le Mali et le Niger. On a pu lier des partenariats, en tout cas des contacts avec des acteurs de tout l'écosystème numérique burkinabè. Donc, on peut dire que c'est très satisfaisant», a soutenu Joël Ky. Il a invité ceux qui n’ont pas encore leur compte Wave à hâter le pas pour bénéficier de leurs produits et service. Madina Ouédraogo, chargée de clientèle chez Wave Burkina Faso Madina Ouédraogo du Service clientèle de Wave Burkina a indiqué que durant les quatre jours de leur présence à l’exposition de la Semaine du Numérique 2026, lui et ses collègues ont vu l’intérêt que les clients avaient pour les produits de société spécialisée dans les transactions financières. «Beaucoup de clients venaient pour se renseigner pour mieux comprendre les produits. Beaucoup aussi venaient pour identifier leur compte pour bénéficier des cadeaux que nous faisons dans les transactions. Donc, on peut dire qu’on a eu beaucoup de clients durant ses quatre jours. Et, je peux affirmer que les gens ont mieux compris les produits. Et sincèrement, ils repartaient satisfaits après nos échanges», a-t-elle déclaré. A la question de savoir quelle est la préoccupation commune qui revenait au niveau des clients, elle a dit que c’était le souci de pouvoir faire les transferts même sans connexion. «Déjà beaucoup de clients ne savaient pas qu’on avaient le code USSD et donc, ils posaient le problème de connexion. On leur a dit qu’on a amélioré le code pour leur faciliter la tâche même quand ils seront hors connexion », a-t-elle répondu. Par Bernard BOUGOUM L’article Wave Burkina: *3560#, le code à composer pour bénéficier des produits et services hors connexion est apparu en premier sur Wakat Séra .",
+      "_source": "Wakat Séra",
+      "_sourceId": "rss_wakatsera",
+      "_sourceCat": "bf_local",
+      "_sourceBloc": "bf_local",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "political"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "C2"
+      },
+      "_rating": "C2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "T",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "L",
+      "_desk": "A1"
+    },
+    {
+      "title": "Mariama Ciré Sylla, ministre de l’Économie : « Le fait d’entrer dans un programme avec le FMI a, en lui-même, un impact sur la perception de la Guinée »",
+      "link": "https://mediaguinee.com/2026/11/mariama-cire-sylla-ministre-de-leconomie-le-fait-dentrer-dans-un-programme-avec-le-fmi-a-en-lui-meme-un-impact-sur-la-perception-de-la-guinee/",
+      "pubDate": "2026-11-27T17:06:15.000Z",
+      "description": "La ministre de l’Économie, des Finances et du Budget (MEF), Mariama Ciré Sylla, le gouverneur de la Banque centrale de la République de Guinée (BCRG), ainsi que le représentant résident du Fonds monétaire international (FMI) ont conjointement animé, ce vendredi 27 novembre 2026, une conférence de presse dans les locaux du ministère de l’Économie, des Finances et du Budget. Cette rencontre a permis d’aborder plusieurs questions relatives à la mise en œuvre du programme économique et financier conclu entre la République de Guinée et l’institution financière internationale. Interrogée sur le délai dans lequel les premiers résultats de ce programme pourraient être perceptibles, la ministre Mariama Ciré Sylla a expliqué que celui-ci vient accompagner et renforcer les efforts déjà engagés par les autorités guinéennes. « On devrait voir [les résultats], parce que le programme accompagne nos efforts, ceux que nous avons déjà entamés et que nous sommes en train de consolider. Ce n’est pas un programme parachuté, mais plutôt un programme qui est là pour nous aider à renforcer et à accélérer nos réformes. La Guinée avait déjà cette ambition. La discussion avec le FMI, c’est de savoir comment il peut nous accompagner dans cette transformation, grâce à son expérience, à ses instruments et à la crédibilité qu’un tel programme nous apporte », a-t-elle indiqué. La ministre a également rappelé que plusieurs pays africains, notamment des États voisins de la Guinée, entretiennent depuis de nombreuses années des partenariats avec le FMI. À titre d’exemple, elle a cité la Côte d’Ivoire, le Sénégal, le Rwanda et le Bénin. « Le gouverneur l’a dit : nos voisins, la Côte d’Ivoire, le Sénégal, le Rwanda et le Bénin, sont tous en programme avec le FMI. La Côte d’Ivoire y est depuis près de 20 ans, le Rwanda depuis 18 ans et, si je ne m’abuse, le Bénin depuis 12 ans. Je ne dirais pas que c’est la catastrophe dans ces pays, ni que leurs économies sont à terre ou qu’il n’y a pas d’infrastructures qui se construisent. Au contraire, tous ces pays affichent des taux de croissance élevés. Certains ont d’ailleurs réduit leurs coûts de financement grâce à ces programmes. Aujourd’hui, la Côte d’Ivoire a atteint un niveau d’endettement qui lui permet d’emprunter davantage et à de meilleures conditions. Elle peut ainsi accéder aux marchés financiers et payer des intérêts plus bas que d’autres pays. Notre ambition, c’est cela », a-t-elle soutenu. Selon Mariama Ciré Sylla, les exemples de coopération avec le FMI sont également nombreux à travers le continent africain. Elle a notamment cité la Guinée-Bissau, la Tanzanie, le Mali, le Burkina Faso et le Niger, estimant que ces programmes constituent des outils d’accompagnement des politiques économiques nationales. « L’idée du programme, c’est plutôt d’avoir un outil pour nous aider à améliorer les résultats que nous voulons obtenir et à les accélérer, en nous inspirant aussi des autres pays qui ont des contextes similaires à celui de la Guinée. L’année prochaine, nous attendons des résultats en matière de mobilisation des recettes, qui devraient s’améliorer, d’investissement public, qui devrait être mieux exécuté, et d’impact sur le terrain, notamment à travers le budget-programme », a-t-elle expliqué. Par ailleurs, la ministre a souligné que le programme conclu entre la Guinée et le FMI prévoit des évaluations périodiques destinées à mesurer les progrès accomplis et à vérifier le respect des engagements pris par les autorités guinéennes. « À peu près tous les six mois, le FMI viendra et nous ferons le point sur ce qui a été réalisé depuis la dernière évaluation, sur les engagements convenus et sur les performances de la Guinée. Il y aura également les dispositifs habituels de suivi et de contrôle de la performance, auxquels s’ajoutera la Delivery Unit, la nouvelle structure mise en place pour accompagner l’accélération des projets du programme Simandou 2040. Pour nous, il y aura donc des résultats », a-t-elle assuré. La ministre a toutefois tenu à distinguer les premiers résultats attendus des transformations structurelles qui nécessiteront davantage de temps, notamment en matière de création d’emplois à grande échelle et d’amélioration des revenus des populations. Le programme étant prévu sur trois ans, elle espère que des avancées substantielles seront perceptibles à son terme. « Pour ce qui est des résultats profonds, notamment la création d’emplois à grande échelle et l’amélioration concrète des revenus des populations, c’est quelque chose que nous allons construire. Le programme est prévu sur trois ans. Nous espérons qu’à son terme, nous aurons aussi des améliorations substantielles dans ces domaines. C’est une démarche de long terme qui suppose de la rigueur budgétaire, une meilleure structuration de l’économie et davantage de crédibilité, afin que le pays en sorte plus fort, avec des résultats pour ses populations », a-t-elle souligné. En conclusion, Mariama Ciré Sylla est revenue sur les principaux mécanismes grâce auxquels le programme devrait permettre de mesurer et d’accélérer les performances économiques du pays. Elle a notamment évoqué la mise en place d’indicateurs chiffrés portant sur le déficit budgétaire, l’accumulation des réserves internationales et le calendrier d’exécution des réformes. « L’une des choses que le programme apporte, c’est ce cadre chiffré qui permet de mesurer les progrès, avec des repères quantitatifs sur les variables clés, que ce soit le déficit ou l’accumulation des réserves, ainsi qu’un certain nombre de réformes assorties d’un calendrier d’exécution. Tout cela est soutenu par des missions de renforcement des capacités, qui constituent un accélérateur de réformes. De manière concrète, tous les six mois, il y aura un bond en matière de réformes que les autorités ont elles-mêmes, dans la plupart des cas, déjà inscrites dans leur programme d’action. Le renforcement des capacités permettra d’accélérer leur mise en œuvre au service des objectifs fixés. Le fait d’entrer dans un programme avec le FMI a également, en lui-même, un impact sur la perception de la Guinée », a-t-elle conclu. Mamadou Yaya Barry L’article Mariama Ciré Sylla, ministre de l’Économie : « Le fait d’entrer dans un programme avec le FMI a, en lui-même, un impact sur la perception de la Guinée » est apparu en premier sur Mediaguinee.com .",
+      "_source": "Mediaguinee",
+      "_sourceId": "rss_mediaguinee",
+      "_sourceCat": "ouest_afr",
+      "_sourceBloc": "afrique",
+      "_sourceVerified": false,
+      "_tags": [
+        "economic",
+        "diplomatic",
+        "humanitarian"
+      ],
+      "_majors": [],
+      "_bf": true,
+      "_aes": true,
+      "_agentGenerated": true,
+      "_evidence": {
+        "label": "Corrobore",
+        "color": "#22c55e",
+        "rating": "F2"
+      },
+      "_rating": "F2",
+      "_score": 115,
+      "_zone": 1,
+      "_theme": "E",
+      "_zoneShort": "1. Sahel & AO franco.",
+      "_relevance": "A",
+      "_desk": "A1"
     }
   ],
   "alerts": [
     {
-      "title": "Senior IRGC officials vow to break US blockade on Strait of Hormuz, claim Iran's ports are 'open'",
-      "link": "https://www.jpost.com/middle-east/iran-news/article-916347",
-      "source": "Jerusalem Post",
-      "date": "2026-11-28T00:42:12.000Z",
+      "title": "LAMATA to deploy 24 new coaches to boost red line Services",
+      "link": "https://www.vanguardngr.com/2026/11/lamata-to-deploy-24-new-coaches-to-boost-red-line-services/",
+      "source": "Vanguard (Nigeria)",
+      "date": "2026-11-28T07:47:25.000Z",
+      "rating": "F2",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "red line"
+        }
+      ]
+    },
+    {
+      "title": "Chinese engineers defy Hormuz blockade to install Abu Dhabi drilling rigs",
+      "link": "https://www.scmp.com/news/china/article/3376116/chinese-engineers-defy-hormuz-blockade-install-abu-dhabi-drilling-rigs",
+      "source": "South China Morning Post",
+      "date": "2026-11-28T06:00:13.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1151,10 +1164,10 @@
       ]
     },
     {
-      "title": "Yarden Bibas urges Nir Oz to preserve family home as testament to October 7 massacre",
-      "link": "https://www.jpost.com/israel-news/article-916346",
-      "source": "Jerusalem Post",
-      "date": "2026-11-27T22:34:22.000Z",
+      "title": "Yémen : l'ONU alerte sur le risque d’effondrement de la réponse humanitaire",
+      "link": "https://fr.hespress.com/498227-yemen-lonu-alerte-sur-le-risque-deffondrement-de-la-reponse-humanitaire.html",
+      "source": "Hespress (Maroc, FR)",
+      "date": "2026-11-28T02:54:48.000Z",
       "rating": "F2",
       "evidence": "Corrobore",
       "level": "critical",
@@ -1162,14 +1175,46 @@
       "majors": [
         {
           "type": "rupture",
-          "keyword": "massacre"
+          "keyword": "effondrement"
+        }
+      ]
+    },
+    {
+      "title": "U.S. military fires on ship violating Iran blockade",
+      "link": "https://www.japantimes.co.jp/news/2026/11/28/world/us-military-fires-ship-iran-blockade/",
+      "source": "The Japan Times",
+      "date": "2026-11-28T01:09:00.000Z",
+      "rating": "F1",
+      "evidence": "Corrobore",
+      "level": "critical",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
+        }
+      ]
+    },
+    {
+      "title": "US disables ship attempting to breach Iran blockade",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/27/us-disables-ship-attempting-to-breach-iran-blockade?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "date": "2026-11-27T23:55:16.000Z",
+      "rating": "D4",
+      "evidence": "Narrative a corroborer",
+      "level": "info",
+      "bf": false,
+      "majors": [
+        {
+          "type": "rupture",
+          "keyword": "blockade"
         }
       ]
     },
     {
       "title": "Mali: les djihadistes du JNIM impose un blocus sur la ville de Tonka",
       "link": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20261127-mali-les-djihadistes-du-jnim-impose-un-blocus-sur-la-ville-de-tonka",
-      "source": "France 24 Afrique",
+      "source": "France 24",
       "date": "2026-11-27T22:30:34.000Z",
       "rating": "A2",
       "evidence": "Corrobore",
@@ -1199,22 +1244,6 @@
       ]
     },
     {
-      "title": "IDF kills 10 Hamas, PIJ terrorists in Gaza, including four who participated in October 7 massacre",
-      "link": "https://www.jpost.com/israel-news/defense-news/article-916345",
-      "source": "Jerusalem Post",
-      "date": "2026-11-27T22:10:56.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "massacre"
-        }
-      ]
-    },
-    {
       "title": "Gaza weather system threatens 1.3M Palestinians with humanitarian disaster",
       "link": "https://www.aa.com.tr/en/middle-east/gaza-weather-system-threatens-13m-palestinians-with-humanitarian-disaster/4141072",
       "source": "Anadolu Agency (Turquie)",
@@ -1235,7 +1264,7 @@
       "link": "https://www.al-monitor.com/originals/2026/11/us-military-fires-ship-violating-iran-blockade",
       "source": "Al-Monitor",
       "date": "2026-11-27T21:30:26.000Z",
-      "rating": "F2",
+      "rating": "F1",
       "evidence": "Corrobore",
       "level": "critical",
       "bf": false,
@@ -1341,80 +1370,48 @@
           "keyword": "sommet"
         }
       ]
-    },
-    {
-      "title": "Kyiv offers Black Sea ceasefire to protect grain exports",
-      "link": "https://www.aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "date": "2026-11-27T17:44:33.000Z",
-      "rating": "D4",
-      "evidence": "Narrative a corroborer",
-      "level": "info",
-      "bf": false,
-      "majors": [
-        {
-          "type": "diplo_majeur",
-          "keyword": "ceasefire"
-        }
-      ]
-    },
-    {
-      "title": "Battling Siki: Saint-Louis prépare le centenaire de son assassinat",
-      "link": "https://lesoleil.sn/actualites/sports/battling-siki-saint-louis-prepare-le-centenaire-de-son-assassinat/",
-      "source": "Le Soleil (Sénégal)",
-      "date": "2026-11-27T15:04:00.000Z",
-      "rating": "F2",
-      "evidence": "Corrobore",
-      "level": "critical",
-      "bf": false,
-      "majors": [
-        {
-          "type": "rupture",
-          "keyword": "assassinat"
-        }
-      ]
     }
   ],
   "narrativesByBloc": [
     [
       "afrique",
-      245
+      229
     ],
     [
       "occident_fr",
-      109
+      132
     ],
     [
       "autre",
-      90
+      104
     ],
     [
       "occident_us",
-      89
+      83
     ],
     [
       "golfe_mo",
-      71
+      73
     ],
     [
       "russie",
-      56
+      58
     ],
     [
       "turquie",
-      47
-    ],
-    [
-      "sahel",
-      40
+      39
     ],
     [
       "bf_local",
-      37
+      29
     ],
     [
       "chine",
-      16
+      28
+    ],
+    [
+      "sahel",
+      25
     ]
   ],
   "desks": [
@@ -1422,7 +1419,7 @@
       "id": "A1",
       "name": "A1 — Cœur AES",
       "transverse": false,
-      "count": 140,
+      "count": 106,
       "top": [
         {
           "title": "Ouagadougou : L’exposition « Les Trésors du Liptako » célèbre les richesses culturelles du Burkina Faso, du Mali et du Niger au Musée national",
@@ -1443,24 +1440,6 @@
           "rating": "F2"
         },
         {
-          "title": "Ouagadougou : Les ministres de la Santé de l’AES assistent au « faux départ » et reçoivent les bénédictions du Moogho Naaba",
-          "link": "https://faso7.com/2026/11/27/ouagadougou-les-ministres-de-la-sante-de-laes-assistent-au-faux-depart-et-recoivent-les-benedictions-du-moogho-naaba/",
-          "source": "Faso7",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "L’AES se dotent d’un cadre commun de coopération dans le Numérique et les Postes",
-          "link": "https://www.wakatsera.com/laes-se-dotent-dun-cadre-commun-de-cooperation-dans-le-numerique-et-les-postes/",
-          "source": "Wakat Séra",
-          "zone": "1. Sahel & AO franco.",
-          "theme": "T",
-          "relevance": "L",
-          "rating": "C2"
-        },
-        {
           "title": "Dédougou : La deuxième édition du Grand meeting des sports traditionnels voit le jour",
           "link": "https://www.sidwaya.info/2026/11/27/dedougou-la-deuxieme-edition-du-grand-meeting-des-sports-traditionnels-voit-le-jour/",
           "source": "Sidwaya",
@@ -1468,6 +1447,24 @@
           "theme": "P",
           "relevance": "A",
           "rating": "A2"
+        },
+        {
+          "title": "Burkina Faso : Ancien ravitailleur de groupes terroristes, Issa regrette sa collaboration et appelle à dénoncer les complices",
+          "link": "https://netafrique.net/burkina-faso-ancien-ravitailleur-de-groupes-terroristes-issa-regrette-sa-collaboration-et-appelle-a-denoncer-les-complices/",
+          "source": "Net Afrique (BF)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "S",
+          "relevance": "A",
+          "rating": "A2"
+        },
+        {
+          "title": "Transfert historique : Le prodige burkinabè Mohamed Zongo zappe Strasbourg pour filer directement à Chelsea à ses 18 ans",
+          "link": "https://netafrique.net/transfert-historique-le-prodige-burkinabe-mohamed-zongo-zappe-strasbourg-pour-filer-directement-a-chelsea-a-ses-18-ans/",
+          "source": "Net Afrique (BF)",
+          "zone": "1. Sahel & AO franco.",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
         }
       ]
     },
@@ -1475,8 +1472,17 @@
       "id": "A2",
       "name": "A2 — Façade & corridors",
       "transverse": false,
-      "count": 62,
+      "count": 66,
       "top": [
+        {
+          "title": "What Pete Edochie wanted to be remembered for",
+          "link": "https://www.vanguardngr.com/2026/11/what-pete-edochie-wanted-to-be-remembered-for/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "F2"
+        },
         {
           "title": "Ibrahim Mahama inducted into ECOWAS Business Council, pledges regional cooperation",
           "link": "https://www.myjoyonline.com/ibrahim-mahama-inducted-into-ecowas-business-council-pledges-regional-cooperation/",
@@ -1487,36 +1493,27 @@
           "rating": "F2"
         },
         {
-          "title": "EOCO announces fact-finding mission with INTERPOL to QNET’s head office in Malaysia to combat ‘Model Q’ scams and human trafficking",
-          "link": "https://www.myjoyonline.com/eoco-announces-fact-finding-mission-with-interpol-to-qnets-head-office-in-malaysia-to-combat-model-q-scams-and-human-trafficking/",
-          "source": "MyJoyOnline (Ghana)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "E",
-          "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Meet Emmanuel Emegha, Chelsea’s new striking sensation who has Nigerian roots",
-          "link": "https://www.vanguardngr.com/2026/11/meet-emmanuel-emegha-chelseas-new-striking-sensation-who-has-nigerian-roots/",
+          "title": "LAMATA to deploy 24 new coaches to boost red line Services",
+          "link": "https://www.vanguardngr.com/2026/11/lamata-to-deploy-24-new-coaches-to-boost-red-line-services/",
           "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
-          "theme": null,
-          "relevance": ".",
+          "theme": "L",
+          "relevance": "A",
           "rating": "F2"
         },
         {
-          "title": "Army trains recruits in counterterrorism, counterinsurgency",
-          "link": "https://punchng.com/army-trains-recruits-in-counterterrorism-counterinsurgency/?utm_source=rss.punchng.com&utm_medium=web",
+          "title": "US, Italy disruptions expose urgency of Nigeria’s air navigation upgrade",
+          "link": "https://www.vanguardngr.com/2026/11/us-italy-disruptions-expose-urgency-of-nigerias-air-navigation-upgrade/",
+          "source": "Vanguard (Nigeria)",
+          "zone": "2. AO anglo. & côtière",
+          "theme": "T",
+          "relevance": "L",
+          "rating": "F2"
+        },
+        {
+          "title": "SDP presidential candidate promises N200/litre petrol without subsidy",
+          "link": "https://punchng.com/sdp-presidential-candidate-promises-n200-litre-petrol-without-subsidy/?utm_source=rss.punchng.com&utm_medium=web",
           "source": "Punch (Nigeria)",
-          "zone": "2. AO anglo. & côtière",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Mock ballot papers won’t feature party names, logos – INEC",
-          "link": "https://www.vanguardngr.com/2026/11/mock-ballot-papers-wont-feature-party-names-logos-inec/",
-          "source": "Vanguard (Nigeria)",
           "zone": "2. AO anglo. & côtière",
           "theme": "P",
           "relevance": "A",
@@ -1528,7 +1525,7 @@
       "id": "A3",
       "name": "A3 — Afrique élargie",
       "transverse": false,
-      "count": 19,
+      "count": 21,
       "top": [
         {
           "title": "Félix Tshisekedi entend plaider pour l’application de la résolution 2773 au sommet de la CEEAC",
@@ -1537,15 +1534,6 @@
           "zone": "3. Afrique centrale",
           "theme": "D",
           "relevance": "A",
-          "rating": "F2"
-        },
-        {
-          "title": "Forum cybersécurité Gabon 2026 : à l’Aninf, le pari de la souveraineté numérique",
-          "link": "https://www.gabonreview.com/forum-cybersecurite-gabon-2026-a-laninf-le-pari-de-la-souverainete-numerique/",
-          "source": "Gabon Review",
-          "zone": "3. Afrique centrale",
-          "theme": "T",
-          "relevance": "L",
           "rating": "F2"
         },
         {
@@ -1567,10 +1555,19 @@
           "rating": "A2"
         },
         {
-          "title": "La RDC et l’Ouganda privilégient la voie diplomatique face aux enjeux de sécurité régionale",
-          "link": "https://www.radiookapi.net/2026/11/27/actualite/politique/la-rdc-et-louganda-privilegient-la-voie-diplomatique-face-aux-enjeux",
-          "source": "Radio Okapi (RDC)",
+          "title": "Kinseso : des jeunes du quartier Kabila introduisent une pétition pour la restauration de l'ancienne appellation « Anciens combattants »",
+          "link": "https://actualite.cd/2026/11/28/kinseso-des-jeunes-du-quartier-kabila-introduisent-une-petition-pour-la-restauration-de",
+          "source": "ActualitéCD (RDC)",
           "zone": "4. Grands Lacs",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F2"
+        },
+        {
+          "title": "Haut-Katanga : à Likasi, le général Eddy Kapend appelle les militaires et policiers à ne jamais reculer devant l’ennemi",
+          "link": "https://actualite.cd/2026/11/28/haut-katanga-likasi-le-general-eddy-kapend-appelle-les-militaires-et-policiers-ne-jamais",
+          "source": "ActualitéCD (RDC)",
+          "zone": "3. Afrique centrale",
           "theme": "S",
           "relevance": "A",
           "rating": "F2"
@@ -1581,17 +1578,8 @@
       "id": "A4",
       "name": "A4 — Maghreb & Méditerranée",
       "transverse": false,
-      "count": 37,
+      "count": 39,
       "top": [
-        {
-          "title": "Entre Sahara et Sahel, Alger confrontée aux incohérences de son discours diplomatique",
-          "link": "https://fr.hespress.com/498163-entre-sahara-et-sahel-alger-confrontee-aux-incoherences-de-son-discours-diplomatique.html",
-          "source": "Hespress (Maroc, FR)",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "D",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "L'Algérie refuse toute médiation entre Bamako et le FLA",
           "link": "https://malijet.com/a_la_une_du_mali/313011-lalgerie-refuse-toute-mediation-entre-bamako-et-le-fla.html",
@@ -1600,15 +1588,6 @@
           "theme": "D",
           "relevance": "A",
           "rating": "F2"
-        },
-        {
-          "title": "Mali: Alger dénonce l'«alliance» des indépendantistes du FLA avec les «terroristes» du Jnim",
-          "link": "https://www.rfi.fr/fr/afrique/20261127-mali-alger-d%C3%A9nonce-l-alliance-des-ind%C3%A9pendantistes-du-fla-avec-les-terroristes-du-jnim",
-          "source": "RFI Afrique",
-          "zone": "7. Maghreb & Afr. Nord",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "C2"
         },
         {
           "title": "Sahara algérien : après Biskra, la baisse du niveau de l’eau à El Ménia inquiète",
@@ -1620,13 +1599,31 @@
           "rating": "A2"
         },
         {
-          "title": "Algérie : la \"guerre environnementale\", nouvel outil de propagande anti-marocaine",
-          "link": "https://fr.hespress.com/498240-algerie-la-guerre-environnementale-nouvel-outil-propagande-anti-marocaine.html",
-          "source": "Hespress (Maroc, FR)",
+          "title": "Maroc : transportée à dos de mulet, elle met 5 heures pour accéder aux soins",
+          "link": "https://www.tsa-algerie.com/maroc-transportee-a-dos-de-mulet-elle-met-5-heures-pour-acceder-aux-soins/",
+          "source": "TSA — Tout sur l'Algérie",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": "H",
+          "relevance": "A",
+          "rating": "F2"
+        },
+        {
+          "title": "Élections locales : 24 millions d’Algériens aux urnes, les enjeux du scrutin",
+          "link": "https://www.tsa-algerie.com/elections-locales-24-millions-dalgeriens-aux-urnes-les-enjeux-du-scrutin/",
+          "source": "TSA — Tout sur l'Algérie",
           "zone": "7. Maghreb & Afr. Nord",
           "theme": "P",
           "relevance": "A",
-          "rating": "F2"
+          "rating": "F1"
+        },
+        {
+          "title": "FIFM : « Ketticè », le pari de Giovanni Tortorici avec Monica Bellucci sur une adolescence sans clichés",
+          "link": "https://fr.hespress.com/498216-fifm-kettice-le-pari-de-giovanni-tortorici-avec-monica-bellucci-sur-une-adolescence-sans-cliches.html",
+          "source": "Hespress (Maroc, FR)",
+          "zone": "7. Maghreb & Afr. Nord",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F1"
         }
       ]
     },
@@ -1634,17 +1631,8 @@
       "id": "A5",
       "name": "A5 — Moyen-Orient & influences",
       "transverse": false,
-      "count": 74,
+      "count": 82,
       "top": [
-        {
-          "title": "IDF kills 10 Hamas, PIJ terrorists in Gaza, including four who participated in October 7 massacre",
-          "link": "https://www.jpost.com/israel-news/defense-news/article-916345",
-          "source": "Jerusalem Post",
-          "zone": "8. Moyen-Orient",
-          "theme": "S",
-          "relevance": "A",
-          "rating": "F2"
-        },
         {
           "title": "U.S. disables ship trying to leave Iran, as Tehran vows to confront blockade",
           "link": "https://www.thehindu.com/news/international/us-military-says-it-disabled-commercial-ship-trying-to-run-iran-blockade/article71752214.ece",
@@ -1664,12 +1652,12 @@
           "rating": "F1"
         },
         {
-          "title": "Senior IRGC officials vow to break US blockade on Strait of Hormuz, claim Iran's ports are 'open'",
-          "link": "https://www.jpost.com/middle-east/iran-news/article-916347",
-          "source": "Jerusalem Post",
+          "title": "Yémen : l'ONU alerte sur le risque d’effondrement de la réponse humanitaire",
+          "link": "https://fr.hespress.com/498227-yemen-lonu-alerte-sur-le-risque-deffondrement-de-la-reponse-humanitaire.html",
+          "source": "Hespress (Maroc, FR)",
           "zone": "8. Moyen-Orient",
-          "theme": "L",
-          "relevance": "A",
+          "theme": "H",
+          "relevance": "L",
           "rating": "F2"
         },
         {
@@ -1680,6 +1668,15 @@
           "theme": null,
           "relevance": ".",
           "rating": "F2"
+        },
+        {
+          "title": "Israeli strike kills two Doctors Without Borders staff in Gaza",
+          "link": "https://www.dawn.com/news/2047658/israeli-strike-kills-two-doctors-without-borders-staff-in-gaza",
+          "source": "Dawn (Pakistan)",
+          "zone": "8. Moyen-Orient",
+          "theme": null,
+          "relevance": ".",
+          "rating": "F1"
         }
       ]
     },
@@ -1687,17 +1684,8 @@
       "id": "A6",
       "name": "A6 — Desk transverse (puissances & institutions)",
       "transverse": true,
-      "count": 167,
+      "count": 173,
       "top": [
-        {
-          "title": "Sudan: El Niño suma nuevos puntos críticos del hambre mientras los conflictos siguen aumentando el riesgo de hambruna, advierten la FAO y WFP",
-          "link": "https://reliefweb.int/report/sudan/el-nino-suma-nuevos-puntos-criticos-del-hambre-mientras-los-conflictos-siguen-aumentando-el-riesgo-de-hambruna-advierten-la-fao-y-wfp",
-          "source": "ReliefWeb",
-          "zone": "6. Afrique australe",
-          "theme": "J",
-          "relevance": "L",
-          "rating": "F2"
-        },
         {
           "title": "Makkah pact nations review regional security, condemn Houthi attacks on Saudi Arabia",
           "link": "https://www.dawn.com/news/2047415/makkah-pact-nations-review-regional-security-condemn-houthi-attacks-on-saudi-arabia",
@@ -1708,30 +1696,39 @@
           "rating": "F1"
         },
         {
+          "title": "Le Sénégal récupère son titre de champion d’Afrique, Paris confronté au boycott discret d’Alger, la RDC bloque les exportations de cobalt… Les 5 infos qu’il ne fallait pas manquer",
+          "link": "https://www.jeuneafrique.com/1866199/politique/le-senegal-recupere-son-titre-de-champion-dafrique-paris-confronte-au-boycott-discret-dalger-la-rdc-bloque-les-exportations-de-cobalt-les-5-infos-quil-ne-fallait-pas-manquer/",
+          "source": "Jeune Afrique",
+          "zone": "9. Europe occidentale",
+          "theme": "D",
+          "relevance": "A",
+          "rating": "B2"
+        },
+        {
+          "title": "Que pense vraiment Vox ?",
+          "link": "https://legrandcontinent.eu/fr/2026/11/28/que-pense-vraiment-vox/",
+          "source": "Le Grand Continent",
+          "zone": "9. Europe occidentale",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A3"
+        },
+        {
+          "title": "Conquérir par le bas : à Taïwan, la Chine plane sur les élections locales",
+          "link": "https://legrandcontinent.eu/fr/2026/11/28/conquerir-par-le-bas-a-taiwan-la-chine-plane-sur-les-elections-locales/",
+          "source": "Le Grand Continent",
+          "zone": "14. Extrême-Orient",
+          "theme": "P",
+          "relevance": "L",
+          "rating": "A2"
+        },
+        {
           "title": "De la méfiance à la connivence entre les puissances de l’Asie-Pacifique (Par Oumar NDIAYE)",
           "link": "https://lesoleil.sn/le-decodeur/chronique/de-la-mefiance-a-la-connivence-entre-les-puissances-de-lasie-pacifique-par-oumar-ndiaye/",
           "source": "Le Soleil (Sénégal)",
           "zone": "16. Amérique du Nord",
           "theme": "E",
           "relevance": "A",
-          "rating": "A2"
-        },
-        {
-          "title": "Guerre en Ukraine, Nvidia, législatives en Espagne, verdict de la CAN",
-          "link": "https://www.france24.com/fr/%C3%A9missions/une-semaine-dans-le-monde/20261127-guerre-en-ukraine-nvidia-l%C3%A9gislatives-en-espagne-verdict-de-la-can",
-          "source": "France 24",
-          "zone": "9. Europe occidentale",
-          "theme": "P",
-          "relevance": "L",
-          "rating": "A2"
-        },
-        {
-          "title": "Retours sur les sommets asiatiques : quelle place pour la France dans la région ?",
-          "link": "https://www.iris-france.org/retours-sur-les-sommets-asiatiques-quelle-place-pour-la-france-dans-la-region/",
-          "source": "IRIS France",
-          "zone": "13. Asie du Sud-Est",
-          "theme": "D",
-          "relevance": "L",
           "rating": "A2"
         }
       ]
@@ -1750,42 +1747,42 @@
   },
   "agentLog": [
     {
-      "at": "2026-11-27T23:26:54.116Z",
+      "at": "2026-11-28T07:47:27.230Z",
       "agent": "Agent Orchestrateur",
       "message": "Demarrage profile=broad"
     },
     {
-      "at": "2026-11-27T23:26:54.124Z",
+      "at": "2026-11-28T07:47:27.235Z",
       "agent": "Agent Sources",
       "message": "170/170 sources selectionnees"
     },
     {
-      "at": "2026-11-27T23:27:18.615Z",
+      "at": "2026-11-28T07:47:45.354Z",
       "agent": "Agent Collecte RSS",
-      "message": "105/170 flux OK, 1937 articles"
+      "message": "100/170 flux OK, 1826 articles"
     },
     {
-      "at": "2026-11-27T23:27:21.641Z",
+      "at": "2026-11-28T07:47:47.644Z",
       "agent": "Agent Preuves",
       "message": "800 articles dedoubles et enrichis"
     },
     {
-      "at": "2026-11-27T23:27:21.974Z",
+      "at": "2026-11-28T07:47:47.948Z",
       "agent": "Agent Methodo",
       "message": "Etiquetage zone/thematique + routage desks applique"
     },
     {
-      "at": "2026-11-27T23:27:21.979Z",
+      "at": "2026-11-28T07:47:47.952Z",
       "agent": "Agent Brief BF/AES",
       "message": "8 developpements, 15 alertes"
     },
     {
-      "at": "2026-11-27T23:27:21.979Z",
+      "at": "2026-11-28T07:47:47.952Z",
       "agent": "Agent Email",
       "message": "Envoi email ignore (SEND_EMAIL=false)"
     },
     {
-      "at": "2026-11-27T23:27:21.979Z",
+      "at": "2026-11-28T07:47:47.952Z",
       "agent": "Agent Email",
       "message": "Email non envoye: disabled"
     }
